@@ -1,0 +1,8 @@
+graph LR
+  Drawers["9 digit drawers"]
+  Register["Master register"]
+  Bands["99 octave bands"]
+  Catalog["Catalog size 8,019"]
+  Drawers -->|digit rows| Register
+  Register -->|octave columns| Bands
+  Bands -->|99 × 81 = 8,019| Catalog

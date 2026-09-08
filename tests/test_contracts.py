@@ -27,7 +27,7 @@ from visualization import plots
 
 
 PROJECT = Path(__file__).resolve().parent.parent
-MANUSCRIPT = PROJECT / "manuscript"
+MANUSCRIPT = PROJECT / "docs" / "manuscript"
 
 SCHEMA = "template-textbook-numeric-facts-v1"
 

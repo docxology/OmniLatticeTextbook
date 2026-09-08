@@ -1,0 +1,10 @@
+graph TD
+  Ship["Source papers shipped"]
+  Catalog["Engine catalog"]
+  Shelf["Engine shelf (24 papers)"]
+  Companions["Companion volumes"]
+  Textbook["Omni-Lattice textbook"]
+  Ship --> Catalog
+  Catalog -->|papers| Shelf
+  Shelf -->|synthesis| Companions
+  Companions --> Textbook

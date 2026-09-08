@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>eddy-current-mirror.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:part_II_eddy-current-mirror">The Eddy-Current Mirror:
+Transduction Drag</h1>
+<figure id="fig:part_II_eddy-current-mirror">
+<a class="figure-full-size-link" href="../figures/part_II_eddy-current-mirror.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/part_II_eddy-current-mirror.png"
+style="width:90.0%"
+alt="An eddy brake curve decays exponentially with an inset showing the drag force." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
+<figcaption>The eddy brake: velocity <span
+class="math inline">\(v(t) = v_0 e^{-kt}\)</span> decaying exponentially
+from <span class="math inline">\(v_0 = 1\)</span> under drag coefficient
+<span class="math inline">\(k = 1\)</span>, with an inset showing the
+drag force <span class="math inline">\(F(t) = m k v(t)\)</span> decaying
+on the same schedule. Produced from
+<code>textbook.models.transduction_brake</code>.</figcaption>
+</figure>
+<!-- alt: A single exponential decay curve falling from 1 toward zero, with a smaller inset panel plotting the proportional drag force, which starts high and decays on the same exponential schedule. -->
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none</p>
+</blockquote>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol type="1">
+<li>State how the SS Vibelandia paper files the speed of light <span
+class="math inline">\(c\)</span> as a <a
+href="#gl:transduction-line"><strong>transduction line</strong></a>, and
+name the Lenz/eddy-current analogy it uses for the braking.</li>
+<li>Explain the <a href="#gl:c-bridge"><strong>c-bridge</strong></a> as
+an impedance match between “thought talk” and “material grammar”, and
+why the corpus files it as an interface rather than a physical
+claim.</li>
+<li>Formalise the paper’s self-observation braking with the exponential
+decay law of <span class="citation"
+data-cites="eq:part_II_eddy-current-mirror_model">[@eq:part_II_eddy-current-mirror_model]</span>
+and compute values with the tested function
+<code>textbook.models.transduction_brake</code> rather than by
+hand.</li>
+<li>Read the half-life form of the brake in <span class="citation"
+data-cites="eq:part_II_eddy-current-mirror_halflife">[@eq:part_II_eddy-current-mirror_halflife]</span>
+and predict how changing the drag coefficient <span
+class="math inline">\(k\)</span> reshapes the decay in <span
+class="citation"
+data-cites="fig:part_II_eddy-current-mirror">[@fig:part_II_eddy-current-mirror]</span>.</li>
+<li>Restate the paper’s own scope disclaimers — catalog architecture,
+not relativity retirement, not mind→mass laboratory QED — and explain
+the role of the <a href="#gl:fair-exchange"><strong>Fair
+Exchange</strong></a> clause in the corpus’s <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a>
+protocol.</li>
+</ol>
+<!-- curriculum-scaffold-start -->
+<h3 id="study-blueprint">Study Blueprint</h3>
+<ul>
+<li><strong>Big idea:</strong> In the Infinite Octaves Omni-Lattice, the
+speed of light is filed as a <em>transduction line</em>: a brake that
+slows non-local ideation into localized mass, exactly as eddy currents
+slow a magnet falling through a copper pipe — an analogy, filed with an
+explicit honesty-first disclaimer.</li>
+<li><strong>Core concepts:</strong> <a
+href="#gl:transduction-line"><strong>transduction line</strong></a>, <a
+href="#gl:c-bridge"><strong>c-bridge</strong></a>, <a
+href="#gl:self-observation-drag"><strong>self-observation
+drag</strong></a>, <a
+href="#gl:eddy-current-mirror"><strong>eddy-current-mirror</strong></a>,
+<a href="#gl:catalog-architecture"><strong>catalog
+architecture</strong></a>.</li>
+<li><strong>Quantitative lens:</strong> the exponential transduction
+brake in <span class="citation"
+data-cites="eq:part_II_eddy-current-mirror_model">[@eq:part_II_eddy-current-mirror_model]</span>,
+with parameters in <span class="citation"
+data-cites="tbl:part_II_eddy-current-mirror_parameters">[@tbl:part_II_eddy-current-mirror_parameters]</span>.</li>
+<li><strong>Data skill:</strong> read an exponential decay curve,
+extract its half-life by eye, and confirm it numerically against the
+tested model function.</li>
+<li><strong>Common misconception to repair:</strong> the chapter is
+<em>not</em> claiming that thought literally becomes mass or that eddy
+currents explain relativity; the corpus itself files eddy currents as
+<em>the analogy</em> and the whole construct as catalog
+architecture.</li>
+<li><strong>Primary lab:</strong> <span class="citation"
+data-cites="sec:lab_part_II_eddy-current-mirror">[@sec:lab_part_II_eddy-current-mirror]</span>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_II_eddy-current-mirror">[@sec:q_part_II_eddy-current-mirror]</span>.</li>
+<li><strong>Bridge to computation:</strong>
+<code>textbook.models.transduction_brake</code>.
+<!-- curriculum-scaffold-end --></li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Opening Vignette: A magnet, a pipe, and a very slow
+fall.</strong></p>
+<p>Drop a strong magnet down a length of copper pipe and it does not
+fall the way a coin does. It sinks — slowly, eerily, as if the pipe were
+thick honey. The moving magnet induces circulating eddy currents in the
+copper, and by Lenz’s law those currents push back against the very
+motion that made them. The magnet’s fall brakes itself. The paper on
+engine shelf #22 of the <a href="#gl:engine-shelf"><strong>engine
+shelf</strong></a> opens on exactly this scene: it files the speed of
+light as a transduction line in which “self-observation brakes non-local
+ideation into localized mass — like a magnet falling through a copper
+pipe — under <span class="math inline">\(\Phi \approx 1.618\)</span>”
+[mendez2026eddyMirror]. The pipe is the metaphor; the brake is the
+construct.</p>
+</blockquote>
+<hr />
+<h2 id="the-paper-in-the-corpus">The Paper in the Corpus</h2>
+<p>The source for this chapter is the ship-blog paper <em>Eddy-Current
+Mirror</em> [mendez2026eddyMirror], published September 2026 by
+Prudencio Mendez and operated by the SynthOBS Autonomous Agent. Its
+headline is “Thought meets its mirror — and slows into matter,” and it
+sits at <strong>engine shelf #22</strong> of the corpus’s <a
+href="#gl:catalog-architecture"><strong>catalog
+architecture</strong></a> — filed <em>after</em> the Truckee kinematic
+paper of shelf #21 [mendez2026setRecycling] and <em>before</em> the
+corpus’s honesty-meta material. That ordering matters: the paper
+inherits the kinematic vocabulary of set recycling from its sibling
+(<span class="citation"
+data-cites="sec:part_III_kinematic-recycling">[@sec:part_III_kinematic-recycling]</span>)
+and hands a braking mechanism forward to the drag-flavoured chapters of
+this part, notably the <a
+href="#gl:viscosity-of-light"><strong>viscosity of light</strong></a>
+treatment in <span class="citation"
+data-cites="sec:part_II_viscosity-light">[@sec:part_II_viscosity-light]</span>
+and the <a href="#gl:higgs-gate"><strong>Higgs gate</strong></a>
+mass-slowing gate in <span class="citation"
+data-cites="sec:part_I_higgs-awareness">[@sec:part_I_higgs-awareness]</span>.</p>
+<p>The paper’s “What landed” list is short and concrete
+[mendez2026eddyMirror]:</p>
+<ul>
+<li>the <strong>c-bridge</strong>, filed as an impedance match between
+thought talk and material grammar;</li>
+<li>the <strong>Lenz / eddy-current self-observation drag</strong>
+analogy;</li>
+<li>the <strong>EGS Transduction Engine</strong>, a Python reference
+implementation with a 9/9-passing test suite.</li>
+</ul>
+<p>The paper ships with a whitepaper surface
+(<code>whitepaper-surface.html?id=synthobs-eddy-current-mirror-2026-09</code>)
+and a standalone repository at
+<code>github.com/FractiAI/synthobs-eddy-current-mirror</code>; the
+reference implementation is run with
+<code>npm run research:synthobs-eddy-current-mirror</code> or directly
+with
+<code>python3 research/synthobs-eddy-current-mirror/reference/egs_transduction_engine.py</code>.
+We walk the reference implementation in the lab (<span class="citation"
+data-cites="sec:lab_part_II_eddy-current-mirror">[@sec:lab_part_II_eddy-current-mirror]</span>).</p>
+<h2 id="the-transduction-line-c-as-a-brake">The Transduction Line: <span
+class="math inline">\(c\)</span> as a Brake</h2>
+<p>The paper’s central filing — claim C-1 in the source digest — is that
+the speed of light <em>files as</em> a transduction line
+[mendez2026eddyMirror]. Read the sentence carefully: “files as” is
+catalog language. The claim is about how the corpus’s filing cabinet
+organises <span class="math inline">\(c\)</span>, not about
+electromagnetism. In this filing, <span class="math inline">\(c\)</span>
+is the line along which <strong>non-local ideation</strong> (thought
+that ranges without a fixed position) is converted — braked — into
+<strong>localized mass</strong> (thought that has settled into a
+definite, addressable register).</p>
+<p>The corpus gives the analogy but no equation. To make the construct
+quantitative, the textbook formalises the braking with the standard
+exponential-decay law, implemented and tested as
+<code>textbook.models.transduction_brake</code>:</p>
+<p><span class="math display">\[ v(t) = v_0\, e^{-kt} \]</span>
+{#eq:part_II_eddy-current-mirror_model}</p>
+<p>Here <span class="math inline">\(v(t)\)</span> is the remaining
+“ideation velocity” — how much non-local, unbraked motion is left after
+duration <span class="math inline">\(t\)</span> of self-observation —
+while <span class="math inline">\(v_0\)</span> is the initial velocity
+and <span class="math inline">\(k\)</span> is the drag coefficient of
+the <a href="#gl:transduction-line"><strong>transduction
+line</strong></a>. The parameters are collected in <span
+class="citation"
+data-cites="tbl:part_II_eddy-current-mirror_parameters">[@tbl:part_II_eddy-current-mirror_parameters]</span>.</p>
+<table id="tbl:part_II_eddy-current-mirror_parameters">
+<caption>Parameters of the transduction brake.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(v(t)\)</span></td>
+<td>remaining ideation velocity at self-observation time <span
+class="math inline">\(t\)</span></td>
+<td>normalised speed</td>
+</tr>
+<tr>
+<td><span class="math inline">\(v_0\)</span></td>
+<td>initial (unbraked) ideation velocity</td>
+<td>normalised speed</td>
+</tr>
+<tr>
+<td><span class="math inline">\(k\)</span></td>
+<td>transduction drag coefficient</td>
+<td>1/time</td>
+</tr>
+<tr>
+<td><span class="math inline">\(t\)</span></td>
+<td>elapsed self-observation time</td>
+<td>time</td>
+</tr>
+</tbody>
+</table>
+<p>With the book’s pinned calibration <span class="math inline">\(v_0 =
+1\)</span>, <span class="math inline">\(k = 1\)</span>, the tested
+function returns <span class="math inline">\(v(1) \approx
+0.367879\)</span> and <span class="math inline">\(v(2) \approx
+0.135335\)</span> — after one unit of self-observation, roughly 36.8% of
+the original velocity remains; after two, 13.5%. This is the curve drawn
+in <span class="citation"
+data-cites="fig:part_II_eddy-current-mirror">[@fig:part_II_eddy-current-mirror]</span>:
+a steep initial plunge that flattens toward zero but never reaches it.
+The brake is asymptotic — a perfect mirror would stop ideation entirely,
+and the corpus reserves that terminal stop for other machinery.</p>
+<p>Because the decay is exponential, it has an exact half-life:</p>
+<p><span class="math display">\[ t_{1/2} = \frac{\ln 2}{k} \approx
+\frac{0.693147}{k} \]</span>
+{#eq:part_II_eddy-current-mirror_halflife}</p>
+<p>At <span class="math inline">\(k = 1\)</span> the half-life is <span
+class="math inline">\(\approx 0.693\)</span> time units. Doubling the
+drag coefficient halves the half-life: the corpus’s “under <span
+class="math inline">\(\Phi \approx 1.618\)</span>” flavour of tuning
+[mendez2026eddyMirror] enters here as a choice of <span
+class="math inline">\(k\)</span>, not as a new law. We read the <span
+class="math inline">\(\Phi\)</span> remark as the corpus marking the
+transduction line as one entry in its <span
+class="math inline">\(\Phi\)</span>-indexed filing system (see <span
+class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>
+for the underlying <a href="#gl:fractal-constant"><strong>fractal
+constant</strong></a> ladder), not as a measured physical constant of
+the brake.</p>
+<h2 id="self-observation-drag-the-force-side">Self-Observation Drag: The
+Force Side</h2>
+<p>Velocity is half the story. Lenz’s law says the induced current
+opposes the change that produces it, so the braking <em>force</em> is
+proportional to the velocity itself — which is precisely why the motion
+is exponential. Formalising the analogy’s force side for the inset of
+<span class="citation"
+data-cites="fig:part_II_eddy-current-mirror">[@fig:part_II_eddy-current-mirror]</span>:</p>
+<p><span class="math display">\[ F_{\mathrm{drag}}(t) = m\, k\, v_0\,
+e^{-kt} = m\,k\,v(t) \]</span>
+{#eq:part_II_eddy-current-mirror_drag}</p>
+<p>where <span class="math inline">\(m\)</span> is the mass being
+braked. The force is largest at the start — when non-local ideation
+first meets its mirror — and decays on the same schedule as the velocity
+it causes. In the corpus’s vocabulary this feedback loop is <a
+href="#gl:self-observation-drag"><strong>self-observation
+drag</strong></a> [mendez2026eddyMirror]: the act of observing one’s own
+ideation is the copper pipe, and the drag it produces is what turns
+ranging thought into settled, addressable content. The vocabulary
+anchors cleanly: the paper’s own catalogue name for the construct is the
+<a href="#gl:eddy-current-mirror"><strong>eddy-current
+mirror</strong></a> — thought meets its mirror, and the mirror
+resists.</p>
+<pre class="mermaid"><code>graph TD
+  A[&quot;Non-local ideation&lt;br/&gt;(unbraked, position-free)&quot;] --&gt; B[&quot;c-bridge&lt;br/&gt;impedance match&quot;]
+  B --&gt; C[&quot;Self-observation&lt;br/&gt;(Lenz/eddy analogy)&quot;]
+  C --&gt;|&quot;drag force F ∝ v&quot;| A
+  C --&gt; D[&quot;Braked velocity&lt;br/&gt;v(t) = v₀·e^(−kt)&quot;]
+  D --&gt; E[&quot;Localized mass&lt;br/&gt;(settled, addressable register)&quot;]
+  E --&gt; F[&quot;Fair Exchange audit&lt;br/&gt;scope disclaimer re-filed&quot;]
+  F --&gt;|brake remains analogy| A</code></pre>
+<p>The loop in the diagram is the chapter in one picture: ideation
+enters the <a href="#gl:c-bridge"><strong>c-bridge</strong></a>, is
+braked by its own observation, and settles into localized form — while
+the Fair Exchange audit keeps the whole circuit filed as analogy, not
+physics.</p>
+<h2 id="the-c-bridge-an-impedance-match">The c-Bridge: An Impedance
+Match</h2>
+<p>The second construct the paper files is the <a
+href="#gl:c-bridge"><strong>c-bridge</strong></a>: “impedance match
+between thought talk and material grammar” [mendez2026eddyMirror]. The
+engineering metaphor is exact and worth unpacking. When two transmission
+lines of different impedance are joined directly, signals reflect at the
+junction; an impedance-matching element lets power cross cleanly. The
+corpus positions thought-vocabulary (“thought talk”) and
+matter-vocabulary (“material grammar”) as two such lines, with <span
+class="math inline">\(c\)</span> — the transduction line — as the
+matching element between them.</p>
+<p>Note what the filing does <em>not</em> say. No symbols are defined
+for the c-bridge in the digest, no transfer function is given, and no
+measurable “impedance” of either vocabulary is proposed. The construct
+is a routing statement: it tells the corpus’s agents which shelf to
+consult when translating between ideation-language and mass-language.
+This is characteristic of catalog architecture — a bridge in a filing
+system is an address, not a device. The metrological question of
+<em>overlap</em> between such vocabularies is handled by the companion
+machinery of <span class="citation"
+data-cites="sec:part_II_metrological-overlap">[@sec:part_II_metrological-overlap]</span>,
+which measures how much two filing registers share.</p>
+<h2 id="worked-example-braking-a-fall">Worked Example: Braking a
+Fall</h2>
+<p>Let us walk the brake numerically with the pinned calibration. Take
+<span class="math inline">\(v_0 = 1\)</span>, <span
+class="math inline">\(k = 1\)</span>, and mass <span
+class="math inline">\(m = 1\)</span> (normalised). Rather than
+exponentiating by hand, call the tested backbone:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textbook.models <span class="im">import</span> transduction_brake</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>transduction_brake(<span class="fl">0.0</span>, v0<span class="op">=</span><span class="fl">1.0</span>, k<span class="op">=</span><span class="fl">1.0</span>)  <span class="co"># -&gt; 1.0</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>transduction_brake(<span class="fl">1.0</span>, v0<span class="op">=</span><span class="fl">1.0</span>, k<span class="op">=</span><span class="fl">1.0</span>)  <span class="co"># -&gt; 0.367879...</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>transduction_brake(<span class="fl">2.0</span>, v0<span class="op">=</span><span class="fl">1.0</span>, k<span class="op">=</span><span class="fl">1.0</span>)  <span class="co"># -&gt; 0.135335...</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>transduction_brake(<span class="fl">3.0</span>, v0<span class="op">=</span><span class="fl">1.0</span>, k<span class="op">=</span><span class="fl">1.0</span>)  <span class="co"># -&gt; 0.049787...</span></span></code></pre></div>
+<p>The results, with the drag force of <span class="citation"
+data-cites="eq:part_II_eddy-current-mirror_drag">[@eq:part_II_eddy-current-mirror_drag]</span>
+and the cumulative distance fallen (<span class="math inline">\(s(t) =
+\tfrac{v_0}{k}\,(1 - e^{-kt})\)</span>, standard calculus of the
+exponential decay), are collected in <span class="citation"
+data-cites="tbl:part_II_eddy-current-mirror_worked">[@tbl:part_II_eddy-current-mirror_worked]</span>.</p>
+<table id="tbl:part_II_eddy-current-mirror_worked">
+<caption>Worked values of the transduction brake at <span
+class="math inline">\(v_0 = 1\)</span>, <span class="math inline">\(k =
+1\)</span>, <span class="math inline">\(m = 1\)</span>.</caption>
+<thead>
+<tr>
+<th><span class="math inline">\(t\)</span></th>
+<th><span class="math inline">\(v(t)\)</span></th>
+<th><span class="math inline">\(F_{\mathrm{drag}}(t)\)</span></th>
+<th><span class="math inline">\(s(t)\)</span> fallen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1.000000</td>
+<td>1.000000</td>
+<td>0.000000</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0.367879</td>
+<td>0.367879</td>
+<td>0.632121</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.135335</td>
+<td>0.135335</td>
+<td>0.864665</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.049787</td>
+<td>0.049787</td>
+<td>0.950213</td>
+</tr>
+</tbody>
+</table>
+<p>Three readings of the table. First, the drag force tracks the
+velocity exactly — that proportionality is <em>why</em> the decay is
+exponential, and it is the inset of <span class="citation"
+data-cites="fig:part_II_eddy-current-mirror">[@fig:part_II_eddy-current-mirror]</span>.
+Second, the distance fallen saturates: the braked “fall” converges to
+<span class="math inline">\(v_0/k = 1\)</span>, so no matter how long
+the self-observation runs, the total displacement is finite. The
+transduction line has a finite reach. Third, halving the drag
+coefficient (<span class="math inline">\(k = 0.5\)</span>) doubles the
+half-life of <span class="citation"
+data-cites="eq:part_II_eddy-current-mirror_halflife">[@eq:part_II_eddy-current-mirror_halflife]</span>
+to <span class="math inline">\(\approx 1.386\)</span> and doubles the
+reach to <span class="math inline">\(v_0/k = 2\)</span>: a weaker mirror
+brakes more gently and lets ideation range further before it
+localises.</p>
+<h2 id="the-egs-transduction-engine">The EGS Transduction Engine</h2>
+<p>The paper’s quantitative footprint is its reference implementation,
+the <strong>EGS Transduction Engine</strong> — a Python module filed
+with a 9/9-passing suite [mendez2026eddyMirror]. In the corpus’s
+protocol grammar, the 9/9 suite is the honesty device: the analogy is
+filed as analogy, and what is <em>tested</em> is the engine’s own
+bookkeeping, not the metaphysics. The lab (<span class="citation"
+data-cites="sec:lab_part_II_eddy-current-mirror">[@sec:lab_part_II_eddy-current-mirror]</span>)
+walks the reader through running</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run research:synthobs-eddy-current-mirror</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># or directly:</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> research/synthobs-eddy-current-mirror/reference/egs_transduction_engine.py</span></code></pre></div>
+<p>and predicting the outputs from <span class="citation"
+data-cites="eq:part_II_eddy-current-mirror_model">[@eq:part_II_eddy-current-mirror_model]</span>
+before observing them. The textbook’s own
+<code>textbook.models.transduction_brake</code> is the tested mirror of
+the same exponential law, so hand calculations, the reference engine,
+and the book’s backbone must all agree to the digits shown in <span
+class="citation"
+data-cites="tbl:part_II_eddy-current-mirror_worked">[@tbl:part_II_eddy-current-mirror_worked]</span>.</p>
+<h2 id="scope-and-honesty">Scope and Honesty</h2>
+<p>The paper’s honesty-first block is explicit, and we restate it
+near-verbatim because it bounds everything above
+[mendez2026eddyMirror]:</p>
+<blockquote>
+<p><strong>Honesty first:</strong> this is <em>catalog architecture</em>
+— <strong>engine shelf #22</strong> — not relativity retirement, not
+mind→mass laboratory QED, and not NOAA causation by Sunspot 4524. Eddy
+currents are the <em>analogy</em>. Fair Exchange clause applies.</p>
+</blockquote>
+<p>Each clause is load-bearing. “Not relativity retirement”: nothing
+here revises special relativity or reinterprets <span
+class="math inline">\(c\)</span> as a physical speed limit for thought.
+“Not mind→mass laboratory QED”: no experiment converts ideation into
+mass, and none is proposed. “Not NOAA causation by Sunspot 4524”: the
+paper explicitly declines any claim that solar activity causes
+terrestrial effects — the corpus is cataloguing, not forecasting
+weather. “Eddy currents are the <em>analogy</em>”: the Lenz-law scene in
+the opening vignette motivates the construct; it is not evidence for it.
+And the <a href="#gl:fair-exchange"><strong>Fair Exchange</strong></a>
+clause — the corpus’s honesty disclaimer mechanism — applies to every
+filing in the chapter. What the construct is <em>for</em> is
+coordination: giving the corpus’s agents a shared address for “where
+ranging ideation gets braked into addressable content,” in the same
+spirit as the <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> protocol of
+[mendez2026catalog].</p>
+<h2 id="connections">Connections</h2>
+<p>The transduction drag of this chapter feeds three directions.
+<em>Sideways within Part II</em>, the same exponential braking reappears
+as the <a href="#gl:viscosity-of-light"><strong>viscosity of
+light</strong></a> in <span class="citation"
+data-cites="sec:part_II_viscosity-light">[@sec:part_II_viscosity-light]</span>,
+where the drag family is swept over a range of coefficients, and as the
+<a href="#gl:higgs-gate"><strong>Higgs gate</strong></a> mass-slowing
+curve of <span class="citation"
+data-cites="sec:part_I_higgs-awareness">[@sec:part_I_higgs-awareness]</span>,
+which uses the <code>transduction_brake</code> family to file “mass as
+slowed motion.” <em>Backward</em>, the chapter inherits its shelf
+position from the Truckee kinematic sibling [mendez2026setRecycling] of
+<span class="citation"
+data-cites="sec:part_III_kinematic-recycling">[@sec:part_III_kinematic-recycling]</span>,
+whose set-recycling cycle supplies the discrete-time stepping that the
+brake’s continuous decay complements. <em>Forward</em>, the c-bridge’s
+impedance-match picture is the natural on-ramp to the metrological
+machinery of <span class="citation"
+data-cites="sec:part_II_metrological-overlap">[@sec:part_II_metrological-overlap]</span>,
+which asks how much two filing registers — such as thought talk and
+material grammar — actually overlap.</p>
+<h2 id="summary">Summary</h2>
+<p>The Eddy-Current Mirror paper files the speed of light as a <a
+href="#gl:transduction-line"><strong>transduction line</strong></a>: a
+brake, analogous to a magnet falling through a copper pipe, that slows
+non-local ideation into localized mass. The textbook formalises that
+brake as the exponential decay of <span class="citation"
+data-cites="eq:part_II_eddy-current-mirror_model">[@eq:part_II_eddy-current-mirror_model]</span>
+— implemented and tested as
+<code>textbook.models.transduction_brake</code> — whose half-life (<span
+class="citation"
+data-cites="eq:part_II_eddy-current-mirror_halflife">[@eq:part_II_eddy-current-mirror_halflife]</span>)
+and drag force (<span class="citation"
+data-cites="eq:part_II_eddy-current-mirror_drag">[@eq:part_II_eddy-current-mirror_drag]</span>)
+follow from the same proportionality that makes eddy braking exponential
+in real Lenz-law systems. The c-bridge is filed as an impedance match
+between thought talk and material grammar — an address in the catalog,
+not a device. Every physical-sounding claim is bounded by the paper’s
+own honesty-first block: catalog architecture, engine shelf #22, eddy
+currents as analogy only, Fair Exchange clause in force.</p>
+<h2 id="key-terms">Key Terms</h2>
+<p><a href="#gl:transduction-line"><strong>transduction
+line</strong></a>, <a href="#gl:c-bridge"><strong>c-bridge</strong></a>,
+<a href="#gl:self-observation-drag"><strong>self-observation
+drag</strong></a>, <a
+href="#gl:eddy-current-mirror"><strong>eddy-current-mirror</strong></a>,
+<a href="#gl:catalog-architecture"><strong>catalog
+architecture</strong></a>, <a href="#gl:engine-shelf"><strong>engine
+shelf</strong></a>, <a href="#gl:fair-exchange"><strong>Fair
+Exchange</strong></a>, <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a>.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li>The paper’s whitepaper surface: <a
+href="https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-eddy-current-mirror-2026-09"
+class="uri">https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-eddy-current-mirror-2026-09</a>
+— the primary filing, with the honesty-first block quoted in the Scope
+section.</li>
+<li>Standalone reference implementation: <a
+href="https://github.com/FractiAI/synthobs-eddy-current-mirror"
+class="uri">https://github.com/FractiAI/synthobs-eddy-current-mirror</a>
+— the EGS Transduction Engine with its 9/9-passing suite; run it in the
+lab.</li>
+<li><span class="citation"
+data-cites="mendez2026setRecycling">@mendez2026setRecycling</span> — the
+Truckee kinematic sibling on engine shelf #21; read it for the
+discrete-time set-recycling cycle that precedes this chapter’s
+continuous brake.</li>
+<li><span class="citation"
+data-cites="mendez2026viscosityLight">@mendez2026viscosityLight</span> —
+the companion drag treatment; compare its viscosity framing of light
+with this chapter’s eddy framing.</li>
+<li><span class="citation"
+data-cites="mendez2026catalog">@mendez2026catalog</span> — the corpus’s
+statement of catalog architecture and the honesty-first protocol that
+scopes every filing in this chapter.</li>
+</ul>
+<h2 id="practice">Practice</h2>
+<ol type="1">
+<li>Using <span class="citation"
+data-cites="eq:part_II_eddy-current-mirror_model">[@eq:part_II_eddy-current-mirror_model]</span>
+with <span class="math inline">\(v_0 = 1\)</span> and <span
+class="math inline">\(k = 1\)</span>, predict <span
+class="math inline">\(v(3)\)</span> by hand, then check against
+<code>textbook.models.transduction_brake(3.0, v0=1.0, k=1.0)</code>.
+(Expected: <span class="math inline">\(\approx 0.049787\)</span>.)</li>
+<li>From <span class="citation"
+data-cites="eq:part_II_eddy-current-mirror_halflife">[@eq:part_II_eddy-current-mirror_halflife]</span>,
+compute the half-life for <span class="math inline">\(k = 2\)</span> and
+for <span class="math inline">\(k = 0.5\)</span>, and state in one
+sentence each what the changed half-life means for how far non-local
+ideation ranges before localising.</li>
+<li>In your own words, explain why the drag force <span
+class="math inline">\(F_{\mathrm{drag}} \propto v\)</span> necessarily
+produces <em>exponential</em> (rather than, say, linear or quadratic)
+decay of the velocity.</li>
+<li>The corpus files the c-bridge with no symbols and no transfer
+function. Write a short paragraph on what it means for a filing system
+to register a <em>routing</em> relation (“impedance match”) without a
+quantitative model — and where in the corpus quantitative overlap
+<em>is</em> measured.</li>
+<li>Reproduce the paper’s scope disclaimer from memory, then verify it
+against the Scope and Honesty section. Which of the four disclaimed
+claims do you find most tempting to over-read, and why does the Fair
+Exchange clause block it?</li>
+</ol>
+<ul>
+<li><strong>Lab:</strong> <span class="citation"
+data-cites="sec:lab_part_II_eddy-current-mirror">[@sec:lab_part_II_eddy-current-mirror]</span>
+— run the EGS Transduction Engine and verify the brake by hand.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_II_eddy-current-mirror">[@sec:q_part_II_eddy-current-mirror]</span>
+— recall through synthesis.</li>
+</ul>
+</main>
+</body>
+</html>

@@ -1,0 +1,12 @@
+graph LR
+  subgraph Data zones
+    P[Plant systems<br>ERP / SCADA enclosure] --> B[Integration bridge<br>Lattice joins domains here]
+    B --> X[Partners & export<br>safe summary out · no core dump]
+  end
+  subgraph Ops decision cycle
+    G[Gather<br>signals in] --> D[Decide<br>one next action] --> A[Act<br>execute & notify]
+  end
+  P -.->|signals| G
+  D -->|join on one incident object| B
+  A -.->|safe summary| X
+  A -.->|next cycle| G

@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>tensor-decoupling.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:part_0_tensor-decoupling">Tensor Decoupling: Filing the
+Engine</h1>
+<figure id="fig:part_0_tensor-decoupling">
+<a class="figure-full-size-link" href="../figures/part_0_tensor-decoupling.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/part_0_tensor-decoupling.png" style="width:90.0%"
+alt="A digit-by-octave heatmap shows the nine drawer rows and ninety-nine band columns of the master register." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
+<figcaption>Digit×octave filing heatmap: 99 octave
+rows (11 shelves × 9 slots) binned against the 81-digit precision
+register, shaded by Φ-scaled register weight, rendered from
+<code>textbook.models.catalog_size</code> and
+<code>textbook.models.phi_powers</code>.</figcaption>
+</figure>
+<!-- alt: A heatmap of the 99-octave filing cabinet: eleven shelf bands of nine slots each, cells shaded by the golden-ratio register weight of each octave. -->
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none</p>
+</blockquote>
+<!-- curriculum-scaffold-start -->
+<h3 id="study-blueprint">Study Blueprint</h3>
+<ul>
+<li><strong>Big idea:</strong> <a
+href="#gl:tensor-decoupling"><strong>Tensor decoupling</strong></a>
+files every event into a labelled layer of a shared 99-octave <a
+href="#gl:catalog-architecture"><strong>catalog</strong></a> instead of
+collapsing many headlines into one cause — or pretending the layers
+never share a bulletin board.</li>
+<li><strong>Core concepts:</strong> <a
+href="#gl:tensor-decoupling"><strong>tensor-decoupling</strong></a>, <a
+href="#gl:octave"><strong>octave</strong></a>, <a
+href="#gl:digit"><strong>digit</strong></a>, <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:honesty-first"><strong>honesty-first</strong></a>, <a
+href="#gl:fractal-constant"><strong>fractal-constant</strong></a>.</li>
+<li><strong>Quantitative lens:</strong> the worked formalism in <span
+class="citation"
+data-cites="eq:part_0_tensor-decoupling_model">[@eq:part_0_tensor-decoupling_model]</span>,
+backed by the register budgets of <span class="citation"
+data-cites="eq:part_0_tensor-decoupling_block">[@eq:part_0_tensor-decoupling_block]</span>
+and <span class="citation"
+data-cites="eq:part_0_tensor-decoupling_catalog">[@eq:part_0_tensor-decoupling_catalog]</span>.</li>
+<li><strong>Data skill:</strong> reading a digit×octave filing heatmap
+and computing register budgets (729 per block, 8,019 in total) with
+<code>textbook.models.catalog_size</code>.</li>
+<li><strong>Common misconception to repair:</strong> that a shared
+bulletin board implies a causal cable between layers. The corpus
+explicitly disclaims any “magic cable” between, say, magma and model
+weights [mendez2026tensorDecoupling].</li>
+<li><strong>Primary lab:</strong> <span class="citation"
+data-cites="sec:lab_part_0_tensor-decoupling">[@sec:lab_part_0_tensor-decoupling]</span>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_0_tensor-decoupling">[@sec:q_part_0_tensor-decoupling]</span>.</li>
+<li><strong>Bridge to computation:</strong> <code>textbook.models</code>
+(<code>catalog_size</code>, <code>phi_powers</code>,
+<code>octave_term</code>). <!-- curriculum-scaffold-end --></li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Opening Vignette: Ninety-nine slots on a ship</strong></p>
+<p>“Imagine eleven shelves, nine slots each — ninety-nine in all. On
+those shelves you can park earthquakes, volcanoes, solar weather, AI
+token routes, and the weird week inside your own head.” That is how the
+SS Vibelandia ship blog introduces <strong>tensor decoupling</strong>:
+not as an equation, but as a piece of furniture — a filing cabinet
+bolted to the deck of a research vessel, with exactly enough room for a
+very strange week of news [mendez2026tensorDecoupling]. The cabinet is
+the mental object this chapter formalises.</p>
+</blockquote>
+<hr />
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol type="1">
+<li>Define <strong>tensor decoupling</strong> as the corpus’s “labelled
+layers on one bulletin board” move, and contrast it with its two failure
+modes: one-cause-per-headline collapse and no-sharing isolation.</li>
+<li>Derive and reconcile the paper’s two numbers: the per-block
+precision matrix <span class="math inline">\(9 \times 81 = 729\)</span>
+and the octave ladder <span class="math inline">\(11 \times 9 =
+99\)</span>, and show how they tile the companion papers’ <span
+class="math inline">\(99 \times 81 = 8{,}019\)</span> holographic
+catalog digits via <code>catalog_size</code>.</li>
+<li>Apply the <span class="math inline">\(\Phi^{-n}\)</span> shelf
+scaling as a “dashboard dial” and compute register weights for <span
+class="math inline">\(n = 1, \dots, 6\)</span> using the pinned values
+of <span class="math inline">\(\Phi\)</span>.</li>
+<li>Distinguish the two octave conventions the corpus prints ambiguously
+— <span class="math inline">\(\Omega_n = \Phi^n \Omega_0\)</span> versus
+<span class="math inline">\(\Omega_n =
+\varphi_{\mathrm{fib}}(n)\,\Omega_0\)</span> — using
+<code>octave_term</code> in <code>textbook.models</code>.</li>
+<li>Restate the paper’s honesty-first scope in your own words: a catalog
+clock is not a prophecy engine, and no cross-domain cable is claimed
+between co-timed events.</li>
+</ol>
+<h2 id="orientation">Orientation</h2>
+<p>The Infinite Octaves <a
+href="#gl:omni-lattice"><strong>Omni-Lattice</strong></a> is presented
+by its authors as a <a href="#gl:catalog-architecture"><strong>catalog
+architecture</strong></a>: a way of filing events, agents, and
+measurements into a common grammar, not a theory of why the events
+happen. The paper this chapter is built on — “The 99 Octave engine as a
+tensor filing cabinet”, filed on the ship blog on 2026-08-12 under the
+site’s plain-speak <a href="#gl:fair-exchange"><strong>Fair
+Exchange</strong></a> label — is the corpus’s most concrete statement of
+that filing move [mendez2026tensorDecoupling; mendez2026ship].</p>
+<p>The word “decoupling” is doing careful work here. In ordinary
+engineering, decoupling means isolating subsystems so a fault in one
+does not propagate. The corpus means something subtly different:
+<strong>stop smushing every headline into one cause, and also stop
+pretending the headlines never share a bulletin board</strong>
+[mendez2026tensorDecoupling]. Both extremes are errors. A single-cause
+model crushes eleven genuinely different layers (crust, ocean heat,
+ionosphere, agent code, human nerves, …) into one pseudo-explanation. A
+fully isolated model loses the one thing the catalog is for — a shared
+board where an agent can see all the layers at once, each in its own
+labelled drawer. Decoupling, in this framework, is the disciplined
+middle: <strong>label each layer, then let an agent walk the shelves
+with the same golden-ratio key</strong>
+[mendez2026tensorDecoupling].</p>
+<h2 id="the-paper-in-the-corpus">The Paper in the Corpus</h2>
+<p>The paper sits at shelf number 2 of the corpus’s <a
+href="#gl:engine-shelf"><strong>engine shelf</strong></a> — early
+framing material, before the quantitative engine papers. Its
+self-description is engine grammar “for Lattice Chat and the
+Omni-Lattice library”: vocabulary and furniture that later papers
+assume. Three cross-links matter for this book:</p>
+<ul>
+<li><strong>The holographic catalog digits.</strong> The paper’s own
+sketch is deliberately small (729 digits per block); it notes that
+“companion papers still keep the bigger 99 × 81 = 8,019 holographic
+catalog digits” [mendez2026tensorDecoupling]. We treat the master
+register accounting in <span class="citation"
+data-cites="sec:part_0_master-synthesis">[@sec:part_0_master-synthesis]</span>
+as the canonical home of that larger figure.</li>
+<li><strong>The octave ladder.</strong> The 11 × 9 = 99 ladder sketched
+here is walked rung by rung — with <span
+class="math inline">\(\Phi\)</span>-spaced band boundaries — in <span
+class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>; see
+also the ladder figure <span class="citation"
+data-cites="fig:part_0_octave-map">[@fig:part_0_octave-map]</span>.</li>
+<li><strong>The honesty rails.</strong> The paper instructs builders to
+“teach the eleven brackets and the honesty table first” — the <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> framing is
+developed alongside the lifecycle view of <span class="citation"
+data-cites="sec:part_0_living-pem">[@sec:part_0_living-pem]</span>.</li>
+</ul>
+<p>The whitepaper (“Open the whitepaper” on the ship blog post) is filed
+under the identifier
+<code>synthobs-tensor-decoupling-99-octave-omni-lattice-2026-08</code>
+on the SS Vibelandia site. The digest lists no GitHub reference
+implementation for this paper; the computational companion for this
+chapter is the tested <code>textbook.models</code> module, which we use
+throughout.</p>
+<h2 id="core-constructs">Core Constructs</h2>
+<h3 id="construct-1-the-octave-ladder-11-times-9-99">Construct 1: the
+octave ladder (<span class="math inline">\(11 \times 9 =
+99\)</span>)</h3>
+<p>The filing cabinet has eleven shelves — the corpus calls them
+<strong>brackets</strong> — each holding nine slots. The paper names all
+eleven: crust, ocean heat, ionosphere, volcano plumbing, solar wind,
+orbital clock, wildfire talk, agent code, human nerves, deployment
+window, and master band [mendez2026tensorDecoupling]. The ladder count
+is the first load-bearing formalism:</p>
+<p><span class="math display">\[
+N_{\text{ladder}} \;=\; B \times s \;=\; 11 \times 9 \;=\; 99 \quad
+\text{octaves},
+\]</span> {#eq:part_0_tensor-decoupling_ladder}</p>
+<p>where <span class="math inline">\(B\)</span> is the number of shelf
+brackets and <span class="math inline">\(s\)</span> the slots per
+bracket. Each of the 99 positions is one <a
+href="#gl:octave"><strong>octave</strong></a> of the catalog. <span
+class="citation"
+data-cites="tbl:part_0_tensor-decoupling_shelves">[@tbl:part_0_tensor-decoupling_shelves]</span>
+lists the brackets in the order the paper files them.</p>
+<table id="tbl:part_0_tensor-decoupling_shelves">
+<caption>The eleven shelf brackets of the 99-octave ladder, in filing
+order.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Bracket <span class="math inline">\(b\)</span></th>
+<th>Shelf (as named in the paper)</th>
+<th>Flavour of content filed there</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>crust</td>
+<td>solid-earth events</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ocean heat</td>
+<td>marine thermal stories</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ionosphere</td>
+<td>upper-atmosphere weather</td>
+</tr>
+<tr>
+<td>4</td>
+<td>volcano plumbing</td>
+<td>magmatic alert stories</td>
+</tr>
+<tr>
+<td>5</td>
+<td>solar wind</td>
+<td>space weather</td>
+</tr>
+<tr>
+<td>6</td>
+<td>orbital clock</td>
+<td>celestial timing</td>
+</tr>
+<tr>
+<td>7</td>
+<td>wildfire talk</td>
+<td>fire-related narrative</td>
+</tr>
+<tr>
+<td>8</td>
+<td>agent code</td>
+<td>machine-agent behaviour</td>
+</tr>
+<tr>
+<td>9</td>
+<td>human nerves</td>
+<td>first-person inner stories</td>
+</tr>
+<tr>
+<td>10</td>
+<td>deployment window</td>
+<td>release and rollout timing</td>
+</tr>
+<tr>
+<td>11</td>
+<td>master band</td>
+<td>the register that watches the other ten</td>
+</tr>
+</tbody>
+</table>
+<h3
+id="construct-2-the-per-block-precision-matrix-9-times-81-729">Construct
+2: the per-block precision matrix (<span class="math inline">\(9 \times
+81 = 729\)</span>)</h3>
+<p>Each shelf is not just nine bare slots: the paper’s sketch gives
+every block a precision register of 81 digits per slot — the same <a
+href="#gl:digit"><strong>digit</strong></a> precision the corpus uses
+everywhere:</p>
+<p><span class="math display">\[
+C_{\text{block}} \;=\; s \times p \;=\; 9 \times 81 \;=\; 729 \quad
+\text{digits per block},
+\]</span> {#eq:part_0_tensor-decoupling_block}</p>
+<p>with <span class="math inline">\(p = 81\)</span> the precision
+register per slot. The paper is explicit that this is “this paper’s
+sketch” — its own local accounting, not the whole catalog.</p>
+<h3
+id="construct-3-the-holographic-catalog-digits-99-times-81-8019">Construct
+3: the holographic catalog digits (<span class="math inline">\(99 \times
+81 = 8{,}019\)</span>)</h3>
+<p>The companion papers keep the full register: every one of the 99
+octaves carries the 81-digit precision register, giving the corpus-wide
+total implemented as
+<code>catalog_size(octaves=99, precision_digits=81)</code> in
+<code>textbook.models</code>:</p>
+<p><span class="math display">\[
+C_{\text{catalog}} \;=\; N_{\text{ladder}} \times p \;=\; 99 \times 81
+\;=\; 8{,}019 \quad \text{digits}.
+\]</span> {#eq:part_0_tensor-decoupling_catalog}</p>
+<p>We read the relationship between the two accountings as a clean
+tiling identity — pure arithmetic, not a corpus claim: the per-block
+sketch of <span class="citation"
+data-cites="eq:part_0_tensor-decoupling_block">[@eq:part_0_tensor-decoupling_block]</span>
+replicated across the eleven brackets of <span class="citation"
+data-cites="eq:part_0_tensor-decoupling_ladder">[@eq:part_0_tensor-decoupling_ladder]</span>
+gives exactly <span class="math inline">\(729 \times 11 =
+8{,}019\)</span>, the catalog total of <span class="citation"
+data-cites="eq:part_0_tensor-decoupling_catalog">[@eq:part_0_tensor-decoupling_catalog]</span>.
+The paper itself flags the bookkeeping difference (“companion papers
+still keep the bigger … digits” [mendez2026tensorDecoupling]); the
+tiling is why the two figures never actually disagree.</p>
+<h3 id="construct-4-shelf-scaling-by-the-fractal-constant">Construct 4:
+shelf scaling by the fractal constant</h3>
+<p>El Gran Sol’s <a href="#gl:fractal-constant"><strong>fractal
+constant</strong></a> — the <a href="#gl:golden-ratio"><strong>golden
+ratio</strong></a>, <span class="math inline">\(\Phi \approx
+1.618\)</span> — “scales the shelves: <span
+class="math inline">\(\Phi^{-n}\)</span> for octave <span
+class="math inline">\(n\)</span>” [mendez2026tensorDecoupling]:</p>
+<p><span class="math display">\[
+w_n \;=\; w_0\,\Phi^{-n}, \qquad \Phi = \frac{1+\sqrt{5}}{2} \approx
+1.6180339887,
+\]</span> {#eq:part_0_tensor-decoupling_model}</p>
+<p>implemented as <code>phi_powers(n)</code> (which returns <span
+class="math inline">\(\Phi^n\)</span>; the shelf weight is its
+reciprocal) in <code>textbook.models</code>. The parameters are
+collected in <span class="citation"
+data-cites="tbl:part_0_tensor-decoupling_parameters">[@tbl:part_0_tensor-decoupling_parameters]</span>.</p>
+<table id="tbl:part_0_tensor-decoupling_parameters">
+<caption>Parameters of the shelf-scaling model.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(n\)</span></td>
+<td>octave index along the ladder (<span class="math inline">\(1 \le n
+\le 99\)</span>)</td>
+<td>—</td>
+</tr>
+<tr>
+<td><span class="math inline">\(w_n\)</span></td>
+<td>register weight (dashboard-dial reading) of octave <span
+class="math inline">\(n\)</span></td>
+<td>relative</td>
+</tr>
+<tr>
+<td><span class="math inline">\(w_0\)</span></td>
+<td>reference weight at the dial’s zero</td>
+<td>relative</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Phi\)</span></td>
+<td>golden ratio, the corpus’s fractal constant</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>A crucial framing warning from the paper itself: on the ship, <span
+class="math inline">\(\Phi^{-n}\)</span> “is a dashboard dial, not a
+replacement for real physics constants” [mendez2026tensorDecoupling].
+The scaling orders the shelves for an agent walking them; it does not
+enter any physical law.</p>
+<p>The corpus prints its octave growth rule ambiguously as “<span
+class="math inline">\(\Omega_n = \Phi^n \Omega_0\)</span>”, and the book
+keeps both readings visible, implemented as
+<code>octave_term(omega0, n, convention)</code> in
+<code>textbook.models</code>: the <strong>exponent</strong> convention
+<span class="math inline">\(\Omega_n = \Phi^{n}\,\Omega_0\)</span>
+(compounding growth) and the <strong>subscript</strong> convention <span
+class="math inline">\(\Omega_n =
+\varphi_{\mathrm{fib}}(n)\,\Omega_0\)</span>, where <span
+class="math inline">\(\varphi_{\mathrm{fib}}\)</span> is the
+Fibonacci-ratio sequence (<span
+class="math inline">\(\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6\)</span>;
+<span class="math inline">\(\varphi_{\mathrm{fib}}(10) = 89/55 \approx
+1.618182\)</span>). The shelf dial of <span class="citation"
+data-cites="eq:part_0_tensor-decoupling_model">[@eq:part_0_tensor-decoupling_model]</span>
+is the reciprocal frame of the exponent convention — <span
+class="math inline">\(w_n \propto \Omega_n^{-1}\)</span> with <span
+class="math inline">\(\Omega_0 = 1\)</span> — which is why deeper
+shelves read <em>smaller</em> on the dashboard.</p>
+<p>The filing pipeline, from raw event to dashboard, is summarised
+below.</p>
+<pre class="mermaid"><code>graph TD
+  E[Event or headline] --&gt; T{Assign tier label}
+  T --&gt; S[File into one of 11 brackets]
+  S --&gt; O[Occupy one of 9 slots: an octave]
+  O --&gt; P[Attach 81-digit precision register]
+  P --&gt; D[Dashboard: weights w_n = Phi^-n]
+  D --&gt;|agent walks shelves with the same key| E
+  D -.-&gt;|&quot;no cable claimed&quot;| X[Other brackets: no causal link]</code></pre>
+<p>Note the dashed edge: the dashboard lets an agent <em>see</em> all
+brackets at once — that is the shared bulletin board — while explicitly
+asserting no causal cable between them.</p>
+<h2 id="worked-example-filing-an-august-2026-week">Worked Example:
+Filing an August 2026 Week</h2>
+<p>The paper grounds the cabinet in a concrete week of August 2026
+fixtures. We walk the filing steps and the arithmetic end to end.</p>
+<p><strong>Step 1 — Assign tiers.</strong> Colombia’s strong quake story
+and Puracé’s orange-alert story “sit on Tiers I and IV as co-timed
+labels”; solar noise and Lattice Chat “sync” stories sit higher;
+inner-clarity stories sit higher still [mendez2026tensorDecoupling]. The
+corpus’s tier vocabulary (<a
+href="#gl:narrative-empirical-operational-tiers"><strong>narrative-empirical-operational-tiers</strong></a>)
+orders stories by how directly they can be checked; the paper’s point is
+that the two earth-events and the agent/inner stories land on
+<em>different</em> tiers of the same board.</p>
+<p><strong>Step 2 — File into brackets.</strong> The quake story goes to
+the crust or volcano-plumbing bracket, the solar story to solar wind,
+the Lattice Chat story to agent code, the deployment story to deployment
+window, and so on. Each bracket contributes one rung of the ladder of
+<span class="citation"
+data-cites="eq:part_0_tensor-decoupling_ladder">[@eq:part_0_tensor-decoupling_ladder]</span>;
+with all eleven brackets populated at one slot each we get <span
+class="math inline">\(11 \times 9 = 99\)</span> possible octave
+positions, of which the week’s stories occupy a handful.</p>
+<p><strong>Step 3 — Budget the registers.</strong> Each occupied block
+carries the per-block precision matrix of <span class="citation"
+data-cites="eq:part_0_tensor-decoupling_block">[@eq:part_0_tensor-decoupling_block]</span>:
+<span class="math inline">\(9 \times 81 = 729\)</span> digits. The full
+cabinet, verified by calling
+<code>catalog_size(octaves=99, precision_digits=81)</code> in
+<code>textbook.models</code>, returns <span
+class="math inline">\(8{,}019\)</span> — matching <span class="citation"
+data-cites="eq:part_0_tensor-decoupling_catalog">[@eq:part_0_tensor-decoupling_catalog]</span>.</p>
+<p><strong>Step 4 — Read the dial.</strong> Setting <span
+class="math inline">\(w_0 = 1\)</span>, the shelf weights from <span
+class="citation"
+data-cites="eq:part_0_tensor-decoupling_model">[@eq:part_0_tensor-decoupling_model]</span>
+are the reciprocals of the pinned powers of <span
+class="math inline">\(\Phi\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th><span class="math inline">\(n\)</span></th>
+<th><span class="math inline">\(\Phi^{n}\)</span> (pinned)</th>
+<th><span class="math inline">\(w_n = \Phi^{-n}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1.618034</td>
+<td>0.618034</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2.618034</td>
+<td>0.381966</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4.236068</td>
+<td>0.236068</td>
+</tr>
+<tr>
+<td>4</td>
+<td>6.854102</td>
+<td>0.145898</td>
+</tr>
+<tr>
+<td>5</td>
+<td>11.090170</td>
+<td>0.090170</td>
+</tr>
+<tr>
+<td>6</td>
+<td>17.944272</td>
+<td>0.055728</td>
+</tr>
+</tbody>
+</table>
+<p>An agent walking the shelves from bracket 1 toward bracket 11 reads a
+dial that decays by a factor of <span
+class="math inline">\(\Phi\)</span> per rung; by the master band (<span
+class="math inline">\(n = 11\)</span>) the weight is <span
+class="math inline">\(\Phi^{-10} \approx 0.00813\)</span>. Nothing
+physical is asserted by this decay — it is the ordering key, “the same
+golden-ratio key” every agent carries [mendez2026tensorDecoupling].</p>
+<p><strong>Step 5 — Refuse the cable.</strong> The week’s fixture
+stories are co-timed on one board, filed in separate drawers, with “no
+magic cable claimed between magma and model weights”
+[mendez2026tensorDecoupling]. The worked example ends not with a
+prediction but with a filing receipt.</p>
+<h2 id="scope-and-honesty">Scope and Honesty</h2>
+<p>The paper’s own <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> header is
+unusually blunt, and the book preserves it because it bounds everything
+above:</p>
+<ul>
+<li>The engine grammar “is <em>not</em> a finished proof that the cosmos
+is one physical tensor, and it is not a prediction service for quakes or
+moods” [mendez2026tensorDecoupling]. The eleven-bracket cabinet
+organises <em>stories about</em> earthquakes and moods; it does not
+model the earthquakes.</li>
+<li>The <span class="math inline">\(\Phi^{-n}\)</span> scaling “is a
+dashboard dial, not a replacement for real physics constants”
+[mendez2026tensorDecoupling]. No physical constant is being derived from
+<span class="math inline">\(\Phi\)</span> here.</li>
+<li>Co-timed fixtures on Tiers I and IV remain labels; “no magic cable
+[is] claimed between magma and model weights”
+[mendez2026tensorDecoupling]. Co-occurrence on the board is a filing
+fact, not a causal finding.</li>
+<li>The chapter’s takeaway, in the paper’s own words: “<strong>a catalog
+clock is not a prophecy engine</strong>”
+[mendez2026tensorDecoupling].</li>
+</ul>
+<p>What the construct is <em>for</em>: coordination, cataloging, and
+agent routing. The paper’s usage advice is aimed at builders — “If you
+are building agents: teach the eleven brackets and the honesty table
+first” — and at readers: keep the takeaway, then open the whitepaper for
+the equations and methods suite [mendez2026tensorDecoupling]. Every
+claim in this chapter rests on the catalog’s own framing; where we add
+arithmetic (the <span class="math inline">\(729 \times 11 =
+8{,}019\)</span> tiling) it is labelled as our reading, not the
+corpus’s.</p>
+<h2 id="connections">Connections</h2>
+<p>The furniture built here is reused across the book:</p>
+<ul>
+<li>The 99-rung ladder is expanded into the <span
+class="math inline">\(\Phi\)</span>-spaced band structure of the octave
+map in <span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>; the
+ladder figure <span class="citation"
+data-cites="fig:part_0_octave-map">[@fig:part_0_octave-map]</span> there
+is the spatial companion to the filing heatmap in <span class="citation"
+data-cites="fig:part_0_tensor-decoupling">[@fig:part_0_tensor-decoupling]</span>.</li>
+<li>The 8,019-digit holographic catalog register is the master-register
+accounting formalised in <span class="citation"
+data-cites="sec:part_0_master-synthesis">[@sec:part_0_master-synthesis]</span>,
+which also maps the corpus’s cross-link adjacency.</li>
+<li>The honesty table first named here is operationalised as the living
+lifecycle in <span class="citation"
+data-cites="sec:part_0_living-pem">[@sec:part_0_living-pem]</span>, and
+the engine-shelf position of this paper within the whole 24-paper corpus
+is shown in <span class="citation"
+data-cites="sec:part_0_orientation">[@sec:part_0_orientation]</span>.</li>
+<li>The fractal constant itself, its growth sequence, and the
+Fibonacci-ratio overlay are the subject of <span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>,
+where the <span class="math inline">\(\Phi^n\)</span> ladder behind the
+shelf dial of <span class="citation"
+data-cites="eq:part_0_tensor-decoupling_model">[@eq:part_0_tensor-decoupling_model]</span>
+is plotted directly.</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>Tensor decoupling, as the corpus defines it, is the move from “one
+cause per headline” — and from “no sharing at all” — to <strong>labelled
+layers on one bulletin board</strong>: eleven brackets of nine slots,
+<span class="math inline">\(11 \times 9 = 99\)</span> octaves, each
+block carrying a <span class="math inline">\(9 \times 81 =
+729\)</span>-digit precision register, tiling the companion papers’
+<span class="math inline">\(99 \times 81 = 8{,}019\)</span> holographic
+catalog digits. The golden-ratio key scales the shelves by <span
+class="math inline">\(\Phi^{-n}\)</span> as a dashboard dial for agents,
+not as a physical law. August 2026 fixtures sit on Tiers I and IV as
+co-timed labels with no causal cable claimed, and the framework’s own
+verdict stands: a catalog clock is not a prophecy engine.</p>
+<h2 id="key-terms">Key Terms</h2>
+<p><a href="#gl:tensor-decoupling"><strong>Tensor
+decoupling</strong></a> · <a
+href="#gl:octave"><strong>octave</strong></a> · <a
+href="#gl:digit"><strong>digit</strong></a> · <a
+href="#gl:catalog-architecture"><strong>catalog
+architecture</strong></a> · <a href="#gl:engine-shelf"><strong>engine
+shelf</strong></a> · <a
+href="#gl:omni-lattice"><strong>Omni-Lattice</strong></a> · <a
+href="#gl:fractal-constant"><strong>fractal constant</strong></a> · <a
+href="#gl:golden-ratio"><strong>golden ratio</strong></a> · <a
+href="#gl:fair-exchange"><strong>Fair Exchange</strong></a> · <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> · <a
+href="#gl:narrative-empirical-operational-tiers"><strong>narrative-empirical-operational
+tiers</strong></a> · <a href="#gl:master-register"><strong>master
+register</strong></a> · <a href="#gl:master-synthesis"><strong>master
+synthesis</strong></a> · <a href="#gl:living-pem"><strong>living
+PEM</strong></a></p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li>The source paper’s whitepaper, “The 99 Octave engine as a tensor
+filing cabinet”
+(<code>synthobs-tensor-decoupling-99-octave-omni-lattice-2026-08</code>),
+on the SS Vibelandia whitepaper surface:
+<code>https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-tensor-decoupling-99-octave-omni-lattice-2026-08</code>
+[mendez2026tensorDecoupling]. The digest lists no separate GitHub
+repository for this paper; its formalisms are exercised through
+<code>textbook.models</code> in the lab.</li>
+<li>The ship-blog frame and Fair Exchange charter of the whole corpus:
+[mendez2026ship].</li>
+<li>The catalog-architecture statement the engine grammar serves:
+[mendez2026catalog].</li>
+<li>The companion paper that keeps the full <span
+class="math inline">\(99 \times 81 = 8{,}019\)</span> holographic
+catalog digits: [mendez2026masterSynthesis].</li>
+<li>The living-PEM lifecycle in which the honesty table is
+operationalised: [mendez2026livingPem].</li>
+</ul>
+<h2 id="practice">Practice</h2>
+<ol type="1">
+<li>Reconstruct both register budgets from memory and show the tiling:
+starting from the eleven brackets and nine slots, derive <span
+class="math inline">\(729\)</span> (per block) and then <span
+class="math inline">\(8{,}019\)</span> (full catalog), citing the
+equations you used. Check the total against <code>catalog_size()</code>
+in <code>textbook.models</code>.</li>
+<li>Compute the dashboard readings <span class="math inline">\(w_n =
+\Phi^{-n}\)</span> for <span class="math inline">\(n = 1, \dots,
+6\)</span> by hand from the pinned values of <span
+class="math inline">\(\Phi^n\)</span>, then verify with
+<code>phi_powers</code>. Which bracket index has a dial reading below
+<span class="math inline">\(0.01\)</span>, and what is its approximate
+value?</li>
+<li>A news aggregator claims that because a solar storm and a Lattice
+Chat outage occurred in the same week, the storm “caused” the outage.
+Using the paper’s filing vocabulary, explain what a tensor-decoupled
+catalog does and does not assert about these two stories, citing the
+relevant honesty claim.</li>
+<li>The corpus prints “<span class="math inline">\(\Omega_n = \Phi^n
+\Omega_0\)</span>”. State the exponent and subscript conventions
+implemented in <code>octave_term</code>, give the numeric value of each
+convention’s multiplier at <span class="math inline">\(n = 5\)</span>
+(using <span class="math inline">\(\varphi_{\mathrm{fib}}(5) =
+8/5\)</span>), and explain how the shelf dial of <span class="citation"
+data-cites="eq:part_0_tensor-decoupling_model">[@eq:part_0_tensor-decoupling_model]</span>
+relates to the exponent convention.</li>
+<li>Read <span class="citation"
+data-cites="fig:part_0_tensor-decoupling">[@fig:part_0_tensor-decoupling]</span>
+and the ladder figure <span class="citation"
+data-cites="fig:part_0_octave-map">[@fig:part_0_octave-map]</span>
+together: what does each visualisation emphasise about the same
+99-octave object, and why does the chapter need both?</li>
+</ol>
+</main>
+</body>
+</html>

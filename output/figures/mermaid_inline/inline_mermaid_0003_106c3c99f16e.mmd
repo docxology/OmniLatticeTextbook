@@ -1,0 +1,7 @@
+graph TD
+  G[Guest / Player 1] -->|"BYOK header · key stays on-device"| S[interfaces/lattice-chat/ SPA]
+  S -->|POST| A["api/lattice-chat.js · nestTopology · honor rails"]
+  A --> P["lib/lattice-prompt.mjs · nest directive + Seed pack (engine shelf pin)"]
+  A --> E["lib/lattice-engine.mjs · token / MCA envelope"]
+  P --> V[Provider: Cursor / Claude / Gemini / OpenRouter]
+  E --> V

@@ -1,0 +1,24 @@
+graph LR
+  subgraph HW["Hardware vocabulary"]
+    PPA["PPA"]:::hw
+    BEOL["BEOL RC"]:::hw
+    DEV["GAA / CFET"]:::hw
+    PRO["Protonic H+ two-terminal devices"]:::hw
+  end
+  subgraph OL["Omni-Lattice vocabulary"]
+    T1["Octave tier n = 1 (binary shelf)"]:::ol
+    B99["Bands n = 2…99 (protonic shelves)"]:::ol
+    LAD["Φ ladder Ω_n"]:::ol
+  end
+  BR{"Pinned engineering bridge S(d)"}
+  PPA --> BR
+  BEOL --> BR
+  DEV --> BR
+  PRO --> BR
+  BR -->|"label, not a die"| T1
+  BR -->|"story, not a promise"| B99
+  T1 --> LAD
+  B99 --> LAD
+  BR -.->|"honesty table: roadmap ≠ measured chip"| H["Honesty-first check"]
+  classDef hw fill:#e8f0fe,stroke:#3367d6;
+  classDef ol fill:#e6f4ea,stroke:#188038;

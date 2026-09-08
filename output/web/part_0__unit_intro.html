@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>unit_intro.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:part_0_intro">Part 0: Orientation and Methods</h1>
+<p>This book is a rigorous systems-engineering monograph about a
+self-consistent catalog formalism: the <strong>Infinite Octaves <a
+href="#gl:omni-lattice"><strong>Omni-Lattice</strong></a></strong>, the
+framework documented across the engine papers of the SS Vibelandia ship
+blog, authored by Prudencio Mendez and operated by the SynthOBS
+Autonomous Agent [mendez2026ship; mendez2026catalog]. The corpus
+self-describes as <a href="#gl:catalog-architecture"><strong>catalog
+architecture</strong></a> and protocol grammar — not established physics
+— and every source paper carries a “Honesty first” scope disclaimer
+stating what each construct is for and, equally plainly, what it is not.
+We honor that framing throughout: claims are attributed to the papers
+that file them (<a
+href="#gl:honesty-first"><strong>honesty-first</strong></a>), and where
+the corpus distinguishes <a
+href="#gl:narrative-empirical-operational-tiers"><strong>narrative-empirical-operational-tiers</strong></a>
+of evidence, we keep those tiers visible rather than smoothing them
+over.</p>
+<p>Part 0 exists so that, before any formalism is derived, you learn the
+filing system the whole book depends on. The SS Vibelandia program grew
+as a <a href="#gl:living-pem"><strong>living-pem</strong></a> — a
+Product Engineering Manual whose <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a> of papers
+regenerates itself as new shelves are filed — and every later part of
+this book assumes you can read that shelf. The five chapters below
+install that literacy in order.</p>
+<ul>
+<li><em>The SS Vibelandia Program and the Omni-Lattice Corpus</em> —
+<span class="citation"
+data-cites="sec:part_0_orientation">[@sec:part_0_orientation]</span>
+introduces the corpus as a whole: how the ship blog is organized, what
+the 24 engine-shelf papers cover, and where each later part of the
+textbook draws its material. You gain the map of the territory and the
+citation vocabulary used everywhere else in the book.</li>
+<li><em>The Living PEM: Engineering the Lattice</em> — <span
+class="citation"
+data-cites="sec:part_0_living-pem">[@sec:part_0_living-pem]</span>
+explains the Product Engineering Manual itself: its onboarding stages,
+its 26-step auto-regenerating shelf, and the sync loop that keeps the
+corpus a living document rather than a frozen archive. You gain the
+engineering practice — how the catalog stays alive and correctable.</li>
+<li><em>Tensor Decoupling: Filing the Engine</em> — <span
+class="citation"
+data-cites="sec:part_0_tensor-decoupling">[@sec:part_0_tensor-decoupling]</span>
+formalizes the corpus’s filing construct: decoupling a paper’s content
+tensor into a small set of <a
+href="#gl:master-register"><strong>master-register</strong></a>
+dimensions so that any construct can be filed, retrieved, and
+cross-linked without ambiguity. You gain the coordinates system used to
+place every idea in this book.</li>
+<li><em>Master Synthesis: Everything Is Connected</em> — <span
+class="citation"
+data-cites="sec:part_0_master-synthesis">[@sec:part_0_master-synthesis]</span>
+walks the synthesis paper that files the entire shelf on a single board,
+tracing its cross-links between papers and its <a
+href="#gl:four-pillar-fractal"><strong>four-pillar-fractal</strong></a>
+organization. You gain the connective tissue: how the corpus argues that
+its shelves rhyme with one another.</li>
+<li><em>Nine Digits, Ninety-Nine Octaves</em> — <span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>
+builds the corpus’s numeric backbone: a 99-<a
+href="#gl:octave"><strong>octave</strong></a> ladder keyed to the <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a> <a
+href="#gl:fractal-constant"><strong>fractal-constant</strong></a> Φ,
+binned into nine <a href="#gl:digit"><strong>digit</strong></a> drawers,
+which fixes the corpus’s filing capacity at 99 × 81 = 8,019 register
+cells. You gain the numbering scheme every later worked example computes
+against.</li>
+</ul>
+<p>The through-line of Part 0 is deliberately unglamorous: before any
+formalism, the reader learns the filing system, the honesty tiers, and
+the engineering practice that keeps the catalog alive. A catalog is only
+as trustworthy as its indexing, and the Omni-Lattice authors treat
+indexing as the primary engineering act — which is why this part is pure
+orientation and methods, with the <a
+href="#gl:cmos-protonic"><strong>cmos-protonic</strong></a> bridge, the
+synthesis formalisms, and the octave map given as <em>filing</em>
+results first and mathematical objects second. Read the chapters in
+order; each assumes only the ones before it, and none assumes prior
+exposure to the corpus.</p>
+</main>
+</body>
+</html>

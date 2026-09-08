@@ -1,0 +1,11 @@
+graph LR
+  Up["Upstream zone (plant enclosure)"]
+  Gather["Gather"]
+  Decide["Decide"]
+  Act["Act"]
+  Down["Downstream zone (partner boundary)"]
+  Up -->|summaries out| Gather
+  Gather -->|one shared brief| Decide
+  Decide -->|nine takeaways| Act
+  Act -->|summaries only| Down
+  Down -->|token-bound feedback| Up

@@ -1,0 +1,933 @@
+{
+  "checks": {
+    "Artifact manifest": true,
+    "Enabled render outputs": true,
+    "Evidence registry": true,
+    "Figure registry": true,
+    "Markdown validation": true,
+    "Output structure": true,
+    "PDF validation": true,
+    "Project design overlays": true,
+    "Transmission bookends": true
+  },
+  "figure_issues": [],
+  "output_statistics": {
+    "detailed_validation": {
+      "directories": {
+        "data": {
+          "exists": false,
+          "file_count": 0,
+          "size_mb": "0.00"
+        },
+        "docx": {
+          "exists": true,
+          "file_count": 2,
+          "largest_file": "OmniLatticeTextbook_combined.docx",
+          "largest_file_path": "docx/OmniLatticeTextbook_combined.docx",
+          "size_mb": "3.52"
+        },
+        "epub": {
+          "exists": true,
+          "file_count": 1,
+          "largest_file": "OmniLatticeTextbook_combined.epub",
+          "largest_file_path": "epub/OmniLatticeTextbook_combined.epub",
+          "size_mb": "3.66"
+        },
+        "figures": {
+          "exists": true,
+          "file_count": 187,
+          "largest_file": "part_I_multidimensional-rhyme.png",
+          "largest_file_path": "figures/part_I_multidimensional-rhyme.png",
+          "size_mb": "5.83"
+        },
+        "llm": {
+          "exists": false,
+          "file_count": 0,
+          "size_mb": "0.00"
+        },
+        "logs": {
+          "exists": false,
+          "file_count": 0,
+          "size_mb": "0.00"
+        },
+        "manuscript": {
+          "exists": true,
+          "file_count": 127,
+          "largest_file": "omnilattice_cover.png",
+          "largest_file_path": "manuscript/assets/cover/omnilattice_cover.png",
+          "size_mb": "1.23"
+        },
+        "pdf": {
+          "exists": true,
+          "file_count": 1,
+          "largest_file": "OmniLatticeTextbook_combined.pdf",
+          "largest_file_path": "pdf/OmniLatticeTextbook_combined.pdf",
+          "size_mb": "6.44"
+        },
+        "reports": {
+          "exists": true,
+          "file_count": 1,
+          "largest_file": "manuscript_composition.json",
+          "largest_file_path": "reports/manuscript_composition.json",
+          "size_mb": "0.02"
+        },
+        "simulations": {
+          "exists": false,
+          "file_count": 0,
+          "size_mb": "0.00"
+        },
+        "slides": {
+          "exists": false,
+          "file_count": 0,
+          "size_mb": "0.00"
+        },
+        "web": {
+          "exists": true,
+          "file_count": 106,
+          "largest_file": "index.html",
+          "largest_file_path": "web/index.html",
+          "size_mb": "5.66"
+        }
+      },
+      "file_counts": {
+        "docx": 2,
+        "epub": 1,
+        "figures": 187,
+        "manuscript": 127,
+        "pdf": 1,
+        "reports": 1,
+        "web": 106
+      },
+      "inventory_mode": "stable-local-output-v1",
+      "issues_by_severity": {
+        "critical": [],
+        "info": [
+          "data/ directory is empty of stable publication artifacts"
+        ],
+        "warning": [
+          "data/ has no stable publication artifacts"
+        ]
+      },
+      "recommendations": [],
+      "structure": {
+        "directory_structure": {
+          "combined_pdf": {
+            "exists": true,
+            "readable": true,
+            "size_mb": 6.44
+          },
+          "data": {
+            "exists": false,
+            "files": 0,
+            "optional": false,
+            "required": true,
+            "size_mb": 0.0
+          },
+          "docx": {
+            "exists": true,
+            "files": 2,
+            "optional": true,
+            "readable": true,
+            "required": true,
+            "size_mb": 3.52
+          },
+          "epub": {
+            "exists": true,
+            "files": 1,
+            "optional": true,
+            "readable": true,
+            "required": true,
+            "size_mb": 3.66
+          },
+          "figures": {
+            "exists": true,
+            "files": 187,
+            "optional": false,
+            "readable": true,
+            "required": true,
+            "size_mb": 5.83
+          },
+          "llm": {
+            "exists": false,
+            "files": 0,
+            "optional": true,
+            "required": false,
+            "size_mb": 0.0
+          },
+          "logs": {
+            "exists": false,
+            "files": 0,
+            "optional": true,
+            "required": false,
+            "size_mb": 0.0
+          },
+          "manuscript": {
+            "exists": true,
+            "files": 127,
+            "optional": false,
+            "readable": true,
+            "required": true,
+            "size_mb": 1.23
+          },
+          "pdf": {
+            "exists": true,
+            "files": 1,
+            "optional": false,
+            "readable": true,
+            "required": true,
+            "size_mb": 6.44
+          },
+          "reports": {
+            "exists": true,
+            "files": 1,
+            "optional": false,
+            "readable": true,
+            "required": true,
+            "size_mb": 0.02
+          },
+          "simulations": {
+            "exists": false,
+            "files": 0,
+            "optional": true,
+            "required": false,
+            "size_mb": 0.0
+          },
+          "slides": {
+            "exists": false,
+            "files": 0,
+            "optional": false,
+            "required": false,
+            "size_mb": 0.0
+          },
+          "web": {
+            "exists": true,
+            "files": 106,
+            "optional": false,
+            "readable": true,
+            "required": true,
+            "size_mb": 5.66
+          }
+        },
+        "inventory_mode": "stable-local-output-v1",
+        "issues": [],
+        "missing_files": [],
+        "suspicious_sizes": [
+          "data/ directory is empty of stable publication artifacts"
+        ],
+        "valid": true,
+        "warnings": []
+      },
+      "total_size_mb": 26.368757247924805
+    },
+    "figures": {
+      "files": 187,
+      "size_mb": 5.83414363861084
+    },
+    "inventory_mode": "stable-local-output-v1",
+    "pdf": {
+      "files": 1,
+      "size_mb": 6.438837051391602
+    },
+    "stable_inventory": {
+      "categories": {
+        "docx": {
+          "files": 2,
+          "size_bytes": 3694582
+        },
+        "epub": {
+          "files": 1,
+          "size_bytes": 3839590
+        },
+        "figures": {
+          "files": 187,
+          "size_bytes": 6117543
+        },
+        "manuscript": {
+          "files": 127,
+          "size_bytes": 1289091
+        },
+        "pdf": {
+          "files": 1,
+          "size_bytes": 6751610
+        },
+        "reports": {
+          "files": 1,
+          "size_bytes": 22344
+        },
+        "web": {
+          "files": 106,
+          "size_bytes": 5934886
+        }
+      },
+      "mode": "stable-local-output-v1",
+      "total_files": 425,
+      "total_size_bytes": 27649646
+    }
+  },
+  "recommendations": [],
+  "summary": {
+    "all_passed": true,
+    "failed": 0,
+    "figure_issues_count": 0,
+    "passed": 9,
+    "total_checks": 9
+  },
+  "timestamp": "2026-09-05T22:57:52Z",
+  "validated_inputs": {
+    "artifact_manifest": {
+      "path": "output/reports/artifact_manifest.json",
+      "sha256": "0a2d6c7a3b629ff6a3ca3759f4c0120b496e1f47c8ccab971fbf54c42e378ad7",
+      "size_bytes": 131377
+    },
+    "combined_manuscript": {
+      "path": "output/web/_combined_manuscript.md",
+      "sha256": "873646ca137cac293ee1e0e3d3b725e3f9ded3a931942163b705fd517a4bc928",
+      "size_bytes": 1123491
+    },
+    "composition_manifest": {
+      "path": "output/reports/manuscript_composition.json",
+      "sha256": "c7dedd98213ae0dd3544baa2b8a498015a2241f2786a057fbe2bcebf1d73bca7",
+      "size_bytes": 22344
+    },
+    "consumed_manuscript": [
+      {
+        "rendered_path": "output/manuscript/front_matter.md",
+        "rendered_sha256": "2ef98d9dc917b4c067ae18c1b0d99e57f743f6aff6f1dc327c466ae5baddef6a",
+        "source_path": "docs/manuscript/front_matter.md",
+        "source_sha256": "2ef98d9dc917b4c067ae18c1b0d99e57f743f6aff6f1dc327c466ae5baddef6a"
+      },
+      {
+        "rendered_path": "output/manuscript/preface.md",
+        "rendered_sha256": "aaf765b9417e88ca89be282cdcb0e8e57d69a032ebddc3204326ef1b1e45b877",
+        "source_path": "docs/manuscript/preface.md",
+        "source_sha256": "aaf765b9417e88ca89be282cdcb0e8e57d69a032ebddc3204326ef1b1e45b877"
+      },
+      {
+        "rendered_path": "output/manuscript/part_0/unit_intro.md",
+        "rendered_sha256": "8ae84d8275a434cc420b5ee99ba05ed5ea116f05c2171a3601b0867ca7975f44",
+        "source_path": "docs/manuscript/part_0/unit_intro.md",
+        "source_sha256": "8ae84d8275a434cc420b5ee99ba05ed5ea116f05c2171a3601b0867ca7975f44"
+      },
+      {
+        "rendered_path": "output/manuscript/part_0/orientation.md",
+        "rendered_sha256": "3485b74d9bd08a9998bf9eabf7a8b6231f2dba0d0e138c15fc529976b330e2be",
+        "source_path": "docs/manuscript/part_0/orientation.md",
+        "source_sha256": "3485b74d9bd08a9998bf9eabf7a8b6231f2dba0d0e138c15fc529976b330e2be"
+      },
+      {
+        "rendered_path": "output/manuscript/part_0/living-pem.md",
+        "rendered_sha256": "a47cf6833dd86ade3b3e40058160da8db7e1fb997870b80b046f83122b475d96",
+        "source_path": "docs/manuscript/part_0/living-pem.md",
+        "source_sha256": "a47cf6833dd86ade3b3e40058160da8db7e1fb997870b80b046f83122b475d96"
+      },
+      {
+        "rendered_path": "output/manuscript/part_0/tensor-decoupling.md",
+        "rendered_sha256": "5fb51b1543eea3f507064c8b94479b7aec3a3a95a791283a3f7ece3715f16f4c",
+        "source_path": "docs/manuscript/part_0/tensor-decoupling.md",
+        "source_sha256": "5fb51b1543eea3f507064c8b94479b7aec3a3a95a791283a3f7ece3715f16f4c"
+      },
+      {
+        "rendered_path": "output/manuscript/part_0/master-synthesis.md",
+        "rendered_sha256": "be01ad16cb3fa67387e96388bc0b416b6f225757b6732fc852cb070ddb28284f",
+        "source_path": "docs/manuscript/part_0/master-synthesis.md",
+        "source_sha256": "be01ad16cb3fa67387e96388bc0b416b6f225757b6732fc852cb070ddb28284f"
+      },
+      {
+        "rendered_path": "output/manuscript/part_0/octave-map.md",
+        "rendered_sha256": "b01964d87281b0b73839adf6236bb67b0f6616e36af27b0387a8b216577fbc61",
+        "source_path": "docs/manuscript/part_0/octave-map.md",
+        "source_sha256": "b01964d87281b0b73839adf6236bb67b0f6616e36af27b0387a8b216577fbc61"
+      },
+      {
+        "rendered_path": "output/manuscript/part_I/unit_intro.md",
+        "rendered_sha256": "6092b2371173a8f8cd3edd42f2f0ea59cb69a0d554111a5170b825fa760dbd5f",
+        "source_path": "docs/manuscript/part_I/unit_intro.md",
+        "source_sha256": "6092b2371173a8f8cd3edd42f2f0ea59cb69a0d554111a5170b825fa760dbd5f"
+      },
+      {
+        "rendered_path": "output/manuscript/part_I/fractal-constant.md",
+        "rendered_sha256": "6fdee773dfad591a0af6a071ef9e87b1d4655b6c246ff445b73fdeb4f2313439",
+        "source_path": "docs/manuscript/part_I/fractal-constant.md",
+        "source_sha256": "6fdee773dfad591a0af6a071ef9e87b1d4655b6c246ff445b73fdeb4f2313439"
+      },
+      {
+        "rendered_path": "output/manuscript/part_I/prime-parity.md",
+        "rendered_sha256": "60c8c086146708dd518891eb809465ac5091be7216ff48c3bcfc7272cb6d9511",
+        "source_path": "docs/manuscript/part_I/prime-parity.md",
+        "source_sha256": "60c8c086146708dd518891eb809465ac5091be7216ff48c3bcfc7272cb6d9511"
+      },
+      {
+        "rendered_path": "output/manuscript/part_I/holographic-rhyme.md",
+        "rendered_sha256": "1836c14bd322934021e5b0d07fa54a67bb72ca276fd3b9fd67ba1001da08c811",
+        "source_path": "docs/manuscript/part_I/holographic-rhyme.md",
+        "source_sha256": "1836c14bd322934021e5b0d07fa54a67bb72ca276fd3b9fd67ba1001da08c811"
+      },
+      {
+        "rendered_path": "output/manuscript/part_I/multidimensional-rhyme.md",
+        "rendered_sha256": "c4341dd28480c3cdc14c7bd8b6177e1665dd80f67f777dfc9eac06364d35d146",
+        "source_path": "docs/manuscript/part_I/multidimensional-rhyme.md",
+        "source_sha256": "c4341dd28480c3cdc14c7bd8b6177e1665dd80f67f777dfc9eac06364d35d146"
+      },
+      {
+        "rendered_path": "output/manuscript/part_I/topology-void.md",
+        "rendered_sha256": "9c93c37d15d960c2694a17efb06ea8f4262d15c72bb566a84aafb7ee0dab0e52",
+        "source_path": "docs/manuscript/part_I/topology-void.md",
+        "source_sha256": "9c93c37d15d960c2694a17efb06ea8f4262d15c72bb566a84aafb7ee0dab0e52"
+      },
+      {
+        "rendered_path": "output/manuscript/part_I/higgs-awareness.md",
+        "rendered_sha256": "ee7c8e196059aec144c29cef095c6e9b38352df9679c27e571d9c7e1eb104d97",
+        "source_path": "docs/manuscript/part_I/higgs-awareness.md",
+        "source_sha256": "ee7c8e196059aec144c29cef095c6e9b38352df9679c27e571d9c7e1eb104d97"
+      },
+      {
+        "rendered_path": "output/manuscript/part_II/unit_intro.md",
+        "rendered_sha256": "9b5b9987aeb7192f809be41521462c4694d86d95eb894e70f56b8823b79437be",
+        "source_path": "docs/manuscript/part_II/unit_intro.md",
+        "source_sha256": "9b5b9987aeb7192f809be41521462c4694d86d95eb894e70f56b8823b79437be"
+      },
+      {
+        "rendered_path": "output/manuscript/part_II/proton-theater.md",
+        "rendered_sha256": "8bf154bd94a59452ccfe3c02bb43040b6fa52a8315fb92b7a7568f77b7fffa97",
+        "source_path": "docs/manuscript/part_II/proton-theater.md",
+        "source_sha256": "8bf154bd94a59452ccfe3c02bb43040b6fa52a8315fb92b7a7568f77b7fffa97"
+      },
+      {
+        "rendered_path": "output/manuscript/part_II/viscosity-light.md",
+        "rendered_sha256": "4da68e392d239a19d038ee8269f6c0943c0b0ac35c62177fb6956af312e5b610",
+        "source_path": "docs/manuscript/part_II/viscosity-light.md",
+        "source_sha256": "4da68e392d239a19d038ee8269f6c0943c0b0ac35c62177fb6956af312e5b610"
+      },
+      {
+        "rendered_path": "output/manuscript/part_II/eddy-current-mirror.md",
+        "rendered_sha256": "54f93b436444774aa4d3c39c0b156d87950d49698d079c8adfd603dffb65face",
+        "source_path": "docs/manuscript/part_II/eddy-current-mirror.md",
+        "source_sha256": "54f93b436444774aa4d3c39c0b156d87950d49698d079c8adfd603dffb65face"
+      },
+      {
+        "rendered_path": "output/manuscript/part_II/crystalline-field.md",
+        "rendered_sha256": "97ceb7354d17e81d613153db7b0683f595697a166589d6bdd31c9aa36b8bc64f",
+        "source_path": "docs/manuscript/part_II/crystalline-field.md",
+        "source_sha256": "97ceb7354d17e81d613153db7b0683f595697a166589d6bdd31c9aa36b8bc64f"
+      },
+      {
+        "rendered_path": "output/manuscript/part_II/metrological-overlap.md",
+        "rendered_sha256": "b7cc04671428898a91a9eb664c1cd17d50a2c7dcd1ed47086aeb2ca78a95aa07",
+        "source_path": "docs/manuscript/part_II/metrological-overlap.md",
+        "source_sha256": "b7cc04671428898a91a9eb664c1cd17d50a2c7dcd1ed47086aeb2ca78a95aa07"
+      },
+      {
+        "rendered_path": "output/manuscript/part_II/metamorphic-octaves.md",
+        "rendered_sha256": "254161f3f3c7a62267a2bac821fc3f84c49bc7b36b9a04f764df384fe27372aa",
+        "source_path": "docs/manuscript/part_II/metamorphic-octaves.md",
+        "source_sha256": "254161f3f3c7a62267a2bac821fc3f84c49bc7b36b9a04f764df384fe27372aa"
+      },
+      {
+        "rendered_path": "output/manuscript/part_II/planetary-core.md",
+        "rendered_sha256": "1beefd51d3863817aa976e79aa7ac72a94701e64c25158be8cbc08d605d71f70",
+        "source_path": "docs/manuscript/part_II/planetary-core.md",
+        "source_sha256": "1beefd51d3863817aa976e79aa7ac72a94701e64c25158be8cbc08d605d71f70"
+      },
+      {
+        "rendered_path": "output/manuscript/part_II/singularity-crystal.md",
+        "rendered_sha256": "370485e8f8d9f55e3b276f568382e93ac6901b5a17f371b2ddd7f826bffbe226",
+        "source_path": "docs/manuscript/part_II/singularity-crystal.md",
+        "source_sha256": "370485e8f8d9f55e3b276f568382e93ac6901b5a17f371b2ddd7f826bffbe226"
+      },
+      {
+        "rendered_path": "output/manuscript/part_III/unit_intro.md",
+        "rendered_sha256": "4658f4047428b4245950026035649cb7a9a721d754d509bfd89dfd8b967e7d66",
+        "source_path": "docs/manuscript/part_III/unit_intro.md",
+        "source_sha256": "4658f4047428b4245950026035649cb7a9a721d754d509bfd89dfd8b967e7d66"
+      },
+      {
+        "rendered_path": "output/manuscript/part_III/cmos-protonic.md",
+        "rendered_sha256": "bddbfd9f329ab87526a5243e213472e1ebf97474ea89ef303f17e7a3c3215aa6",
+        "source_path": "docs/manuscript/part_III/cmos-protonic.md",
+        "source_sha256": "bddbfd9f329ab87526a5243e213472e1ebf97474ea89ef303f17e7a3c3215aa6"
+      },
+      {
+        "rendered_path": "output/manuscript/part_III/protein-folding.md",
+        "rendered_sha256": "bd8ec272ea81149ef883e56f9b118d215fe53b707d6e08aad0e0ad58366554dc",
+        "source_path": "docs/manuscript/part_III/protein-folding.md",
+        "source_sha256": "bd8ec272ea81149ef883e56f9b118d215fe53b707d6e08aad0e0ad58366554dc"
+      },
+      {
+        "rendered_path": "output/manuscript/part_III/volumetric-storage.md",
+        "rendered_sha256": "716787cff5e17298f7a29477114769ae47c183673fd2572b5a0cdae6d2e32762",
+        "source_path": "docs/manuscript/part_III/volumetric-storage.md",
+        "source_sha256": "716787cff5e17298f7a29477114769ae47c183673fd2572b5a0cdae6d2e32762"
+      },
+      {
+        "rendered_path": "output/manuscript/part_III/kinematic-recycling.md",
+        "rendered_sha256": "b595dbaa3b85abb68d185eb07abc682d1f949068216750d63344df3046eb2dfd",
+        "source_path": "docs/manuscript/part_III/kinematic-recycling.md",
+        "source_sha256": "b595dbaa3b85abb68d185eb07abc682d1f949068216750d63344df3046eb2dfd"
+      },
+      {
+        "rendered_path": "output/manuscript/part_III/moving-up-stack.md",
+        "rendered_sha256": "b0a159b67734ccccae77cb119b8fc3a628743650befcf6fa7fcbae9934bcdfcf",
+        "source_path": "docs/manuscript/part_III/moving-up-stack.md",
+        "source_sha256": "b0a159b67734ccccae77cb119b8fc3a628743650befcf6fa7fcbae9934bcdfcf"
+      },
+      {
+        "rendered_path": "output/manuscript/part_III/reality-bridge.md",
+        "rendered_sha256": "0199637e742facd2eb2955a34fd9acafcd42a28f845ec5987e17c7f353ee102c",
+        "source_path": "docs/manuscript/part_III/reality-bridge.md",
+        "source_sha256": "0199637e742facd2eb2955a34fd9acafcd42a28f845ec5987e17c7f353ee102c"
+      },
+      {
+        "rendered_path": "output/manuscript/part_III/y-chromosome.md",
+        "rendered_sha256": "ba1144dbcde6a5a375455c0b2da4151e1479109cb053c060cdd6f613634b1dbc",
+        "source_path": "docs/manuscript/part_III/y-chromosome.md",
+        "source_sha256": "ba1144dbcde6a5a375455c0b2da4151e1479109cb053c060cdd6f613634b1dbc"
+      },
+      {
+        "rendered_path": "output/manuscript/part_III/pdvsa-gateway.md",
+        "rendered_sha256": "a7c6fd3474c8be6a9f837db4ed7f6ec36abdc22f9849ac5ad1dde613e2ff2704",
+        "source_path": "docs/manuscript/part_III/pdvsa-gateway.md",
+        "source_sha256": "a7c6fd3474c8be6a9f837db4ed7f6ec36abdc22f9849ac5ad1dde613e2ff2704"
+      },
+      {
+        "rendered_path": "output/manuscript/part_III/macro-protein.md",
+        "rendered_sha256": "3ddffac7cf3a0b1adfae6967489faf43aba86911a0162bde365a35fa84d009ff",
+        "source_path": "docs/manuscript/part_III/macro-protein.md",
+        "source_sha256": "3ddffac7cf3a0b1adfae6967489faf43aba86911a0162bde365a35fa84d009ff"
+      },
+      {
+        "rendered_path": "output/manuscript/part_III/invisible-frontier.md",
+        "rendered_sha256": "f5edba92bd72820df044a06d48db8ec3055de259b2ca21b06bb8d90996aa6106",
+        "source_path": "docs/manuscript/part_III/invisible-frontier.md",
+        "source_sha256": "f5edba92bd72820df044a06d48db8ec3055de259b2ca21b06bb8d90996aa6106"
+      },
+      {
+        "rendered_path": "output/manuscript/part_III/frontiers.md",
+        "rendered_sha256": "0baea3f8f76fd4574d3fb878a16a2adbf6e508b46e5d0193933e0b3fc8d5bc95",
+        "source_path": "docs/manuscript/part_III/frontiers.md",
+        "source_sha256": "0baea3f8f76fd4574d3fb878a16a2adbf6e508b46e5d0193933e0b3fc8d5bc95"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_0/lab_orientation.md",
+        "rendered_sha256": "b788bb9a3724009f6c3a9e3289b1e84800ebd723a960271fb3dc6cbb81f7de86",
+        "source_path": "docs/manuscript/labs/part_0/lab_orientation.md",
+        "source_sha256": "b788bb9a3724009f6c3a9e3289b1e84800ebd723a960271fb3dc6cbb81f7de86"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_0/lab_living-pem.md",
+        "rendered_sha256": "40ed038293176964646dc7e8b18c874680c91ba743fdd30651491182a017e2bb",
+        "source_path": "docs/manuscript/labs/part_0/lab_living-pem.md",
+        "source_sha256": "40ed038293176964646dc7e8b18c874680c91ba743fdd30651491182a017e2bb"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_0/lab_tensor-decoupling.md",
+        "rendered_sha256": "adbe4206d18ddc1ee301e49bbaec57150e82603e46645bc35ed2fb8648bcc2bb",
+        "source_path": "docs/manuscript/labs/part_0/lab_tensor-decoupling.md",
+        "source_sha256": "adbe4206d18ddc1ee301e49bbaec57150e82603e46645bc35ed2fb8648bcc2bb"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_0/lab_master-synthesis.md",
+        "rendered_sha256": "28b23f0fabec7a652db5170e0db43290904853f93ec20999c4521f862e892c6e",
+        "source_path": "docs/manuscript/labs/part_0/lab_master-synthesis.md",
+        "source_sha256": "28b23f0fabec7a652db5170e0db43290904853f93ec20999c4521f862e892c6e"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_0/lab_octave-map.md",
+        "rendered_sha256": "c46a4f47e12f3e8f13b95becafb2d8fa83b3272a169d1fbd4bc7a08b9ee553e7",
+        "source_path": "docs/manuscript/labs/part_0/lab_octave-map.md",
+        "source_sha256": "c46a4f47e12f3e8f13b95becafb2d8fa83b3272a169d1fbd4bc7a08b9ee553e7"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_I/lab_fractal-constant.md",
+        "rendered_sha256": "c475bb2751e28d924fad1d504584849585df3abb9fd7891291084886a01a82dc",
+        "source_path": "docs/manuscript/labs/part_I/lab_fractal-constant.md",
+        "source_sha256": "c475bb2751e28d924fad1d504584849585df3abb9fd7891291084886a01a82dc"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_I/lab_prime-parity.md",
+        "rendered_sha256": "c1c352ab131ed73d3233f425ac0378514f6fd05a4b936d3589d38e7279693baf",
+        "source_path": "docs/manuscript/labs/part_I/lab_prime-parity.md",
+        "source_sha256": "c1c352ab131ed73d3233f425ac0378514f6fd05a4b936d3589d38e7279693baf"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_I/lab_holographic-rhyme.md",
+        "rendered_sha256": "06f69e023db47c3bd8ffa6fb93a56fd6774458bb045a6691646925775f3f3007",
+        "source_path": "docs/manuscript/labs/part_I/lab_holographic-rhyme.md",
+        "source_sha256": "06f69e023db47c3bd8ffa6fb93a56fd6774458bb045a6691646925775f3f3007"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_I/lab_multidimensional-rhyme.md",
+        "rendered_sha256": "9761314a5a1fe0b489fe810ad174fc70cf057f7fed95dfc1adc97aba61e01f2f",
+        "source_path": "docs/manuscript/labs/part_I/lab_multidimensional-rhyme.md",
+        "source_sha256": "9761314a5a1fe0b489fe810ad174fc70cf057f7fed95dfc1adc97aba61e01f2f"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_I/lab_topology-void.md",
+        "rendered_sha256": "3d31d882dd314f808d7e75d02485bfea99eb00bc8dec547052f55606029c55f5",
+        "source_path": "docs/manuscript/labs/part_I/lab_topology-void.md",
+        "source_sha256": "3d31d882dd314f808d7e75d02485bfea99eb00bc8dec547052f55606029c55f5"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_I/lab_higgs-awareness.md",
+        "rendered_sha256": "4ae23350f4a9f100ca91a671f526c790f2d8e46920860fc599f31fbd8485bc9d",
+        "source_path": "docs/manuscript/labs/part_I/lab_higgs-awareness.md",
+        "source_sha256": "4ae23350f4a9f100ca91a671f526c790f2d8e46920860fc599f31fbd8485bc9d"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_II/lab_proton-theater.md",
+        "rendered_sha256": "a54e9f2258c9897721f34ca5713c7815d404d51091d11a15513a72e85eb42d9a",
+        "source_path": "docs/manuscript/labs/part_II/lab_proton-theater.md",
+        "source_sha256": "a54e9f2258c9897721f34ca5713c7815d404d51091d11a15513a72e85eb42d9a"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_II/lab_viscosity-light.md",
+        "rendered_sha256": "b9d5fadbd27271402dd0b41e0bfb16a213acabdf64c6c2bb1c7f9875335eb695",
+        "source_path": "docs/manuscript/labs/part_II/lab_viscosity-light.md",
+        "source_sha256": "b9d5fadbd27271402dd0b41e0bfb16a213acabdf64c6c2bb1c7f9875335eb695"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_II/lab_eddy-current-mirror.md",
+        "rendered_sha256": "6bc4bf8a085bf2fb28a1d59cad7f331759bee6dc3a4cbff43f9083eaf3734a57",
+        "source_path": "docs/manuscript/labs/part_II/lab_eddy-current-mirror.md",
+        "source_sha256": "6bc4bf8a085bf2fb28a1d59cad7f331759bee6dc3a4cbff43f9083eaf3734a57"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_II/lab_crystalline-field.md",
+        "rendered_sha256": "e48dbe4ae63cbe6aff00421c05e1de88738c102a962cb1e86de761dcc60e3027",
+        "source_path": "docs/manuscript/labs/part_II/lab_crystalline-field.md",
+        "source_sha256": "e48dbe4ae63cbe6aff00421c05e1de88738c102a962cb1e86de761dcc60e3027"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_II/lab_metrological-overlap.md",
+        "rendered_sha256": "90e29aa93dfae1342953d6ab7a87404b6a7ffb472a78817c6eba8a89ff0c5401",
+        "source_path": "docs/manuscript/labs/part_II/lab_metrological-overlap.md",
+        "source_sha256": "90e29aa93dfae1342953d6ab7a87404b6a7ffb472a78817c6eba8a89ff0c5401"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_II/lab_metamorphic-octaves.md",
+        "rendered_sha256": "afa757399239cbf327da74b04273ba273ef0fecbe919f07c3fd320a3e531bd55",
+        "source_path": "docs/manuscript/labs/part_II/lab_metamorphic-octaves.md",
+        "source_sha256": "afa757399239cbf327da74b04273ba273ef0fecbe919f07c3fd320a3e531bd55"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_II/lab_planetary-core.md",
+        "rendered_sha256": "853d25c9a059b064c00b605a6164fdf553610d53ab7df56dff11967f2e3f4f86",
+        "source_path": "docs/manuscript/labs/part_II/lab_planetary-core.md",
+        "source_sha256": "853d25c9a059b064c00b605a6164fdf553610d53ab7df56dff11967f2e3f4f86"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_II/lab_singularity-crystal.md",
+        "rendered_sha256": "abc6eb5ed59cea08ba29c8d768bcccda049cae878a4ba9da7d41a2cb5080572e",
+        "source_path": "docs/manuscript/labs/part_II/lab_singularity-crystal.md",
+        "source_sha256": "abc6eb5ed59cea08ba29c8d768bcccda049cae878a4ba9da7d41a2cb5080572e"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_III/lab_cmos-protonic.md",
+        "rendered_sha256": "7320303310e52031d6d6c3ef4d77e176424427cad57d1e2afa562322f8b13e66",
+        "source_path": "docs/manuscript/labs/part_III/lab_cmos-protonic.md",
+        "source_sha256": "7320303310e52031d6d6c3ef4d77e176424427cad57d1e2afa562322f8b13e66"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_III/lab_protein-folding.md",
+        "rendered_sha256": "23223d9a1ad3142babad375e31a47b6480fc0c55041e052bf68d892676e0b45d",
+        "source_path": "docs/manuscript/labs/part_III/lab_protein-folding.md",
+        "source_sha256": "23223d9a1ad3142babad375e31a47b6480fc0c55041e052bf68d892676e0b45d"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_III/lab_volumetric-storage.md",
+        "rendered_sha256": "3c5f53958bfc5890864993ed225314529de2a91d9a9df710b9fe243f45e4e330",
+        "source_path": "docs/manuscript/labs/part_III/lab_volumetric-storage.md",
+        "source_sha256": "3c5f53958bfc5890864993ed225314529de2a91d9a9df710b9fe243f45e4e330"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_III/lab_kinematic-recycling.md",
+        "rendered_sha256": "aa76965b393005227ccde1e6b85bef48a70bc1c573af9b2a25ad7ca080120512",
+        "source_path": "docs/manuscript/labs/part_III/lab_kinematic-recycling.md",
+        "source_sha256": "aa76965b393005227ccde1e6b85bef48a70bc1c573af9b2a25ad7ca080120512"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_III/lab_moving-up-stack.md",
+        "rendered_sha256": "f626e87c40674df68cf52c5dae43bb357d1a0036caf3d8d4ce5dd9b3c36c6cc9",
+        "source_path": "docs/manuscript/labs/part_III/lab_moving-up-stack.md",
+        "source_sha256": "f626e87c40674df68cf52c5dae43bb357d1a0036caf3d8d4ce5dd9b3c36c6cc9"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_III/lab_reality-bridge.md",
+        "rendered_sha256": "a02c49367efa8ed7830f05de0a02216c2fc081a3a41a8e655a63e8b3fed45070",
+        "source_path": "docs/manuscript/labs/part_III/lab_reality-bridge.md",
+        "source_sha256": "a02c49367efa8ed7830f05de0a02216c2fc081a3a41a8e655a63e8b3fed45070"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_III/lab_y-chromosome.md",
+        "rendered_sha256": "1afa063408a1c97e98c29a0b390e1039c90a1ac184d38ab121ef5614b400f606",
+        "source_path": "docs/manuscript/labs/part_III/lab_y-chromosome.md",
+        "source_sha256": "1afa063408a1c97e98c29a0b390e1039c90a1ac184d38ab121ef5614b400f606"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_III/lab_pdvsa-gateway.md",
+        "rendered_sha256": "1eae7344123e0ed57db733c0b0bc7cea11f126216b7a565948d2211dad8c4707",
+        "source_path": "docs/manuscript/labs/part_III/lab_pdvsa-gateway.md",
+        "source_sha256": "1eae7344123e0ed57db733c0b0bc7cea11f126216b7a565948d2211dad8c4707"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_III/lab_macro-protein.md",
+        "rendered_sha256": "d235d5d86993f1111dffd80043bd6480e061dd8e85a1f4adfdc5b66c77ccfa52",
+        "source_path": "docs/manuscript/labs/part_III/lab_macro-protein.md",
+        "source_sha256": "d235d5d86993f1111dffd80043bd6480e061dd8e85a1f4adfdc5b66c77ccfa52"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_III/lab_invisible-frontier.md",
+        "rendered_sha256": "145b037243751afbb70d07ded7c57b487ddd2d7bbdeb339ef645f7c5a9252b7a",
+        "source_path": "docs/manuscript/labs/part_III/lab_invisible-frontier.md",
+        "source_sha256": "145b037243751afbb70d07ded7c57b487ddd2d7bbdeb339ef645f7c5a9252b7a"
+      },
+      {
+        "rendered_path": "output/manuscript/labs/part_III/lab_frontiers.md",
+        "rendered_sha256": "b46c1ff155a2544b532130fdba573690557fdf6655486af07d4f3d7b3b549968",
+        "source_path": "docs/manuscript/labs/part_III/lab_frontiers.md",
+        "source_sha256": "b46c1ff155a2544b532130fdba573690557fdf6655486af07d4f3d7b3b549968"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_0/q_orientation.md",
+        "rendered_sha256": "66fc77231b2b90985ebf5fad0460edb8e70b1db65ec54a437f3c6d45bfc1c07e",
+        "source_path": "docs/manuscript/questions/part_0/q_orientation.md",
+        "source_sha256": "66fc77231b2b90985ebf5fad0460edb8e70b1db65ec54a437f3c6d45bfc1c07e"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_0/q_living-pem.md",
+        "rendered_sha256": "142f53c582465edb87c260891875ce09fd636c41c1152fd747f8001f462b98e8",
+        "source_path": "docs/manuscript/questions/part_0/q_living-pem.md",
+        "source_sha256": "142f53c582465edb87c260891875ce09fd636c41c1152fd747f8001f462b98e8"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_0/q_tensor-decoupling.md",
+        "rendered_sha256": "2905489e91b2eede66e691e8f27a183e6916b0d207e2920b41d337ef0c404a70",
+        "source_path": "docs/manuscript/questions/part_0/q_tensor-decoupling.md",
+        "source_sha256": "2905489e91b2eede66e691e8f27a183e6916b0d207e2920b41d337ef0c404a70"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_0/q_master-synthesis.md",
+        "rendered_sha256": "24ea64f29019fd07df03c23ecc9759cf5a42c1e90777236196b41c03f933faf0",
+        "source_path": "docs/manuscript/questions/part_0/q_master-synthesis.md",
+        "source_sha256": "24ea64f29019fd07df03c23ecc9759cf5a42c1e90777236196b41c03f933faf0"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_0/q_octave-map.md",
+        "rendered_sha256": "7ffadce8a09a4b7ffda1c14a20abe5250463b239ce629a4ed10b691d76b2a9e2",
+        "source_path": "docs/manuscript/questions/part_0/q_octave-map.md",
+        "source_sha256": "7ffadce8a09a4b7ffda1c14a20abe5250463b239ce629a4ed10b691d76b2a9e2"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_I/q_fractal-constant.md",
+        "rendered_sha256": "e8173163243fa99306142bbca026cd4fd2bff591e331534a2776edbe9fba44af",
+        "source_path": "docs/manuscript/questions/part_I/q_fractal-constant.md",
+        "source_sha256": "e8173163243fa99306142bbca026cd4fd2bff591e331534a2776edbe9fba44af"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_I/q_prime-parity.md",
+        "rendered_sha256": "82eb832d89c2c2d353cc34ea0f0b236ffcdf891e7932f69a825ead1c62d8ac66",
+        "source_path": "docs/manuscript/questions/part_I/q_prime-parity.md",
+        "source_sha256": "82eb832d89c2c2d353cc34ea0f0b236ffcdf891e7932f69a825ead1c62d8ac66"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_I/q_holographic-rhyme.md",
+        "rendered_sha256": "d51d07c9bd98fac0834e22031ce459853ae0da9e0e457d8eb0628ecd5a3691c3",
+        "source_path": "docs/manuscript/questions/part_I/q_holographic-rhyme.md",
+        "source_sha256": "d51d07c9bd98fac0834e22031ce459853ae0da9e0e457d8eb0628ecd5a3691c3"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_I/q_multidimensional-rhyme.md",
+        "rendered_sha256": "42a3f62c0145c880f380b4f0aa1d22fbd19e11e9f64cd0613e2db92ab69a7202",
+        "source_path": "docs/manuscript/questions/part_I/q_multidimensional-rhyme.md",
+        "source_sha256": "42a3f62c0145c880f380b4f0aa1d22fbd19e11e9f64cd0613e2db92ab69a7202"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_I/q_topology-void.md",
+        "rendered_sha256": "c3ac3948231e99ddb19377262940f0a7c3767f375b4ba194d2865cc406a9f5fb",
+        "source_path": "docs/manuscript/questions/part_I/q_topology-void.md",
+        "source_sha256": "c3ac3948231e99ddb19377262940f0a7c3767f375b4ba194d2865cc406a9f5fb"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_I/q_higgs-awareness.md",
+        "rendered_sha256": "92b44db449f4b7de4350ccd1accbe91daf34f909916d111806b0e0e9937e036c",
+        "source_path": "docs/manuscript/questions/part_I/q_higgs-awareness.md",
+        "source_sha256": "92b44db449f4b7de4350ccd1accbe91daf34f909916d111806b0e0e9937e036c"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_II/q_proton-theater.md",
+        "rendered_sha256": "29312cada28b5760ebde9f745f50791c8b7d76f4177fa1626df1b07f132b7176",
+        "source_path": "docs/manuscript/questions/part_II/q_proton-theater.md",
+        "source_sha256": "29312cada28b5760ebde9f745f50791c8b7d76f4177fa1626df1b07f132b7176"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_II/q_viscosity-light.md",
+        "rendered_sha256": "e90268f673ffa856ad8ce58b6ca061224544f88e8d2aca5df7a3eac4d79136f1",
+        "source_path": "docs/manuscript/questions/part_II/q_viscosity-light.md",
+        "source_sha256": "e90268f673ffa856ad8ce58b6ca061224544f88e8d2aca5df7a3eac4d79136f1"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_II/q_eddy-current-mirror.md",
+        "rendered_sha256": "cc1396a4b1b558110af0b32087ef9f9d9d7f4dfb4b8c2d60030db199b3d01aeb",
+        "source_path": "docs/manuscript/questions/part_II/q_eddy-current-mirror.md",
+        "source_sha256": "cc1396a4b1b558110af0b32087ef9f9d9d7f4dfb4b8c2d60030db199b3d01aeb"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_II/q_crystalline-field.md",
+        "rendered_sha256": "40a7653e3e9207a211d112d1683d2a1af279adf39431f278d50bdafaae722e02",
+        "source_path": "docs/manuscript/questions/part_II/q_crystalline-field.md",
+        "source_sha256": "40a7653e3e9207a211d112d1683d2a1af279adf39431f278d50bdafaae722e02"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_II/q_metrological-overlap.md",
+        "rendered_sha256": "b8c74dc2ed917bf83e296eecc934b505da4b7f37126bdab21361f3a72506e54a",
+        "source_path": "docs/manuscript/questions/part_II/q_metrological-overlap.md",
+        "source_sha256": "b8c74dc2ed917bf83e296eecc934b505da4b7f37126bdab21361f3a72506e54a"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_II/q_metamorphic-octaves.md",
+        "rendered_sha256": "882106c15c91b56ae1274daa3a096938f84fd054943c3823e7180cc24389b1be",
+        "source_path": "docs/manuscript/questions/part_II/q_metamorphic-octaves.md",
+        "source_sha256": "882106c15c91b56ae1274daa3a096938f84fd054943c3823e7180cc24389b1be"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_II/q_planetary-core.md",
+        "rendered_sha256": "ad0418ab5b4c2f27aed43030713d86b7f00ffb761e22de1adf91b5c024edaa0f",
+        "source_path": "docs/manuscript/questions/part_II/q_planetary-core.md",
+        "source_sha256": "ad0418ab5b4c2f27aed43030713d86b7f00ffb761e22de1adf91b5c024edaa0f"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_II/q_singularity-crystal.md",
+        "rendered_sha256": "d5c22b58b3929e68f8d727222dddfd3a79eab50e498c250a0192aff1861f4330",
+        "source_path": "docs/manuscript/questions/part_II/q_singularity-crystal.md",
+        "source_sha256": "d5c22b58b3929e68f8d727222dddfd3a79eab50e498c250a0192aff1861f4330"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_III/q_cmos-protonic.md",
+        "rendered_sha256": "9f07546005310b546a689750146467a746143ecea7eee0f7b3813855a27a9969",
+        "source_path": "docs/manuscript/questions/part_III/q_cmos-protonic.md",
+        "source_sha256": "9f07546005310b546a689750146467a746143ecea7eee0f7b3813855a27a9969"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_III/q_protein-folding.md",
+        "rendered_sha256": "cc0570871aa63068ad23d4b3d856e6390d25cb0a92e4ea376c21a95af716742c",
+        "source_path": "docs/manuscript/questions/part_III/q_protein-folding.md",
+        "source_sha256": "cc0570871aa63068ad23d4b3d856e6390d25cb0a92e4ea376c21a95af716742c"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_III/q_volumetric-storage.md",
+        "rendered_sha256": "0a5045d8951754d9207fe2da39221f5bec74c61df5609952bc53022d4b7b31e8",
+        "source_path": "docs/manuscript/questions/part_III/q_volumetric-storage.md",
+        "source_sha256": "0a5045d8951754d9207fe2da39221f5bec74c61df5609952bc53022d4b7b31e8"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_III/q_kinematic-recycling.md",
+        "rendered_sha256": "3674e0de44e160d75bd9b59a717b0f0e5fc2d65e9e472e4bf07ee001152e7a66",
+        "source_path": "docs/manuscript/questions/part_III/q_kinematic-recycling.md",
+        "source_sha256": "3674e0de44e160d75bd9b59a717b0f0e5fc2d65e9e472e4bf07ee001152e7a66"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_III/q_moving-up-stack.md",
+        "rendered_sha256": "59838bbf0cb1bd6a7842cb3140987524b24705230325db3a3df1d47f57a8bdb6",
+        "source_path": "docs/manuscript/questions/part_III/q_moving-up-stack.md",
+        "source_sha256": "59838bbf0cb1bd6a7842cb3140987524b24705230325db3a3df1d47f57a8bdb6"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_III/q_reality-bridge.md",
+        "rendered_sha256": "9bc0d87d6890ce7e733c816ae06272a4c87830f4a22efb1cd782382a4548deee",
+        "source_path": "docs/manuscript/questions/part_III/q_reality-bridge.md",
+        "source_sha256": "9bc0d87d6890ce7e733c816ae06272a4c87830f4a22efb1cd782382a4548deee"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_III/q_y-chromosome.md",
+        "rendered_sha256": "b2e4cee3e7c6930f5f69c713f7dd7bfda6c5a971cbef35c84d9ede602d46de71",
+        "source_path": "docs/manuscript/questions/part_III/q_y-chromosome.md",
+        "source_sha256": "b2e4cee3e7c6930f5f69c713f7dd7bfda6c5a971cbef35c84d9ede602d46de71"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_III/q_pdvsa-gateway.md",
+        "rendered_sha256": "21e825f21173001ba56a2a94af18764b6bb5c2b2ef865fae41acd1b196ca74cf",
+        "source_path": "docs/manuscript/questions/part_III/q_pdvsa-gateway.md",
+        "source_sha256": "21e825f21173001ba56a2a94af18764b6bb5c2b2ef865fae41acd1b196ca74cf"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_III/q_macro-protein.md",
+        "rendered_sha256": "2338e7e7b12e16a53b650b194a093f1c477535656f9a7376d00c2c49b444d287",
+        "source_path": "docs/manuscript/questions/part_III/q_macro-protein.md",
+        "source_sha256": "2338e7e7b12e16a53b650b194a093f1c477535656f9a7376d00c2c49b444d287"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_III/q_invisible-frontier.md",
+        "rendered_sha256": "26e91213fbbacedadbf9f59ab0788eb3118ba767045806af587f7178112c0a8d",
+        "source_path": "docs/manuscript/questions/part_III/q_invisible-frontier.md",
+        "source_sha256": "26e91213fbbacedadbf9f59ab0788eb3118ba767045806af587f7178112c0a8d"
+      },
+      {
+        "rendered_path": "output/manuscript/questions/part_III/q_frontiers.md",
+        "rendered_sha256": "5c685b6f5c098b5ac3f2f6b42e7ad9e2117c8f0edf9d54df4e7055bc46403b4d",
+        "source_path": "docs/manuscript/questions/part_III/q_frontiers.md",
+        "source_sha256": "5c685b6f5c098b5ac3f2f6b42e7ad9e2117c8f0edf9d54df4e7055bc46403b4d"
+      },
+      {
+        "rendered_path": "output/manuscript/appendices/appendix_authoring_guide.md",
+        "rendered_sha256": "5fd8f082f8fdca670ae0a41b123330ff409c1c300221371a7241ab82890902b6",
+        "source_path": "docs/manuscript/appendices/appendix_authoring_guide.md",
+        "source_sha256": "5fd8f082f8fdca670ae0a41b123330ff409c1c300221371a7241ab82890902b6"
+      },
+      {
+        "rendered_path": "output/manuscript/appendices/appendix_notation.md",
+        "rendered_sha256": "53c20dedbde8267cf5283fd5fe7aa57a14bba7a675e04f299acc6afe3d75815f",
+        "source_path": "docs/manuscript/appendices/appendix_notation.md",
+        "source_sha256": "53c20dedbde8267cf5283fd5fe7aa57a14bba7a675e04f299acc6afe3d75815f"
+      },
+      {
+        "rendered_path": "output/manuscript/appendices/appendix_math_review.md",
+        "rendered_sha256": "fee1000adc25d9e03077b0901b54cca91ed7a507bc13c6751d361e24b3499a5c",
+        "source_path": "docs/manuscript/appendices/appendix_math_review.md",
+        "source_sha256": "fee1000adc25d9e03077b0901b54cca91ed7a507bc13c6751d361e24b3499a5c"
+      },
+      {
+        "rendered_path": "output/manuscript/appendices/appendix_formalisms.md",
+        "rendered_sha256": "1571467280cf47501325691cc3d8a59298bda85932c4d11f154f0de455a19ed5",
+        "source_path": "docs/manuscript/appendices/appendix_formalisms.md",
+        "source_sha256": "1571467280cf47501325691cc3d8a59298bda85932c4d11f154f0de455a19ed5"
+      },
+      {
+        "rendered_path": "output/manuscript/appendices/appendix_format_gallery.md",
+        "rendered_sha256": "3194804be4ac1903fec95d4f41075b3d22e9a9bff7d268f1a4464a548f6e89e0",
+        "source_path": "docs/manuscript/appendices/appendix_format_gallery.md",
+        "source_sha256": "3194804be4ac1903fec95d4f41075b3d22e9a9bff7d268f1a4464a548f6e89e0"
+      },
+      {
+        "rendered_path": "output/manuscript/glossary.md",
+        "rendered_sha256": "750cf9638167b03bd3d7a113b344fc97417446e9f224ff552455975a187a4c58",
+        "source_path": "docs/manuscript/glossary.md",
+        "source_sha256": "750cf9638167b03bd3d7a113b344fc97417446e9f224ff552455975a187a4c58"
+      },
+      {
+        "rendered_path": "output/manuscript/appendices/appendix_index.md",
+        "rendered_sha256": "9cabfef0b938606842ef33f21344d243d7fb9612ca175d96cae82e48785fb43a",
+        "source_path": "docs/manuscript/appendices/appendix_index.md",
+        "source_sha256": "9cabfef0b938606842ef33f21344d243d7fb9612ca175d96cae82e48785fb43a"
+      }
+    ],
+    "fingerprints": {
+      "config": {
+        "file_count": 18,
+        "sha256": "3b1ec767cb891b3b3baa23c185ebe90ae96a1dac5b89f94e325b1458805f8043"
+      },
+      "output": {
+        "file_count": 425,
+        "sha256": "fd3ae50bc5267b443f0c64697e97b17afeed55141a27356b02101eb3b2a7f562"
+      },
+      "source": {
+        "file_count": 59,
+        "sha256": "5cf32a89a3c2019bc12b47a42a1b309eb18df5fff86ba3b501d53720dc8b621d"
+      },
+      "stage": {
+        "file_count": 1288,
+        "sha256": "f660705fa6b4738d00670a3b74c4a6abb84e69b9121dd9081d10be83f5a9c200"
+      }
+    },
+    "project": "working/OmniLatticeTextbook",
+    "schema_version": "template-validated-rendered-inputs-v1"
+  }
+}

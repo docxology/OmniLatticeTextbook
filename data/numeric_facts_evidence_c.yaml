@@ -1,0 +1,1702 @@
+schema_version: template-textbook-numeric-facts-v1
+facts:
+- fact_id: evidence-554-part-iii-macro-protein-md
+  source: docs/manuscript/part_III/macro-protein.md
+  needle: \;=\; 1000^{3/4} \;=\; 10^{9/4} \;\approx\; 177.83 \,, $$ {#eq:part_III_macro-protein_kleiber}
+  value: 177.83
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-555-part-iii-macro-protein-md
+  source: docs/manuscript/part_III/macro-protein.md
+  needle: a $178$-fold rather than $1000$-fold rise — the sublinear signature of
+  value: 178
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-556-part-iii-macro-protein-md
+  source: docs/manuscript/part_III/macro-protein.md
+  needle: 'above drawn as curves: an exponential ramp from $\approx 521$ to $\approx'
+  value: 521
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-557-part-iii-macro-protein-md
+  source: docs/manuscript/part_III/macro-protein.md
+  needle: 3571$ under the exponent convention, and a line indistinguishable from flat at
+  value: 3571
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-558-part-iii-macro-protein-md
+  source: docs/manuscript/part_III/macro-protein.md
+  needle: exercise yields candidate tier values $\{12.6,\ 13.9,\ 16.2,\ 17.4\}$ for
+  value: 12.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-559-part-iii-macro-protein-md
+  source: docs/manuscript/part_III/macro-protein.md
+  needle: exercise yields candidate tier values $\{12.6,\ 13.9,\ 16.2,\ 17.4\}$ for
+  value: 13.9
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-560-part-iii-macro-protein-md
+  source: docs/manuscript/part_III/macro-protein.md
+  needle: exercise yields candidate tier values $\{12.6,\ 13.9,\ 16.2,\ 17.4\}$ for
+  value: 16.2
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-561-part-iii-macro-protein-md
+  source: docs/manuscript/part_III/macro-protein.md
+  needle: exercise yields candidate tier values $\{12.6,\ 13.9,\ 16.2,\ 17.4\}$ for
+  value: 17.4
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-562-part-iii-macro-protein-md
+  source: docs/manuscript/part_III/macro-protein.md
+  needle: '($\sim 4000$ kg, i.e. $2 \times 10^5$-fold): the metabolic ratio is $(2'
+  value: 4000
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-563-part-iii-macro-protein-md
+  source: docs/manuscript/part_III/macro-protein.md
+  needle: \times 10^5)^{3/4} \approx 5318$ — again strongly sublinear, again published
+  value: 5318
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-564-part-iii-macro-protein-md
+  source: docs/manuscript/part_III/macro-protein.md
+  needle: 4. A filing exercise yields candidate tiers $\{16.8,\ 12.9,\ 17.1,\ 13.0\}$.
+  value: 16.8
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-565-part-iii-macro-protein-md
+  source: docs/manuscript/part_III/macro-protein.md
+  needle: 4. A filing exercise yields candidate tiers $\{16.8,\ 12.9,\ 17.1,\ 13.0\}$.
+  value: 12.9
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-566-part-iii-macro-protein-md
+  source: docs/manuscript/part_III/macro-protein.md
+  needle: 4. A filing exercise yields candidate tiers $\{16.8,\ 12.9,\ 17.1,\ 13.0\}$.
+  value: 17.1
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-570-part-iii-moving-up-stack-md
+  source: docs/manuscript/part_III/moving-up-stack.md
+  needle: '5. **Cross-check against the misread.** The rejected peer band tops out at $\$7.5\text{B}$
+    — which is *below the new-layer floor of $\$12\text{B}$*. The two readings do not even overlap: peer
+    midpoint $(4.2+7.5)/2 = \$5.85\text{B}$ versus new-layer midpoint $(12+28)/2 = \$20\text{B}$, a factor
+    of $20/5.85 \approx 3.4$. The correction is not a tune-up; it is a re-shelving.'
+  value: 7.5
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-571-part-iii-moving-up-stack-md
+  source: docs/manuscript/part_III/moving-up-stack.md
+  needle: '5. **Cross-check against the misread.** The rejected peer band tops out at $\$7.5\text{B}$
+    — which is *below the new-layer floor of $\$12\text{B}$*. The two readings do not even overlap: peer
+    midpoint $(4.2+7.5)/2 = \$5.85\text{B}$ versus new-layer midpoint $(12+28)/2 = \$20\text{B}$, a factor
+    of $20/5.85 \approx 3.4$. The correction is not a tune-up; it is a re-shelving.'
+  value: 4.2
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-572-part-iii-moving-up-stack-md
+  source: docs/manuscript/part_III/moving-up-stack.md
+  needle: '5. **Cross-check against the misread.** The rejected peer band tops out at $\$7.5\text{B}$
+    — which is *below the new-layer floor of $\$12\text{B}$*. The two readings do not even overlap: peer
+    midpoint $(4.2+7.5)/2 = \$5.85\text{B}$ versus new-layer midpoint $(12+28)/2 = \$20\text{B}$, a factor
+    of $20/5.85 \approx 3.4$. The correction is not a tune-up; it is a re-shelving.'
+  value: 5.85
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-573-part-iii-moving-up-stack-md
+  source: docs/manuscript/part_III/moving-up-stack.md
+  needle: As a numerical illustration of the cooling claim (our arithmetic, not the corpus's), take $m
+    = 10$ agents, siloed loops of $T_{\text{loop}} = 40{,}000$ tokens, a shared brief $B = 5{,}000$, and
+    seed+pointer loops of $s + p = 2{,}500$. Then $C_{\text{siloed}} = 400{,}000$, $C_{\text{harmonised}}
+    = 5{,}000 + 25{,}000 = 30{,}000$, and $\kappa \approx 13.3$ by [@eq:part_III_moving-up-stack_cooling].
+    The magnitude is illustrative; the *mechanism* — fewer tokens per loop because agents carry seeds
+    and pointers instead of fat paste — is the corpus's claim.
+  value: 500
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-574-part-iii-moving-up-stack-md
+  source: docs/manuscript/part_III/moving-up-stack.md
+  needle: As a numerical illustration of the cooling claim (our arithmetic, not the corpus's), take $m
+    = 10$ agents, siloed loops of $T_{\text{loop}} = 40{,}000$ tokens, a shared brief $B = 5{,}000$, and
+    seed+pointer loops of $s + p = 2{,}500$. Then $C_{\text{siloed}} = 400{,}000$, $C_{\text{harmonised}}
+    = 5{,}000 + 25{,}000 = 30{,}000$, and $\kappa \approx 13.3$ by [@eq:part_III_moving-up-stack_cooling].
+    The magnitude is illustrative; the *mechanism* — fewer tokens per loop because agents carry seeds
+    and pointers instead of fat paste — is the corpus's claim.
+  value: 400
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-575-part-iii-moving-up-stack-md
+  source: docs/manuscript/part_III/moving-up-stack.md
+  needle: As a numerical illustration of the cooling claim (our arithmetic, not the corpus's), take $m
+    = 10$ agents, siloed loops of $T_{\text{loop}} = 40{,}000$ tokens, a shared brief $B = 5{,}000$, and
+    seed+pointer loops of $s + p = 2{,}500$. Then $C_{\text{siloed}} = 400{,}000$, $C_{\text{harmonised}}
+    = 5{,}000 + 25{,}000 = 30{,}000$, and $\kappa \approx 13.3$ by [@eq:part_III_moving-up-stack_cooling].
+    The magnitude is illustrative; the *mechanism* — fewer tokens per loop because agents carry seeds
+    and pointers instead of fat paste — is the corpus's claim.
+  value: 13.3
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-576-part-iii-moving-up-stack-md
+  source: docs/manuscript/part_III/moving-up-stack.md
+  needle: '- **Telemetry:** the "NOAA-predicted September 2026 sunspot count **90.9** and operational
+    node **Hero Jo** are filing / ops labels — not causal dollar drivers." They index the filing, they
+    do not move the band.'
+  value: 90.9
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-584-part-iii-pdvsa-gateway-md
+  source: docs/manuscript/part_III/pdvsa-gateway.md
+  needle: '- Given $C_{\mathrm{flat}}(8) = 240$ token units, use [@eq:part_III_pdvsa-gateway_tokens] to
+    state the largest context cost the gateway grammar may claim at eight domains, and identify the E1–E6
+    empirics that would have to back such a claim.'
+  value: 240
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-587-part-iii-protein-folding-md
+  source: docs/manuscript/part_III/protein-folding.md
+  needle: the exponent reading gives $\Phi^{10} \approx 122.99$ above the base, while
+  value: 122.99
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-588-part-iii-protein-folding-md
+  source: docs/manuscript/part_III/protein-folding.md
+  needle: ladder ($\Phi^{14} \approx 843 \cdot \Omega_0$), befitting an application-layer
+  value: 843
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-589-part-iii-protein-folding-md
+  source: docs/manuscript/part_III/protein-folding.md
+  needle: \cdot 17 \cdot 19 \cdot 23 \cdot 29 \cdot 31 = 100{,}280{,}245{,}065 \approx
+  value: 280
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-590-part-iii-protein-folding-md
+  source: docs/manuscript/part_III/protein-folding.md
+  needle: \cdot 17 \cdot 19 \cdot 23 \cdot 29 \cdot 31 = 100{,}280{,}245{,}065 \approx
+  value: 245
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-591-part-iii-reality-bridge-md
+  source: docs/manuscript/part_III/reality-bridge.md
+  needle: $v(1) \approx 0.367879$ and $v(2) \approx 0.135335$ from
+  value: 0.367879
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-592-part-iii-reality-bridge-md
+  source: docs/manuscript/part_III/reality-bridge.md
+  needle: $v(1) \approx 0.367879$ and $v(2) \approx 0.135335$ from
+  value: 0.135335
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-600-part-iii-reality-bridge-md
+  source: docs/manuscript/part_III/reality-bridge.md
+  needle: stays with the noise background; by two steps, about $13.5\%$. The
+  value: 13.5
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-601-part-iii-reality-bridge-md
+  source: docs/manuscript/part_III/reality-bridge.md
+  needle: 'the background, hence a routed-to-today share of $1 - 0.367879 = 0.632121$:'
+  value: 0.632121
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-602-part-iii-reality-bridge-md
+  source: docs/manuscript/part_III/reality-bridge.md
+  needle: 'share $0.864665$: the deeper the request travels, the more of it the router'
+  value: 0.864665
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-604-part-iii-volumetric-storage-md
+  source: docs/manuscript/part_III/volumetric-storage.md
+  needle: $\log_{\Phi} 12 = \ln 12 / \ln \Phi \approx 2.4849 / 0.4812 \approx 5.16$
+  value: 2.4849
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-605-part-iii-volumetric-storage-md
+  source: docs/manuscript/part_III/volumetric-storage.md
+  needle: $\log_{\Phi} 12 = \ln 12 / \ln \Phi \approx 2.4849 / 0.4812 \approx 5.16$
+  value: 0.4812
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-606-part-iii-volumetric-storage-md
+  source: docs/manuscript/part_III/volumetric-storage.md
+  needle: $\log_{\Phi} 12 = \ln 12 / \ln \Phi \approx 2.4849 / 0.4812 \approx 5.16$
+  value: 5.16
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-613-part-iii-volumetric-storage-md
+  source: docs/manuscript/part_III/volumetric-storage.md
+  needle: $\log_{\Phi} 30 = \ln 30 / \ln \Phi \approx 3.4012 / 0.4812 \approx 7.07$
+  value: 3.4012
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-614-part-iii-volumetric-storage-md
+  source: docs/manuscript/part_III/volumetric-storage.md
+  needle: $\log_{\Phi} 30 = \ln 30 / \ln \Phi \approx 3.4012 / 0.4812 \approx 7.07$
+  value: 7.07
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-615-part-iii-volumetric-storage-md
+  source: docs/manuscript/part_III/volumetric-storage.md
+  needle: above the $\Phi^7$ rung ($\Phi^7 = \Phi^6 \cdot \Phi \approx 29.034$).
+  value: 29.034
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-621-part-iii-y-chromosome-md
+  source: docs/manuscript/part_III/y-chromosome.md
+  needle: '> claim that MSY literally equals a physics constant, that sunspot AR 3664'
+  value: 3664
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-632-questions-part-0-q-tensor-decoupling-md
+  source: docs/manuscript/questions/part_0/q_tensor-decoupling.md
+  needle: '3. What two numbers does the paper flag as "the two numbers that matter", and how does the
+    companion papers'' larger figure relate to them? *(Answer: the per-block precision matrix 9 × 81 =
+    729 and the octave ladder 11 × 9 = 99; the companion papers keep 99 × 81 = 8,019 holographic catalog
+    digits, and the per-block figure tiles the ladder exactly since 729 × 11 = 8,019.)*'
+  value: 729
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-633-questions-part-0-q-tensor-decoupling-md
+  source: docs/manuscript/questions/part_0/q_tensor-decoupling.md
+  needle: '5. An agent walks the shelves reading the dial $w_n = \Phi^{-n}$ starting at $w_0 = 1$. Give
+    the readings for $n = 1, 2, 3$ and state the constant decay factor between consecutive readings. *(Answer:
+    0.618034, 0.381966, 0.236068; each consecutive reading decays by a factor of Φ ≈ 1.618034, the golden
+    ratio.)*'
+  value: 0.618034
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-634-questions-part-0-q-tensor-decoupling-md
+  source: docs/manuscript/questions/part_0/q_tensor-decoupling.md
+  needle: '5. An agent walks the shelves reading the dial $w_n = \Phi^{-n}$ starting at $w_0 = 1$. Give
+    the readings for $n = 1, 2, 3$ and state the constant decay factor between consecutive readings. *(Answer:
+    0.618034, 0.381966, 0.236068; each consecutive reading decays by a factor of Φ ≈ 1.618034, the golden
+    ratio.)*'
+  value: 0.381966
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-635-questions-part-0-q-tensor-decoupling-md
+  source: docs/manuscript/questions/part_0/q_tensor-decoupling.md
+  needle: '5. An agent walks the shelves reading the dial $w_n = \Phi^{-n}$ starting at $w_0 = 1$. Give
+    the readings for $n = 1, 2, 3$ and state the constant decay factor between consecutive readings. *(Answer:
+    0.618034, 0.381966, 0.236068; each consecutive reading decays by a factor of Φ ≈ 1.618034, the golden
+    ratio.)*'
+  value: 0.236068
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-638-questions-part-i-q-fractal-constant-md
+  source: docs/manuscript/questions/part_I/q_fractal-constant.md
+  needle: 4. Using the exponent convention with $\Omega_0 = 275$ filing units and $n = 5$, compute
+  value: 275
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-641-questions-part-i-q-fractal-constant-md
+  source: docs/manuscript/questions/part_I/q_fractal-constant.md
+  needle: 5. Under the subscript convention, the same printed sketch gives $\Omega_5 = 440$ filing
+  value: 440
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-644-questions-part-i-q-fractal-constant-md
+  source: docs/manuscript/questions/part_I/q_fractal-constant.md
+  needle: physics constant, that sunspot AR 3664 writes human DNA, or that fractal dimension has
+  value: 3664
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-645-questions-part-i-q-higgs-awareness-md
+  source: docs/manuscript/questions/part_I/q_higgs-awareness.md
+  needle: '*(Answer: $v(1) = 0.367879$, $v(2) = 0.135335$; $t_{1/2} = \ln 2 \approx'
+  value: 0.367879
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-646-questions-part-i-q-higgs-awareness-md
+  source: docs/manuscript/questions/part_I/q_higgs-awareness.md
+  needle: '*(Answer: $v(1) = 0.367879$, $v(2) = 0.135335$; $t_{1/2} = \ln 2 \approx'
+  value: 0.135335
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-647-questions-part-i-q-higgs-awareness-md
+  source: docs/manuscript/questions/part_I/q_higgs-awareness.md
+  needle: 0.693$ — from [@eq:part_I_higgs-awareness_model].)*
+  value: 0.693
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-649-questions-part-i-q-holographic-rhyme-md
+  source: docs/manuscript/questions/part_I/q_holographic-rhyme.md
+  needle: 5. The station $(\lambda/2,\, \lambda/2)$ yields $f = -4$. In the filing
+  value: -4
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-654-questions-part-i-q-topology-void-md
+  source: docs/manuscript/questions/part_I/q_topology-void.md
+  needle: '*(Answer: $f(3) = 30$ and $f(-3) = -12$, so $\mathcal{B}[f](3) ='
+  value: -3
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-655-questions-part-i-q-topology-void-md
+  source: docs/manuscript/questions/part_I/q_topology-void.md
+  needle: '*(Answer: $f(3) = 30$ and $f(-3) = -12$, so $\mathcal{B}[f](3) ='
+  value: -12
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-656-questions-part-i-q-topology-void-md
+  source: docs/manuscript/questions/part_I/q_topology-void.md
+  needle: 5. A sample $\{+5, -5, +2, -2\}$ is passed to
+  value: -5
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-657-questions-part-i-q-topology-void-md
+  source: docs/manuscript/questions/part_I/q_topology-void.md
+  needle: 5. A sample $\{+5, -5, +2, -2\}$ is passed to
+  value: -2
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-658-questions-part-i-q-topology-void-md
+  source: docs/manuscript/questions/part_I/q_topology-void.md
+  needle: $\tfrac{1}{2}(27 + (-27)) = 0$, and apply
+  value: -27
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-664-questions-part-ii-q-crystalline-field-md
+  source: docs/manuscript/questions/part_II/q_crystalline-field.md
+  needle: factor is $\approx 11.09$. The tested function
+  value: 11.09
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-665-questions-part-ii-q-crystalline-field-md
+  source: docs/manuscript/questions/part_II/q_crystalline-field.md
+  needle: 6. At $T = 300\,\mathrm{K}$, what does one access booked against the Landauer
+  value: 300
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-667-questions-part-ii-q-crystalline-field-md
+  source: docs/manuscript/questions/part_II/q_crystalline-field.md
+  needle: $E_{\min} = (1.380649\times 10^{-23})(300)(\ln 2) \approx 2.87\times
+  value: -23
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-668-questions-part-ii-q-crystalline-field-md
+  source: docs/manuscript/questions/part_II/q_crystalline-field.md
+  needle: $E_{\min} = (1.380649\times 10^{-23})(300)(\ln 2) \approx 2.87\times
+  value: 2.87
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-669-questions-part-ii-q-crystalline-field-md
+  source: docs/manuscript/questions/part_II/q_crystalline-field.md
+  needle: 10^{-21}\,\mathrm{J}$ per erased bit; the Fair Exchange clause prices every
+  value: -21
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-671-questions-part-ii-q-eddy-current-mirror-md
+  source: docs/manuscript/questions/part_II/q_eddy-current-mirror.md
+  needle: 'of the initial ideation velocity remains? *(Answer: $v(2) = e^{-2} \approx'
+  value: -2
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-672-questions-part-ii-q-eddy-current-mirror-md
+  source: docs/manuscript/questions/part_II/q_eddy-current-mirror.md
+  needle: 0.135335$ — about 13.5% remains, per the chapter's pinned calibration.)*
+  value: 0.135335
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-674-questions-part-ii-q-eddy-current-mirror-md
+  source: docs/manuscript/questions/part_II/q_eddy-current-mirror.md
+  needle: \approx 0.346573$ — halved; the reach $v_0/k$ shrinks from 1 to 0.5, so a
+  value: 0.346573
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-675-questions-part-ii-q-eddy-current-mirror-md
+  source: docs/manuscript/questions/part_II/q_eddy-current-mirror.md
+  needle: '*(Answer: $k = 0.5$ decays slowly — half-life $\approx 1.386$ — and reaches'
+  value: 1.386
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-676-questions-part-ii-q-eddy-current-mirror-md
+  source: docs/manuscript/questions/part_II/q_eddy-current-mirror.md
+  needle: fast — half-life $\approx 0.347$ — with reach 0.5, so localisation is swift
+  value: 0.347
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-678-questions-part-ii-q-metamorphic-octaves-md
+  source: docs/manuscript/questions/part_II/q_metamorphic-octaves.md
+  needle: exact increments are $D(2) - D(1) = 0.405465$ and
+  value: 0.405465
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-679-questions-part-ii-q-metamorphic-octaves-md
+  source: docs/manuscript/questions/part_II/q_metamorphic-octaves.md
+  needle: $D(9) - D(8) = \ln(10/9) \approx 0.105361$, so the early exposure wins.)*
+  value: 0.105361
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-681-questions-part-ii-q-metrological-overlap-md
+  source: docs/manuscript/questions/part_II/q_metrological-overlap.md
+  needle: causation by Sunspot 4524" — into a one-paragraph statement of what the
+  value: 4524
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-682-questions-part-ii-q-planetary-core-md
+  source: docs/manuscript/questions/part_II/q_planetary-core.md
+  needle: 'and what does the ~377 Ω CMB label picture? *(Answer: catalog talk for'
+  value: 377
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-683-questions-part-ii-q-planetary-core-md
+  source: docs/manuscript/questions/part_II/q_planetary-core.md
+  needle: 'at $v_0 = 1$, $k = 1$: $v(1) \approx 0.367879$, $v(2) \approx 0.135335$),'
+  value: 0.367879
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-684-questions-part-ii-q-planetary-core-md
+  source: docs/manuscript/questions/part_II/q_planetary-core.md
+  needle: 'at $v_0 = 1$, $k = 1$: $v(1) \approx 0.367879$, $v(2) \approx 0.135335$),'
+  value: 0.135335
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-688-questions-part-ii-q-proton-theater-md
+  source: docs/manuscript/questions/part_II/q_proton-theater.md
+  needle: 5. A classmate proposes filing $e = 2.718\ldots$ into Electron Theater
+  value: 2.718
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-690-questions-part-ii-q-viscosity-light-md
+  source: docs/manuscript/questions/part_II/q_viscosity-light.md
+  needle: '*(Answer: $v(1) = 0.367879$, $v(2) = 0.135335$, $v(3) = 0.049787$;'
+  value: 0.367879
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-691-questions-part-ii-q-viscosity-light-md
+  source: docs/manuscript/questions/part_II/q_viscosity-light.md
+  needle: '*(Answer: $v(1) = 0.367879$, $v(2) = 0.135335$, $v(3) = 0.049787$;'
+  value: 0.135335
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-692-questions-part-ii-q-viscosity-light-md
+  source: docs/manuscript/questions/part_II/q_viscosity-light.md
+  needle: '*(Answer: $v(1) = 0.367879$, $v(2) = 0.135335$, $v(3) = 0.049787$;'
+  value: 0.049787
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-693-questions-part-ii-q-viscosity-light-md
+  source: docs/manuscript/questions/part_II/q_viscosity-light.md
+  needle: 5. A floor probe reads $v(1) = 0.072946$ with $v_0 = 1$. Recover the drag
+  value: 0.072946
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-696-questions-part-ii-q-viscosity-light-md
+  source: docs/manuscript/questions/part_II/q_viscosity-light.md
+  needle: $1.618\dots$, so remaining velocity falls by $e^{-1/\Phi} \approx 0.539$
+  value: 0.539
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-708-questions-part-iii-q-invisible-frontier-md
+  source: docs/manuscript/questions/part_III/q_invisible-frontier.md
+  needle: 'the half-visibility crossing. *(Answer: $V(3) = 1/(1 + 19e^{-3}) ='
+  value: -3
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-709-questions-part-iii-q-invisible-frontier-md
+  source: docs/manuscript/questions/part_III/q_invisible-frontier.md
+  needle: 1/(1 + 0.945954) \approx 0.513887$; the crossing solves $19e^{-t} = 1$, so
+  value: 0.945954
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-710-questions-part-iii-q-invisible-frontier-md
+  source: docs/manuscript/questions/part_III/q_invisible-frontier.md
+  needle: 1/(1 + 0.945954) \approx 0.513887$; the crossing solves $19e^{-t} = 1$, so
+  value: 0.513887
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-713-questions-part-iii-q-invisible-frontier-md
+  source: docs/manuscript/questions/part_III/q_invisible-frontier.md
+  needle: convention the Fibonacci ratios 2, 1.666667, 1.5, 1.625, 1.6, … bracket
+  value: 1.625
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-716-questions-part-iii-q-kinematic-recycling-md
+  source: docs/manuscript/questions/part_III/q_kinematic-recycling.md
+  needle: 'amplitude. *(Answer: argument $1/\Phi \approx 0.618034$ and amplitude'
+  value: 0.618034
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-719-questions-part-iii-q-macro-protein-md
+  source: docs/manuscript/questions/part_III/q_macro-protein.md
+  needle: 5. Candidate tier values $\{12.6,\ 13.9,\ 16.2,\ 17.4\}$ arise in a filing
+  value: 12.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-720-questions-part-iii-q-macro-protein-md
+  source: docs/manuscript/questions/part_III/q_macro-protein.md
+  needle: 5. Candidate tier values $\{12.6,\ 13.9,\ 16.2,\ 17.4\}$ arise in a filing
+  value: 13.9
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-721-questions-part-iii-q-macro-protein-md
+  source: docs/manuscript/questions/part_III/q_macro-protein.md
+  needle: 5. Candidate tier values $\{12.6,\ 13.9,\ 16.2,\ 17.4\}$ arise in a filing
+  value: 16.2
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-722-questions-part-iii-q-macro-protein-md
+  source: docs/manuscript/questions/part_III/q_macro-protein.md
+  needle: 5. Candidate tier values $\{12.6,\ 13.9,\ 16.2,\ 17.4\}$ arise in a filing
+  value: 17.4
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-723-questions-part-iii-q-macro-protein-md
+  source: docs/manuscript/questions/part_III/q_macro-protein.md
+  needle: ratio for a $1000$-fold body-mass increase, and state what the note says
+  value: 1000
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-724-questions-part-iii-q-macro-protein-md
+  source: docs/manuscript/questions/part_III/q_macro-protein.md
+  needle: \approx 177.83$ — a sublinear rise; the note explicitly does not claim
+  value: 177.83
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-725-questions-part-iii-q-macro-protein-md
+  source: docs/manuscript/questions/part_III/q_macro-protein.md
+  needle: convention — from $\Phi^{13} \cdot \Omega_0 \approx 521.002 \cdot
+  value: 521.002
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-727-questions-part-iii-q-macro-protein-md
+  source: docs/manuscript/questions/part_III/q_macro-protein.md
+  needle: a $\sim 6.9\times$ span high on a geometric ladder; subscript convention —
+  value: 6.9
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-728-questions-part-iii-q-macro-protein-md
+  source: docs/manuscript/questions/part_III/q_macro-protein.md
+  needle: from $377/233 \approx 1.618026$ to $2584/1597 \approx 1.618034$, less
+  value: 377
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-729-questions-part-iii-q-macro-protein-md
+  source: docs/manuscript/questions/part_III/q_macro-protein.md
+  needle: from $377/233 \approx 1.618026$ to $2584/1597 \approx 1.618034$, less
+  value: 233
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-731-questions-part-iii-q-macro-protein-md
+  source: docs/manuscript/questions/part_III/q_macro-protein.md
+  needle: from $377/233 \approx 1.618026$ to $2584/1597 \approx 1.618034$, less
+  value: 2584
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-732-questions-part-iii-q-macro-protein-md
+  source: docs/manuscript/questions/part_III/q_macro-protein.md
+  needle: from $377/233 \approx 1.618026$ to $2584/1597 \approx 1.618034$, less
+  value: 1597
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-734-questions-part-iii-q-moving-up-stack-md
+  source: docs/manuscript/questions/part_III/q_moving-up-stack.md
+  needle: '6. The paper reports a NOAA-predicted September 2026 sunspot count of 90.9 and an operational
+    node named Hero Jo. A classmate includes them in a valuation model as predictors. Identify the error
+    using the paper''s own words. *(Answer: the paper states these are "filing / ops labels — not causal
+    dollar drivers"; they index the filing and its operations, they do not enter the valuation. Including
+    them converts filing metadata into a causal claim the corpus explicitly disclaims.)*'
+  value: 90.9
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-741-questions-part-iii-q-reality-bridge-md
+  source: docs/manuscript/questions/part_III/q_reality-bridge.md
+  needle: $A(2) = e^{-2} = 0.135335$, so the routed-to-today share is
+  value: -2
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-742-questions-part-iii-q-reality-bridge-md
+  source: docs/manuscript/questions/part_III/q_reality-bridge.md
+  needle: $A(2) = e^{-2} = 0.135335$, so the routed-to-today share is
+  value: 0.135335
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-743-questions-part-iii-q-reality-bridge-md
+  source: docs/manuscript/questions/part_III/q_reality-bridge.md
+  needle: $1 - 0.135335 = 0.864665$; implement the columns with
+  value: 0.864665
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-744-questions-part-iii-q-reality-bridge-md
+  source: docs/manuscript/questions/part_III/q_reality-bridge.md
+  needle: $0.367879 + 0.632121 = 1$. The router *allocates* attention between "what
+  value: 0.367879
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-745-questions-part-iii-q-reality-bridge-md
+  source: docs/manuscript/questions/part_III/q_reality-bridge.md
+  needle: $0.367879 + 0.632121 = 1$. The router *allocates* attention between "what
+  value: 0.632121
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-746-questions-part-iii-q-volumetric-storage-md
+  source: docs/manuscript/questions/part_III/q_volumetric-storage.md
+  needle: '*(Answer: $\log_{\Phi} 12 = \ln 12 / \ln \Phi \approx 5.16$ $\Phi$-steps;'
+  value: 5.16
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-755-questions-part-iii-q-y-chromosome-md
+  source: docs/manuscript/questions/part_III/q_y-chromosome.md
+  needle: AR 3664 writes human DNA; that fractal dimension has been measured to $\Phi$
+  value: 3664
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-758-appendices-appendix-formalisms-md
+  source: docs/manuscript/appendices/appendix_formalisms.md
+  needle: '| F-10 | Catalog register | `[@eq:part_0_orientation_register]` | `[@sec:part_0_orientation]`
+    | `catalog_size()` | The book''s opening count of the digit × octave register: 8,019 filing addresses.
+    |'
+  value: 8019
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-759-appendices-appendix-notation-md
+  source: docs/manuscript/appendices/appendix_notation.md
+  needle: '| $\varphi_{\mathrm{fib}}(n)$ | Fibonacci ratio | `phi_fibonacci` | dimensionless | $F_{n+1}/F_n$;
+    $\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6$, $\varphi_{\mathrm{fib}}(10) = 89/55 \approx 1.618182$ |'
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-760-labs-part-0-lab-orientation-md
+  source: docs/manuscript/labs/part_0/lab_orientation.md
+  needle: 'Report your three tier classifications as a three-row table: item, quoted honesty phrase, tier,
+    one-sentence justification. Then assemble the survey receipt — the four counts your walk produced:
+    24 engine pins, 2 application companions, 195 distinct catalog items [@mendez2026catalog], and the
+    8,019-cell register — and summarise them with `textbook.models.descriptive_statistics`. The summary
+    is deliberately trivial; the discipline it rehearses is not. Every number you carry out of the corpus
+    should be one you can reproduce from the shelves or from a tested function [@mendez2026livingPem].
+    If your hand value of 8,019 disagrees with `catalog_size()`, re-derive by hand before suspecting the
+    library — the function is tested; the arithmetic above is not.'
+  value: 8019
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-761-labs-part-iii-lab-reality-bridge-md
+  source: docs/manuscript/labs/part_III/lab_reality-bridge.md
+  needle: arc of 8,019 catalogue entries (`textbook.models.catalog_size`);
+  value: 8019
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-762-part-0-living-pem-md
+  source: docs/manuscript/part_0/living-pem.md
+  needle: '| $\left|\mathcal{C}\right|$ | pinned catalog size, `catalog_size()` | 8,019 |'
+  value: 8019
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-763-part-0-master-synthesis-md
+  source: docs/manuscript/part_0/master-synthesis.md
+  needle: '| $\varphi_{\mathrm{fib}}(5)$ | fifth Fibonacci approximant, $F_6/F_5 = 8/5$ | $1.6$ |'
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-764-part-0-octave-map-md
+  source: docs/manuscript/part_0/octave-map.md
+  needle: '| $\varphi_{\mathrm{fib}}(n)$ | ratio $F_{n+1}/F_n$; e.g. $\varphi_{\mathrm{fib}}(5) = 8/5
+    = 1.6$, $\varphi_{\mathrm{fib}}(10) = 89/55 \approx 1.618182$ | computed |'
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-765-part-0-orientation-md
+  source: docs/manuscript/part_0/orientation.md
+  needle: '| $\mathcal{N}_{\mathrm{cat}}$ | Catalog address count | 8,019 | Total register slots; implemented
+    as `catalog_size()` in `textbook.models` |'
+  value: 8019
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-766-part-i-multidimensional-rhyme-md
+  source: docs/manuscript/part_I/multidimensional-rhyme.md
+  needle: '| 3 | 4.236068 | 1.5 |'
+  value: 1.5
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-767-part-i-prime-parity-md
+  source: docs/manuscript/part_I/prime-parity.md
+  needle: '| $\Phi_n = F(n+1)/F(n)$ | $n$-th Fibonacci ratio (subscript reading) | computed | $1.6$ at
+    $n=5$; $89/55 \approx 1.618182$ at $n=10$ |'
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-768-part-ii-proton-theater-md
+  source: docs/manuscript/part_II/proton-theater.md
+  needle: '| $\varphi_{\mathrm{fib}}(5) = 8/5$ | $1.6$ | `phi_fibonacci(5)` |'
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-769-part-iii-invisible-frontier-md
+  source: docs/manuscript/part_III/invisible-frontier.md
+  needle: '| 3   | 4.236068 | $3/2 = 1.5$ |'
+  value: 1.5
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-770-part-iii-invisible-frontier-md
+  source: docs/manuscript/part_III/invisible-frontier.md
+  needle: '| 5   | 11.090170 | $8/5 = 1.6$ |'
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-771-appendices-appendix-authoring-guide-md
+  source: docs/manuscript/appendices/appendix_authoring_guide.md
+  needle: '`catalog_size` (99 × 81 = 8,019), and the eddy-brake damping of'
+  value: 8019
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-772-appendices-appendix-authoring-guide-md
+  source: docs/manuscript/appendices/appendix_authoring_guide.md
+  needle: $\Phi \approx 1.6180339887$, $\varphi_{\mathrm{fib}}(5) = 1.6$,
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-773-appendices-appendix-formalisms-md
+  source: docs/manuscript/appendices/appendix_formalisms.md
+  needle: growth at ratio $\Phi \approx 1.618$ per octave.
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-774-appendices-appendix-format-gallery-md
+  source: docs/manuscript/appendices/appendix_format_gallery.md
+  needle: $2.0\ \mathrm{m}$, and a concentration of $1.5\ \mathrm{mol\,L^{-1}}$. (For
+  value: 1.5
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-775-appendices-appendix-math-review-md
+  source: docs/manuscript/appendices/appendix_math_review.md
+  needle: '(`phi_fibonacci`): $\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6$ (below) and'
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-776-appendices-appendix-math-review-md
+  source: docs/manuscript/appendices/appendix_math_review.md
+  needle: The corpus is explicit that 8,019 is "for dashboards and agent routing, not
+  value: 8019
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-777-appendices-appendix-notation-md
+  source: docs/manuscript/appendices/appendix_notation.md
+  needle: '- **$\Phi$** — always El Gran Sol''s Fractal Constant $\approx 1.618$ in corpus'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-778-front-matter-md
+  source: docs/manuscript/front_matter.md
+  needle: 'And to the honesty rail that made this book possible: *"Φ ≈ 1.618 is our'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-779-front-matter-md
+  source: docs/manuscript/front_matter.md
+  needle: '> **A note on scope.** The catalog size 8,019 (99 octaves × 81-digit'
+  value: 8019
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-780-glossary-md
+  source: docs/manuscript/glossary.md
+  needle: $\Phi \approx 1.618$, which is catalog grammar, not a physics derivation.
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-781-glossary-md
+  source: docs/manuscript/glossary.md
+  needle: ninety-nine [**octave**](#gl:octave) shelves produce the catalog size 8,019,
+  value: 8019
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-782-labs-part-0-lab-living-pem-md
+  source: docs/manuscript/labs/part_0/lab_living-pem.md
+  needle: 3. **Hand-compute the scale key.** Evaluate $\Phi_{\mathrm{EGS}} = (1+\sqrt{5})/2$ to six decimal
+    places (iterate $x \mapsto 1 + 1/x$ from $x_0 = 1$ four times if you prefer convergents; the fourth
+    convergent is $8/5 = 1.6$ and the seventh is $89/55 \approx 1.618182$ — both Fibonacci ratios, which
+    is exactly the corpus's [**golden-ratio**](#gl:golden-ratio) signal). Compare with the pinned value
+    $1.618034$.
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-783-labs-part-0-lab-living-pem-md
+  source: docs/manuscript/labs/part_0/lab_living-pem.md
+  needle: 4. **Hand-compute the filing space.** Multiply $99 \times 81$ by hand and confirm the pinned
+    catalog size of 8,019 register bins from [@eq:part_0_living-pem_catalog].
+  value: 8019
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-784-labs-part-0-lab-living-pem-md
+  source: docs/manuscript/labs/part_0/lab_living-pem.md
+  needle: 5. **Hand-compute a settlement.** A delivery takes inflows of 120 and 30 value units and pays
+    outflows of 150. Compute $B = \sum I - \sum O$ and confirm it meets the $B = 0$ target of [@eq:part_0_living-pem_balance].
+    Then recompute with the outflow mis-typed as 105 and state, in one sentence, what a non-zero $B$ means
+    under the fair-exchange clause.
+  value: 150
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-785-labs-part-0-lab-master-synthesis-md
+  source: docs/manuscript/labs/part_0/lab_master-synthesis.md
+  needle: After this lab you will be able to (1) size the master filing cabinet by hand as $99 \times
+    81 = 8{,}019$ cells and confirm the figure against `catalog_size` in `textbook.models`; (2) compute
+    the Fibonacci approximants that pin El Gran Sol's Fractal Constant — $\varphi_{\mathrm{fib}}(5) =
+    8/5 = 1.6$ and $\varphi_{\mathrm{fib}}(10) = 89/55 \approx 1.618182$ — and bracket $\Phi \approx 1.6180339887$
+    from both sides; (3) walk the octave scale downward from the Pulse under **both** readings of the
+    ambiguous law $\Omega_n = \Phi^n\,\Omega_0$ with `octave_term`; and (4) file one loud week into the
+    five-tier Cascade with the correct honesty tag on every entry, without promoting any label into a
+    forecast [@mendez2026masterSynthesis].
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-786-labs-part-0-lab-octave-map-md
+  source: docs/manuscript/labs/part_0/lab_octave-map.md
+  needle: '1. **Hand-build the Fibonacci staircase.** Write $F_1 \dots F_{11}$: $1, 1, 2, 3, 5, 8, 13,
+    21, 34, 55, 89$. Compute the ratios $F_{n+1}/F_n$ for $n = 5$ and $n = 10$. *Predict before computing:*
+    $8/5 = 1.6$ and $89/55 \approx 1.618182$.'
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-787-labs-part-0-lab-orientation-md
+  source: docs/manuscript/labs/part_0/lab_orientation.md
+  needle: '1. **Board the ship and enter the library.** Open the ship homepage (`https://www.ssvibelandiaquestfest24x365.com`)
+    and quote the first sentence of the honesty rail — "This page is art and hospitality. Φ ≈ 1.618 is
+    our nesting language." — plus the host identity line, Valet Pru · XY Human Reality Bridge/Router ·
+    Player 1, "the human host — not a bot gate" [@mendez2026ship]. Then open the catalog URL (`https://www.ssvibelandiaquestfest24x365.com/papers`),
+    the Reading Room, and quote its own honesty note: "Cover art is AI-generated poster hospitality from
+    each paper''s abstract focus — not empirical proof" [@mendez2026catalog]. Record both quotes verbatim.'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-788-labs-part-0-lab-tensor-decoupling-md
+  source: docs/manuscript/labs/part_0/lab_tensor-decoupling.md
+  needle: After this lab you will be able to (1) build the 99-octave filing cabinet on paper and verify
+    its two register budgets (729 digits per block, 8,019 in total) against `catalog_size` in `textbook.models`;
+    (2) compute the golden-ratio dashboard readings $w_n = \Phi^{-n}$ by hand and check them against `phi_powers`;
+    and (3) file a sample week of headlines into labelled brackets without asserting any causal cable
+    between them, exactly as the source paper prescribes [@mendez2026tensorDecoupling].
+  value: 8019
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-789-labs-part-i-lab-fractal-constant-md
+  source: docs/manuscript/labs/part_I/lab_fractal-constant.md
+  needle: constant $\Phi \approx 1.618$ by hand and confirm them with
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-790-labs-part-i-lab-fractal-constant-md
+  source: docs/manuscript/labs/part_I/lab_fractal-constant.md
+  needle: 'sequence $1, 1, 2, 3, 5, 8, 13, 21, \dots$: the 5th ratio is $8/5 = 1.6$ and the 10th is'
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-791-labs-part-i-lab-holographic-rhyme-md
+  source: docs/manuscript/labs/part_I/lab_holographic-rhyme.md
+  needle: under $\Phi \approx 1.618$ — as a [**holographic rhyme**](#gl:holographic-rhyme)
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-792-labs-part-i-lab-multidimensional-rhyme-md
+  source: docs/manuscript/labs/part_I/lab_multidimensional-rhyme.md
+  needle: 'The source paper files an **xD±yD summation engine** with finite encode fixtures on engine
+    shelf #19, expanding the four-pillar holographic rhyme of [@sec:part_I_holographic-rhyme] [@mendez2026mdRhyme].
+    It gives no equation; the model lives in its prose ("Cross-scale summation across **xD±yD** under
+    **Φ ≈ 1.618** files holography as bidirectional Infinite Octave encoding") and its shipped artifacts:
+    fixtures and a 9/9-locked suite under `research/synthobs-multidimensional-holographic-rhyme/` [@mendez2026mdRhyme].
+    This lab makes those artifacts tangible: you will run the suite, then reproduce its *style* of locking
+    by computing exact fixture values yourself — first by hand, then with the tested backbone in `textbook.models`.
+    Remember the corpus''s own honesty clause: this is catalog architecture, not AdS/CFT falsification
+    [@mendez2026mdRhyme].'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-793-labs-part-i-lab-prime-parity-md
+  source: docs/manuscript/labs/part_I/lab_prime-parity.md
+  needle: the Fibonacci ratios $F(6)/F(5) = 8/5 = 1.6$ and $F(11)/F(10) = 89/55
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-794-labs-part-i-lab-topology-void-md
+  source: docs/manuscript/labs/part_I/lab_topology-void.md
+  needle: '($2$) under $\Phi \approx 1.618$, and lands two artefacts: a zero-balance'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-795-labs-part-ii-lab-metrological-overlap-md
+  source: docs/manuscript/labs/part_II/lab_metrological-overlap.md
+  needle: $\Omega_5 = 8/5 = 1.6$; at $n = 10$ they give $\Phi^{10}\Omega_0$ versus
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-796-labs-part-ii-lab-proton-theater-md
+  source: docs/manuscript/labs/part_II/lab_proton-theater.md
+  needle: $\Phi \approx 1.618$ [@mendez2026protonTheater]. The book's quantitative
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-797-labs-part-ii-lab-singularity-crystal-md
+  source: docs/manuscript/labs/part_II/lab_singularity-crystal.md
+  needle: '- The parent paper calls $\Phi \approx 1.618$ "the golden key of Infinite Octave Mode" [@mendez2026singularityCrystal].
+    In what sense does the identity $\Omega_0 = \Phi^0 \Omega_0$ justify calling Node $k = 0$ the *Zero-Octave*
+    locus?'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-798-labs-part-ii-lab-viscosity-light-md
+  source: docs/manuscript/labs/part_II/lab_viscosity-light.md
+  needle: at $c$ under $\Phi \approx 1.618$ — and modelled that floor with the
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-799-labs-part-iii-lab-frontiers-md
+  source: docs/manuscript/labs/part_III/lab_frontiers.md
+  needle: disclaims that Φ ≈ 1.618 replaces physics constants — EGS ≈ 1.618 is design
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-800-labs-part-iii-lab-frontiers-md
+  source: docs/manuscript/labs/part_III/lab_frontiers.md
+  needle: 99 octaves × 81 precision digits = 8,019 entries.
+  value: 8019
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-801-labs-part-iii-lab-invisible-frontier-md
+  source: docs/manuscript/labs/part_III/lab_invisible-frontier.md
+  needle: $\approx 1.618$ as a self-stabilising master filing key — architecture, not a
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-802-labs-part-iii-lab-invisible-frontier-md
+  source: docs/manuscript/labs/part_III/lab_invisible-frontier.md
+  needle: step 2; the subscript column returns Fibonacci ratios (1, 2, 1.5, 1.666667,
+  value: 1.5
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-803-labs-part-iii-lab-invisible-frontier-md
+  source: docs/manuscript/labs/part_III/lab_invisible-frontier.md
+  needle: 1.6, 1.625) — bracketing $\Phi$ from above and below, which is the
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-804-labs-part-iii-lab-kinematic-recycling-md
+  source: docs/manuscript/labs/part_III/lab_kinematic-recycling.md
+  needle: '**octave multiplier** under $\Phi \approx 1.618$'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-805-labs-part-iii-lab-pdvsa-gateway-md
+  source: docs/manuscript/labs/part_III/lab_pdvsa-gateway.md
+  needle: '[@mendez2026pdvsaGateway]. On the console, $\Phi \approx 1.618$ plays the role'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-806-labs-part-iii-lab-reality-bridge-md
+  source: docs/manuscript/labs/part_III/lab_reality-bridge.md
+  needle: routing keyed by $\Phi \approx 1.618$ as design language) from what it
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-807-labs-part-iii-lab-volumetric-storage-md
+  source: docs/manuscript/labs/part_III/lab_volumetric-storage.md
+  needle: $\Phi \approx 1.618$ — Prime 2 as the binary base channel, odd primes as
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-808-labs-part-iii-lab-y-chromosome-md
+  source: docs/manuscript/labs/part_III/lab_y-chromosome.md
+  needle: '$\Phi \approx 1.618$: palindrome arms P1–P8 scale as'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-809-part-0-living-pem-md
+  source: docs/manuscript/part_0/living-pem.md
+  needle: $$ \Phi_{\mathrm{EGS}} = \frac{1+\sqrt{5}}{2} \approx 1.618 $$ {#eq:part_0_living-pem_phi_egs}
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-810-part-0-master-synthesis-md
+  source: docs/manuscript/part_0/master-synthesis.md
+  needle: '2. Define El Gran Sol''s [**Fractal Constant**](#gl:fractal-constant) (EGS, $\Phi \approx 1.618$)
+    and characterise its declared status: an *architectural key* in the repo, explicitly **not** a replacement
+    for $\hbar$, $c$, or $G$.'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-811-part-0-master-synthesis-md
+  source: docs/manuscript/part_0/master-synthesis.md
+  needle: 'Each rung is $\Phi$ times the one above it — the same geometric shape at every scale, which
+    is precisely the "scale-free formula" property the corpus files EGS under [@mendez2026masterSynthesis].
+    Under the subscript convention the same calls return $1.6$ and $1.618182$ at $n=5$ and $n=10$: a nearly
+    flat ladder. The contrast *is* the lesson: the cabinet''s addresses depend on a convention the corpus
+    leaves ambiguous, so any computation that names a drawer must name the convention too. What does **not**
+    depend on the convention is the filing act itself — five tiers, one cabinet, 8,019 cells, and an honesty
+    tag on every entry.'
+  value: 8019
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-812-part-0-octave-map-md
+  source: docs/manuscript/part_0/octave-map.md
+  needle: 'The paper attaches an immediate and unusual use-restriction to its own number: *"That number
+    is for dashboards and agent routing, not for measuring magma"* [@mendez2026digitsMaster]. We read
+    this as the corpus applying its [**honesty-first**](#gl:honesty-first) discipline to arithmetic itself:
+    8,019 is the address space of a coordination tool, computed by `catalog_size(octaves=99, precision_digits=81)`,
+    and it is a category error to lift it out of that role and paste it onto a physical system. The adjective
+    *holographic* here names a catalog metric; it is not the [**holographic-rhyme**](#gl:holographic-rhyme)
+    four-pillar interference formalism of [@sec:part_I_holographic-rhyme], and the two should not be conflated.'
+  value: 8019
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-813-part-0-orientation-md
+  source: docs/manuscript/part_0/orientation.md
+  needle: 2. State what the [**Infinite Octaves Omni-Lattice**](#gl:omni-lattice) claims to be — [**catalog
+    architecture**](#gl:catalog-architecture) and protocol grammar — and preserve its honesty boundaries
+    verbatim, including the Reading Room's cover-art note and the status of $\Phi \approx 1.618$ as design
+    language [@mendez2026catalog].
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-814-part-0-orientation-md
+  source: docs/manuscript/part_0/orientation.md
+  needle: 'Read as an *exponent*, the ladder grows geometrically: $\Phi^n$ for $n = 1..6$ gives $1.618034,\
+    2.618034,\ 4.236068,\ 6.854102,\ 11.090170,\ 17.944272$ — implemented as `phi_powers(n)` in `textbook.models`.
+    Read as a *subscript*, the stepping ratio is the Fibonacci quotient $\varphi_{\mathrm{fib}}(n)$, e.g.
+    $\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6$ and $\varphi_{\mathrm{fib}}(10) = 89/55 \approx 1.618182$
+    — implemented as `phi_fibonacci(n)`. The corpus prints the ambiguous form "Ωn = Φn·Ω0"; `octave_term(omega0,
+    n, convention)` in `textbook.models` implements both conventions explicitly, and the octave-map chapter
+    ([@sec:part_0_octave-map]) walks the 99 rungs under each.'
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-815-part-0-tensor-decoupling-md
+  source: docs/manuscript/part_0/tensor-decoupling.md
+  needle: '- **Data skill:** reading a digit×octave filing heatmap and computing register budgets (729
+    per block, 8,019 in total) with `textbook.models.catalog_size`.'
+  value: 8019
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-816-part-0-tensor-decoupling-md
+  source: docs/manuscript/part_0/tensor-decoupling.md
+  needle: 'El Gran Sol''s [**fractal constant**](#gl:fractal-constant) — the [**golden ratio**](#gl:golden-ratio),
+    $\Phi \approx 1.618$ — "scales the shelves: $\Phi^{-n}$ for octave $n$" [@mendez2026tensorDecoupling]:'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-817-part-0-tensor-decoupling-md
+  source: docs/manuscript/part_0/tensor-decoupling.md
+  needle: 'The corpus prints its octave growth rule ambiguously as "$\Omega_n = \Phi^n \Omega_0$", and
+    the book keeps both readings visible, implemented as `octave_term(omega0, n, convention)` in `textbook.models`:
+    the **exponent** convention $\Omega_n = \Phi^{n}\,\Omega_0$ (compounding growth) and the **subscript**
+    convention $\Omega_n = \varphi_{\mathrm{fib}}(n)\,\Omega_0$, where $\varphi_{\mathrm{fib}}$ is the
+    Fibonacci-ratio sequence ($\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6$; $\varphi_{\mathrm{fib}}(10) = 89/55
+    \approx 1.618182$). The shelf dial of [@eq:part_0_tensor-decoupling_model] is the reciprocal frame
+    of the exponent convention — $w_n \propto \Omega_n^{-1}$ with $\Omega_0 = 1$ — which is why deeper
+    shelves read *smaller* on the dashboard.'
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-818-part-iii-unit-intro-md
+  source: docs/manuscript/part_III/unit_intro.md
+  needle: thresholds — what the catalogue can and cannot yet see
+  value: 8019
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-819-part-i-fractal-constant-md
+  source: docs/manuscript/part_I/fractal-constant.md
+  needle: '![El Gran Sol''s Fractal constant at work: the powers $\Phi^n$ grow geometrically and read
+    as a straight line on a logarithmic axis, while the Fibonacci ratios $\varphi_{\text{fib}}(n)$ are
+    overlaid on the same panel and converge on $\Phi \approx 1.618$. Produced deterministically from `textbook.models.phi_powers`
+    and `textbook.models.phi_fibonacci`.](../../output/figures/part_I_fractal-constant.png){#fig:part_I_fractal-constant
+    width=90%}'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-820-part-i-fractal-constant-md
+  source: docs/manuscript/part_I/fractal-constant.md
+  needle: '<!-- alt: A log-scale plot showing Phi raised to successive powers n = 1 through 6 rising along
+    a straight line from about 1.618 to about 17.944, with Fibonacci-ratio markers at 1.6 and about 1.618182
+    converging on a horizontal reference line at Phi ≈ 1.618. -->'
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-821-part-i-higgs-awareness-md
+  source: docs/manuscript/part_I/higgs-awareness.md
+  needle: Omni-Lattice catalog grammar keyed by $\Phi \approx 1.618$".
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-822-part-i-holographic-rhyme-md
+  source: docs/manuscript/part_I/holographic-rhyme.md
+  needle: '[**Φ ≈ 1.618**](#gl:golden-ratio) — and the four-pillar interference field is'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-823-part-i-multidimensional-rhyme-md
+  source: docs/manuscript/part_I/multidimensional-rhyme.md
+  needle: '- **Big idea:** Cross-scale summation across $xD \pm yD$ under $\Phi \approx 1.618$ files holography
+    as *bidirectional* Infinite Octave encoding — a catalog contrast to static boundary-only screens [@mendez2026mdRhyme].'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-824-part-i-multidimensional-rhyme-md
+  source: docs/manuscript/part_I/multidimensional-rhyme.md
+  needle: 'The two readings bracket the golden ratio from above and below: with $\Omega_0 = 1$, the exponent
+    reading gives $\Phi^5 = 11.090170$, while the subscript reading gives $\varphi_{\mathrm{fib}}(5) =
+    8/5 = 1.6$; by $n = 10$ the subscript reading has already converged to $\varphi_{\mathrm{fib}}(10)
+    = 89/55 \approx 1.618182$ against $\Phi^{10}$''s far larger magnitude. [@tbl:part_I_multidimensional-rhyme_octave]
+    tabulates the pinned values used throughout this book.'
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-825-part-i-prime-parity-md
+  source: docs/manuscript/part_I/prime-parity.md
+  needle: term, and $\Phi \approx 1.618$ is [El Gran Sol's Fractal
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-826-part-i-topology-void-md
+  source: docs/manuscript/part_I/topology-void.md
+  needle: Proton Space ($1$) and Electron Theater ($2$) under $\Phi \approx 1.618$ —
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-827-part-i-topology-void-md
+  source: docs/manuscript/part_I/topology-void.md
+  needle: 4. With $\kappa = 2$ in [@eq:part_I_topology-void_well], compute $F(1.5)$ and
+  value: 1.5
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-828-part-iii-unit-intro-md
+  source: docs/manuscript/part_III/unit_intro.md
+  needle: stacks, human workflows, and open research problems?* The part's eleven
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-829-part-ii-crystalline-field-md
+  source: docs/manuscript/part_II/crystalline-field.md
+  needle: '- **Big idea:** One crystal, three faces — under $\Phi \approx 1.618$, speed, distance, and
+    time file as facets of a single access crystal, so a trip stores one object instead of three clocks.'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-830-part-ii-crystalline-field-md
+  source: docs/manuscript/part_II/crystalline-field.md
+  needle: 'converge to $\Phi$ slowly: $\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6$ and'
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-831-part-ii-crystalline-field-md
+  source: docs/manuscript/part_II/crystalline-field.md
+  needle: '- **Exercise 1.** A trip has $d = 150$ and $v = 25$. Compute the access time'
+  value: 150
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-832-part-ii-eddy-current-mirror-md
+  source: docs/manuscript/part_II/eddy-current-mirror.md
+  needle: '> copper pipe — under $\Phi \approx 1.618$" [@mendez2026eddyMirror]. The pipe is'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-833-part-ii-metrological-overlap-md
+  source: docs/manuscript/part_II/metrological-overlap.md
+  needle: '> Planck''s grain $h$, the $\Phi \approx 1.618$ station, prime containers, the'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-834-part-ii-metrological-overlap-md
+  source: docs/manuscript/part_II/metrological-overlap.md
+  needle: 'quotients: $\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6$ and'
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-835-part-ii-proton-theater-md
+  source: docs/manuscript/part_II/proton-theater.md
+  needle: $\Phi \approx 1.618$ as the [**engine shelf**](#gl:engine-shelf) filing
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-836-part-ii-singularity-crystal-md
+  source: docs/manuscript/part_II/singularity-crystal.md
+  needle: '> A ship''s ledger has two columns, debits and credits. When they match, the ledger does not
+    stop existing — it holds a fact: *balanced*. The SS Vibelandia ship blog opens its 2026-09-07 note
+    with exactly this move, filing **Net Zero ($0$)** "as an active equilibrium" and $0/0$ "as a bounded
+    **Holographic Singularity Crystal** under **$\Phi \approx 1.618$** — the golden key of Infinite Octave
+    Mode." The page''s own headline says it best: "Zero isn''t empty — it''s the crystal that holds the
+    balance" [@mendez2026singularityCrystal]. This chapter formalises that filing, then visits the node
+    where it is physically installed in the catalog: Node $k = 0$, the Awakening Phase Gate [@mendez2026zeroOctave].'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-837-part-ii-viscosity-light-md
+  source: docs/manuscript/part_II/viscosity-light.md
+  needle: imposes on non-local intent, filed under $\Phi \approx 1.618$
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-838-part-iii-cmos-protonic-md
+  source: docs/manuscript/part_III/cmos-protonic.md
+  needle: denotes a Fibonacci ratio (e.g. $\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6$,
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-839-part-iii-cmos-protonic-md
+  source: docs/manuscript/part_III/cmos-protonic.md
+  needle: 99 octaves by 81 digit drawers, 8,019 register slots per
+  value: 8019
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-840-part-iii-frontiers-md
+  source: docs/manuscript/part_III/frontiers.md
+  needle: 'The corpus prints its octave term as "Ωn = Φn·Ω0", which reads two ways: the **exponent convention**
+    $\Omega_n = \Phi^n \Omega_0$ and the **Fibonacci-subscript convention** $\Omega_n = \varphi_{\mathrm{fib}}(n)\,\Omega_0$.
+    Both are implemented in `textbook.models.octave_term`, and they diverge hard: at $n = 5$ the exponent
+    convention gives $\Phi^5 \Omega_0 = 11.090170\,\Omega_0$ while the Fibonacci ratio gives $\varphi_{\mathrm{fib}}(5)\,\Omega_0
+    = 1.6\,\Omega_0$ — a factor of seven at the fifth octave, growing without bound. The ambiguity matters
+    everywhere the ladder is drawn, from the 99-octave map to the macro-protein band, which is why [@fig:part_III_macro-protein]
+    plots both readings. **What would count as evidence:** a convention audit — run `octave_term` under
+    both readings against every worked octave value printed in the papers, and pin the reading that reproduces
+    them; where no printed value discriminates, file the ambiguity as an open convention note. The deliverable
+    is a fixture lock, not a physics ruling; Φ ≈ 1.618 remains the corpus''s [**golden-ratio**](#gl:golden-ratio)
+    nesting language, not a replacement for $\hbar$, $c$, or $G$ [@mendez2026masterSynthesis].'
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-841-part-iii-frontiers-md
+  source: docs/manuscript/part_III/frontiers.md
+  needle: 'The corpus prints its octave term as "Ωn = Φn·Ω0", which reads two ways: the **exponent convention**
+    $\Omega_n = \Phi^n \Omega_0$ and the **Fibonacci-subscript convention** $\Omega_n = \varphi_{\mathrm{fib}}(n)\,\Omega_0$.
+    Both are implemented in `textbook.models.octave_term`, and they diverge hard: at $n = 5$ the exponent
+    convention gives $\Phi^5 \Omega_0 = 11.090170\,\Omega_0$ while the Fibonacci ratio gives $\varphi_{\mathrm{fib}}(5)\,\Omega_0
+    = 1.6\,\Omega_0$ — a factor of seven at the fifth octave, growing without bound. The ambiguity matters
+    everywhere the ladder is drawn, from the 99-octave map to the macro-protein band, which is why [@fig:part_III_macro-protein]
+    plots both readings. **What would count as evidence:** a convention audit — run `octave_term` under
+    both readings against every worked octave value printed in the papers, and pin the reading that reproduces
+    them; where no printed value discriminates, file the ambiguity as an open convention note. The deliverable
+    is a fixture lock, not a physics ruling; Φ ≈ 1.618 remains the corpus''s [**golden-ratio**](#gl:golden-ratio)
+    nesting language, not a replacement for $\hbar$, $c$, or $G$ [@mendez2026masterSynthesis].'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-842-part-iii-invisible-frontier-md
+  source: docs/manuscript/part_III/invisible-frontier.md
+  needle: '- **Common misconception to repair:** that the paper claims $\Phi \approx 1.618$ replaces physics
+    constants or predicts displacement — it explicitly disclaims both and files EGS as design language.'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-843-part-iii-kinematic-recycling-md
+  source: docs/manuscript/part_III/kinematic-recycling.md
+  needle: under $\Phi \approx 1.618$ [@mendez2026setRecycling].
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-844-part-iii-kinematic-recycling-md
+  source: docs/manuscript/part_III/kinematic-recycling.md
+  needle: $\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6$ and $\varphi_{\mathrm{fib}}(10) = 89/55 \approx 1.618182$
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-845-part-iii-macro-protein-md
+  source: docs/manuscript/part_III/macro-protein.md
+  needle: '[**fractal-constant**](#gl:fractal-constant) $\Phi \approx 1.618$, with'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-846-part-iii-macro-protein-md
+  source: docs/manuscript/part_III/macro-protein.md
+  needle: $\Phi$ — $\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6$ and $\varphi_{\mathrm{fib}}(10) = 89/55
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-847-part-iii-moving-up-stack-md
+  source: docs/manuscript/part_III/moving-up-stack.md
+  needle: 'The paper''s third formalism (F-3) invokes a harmony constant. As the paper states it, "**Efficiency
+    premium (cooling):** Lattice scales on minimalist tokens per agentic loop — the inverse of brute-force
+    IDE+GPU lock-in" and "**EGS fractal constant (harmony):** ΦEGS ≈ 1.618 is catalog routing grammar
+    for cross-octave sync — architecture thesis, not measured physics" [@mendez2026stack]. Formally:'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-848-part-iii-moving-up-stack-md
+  source: docs/manuscript/part_III/moving-up-stack.md
+  needle: 'Two honesty notes are load-bearing here. First, the paper itself files the disclaimer: "ΦEGS
+    ≈ 1.618 is catalog grammar, not a market oracle" — the constant in [@eq:part_III_moving-up-stack_harmony]
+    is routing grammar for the [**octave**](#gl:octave) structure of the omni-lattice, not a claim about
+    markets or physics [@mendez2026stack]. Second, numerically the rounding is benign: 1.618 agrees with
+    the pinned $\Phi$ to within about 0.002%, and the Fibonacci ratio $\varphi_{\text{fib}}(10) = 89/55
+    \approx 1.618182$ (implemented as `phi_fibonacci` in `textbook.models`) brackets it from above; $\varphi_{\text{fib}}(5)
+    = 8/5 = 1.6$ brackets it from below. The constant''s deeper role in the corpus''s harmonic machinery
+    is developed in [@sec:part_I_fractal-constant]; here it functions purely as a *routing thesis* for
+    cross-octave sync.'
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-849-part-iii-pdvsa-gateway-md
+  source: docs/manuscript/part_III/pdvsa-gateway.md
+  needle: 'The mockup note pins the console''s routing grammar to a single constant: "**Honesty first:**
+    … $\Phi \approx 1.618$ is Lattice-Linear routing grammar" [@mendez2026pdvsaMockup]. The constant is
+    the golden ratio, $\Phi = (1+\sqrt{5})/2 \approx 1.6180339887$, the same fractal constant this book
+    develops in [@sec:part_I_fractal-constant]. What the gateway does with it is the chapter''s first
+    structural claim, and the name is load-bearing: the console profile is *lattice-linear* — linear in
+    the decision step — with $\Phi$ entering as the unit of accumulation, not as an exponent. Where the
+    corpus''s [**octave**](#gl:octave) growth is exponential ($\Omega_n = \Phi^n \Omega_0$ in one convention),
+    the gateway''s flow accumulates one domain-join per step:'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-850-part-iii-protein-folding-md
+  source: docs/manuscript/part_III/protein-folding.md
+  needle: constant $\Phi \approx 1.618$.
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-851-part-iii-protein-folding-md
+  source: docs/manuscript/part_III/protein-folding.md
+  needle: ratio $\varphi_{\text{fib}}(n)$ (for which $\varphi_{\text{fib}}(5) = 8/5 = 1.6$
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-852-part-iii-reality-bridge-md
+  source: docs/manuscript/part_III/reality-bridge.md
+  needle: 3. Explain why the note calls $\Phi \approx 1.618$ *harmonic filing grammar* —
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-853-part-iii-reality-bridge-md
+  source: docs/manuscript/part_III/reality-bridge.md
+  needle: ($\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6$;
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-854-part-iii-reality-bridge-md
+  source: docs/manuscript/part_III/reality-bridge.md
+  needle: 'to this surface: the router role keeps a standing line to all 8,019 entries'
+  value: 8019
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-855-part-iii-volumetric-storage-md
+  source: docs/manuscript/part_III/volumetric-storage.md
+  needle: 4. Explain how the Fractal constant $\Phi \approx 1.618$ enters the filing as a
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-856-part-iii-y-chromosome-md
+  source: docs/manuscript/part_III/y-chromosome.md
+  needle: '<!-- alt: Bar chart of the digit-4 filing drawer showing nine sub-bands: an SRY anchor bar
+    at unit height followed by eight palindrome-arm bars whose heights grow by the factor Φ ≈ 1.618 with
+    each successive arm, from about 1.6 up to about 47 times the base spacing. -->'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-857-part-iii-y-chromosome-md
+  source: docs/manuscript/part_III/y-chromosome.md
+  needle: '<!-- alt: Bar chart of the digit-4 filing drawer showing nine sub-bands: an SRY anchor bar
+    at unit height followed by eight palindrome-arm bars whose heights grow by the factor Φ ≈ 1.618 with
+    each successive arm, from about 1.6 up to about 47 times the base spacing. -->'
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-858-preface-md
+  source: docs/manuscript/preface.md
+  needle: $\Phi \approx 1.618$ as "our nesting language" [@mendez2026ship]. This book
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-859-questions-part-0-q-living-pem-md
+  source: docs/manuscript/questions/part_0/q_living-pem.md
+  needle: '3. What status does the manual assign to $\Phi_{\mathrm{EGS}} \approx 1.618$, and what does
+    it explicitly say the constant is not? *(Answer: an architectural scale key / design language and
+    catalog key — explicitly not a CODATA replacement for $\hbar$, $c$, or $G$, and "not a substitute
+    for evidence" [@mendez2026livingPem].)*'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-860-questions-part-0-q-master-synthesis-md
+  source: docs/manuscript/questions/part_0/q_master-synthesis.md
+  needle: '3. What is El Gran Sol''s Fractal Constant, what is its numeric value, and what status does
+    the paper explicitly assign it? *(Answer: EGS is the catalog''s "single harmonic blueprint" / "master
+    translator", $\Phi \approx 1.618$; it is "an architectural key in this repo — not a replacement for
+    $\hbar$, $c$, or $G$", and the scale-free bridging holds "as a map, not as proven unified field theory"
+    [@mendez2026masterSynthesis].)*'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-861-questions-part-0-q-master-synthesis-md
+  source: docs/manuscript/questions/part_0/q_master-synthesis.md
+  needle: '4. The master filing cabinet inherits the register grid of the tensor paper. Compute its total
+    capacity two ways and verify with `textbook.models.catalog_size`. *(Answer: directly $99 \times 81
+    = 8{,}019$ cells, per [@eq:part_0_master-synthesis_catalog_size]; `catalog_size(octaves=99, precision_digits=81)`
+    returns 8,019 — the whole filing capacity of the model.)*'
+  value: 8019
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-862-questions-part-0-q-master-synthesis-md
+  source: docs/manuscript/questions/part_0/q_master-synthesis.md
+  needle: '5. With $\Omega_0 = 1$, give the octave address at $n = 5$ under **both** readings of the law
+    $\Omega_n = \Phi^n\,\Omega_0$, and state the multiplier between consecutive rungs in each case. *(Answer:
+    exponent reading $\Omega_5 = \Phi^5 = 11.090170$, where each rung multiplies the last by $\Phi \approx
+    1.618034$; subscript reading $\Omega_5 = \varphi_{\mathrm{fib}}(5) = 8/5 = 1.6$, where the multiplier
+    is the Fibonacci approximant, so the ladder is nearly flat ($\Omega_{10} \approx 1.618182$). Both
+    are `octave_term` conventions; the corpus prints the law ambiguously.)*'
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-863-questions-part-0-q-octave-map-md
+  source: docs/manuscript/questions/part_0/q_octave-map.md
+  needle: '2. What is the holographic catalog size, how is it computed, and what does the source paper
+    file it *for*? *(Answer: 99 segments × 81-digit precision register = 8,019, computed by `catalog_size(octaves=99,
+    precision_digits=81)`; the paper files it for dashboards and agent routing — explicitly "not for measuring
+    magma.")*'
+  value: 8019
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-864-questions-part-0-q-octave-map-md
+  source: docs/manuscript/questions/part_0/q_octave-map.md
+  needle: '5. A dashboard reports "$\Omega_5 = 11.090170$". What must be added to make the report honest
+    by this chapter''s standard, and what would the same quantity be under the other convention? *(Answer:
+    the convention must be stated — 11.090170 is the exponent convention, $\Phi^5 \Omega_0$ with $\Omega_0
+    = 1$; under the subscript convention $\Omega_5 = \varphi_{\mathrm{fib}}(5) = 8/5 = 1.6$. Same notation,
+    different band by nearly a factor of seven.)*'
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-865-questions-part-0-q-orientation-md
+  source: docs/manuscript/questions/part_0/q_orientation.md
+  needle: '1. In the corpus''s own filing terms, what is the [**Infinite Octaves Omni-Lattice**](#gl:omni-lattice),
+    what three things does it explicitly disclaim, and what does the corpus say its [**master register**](#gl:master-register)
+    size of 8,019 is — and is not — for? *(Answer: the corpus files the Omni-Lattice as [**catalog architecture**](#gl:catalog-architecture)
+    — "a filing and protocol grammar for coordinating agents, dashboards, and conversation — explicitly
+    not established physics, clinical advice, or a Theory of Everything" [@mendez2026catalog]. The master
+    register crosses nine digit drawers with ninety-nine [**octave**](#gl:octave) shelves, and the papers
+    cite a holographic catalog size of $99 \times 81 = 8{,}019$ — "for dashboards and agent routing, not
+    for measuring magma" — filing capacity, never a physical storage claim [@mendez2026digitsMaster].)*'
+  value: 8019
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-866-questions-part-0-q-orientation-md
+  source: docs/manuscript/questions/part_0/q_orientation.md
+  needle: '8. Connect the catalog''s honesty notes to this textbook''s scope sections. *(Answer: the correspondence
+    is one-to-one. The Reading Room''s cover-art note — "AI-generated poster hospitality ... not empirical
+    proof," "orientation, not clinical advice," "$\Phi \approx 1.618$ is design language" [@mendez2026catalog]
+    — becomes the book''s treatment of $\Phi$ as nesting language, not a measured constant, as the ship''s
+    honesty rail confirms [@mendez2026ship]; each per-paper clause ("catalog grammar, not relativity retirement,"
+    "not clinical advice") is restated in the matching chapter''s scope-and-honesty section, so the reader
+    meets the source''s own boundary beside the formalism it bounds.)*'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-867-questions-part-0-q-tensor-decoupling-md
+  source: docs/manuscript/questions/part_0/q_tensor-decoupling.md
+  needle: '3. What two numbers does the paper flag as "the two numbers that matter", and how does the
+    companion papers'' larger figure relate to them? *(Answer: the per-block precision matrix 9 × 81 =
+    729 and the octave ladder 11 × 9 = 99; the companion papers keep 99 × 81 = 8,019 holographic catalog
+    digits, and the per-block figure tiles the ladder exactly since 729 × 11 = 8,019.)*'
+  value: 8019
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-868-questions-part-0-q-tensor-decoupling-md
+  source: docs/manuscript/questions/part_0/q_tensor-decoupling.md
+  needle: '8. Reconcile the corpus''s ambiguous growth rule "$\Omega_n = \Phi^n \Omega_0$" with the shelf
+    dial: state both conventions (`octave_term`''s exponent and subscript readings) and explain in what
+    sense the dial $\Phi^{-n}$ is their reciprocal frame. *(Answer: exponent convention $\Omega_n = \Phi^n
+    \Omega_0$ (compounding growth; at $n = 5$, $\Phi^5 = 11.090170$) versus subscript convention $\Omega_n
+    = \varphi_{\mathrm{fib}}(n)\,\Omega_0$ (Fibonacci ratios; at $n = 5$, $8/5 = 1.6$); with $\Omega_0
+    = 1$ the dial $w_n = \Phi^{-n}$ is $1/\Omega_n$ under the exponent convention, so deeper shelves read
+    smaller.)*'
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-869-questions-part-i-q-fractal-constant-md
+  source: docs/manuscript/questions/part_I/q_fractal-constant.md
+  needle: 'it play on the Infinite Octaves engine shelf? *(Answer: $\Phi \approx 1.618$ — the'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-870-questions-part-i-q-fractal-constant-md
+  source: docs/manuscript/questions/part_I/q_fractal-constant.md
+  needle: $\varphi_{\text{fib}}(5) = F_{n+1}/F_n = 8/5 = 1.6$, and $1.6 \times 275 = 440$;
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-871-questions-part-i-q-holographic-rhyme-md
+  source: docs/manuscript/questions/part_I/q_holographic-rhyme.md
+  needle: self-correcting · recursive, operative under $\Phi \approx 1.618$; the
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-872-questions-part-i-q-multidimensional-rhyme-md
+  source: docs/manuscript/questions/part_I/q_multidimensional-rhyme.md
+  needle: '1. Quote the lead sentence of the source paper and identify its three load-bearing ingredients.
+    *(Answer: "Cross-scale summation across **xD±yD** under **Φ ≈ 1.618** files holography as bidirectional
+    Infinite Octave encoding — catalog contrast to static boundary-only screens." Ingredients: the xD±yD
+    summation operation; the golden-ratio keying $\Phi \approx 1.618$; the filing of holography as bidirectional
+    Infinite Octave encoding, contrasted against static boundary-only screens [@mendez2026mdRhyme].)*'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-873-questions-part-i-q-multidimensional-rhyme-md
+  source: docs/manuscript/questions/part_I/q_multidimensional-rhyme.md
+  needle: '5. Evaluate $\Omega_5$ under both readings of [@eq:part_I_multidimensional-rhyme_octave] with
+    $\Omega_0 = 1$, and explain why the corpus''s printed "$\Omega_n = \Phi_n \cdot \Omega_0$" requires
+    the ambiguity to be resolved explicitly. *(Answer: exponent reading $\Omega_5 = \Phi^5 = 11.090170$;
+    subscript reading $\Omega_5 = \varphi_{\mathrm{fib}}(5) \cdot \Omega_0 = 8/5 = 1.6$. The two differ
+    by nearly an order of magnitude at the same $n$, so any corpus value that depends on the convention
+    is meaningless until the reading is named — which is why `octave_term` takes `convention` as an explicit
+    argument.)*'
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-874-questions-part-i-q-prime-parity-md
+  source: docs/manuscript/questions/part_I/q_prime-parity.md
+  needle: $\Phi$ (1.6 at $n=5$ vs 11.090170 for $\Phi^5$ with $\Omega_0=1$). Keeping
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-875-questions-part-i-q-topology-void-md
+  source: docs/manuscript/questions/part_I/q_topology-void.md
+  needle: $\Phi \approx 1.618$ — the null-space pivot of the Infinite Octaves engine
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-876-questions-part-ii-q-eddy-current-mirror-md
+  source: docs/manuscript/questions/part_II/q_eddy-current-mirror.md
+  needle: localized mass — under $\Phi \approx 1.618$; the analogy is a magnet falling
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-877-questions-part-ii-q-metrological-overlap-md
+  source: docs/manuscript/questions/part_II/q_metrological-overlap.md
+  needle: station, $\Phi \approx 1.618$; $p_n$ — prime containers, the $n$th prime;
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-878-questions-part-ii-q-metrological-overlap-md
+  source: docs/manuscript/questions/part_II/q_metrological-overlap.md
+  needle: $\Omega_5 = \varphi_{\mathrm{fib}}(5) = 8/5 = 1.6$ — the print is ambiguous
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-879-questions-part-ii-q-proton-theater-md
+  source: docs/manuscript/questions/part_II/q_proton-theater.md
+  needle: El Gran Sol's Fractal constant $\Phi \approx 1.618$
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-880-questions-part-ii-q-proton-theater-md
+  source: docs/manuscript/questions/part_II/q_proton-theater.md
+  needle: convention gives $\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6$ — a factor of
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-881-questions-part-ii-q-singularity-crystal-md
+  source: docs/manuscript/questions/part_II/q_singularity-crystal.md
+  needle: '2. State the catalog-algebra resolution of the indeterminate form $0/0$ and the constant it
+    is filed under. *(Answer: $\frac{0}{0} \mapsto \Phi^{0} = 1$, filed as a bounded Holographic Singularity
+    Crystal under $\Phi \approx 1.618$, "the golden key of Infinite Octave Mode" [@mendez2026singularityCrystal].)*'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-882-questions-part-ii-q-viscosity-light-md
+  source: docs/manuscript/questions/part_II/q_viscosity-light.md
+  needle: meets a viscous floor at $c$, under $\Phi \approx 1.618$
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-883-questions-part-iii-q-frontiers-md
+  source: docs/manuscript/questions/part_III/q_frontiers.md
+  needle: advice, prophecy, that displacement is solved, or that Φ ≈ 1.618 replaces
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-884-questions-part-iii-q-frontiers-md
+  source: docs/manuscript/questions/part_III/q_frontiers.md
+  needle: 4. Classify the catalog-size claim — 99 octaves × 81 precision digits = 8,019 —
+  value: 8019
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-885-questions-part-iii-q-frontiers-md
+  source: docs/manuscript/questions/part_III/q_frontiers.md
+  needle: subscript convention gives Ω5 = φ_fibonacci(5)·Ω0 = (8/5)·Ω0 = 1.6·Ω0. The
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-886-questions-part-iii-q-invisible-frontier-md
+  source: docs/manuscript/questions/part_III/q_invisible-frontier.md
+  needle: that displacement is solved, or that $\Phi \approx 1.618$ replaces physics
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-887-questions-part-iii-q-invisible-frontier-md
+  source: docs/manuscript/questions/part_III/q_invisible-frontier.md
+  needle: convention the Fibonacci ratios 2, 1.666667, 1.5, 1.625, 1.6, … bracket
+  value: 1.5
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-888-questions-part-iii-q-invisible-frontier-md
+  source: docs/manuscript/questions/part_III/q_invisible-frontier.md
+  needle: convention the Fibonacci ratios 2, 1.666667, 1.5, 1.625, 1.6, … bracket
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-889-questions-part-iii-q-kinematic-recycling-md
+  source: docs/manuscript/questions/part_III/q_kinematic-recycling.md
+  needle: becomes an **octave multiplier** under $\Phi \approx 1.618$; the paper's
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-890-questions-part-iii-q-macro-protein-md
+  source: docs/manuscript/questions/part_III/q_macro-protein.md
+  needle: $\Phi \approx 1.618$, with metabolic work mapped to the Infinite Octave
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-891-questions-part-iii-q-moving-up-stack-md
+  source: docs/manuscript/questions/part_III/q_moving-up-stack.md
+  needle: '8. The paper calls ΦEGS ≈ 1.618 "catalog grammar, not a market oracle," yet prints it under
+    a heading about valuation premiums. Reconcile the two statements. *(Answer: the constant is the *routing
+    grammar* for cross-octave sync — an architecture thesis about how the orchestration shelf routes work,
+    compared numerically to Φ = (1+√5)/2 ≈ 1.6180339887 (and bracketed by the Fibonacci ratios 8/5 = 1.6
+    and 89/55 ≈ 1.618182). It motivates the *harmony* half of the efficiency story; it contributes no
+    predictive content to the dollar band. The premium derivation rests on the anchors and the binding
+    constraint, not on the constant.)*'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-892-questions-part-iii-q-moving-up-stack-md
+  source: docs/manuscript/questions/part_III/q_moving-up-stack.md
+  needle: '8. The paper calls ΦEGS ≈ 1.618 "catalog grammar, not a market oracle," yet prints it under
+    a heading about valuation premiums. Reconcile the two statements. *(Answer: the constant is the *routing
+    grammar* for cross-octave sync — an architecture thesis about how the orchestration shelf routes work,
+    compared numerically to Φ = (1+√5)/2 ≈ 1.6180339887 (and bracketed by the Fibonacci ratios 8/5 = 1.6
+    and 89/55 ≈ 1.618182). It motivates the *harmony* half of the efficiency story; it contributes no
+    predictive content to the dollar band. The premium derivation rests on the anchors and the binding
+    constraint, not on the constant.)*'
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-893-questions-part-iii-q-pdvsa-gateway-md
+  source: docs/manuscript/questions/part_III/q_pdvsa-gateway.md
+  needle: and $\Phi \approx 1.618$ "Lattice-Linear routing grammar". Assemble these
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-894-questions-part-iii-q-protein-folding-md
+  source: docs/manuscript/questions/part_III/q_protein-folding.md
+  needle: '[**golden-ratio**](#gl:golden-ratio) $\Phi \approx 1.618$ — with'
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-895-questions-part-iii-q-reality-bridge-md
+  source: docs/manuscript/questions/part_III/q_reality-bridge.md
+  needle: $\Phi = \frac{1+\sqrt{5}}{2} \approx 1.618$, El Gran Sol's Fractal
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-896-questions-part-iii-q-reality-bridge-md
+  source: docs/manuscript/questions/part_III/q_reality-bridge.md
+  needle: (surface 99 × 81 = 8,019 entries), and the decay is the *attention*
+  value: 8019
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-897-questions-part-iii-q-y-chromosome-md
+  source: docs/manuscript/questions/part_III/q_y-chromosome.md
+  needle: geometry keyed by $\Phi \approx 1.618$, El Gran Sol's Fractal constant
+  value: 1.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-898-questions-part-iii-q-y-chromosome-md
+  source: docs/manuscript/questions/part_III/q_y-chromosome.md
+  needle: ($\varphi_{\mathrm{fib}}(5) = 1.6$,
+  value: 1.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.

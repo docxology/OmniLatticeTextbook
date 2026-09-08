@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>front_matter.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="front-matter">Front Matter</h1>
+<p><strong>The Infinite Octaves Omni-Lattice Textbook</strong> — <em>A
+Modular Synthesis of the SynthOBS Engine Papers</em>. Edition 0.1, 2026.
+Text licensed CC BY 4.0; the computational backbone is Apache-2.0. The
+declared author is Prudencio Mendez, of the SS Vibelandia · SynthOBS
+Autonomous Agent Program; the corpus it synthesises is catalogued at
+<code>ssvibelandiaquestfest24x365.com</code>.</p>
+<hr />
+<h2 id="dedication">Dedication</h2>
+<p><em>To the frontiersmen and greenhands alike — “NPCs inhabit the
+world. Players set the gravity.”</em> [mendez2026ship]</p>
+<p>And to the honesty rail that made this book possible: <em>“Φ ≈ 1.618
+is our nesting language”</em> — design language, spoken plainly, so that
+a map can be walked without pretending it is a territory.
+[mendez2026ship]</p>
+<hr />
+<h2 id="about-this-book">About This Book</h2>
+<p>This book is a rigorous, self-contained synthesis of the
+<strong>Infinite Octaves Omni-Lattice</strong> engine papers — a body of
+work the corpus describes as <strong><a
+href="#gl:catalog-architecture">catalog architecture</a></strong> and
+<strong>protocol grammar</strong>, authored by Prudencio Mendez and
+operated by the SynthOBS Autonomous Agent aboard the ship blog <em>SS
+Vibelandia</em> [mendez2026ship; mendez2026catalog].</p>
+<p>Three framing commitments govern every chapter:</p>
+<ol type="1">
+<li><strong>Formalise, do not endorse or sneer.</strong> The corpus is
+treated the way a systems-engineering monograph treats any
+self-consistent catalog formalism: its constructs are formalised, its
+worked numbers computed, its reference implementations run. Where a
+paper claims something physical, we attribute the claim (“the paper
+files <span class="math inline">\(c\)</span> as a <a
+href="#gl:transduction-line">transduction line</a>”
+[mendez2026eddyMirror]) rather than assert it.</li>
+<li><strong>Preserve the honesty clauses.</strong> Every source paper
+opens with an <strong><a
+href="#gl:honesty-first">honesty-first</a></strong> scope disclaimer
+(“catalog grammar, not relativity retirement”, “not singularity QED”).
+This book restates those disclaimers near-verbatim wherever a claim is
+carried forward, and keeps <a
+href="#gl:narrative-empirical-operational-tiers">narrative, empirical,
+and operational tiers</a> separate — exactly as the digit/octave map was
+designed to do [mendez2026digitsMaster].</li>
+<li><strong>Honor the exchange.</strong> The corpus operates under a
+<strong><a href="#gl:fair-exchange">Fair Exchange</a></strong> clause —
+“value exchanged is fluid and may be partially refunded based on
+resonance and overall delivery” [mendez2026masterSynthesis]. A textbook
+is itself an exchange: what this book offers in return for the reader’s
+attention is precision — every number traceable to a tested function,
+every metaphor kept clearly a metaphor.</li>
+</ol>
+<p>Nothing here is a claim of new physics. The corpus says so first; we
+say so throughout.</p>
+<hr />
+<h2 id="how-to-read-this-book">How to Read This Book</h2>
+<p>The book is organised into four parts plus appendices. A first-time
+reader should move through them in order; each part’s unit intro gives a
+chapter-by-chapter roadmap with cross-references.</p>
+<ul>
+<li><strong>Part 0 — Orientation and Methods.</strong> The SS Vibelandia
+program, the Living PEM, tensor decoupling, the master synthesis, and
+the nine-digit × ninety-nine-octave map that fixes the book’s notation.
+Start here even if you are experienced: it defines the <a
+href="#gl:master-register">master register</a> every later chapter files
+into.</li>
+<li><strong>Part I — Foundations: Constants, Primes, and Rhyme.</strong>
+El Gran Sol’s <a href="#gl:fractal-constant">fractal constant</a>, <a
+href="#gl:prime-parity">prime parity</a>, the four-pillar <a
+href="#gl:holographic-rhyme">holographic rhyme</a>, the topology of the
+void, and the Higgs Gate. The conceptual bedrock of the catalog.</li>
+<li><strong>Part II — Core Systems: The Physical Engine Shelf.</strong>
+The papers that file physical vocabulary — Φ duality, <a
+href="#gl:viscosity-of-light">viscosity of light</a>, the <a
+href="#gl:eddy-current-mirror">eddy-current mirror</a>, the crystalline
+unified field, the metrological overlap, metamorphic octaves, planetary
+cores, and the singularity crystal.</li>
+<li><strong>Part III — Implementations, Companions, and
+Frontiers.</strong> The silicon shelf, prime containers and volumetric
+storage, kinematic set-recycling, the reality bridge, and the
+application companions — closing with the open problems the corpus
+itself flags.</li>
+</ul>
+<p>Each chapter ends with a <strong>Practice</strong> section pointing
+to its <strong>lab</strong> (a guided, hands-on exercise that runs the
+tested model functions) and its <strong>question bank</strong> (recall →
+application → synthesis). Work the lab after reading; use the question
+bank to confirm you can place claims in the correct tier. New terms are
+linked to the <a href="glossary.md">Master Glossary</a> the first time
+they appear. The appendices supply the symbol table, the mathematical
+review, and a worked record of how the book itself was built (<a
+href="appendices/appendix_authoring_guide.md">Appendix A</a>).</p>
+<hr />
+<h2 id="methodology-how-this-book-is-generated">Methodology: How This
+Book Is Generated</h2>
+<p>This manuscript is rendered, not typeset by hand. The pipeline reads
+<code>config.yaml</code> — the single source of truth declaring every
+part, chapter, lab, question bank, and appendix — then generates the
+deterministic figures from the tested functions in
+<code>textbook.models</code>, and renders PDF, HTML, EPUB, and DOCX
+through Pandoc with <code>pandoc-crossref</code> resolving every
+cross-reference and citation.</p>
+<p>Every equation in the book is a tested Python function; every figure
+is generated deterministically from code. Nothing in the prose is
+computed by hand. Build the book yourself and you will get
+byte-identical figures and numbers — see <a
+href="appendices/appendix_authoring_guide.md">Appendix A</a> for the
+full build and audit workflow, and <a
+href="SYNTAX.md"><code>SYNTAX.md</code></a> for the authoring
+syntax.</p>
+<blockquote>
+<p><strong>A note on scope.</strong> The catalog size 8,019 (99 octaves
+× 81-digit precision register) is “for dashboards and agent routing, not
+for measuring magma” [mendez2026digitsMaster]. The same rule applies to
+every number in this book: it files a claim; it does not certify
+one.</p>
+</blockquote>
+<hr />
+<h2 id="edition-and-licence">Edition and Licence</h2>
+<ul>
+<li><strong>Edition:</strong> 0.1 (software/deposit version 0.1.0,
+matching <code>CITATION.cff</code>).</li>
+<li><strong>Text licence:</strong> CC BY 4.0. Source corpus quotations
+are used under the same attribution spirit the corpus’s own Fair
+Exchange clause establishes.</li>
+<li><strong>Code licence:</strong> Apache-2.0
+(<code>src/textbook/</code>, figures, and pipeline).</li>
+<li><strong>Provenance:</strong> every chapter is built from a faithful
+source digest under <code>research/sources/</code>, with claim IDs
+(<code>C-&lt;slug&gt;-&lt;n&gt;</code>) and formalism IDs
+(<code>F-&lt;slug&gt;-&lt;n&gt;</code>) carried through to the cited
+prose.</li>
+</ul>
+<p>Source repository:
+<code>github.com/docxology/OmniLatticeTextbook</code>.</p>
+</main>
+</body>
+</html>

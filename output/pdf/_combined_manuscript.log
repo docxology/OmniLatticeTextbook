@@ -1,0 +1,4146 @@
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.22)  8 SEP 2026 14:36
+entering extended mode
+ %&-line parsing enabled.
+**_combined_manuscript.tex
+(./_combined_manuscript.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count271
+\c@section=\count272
+\c@subsection=\count273
+\c@subsubsection=\count274
+\c@paragraph=\count275
+\c@subparagraph=\count276
+\c@figure=\count277
+\c@table=\count278
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 274.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2025/11/01 v5.0p Graphics/color driver for xetex
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2025/07/09 v2.17z AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen149
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen150
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count279
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count280
+\leftroot@=\count281
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count282
+\DOTSCASE@=\count283
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen151
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count284
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count285
+\dotsspace@=\muskip17
+\c@parentequation=\count286
+\dspbrk@lvl=\count287
+\tag@help=\toks18
+\row@=\count288
+\column@=\count289
+\maxfields@=\count290
+\andhelp@=\toks19
+\eqnshift@=\dimen152
+\alignsep@=\dimen153
+\tagshift@=\dimen154
+\tagwidth@=\dimen155
+\totwidth@=\dimen156
+\lineht@=\dimen157
+\@envbody=\toks20
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/unicode-math/unicode-math.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2026-01-19 L3 programming layer (loader)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2025-10-09 L3 backend support: XeTeX
+\g__graphics_track_int=\count291
+\g__pdfannot_backend_int=\count292
+\g__pdfannot_backend_link_int=\count293
+))
+Package: unicode-math 2023/08/13 v0.8r Unicode maths in XeLaTeX and LuaLaTeX
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/unicode-math/unicode-math-xetex.s
+ty
+Package: unicode-math-xetex 2023/08/13 v0.8r Unicode maths in XeLaTeX and LuaLa
+TeX
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2025-10-09 L3 Experimental document command parser
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count294
+\l__fontspec_language_int=\count295
+\l__fontspec_strnum_int=\count296
+\l__fontspec_tmp_int=\count297
+\l__fontspec_tmpa_int=\count298
+\l__fontspec_tmpb_int=\count299
+\l__fontspec_tmpc_int=\count300
+\l__fontspec_em_int=\count301
+\l__fontspec_emdef_int=\count302
+\l__fontspec_strong_int=\count303
+\l__fontspec_strongdef_int=\count304
+\l__fontspec_tmpa_dim=\dimen158
+\l__fontspec_tmpb_dim=\dimen159
+\l__fontspec_tmpc_dim=\dimen160
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fix-cm.sty
+Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+LaTeX Encoding Info:    Redeclaring text command \capitalcedilla (encoding TS1)
+ on input line 49.
+LaTeX Encoding Info:    Redeclaring text command \capitalogonek (encoding TS1)
+on input line 52.
+LaTeX Encoding Info:    Redeclaring text command \capitalgrave (encoding TS1) o
+n input line 55.
+LaTeX Encoding Info:    Redeclaring text command \capitalacute (encoding TS1) o
+n input line 56.
+LaTeX Encoding Info:    Redeclaring text command \capitalcircumflex (encoding T
+S1) on input line 57.
+LaTeX Encoding Info:    Redeclaring text command \capitaltilde (encoding TS1) o
+n input line 58.
+LaTeX Encoding Info:    Redeclaring text command \capitaldieresis (encoding TS1
+) on input line 59.
+LaTeX Encoding Info:    Redeclaring text command \capitalhungarumlaut (encoding
+ TS1) on input line 60.
+LaTeX Encoding Info:    Redeclaring text command \capitalring (encoding TS1) on
+ input line 61.
+LaTeX Encoding Info:    Redeclaring text command \capitalcaron (encoding TS1) o
+n input line 62.
+LaTeX Encoding Info:    Redeclaring text command \capitalbreve (encoding TS1) o
+n input line 63.
+LaTeX Encoding Info:    Redeclaring text command \capitalmacron (encoding TS1)
+on input line 64.
+LaTeX Encoding Info:    Redeclaring text command \capitaldotaccent (encoding TS
+1) on input line 65.
+LaTeX Encoding Info:    Redeclaring text command \t (encoding TS1) on input lin
+e 66.
+LaTeX Encoding Info:    Redeclaring text command \capitaltie (encoding TS1) on
+input line 67.
+LaTeX Encoding Info:    Redeclaring text command \newtie (encoding TS1) on inpu
+t line 68.
+LaTeX Encoding Info:    Redeclaring text command \capitalnewtie (encoding TS1)
+on input line 69.
+LaTeX Encoding Info:    Redeclaring text symbol \textcapitalcompwordmark (encod
+ing TS1) on input line 70.
+LaTeX Encoding Info:    Redeclaring text symbol \textascendercompwordmark (enco
+ding TS1) on input line 71.
+LaTeX Encoding Info:    Redeclaring text symbol \textquotestraightbase (encodin
+g TS1) on input line 72.
+LaTeX Encoding Info:    Redeclaring text symbol \textquotestraightdblbase (enco
+ding TS1) on input line 73.
+LaTeX Encoding Info:    Redeclaring text symbol \texttwelveudash (encoding TS1)
+ on input line 74.
+LaTeX Encoding Info:    Redeclaring text symbol \textthreequartersemdash (encod
+ing TS1) on input line 75.
+LaTeX Encoding Info:    Redeclaring text symbol \textleftarrow (encoding TS1) o
+n input line 76.
+LaTeX Encoding Info:    Redeclaring text symbol \textrightarrow (encoding TS1)
+on input line 77.
+LaTeX Encoding Info:    Redeclaring text symbol \textblank (encoding TS1) on in
+put line 78.
+LaTeX Encoding Info:    Redeclaring text symbol \textdollar (encoding TS1) on i
+nput line 79.
+LaTeX Encoding Info:    Redeclaring text symbol \textquotesingle (encoding TS1)
+ on input line 80.
+LaTeX Encoding Info:    Redeclaring text command \textasteriskcentered (encodin
+g TS1) on input line 81.
+LaTeX Encoding Info:    Redeclaring text symbol \textdblhyphen (encoding TS1) o
+n input line 92.
+LaTeX Encoding Info:    Redeclaring text symbol \textfractionsolidus (encoding
+TS1) on input line 93.
+LaTeX Encoding Info:    Redeclaring text symbol \textzerooldstyle (encoding TS1
+) on input line 94.
+LaTeX Encoding Info:    Redeclaring text symbol \textoneoldstyle (encoding TS1)
+ on input line 95.
+LaTeX Encoding Info:    Redeclaring text symbol \texttwooldstyle (encoding TS1)
+ on input line 96.
+LaTeX Encoding Info:    Redeclaring text symbol \textthreeoldstyle (encoding TS
+1) on input line 97.
+LaTeX Encoding Info:    Redeclaring text symbol \textfouroldstyle (encoding TS1
+) on input line 98.
+LaTeX Encoding Info:    Redeclaring text symbol \textfiveoldstyle (encoding TS1
+) on input line 99.
+LaTeX Encoding Info:    Redeclaring text symbol \textsixoldstyle (encoding TS1)
+ on input line 100.
+LaTeX Encoding Info:    Redeclaring text symbol \textsevenoldstyle (encoding TS
+1) on input line 101.
+LaTeX Encoding Info:    Redeclaring text symbol \texteightoldstyle (encoding TS
+1) on input line 102.
+LaTeX Encoding Info:    Redeclaring text symbol \textnineoldstyle (encoding TS1
+) on input line 103.
+LaTeX Encoding Info:    Redeclaring text symbol \textlangle (encoding TS1) on i
+nput line 104.
+LaTeX Encoding Info:    Redeclaring text symbol \textminus (encoding TS1) on in
+put line 105.
+LaTeX Encoding Info:    Redeclaring text symbol \textrangle (encoding TS1) on i
+nput line 106.
+LaTeX Encoding Info:    Redeclaring text symbol \textmho (encoding TS1) on inpu
+t line 107.
+LaTeX Encoding Info:    Redeclaring text symbol \textbigcircle (encoding TS1) o
+n input line 108.
+LaTeX Encoding Info:    Redeclaring text command \textcircled (encoding TS1) on
+ input line 109.
+LaTeX Encoding Info:    Redeclaring text symbol \textohm (encoding TS1) on inpu
+t line 115.
+LaTeX Encoding Info:    Redeclaring text symbol \textlbrackdbl (encoding TS1) o
+n input line 116.
+LaTeX Encoding Info:    Redeclaring text symbol \textrbrackdbl (encoding TS1) o
+n input line 117.
+LaTeX Encoding Info:    Redeclaring text symbol \textuparrow (encoding TS1) on
+input line 118.
+LaTeX Encoding Info:    Redeclaring text symbol \textdownarrow (encoding TS1) o
+n input line 119.
+LaTeX Encoding Info:    Redeclaring text symbol \textasciigrave (encoding TS1)
+on input line 120.
+LaTeX Encoding Info:    Redeclaring text symbol \textborn (encoding TS1) on inp
+ut line 121.
+LaTeX Encoding Info:    Redeclaring text symbol \textdivorced (encoding TS1) on
+ input line 122.
+LaTeX Encoding Info:    Redeclaring text symbol \textdied (encoding TS1) on inp
+ut line 123.
+LaTeX Encoding Info:    Redeclaring text symbol \textleaf (encoding TS1) on inp
+ut line 124.
+LaTeX Encoding Info:    Redeclaring text symbol \textmarried (encoding TS1) on
+input line 125.
+LaTeX Encoding Info:    Redeclaring text symbol \textmusicalnote (encoding TS1)
+ on input line 126.
+LaTeX Encoding Info:    Redeclaring text symbol \texttildelow (encoding TS1) on
+ input line 127.
+LaTeX Encoding Info:    Redeclaring text symbol \textdblhyphenchar (encoding TS
+1) on input line 128.
+LaTeX Encoding Info:    Redeclaring text symbol \textasciibreve (encoding TS1)
+on input line 129.
+LaTeX Encoding Info:    Redeclaring text symbol \textasciicaron (encoding TS1)
+on input line 130.
+LaTeX Encoding Info:    Redeclaring text symbol \textacutedbl (encoding TS1) on
+ input line 131.
+LaTeX Encoding Info:    Redeclaring text symbol \textgravedbl (encoding TS1) on
+ input line 132.
+LaTeX Encoding Info:    Redeclaring text symbol \textdagger (encoding TS1) on i
+nput line 133.
+LaTeX Encoding Info:    Redeclaring text symbol \textdaggerdbl (encoding TS1) o
+n input line 134.
+LaTeX Encoding Info:    Redeclaring text symbol \textbardbl (encoding TS1) on i
+nput line 135.
+LaTeX Encoding Info:    Redeclaring text symbol \textperthousand (encoding TS1)
+ on input line 136.
+LaTeX Encoding Info:    Redeclaring text symbol \textbullet (encoding TS1) on i
+nput line 137.
+LaTeX Encoding Info:    Redeclaring text symbol \textcelsius (encoding TS1) on
+input line 138.
+LaTeX Encoding Info:    Redeclaring text symbol \textdollaroldstyle (encoding T
+S1) on input line 139.
+LaTeX Encoding Info:    Redeclaring text symbol \textcentoldstyle (encoding TS1
+) on input line 140.
+LaTeX Encoding Info:    Redeclaring text symbol \textflorin (encoding TS1) on i
+nput line 141.
+LaTeX Encoding Info:    Redeclaring text symbol \textcolonmonetary (encoding TS
+1) on input line 142.
+LaTeX Encoding Info:    Redeclaring text symbol \textwon (encoding TS1) on inpu
+t line 143.
+LaTeX Encoding Info:    Redeclaring text symbol \textnaira (encoding TS1) on in
+put line 144.
+LaTeX Encoding Info:    Redeclaring text symbol \textguarani (encoding TS1) on
+input line 145.
+LaTeX Encoding Info:    Redeclaring text symbol \textpeso (encoding TS1) on inp
+ut line 146.
+LaTeX Encoding Info:    Redeclaring text symbol \textlira (encoding TS1) on inp
+ut line 147.
+LaTeX Encoding Info:    Redeclaring text symbol \textrecipe (encoding TS1) on i
+nput line 148.
+LaTeX Encoding Info:    Redeclaring text symbol \textinterrobang (encoding TS1)
+ on input line 149.
+LaTeX Encoding Info:    Redeclaring text symbol \textinterrobangdown (encoding
+TS1) on input line 150.
+LaTeX Encoding Info:    Redeclaring text symbol \textdong (encoding TS1) on inp
+ut line 151.
+LaTeX Encoding Info:    Redeclaring text symbol \texttrademark (encoding TS1) o
+n input line 152.
+LaTeX Encoding Info:    Redeclaring text symbol \textpertenthousand (encoding T
+S1) on input line 153.
+LaTeX Encoding Info:    Redeclaring text symbol \textpilcrow (encoding TS1) on
+input line 154.
+LaTeX Encoding Info:    Redeclaring text symbol \textbaht (encoding TS1) on inp
+ut line 155.
+LaTeX Encoding Info:    Redeclaring text symbol \textnumero (encoding TS1) on i
+nput line 156.
+LaTeX Encoding Info:    Redeclaring text symbol \textdiscount (encoding TS1) on
+ input line 157.
+LaTeX Encoding Info:    Redeclaring text symbol \textestimated (encoding TS1) o
+n input line 158.
+LaTeX Encoding Info:    Redeclaring text symbol \textopenbullet (encoding TS1)
+on input line 159.
+LaTeX Encoding Info:    Redeclaring text symbol \textservicemark (encoding TS1)
+ on input line 160.
+LaTeX Encoding Info:    Redeclaring text symbol \textlquill (encoding TS1) on i
+nput line 161.
+LaTeX Encoding Info:    Redeclaring text symbol \textrquill (encoding TS1) on i
+nput line 162.
+LaTeX Encoding Info:    Redeclaring text symbol \textcent (encoding TS1) on inp
+ut line 163.
+LaTeX Encoding Info:    Redeclaring text symbol \textsterling (encoding TS1) on
+ input line 164.
+LaTeX Encoding Info:    Redeclaring text symbol \textcurrency (encoding TS1) on
+ input line 165.
+LaTeX Encoding Info:    Redeclaring text symbol \textyen (encoding TS1) on inpu
+t line 166.
+LaTeX Encoding Info:    Redeclaring text symbol \textbrokenbar (encoding TS1) o
+n input line 167.
+LaTeX Encoding Info:    Redeclaring text symbol \textsection (encoding TS1) on
+input line 168.
+LaTeX Encoding Info:    Redeclaring text symbol \textasciidieresis (encoding TS
+1) on input line 169.
+LaTeX Encoding Info:    Redeclaring text symbol \textcopyright (encoding TS1) o
+n input line 170.
+LaTeX Encoding Info:    Redeclaring text symbol \textordfeminine (encoding TS1)
+ on input line 171.
+LaTeX Encoding Info:    Redeclaring text symbol \textcopyleft (encoding TS1) on
+ input line 172.
+LaTeX Encoding Info:    Redeclaring text symbol \textlnot (encoding TS1) on inp
+ut line 173.
+LaTeX Encoding Info:    Redeclaring text symbol \textcircledP (encoding TS1) on
+ input line 174.
+LaTeX Encoding Info:    Redeclaring text symbol \textregistered (encoding TS1)
+on input line 175.
+LaTeX Encoding Info:    Redeclaring text symbol \textasciimacron (encoding TS1)
+ on input line 176.
+LaTeX Encoding Info:    Redeclaring text symbol \textdegree (encoding TS1) on i
+nput line 177.
+LaTeX Encoding Info:    Redeclaring text symbol \textpm (encoding TS1) on input
+ line 178.
+LaTeX Encoding Info:    Redeclaring text symbol \texttwosuperior (encoding TS1)
+ on input line 179.
+LaTeX Encoding Info:    Redeclaring text symbol \textthreesuperior (encoding TS
+1) on input line 180.
+LaTeX Encoding Info:    Redeclaring text symbol \textasciiacute (encoding TS1)
+on input line 181.
+LaTeX Encoding Info:    Redeclaring text symbol \textmu (encoding TS1) on input
+ line 182.
+LaTeX Encoding Info:    Redeclaring text symbol \textparagraph (encoding TS1) o
+n input line 183.
+LaTeX Encoding Info:    Redeclaring text symbol \textperiodcentered (encoding T
+S1) on input line 184.
+LaTeX Encoding Info:    Redeclaring text symbol \textreferencemark (encoding TS
+1) on input line 185.
+LaTeX Encoding Info:    Redeclaring text symbol \textonesuperior (encoding TS1)
+ on input line 186.
+LaTeX Encoding Info:    Redeclaring text symbol \textordmasculine (encoding TS1
+) on input line 187.
+LaTeX Encoding Info:    Redeclaring text symbol \textsurd (encoding TS1) on inp
+ut line 188.
+LaTeX Encoding Info:    Redeclaring text symbol \textonequarter (encoding TS1)
+on input line 189.
+LaTeX Encoding Info:    Redeclaring text symbol \textonehalf (encoding TS1) on
+input line 190.
+LaTeX Encoding Info:    Redeclaring text symbol \textthreequarters (encoding TS
+1) on input line 191.
+LaTeX Encoding Info:    Redeclaring text symbol \texteuro (encoding TS1) on inp
+ut line 192.
+LaTeX Encoding Info:    Redeclaring text symbol \texttimes (encoding TS1) on in
+put line 193.
+LaTeX Encoding Info:    Redeclaring text symbol \textdiv (encoding TS1) on inpu
+t line 194.
+))
+\g__um_fam_int=\count305
+\g__um_fonts_used_int=\count306
+\l__um_primecount_int=\count307
+\g__um_primekern_muskip=\muskip18
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/unicode-math/unicode-math-table.t
+ex))) (/usr/local/texlive/2026/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2026/03/01 v3.2d Micro-typographical refinements (RS)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count308
+)
+\MT@toks=\toks23
+\MT@tempbox=\box55
+\MT@count=\count309
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1084.
+LaTeX Info: Redefining \leftprotrusion on input line 1085.
+\MT@prot@toks=\toks24
+LaTeX Info: Redefining \rightprotrusion on input line 1104.
+LaTeX Info: Redefining \textls on input line 1449.
+\MT@outer@kern=\dimen161
+LaTeX Info: Redefining \microtypecontext on input line 2053.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
+\MT@listname@count=\count310
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-xetex.def
+File: microtype-xetex.def 2026/03/01 v3.2d Definitions specific to xetex (RS)
+LaTeX Info: Redefining \lsstyle on input line 443.
+LaTeX Info: Redefining \lslig on input line 451.
+\MT@outer@space=\skip54
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2026/03/01 v3.2d microtype main configuration file (RS)
+)
+LaTeX Info: Redefining \microtypesetup on input line 3065.
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/parskip/parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2025/07/28 4.6 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count311
+\FV@InFile=\read2
+\FV@TabBox=\box56
+\c@FancyVerbLine=\count312
+\FV@StepNumber=\count313
+\FV@OutFile=\write3
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
+\LTleft=\skip55
+\LTright=\skip56
+\LTpre=\skip57
+\LTpost=\skip58
+\LTchunksize=\count314
+\LTcapwidth=\dimen162
+\LT@head=\box57
+\LT@firsthead=\box58
+\LT@foot=\box59
+\LT@lastfoot=\box60
+\LT@gbox=\box61
+\LT@cols=\count315
+\LT@rows=\count316
+\c@LT@tables=\count317
+\c@LT@chunks=\count318
+\LT@p@ftn=\toks25
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen163
+\lightrulewidth=\dimen164
+\cmidrulewidth=\dimen165
+\belowrulesep=\dimen166
+\belowbottomsep=\dimen167
+\aboverulesep=\dimen168
+\abovetopsep=\dimen169
+\cmidrulesep=\dimen170
+\cmidrulekern=\dimen171
+\defaultaddspace=\dimen172
+\@cmidla=\count319
+\@cmidlb=\count320
+\@aboverulesep=\dimen173
+\@belowrulesep=\dimen174
+\@thisruleclass=\count321
+\@lastruleclass=\count322
+\@thisrulewidth=\dimen175
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen176
+\ar@mcellbox=\box62
+\extrarowheight=\dimen177
+\NC@list=\toks26
+\extratabsurround=\skip59
+\backup@length=\skip60
+\ar@cellbox=\box63
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen178
+\captionmargin=\dimen179
+\caption@leftmargin=\dimen180
+\caption@rightmargin=\dimen181
+\caption@width=\dimen182
+\caption@indent=\dimen183
+\caption@parindent=\dimen184
+\caption@hangindent=\dimen185
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count323
+\c@continuedfloat=\count324
+Package caption Info: longtable package is loaded.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+))
+\c@none=\count325
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count326
+\calc@Bcount=\count327
+\calc@Adimen=\dimen186
+\calc@Bdimen=\dimen187
+\calc@Askip=\skip61
+\calc@Bskip=\skip62
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count328
+\calc@Cskip=\skip63
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/footnotehyper/footnotehyper.sty
+Package: footnotehyper 2025/11/15 v1.1f hyperref aware footnote.sty (JFB)
+\FNH@notes=\box64
+\FNH@width=\dimen188
+\FNH@toks=\toks27
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 106.
+)
+\Gin@req@height=\dimen189
+\Gin@req@width=\dimen190
+)
+\pandoc@box=\box65
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/soul/soul.sty
+Package: soul 2026-03-06 v3.2 Permit use of UTF-8 characters in soul (HO)
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/soul/soul-ori.sty
+Package: soul-ori 2026-03-06 v3.2 letterspacing/underlining (mf)
+\SOUL@word=\toks28
+\SOUL@lasttoken=\toks29
+\SOUL@syllable=\toks30
+\SOUL@cmds=\toks31
+\SOUL@buffer=\toks32
+\SOUL@token=\toks33
+\SOUL@syllgoal=\dimen191
+\SOUL@syllwidth=\dimen192
+\SOUL@charkern=\dimen193
+\SOUL@hyphkern=\dimen194
+\SOUL@dimen=\dimen195
+\SOUL@dimeni=\dimen196
+\SOUL@minus=\count329
+\SOUL@comma=\count330
+\SOUL@apo=\count331
+\SOUL@grave=\count332
+\SOUL@spaceskip=\skip64
+\SOUL@ttwidth=\dimen197
+\SOUL@uldp=\dimen198
+\SOUL@ulht=\dimen199
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip65
+\bibsep=\skip66
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count333
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count334
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count335
+)
+\c@pandoccrossref@subfigures@footnote@counter=\count336
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count337
+\float@exts=\toks34
+\float@box=\box66
+\@float@everytoks=\toks35
+\@floatcapt=\box67
+)
+\@float@every@codelisting=\toks36
+\c@codelisting=\count338
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count339
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen256
+\Hy@linkcounter=\count340
+\Hy@pagecounter=\count341
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count342
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4072.
+Package hyperref Info: Hyper figures OFF on input line 4201.
+Package hyperref Info: Link nesting OFF on input line 4206.
+Package hyperref Info: Hyper index ON on input line 4209.
+Package hyperref Info: Plain pages OFF on input line 4216.
+Package hyperref Info: Backreferencing OFF on input line 4221.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4468.
+\c@Hy@tempcnt=\count343
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip19
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4807.
+\XeTeXLinkMargin=\dimen257
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count344
+\Field@Width=\dimen258
+\Fld@charsize=\dimen259
+Package hyperref Info: Hyper figures OFF on input line 6084.
+Package hyperref Info: Link nesting OFF on input line 6089.
+Package hyperref Info: Hyper index ON on input line 6092.
+Package hyperref Info: backreferencing OFF on input line 6099.
+Package hyperref Info: Link coloring OFF on input line 6104.
+Package hyperref Info: Link coloring with OCG OFF on input line 6109.
+Package hyperref Info: PDF/A mode OFF on input line 6114.
+\Hy@abspage=\count345
+\c@Item=\count346
+\c@Hfootnote=\count347
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2026-01-29 v7.01p Hyperref driver for XeTeX
+\pdfm@box=\box68
+\c@Hy@AnnotLevel=\count348
+\HyField@AnnotCount=\count349
+\Fld@listcount=\count350
+\c@bookmark@seq@number=\count351
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
+)
+\Hy@SectionHShift=\skip67
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/bookmark/bkm-dvipdfm.def
+File: bkm-dvipdfm.def 2023-12-10 v1.31 bookmark driver for dvipdfm (HO)
+\BKM@id=\count352
+))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xurl/xurl.sty
+Package: xurl 2022/01/09 v 0.10 modify URL breaks
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 160.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/seqsplit/seqsplit.sty
+Package: seqsplit 2006/08/07 v0.1 Splitting long sequences (DNA, RNA, proteins,
+ etc.)
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count353
+\Gm@cntv=\count354
+\c@Gm@tempcnt=\count355
+\Gm@bindingoffset=\dimen260
+\Gm@wd@mp=\dimen261
+\Gm@odd@mp=\dimen262
+\Gm@even@mp=\dimen263
+\Gm@layoutwidth=\dimen264
+\Gm@layoutheight=\dimen265
+\Gm@layouthoffset=\dimen266
+\Gm@layoutvoffset=\dimen267
+\Gm@dimlist=\toks37
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip68
+\multirow@cntb=\count356
+\multirow@dima=\skip69
+\bigstrutjot=\dimen268
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+
+Package mathtools Warning: For best results, please load mathtools *before*
+(mathtools)                unicode-math on input line 127.
+
+\g_MT_multlinerow_int=\count357
+\l_MT_multwidth_dim=\dimen269
+\origjot=\skip70
+\l_MT_shortvdotswithinadjustabove_dim=\dimen270
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen271
+\l_MT_above_intertext_sep=\dimen272
+\l_MT_below_intertext_sep=\dimen273
+\l_MT_above_shortintertext_sep=\dimen274
+\l_MT_below_shortintertext_sep=\dimen275
+\xmathstrut@box=\box69
+\xmathstrut@dim=\dimen276
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks38
+\thm@bodyfont=\toks39
+\thm@headfont=\toks40
+\thm@notefont=\toks41
+\thm@headpunct=\toks42
+\thm@preskip=\skip71
+\thm@postskip=\skip72
+\thm@headsep=\skip73
+\dth@everypar=\toks43
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/siunitx/siunitx.sty
+Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
+\l__siunitx_number_uncert_offset_int=\count358
+\l__siunitx_number_exponent_fixed_int=\count359
+\l__siunitx_number_min_decimal_int=\count360
+\l__siunitx_number_min_integer_int=\count361
+\l__siunitx_number_round_precision_int=\count362
+\l__siunitx_number_lower_threshold_int=\count363
+\l__siunitx_number_upper_threshold_int=\count364
+\l__siunitx_number_group_first_int=\count365
+\l__siunitx_number_group_size_int=\count366
+\l__siunitx_number_group_minimum_int=\count367
+\l__siunitx_angle_tmp_dim=\dimen277
+\l__siunitx_angle_marker_box=\box70
+\l__siunitx_angle_unit_box=\box71
+\l__siunitx_compound_count_int=\count368
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
+ (CN)
+)
+\l__siunitx_table_tmp_box=\box72
+\l__siunitx_table_tmp_dim=\dimen278
+\l__siunitx_table_column_width_dim=\dimen279
+\l__siunitx_table_integer_box=\box73
+\l__siunitx_table_decimal_box=\box74
+\l__siunitx_table_uncert_box=\box75
+\l__siunitx_table_before_box=\box76
+\l__siunitx_table_after_box=\box77
+\l__siunitx_table_before_dim=\dimen280
+\l__siunitx_table_carry_dim=\dimen281
+\l__siunitx_unit_tmp_int=\count369
+\l__siunitx_unit_position_int=\count370
+\l__siunitx_unit_total_int=\count371
+)
+\c@theorem=\count372
+\c@lemma=\count373
+\c@definition=\count374
+Package hyperref Info: Option `colorlinks' set `true' on input line 214.
+Package hyperref Info: Option `breaklinks' set `true' on input line 214.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/cleveref/cleveref.sty
+Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
+Package cleveref Info: `hyperref' support loaded on input line 2370.
+LaTeX Info: Redefining \cref on input line 2370.
+LaTeX Info: Redefining \Cref on input line 2370.
+LaTeX Info: Redefining \crefrange on input line 2370.
+LaTeX Info: Redefining \Crefrange on input line 2370.
+LaTeX Info: Redefining \cpageref on input line 2370.
+LaTeX Info: Redefining \Cpageref on input line 2370.
+LaTeX Info: Redefining \cpagerefrange on input line 2370.
+LaTeX Info: Redefining \Cpagerefrange on input line 2370.
+LaTeX Info: Redefining \labelcref on input line 2370.
+LaTeX Info: Redefining \labelcpageref on input line 2370.
+Package cleveref Info: `amsthm' support loaded on input line 3026.
+Package cleveref Info: always capitalise cross-reference names on input line 78
+25.
+Package cleveref Info: include cross-reference names in hyperlinks on input lin
+e 7836.
+Package cleveref Info: always capitalise cross-reference names on input line 78
+52.
+Package cleveref Info: include cross-reference names in hyperlinks on input lin
+e 7852.
+)
+==> First Aid for cleveref.sty applied!
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip74
+\f@nch@offset@elh=\skip75
+\f@nch@offset@erh=\skip76
+\f@nch@offset@olh=\skip77
+\f@nch@offset@orh=\skip78
+\f@nch@offset@elf=\skip79
+\f@nch@offset@erf=\skip80
+\f@nch@offset@olf=\skip81
+\f@nch@offset@orf=\skip82
+\f@nch@height=\skip83
+\f@nch@footalignment=\skip84
+\f@nch@widthL=\skip85
+\f@nch@widthC=\skip86
+\f@nch@widthR=\skip87
+\@temptokenb=\toks44
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count375
+\lst@gtempboxa=\box78
+\lst@token=\toks45
+\lst@length=\count376
+\lst@currlwidth=\dimen282
+\lst@column=\count377
+\lst@pos=\count378
+\lst@lostspace=\dimen283
+\lst@width=\dimen284
+\lst@newlines=\count379
+\lst@lineno=\count380
+\lst@maxwidth=\dimen285
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+\c@lstnumber=\count381
+\lst@skipnumbers=\count382
+\lst@framebox=\box79
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2025/11/14 1.11b listings configuration
+))
+Package: listings 2025/11/14 1.11b (Carsten Heinz)
+
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+Package translations Info: No language package found. I am going to use `englis
+h' as default language. on input line 236.
+(./_combined_manuscript.aux)
+\openout1 = `_combined_manuscript.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 236.
+LaTeX Font Info:    ... okay on input line 236.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 236.
+LaTeX Font Info:    ... okay on input line 236.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 236.
+LaTeX Font Info:    ... okay on input line 236.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 236.
+LaTeX Font Info:    ... okay on input line 236.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 236.
+LaTeX Font Info:    ... okay on input line 236.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 236.
+LaTeX Font Info:    ... okay on input line 236.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 236.
+LaTeX Font Info:    ... okay on input line 236.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 236.
+LaTeX Font Info:    ... okay on input line 236.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 236.
+LaTeX Font Info:    ... okay on input line 236.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 236.
+LaTeX Font Info:    ... okay on input line 236.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 236.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 236.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/bx/n on input line 236.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 236.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 236.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 236.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 236.
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info:
+(fontspec)             Font family 'latinmodern-math.otf(0)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [Scale=MatchLowercase,BoldItalicFont={},ItalicFont={},Sm
+allCapsFont={},Script=Math,BoldFont={latinmodern-math.otf}].
+(fontspec)
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.9999964596882403]"[latinmodern-math.otf]/OT:scri
+pt=math;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.9999964596882403]"[latinmodern-math.otf]/OT:scri
+pt=math;language=dflt;"
+
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 236.
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info:
+(fontspec)             Font family 'latinmodern-math.otf(1)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [Scale=MatchLowercase,BoldItalicFont={},ItalicFont={},Sm
+allCapsFont={},Script=Math,SizeFeatures={{Size=8.5-},{Size=6-8.5,Font=latinmode
+rn-math.otf,Style=MathScript},{Size=-6,Font=latinmodern-math.otf,Style=MathScri
+ptScript}},BoldFont={latinmodern-math.otf}].
+(fontspec)
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <8.5->s*[0.9999964596882403]"[latinmodern-math.otf]/OT:s
+cript=math;language=dflt;"<6-8.5>s*[0.9999964596882403]"[latinmodern-math.otf]/
+OT:script=math;language=dflt;+ssty=0;"<-6>s*[0.9999964596882403]"[latinmodern-m
+ath.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.9999964596882403]"[latinmodern-math.otf]/OT:scri
+pt=math;language=dflt;"
+
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 236.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 236.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
+ line 236.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 236.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
+t line 236.
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 1.000096459334209.
+
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 1.000096459334209.
+
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 1.000096459334209.
+
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 1.000096459334209.
+
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 1.000096459334209.
+
+
+Package fontspec Info:
+(fontspec)             Font family 'latinmodern-math.otf(2)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [Scale=MatchLowercase,BoldItalicFont={},ItalicFont={},Sm
+allCapsFont={},Script=Math,SizeFeatures={{Size=8.5-},{Size=6-8.5,Font=latinmode
+rn-math.otf,Style=MathScript},{Size=-6,Font=latinmodern-math.otf,Style=MathScri
+ptScript}},BoldFont={latinmodern-math.otf},ScaleAgain=1.0001,FontAdjustment={\f
+ontdimen
+(fontspec)             8\font =6.77pt\relax \fontdimen 9\font =3.94pt\relax
+(fontspec)             \fontdimen 10\font =4.44pt\relax \fontdimen 11\font
+(fontspec)             =6.86pt\relax \fontdimen 12\font =3.45pt\relax
+(fontspec)             \fontdimen 13\font =3.63pt\relax \fontdimen 14\font
+(fontspec)             =3.63pt\relax \fontdimen 15\font =2.89pt\relax
+(fontspec)             \fontdimen 16\font =2.47pt\relax \fontdimen 17\font
+(fontspec)             =2.47pt\relax \fontdimen 18\font =2.5pt\relax
+(fontspec)             \fontdimen 19\font =2.0pt\relax \fontdimen 22\font
+(fontspec)             =2.5pt\relax \fontdimen 20\font =0pt\relax \fontdimen
+(fontspec)             21\font =0pt\relax }].
+(fontspec)
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <8.5->s*[1.000096459334209]"[latinmodern-math.otf]/OT:sc
+ript=math;language=dflt;"<6-8.5>s*[1.000096459334209]"[latinmodern-math.otf]/OT
+:script=math;language=dflt;+ssty=0;"<-6>s*[1.000096459334209]"[latinmodern-math
+.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1.000096459334209]"[latinmodern-math.otf]/OT:scrip
+t=math;language=dflt;"
+
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 236.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
+t line 236.
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 236.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
+t line 236.
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 0.9998964600422715.
+
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 0.9998964600422715.
+
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 0.9998964600422715.
+
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 0.9998964600422715.
+
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info:
+(fontspec)             latinmodern-math scale = 0.9998964600422715.
+
+
+Package fontspec Info:
+(fontspec)             Font family 'latinmodern-math.otf(3)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [Scale=MatchLowercase,BoldItalicFont={},ItalicFont={},Sm
+allCapsFont={},Script=Math,SizeFeatures={{Size=8.5-},{Size=6-8.5,Font=latinmode
+rn-math.otf,Style=MathScript},{Size=-6,Font=latinmodern-math.otf,Style=MathScri
+ptScript}},BoldFont={latinmodern-math.otf},ScaleAgain=0.9999,FontAdjustment={\f
+ontdimen
+(fontspec)             8\font =0.4pt\relax \fontdimen 9\font =2.0pt\relax
+(fontspec)             \fontdimen 10\font =1.67pt\relax \fontdimen 11\font
+(fontspec)             =1.11pt\relax \fontdimen 12\font =6.0pt\relax
+(fontspec)             \fontdimen 13\font =0pt\relax }].
+(fontspec)
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <8.5->s*[0.9998964600422715]"[latinmodern-math.otf]/OT:s
+cript=math;language=dflt;"<6-8.5>s*[0.9998964600422715]"[latinmodern-math.otf]/
+OT:script=math;language=dflt;+ssty=0;"<-6>s*[0.9998964600422715]"[latinmodern-m
+ath.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.9998964600422715]"[latinmodern-math.otf]/OT:scri
+pt=math;language=dflt;"
+
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 2
+36.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
+t line 236.
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 236
+.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
+t line 236.
+
+
+Package unicode-math Warning: Using \overbracket and \underbracket from
+(unicode-math)                `mathtools' package.
+(unicode-math)
+(unicode-math)                 Use \Uoverbracket and \Uunderbracket for
+(unicode-math)                original `unicode-math' definition.
+
+
+Package unicode-math Warning: I'm going to overwrite the following commands
+(unicode-math)                from the `mathtools' package:
+(unicode-math)
+(unicode-math)                     \dblcolon, \coloneqq, \Coloneqq, \eqqcolon.
+(unicode-math)
+(unicode-math)
+(unicode-math)                 Note that since I won't overwrite the other
+(unicode-math)                colon-like commands, using them will lead to
+(unicode-math)                inconsistencies.
+
+LaTeX Info: Redefining \microtypecontext on input line 236.
+Package microtype Info: Applying patch `item' on input line 236.
+Package microtype Info: Applying patch `toc' on input line 236.
+Package microtype Info: Applying patch `eqnum' on input line 236.
+
+Package microtype Warning: Unable to apply patch `footnote' on input line 236.
+
+Package microtype Info: Applying patch `verbatim' on input line 236.
+LaTeX Info: Redefining \microtypesetup on input line 236.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using protrusion set `basicmath'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of spacing.
+Package microtype Info: No adjustment of kerning.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+File: mt-LatinModernRoman.cfg 2026/02/26 v1.2 microtype config. file: Latin Mod
+ern Roman (RS)
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package footnotehyper Info: Using the \@makefntext{} approach (see doc).
+(footnotehyper)    In case of dysfunctional footnote environments, you can
+(footnotehyper)    try sending the author a small illustrative document.
+(footnotehyper)    To turn off this message, add \footnotehyperwarnfalse
+(footnotehyper)    to the preamble.
+Package hyperref Info: Link coloring ON on input line 236.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes:
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `tra
+nslations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' f
+or `english'. on input line 236.
+\c@lstlisting=\count383
+File: ../manuscript/assets/cover/omnilattice_cover.png Graphic file (type bmp)
+<../manuscript/assets/cover/omnilattice_cover.png>
+ [1
+
+]
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 279.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 279.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 10.00092pt on input line 279.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 7.00064pt on input line 279.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 5.00046pt on input line 279.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 9.99893pt on input line 279.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 6.99925pt on input line 279.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 279.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 279
+.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 279
+.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmss' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Underfull \hbox (badness 1325) in paragraph at lines 291--292
+\TU/lmr/m/n/10 Suggested citation: Prudencio Mendez (2026). \TU/lmr/m/it/10 The
+ Infinite Octaves Omni-Lattice Textbook: A
+ []
+
+
+Underfull \hbox (badness 2744) in paragraph at lines 291--292
+\TU/lmr/m/it/10 Modular Synthesis of the SynthOBS Engine Papers \TU/lmr/m/n/10
+(Edition 0.1). Active Inference Institute.
+ []
+
+[1
+
+] (./_combined_manuscript.toc [2
+
+] [3] [4] [5] [6] [7] [8] [9] [10] [11]
+[12] [13] [14] [15] [16] [17] [18] [19] [20]
+Overfull \hbox (2.25pt too wide) detected at line 841
+\TU/lmr/bx/n/10 100
+ []
+
+
+Overfull \hbox (2.25pt too wide) detected at line 847
+\TU/lmr/bx/n/10 101
+ []
+
+
+Overfull \hbox (4.77997pt too wide) detected at line 857
+\TU/lmr/m/n/10 101.10
+ []
+
+
+Overfull \hbox (4.77997pt too wide) detected at line 858
+\TU/lmr/m/n/10 101.11
+ []
+
+
+Overfull \hbox (4.77997pt too wide) detected at line 859
+\TU/lmr/m/n/10 101.12
+ []
+
+
+Overfull \hbox (2.25pt too wide) detected at line 860
+\TU/lmr/bx/n/10 102
+ []
+
+[21]
+Overfull \hbox (3.56003pt too wide) detected at line 870
+\TU/lmr/m/n/10 102.0.10
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 871
+\TU/lmr/m/n/10 102.0.11
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 872
+\TU/lmr/m/n/10 102.0.12
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 873
+\TU/lmr/m/n/10 102.0.13
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 874
+\TU/lmr/m/n/10 102.0.14
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 875
+\TU/lmr/m/n/10 102.0.15
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 876
+\TU/lmr/m/n/10 102.0.16
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 877
+\TU/lmr/m/n/10 102.0.17
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 878
+\TU/lmr/m/n/10 102.0.18
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 879
+\TU/lmr/m/n/10 102.0.19
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 880
+\TU/lmr/m/n/10 102.0.20
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 881
+\TU/lmr/m/n/10 102.0.21
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 882
+\TU/lmr/m/n/10 102.0.22
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 883
+\TU/lmr/m/n/10 102.0.23
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 884
+\TU/lmr/m/n/10 102.0.24
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 885
+\TU/lmr/m/n/10 102.0.25
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 886
+\TU/lmr/m/n/10 102.0.26
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 887
+\TU/lmr/m/n/10 102.0.27
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 888
+\TU/lmr/m/n/10 102.0.28
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 889
+\TU/lmr/m/n/10 102.0.29
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 890
+\TU/lmr/m/n/10 102.0.30
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 891
+\TU/lmr/m/n/10 102.0.31
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 892
+\TU/lmr/m/n/10 102.0.32
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 893
+\TU/lmr/m/n/10 102.0.33
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 894
+\TU/lmr/m/n/10 102.0.34
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 895
+\TU/lmr/m/n/10 102.0.35
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 896
+\TU/lmr/m/n/10 102.0.36
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 897
+\TU/lmr/m/n/10 102.0.37
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 898
+\TU/lmr/m/n/10 102.0.38
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 899
+\TU/lmr/m/n/10 102.0.39
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 900
+\TU/lmr/m/n/10 102.0.40
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 901
+\TU/lmr/m/n/10 102.0.41
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 902
+\TU/lmr/m/n/10 102.0.42
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 903
+\TU/lmr/m/n/10 102.0.43
+ []
+
+
+Overfull \hbox (3.56003pt too wide) detected at line 904
+\TU/lmr/m/n/10 102.0.44
+ []
+
+
+Overfull \hbox (2.25pt too wide) detected at line 905
+\TU/lmr/bx/n/10 103
+ []
+
+)
+\tf@toc=\write4
+\openout4 = `_combined_manuscript.toc'.
+
+ [22] [23
+
+] [24] [25] [26] [27]
+File: ../figures/part_0_orientation.png Graphic file (type bmp)
+<../figures/part_0_orientation.png>
+ [28] [29] [30]
+File: ../figures/mermaid_inline/inline_mermaid_0001_0efab01bfa22.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0001_0efab01bfa22.png>
+ [31] [32]
+Underfull \hbox (badness 10000) in paragraph at lines 1159--1172
+[]\TU/lmr/m/n/10 Read as an \TU/lmr/m/it/10 exponent\TU/lmr/m/n/10 , the ladder
+ grows geometrically: $[][]$ for $[] [] [][][][]$ gives
+ []
+
+
+Underfull \hbox (badness 1558) in paragraph at lines 1159--1172
+[][][][][][][][][]  [][][][][][][][][]  [][][][][][][][][]  [][][][][][][][][]
+ [][][][][][][][][][]  [][][][][][][][][]$ \TU/lmr/m/n/10 — implemented as \TU/
+lmtt/m/n/10 phi_powers(n)
+ []
+
+
+Underfull \hbox (badness 1087) in paragraph at lines 1159--1172
+\TU/lmr/m/n/10 in \TU/lmtt/m/n/10 textbook.models\TU/lmr/m/n/10 . Read as a \TU
+/lmr/m/it/10 subscript\TU/lmr/m/n/10 , the stepping ratio is the Fibonacci quot
+ient $[][][][][]$,
+ []
+
+[33] [34] [35]
+File: ../figures/part_0_living-pem.png Graphic file (type bmp)
+<../figures/part_0_living-pem.png>
+ [36] [37]
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 9.0pt on input line 1561.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 1561.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 9.00082pt on input line 1561.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 6.00055pt on input line 1561.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 8.99904pt on input line 1561.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 5.99936pt on input line 1561.
+ [38]
+File: ../figures/mermaid_inline/inline_mermaid_0002_be594eb5838d.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0002_be594eb5838d.png>
+File: ../figures/mermaid_inline/inline_mermaid_0003_106c3c99f16e.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0003_106c3c99f16e.png>
+ [39] [40] [41] [42] [43]
+Underfull \hbox (badness 3657) in paragraph at lines 2017--2033
+[][]\TU/lmr/bx/n/10 living-pem[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 catalog-
+architecture[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 engine-shelf[][]\TU/lmr/m/
+n/10 , [][]\TU/lmr/bx/n/10 omni-lattice[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10
+ octave[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 digit[][]\TU/lmr/m/n/10 , [][]\
+TU/lmr/bx/n/10 honesty-first[][]\TU/lmr/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 4254) in paragraph at lines 2017--2033
+[][]\TU/lmr/bx/n/10 narrative-empirical-operational-tiers[][]\TU/lmr/m/n/10 , [
+][]\TU/lmr/bx/n/10 fair-exchange[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 golden
+-ratio[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 fractal-constant[][]\TU/lmr/m/n/
+10 , [][]\TU/lmr/bx/n/10 cmos-
+ []
+
+[44]
+File: ../figures/part_0_tensor-decoupling.png Graphic file (type bmp)
+<../figures/part_0_tensor-decoupling.png>
+
+Underfull \hbox (badness 1622) in paragraph at lines 2131--2139
+[]\TU/lmr/bx/n/10 Core concepts: [][]tensor-decoupling[][]\TU/lmr/m/n/10 , [][]
+\TU/lmr/bx/n/10 octave[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 digit[][]\TU/lmr
+/m/n/10 , [][]\TU/lmr/bx/n/10 catalog-architecture[][]\TU/lmr/m/n/10 , [][]\TU/
+lmr/bx/n/10 honesty-first[][]\TU/lmr/m/n/10 ,
+ []
+
+[45] [46] [47] [48]
+File: ../figures/mermaid_inline/inline_mermaid_0004_b68aeee3a084.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0004_b68aeee3a084.png>
+ [49] [50] [51] [52]
+File: ../figures/part_0_master-synthesis.png Graphic file (type bmp)
+<../figures/part_0_master-synthesis.png>
+ [53]
+Underfull \hbox (badness 2229) in paragraph at lines 2785--2787
+[]\TU/lmr/bx/n/10 Bridge to computation: \TU/lmtt/m/n/10 t e x t b o o k . m o
+d e l s . o c t a v e _ t e r m\TU/lmr/m/n/10 , \TU/lmtt/m/n/10 phi_fibonacci\T
+U/lmr/m/n/10 , \TU/lmtt/m/n/10 phi_powers\TU/lmr/m/n/10 ,
+ []
+
+[54] [55]
+Overfull \hbox (17.71498pt too wide) in paragraph at lines 2996--2996
+[]|\TU/lmr/m/n/10 dimensionless|
+ []
+
+
+Overfull \hbox (1.8028pt too wide) in paragraph at lines 3058--3058
+\TU/lmr/m/n/10 planet
+ []
+
+
+Overfull \hbox (23.6428pt too wide) in paragraph at lines 3060--3060
+[]|\TU/lmr/m/n/10 Technology
+ []
+
+
+Overfull \hbox (5.44281pt too wide) in paragraph at lines 3060--3060
+\TU/lmr/m/n/10 evolves|
+ []
+
+
+Overfull \hbox (18.0928pt too wide) in paragraph at lines 3062--3062
+[]|\TU/lmr/m/n/10 Humanity
+ []
+
+
+Overfull \hbox (4.6828pt too wide) in paragraph at lines 3062--3062
+\TU/lmr/m/n/10 sponds|
+ []
+
+[56]
+File: ../figures/mermaid_inline/inline_mermaid_0005_a1945ca7ec26.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0005_a1945ca7ec26.png>
+
+
+LaTeX Warning: Reference `tbl:part_0_master-synthesis_cascade' on page 57 undef
+ined on input line 3073.
+
+[57]
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 3102.
+
+
+LaTeX Warning: Reference `tbl:part_0_master-synthesis_egs' on page 58 undefined
+ on input line 3123.
+
+[58]
+
+LaTeX Warning: Reference `tbl:part_0_master-synthesis_cascade' on page 59 undef
+ined on input line 3195.
+
+
+LaTeX Warning: Reference `tbl:part_0_master-synthesis_cascade' on page 59 undef
+ined on input line 3227.
+
+[59]
+
+LaTeX Warning: Reference `tbl:part_0_master-synthesis_egs' on page 60 undefined
+ on input line 3299.
+
+
+LaTeX Warning: Reference `tbl:part_0_master-synthesis_cascade' on page 60 undef
+ined on input line 3302.
+
+[60]
+File: ../figures/part_0_octave-map.png Graphic file (type bmp)
+<../figures/part_0_octave-map.png>
+ [61] [62] [63] [64]
+File: ../figures/mermaid_inline/inline_mermaid_0006_3691fb6f05db.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0006_3691fb6f05db.png>
+ [65] [66] [67]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 68 undefined
+on input line 3969.
+
+[68] [69]
+File: ../figures/part_I_fractal-constant.png Graphic file (type bmp)
+<../figures/part_I_fractal-constant.png>
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 70 undefined
+on input line 4060.
+
+[70] [71]
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 72 undef
+ined on input line 4184.
+
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 4203.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 4203.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 12.0011pt on input line 4203.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 8.00073pt on input line 4203.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 11.99872pt on input line 4203.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 7.99915pt on input line 4203.
+
+LaTeX Warning: Reference `tbl:part_I_fractal-constant_octave-term' on page 72 u
+ndefined on input line 4237.
+
+File: ../figures/mermaid_inline/inline_mermaid_0007_6ac568748639.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0007_6ac568748639.png>
+[72]
+Missing character: There is no ℏ (U+210F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+[73]
+
+LaTeX Warning: Reference `tbl:part_I_fractal-constant_filings' on page 74 undef
+ined on input line 4348.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 74 undefined
+on input line 4376.
+
+
+LaTeX Warning: Reference `tbl:part_I_fractal-constant_palindrome' on page 74 un
+defined on input line 4406.
+
+[74] [75]
+
+LaTeX Warning: Reference `tbl:part_I_fractal-constant_filings' on page 76 undef
+ined on input line 4570.
+
+[76]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 77 undefined
+on input line 4616.
+
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 77 undef
+ined on input line 4620.
+
+
+LaTeX Warning: Reference `tbl:part_I_fractal-constant_filings' on page 77 undef
+ined on input line 4648.
+
+[77]
+File: ../figures/part_I_prime-parity.png Graphic file (type bmp)
+<../figures/part_I_prime-parity.png>
+
+Underfull \hbox (badness 1371) in paragraph at lines 4730--4736
+[]\TU/lmr/bx/n/10 Core concepts: [][]prime-parity[][]\TU/lmr/m/n/10 , [][]\TU/l
+mr/bx/n/10 binary-dyad-anchor[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 irreducib
+le-minimum-set[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 fractal-
+ []
+
+[78]
+File: ../figures/mermaid_inline/inline_mermaid_0008_77c7fa8d8e0d.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0008_77c7fa8d8e0d.png>
+ [79]
+
+LaTeX Warning: Reference `tbl:part_I_prime-parity_oddsets' on page 80 undefined
+ on input line 4856.
+
+
+ignored: Infinite glue shrinkage found in box being split [80]
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 81 undef
+ined on input line 4889.
+
+
+Underfull \hbox (badness 1043) in paragraph at lines 4878--4890
+\TU/lmr/m/n/10 cannot be decomposed into smaller integer factors, so a product
+of prime powers names exactly
+ []
+
+
+LaTeX Warning: Reference `tbl:part_I_prime-parity_parameters' on page 81 undefi
+ned on input line 4928.
+
+[81]
+
+LaTeX Warning: Reference `tbl:part_I_prime-parity_oddsets' on page 82 undefined
+ on input line 5007.
+
+[82]
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 83 undef
+ined on input line 5101.
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 5097--5103
+[]\TU/lmr/bx/n/10 Prime-indexed addressing. \TU/lmr/m/n/10 The odd irreducible
+sets, composed with the anchor via
+ []
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 83 undefined
+on input line 5109.
+
+
+LaTeX Warning: Reference `tbl:part_I_prime-parity_parameters' on page 83 undefi
+ned on input line 5130.
+
+[83] [84]
+File: ../figures/part_I_holographic-rhyme.png Graphic file (type bmp)
+<../figures/part_I_holographic-rhyme.png>
+ [85]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 86 undefined
+on input line 5355.
+
+[86] [87] [88]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 89 undefined
+on input line 5702.
+
+[89]
+File: ../figures/mermaid_inline/inline_mermaid_0009_944730969968.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0009_944730969968.png>
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 90 undefined
+on input line 5737.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 90 undefined
+on input line 5769.
+
+[90] [91]
+File: ../figures/part_I_multidimensional-rhyme.png Graphic file (type bmp)
+<../figures/part_I_multidimensional-rhyme.png>
+ [92] [93]
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 94 undef
+ined on input line 5986.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 94 undefined
+on input line 5987.
+
+[94]
+File: ../figures/mermaid_inline/inline_mermaid_0010_bd86fb5449f7.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0010_bd86fb5449f7.png>
+ [95] [96] [97]
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 98 undef
+ined on input line 6323.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 98 undefined
+on input line 6380.
+
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 98 undef
+ined on input line 6384.
+
+[98] [99]
+File: ../figures/part_I_topology-void.png Graphic file (type bmp)
+<../figures/part_I_topology-void.png>
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 100 undefined
+ on input line 6450.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 100 undefined
+ on input line 6467.
+
+[100]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 101 undefined
+ on input line 6503.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 101 undefined
+ on input line 6529.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 101 undefined
+ on input line 6531.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 101 undefined
+ on input line 6543.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 101 undefined
+ on input line 6547.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 101 undefined
+ on input line 6551.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 101 undefined
+ on input line 6558.
+
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 101 unde
+fined on input line 6560.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 101 undefined
+ on input line 6563.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 101 undefined
+ on input line 6568.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 101 undefined
+ on input line 6589.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 101 undefined
+ on input line 6591.
+
+[101]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 102 undefined
+ on input line 6652.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 102 undefined
+ on input line 6667.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 102 undefined
+ on input line 6670.
+
+File: ../figures/mermaid_inline/inline_mermaid_0011_a5a44c35bfee.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0011_a5a44c35bfee.png>
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 102 undefined
+ on input line 6702.
+
+[102]
+ignored: Infinite glue shrinkage found in box being split [103]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 104 undefined
+ on input line 6764.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 104 undefined
+ on input line 6770.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 104 undefined
+ on input line 6795.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 104 undefined
+ on input line 6800.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 104 undefined
+ on input line 6837.
+
+[104]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 105 undefined
+ on input line 6864.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 105 undefined
+ on input line 6886.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 105 undefined
+ on input line 6901.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 105 undefined
+ on input line 6906.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 105 undefined
+ on input line 6913.
+
+[105]
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 106 unde
+fined on input line 6930.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 106 undefined
+ on input line 6950.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 106 undefined
+ on input line 6959.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 106 undefined
+ on input line 6964.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 106 undefined
+ on input line 6986.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 106 undefined
+ on input line 6992.
+
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 106 unde
+fined on input line 6998.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 106 undefined
+ on input line 7005.
+
+[106]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 107 undefined
+ on input line 7034.
+
+[107]
+File: ../figures/part_I_higgs-awareness.png Graphic file (type bmp)
+<../figures/part_I_higgs-awareness.png>
+ [108] [109]
+File: ../figures/mermaid_inline/inline_mermaid_0012_55cb68972bb7.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0012_55cb68972bb7.png>
+ [110]
+Missing character: There is no ≈ (U+2248) in font [lmmono10-italic]:!
+Missing character: There is no ≈ (U+2248) in font [lmmono10-italic]:!
+Missing character: There is no ≈ (U+2248) in font [lmmono10-italic]:!
+[111] [112]
+Underfull \hbox (badness 3158) in paragraph at lines 7481--7488
+[][]\TU/lmr/bx/n/10 higgs-gate[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 transduc
+tion-line[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 eddy-current-mirror[][]\TU/lm
+r/m/n/10 , [][]\TU/lmr/bx/n/10 viscosity-of-light[][]\TU/lmr/m/n/10 , [][]\TU/l
+mr/bx/n/10 narrative-empirical-
+ []
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 113 undefined
+ on input line 7507.
+
+[113] [114] [115]
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 14.4pt on input line 7634.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 14.4013pt on input line 7634.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 14.39845pt on input line 7634.
+File: ../figures/part_II_proton-theater.png Graphic file (type bmp)
+<../figures/part_II_proton-theater.png>
+ [116]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 117 undefined
+ on input line 7764.
+
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 117 unde
+fined on input line 7768.
+
+File: ../figures/mermaid_inline/inline_mermaid_0013_708ce55060a8.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0013_708ce55060a8.png>
+Missing character: There is no ℏ (U+210F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+[117]
+Missing character: There is no ℏ (U+210F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ℏ (U+210F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ℏ (U+210F) in font [lmroman10-bold]:mapping=tex-
+text;!
+[118] [119] [120]
+Missing character: There is no ≈ (U+2248) in font [lmmono10-italic]:!
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 121 undefined
+ on input line 8069.
+
+Missing character: There is no ℏ (U+210F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 121 unde
+fined on input line 8146.
+
+[121]
+Missing character: There is no ℏ (U+210F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 122 undefined
+ on input line 8171.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8178--8189
+[][]\TU/lmr/bx/n/10 proton-space[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 electr
+on-theater[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 fractal-constant[][]\TU/lmr/
+m/n/10 , [][]\TU/lmr/bx/n/10 golden-ratio[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/
+10 engine-shelf[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 catalog-
+ []
+
+
+Underfull \hbox (badness 2012) in paragraph at lines 8178--8189
+\TU/lmr/bx/n/10 architecture[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 honesty-fi
+rst[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 fair-exchange[][]\TU/lmr/m/n/10 , [
+][]\TU/lmr/bx/n/10 prime-parity[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 topolog
+y-of-the-void[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 singularity-
+ []
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 122 undefined
+ on input line 8205.
+
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 122 unde
+fined on input line 8212.
+
+[122] [123]
+File: ../figures/part_II_viscosity-light.png Graphic file (type bmp)
+<../figures/part_II_viscosity-light.png>
+ [124] [125]
+
+LaTeX Warning: Reference `tbl:part_II_viscosity-light_parameters' on page 126 u
+ndefined on input line 8445.
+
+
+LaTeX Warning: Reference `tbl:part_II_viscosity-light_family' on page 126 undef
+ined on input line 8490.
+
+[126]
+
+LaTeX Warning: Reference `tbl:part_II_viscosity-light_family' on page 127 undef
+ined on input line 8514.
+
+File: ../figures/mermaid_inline/inline_mermaid_0014_c1a35e50a964.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0014_c1a35e50a964.png>
+[127] [128]
+
+LaTeX Warning: Reference `tbl:part_II_viscosity-light_family' on page 129 undef
+ined on input line 8621.
+
+[129]
+Underfull \hbox (badness 4819) in paragraph at lines 8726--8737
+[][]\TU/lmr/bx/n/10 viscosity-of-light[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10
+eddy-current-mirror[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 transduction-line[]
+[]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 c-bridge[][]\TU/lmr/m/n/10 , [][]\TU/lmr
+/bx/n/10 self-observation-drag[][]\TU/lmr/m/n/10 ,
+ []
+
+
+LaTeX Warning: Reference `tbl:part_II_viscosity-light_family' on page 130 undef
+ined on input line 8780.
+
+[130]
+File: ../figures/part_II_eddy-current-mirror.png Graphic file (type bmp)
+<../figures/part_II_eddy-current-mirror.png>
+ [131] [132] [133]
+File: ../figures/mermaid_inline/inline_mermaid_0015_e679da52935e.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0015_e679da52935e.png>
+ [134] [135] [136] [137]
+File: ../figures/part_II_crystalline-field.png Graphic file (type bmp)
+<../figures/part_II_crystalline-field.png>
+ [138] [139] [140]
+File: ../figures/mermaid_inline/inline_mermaid_0016_af87ddb5a2b2.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0016_af87ddb5a2b2.png>
+ [141]
+[142] [143] [144]
+File: ../figures/part_II_metrological-overlap.png Graphic file (type bmp)
+<../figures/part_II_metrological-overlap.png>
+ [145]
+
+LaTeX Warning: Reference `tbl:part_II_metrological-overlap_parameters' on page
+146 undefined on input line 10010.
+
+[146]
+
+LaTeX Warning: Reference `tbl:part_II_metrological-overlap_gears' on page 147 u
+ndefined on input line 10120.
+
+
+LaTeX Warning: Reference `tbl:part_II_metrological-overlap_parameters' on page
+147 undefined on input line 10192.
+
+[147]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 10232.
+
+[148]
+File: ../figures/mermaid_inline/inline_mermaid_0017_4f87a8f095a8.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0017_4f87a8f095a8.png>
+ [149] [150]
+
+LaTeX Warning: Reference `tbl:part_II_metrological-overlap_gears' on page 151 u
+ndefined on input line 10559.
+
+[151] [152]
+File: ../figures/part_II_metamorphic-octaves.png Graphic file (type bmp)
+<../figures/part_II_metamorphic-octaves.png>
+ [153] [154]
+File: ../figures/mermaid_inline/inline_mermaid_0018_eac7b655fda7.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0018_eac7b655fda7.png>
+ [155]
+
+LaTeX Warning: Reference `tbl:part_II_metamorphic-octaves_filing' on page 156 u
+ndefined on input line 10821.
+
+
+LaTeX Warning: Reference `tbl:part_II_metamorphic-octaves_densification' on pag
+e 156 undefined on input line 10886.
+
+[156] [157] [158] [159] [160]
+File: ../figures/part_II_planetary-core.png Graphic file (type bmp)
+<../figures/part_II_planetary-core.png>
+ [161] [162] [163]
+File: ../figures/mermaid_inline/inline_mermaid_0019_4738c5a20287.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0019_4738c5a20287.png>
+ [164] [165] [166]
+Underfull \hbox (badness 3312) in paragraph at lines 11746--11760
+[][]\TU/lmr/bx/n/10 catalog-architecture[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/1
+0 engine-shelf[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 octave[][]\TU/lmr/m/n/10
+ , [][]\TU/lmr/bx/n/10 digit[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 honesty-fi
+rst[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 fair-exchange[][]\TU/lmr/m/n/10 , [
+][]\TU/lmr/bx/n/10 narrative-
+ []
+
+
+Underfull \hbox (badness 6641) in paragraph at lines 11746--11760
+\TU/lmr/bx/n/10 empirical-operational-tiers[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/
+n/10 tensor-decoupling[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 metrological-ove
+rlap[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 topology-of-the-void[][]\TU/lmr/m/
+n/10 ,
+ []
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 167 undefined
+ on input line 11779.
+
+[167]
+File: ../figures/part_II_singularity-crystal.png Graphic file (type bmp)
+<../figures/part_II_singularity-crystal.png>
+ [168]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 169 undefined
+ on input line 11989.
+
+[169]
+ignored: Infinite glue shrinkage found in box being split [170] [171]
+File: ../figures/mermaid_inline/inline_mermaid_0020_a1a1620bdaf1.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0020_a1a1620bdaf1.png>
+ [172]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 173 undefined
+ on input line 12324.
+
+[173]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 174 undefined
+ on input line 12404.
+
+[174] [175] [176]
+File: ../figures/part_III_cmos-protonic.png Graphic file (type bmp)
+<../figures/part_III_cmos-protonic.png>
+ [177] [178]
+File: ../figures/mermaid_inline/inline_mermaid_0021_949451162c6f.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0021_949451162c6f.png>
+ [179]
+Underfull \hbox (badness 10000) in paragraph at lines 12852--12864
+[]\TU/lmr/m/n/10 With $[][] [] []$, the first six exponent-convention rungs are
+ $[][] []
+ []
+
+[180] [181] [182] [183]
+File: ../figures/part_III_protein-folding.png Graphic file (type bmp)
+<../figures/part_III_protein-folding.png>
+ [184]
+Underfull \hbox (badness 1400) in paragraph at lines 13227--13230
+[]\TU/lmr/bx/n/10 Bridge to computation: \TU/lmtt/m/n/10 t e x t b o o k . m o
+d e l s . u n i q u e _ a d d r e s s\TU/lmr/m/n/10 , \TU/lmtt/m/n/10 octave_te
+rm\TU/lmr/m/n/10 , \TU/lmtt/m/n/10 phi_powers\TU/lmr/m/n/10 ,
+ []
+
+[185] [186]
+File: ../figures/mermaid_inline/inline_mermaid_0022_3e689861ecb1.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0022_3e689861ecb1.png>
+ [187] [188] [189]
+Underfull \hbox (badness 1325) in paragraph at lines 13624--13634
+[][]\TU/lmr/bx/n/10 prime-container[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 bin
+ary-dyad-anchor[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 irreducible-minimum-set
+[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 prime-parity[][]\TU/lmr/m/n/10 , [][]\
+TU/lmr/bx/n/10 golden-ratio[][]\TU/lmr/m/n/10 ,
+ []
+
+[190]
+File: ../figures/part_III_volumetric-storage.png Graphic file (type bmp)
+<../figures/part_III_volumetric-storage.png>
+
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 191 unde
+fined on input line 13732.
+
+[191]
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 192 unde
+fined on input line 13813.
+
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 192 unde
+fined on input line 13825.
+
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 192 unde
+fined on input line 13848.
+
+File: ../figures/mermaid_inline/inline_mermaid_0023_b3bab4d4ffcc.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0023_b3bab4d4ffcc.png>
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 192 unde
+fined on input line 13862.
+
+[192]
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 193 unde
+fined on input line 13883.
+
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 193 unde
+fined on input line 13896.
+
+[193]
+ignored: Infinite glue shrinkage found in box being split [194]
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 195 unde
+fined on input line 14032.
+
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 195 unde
+fined on input line 14109.
+
+[195]
+Underfull \hbox (badness 5460) in paragraph at lines 14197--14209
+[][]\TU/lmr/bx/n/10 volumetric-storage[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10
+binary-dyad-anchor[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 prime-parity[][]\TU/
+lmr/m/n/10 , [][]\TU/lmr/bx/n/10 prime-container[][]\TU/lmr/m/n/10 , [][]\TU/lm
+r/bx/n/10 fractal-constant[][]\TU/lmr/m/n/10 ,
+ []
+
+[196]
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 197 unde
+fined on input line 14220.
+
+[197]
+File: ../figures/part_III_kinematic-recycling.png Graphic file (type bmp)
+<../figures/part_III_kinematic-recycling.png>
+ [198]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 199 undefined
+ on input line 14434.
+
+[199]
+File: ../figures/mermaid_inline/inline_mermaid_0024_a7b7ac5303f1.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0024_a7b7ac5303f1.png>
+ [200]
+ignored: Infinite glue shrinkage found in box being split [201] [202]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 203 undefined
+ on input line 14802.
+
+[203]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 204 undefined
+ on input line 14856.
+
+[204] [205]
+File: ../figures/part_III_moving-up-stack.png Graphic file (type bmp)
+<../figures/part_III_moving-up-stack.png>
+ [206] [207]
+File: ../figures/mermaid_inline/inline_mermaid_0025_51048ad1c15f.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0025_51048ad1c15f.png>
+ [208]
+ignored: Infinite glue shrinkage found in box being split [209] [210] [211] [212]
+[213]
+File: ../figures/part_III_reality-bridge.png Graphic file (type bmp)
+<../figures/part_III_reality-bridge.png>
+ [214]
+
+LaTeX Warning: Reference `tbl:part_III_reality-bridge_routing' on page 215 unde
+fined on input line 15639.
+
+[215]
+
+LaTeX Warning: Reference `tbl:part_III_reality-bridge_roles' on page 216 undefi
+ned on input line 15722.
+
+
+LaTeX Warning: Reference `tbl:part_III_reality-bridge_roles' on page 216 undefi
+ned on input line 15797.
+
+[216]
+File: ../figures/mermaid_inline/inline_mermaid_0026_118e61e56401.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0026_118e61e56401.png>
+
+
+LaTeX Warning: Reference `tbl:part_III_reality-bridge_octave' on page 217 undef
+ined on input line 15821.
+
+[217]
+
+LaTeX Warning: Reference `tbl:part_III_reality-bridge_throttle' on page 218 und
+efined on input line 15903.
+
+[218] [219] [220] [221] [222]
+File: ../figures/part_III_y-chromosome.png Graphic file (type bmp)
+<../figures/part_III_y-chromosome.png>
+ [223] [224] [225]
+File: ../figures/mermaid_inline/inline_mermaid_0027_5d734f208234.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0027_5d734f208234.png>
+
+ignored: Infinite glue shrinkage found in box being split [226] [227]
+Underfull \hbox (badness 5161) in paragraph at lines 16717--16723
+[]\TU/lmr/bx/n/10 The holographic grammar \TU/lmr/m/n/10 is the four-pillar rhy
+me family of [[][]Mendez[][], [][]2026g[][]]; the
+ []
+
+[228] [229]
+File: ../figures/part_III_pdvsa-gateway.png Graphic file (type bmp)
+<../figures/part_III_pdvsa-gateway.png>
+ [230] [231]
+Overfull \hbox (8.74341pt too wide) in paragraph at lines 17115--17115
+[]|\TU/lmr/m/n/10 Integration
+ []
+
+[232]
+File: ../figures/mermaid_inline/inline_mermaid_0028_50f89c1e9338.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0028_50f89c1e9338.png>
+
+ignored: Infinite glue shrinkage found in box being split [233]
+ignored: Infinite glue shrinkage f
+ound in box being split [234] [235] [236] [237]
+File: ../figures/part_III_macro-protein.png Graphic file (type bmp)
+<../figures/part_III_macro-protein.png>
+ [238] [239]
+Overfull \hbox (9.30788pt too wide) detected at line 17700
+[][][][][][][]
+ []
+
+
+LaTeX Warning: Reference `tbl:part_III_macro-protein_parameters' on page 240 un
+defined on input line 17709.
+
+[240]
+File: ../figures/mermaid_inline/inline_mermaid_0029_34cef6cea7ff.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0029_34cef6cea7ff.png>
+ [241] [242] [243]
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 244 unde
+fined on input line 18056.
+
+[244] [245]
+File: ../figures/part_III_invisible-frontier.png Graphic file (type bmp)
+<../figures/part_III_invisible-frontier.png>
+ [246] [247] [248]
+File: ../figures/mermaid_inline/inline_mermaid_0030_bd2cdac98c48.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0030_bd2cdac98c48.png>
+ [249] [250] [251] [252]
+File: ../figures/part_III_frontiers.png Graphic file (type bmp)
+<../figures/part_III_frontiers.png>
+
+
+LaTeX Warning: Reference `tbl:part_III_frontiers_quadrant' on page 253 undefine
+d on input line 18750.
+
+[253]
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 18814.
+
+ [254]
+
+Package natbib Warning: Multiple citation on page 255: same authors and year
+(natbib)                without distinguishing extra letter,
+(natbib)                appears as question mark.
+
+
+LaTeX Warning: Reference `tbl:part_III_frontiers_netzero' on page 255 undefined
+ on input line 18876.
+
+[255] [256]
+
+LaTeX Warning: Reference `tbl:part_III_frontiers_quadrantparams' on page 257 un
+defined on input line 19083.
+
+[257]
+
+LaTeX Warning: Reference `tbl:part_III_frontiers_quadrant' on page 258 undefine
+d on input line 19117.
+
+File: ../figures/mermaid_inline/inline_mermaid_0031_2fd02c44cac8.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0031_2fd02c44cac8.png>
+[258]
+
+LaTeX Warning: Reference `tbl:part_III_frontiers_quadrant' on page 259 undefine
+d on input line 19228.
+
+
+Underfull \hbox (badness 3492) in paragraph at lines 19236--19251
+[][]\TU/lmr/bx/n/10 Omni-Lattice[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 octave
+[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 engine-shelf[][]\TU/lmr/m/n/10 , [][]\
+TU/lmr/bx/n/10 catalog-architecture[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 hon
+esty-first[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 master-synthesis[][]\TU/lmr/
+m/n/10 ,
+ []
+
+[259] [260] [261] [262] [263] [264] [265] [266]
+
+LaTeX Warning: Reference `tbl:part_0_master-synthesis_egs' on page 267 undefine
+d on input line 19837.
+
+[267] [268] [269] [270] [271] [272]
+Missing character: There is no ≈ (U+2248) in font [lmmono10-italic]:!
+Missing character: There is no ≈ (U+2248) in font [lmmono10-italic]:!
+[273] [274] [275] [276] [277] [278] [279]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 280 undefined
+ on input line 20771.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 280 undefined
+ on input line 20788.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 280 undefined
+ on input line 20814.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 280 undefined
+ on input line 20850.
+
+[280]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 281 undefined
+ on input line 20894.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 281 undefined
+ on input line 20902.
+
+[281] [282] [283] [284]
+Missing character: There is no ≈ (U+2248) in font [lmmono10-italic]:!
+[285] [286] [287] [288] [289] [290] [291]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt):
+(fancyhdr)                Make it at least 22.76004pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.76004pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-10.76004pt}.
+
+[292]
+
+LaTeX Warning: Reference `tbl:part_II_metrological-overlap_worked' on page 293
+undefined on input line 21762.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt):
+(fancyhdr)                Make it at least 22.76004pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.76004pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-10.76004pt}.
+
+[293]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt):
+(fancyhdr)                Make it at least 22.76004pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.76004pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-10.76004pt}.
+
+[294] [295] [296] [297] [298]
+Underfull \hbox (badness 10000) in paragraph at lines 22197--22204
+[]\TU/lmr/bx/n/10 Verify against the backbone. \TU/lmr/m/n/10 Check both hand r
+esults with the tested
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22197--22204
+\TU/lmr/m/n/10 function: \TU/lmtt/m/n/10 net_zero_balance(inflows=[3, 5, 8, 13]
+, outflows=[16, 13]) $[]$ 0
+ []
+
+[299] [300]
+Missing character: There is no φ (U+03C6) in font [lmmono10-italic]:!
+Missing character: There is no φ (U+03C6) in font [lmmono10-italic]:!
+Missing character: There is no φ (U+03C6) in font [lmmono10-italic]:!
+Missing character: There is no ≈ (U+2248) in font [lmmono10-italic]:!
+[301] [302] [303] [304]
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 305 unde
+fined on input line 22603.
+
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 305 unde
+fined on input line 22609.
+
+
+Underfull \hbox (badness 1838) in paragraph at lines 22659--22663
+[]\TU/lmr/bx/n/10 Verify against the model. \TU/lmr/m/n/10 Run the computationa
+l workflow below and compare each
+ []
+
+[305] [306]
+Underfull \hbox (badness 1082) in paragraph at lines 22819--22832
+[]\TU/lmr/bx/n/10 Index the octave states. \TU/lmr/m/n/10 Using the exponent co
+nvention, confirm the ladder of eq. [][]71[][]
+ []
+
+
+Underfull \hbox (badness 1776) in paragraph at lines 22819--22832
+\TU/lmr/m/n/10 state 2 (cyclist) at $[][] [] [][][][][][][][]$ — the first thre
+e rungs of the pinned $[][]$ sequence
+ []
+
+[307] [308] [309] [310] [311]
+
+LaTeX Warning: Reference `tbl:part_III_reality-bridge_routing' on page 312 unde
+fined on input line 23133.
+
+[312] [313] [314] [315]
+Missing character: There is no ≈ (U+2248) in font [lmmono10-italic]:!
+[316] [317] [318] [319] [320] [321]
+Missing character: There is no ≈ (U+2248) in font [lmmono10-italic]:!
+[322]
+ignored: Infinite glue shrinkage found in box being split [323]
+Missing character: There is no ≈ (U+2248) in font [lmmono10-italic]:!
+Missing character: There is no ≈ (U+2248) in font [lmmono10-italic]:!
+[324] [325] [326] [327] [328] [329] [330] [331] [332] [333] [334]
+
+LaTeX Warning: Reference `tbl:part_I_fractal-constant_filings' on page 335 unde
+fined on input line 24705.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 335 undefined
+ on input line 24766.
+
+[335] [336] [337] [338] [339] [340] [341] [342]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 343 undefined
+ on input line 25149.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 343 undefined
+ on input line 25157.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 343 undefined
+ on input line 25163.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 343 undefined
+ on input line 25186.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 343 undefined
+ on input line 25204.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 343 undefined
+ on input line 25211.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 343 undefined
+ on input line 25222.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 343 undefined
+ on input line 25236.
+
+[343] [344] [345]
+Missing character: There is no ℏ (U+210F) in font [lmroman10-italic]:mapping=te
+x-text;!
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 346 undefined
+ on input line 25365.
+
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 346 unde
+fined on input line 25365.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 346 undefined
+ on input line 25441.
+
+[346]
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 347 unde
+fined on input line 25457.
+
+[347]
+
+LaTeX Warning: Reference `tbl:part_II_viscosity-light_family' on page 348 undef
+ined on input line 25510.
+
+
+LaTeX Warning: Reference `tbl:part_II_viscosity-light_family' on page 348 undef
+ined on input line 25539.
+
+[348] [349]
+Underfull \hbox (badness 1092) in paragraph at lines 25646--25658
+[]\TU/lmr/m/n/10 The paper insists “eddy currents are the \TU/lmr/m/it/10 analo
+gy\TU/lmr/m/n/10 ” and disclaims “relativity retirement” and
+ []
+
+[350] [351] [352] [353]
+
+LaTeX Warning: Reference `tbl:part_II_metrological-overlap_worked' on page 354
+undefined on input line 25840.
+
+[354] [355] [356] [357] [358] [359]
+
+Package natbib Warning: Multiple citation on page 360: same authors and year
+(natbib)                without distinguishing extra letter,
+(natbib)                appears as question mark.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt):
+(fancyhdr)                Make it at least 22.76004pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.76004pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-10.76004pt}.
+
+[360]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt):
+(fancyhdr)                Make it at least 22.76004pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.76004pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-10.76004pt}.
+
+[361] [362] [363] [364]
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 365 unde
+fined on input line 26467.
+
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 365 unde
+fined on input line 26472.
+
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 365 unde
+fined on input line 26480.
+
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 365 unde
+fined on input line 26531.
+
+[365] [366]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 367 undefined
+ on input line 26665.
+
+[367]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 368 undefined
+ on input line 26686.
+
+[368] [369] [370] [371] [372] [373] [374] [375] [376] [377] [378] [379]
+[380] [381] [382] [383] [384] [385]
+Overfull \hbox (174.95433pt too wide) in paragraph at lines 27816--27818
+[]|$[][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]
+ [][][][][][][][][][] [][][][][][][][][]$
+ []
+
+
+Overfull \hbox (18.0387pt too wide) in paragraph at lines 27870--27872
+[][][][][] [][][] [][][] [][][] []
+ []
+
+
+Overfull \hbox (18.0387pt too wide) in paragraph at lines 27879--27881
+[][][][][] [][][] [][][] [][][] []
+ []
+
+
+Overfull \hbox (57.40028pt too wide) in paragraph at lines 27882--27884
+\TU/lmtt/m/n/10 unique_address([2,3],[2,1])
+ []
+
+
+ignored: Infinite glue shrinkage found in box being split [386]
+ignored: Infinite glue shrinkage f
+ound in box being split [387] [388] [389] [390]
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 391 unde
+fined on input line 28124.
+
+[391] [392]
+Overfull \hbox (117.22653pt too wide) in paragraph at lines 28312--28312
+[]|\TU/lmtt/m/n/10 [@eq:part_0_living-pem_phi_egs]|
+ []
+
+
+Overfull \hbox (67.44661pt too wide) in paragraph at lines 28313--28313
+[]|\TU/lmtt/m/n/10 [@sec:part_0_living-pem]|
+ []
+
+
+Overfull \hbox (117.22653pt too wide) in paragraph at lines 28317--28317
+[]|\TU/lmtt/m/n/10 [@eq:part_0_living-pem_catalog]|
+ []
+
+
+Overfull \hbox (67.44661pt too wide) in paragraph at lines 28318--28318
+[]|\TU/lmtt/m/n/10 [@sec:part_0_living-pem]|
+ []
+
+
+Overfull \hbox (117.22653pt too wide) in paragraph at lines 28322--28322
+[]|\TU/lmtt/m/n/10 [@eq:part_0_living-pem_balance]|
+ []
+
+
+Overfull \hbox (67.44661pt too wide) in paragraph at lines 28323--28323
+[]|\TU/lmtt/m/n/10 [@sec:part_0_living-pem]|
+ []
+
+
+Overfull \hbox (174.97653pt too wide) in paragraph at lines 28328--28328
+[]|\TU/lmtt/m/n/10 [@eq:part_0_master-synthesis_catalog_size]|
+ []
+
+
+Overfull \hbox (98.94661pt too wide) in paragraph at lines 28329--28329
+[]|\TU/lmtt/m/n/10 [@sec:part_0_master-synthesis]|
+ []
+
+
+Overfull \hbox (127.72653pt too wide) in paragraph at lines 28333--28333
+[]|\TU/lmtt/m/n/10 [@eq:part_0_master-synthesis_egs]|
+ []
+
+
+Overfull \hbox (98.94661pt too wide) in paragraph at lines 28334--28334
+[]|\TU/lmtt/m/n/10 [@sec:part_0_master-synthesis]|
+ []
+
+
+Overfull \hbox (15.59142pt too wide) in paragraph at lines 28335--28338
+[][] [][][][][]$
+ []
+
+
+Overfull \hbox (174.97653pt too wide) in paragraph at lines 28339--28339
+[]|\TU/lmtt/m/n/10 [@eq:part_0_master-synthesis_octave_index]|
+ []
+
+
+Overfull \hbox (98.94661pt too wide) in paragraph at lines 28340--28340
+[]|\TU/lmtt/m/n/10 [@sec:part_0_master-synthesis]|
+ []
+
+
+Overfull \hbox (122.47653pt too wide) in paragraph at lines 28345--28345
+[]|\TU/lmtt/m/n/10 [@eq:part_0_octave-map_exponent]|
+ []
+
+
+Overfull \hbox (67.44661pt too wide) in paragraph at lines 28346--28346
+[]|\TU/lmtt/m/n/10 [@sec:part_0_octave-map]|
+ []
+
+
+Overfull \hbox (127.72653pt too wide) in paragraph at lines 28350--28350
+[]|\TU/lmtt/m/n/10 [@eq:part_0_octave-map_subscript]|
+ []
+
+
+Overfull \hbox (67.44661pt too wide) in paragraph at lines 28351--28351
+[]|\TU/lmtt/m/n/10 [@sec:part_0_octave-map]|
+ []
+
+
+Overfull \hbox (117.22653pt too wide) in paragraph at lines 28356--28356
+[]|\TU/lmtt/m/n/10 [@eq:part_0_octave-map_catalog]|
+ []
+
+
+Overfull \hbox (67.44661pt too wide) in paragraph at lines 28357--28357
+[]|\TU/lmtt/m/n/10 [@sec:part_0_octave-map]|
+ []
+
+
+Overfull \hbox (127.72653pt too wide) in paragraph at lines 28362--28362
+[]|\TU/lmtt/m/n/10 [@eq:part_0_orientation_register]|
+ []
+
+
+Overfull \hbox (72.69661pt too wide) in paragraph at lines 28363--28363
+[]|\TU/lmtt/m/n/10 [@sec:part_0_orientation]|
+ []
+
+
+Overfull \hbox (117.22653pt too wide) in paragraph at lines 28366--28366
+[]|\TU/lmtt/m/n/10 [@eq:part_0_orientation_octave]|
+ []
+
+
+Overfull \hbox (72.69661pt too wide) in paragraph at lines 28367--28367
+[]|\TU/lmtt/m/n/10 [@sec:part_0_orientation]|
+ []
+
+
+Overfull \hbox (148.72653pt too wide) in paragraph at lines 28371--28371
+[]|\TU/lmtt/m/n/10 [@eq:part_0_tensor-decoupling_ladder]|
+ []
+
+
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 28372--28372
+[]|\TU/lmtt/m/n/10 [@sec:part_0_tensor-decoupling]|
+ []
+
+
+Overfull \hbox (143.47653pt too wide) in paragraph at lines 28376--28376
+[]|\TU/lmtt/m/n/10 [@eq:part_0_tensor-decoupling_block]|
+ []
+
+
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 28377--28377
+[]|\TU/lmtt/m/n/10 [@sec:part_0_tensor-decoupling]|
+ []
+
+
+Overfull \hbox (153.97653pt too wide) in paragraph at lines 28380--28380
+[]|\TU/lmtt/m/n/10 [@eq:part_0_tensor-decoupling_catalog]|
+ []
+
+
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 28381--28381
+[]|\TU/lmtt/m/n/10 [@sec:part_0_tensor-decoupling]|
+ []
+
+
+Overfull \hbox (143.47653pt too wide) in paragraph at lines 28385--28385
+[]|\TU/lmtt/m/n/10 [@eq:part_0_tensor-decoupling_model]|
+ []
+
+
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 28386--28386
+[]|\TU/lmtt/m/n/10 [@sec:part_0_tensor-decoupling]|
+ []
+
+
+ignored: Infinite glue shrinkage found in box being split [393]
+ignored: Infinite glue shrinkage f
+ound in box being split [394]
+ignored: Infinite glue shrinkage found in box being split [
+395]
+Overfull \hbox (174.97653pt too wide) in paragraph at lines 28431--28431
+[]|\TU/lmtt/m/n/10 [@eq:part_I_fractal-constant_phi-identity]|
+ []
+
+
+Overfull \hbox (98.94661pt too wide) in paragraph at lines 28432--28432
+[]|\TU/lmtt/m/n/10 [@sec:part_I_fractal-constant]|
+ []
+
+
+Overfull \hbox (169.72653pt too wide) in paragraph at lines 28437--28437
+[]|\TU/lmtt/m/n/10 [@eq:part_I_fractal-constant_octave-term]|
+ []
+
+
+Overfull \hbox (98.94661pt too wide) in paragraph at lines 28438--28438
+[]|\TU/lmtt/m/n/10 [@sec:part_I_fractal-constant]|
+ []
+
+
+Overfull \hbox (4.9366pt too wide) in paragraph at lines 28439--28443
+\TU/lmr/m/n/10 nent/subscript
+ []
+
+
+Overfull \hbox (164.47653pt too wide) in paragraph at lines 28444--28444
+[]|\TU/lmtt/m/n/10 [@eq:part_I_fractal-constant_palindrome]|
+ []
+
+
+Overfull \hbox (98.94661pt too wide) in paragraph at lines 28445--28445
+[]|\TU/lmtt/m/n/10 [@sec:part_I_fractal-constant]|
+ []
+
+
+Overfull \hbox (164.47653pt too wide) in paragraph at lines 28449--28449
+[]|\TU/lmtt/m/n/10 [@eq:part_I_fractal-constant_phi-powers]|
+ []
+
+
+Overfull \hbox (98.94661pt too wide) in paragraph at lines 28450--28450
+[]|\TU/lmtt/m/n/10 [@sec:part_I_fractal-constant]|
+ []
+
+
+Overfull \hbox (132.97653pt too wide) in paragraph at lines 28454--28454
+[]|\TU/lmtt/m/n/10 [@eq:part_I_higgs-awareness_model]|
+ []
+
+
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28455--28455
+[]|\TU/lmtt/m/n/10 [@sec:part_I_higgs-awareness]|
+ []
+
+
+Overfull \hbox (169.72653pt too wide) in paragraph at lines 28460--28460
+[]|\TU/lmtt/m/n/10 [@eq:part_I_higgs-awareness_displacement]|
+ []
+
+
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28461--28461
+[]|\TU/lmtt/m/n/10 [@sec:part_I_higgs-awareness]|
+ []
+
+
+Overfull \hbox (143.47653pt too wide) in paragraph at lines 28466--28466
+[]|\TU/lmtt/m/n/10 [@eq:part_I_holographic-rhyme_field]|
+ []
+
+
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 28467--28467
+[]|\TU/lmtt/m/n/10 [@sec:part_I_holographic-rhyme]|
+ []
+
+
+Overfull \hbox (159.22653pt too wide) in paragraph at lines 28472--28472
+[]|\TU/lmtt/m/n/10 [@eq:part_I_holographic-rhyme_pairwise]|
+ []
+
+
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 28473--28473
+[]|\TU/lmtt/m/n/10 [@sec:part_I_holographic-rhyme]|
+ []
+
+
+Overfull \hbox (4.55342pt too wide) in paragraph at lines 28474--28477
+[] [][][][][][][][] []
+ []
+
+
+Overfull \hbox (169.72653pt too wide) in paragraph at lines 28478--28478
+[]|\TU/lmtt/m/n/10 [@eq:part_I_multidimensional-rhyme_field]|
+ []
+
+
+Overfull \hbox (130.44661pt too wide) in paragraph at lines 28479--28479
+[]|\TU/lmtt/m/n/10 [@sec:part_I_multidimensional-rhyme]|
+ []
+
+
+Overfull \hbox (164.47653pt too wide) in paragraph at lines 28484--28484
+[]|\TU/lmtt/m/n/10 [@eq:part_I_multidimensional-rhyme_xdyd]|
+ []
+
+
+Overfull \hbox (130.44661pt too wide) in paragraph at lines 28485--28485
+[]|\TU/lmtt/m/n/10 [@sec:part_I_multidimensional-rhyme]|
+ []
+
+
+Overfull \hbox (174.97653pt too wide) in paragraph at lines 28489--28489
+[]|\TU/lmtt/m/n/10 [@eq:part_I_multidimensional-rhyme_octave]|
+ []
+
+
+Overfull \hbox (130.44661pt too wide) in paragraph at lines 28490--28490
+[]|\TU/lmtt/m/n/10 [@sec:part_I_multidimensional-rhyme]|
+ []
+
+
+Overfull \hbox (117.22653pt too wide) in paragraph at lines 28494--28494
+[]|\TU/lmtt/m/n/10 [@eq:part_I_prime-parity_model]|
+ []
+
+
+Overfull \hbox (77.94661pt too wide) in paragraph at lines 28495--28495
+[]|\TU/lmtt/m/n/10 [@sec:part_I_prime-parity]|
+ []
+
+
+Overfull \hbox (138.22653pt too wide) in paragraph at lines 28500--28500
+[]|\TU/lmtt/m/n/10 [@eq:part_I_prime-parity_subscript]|
+ []
+
+
+Overfull \hbox (77.94661pt too wide) in paragraph at lines 28501--28501
+[]|\TU/lmtt/m/n/10 [@sec:part_I_prime-parity]|
+ []
+
+
+Overfull \hbox (122.47653pt too wide) in paragraph at lines 28504--28504
+[]|\TU/lmtt/m/n/10 [@eq:part_I_topology-void_pivot]|
+ []
+
+
+Overfull \hbox (83.19661pt too wide) in paragraph at lines 28505--28505
+[]|\TU/lmtt/m/n/10 [@sec:part_I_topology-void]|
+ []
+
+
+Overfull \hbox (122.47653pt too wide) in paragraph at lines 28510--28510
+[]|\TU/lmtt/m/n/10 [@eq:part_I_topology-void_model]|
+ []
+
+
+Overfull \hbox (83.19661pt too wide) in paragraph at lines 28511--28511
+[]|\TU/lmtt/m/n/10 [@sec:part_I_topology-void]|
+ []
+
+
+Overfull \hbox (117.22653pt too wide) in paragraph at lines 28514--28514
+[]|\TU/lmtt/m/n/10 [@eq:part_I_topology-void_well]|
+ []
+
+
+Overfull \hbox (83.19661pt too wide) in paragraph at lines 28515--28515
+[]|\TU/lmtt/m/n/10 [@sec:part_I_topology-void]|
+ []
+
+
+ignored: Infinite glue shrinkage found in box being split [396]
+ignored: Infinite glue shrinkage f
+ound in box being split [397]
+ignored: Infinite glue shrinkage found in box being split [
+398]
+Overfull \hbox (148.72653pt too wide) in paragraph at lines 28562--28562
+[]|\TU/lmtt/m/n/10 [@eq:part_II_crystalline-field_facet]|
+ []
+
+
+Overfull \hbox (109.44661pt too wide) in paragraph at lines 28563--28563
+[]|\TU/lmtt/m/n/10 [@sec:part_II_crystalline-field]|
+ []
+
+
+Overfull \hbox (159.22653pt too wide) in paragraph at lines 28567--28567
+[]|\TU/lmtt/m/n/10 [@eq:part_II_crystalline-field_crystal]|
+ []
+
+
+Overfull \hbox (109.44661pt too wide) in paragraph at lines 28568--28568
+[]|\TU/lmtt/m/n/10 [@sec:part_II_crystalline-field]|
+ []
+
+
+Overfull \hbox (164.47653pt too wide) in paragraph at lines 28573--28573
+[]|\TU/lmtt/m/n/10 [@eq:part_II_crystalline-field_landauer]|
+ []
+
+
+Overfull \hbox (109.44661pt too wide) in paragraph at lines 28574--28574
+[]|\TU/lmtt/m/n/10 [@sec:part_II_crystalline-field]|
+ []
+
+
+Overfull \hbox (159.22653pt too wide) in paragraph at lines 28578--28578
+[]|\TU/lmtt/m/n/10 [@eq:part_II_eddy-current-mirror_model]|
+ []
+
+
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 28579--28579
+[]|\TU/lmtt/m/n/10 [@sec:part_II_eddy-current-mirror]|
+ []
+
+
+Overfull \hbox (174.97653pt too wide) in paragraph at lines 28583--28583
+[]|\TU/lmtt/m/n/10 [@eq:part_II_eddy-current-mirror_halflife]|
+ []
+
+
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 28584--28584
+[]|\TU/lmtt/m/n/10 [@sec:part_II_eddy-current-mirror]|
+ []
+
+
+Overfull \hbox (153.97653pt too wide) in paragraph at lines 28588--28588
+[]|\TU/lmtt/m/n/10 [@eq:part_II_eddy-current-mirror_drag]|
+ []
+
+
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 28589--28589
+[]|\TU/lmtt/m/n/10 [@sec:part_II_eddy-current-mirror]|
+ []
+
+
+Overfull \hbox (164.47653pt too wide) in paragraph at lines 28594--28594
+[]|\TU/lmtt/m/n/10 [@eq:part_II_metamorphic-octaves_filing]|
+ []
+
+
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 28595--28595
+[]|\TU/lmtt/m/n/10 [@sec:part_II_metamorphic-octaves]|
+ []
+
+
+Overfull \hbox (14.54662pt too wide) in paragraph at lines 28595--28598
+\TU/lmr/m/n/10 magma/burnout,
+ []
+
+
+Overfull \hbox (201.22653pt too wide) in paragraph at lines 28599--28599
+[]|\TU/lmtt/m/n/10 [@eq:part_II_metamorphic-octaves_densification]|
+ []
+
+
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 28600--28600
+[]|\TU/lmtt/m/n/10 [@sec:part_II_metamorphic-octaves]|
+ []
+
+
+Overfull \hbox (174.97653pt too wide) in paragraph at lines 28605--28605
+[]|\TU/lmtt/m/n/10 [@eq:part_II_metamorphic-octaves_marginal]|
+ []
+
+
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 28606--28606
+[]|\TU/lmtt/m/n/10 [@sec:part_II_metamorphic-octaves]|
+ []
+
+
+Overfull \hbox (164.47653pt too wide) in paragraph at lines 28611--28611
+[]|\TU/lmtt/m/n/10 [@eq:part_II_metrological-overlap_gears]|
+ []
+
+
+Overfull \hbox (125.19661pt too wide) in paragraph at lines 28612--28612
+[]|\TU/lmtt/m/n/10 [@sec:part_II_metrological-overlap]|
+ []
+
+
+Overfull \hbox (9.27785pt too wide) in paragraph at lines 28612--28615
+[][][] [][] [][][] [][][] [][]$
+ []
+
+
+Overfull \hbox (164.47653pt too wide) in paragraph at lines 28616--28616
+[]|\TU/lmtt/m/n/10 [@eq:part_II_metrological-overlap_model]|
+ []
+
+
+Overfull \hbox (125.19661pt too wide) in paragraph at lines 28617--28617
+[]|\TU/lmtt/m/n/10 [@sec:part_II_metrological-overlap]|
+ []
+
+
+Overfull \hbox (14.09021pt too wide) in paragraph at lines 28619--28621
+[][][] [][][][][][] [][][][]$
+ []
+
+
+Overfull \hbox (174.97653pt too wide) in paragraph at lines 28622--28622
+[]|\TU/lmtt/m/n/10 [@eq:part_II_metrological-overlap_octaves]|
+ []
+
+
+Overfull \hbox (125.19661pt too wide) in paragraph at lines 28623--28623
+[]|\TU/lmtt/m/n/10 [@sec:part_II_metrological-overlap]|
+ []
+
+
+Overfull \hbox (180.22653pt too wide) in paragraph at lines 28627--28627
+[]|\TU/lmtt/m/n/10 [@eq:part_II_metrological-overlap_mcatalog]|
+ []
+
+
+Overfull \hbox (125.19661pt too wide) in paragraph at lines 28628--28628
+[]|\TU/lmtt/m/n/10 [@sec:part_II_metrological-overlap]|
+ []
+
+
+Overfull \hbox (159.22653pt too wide) in paragraph at lines 28632--28632
+[]|\TU/lmtt/m/n/10 [@eq:part_II_planetary-core_phase_flip]|
+ []
+
+
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28633--28633
+[]|\TU/lmtt/m/n/10 [@sec:part_II_planetary-core]|
+ []
+
+
+Overfull \hbox (127.72653pt too wide) in paragraph at lines 28636--28636
+[]|\TU/lmtt/m/n/10 [@eq:part_II_planetary-core_band]|
+ []
+
+
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28637--28637
+[]|\TU/lmtt/m/n/10 [@sec:part_II_planetary-core]|
+ []
+
+
+Overfull \hbox (138.22653pt too wide) in paragraph at lines 28642--28642
+[]|\TU/lmtt/m/n/10 [@eq:part_II_proton-theater_filing]|
+ []
+
+
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28643--28643
+[]|\TU/lmtt/m/n/10 [@sec:part_II_proton-theater]|
+ []
+
+
+Overfull \hbox (148.72653pt too wide) in paragraph at lines 28647--28647
+[]|\TU/lmtt/m/n/10 [@eq:part_II_proton-theater_identity]|
+ []
+
+
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28648--28648
+[]|\TU/lmtt/m/n/10 [@sec:part_II_proton-theater]|
+ []
+
+
+Overfull \hbox (143.47653pt too wide) in paragraph at lines 28652--28652
+[]|\TU/lmtt/m/n/10 [@eq:part_II_proton-theater_octaves]|
+ []
+
+
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28653--28653
+[]|\TU/lmtt/m/n/10 [@sec:part_II_proton-theater]|
+ []
+
+
+Overfull \hbox (143.47653pt too wide) in paragraph at lines 28657--28657
+[]|\TU/lmtt/m/n/10 [@eq:part_II_proton-theater_duality]|
+ []
+
+
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28658--28658
+[]|\TU/lmtt/m/n/10 [@sec:part_II_proton-theater]|
+ []
+
+
+Overfull \hbox (138.22653pt too wide) in paragraph at lines 28662--28662
+[]|\TU/lmtt/m/n/10 [@eq:part_II_proton-theater_mirror]|
+ []
+
+
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28663--28663
+[]|\TU/lmtt/m/n/10 [@sec:part_II_proton-theater]|
+ []
+
+
+Overfull \hbox (127.72653pt too wide) in paragraph at lines 28666--28667
+[]|\TU/lmtt/m/n/10 [@eq:part_II_proton-theater_step]|
+ []
+
+
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28667--28667
+[]|\TU/lmtt/m/n/10 [@sec:part_II_proton-theater]|
+ []
+
+
+Overfull \hbox (169.72653pt too wide) in paragraph at lines 28671--28671
+[]|\TU/lmtt/m/n/10 [@eq:part_II_singularity-crystal_netzero]|
+ []
+
+
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 28672--28672
+[]|\TU/lmtt/m/n/10 [@sec:part_II_singularity-crystal]|
+ []
+
+
+Overfull \hbox (169.72653pt too wide) in paragraph at lines 28677--28677
+[]|\TU/lmtt/m/n/10 [@eq:part_II_singularity-crystal_crystal]|
+ []
+
+
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 28678--28678
+[]|\TU/lmtt/m/n/10 [@sec:part_II_singularity-crystal]|
+ []
+
+
+Overfull \hbox (164.47653pt too wide) in paragraph at lines 28682--28682
+[]|\TU/lmtt/m/n/10 [@eq:part_II_singularity-crystal_nodek0]|
+ []
+
+
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 28683--28683
+[]|\TU/lmtt/m/n/10 [@sec:part_II_singularity-crystal]|
+ []
+
+
+Overfull \hbox (180.22653pt too wide) in paragraph at lines 28688--28688
+[]|\TU/lmtt/m/n/10 [@eq:part_II_viscosity-light_viscous_floor]|
+ []
+
+
+Overfull \hbox (98.94661pt too wide) in paragraph at lines 28689--28689
+[]|\TU/lmtt/m/n/10 [@sec:part_II_viscosity-light]|
+ []
+
+
+Overfull \hbox (143.47653pt too wide) in paragraph at lines 28693--28693
+[]|\TU/lmtt/m/n/10 [@eq:part_II_viscosity-light_family]|
+ []
+
+
+Overfull \hbox (98.94661pt too wide) in paragraph at lines 28694--28694
+[]|\TU/lmtt/m/n/10 [@sec:part_II_viscosity-light]|
+ []
+
+
+Overfull \hbox (12.64745pt too wide) in paragraph at lines 28695--28698
+[] [] [][][] [][] [][] [][] []$\TU/lmr/m/n/10 .|
+ []
+
+
+Overfull \hbox (143.47653pt too wide) in paragraph at lines 28699--28699
+[]|\TU/lmtt/m/n/10 [@eq:part_II_viscosity-light_render]|
+ []
+
+
+Overfull \hbox (98.94661pt too wide) in paragraph at lines 28700--28700
+[]|\TU/lmtt/m/n/10 [@sec:part_II_viscosity-light]|
+ []
+
+[399]
+ignored: Infinite glue shrinkage found in box being split [400]
+ignored: Infinite glue shrink
+age found in box being split [401]
+ignored: Infinite glue shrinkage found in box being sp
+lit [402]
+ignored: Infinite glue shrinkage found in box being split [403]
+Overfull \hbox (153.97653pt too wide) in paragraph at lines 28751--28751
+[]|\TU/lmtt/m/n/10 [@eq:part_III_cmos-protonic_shelf-map]|
+ []
+
+
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28752--28752
+[]|\TU/lmtt/m/n/10 [@sec:part_III_cmos-protonic]|
+ []
+
+
+Overfull \hbox (138.22653pt too wide) in paragraph at lines 28756--28756
+[]|\TU/lmtt/m/n/10 [@eq:part_III_cmos-protonic_ladder]|
+ []
+
+
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28757--28757
+[]|\TU/lmtt/m/n/10 [@sec:part_III_cmos-protonic]|
+ []
+
+
+Overfull \hbox (148.72653pt too wide) in paragraph at lines 28761--28761
+[]|\TU/lmtt/m/n/10 [@eq:part_III_cmos-protonic_capacity]|
+ []
+
+
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28762--28762
+[]|\TU/lmtt/m/n/10 [@sec:part_III_cmos-protonic]|
+ []
+
+
+Overfull \hbox (127.72653pt too wide) in paragraph at lines 28766--28766
+[]|\TU/lmtt/m/n/10 [@eq:part_III_frontiers_net_zero]|
+ []
+
+
+Overfull \hbox (72.69661pt too wide) in paragraph at lines 28767--28767
+[]|\TU/lmtt/m/n/10 [@sec:part_III_frontiers]|
+ []
+
+
+Overfull \hbox (127.72653pt too wide) in paragraph at lines 28772--28772
+[]|\TU/lmtt/m/n/10 [@eq:part_III_frontiers_quadrant]|
+ []
+
+
+Overfull \hbox (72.69661pt too wide) in paragraph at lines 28773--28773
+[]|\TU/lmtt/m/n/10 [@sec:part_III_frontiers]|
+ []
+
+
+Overfull \hbox (174.97653pt too wide) in paragraph at lines 28776--28776
+[]|\TU/lmtt/m/n/10 [@eq:part_III_invisible-frontier_phiclimb]|
+ []
+
+
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 28777--28777
+[]|\TU/lmtt/m/n/10 [@sec:part_III_invisible-frontier]|
+ []
+
+
+Overfull \hbox (159.22653pt too wide) in paragraph at lines 28781--28781
+[]|\TU/lmtt/m/n/10 [@eq:part_III_invisible-frontier_model]|
+ []
+
+
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 28782--28782
+[]|\TU/lmtt/m/n/10 [@sec:part_III_invisible-frontier]|
+ []
+
+
+Overfull \hbox (211.72653pt too wide) in paragraph at lines 28787--28787
+[]|\TU/lmtt/m/n/10 [@eq:part_III_kinematic-recycling_velocity-scale]|
+ []
+
+
+Overfull \hbox (125.19661pt too wide) in paragraph at lines 28788--28788
+[]|\TU/lmtt/m/n/10 [@sec:part_III_kinematic-recycling]|
+ []
+
+
+Overfull \hbox (206.47653pt too wide) in paragraph at lines 28792--28792
+[]|\TU/lmtt/m/n/10 [@eq:part_III_kinematic-recycling_octave-ladder]|
+ []
+
+
+Overfull \hbox (125.19661pt too wide) in paragraph at lines 28793--28793
+[]|\TU/lmtt/m/n/10 [@sec:part_III_kinematic-recycling]|
+ []
+
+
+Overfull \hbox (195.97653pt too wide) in paragraph at lines 28797--28797
+[]|\TU/lmtt/m/n/10 [@eq:part_III_kinematic-recycling_round-robin]|
+ []
+
+
+Overfull \hbox (125.19661pt too wide) in paragraph at lines 28798--28798
+[]|\TU/lmtt/m/n/10 [@sec:part_III_kinematic-recycling]|
+ []
+
+
+Overfull \hbox (227.47653pt too wide) in paragraph at lines 28803--28803
+[]|\TU/lmtt/m/n/10 [@eq:part_III_kinematic-recycling_truckee-partition]|
+ []
+
+
+Overfull \hbox (125.19661pt too wide) in paragraph at lines 28804--28804
+[]|\TU/lmtt/m/n/10 [@sec:part_III_kinematic-recycling]|
+ []
+
+
+Overfull \hbox (132.97653pt too wide) in paragraph at lines 28809--28809
+[]|\TU/lmtt/m/n/10 [@eq:part_III_macro-protein_model]|
+ []
+
+
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28810--28810
+[]|\TU/lmtt/m/n/10 [@sec:part_III_macro-protein]|
+ []
+
+
+Overfull \hbox (127.72653pt too wide) in paragraph at lines 28814--28814
+[]|\TU/lmtt/m/n/10 [@eq:part_III_macro-protein_band]|
+ []
+
+
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28815--28815
+[]|\TU/lmtt/m/n/10 [@sec:part_III_macro-protein]|
+ []
+
+
+Overfull \hbox (143.47653pt too wide) in paragraph at lines 28820--28820
+[]|\TU/lmtt/m/n/10 [@eq:part_III_macro-protein_kleiber]|
+ []
+
+
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28821--28821
+[]|\TU/lmtt/m/n/10 [@sec:part_III_macro-protein]|
+ []
+
+
+Overfull \hbox (138.22653pt too wide) in paragraph at lines 28825--28825
+[]|\TU/lmtt/m/n/10 [@eq:part_III_moving-up-stack_band]|
+ []
+
+
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 28826--28826
+[]|\TU/lmtt/m/n/10 [@sec:part_III_moving-up-stack]|
+ []
+
+
+Overfull \hbox (153.97653pt too wide) in paragraph at lines 28831--28831
+[]|\TU/lmtt/m/n/10 [@eq:part_III_moving-up-stack_cooling]|
+ []
+
+
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 28832--28832
+[]|\TU/lmtt/m/n/10 [@sec:part_III_moving-up-stack]|
+ []
+
+
+Overfull \hbox (32.07062pt too wide) in paragraph at lines 28833--28835
+[][][][][] []
+ []
+
+
+Overfull \hbox (153.97653pt too wide) in paragraph at lines 28836--28836
+[]|\TU/lmtt/m/n/10 [@eq:part_III_moving-up-stack_harmony]|
+ []
+
+
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 28837--28837
+[]|\TU/lmtt/m/n/10 [@sec:part_III_moving-up-stack]|
+ []
+
+
+Overfull \hbox (132.97653pt too wide) in paragraph at lines 28841--28841
+[]|\TU/lmtt/m/n/10 [@eq:part_III_pdvsa-gateway_model]|
+ []
+
+
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28842--28842
+[]|\TU/lmtt/m/n/10 [@sec:part_III_pdvsa-gateway]|
+ []
+
+
+Overfull \hbox (138.22653pt too wide) in paragraph at lines 28846--28846
+[]|\TU/lmtt/m/n/10 [@eq:part_III_pdvsa-gateway_tokens]|
+ []
+
+
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28847--28847
+[]|\TU/lmtt/m/n/10 [@sec:part_III_pdvsa-gateway]|
+ []
+
+
+Overfull \hbox (6.0096pt too wide) in paragraph at lines 28849--28851
+[]|$[][][][][] []
+ []
+
+
+Overfull \hbox (153.97653pt too wide) in paragraph at lines 28852--28852
+[]|\TU/lmtt/m/n/10 [@eq:part_III_protein-folding_address]|
+ []
+
+
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 28853--28853
+[]|\TU/lmtt/m/n/10 [@sec:part_III_protein-folding]|
+ []
+
+
+Overfull \hbox (159.22653pt too wide) in paragraph at lines 28858--28858
+[]|\TU/lmtt/m/n/10 [@eq:part_III_protein-folding_capacity]|
+ []
+
+
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 28859--28859
+[]|\TU/lmtt/m/n/10 [@sec:part_III_protein-folding]|
+ []
+
+
+Overfull \hbox (132.97653pt too wide) in paragraph at lines 28863--28863
+[]|\TU/lmtt/m/n/10 [@eq:part_III_protein-folding_phi]|
+ []
+
+
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 28864--28864
+[]|\TU/lmtt/m/n/10 [@sec:part_III_protein-folding]|
+ []
+
+
+Overfull \hbox (148.72653pt too wide) in paragraph at lines 28868--28868
+[]|\TU/lmtt/m/n/10 [@eq:part_III_protein-folding_octave]|
+ []
+
+
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 28869--28869
+[]|\TU/lmtt/m/n/10 [@sec:part_III_protein-folding]|
+ []
+
+
+Overfull \hbox (169.72653pt too wide) in paragraph at lines 28873--28873
+[]|\TU/lmtt/m/n/10 [@eq:part_III_protein-folding_octave_sub]|
+ []
+
+
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 28874--28874
+[]|\TU/lmtt/m/n/10 [@sec:part_III_protein-folding]|
+ []
+
+
+Overfull \hbox (143.47653pt too wide) in paragraph at lines 28879--28879
+[]|\TU/lmtt/m/n/10 [@eq:part_III_reality-bridge_octave]|
+ []
+
+
+Overfull \hbox (98.94661pt too wide) in paragraph at lines 28880--28880
+[]|\TU/lmtt/m/n/10 [@sec:part_III_reality-bridge]|
+ []
+
+
+Overfull \hbox (153.97653pt too wide) in paragraph at lines 28885--28885
+[]|\TU/lmtt/m/n/10 [@eq:part_III_reality-bridge_throttle]|
+ []
+
+
+Overfull \hbox (98.94661pt too wide) in paragraph at lines 28886--28886
+[]|\TU/lmtt/m/n/10 [@sec:part_III_reality-bridge]|
+ []
+
+
+Overfull \hbox (169.72653pt too wide) in paragraph at lines 28890--28890
+[]|\TU/lmtt/m/n/10 [@eq:part_III_volumetric-storage_address]|
+ []
+
+
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 28891--28891
+[]|\TU/lmtt/m/n/10 [@sec:part_III_volumetric-storage]|
+ []
+
+
+Overfull \hbox (174.97653pt too wide) in paragraph at lines 28896--28896
+[]|\TU/lmtt/m/n/10 [@eq:part_III_volumetric-storage_capacity]|
+ []
+
+
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 28897--28897
+[]|\TU/lmtt/m/n/10 [@sec:part_III_volumetric-storage]|
+ []
+
+
+Overfull \hbox (17.03844pt too wide) in paragraph at lines 28898--28900
+[]|$[][][][][] [][] []
+ []
+
+
+Overfull \hbox (174.97653pt too wide) in paragraph at lines 28901--28901
+[]|\TU/lmtt/m/n/10 [@eq:part_III_volumetric-storage_phiruler]|
+ []
+
+
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 28902--28902
+[]|\TU/lmtt/m/n/10 [@sec:part_III_volumetric-storage]|
+ []
+
+
+Overfull \hbox (127.72653pt too wide) in paragraph at lines 28906--28906
+[]|\TU/lmtt/m/n/10 [@eq:part_III_y-chromosome_palin]|
+ []
+
+
+Overfull \hbox (88.44661pt too wide) in paragraph at lines 28907--28907
+[]|\TU/lmtt/m/n/10 [@sec:part_III_y-chromosome]|
+ []
+
+
+Overfull \hbox (132.97653pt too wide) in paragraph at lines 28910--28910
+[]|\TU/lmtt/m/n/10 [@eq:part_III_y-chromosome_anchor]|
+ []
+
+
+Overfull \hbox (88.44661pt too wide) in paragraph at lines 28911--28911
+[]|\TU/lmtt/m/n/10 [@sec:part_III_y-chromosome]|
+ []
+
+[404]
+ignored: Infinite glue shrinkage found in box being split [405]
+ignored: Infinite glue shrink
+age found in box being split [406]
+ignored: Infinite glue shrinkage found in box being sp
+lit [407]
+ignored: Infinite glue shrinkage found in box being split [408] [409] [410]
+
+LaTeX Warning: Reference `tbl:gallery_alignment' on page 411 undefined on input
+ line 29079.
+
+
+ignored: Infinite glue shrinkage found in box being split [411]
+File: ../figures/gallery/gallery_line.png Graphic file (type bmp)
+<../figures/gallery/gallery_line.png>
+File: ../figures/gallery/gallery_bar.png Graphic file (type bmp)
+<../figures/gallery/gallery_bar.png>
+File: ../figures/gallery/gallery_pie.png Graphic file (type bmp)
+<../figures/gallery/gallery_pie.png>
+File: ../figures/gallery/gallery_multipanel.png Graphic file (type bmp)
+<../figures/gallery/gallery_multipanel.png>
+ [412] [413] [414]
+File: ../figures/mermaid_inline/inline_mermaid_0032_6301dfc943d7.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0032_6301dfc943d7.png>
+File: ../figures/mermaid_inline/inline_mermaid_0033_292217dd39b3.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0033_292217dd39b3.png>
+File: ../figures/mermaid_inline/inline_mermaid_0034_62c41125709a.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0034_62c41125709a.png>
+File: ../figures/mermaid_inline/inline_mermaid_0035_cfcd765b5afa.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0035_cfcd765b5afa.png>
+File: ../figures/mermaid_inline/inline_mermaid_0036_7df2b5706613.png Graphic fi
+le (type bmp)
+<../figures/mermaid_inline/inline_mermaid_0036_7df2b5706613.png>
+Package hyperref Info: bookmark level for unknown codelisting defaults to 0 on
+input line 29282.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[415] [416]
+
+LaTeX Warning: Reference `tbl:gallery_alignment' on page 417 undefined on input
+ line 29312.
+
+File: ../figures/gallery/gallery_heatmap.png Graphic file (type bmp)
+<../figures/gallery/gallery_heatmap.png>
+[417]
+File: ../figures/gallery/gallery_errorbar.png Graphic file (type bmp)
+<../figures/gallery/gallery_errorbar.png>
+
+Missing character: There is no ∑ (U+2211) in font [lmroman10-regular]:mapping=t
+ex-text;!
+
+Overfull \vbox (333.24376pt too high) has occurred while \output is active []
+
+
+[418] [419]
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 420 unde
+fined on input line 29467.
+
+[420] [421] [422]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 423 undefined
+ on input line 29716.
+
+[423]
+
+Package natbib Warning: Multiple citation on page 424: same authors and year
+(natbib)                without distinguishing extra letter,
+(natbib)                appears as question mark.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 424 undefined
+ on input line 29792.
+
+[424]
+
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 425 unde
+fined on input line 29817.
+
+[425]
+Overfull \hbox (4.8937pt too wide) in paragraph at lines 29905--29905
+[]|[][]\TU/lmr/bx/n/10 Crystalline
+ []
+
+
+Overfull \hbox (20.95363pt too wide) in paragraph at lines 29905--29905
+[]|\TU/lmtt/m/n/10 {#gl:crystalline-unified-field}|
+ []
+
+
+Overfull \hbox (10.79372pt too wide) in paragraph at lines 29960--29960
+[]|[][]\TU/lmr/bx/n/10 Holographic
+ []
+
+
+Overfull \hbox (4.98372pt too wide) in paragraph at lines 29975--29976
+[]|[][]\TU/lmr/bx/n/10 Irreducible
+ []
+
+
+Overfull \hbox (10.45363pt too wide) in paragraph at lines 29976--29976
+[]|\TU/lmtt/m/n/10 {#gl:irreducible-minimum-set}|
+ []
+
+
+Overfull \hbox (1.74371pt too wide) in paragraph at lines 29980--29981
+[]|[][]\TU/lmr/bx/n/10 Kinematic
+ []
+
+
+Overfull \hbox (10.45363pt too wide) in paragraph at lines 29981--29981
+[]|\TU/lmtt/m/n/10 {#gl:kinematic-set-recycling}|
+ []
+
+
+Overfull \hbox (12.86371pt too wide) in paragraph at lines 30012--30012
+[]|[][]\TU/lmr/bx/n/10 Metrological
+ []
+
+
+Overfull \hbox (37.57372pt too wide) in paragraph at lines 30019--30019
+[]|[][]\TU/lmr/bx/n/10 Multidimensional
+ []
+
+
+Overfull \hbox (5.20363pt too wide) in paragraph at lines 30020--30020
+[]|\TU/lmtt/m/n/10 {#gl:multidimensional-rhyme}|
+ []
+
+
+Overfull \hbox (2.11371pt too wide) in paragraph at lines 30024--30024
+[]|[][]\TU/lmr/bx/n/10 Narrative-
+ []
+
+
+Overfull \hbox (2.3137pt too wide) in paragraph at lines 30024--30024
+\TU/lmr/bx/n/10 Empirical-
+ []
+
+
+Overfull \hbox (9.47371pt too wide) in paragraph at lines 30024--30024
+\TU/lmr/bx/n/10 Operational
+ []
+
+
+Overfull \hbox (83.95363pt too wide) in paragraph at lines 30024--30024
+[]|\TU/lmtt/m/n/10 {#gl:narrative-empirical-operational-tiers}|
+ []
+
+
+Overfull \hbox (10.34372pt too wide) in paragraph at lines 30078--30078
+\TU/lmr/bx/n/10 Observation
+ []
+
+
+Overfull \hbox (4.98372pt too wide) in paragraph at lines 30087--30087
+[]|[][]\TU/lmr/bx/n/10 Singularity
+ []
+
+
+Overfull \hbox (15.93372pt too wide) in paragraph at lines 30107--30107
+[]|[][]\TU/lmr/bx/n/10 Transduction
+ []
+
+
+Overfull \hbox (5.36371pt too wide) in paragraph at lines 30117--30117
+[]|[][]\TU/lmr/bx/n/10 Volumetric
+ []
+
+
+ignored: Infinite glue shrinkage found in box being split [426]
+ignored: Infinite glue shrinkage f
+ound in box being split [427] (./_combined_manuscript.bbl [428] [429]
+Runaway argument?
+Mendez(2026{\natexlab {{}})]{mendez2026topologyVoid} Prudencio Mendez\ETC.
+! Paragraph ended before \@lbibitem was complete.
+<to be read again>
+                   \par
+l.234
+
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Argument of \@lbibitem has an extra }.
+<inserted text>
+                \par
+l.243 \bibitem[Mendez(2026{\natexlab{}}}
+                                        )]{mendez2026volumetricStorage}
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+Mendez(2026{\natexlab {}}
+! Paragraph ended before \@lbibitem was complete.
+<to be read again>
+                   \par
+l.243 \bibitem[Mendez(2026{\natexlab{}}}
+                                        )]{mendez2026volumetricStorage}
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Extra }, or forgotten \endgroup.
+<recently read> }
+
+l.243 \bibitem[Mendez(2026{\natexlab{}}}
+                                        )]{mendez2026volumetricStorage}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten \endgroup.
+l.246 ...log, Infinite Octaves, 2026{\natexlab{}}}
+                                                  .
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+)
+
+Package natbib Warning: There were undefined citations.
+
+[430] (./_combined_manuscript.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+ )
+Here is how much of TeX's memory you used:
+ 33306 strings out of 468168
+ 699247 string characters out of 5432815
+ 1375098 words of memory out of 5000000
+ 61568 multiletter control sequences out of 15000+600000
+ 635519 words of font info for 126 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 90i,13n,114p,3339b,1273s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on _combined_manuscript.pdf (431 pages).

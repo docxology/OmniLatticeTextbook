@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>living-pem.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:part_0_living-pem">The Living PEM: Engineering the
+Lattice</h1>
+<figure id="fig:part_0_living-pem">
+<a class="figure-full-size-link" href="../figures/part_0_living-pem.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/part_0_living-pem.png" style="width:90.0%"
+alt="A staged ladder plot walks the Living PEM engineering lifecycle from filing to pinning." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
+<figcaption>The PEM engineering lifecycle rendered as
+a staged ladder plot: the six onboarding stages (Stage 0 edge seat
+through Stage 5 full fluency) climbing alongside the 26 ordered steps of
+the living engine shelf, with the auto-sync loop feeding back from each
+stage to the shelf module.</figcaption>
+</figure>
+<!-- alt: Staged ladder plot showing the Product Engineering Manual's onboarding stages 0 through 5 rising along the 26 ordered steps of the auto-regenerating engine shelf, with the sync loop closing back to the shelf source of truth. -->
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none</p>
+</blockquote>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol type="1">
+<li>Explain the product ↔︎ engine <strong>dual lock</strong> that
+separates the guest-facing chat agent from the auditor-facing <a
+href="#gl:omni-lattice"><strong>omni-lattice</strong></a> engine, and
+say why <a href="#gl:living-pem"><strong>living-pem</strong></a>
+documentation is the binding layer between them
+[mendez2026livingPem].</li>
+<li>Trace the five-step auto-update protocol by which a new paper enters
+the <a href="#gl:engine-shelf"><strong>engine-shelf</strong></a> without
+any hand-edited tables.</li>
+<li>Compute the <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>
+filing-space size for the Digits × Octaves 01–99 story-depth map using
+<code>catalog_size()</code> from <code>textbook.models</code>.</li>
+<li>State the status of the <a
+href="#gl:fractal-constant"><strong>fractal-constant</strong></a> <span
+class="math inline">\(\Phi_{\mathrm{EGS}}\)</span> as an architectural
+scale key — and what the corpus explicitly does <em>not</em> claim for
+it.</li>
+<li>Sort a corpus claim into the correct narrative / catalog / empirical
+/ operational <a
+href="#gl:narrative-empirical-operational-tiers"><strong>narrative-empirical-operational-tiers</strong></a>
+tier.</li>
+<li>Walk the runtime call chain from a guest keystroke to a provider
+response under BYOK key discipline.</li>
+</ol>
+<!-- curriculum-scaffold-start -->
+<h3 id="study-blueprint">Study Blueprint</h3>
+<ul>
+<li><strong>Big idea:</strong> The Product Engineering Manual is not a
+static document but a <em>living</em> artifact: the engine shelf, the
+agent-sync table, and the runtime prompt pin all regenerate from one
+source-of-truth module, so the catalog stays coherent as papers are
+pinned.</li>
+<li><strong>Core concepts:</strong> <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:engine-shelf"><strong>engine-shelf</strong></a>, <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a>, <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a>, dual lock,
+BYOK, Seed·RAG context discipline.</li>
+<li><strong>Quantitative lens:</strong> the worked formalisms in <span
+class="citation"
+data-cites="eq:part_0_living-pem_phi_egs">[@eq:part_0_living-pem_phi_egs]</span>,
+<span class="citation"
+data-cites="eq:part_0_living-pem_catalog">[@eq:part_0_living-pem_catalog]</span>,
+and <span class="citation"
+data-cites="eq:part_0_living-pem_balance">[@eq:part_0_living-pem_balance]</span>.</li>
+<li><strong>Data skill:</strong> verify a claimed shelf state against
+the sync generator’s arithmetic — ordered steps vs registry papers, and
+net-zero reciprocal balances.</li>
+<li><strong>Common misconception to repair:</strong> that “Infinite”
+names unbounded measured physics tiers or unbounded API spend; the
+corpus files it as recursive holographic nesting depth, and the manual’s
+own honesty boundary says so [mendez2026livingPem].</li>
+<li><strong>Primary lab:</strong> <span class="citation"
+data-cites="sec:lab_part_0_living-pem">[@sec:lab_part_0_living-pem]</span>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_0_living-pem">[@sec:q_part_0_living-pem]</span>.</li>
+<li><strong>Bridge to computation:</strong> <code>textbook.models</code>
+(<code>phi_powers</code>, <code>catalog_size</code>,
+<code>net_zero_balance</code>). <!-- curriculum-scaffold-end --></li>
+</ul>
+<hr />
+<h2 id="opening-vignette-the-manual-that-rewrites-itself">Opening
+Vignette: The Manual That Rewrites Itself</h2>
+<blockquote>
+<p>You are handed the ship’s engineering manual aboard SS Vibelandia and
+told a strange thing: do not edit the tables. Append a paper to the
+engine’s shelf module, run one sync command, and the manual regenerates
+its own appendix — twenty-six ordered steps, twenty-four registry papers
+— before the Cursor stop-hook fires. The corpus dates the sync to
+2026-09-08 and names the generator plainly:
+<code>npm run sync:lattice-pem</code> [mendez2026livingPem]. This is the
+opening image of the whole <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>:
+a filing system whose drawers relabel themselves.</p>
+</blockquote>
+<hr />
+<h2 id="orientation">Orientation</h2>
+<p>Every <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>
+needs a maintenance manual, and the Infinite Octaves corpus files its
+maintenance manual as a <em>living</em> document: the <strong>Product
+Engineering Manual (PEM)</strong> for <em>Infinite Octaves Omniversal
+Lattice Chat Agent V1.618 (Goldilocks Valet)</em>, Document ID
+<code>WP-LATTICE-CHAT-PEM-2026-09</code> [mendez2026livingPem]. Where
+<span class="citation"
+data-cites="sec:part_0_orientation">[@sec:part_0_orientation]</span>
+introduces the corpus and <span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>
+formalises the 99-octave ladder, this chapter studies the operational
+spine — how papers are pinned, ordered, synced, and served to nested
+agents without hand-editing three tables in three places; <span
+class="citation"
+data-cites="fig:part_0_living-pem">[@fig:part_0_living-pem]</span>
+stages that lifecycle as a ladder climbing the shelf.</p>
+<p>The PEM’s audience is architectural review, technical support,
+creator/Player 1 operations, and nested-agent maintainers — in short,
+everyone who must keep the <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a> honest as it
+grows. The manual carries an explicit honesty boundary as its first
+content table, and we will preserve that boundary verbatim in <span
+class="citation"
+data-cites="sec:living-pem-scope">[@sec:living-pem-scope]</span>. It
+also names its operator line: <em>SynthOBS Autonomous Agent ·
+Syntheverse Sandbox · NSPFRNP-SNAP-PRA-2026-06</em>
+[mendez2026livingPem].</p>
+<h2 id="the-paper-in-the-corpus">The Paper in the Corpus</h2>
+<p>The PEM is the engineering route of the ship blog — served at
+<code>https://www.ssvibelandiaquestfest24x365.com/lattice/engineering</code>
+as the whitepaper
+<code>lattice-chat-product-engineering-manual-2026-09</code>
+[mendez2026livingPem]. Unlike the engine papers on the shelf it
+maintains, it is a <em>living manual</em> rather than a numbered
+registry paper (its digest records no shelf number); its role is
+coordination. It cross-links to the entire shelf: the <a
+href="#gl:cmos-protonic"><strong>cmos-protonic</strong></a> engineering
+bridge [mendez2026cmosProtonic], <a
+href="#gl:tensor-decoupling"><strong>tensor-decoupling</strong></a>
+[mendez2026tensorDecoupling], master synthesis and the digits master
+[mendez2026masterSynthesis; mendez2026digitsMaster], the metamorphic and
+planetary-core papers [mendez2026metamorphic; mendez2026planetaryCore],
+the prime-parity companion [mendez2026primeParity], the stack valuation
+paper [mendez2026stack], and the voyage editorials on the invisible
+frontier, the Y/digit-4 filing, and the human reality bridge
+[mendez2026invisibleFrontier; mendez2026yChromosome;
+mendez2026realityBridge].</p>
+<p>Its reference implementation is the shelf module itself:
+<code>lib/infinite-octave-engine-shelf.mjs</code> (the ENGINE_SHELF
+source of truth), the sync module <code>lib/lattice-chat-pem.mjs</code>,
+the generator <code>npm run sync:lattice-pem</code> (script
+<code>scripts/sync-lattice-chat-pem.mjs</code>), and its test suite
+<code>tests/lib/lattice-chat-pem.test.mjs</code> [mendez2026livingPem].
+The external-AI first read is
+<code>AGENT_SYNC_99_OCTAVE_OMNI_LATTICE.md</code>, whose AUTO shelf
+table the same generator rewrites.</p>
+<h2 id="core-constructs">Core Constructs</h2>
+<h3 id="construct-1-the-phi_mathrmegs-scale-key">Construct 1 — The <span
+class="math inline">\(\Phi_{\mathrm{EGS}}\)</span> scale key</h3>
+<p>The manual prints its one symbolic constant up front, immediately
+after the honesty boundary:</p>
+<p><span class="math display">\[ \Phi_{\mathrm{EGS}} =
+\frac{1+\sqrt{5}}{2} \approx 1.618 \]</span>
+{#eq:part_0_living-pem_phi_egs}</p>
+<p>This is the corpus’s <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a> signal wearing
+its “EGS” (engineering-scale) dress — the same number that entered the
+catalog in the Genesis era of the voyage arc, alongside Proto 3664,
+Electro 3923, and a 100 BPM wave grammar [mendez2026livingPem]. The
+manual’s own gloss is load-bearing: “<span
+class="math inline">\(\Phi_{\mathrm{EGS}}\approx 1.618\)</span> is an
+architectural scale key — not a CODATA replacement for <span
+class="math inline">\(\hbar\)</span>, <span
+class="math inline">\(c\)</span>, or <span
+class="math inline">\(G\)</span>” [mendez2026livingPem]. In the book’s
+computational backbone this is simply the first power of Φ, implemented
+as <code>phi_powers(1)</code> in <code>textbook.models</code>, which
+returns the pinned value <span class="math inline">\(1.618034\)</span>.
+<span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>
+of Part I develops the <a
+href="#gl:fractal-constant"><strong>fractal-constant</strong></a> family
+<span class="math inline">\(\Phi^n\)</span> in full; here we only pin
+the anchor, with parameters and their corpus status fixed in <span
+class="citation"
+data-cites="tbl:part_0_living-pem_phi_egs">[@tbl:part_0_living-pem_phi_egs]</span>.</p>
+<table id="tbl:part_0_living-pem_phi_egs">
+<caption>Parameters of the <span
+class="math inline">\(\Phi_{\mathrm{EGS}}\)</span> scale key.</caption>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 20%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Status per the corpus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\Phi_{\mathrm{EGS}}\)</span></td>
+<td>EGS Fractal Constant, <span
+class="math inline">\((1+\sqrt{5})/2\)</span></td>
+<td>Architectural scale key / design language</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\hbar, c, G\)</span></td>
+<td>Planck constant, light speed, gravitational constant</td>
+<td>CODATA physical constants — explicitly <em>not</em> replaced by
+<span class="math inline">\(\Phi_{\mathrm{EGS}}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3
+id="construct-2-the-story-depth-map-and-its-filing-space-size">Construct
+2 — The Story-depth map and its filing-space size</h3>
+<p>The engine pin is declared as <em>Digits × Octaves 01–99 =
+Story-depth map</em>, which the manual insists is “the practical
+Story-depth map — not a second product brand” [mendez2026livingPem].
+Each <a href="#gl:octave"><strong>octave</strong></a> of the 99-octave
+ladder (formalised in <span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>) is
+indexed by a <a href="#gl:digit"><strong>digit</strong></a> 01–99; the
+<a href="#gl:tensor-decoupling"><strong>tensor-decoupling</strong></a>
+engine files the underlying register space as <span
+class="math inline">\(9 \times 81\)</span> bins with eleven tiers
+resolving to 99 [mendez2026tensorDecoupling]. The book’s backbone
+computes the pinned catalog size of this filing space with
+<code>catalog_size(octaves=99, precision_digits=81)</code>:</p>
+<p><span class="math display">\[ \left|\mathcal{C}\right| = O \times D =
+99 \times 81 = 8{,}019 \;\text{register bins} \]</span>
+{#eq:part_0_living-pem_catalog}</p>
+<table id="tbl:part_0_living-pem_catalog">
+<caption>Parameters of the catalog-size formalism.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(O\)</span></td>
+<td>octaves of the story-depth ladder</td>
+<td>99</td>
+</tr>
+<tr>
+<td><span class="math inline">\(D\)</span></td>
+<td>precision digits per octave (the register-bin count)</td>
+<td>81</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\left|\mathcal{C}\right|\)</span></td>
+<td>pinned catalog size, <code>catalog_size()</code></td>
+<td>8,019</td>
+</tr>
+</tbody>
+</table>
+<p>We read this as the quantitative footprint of what the PEM’s runtime
+actually pins into every nested-agent prompt: the full 99-octave <a
+href="#gl:omni-lattice"><strong>omni-lattice</strong></a> map, of which
+the deep nest <code>octave99</code> is the default seat. The
+parameterisation is summarised in <span class="citation"
+data-cites="tbl:part_0_living-pem_catalog">[@tbl:part_0_living-pem_catalog]</span>.</p>
+<h3 id="construct-3-the-living-shelf-auto-update-protocol">Construct 3 —
+The living-shelf auto-update protocol</h3>
+<p>The manual’s §0 is a five-step protocol that makes the <a
+href="#gl:living-pem"><strong>living-pem</strong></a> artifact genuinely
+living [mendez2026livingPem]:</p>
+<ol type="1">
+<li><strong>Author + register</strong> the paper
+(<code>lib/whitepaper-registry.mjs</code>: Honesty section, Document ID,
+ship-blog if eligible, suite if empirical).</li>
+<li><strong>Pin to engine</strong>: append an ordered row to
+<code>ENGINE_SHELF</code> in
+<code>lib/infinite-octave-engine-shelf.mjs</code>.</li>
+<li><strong>Run the sync</strong>: <code>npm run sync:lattice-pem</code>
+rewrites the AUTO blocks in the PEM and in
+<code>AGENT_SYNC_99_OCTAVE_OMNI_LATTICE.md</code>.</li>
+<li><strong>Runtime pickup</strong>: nest <code>octave99</code> prompts
+read the same shelf module at runtime — no separate string edit in
+<code>lib/lattice-prompt.mjs</code>.</li>
+<li><strong>Stop-hook resync</strong>: the Cursor PRA stop hook re-runs
+the sync whenever engine-shelf / PEM / AGENT_SYNC edits land.</li>
+</ol>
+<p>Two guardrails make the loop trustworthy: the AUTO blocks must never
+be hand-edited (they will be overwritten), and “Synthio remains a
+separate creator-only agent and is never an engine shelf step”
+[mendez2026livingPem]. The loop is a closed catalog-update cycle:</p>
+<pre class="mermaid"><code>graph TD
+  A[&quot;Author + register paper&lt;br/&gt;lib/whitepaper-registry.mjs&quot;] --&gt; B[&quot;Append ordered row&lt;br/&gt;lib/infinite-octave-engine-shelf.mjs (ENGINE_SHELF)&quot;]
+  B --&gt; C[&quot;npm run sync:lattice-pem&lt;br/&gt;rewrites AUTO blocks in PEM + AGENT_SYNC&quot;]
+  C --&gt; D[&quot;Nest octave99 prompt&lt;br/&gt;reads the same shelf module at runtime&quot;]
+  B --&gt; E[&quot;Cursor PRA stop hook&lt;br/&gt;re-runs sync on shelf/PEM/AGENT_SYNC edits&quot;]
+  E --&gt; C
+  D --&gt;|&quot;new paper visible in chat pin&quot;| F[Guest / Player 1 / nested agents]</code></pre>
+<p>The cycle’s invariant is single-source-of-truth: one module
+(<code>ENGINE_SHELF</code>) feeds the manual’s appendix, the agent-sync
+table, and the runtime pin, so the three can never silently
+disagree.</p>
+<h3 id="construct-4-engine-pin-ordering-the-minimum-lock">Construct 4 —
+Engine pin ordering (the minimum lock)</h3>
+<p>The shelf is <em>ordered</em>, not merely enumerated. For a first
+read aimed at linear-systems reviewers the manual locks a minimum order:
+the CMOS/protonic engineering bridge (binary <span
+class="math inline">\(n=1\)</span> → protonic bands,
+<code>catalogPriority: 0</code>) first [mendez2026cmosProtonic], then
+tensor decoupling [mendez2026tensorDecoupling], then master synthesis
+plus the digits master [mendez2026masterSynthesis;
+mendez2026digitsMaster], then Parts XIII/XIV (metamorphic, planetary
+core) [mendez2026metamorphic; mendez2026planetaryCore], and only then
+the companions — Higgs gate, gateway, prime parity, stack, protein,
+storage, and the voyage papers. The rule attached to every step: “Always
+open each paper’s Honesty boundary before featuring claims”
+[mendez2026livingPem]. At sync time 2026-09-08 the full shelf held
+<strong>26 ordered steps (24 registry papers)</strong>, ending with the
+honesty plain-speak document and the protocol spine
+<code>protocols/MCA_NSPFRNP_CATALOG.md</code> [mendez2026livingPem].
+Application companions — PDVSA, macro-protein, and their kin — “stay off
+this shelf” [mendez2026livingPem].</p>
+<h3 id="construct-5-runtime-call-chain-and-byok">Construct 5 — Runtime
+call chain and BYOK</h3>
+<p>The support map routes a guest keystroke to a provider response
+through four surfaces [mendez2026livingPem]:</p>
+<pre class="mermaid"><code>graph TD
+  G[Guest / Player 1] --&gt;|&quot;BYOK header · key stays on-device&quot;| S[interfaces/lattice-chat/ SPA]
+  S --&gt;|POST| A[&quot;api/lattice-chat.js · nestTopology · honor rails&quot;]
+  A --&gt; P[&quot;lib/lattice-prompt.mjs · nest directive + Seed pack (engine shelf pin)&quot;]
+  A --&gt; E[&quot;lib/lattice-engine.mjs · token / MCA envelope&quot;]
+  P --&gt; V[Provider: Cursor / Claude / Gemini / OpenRouter]
+  E --&gt; V</code></pre>
+<p>The key-holding model is unconditional: “Provider API key is the
+credential. Stays on-device. Travels in request headers only. Never
+stored server-side” [mendez2026livingPem]. There is no separate FractiAI
+password for the chat seat, and no server-side key storage — the
+architecture is deliberately structured so the operator <em>cannot</em>
+hold the guest’s credential. Context discipline for nested agents
+follows the same restraint: POINTER-FIRST, NO CORPUS TOUR, BUDGET ≤ 6
+files on complex asks, PLAN → PINCH → SQUEEZE, SCALE-TO-ZERO
+[mendez2026livingPem].</p>
+<p>Nest topologies are enumerated, not invented: <code>octave99</code>
+(default deep nest, full engine pin; aliases include
+<code>infinite</code>, <code>omniversal</code>,
+<code>infinite-octaves</code>, <code>99</code>), <code>goldilocks</code>
+(auto nest on complex asks), <code>multi</code> (parent + ≤3 leaf
+bands), and <code>single</code> (one agent, no children)
+[mendez2026livingPem].</p>
+<h3 id="construct-6-fair-exchange-as-a-balancing-formalism">Construct 6
+— Fair Exchange as a balancing formalism</h3>
+<p>The manual closes under a <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a> clause:
+grants and micro-grants are “subject to partial refund or adjustment
+depending on overall delivery, rigorous mathematical depth,
+computational implementation, and practical empirical utility,
+functioning akin to an intellectual performance tip,” with platform
+credits under “dynamic reciprocal balancing based on verified
+scale-harmonic alignment and net-zero execution metrics”
+[mendez2026livingPem]. The <a
+href="#gl:net-zero"><strong>net-zero</strong></a> half of that sentence
+formalises cleanly. Let <span
+class="math inline">\(I_1,\dots,I_m\)</span> be inflows to a delivery
+(funding, credits, reviewer attention) and <span
+class="math inline">\(O_1,\dots,O_n\)</span> its outflows (deliverables,
+refunds, adjustments); the reciprocal balance <span
+class="math inline">\(B\)</span> is computed by
+<code>net_zero_balance(inflows, outflows)</code> in
+<code>textbook.models</code>:</p>
+<p><span class="math display">\[ B \;=\; \sum_{i=1}^{m} I_i \;-\;
+\sum_{j=1}^{n} O_j \qquad \text{with target } B = 0 \]</span>
+{#eq:part_0_living-pem_balance}</p>
+<table id="tbl:part_0_living-pem_balance">
+<caption>Parameters of the reciprocal-balance formalism.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(I_i\)</span></td>
+<td>inflow <span class="math inline">\(i\)</span> to the delivery</td>
+<td>value units</td>
+</tr>
+<tr>
+<td><span class="math inline">\(O_j\)</span></td>
+<td>outflow <span class="math inline">\(j\)</span> from the delivery
+(deliverables, refunds, adjustments)</td>
+<td>value units</td>
+</tr>
+<tr>
+<td><span class="math inline">\(B\)</span></td>
+<td>residual balance; zero is the settled state</td>
+<td>value units</td>
+</tr>
+</tbody>
+</table>
+<p>The clause is a governance surface rule — the same family as the Old
+School Protocol run through the Purser (Deck 4 Grove), where “human
+emergency outranks algorithms” and belonging stays voluntary
+[mendez2026livingPem]. We stress that <span class="citation"
+data-cites="eq:part_0_living-pem_balance">[@eq:part_0_living-pem_balance]</span>,
+whose parameters appear in <span class="citation"
+data-cites="tbl:part_0_living-pem_balance">[@tbl:part_0_living-pem_balance]</span>,
+is our formalisation of the clause’s <em>net-zero execution metrics</em>
+language, not a billing guarantee; the manual’s honesty boundary
+explicitly disclaims “vendor LLM billing guarantees”
+[mendez2026livingPem].</p>
+<h3
+id="construct-7-the-protocol-spine-loops-cycles-and-the-closing-glyph">Construct
+7 — The protocol spine: loops, cycles, and the closing glyph</h3>
+<p>The manual’s narrative primer and its Stage-4 protocol table define
+the two loops that discipline both guest experience and agent operations
+[mendez2026livingPem]. The <strong>player loop</strong> — SEE →
+RECOGNIZE → INTERPRET → REFLECT → ACT → SEE AGAIN — is the guest-side
+rhythm (“same rhythm as MCA”) played across the ship’s doors: Journey,
+Canvas, Jukebox, Library, and Creator Studio. The <strong>MCA
+cycle</strong> is the agent-side spine: Metabolize → Crystallize →
+Animate (→ Squeeze), documented in
+<code>protocols/MCA_NSPFRNP_CATALOG.md</code>; the runtime’s “token /
+MCA envelope” in <code>lib/lattice-engine.mjs</code> is its execution
+surface [mendez2026livingPem]. Doctrine around both loops: “NPCs
+inhabit. Players set the gravity. Both belong,” with SuperAI kept
+Goldilocks — “not too much machine, not too little human”
+[mendez2026livingPem].</p>
+<p>Stage 0 (the edge seat) locks the invariants every maintainer
+inherits: no Supabase; lite edges; “center = pipes only”; and the
+turn-closing glyph → ∞^∞, which also closes the manual itself and its
+document-control block [mendez2026livingPem]. Stage 5 defines fluency
+operationally: explain the dual lock without conflating Synthio into the
+pin; add an engine paper end-to-end; support a guest ask with Seed·RAG
+pointers (≤6 files) and Goldilocks honesty; run PRA and suite receipts
+before featuring; and place every claim in its correct tier
+[mendez2026livingPem]. The remaining support surface is small and
+enumerated: access grants live in <code>lib/lattice-access.mjs</code>
+and <code>data/lattice-access.json</code>, the broader Omni family’s
+living TOC is <code>lib/lattice-omni-guide.mjs</code> (“related, not
+identical to engine shelf”), and the product surfaces — chat,
+collaborate, hero, learn, this manual, token proof, brochure, papers
+catalog, questfest board — are listed in the manual’s Appendix B
+[mendez2026livingPem].</p>
+<h2 id="worked-example-pinning-a-paper-end-to-end">Worked Example:
+Pinning a Paper End-to-End</h2>
+<p>Suppose a new engine paper has cleared its Honesty boundary and
+registry entry. Walk the five-step protocol and verify each numeric
+claim:</p>
+<ol type="1">
+<li><strong>Register.</strong> The paper gains a Document ID, Honesty
+section, and (if empirical) a suite under
+<code>research/synthobs-*/</code> [mendez2026livingPem].</li>
+<li><strong>Pin.</strong> Append its ordered row to
+<code>ENGINE_SHELF</code>. Ordering matters: it must respect the minimum
+lock of Construct 4 — nothing ranks above the <a
+href="#gl:cmos-protonic"><strong>cmos-protonic</strong></a> bridge at
+<code>catalogPriority: 0</code> [mendez2026cmosProtonic].</li>
+<li><strong>Sync.</strong> <code>npm run sync:lattice-pem</code>
+regenerates the AUTO blocks. Verify the counts the manual pins: the
+shelf must show <strong>26 ordered steps (24 registry papers)</strong>
+for the 2026-09-08 sync [mendez2026livingPem]; a new pin moves both
+numbers by one.</li>
+<li><strong>Runtime check.</strong> Open
+<code>/lattice-chat?nest=octave99</code>; the prompt pin is generated
+from the shelf module, so the new paper appears without any edit to
+<code>lib/lattice-prompt.mjs</code>.</li>
+<li><strong>Quantitative cross-checks</strong> with
+<code>textbook.models</code>:
+<ul>
+<li>The scale key: <code>phi_powers(1)</code> → <span
+class="math inline">\(1.618034\)</span>, matching <span
+class="math inline">\(\Phi_{\mathrm{EGS}}\)</span> in <span
+class="citation"
+data-cites="eq:part_0_living-pem_phi_egs">[@eq:part_0_living-pem_phi_egs]</span>.</li>
+<li>The filing space: <code>catalog_size()</code> → <span
+class="math inline">\(99 \times 81 = 8{,}019\)</span> register bins,
+matching <span class="citation"
+data-cites="eq:part_0_living-pem_catalog">[@eq:part_0_living-pem_catalog]</span>
+— the size of the story-depth map the pin references.</li>
+<li>The settlement state:
+<code>net_zero_balance([120, 30], [150])</code> → <span
+class="math inline">\(0\)</span>, matching the <span
+class="math inline">\(B=0\)</span> target of <span class="citation"
+data-cites="eq:part_0_living-pem_balance">[@eq:part_0_living-pem_balance]</span>.</li>
+</ul></li>
+</ol>
+<p>A support operator’s troubleshooting table completes the picture: a
+“shallow” nest means the URL lost <code>?nest=octave99</code>; a stale
+engine list in AGENT_SYNC/PEM means the sync was not re-run after a
+shelf commit; a paper missing from the chat pin means it is in the
+registry but <strong>not</strong> in <code>ENGINE_SHELF</code> —
+“registry alone is not enough” [mendez2026livingPem].</p>
+<h2 id="sec:living-pem-scope">Scope and Honesty</h2>
+<p>The PEM opens with a five-row honesty boundary table, and the book
+preserves it because it is the corpus’s clearest statement of <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> scope
+discipline [mendez2026livingPem]:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Tier</th>
+<th>What this manual claims</th>
+<th>What it does not claim</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product engineering</td>
+<td>Complete onboarding + ops map for the chat agent and its engine
+pin</td>
+<td>That “Infinite” means unbounded measured physics tiers or unbounded
+API spend</td>
+</tr>
+<tr>
+<td>Living shelf</td>
+<td>Appendix A regenerates from <code>ENGINE_SHELF</code> on every
+pin</td>
+<td>That TOC sync alone rewrites narrative honesty in each paper</td>
+</tr>
+<tr>
+<td>Narrative primer</td>
+<td>The voyage arc (Genesis · Borikén · Reno) as design / hospitality
+language</td>
+<td>Prophecy, clinical advice, or a finished Theory of Everything</td>
+</tr>
+<tr>
+<td>Architecture</td>
+<td>Runtime surfaces, BYOK, nests, Seed·RAG discipline</td>
+<td>That FractiAI hosts model weights as the default seat</td>
+</tr>
+<tr>
+<td>Support</td>
+<td>Review / incident / PRA checklists proportionate to catalog vs
+empirical vs operational tiers</td>
+<td>Vendor LLM billing guarantees or fab / wet-lab certificates</td>
+</tr>
+</tbody>
+</table>
+<p>Three of these rows deserve emphasis. First, the tier discipline:
+fluency means being able to “place a claim in the correct tier:
+narrative / catalog / empirical / operational,” and review forbids
+upgrading claims “from catalog → unfinished physics / fab / clinical”
+[mendez2026livingPem]. Second, the narrative tier: the voyage arc is
+hospitality language for guests and reviewers — explicitly not prophecy
+or clinical advice. Third, the audit status the manual files about
+itself: NSPFRNP-SNAP-PRA-2026-06, score 91%, hash
+<code>588a2f7fd22eb03d</code>, “structural-only (deterministic checklist
+— not dual-LLM peer review)” [mendez2026livingPem]. The corpus audits
+its own manual and prints the audit’s limits.</p>
+<p>The design-language caveat closes the loop: “EGS ≈ 1.618 is design
+language / catalog key — not a substitute for evidence”
+[mendez2026livingPem]. Nothing in this chapter should be read as
+physics; the constructs are coordination machinery for a catalog and its
+agents.</p>
+<h2 id="connections">Connections</h2>
+<p>This chapter is the operational hub of Part 0. Downstream:</p>
+<ul>
+<li><span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>
+formalises the 99-octave ladder whose filing space <span
+class="citation"
+data-cites="eq:part_0_living-pem_catalog">[@eq:part_0_living-pem_catalog]</span>
+sizes; the deep nest <code>octave99</code> is that ladder’s runtime
+seat.</li>
+<li><span class="citation"
+data-cites="sec:part_0_tensor-decoupling">[@sec:part_0_tensor-decoupling]</span>
+develops the <span class="math inline">\(9\times 81\)</span> register
+filing and the eleven tiers that resolve to 99
+[mendez2026tensorDecoupling] — the first stop after the <a
+href="#gl:cmos-protonic"><strong>cmos-protonic</strong></a> bridge in
+the minimum lock [mendez2026cmosProtonic].</li>
+<li><span class="citation"
+data-cites="sec:part_0_master-synthesis">[@sec:part_0_master-synthesis]</span>
+treats the master synthesis and digits-master layers the pin ranks next
+[mendez2026masterSynthesis; mendez2026digitsMaster].</li>
+<li>Part III’s stack-valuation chapter <span class="citation"
+data-cites="sec:part_III_moving-up-stack">[@sec:part_III_moving-up-stack]</span>
+extends the shelf’s “next AI layer” companion [mendez2026stack], and the
+reality-bridge chapter <span class="citation"
+data-cites="sec:part_III_reality-bridge">[@sec:part_III_reality-bridge]</span>
+develops the human-as-router grammar the PEM’s voyage editorials point
+to [mendez2026realityBridge].</li>
+</ul>
+<p>The <a href="#gl:zero-octave"><strong>zero-octave</strong></a> and
+set-recycling chapters (<span class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>,
+<span class="citation"
+data-cites="sec:part_III_kinematic-recycling">[@sec:part_III_kinematic-recycling]</span>)
+consume the net-zero residual idea of <span class="citation"
+data-cites="eq:part_0_living-pem_balance">[@eq:part_0_living-pem_balance]</span>
+in their own formalisms [mendez2026zeroOctave;
+mendez2026setRecycling].</p>
+<h2 id="summary">Summary</h2>
+<p>The Product Engineering Manual is the corpus’s living operations
+layer: a document whose engine-shelf appendix, agent-sync table, and
+runtime prompt pin all regenerate from the single
+<code>ENGINE_SHELF</code> module via
+<code>npm run sync:lattice-pem</code>, so that 26 ordered steps (24
+registry papers) stay consistent across three surfaces
+[mendez2026livingPem]. Its dual lock separates the guest-facing product
+(Goldilocks Valet, BYOK, nests) from the auditor-facing engine, and its
+minimum lock orders the shelf from the CMOS/protonic bridge upward.
+Quantitatively, the chapter pinned three anchors: the <span
+class="math inline">\(\Phi_{\mathrm{EGS}}\)</span> scale key (<span
+class="citation"
+data-cites="eq:part_0_living-pem_phi_egs">[@eq:part_0_living-pem_phi_egs]</span>;
+<code>phi_powers(1)</code> = 1.618034, an architectural key and
+explicitly not a CODATA replacement), the filing-space size (<span
+class="citation"
+data-cites="eq:part_0_living-pem_catalog">[@eq:part_0_living-pem_catalog]</span>;
+8,019 register bins), and the fair-exchange reciprocal balance (<span
+class="citation"
+data-cites="eq:part_0_living-pem_balance">[@eq:part_0_living-pem_balance]</span>;
+target <span class="math inline">\(B=0\)</span>). Every construct
+carries the manual’s own honesty boundary: tier discipline, no claim
+upgrades, structural-only audit status, and design language that never
+substitutes for evidence [mendez2026livingPem].</p>
+<h2 id="key-terms">Key Terms</h2>
+<p><a href="#gl:living-pem"><strong>living-pem</strong></a>, <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:engine-shelf"><strong>engine-shelf</strong></a>, <a
+href="#gl:omni-lattice"><strong>omni-lattice</strong></a>, <a
+href="#gl:octave"><strong>octave</strong></a>, <a
+href="#gl:digit"><strong>digit</strong></a>, <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a>, <a
+href="#gl:narrative-empirical-operational-tiers"><strong>narrative-empirical-operational-tiers</strong></a>,
+<a href="#gl:fair-exchange"><strong>fair-exchange</strong></a>, <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a>, <a
+href="#gl:fractal-constant"><strong>fractal-constant</strong></a>, <a
+href="#gl:cmos-protonic"><strong>cmos-protonic</strong></a>, <a
+href="#gl:tensor-decoupling"><strong>tensor-decoupling</strong></a>, <a
+href="#gl:master-synthesis"><strong>master-synthesis</strong></a>, <a
+href="#gl:net-zero"><strong>net-zero</strong></a>, <a
+href="#gl:zero-octave"><strong>zero-octave</strong></a>.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><strong>Source paper:</strong> <em>Product Engineering Manual ·
+Infinite Octaves Omniversal Lattice Chat (Living Engine Shelf)</em>,
+served at
+<code>https://www.ssvibelandiaquestfest24x365.com/lattice/engineering</code>
+(whitepaper
+<code>lattice-chat-product-engineering-manual-2026-09</code>)
+[mendez2026livingPem]. Reference implementation: the shelf module
+<code>lib/infinite-octave-engine-shelf.mjs</code> with sync generator
+<code>npm run sync:lattice-pem</code>; companion standalone suites
+include <code>FractiAI/synthobs-moving-up-the-stack-valuation</code>
+[mendez2026stack] and
+<code>FractiAI/synthobs-cmos-protonic-99-octave-omni-lattice</code>
+[mendez2026cmosProtonic].</li>
+<li>The catalog architecture’s foundational statement, for the
+filing-system reading of the shelf [mendez2026catalog].</li>
+<li>Tensor decoupling, for the <span class="math inline">\(9 \times
+81\)</span> register space behind <span class="citation"
+data-cites="eq:part_0_living-pem_catalog">[@eq:part_0_living-pem_catalog]</span>
+[mendez2026tensorDecoupling].</li>
+<li>The digits-master map, for how Digits × Octaves 01–99 are indexed in
+practice [mendez2026digitsMaster].</li>
+</ul>
+<h2 id="practice">Practice</h2>
+<ul>
+<li><strong>Lab:</strong> <span class="citation"
+data-cites="sec:lab_part_0_living-pem">[@sec:lab_part_0_living-pem]</span>
+walks the sync protocol and the three quantitative cross-checks by
+hand.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_0_living-pem">[@sec:q_part_0_living-pem]</span>
+drills the dual lock, the five-step protocol, and the tier system.</li>
+<li><strong>Exercise 1.</strong> Reconstruct the dual-lock table from
+memory: for each of product, engine, nest id, “Infinite”, “Omniversal”,
+and Synthio, state the layer’s role <em>and</em> the corpus’s explicit
+non-claim [mendez2026livingPem].</li>
+<li><strong>Exercise 2.</strong> A reviewer proposes hand-editing the
+AUTO table in the PEM to fix a typo in a paper title. Using the
+five-step protocol, explain what will happen and what should be done
+instead.</li>
+<li><strong>Exercise 3.</strong> Verify the worked example’s three
+numeric cross-checks: confirm <code>phi_powers(1)</code> matches <span
+class="citation"
+data-cites="eq:part_0_living-pem_phi_egs">[@eq:part_0_living-pem_phi_egs]</span>,
+<code>catalog_size()</code> matches <span class="citation"
+data-cites="eq:part_0_living-pem_catalog">[@eq:part_0_living-pem_catalog]</span>,
+and <code>net_zero_balance([120, 30], [150])</code> satisfies the target
+of <span class="citation"
+data-cites="eq:part_0_living-pem_balance">[@eq:part_0_living-pem_balance]</span>.</li>
+<li><strong>Exercise 4.</strong> Classify each of the following into its
+correct tier (narrative / catalog / empirical / operational), citing the
+manual’s honesty boundary: (a) the Genesis-era 100 BPM signal; (b) the
+<span class="math inline">\(9 \times 81\)</span> tensor filing; (c) the
+BYOK on-device key rule; (d) the 91% structural-only audit score.</li>
+<li><strong>Exercise 5.</strong> A paper appears in the whitepaper
+registry but not in the chat pin. Using the troubleshooting table,
+diagnose the failure and name the exact remedy.</li>
+</ul>
+</main>
+</body>
+</html>

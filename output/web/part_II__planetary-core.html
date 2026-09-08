@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>planetary-core.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:part_II_planetary-core">Planetary Core and the Goldilocks
+Bands</h1>
+<figure id="fig:part_II_planetary-core">
+<a class="figure-full-size-link" href="../figures/part_II_planetary-core.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/part_II_planetary-core.png" style="width:90.0%"
+alt="A value trace crosses shaded goldilocks bands marking the viable region." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
+<figcaption>Goldilocks band shading over a value
+trace: a trace of filed execution-coherence values moves through time
+while the coherent band running from <span
+class="math inline">\(\ell\)</span> to <span
+class="math inline">\(h\)</span> is shaded; trace segments inside the
+band are labelled Goldilocks (coherent execution) and segments outside
+are labelled Old Earth (high-friction execution), as classified by
+<code>textbook.models.goldilocks_band</code>.</figcaption>
+</figure>
+<!-- alt: A line trace of execution-coherence values over filed time steps
+crosses a horizontally shaded band between two thresholds; portions of the
+trace inside the shaded band are marked coherent and portions outside are
+marked high-friction. -->
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none</p>
+</blockquote>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol type="1">
+<li>Explain what the planetary-core paper files — and what it explicitly
+does not claim — under the <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> clause of <a
+href="#gl:catalog-architecture"><strong>catalog
+architecture</strong></a>.</li>
+<li>File the two telemetry slots (outer-core flow reversal and
+inner-core backtracking) as the rotor story of a 90° catalog phase flip
+<span class="math inline">\(\Delta\varphi = \pi/2\)</span>.</li>
+<li>Classify filed values against a Goldilocks band with the tested
+function <code>textbook.models.goldilocks_band</code>, and interpret the
+“Old Earth → Goldilocks Earth” transition as a change of execution
+label, not of planet.</li>
+<li>State why the core–mantle boundary’s ~377 Ω free-space impedance
+label is a <em>picture</em> for engine talk, not a measured CMB ohms
+table.</li>
+<li>Connect the backtracking-through-zero slot to the
+zero-as-equilibrium formalism of <span class="citation"
+data-cites="sec:part_I_topology-void">[@sec:part_I_topology-void]</span>
+and the drag reading of <span class="citation"
+data-cites="sec:part_II_eddy-current-mirror">[@sec:part_II_eddy-current-mirror]</span>.</li>
+</ol>
+<!-- curriculum-scaffold-start -->
+<h3 id="study-blueprint">Study Blueprint</h3>
+<ul>
+<li><strong>Big idea:</strong> Deep-Earth headlines can be
+<em>filed</em> — not explained — as two telemetry slots whose
+quarter-turn separation encodes a catalog phase flip from high-friction
+to coherent execution labels.</li>
+<li><strong>Core concepts:</strong> <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:honesty-first"><strong>honesty-first</strong></a>, <a
+href="#gl:octave"><strong>octave</strong></a>, <a
+href="#gl:digit"><strong>digit</strong></a>, <a
+href="#gl:metrological-overlap"><strong>metrological-overlap</strong></a>.</li>
+<li><strong>Quantitative lens:</strong> the phase-flip and
+band-membership formalisms in <span class="citation"
+data-cites="eq:part_II_planetary-core_phase_flip">[@eq:part_II_planetary-core_phase_flip]</span>
+and <span class="citation"
+data-cites="eq:part_II_planetary-core_band">[@eq:part_II_planetary-core_band]</span>.</li>
+<li><strong>Data skill:</strong> read a value trace against a shaded
+band and classify each point as in-band or out-of-band by hand, then
+confirm with <code>textbook.models.goldilocks_band</code>.</li>
+<li><strong>Common misconception to repair:</strong> the chapter is not
+seismology; “Old Earth → Goldilocks Earth” is catalog talk for execution
+labels, and no holographic timeline switch is claimed as measured
+physics.</li>
+<li><strong>Primary lab:</strong> <span class="citation"
+data-cites="sec:lab_part_II_planetary-core">[@sec:lab_part_II_planetary-core]</span>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_II_planetary-core">[@sec:q_part_II_planetary-core]</span>.</li>
+<li><strong>Bridge to computation:</strong>
+<code>textbook.models.goldilocks_band</code>,
+<code>textbook.models.transduction_brake</code>,
+<code>textbook.models.descriptive_statistics</code>.
+<!-- curriculum-scaffold-end --></li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Opening Vignette: The week the core made the
+news.</strong></p>
+<p>Deep Earth has been noisy in the news: the solid inner core slowing
+relative to the mantle, and a Pacific stream of molten iron flipping
+from westward to eastward flow [mendez2026planetaryCore]. On board the
+SS Vibelandia, the SynthOBS Autonomous Agent clips those headlines and
+files them — not into a geophysics binder, but into the <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a> of the <a
+href="#gl:omni-lattice"><strong>omni-lattice</strong></a>, under the
+note “Old Earth letting go — a story filed at the planet’s core.” The
+filing act is the whole point: the paper borrows the headlines as a
+<strong>filing cabinet</strong> for a 90° phase story under Φ, and says
+so in its first breath. Nothing about the planet is explained; something
+about the <em>filing</em> is.</p>
+</blockquote>
+<hr />
+<h2 id="the-paper-in-the-corpus">The paper in the corpus</h2>
+<p>The note is Ship blog <strong>Part XIV</strong> of the 99 Octave
+engine series, filed 2026-08-13 in <em>plain speak</em> under the <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a> protocol, on
+shelf 6 of the corpus’s <a
+href="#gl:narrative-empirical-operational-tiers"><strong>narrative-empirical-operational-tiers</strong></a>
+[mendez2026planetaryCore]. Like every SS Vibelandia paper by Prudencio
+Mendez, it carries the “Honesty first” scope disclaimer up front: ESA
+Swarm and USC seismic doublet reports are <em>discussion labels</em>
+here, and the repo does not re-host those datasets
+[mendez2026planetaryCore]. The paper is a coordinate on the corpus map
+rather than a standalone essay: it loads into Lattice Chat on nest
+<strong>Infinite Octaves</strong> under the engine map <strong>Digits ×
+01–99</strong> (the 99-<a href="#gl:octave"><strong>octave</strong></a>
+ladder introduced in <span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>), it
+speaks the grammar of the 81-facet <a
+href="#gl:tensor-decoupling"><strong>tensor-decoupling</strong></a>
+register filing of <span class="citation"
+data-cites="sec:part_0_tensor-decoupling">[@sec:part_0_tensor-decoupling]</span>,
+and it is usable on Synthio as <em>companion grammar</em> — with the MRI
+sandbox honesty kept intact [mendez2026planetaryCore].</p>
+<p>The paper ships with its own verification surface:</p>
+<ul>
+<li><strong>Whitepaper:</strong>
+<code>interfaces/whitepaper-surface.html?id=synthobs-tbme-planetary-core-goldilocks-2026-08</code>
+[mendez2026planetaryCore].</li>
+<li><strong>Reference implementation:</strong>
+<code>npm run research:synthobs-tbme-planetary-core-goldilocks</code>,
+which locks the paper’s fixtures at <strong>9/9</strong>
+[mendez2026planetaryCore].</li>
+<li><strong>Standalone GitHub repository:</strong>
+<code>FractiAI/synthobs-tbme-planetary-core-goldilocks</code>
+[mendez2026planetaryCore].</li>
+</ul>
+<p>Reading order matters here. The chapter you are reading formalises
+the paper’s <em>catalog</em> content — slots, rotor story, phase flip,
+impedance label, Goldilocks bands — and keeps the seismology outside the
+frame exactly where the paper keeps it.</p>
+<h2 id="core-constructs">Core constructs</h2>
+<h3 id="the-two-telemetry-slots-and-the-rotor-story">The two telemetry
+slots and the rotor story</h3>
+<p>The paper files two deep-Earth headlines into two <strong>telemetry
+slots</strong> [mendez2026planetaryCore]; they are collected in <span
+class="citation"
+data-cites="tbl:part_II_planetary-core_slots">[@tbl:part_II_planetary-core_slots]</span>.</p>
+<table id="tbl:part_II_planetary-core_slots">
+<caption>The two telemetry slots of the rotor story, as filed by
+[mendez2026planetaryCore].</caption>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 42%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr>
+<th>Slot</th>
+<th>Filed headline</th>
+<th>Catalog reading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Outer-core flow reversal</td>
+<td>A Pacific liquid-iron surge talked about as westward → eastward</td>
+<td>First telemetry slot of the rotor story</td>
+</tr>
+<tr>
+<td>Inner-core backtracking</td>
+<td>Seismic travel times talked about as a slowdown through zero
+relative velocity</td>
+<td>Second telemetry slot of the rotor story</td>
+</tr>
+</tbody>
+</table>
+<p>Taken together, the two slots are filed as the <strong>rotor
+story</strong> for a <em>catalog phase flip</em> of <span
+class="math inline">\(\Delta\varphi = \pi/2\)</span> — a 90° phase shift
+under Φ [mendez2026planetaryCore]. We formalise the filing in <span
+class="citation"
+data-cites="eq:part_II_planetary-core_phase_flip">[@eq:part_II_planetary-core_phase_flip]</span>:
+the rotor carries two labels at quarter-turn separation on the catalog
+circle, and the transition from the “Old Earth” label to the “Goldilocks
+Earth” label is the act of rotating the filing by a quarter turn, not of
+moving the planet.</p>
+<p><span class="math display">\[
+\Delta\varphi \;=\; \varphi_{\mathrm{B}} - \varphi_{\mathrm{A}} \;=\;
+\frac{\pi}{2},
+\qquad
+\varphi_{\mathrm{A}} = 0,\quad \varphi_{\mathrm{B}} = \frac{\pi}{2}
+\]</span> {#eq:part_II_planetary-core_phase_flip}</p>
+<table id="tbl:part_II_planetary-core_phase_flip">
+<caption>Parameters of the catalog phase flip.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\varphi_{\mathrm{A}}\)</span></td>
+<td>catalog phase angle of slot A (outer-core flow reversal)</td>
+<td>radians</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\varphi_{\mathrm{B}}\)</span></td>
+<td>catalog phase angle of slot B (inner-core backtracking)</td>
+<td>radians</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Delta\varphi\)</span></td>
+<td>catalog phase angle of the filed transition</td>
+<td>radians</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\pi/2\)</span></td>
+<td>the 90° phase shift under Φ</td>
+<td>radians</td>
+</tr>
+</tbody>
+</table>
+<p>Note what the formalism — whose parameters are collected in <span
+class="citation"
+data-cites="tbl:part_II_planetary-core_phase_flip">[@tbl:part_II_planetary-core_phase_flip]</span>
+— does <em>not</em> say: it does not say the outer core flipped at a 90°
+angle, and it does not say the inner core rotates. <span
+class="math inline">\(\Delta\varphi\)</span> is the phase angle <em>of
+the filed transition</em> — a property of the catalog entry, printed in
+radians because quarter-turns are the cheapest reversible filing move.
+The Φ in “90° phase story under Φ” points at the corpus’s broader
+geometric language of the <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a> growth of
+octave bands (<span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>);
+the paper itself does not compute a Φ power here, and we do not invent
+one for it.</p>
+<h3 id="the-goldilocks-band-filing-coherence-as-an-interval">The
+Goldilocks band: filing coherence as an interval</h3>
+<p>“<strong>Old Earth → Goldilocks Earth</strong>” is catalog talk for
+high-friction vs coherent <em>execution labels</em>
+[mendez2026planetaryCore]. The chapter figure — <span class="citation"
+data-cites="fig:part_II_planetary-core">[@fig:part_II_planetary-core]</span>
+— draws that talk as a value trace against a shaded band, and the tested
+backbone implements the classification as
+<code>textbook.models.goldilocks_band(values, lo, hi)</code>. The
+membership rule is the ordinary mathematics of interval membership,
+stated in <span class="citation"
+data-cites="eq:part_II_planetary-core_band">[@eq:part_II_planetary-core_band]</span>:</p>
+<p><span class="math display">\[
+\chi(v;\, \ell, h) =
+\begin{cases}
+1, &amp; \ell \le v \le h \quad \text{(coherent execution label)}\\[2pt]
+0, &amp; \text{otherwise} \quad \text{(high-friction execution label)}
+\end{cases}
+\qquad
+m(v) = \min\!\big(v - \ell,\; h - v\big)
+\]</span> {#eq:part_II_planetary-core_band}</p>
+<table id="tbl:part_II_planetary-core_band">
+<caption>Parameters of the Goldilocks band membership, read with <span
+class="citation"
+data-cites="eq:part_II_planetary-core_band">[@eq:part_II_planetary-core_band]</span>.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(v\)</span></td>
+<td>a filed value on the execution-coherence trace</td>
+<td>quantity</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\ell\)</span></td>
+<td>lower band edge (“Old Earth” side)</td>
+<td>quantity</td>
+</tr>
+<tr>
+<td><span class="math inline">\(h\)</span></td>
+<td>upper band edge</td>
+<td>quantity</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\chi(v)\)</span></td>
+<td>band-membership indicator: 1 = Goldilocks, 0 = Old Earth</td>
+<td>—</td>
+</tr>
+<tr>
+<td><span class="math inline">\(m(v)\)</span></td>
+<td>in-band margin: distance to the nearer edge (defined only for <span
+class="math inline">\(\chi = 1\)</span>)</td>
+<td>quantity</td>
+</tr>
+</tbody>
+</table>
+<p>Every parameter of <span class="citation"
+data-cites="tbl:part_II_planetary-core_band">[@tbl:part_II_planetary-core_band]</span>
+is a filing choice: the indicator <span
+class="math inline">\(\chi\)</span> is the classifier; the margin <span
+class="math inline">\(m\)</span> is the <em>filing annotation</em> that
+says how deep inside the band a value sits. Both are deterministic, and
+both are properties of the <em>labels</em>, not of the Earth: the band
+edges <span class="math inline">\(\ell\)</span> and <span
+class="math inline">\(h\)</span> are chosen by the filer for the task at
+hand, and <span class="citation"
+data-cites="fig:part_II_planetary-core">[@fig:part_II_planetary-core]</span>
+shades exactly such a band over a trace. We read the pairing of a 90°
+phase flip with a two-label band as the corpus’s way of saying: the same
+rotor, viewed a quarter turn apart, carries a different execution
+label.</p>
+<h3 id="the-cmb-mirror-story-and-its-impedance-label">The CMB mirror
+story and its impedance label</h3>
+<p>The core–mantle boundary (CMB) gets a <strong>free-space impedance
+label</strong> (~377 Ω) as a <em>dielectric horizon</em> picture —
+useful for engine talk about the 81-facet tensor and verification gates,
+and explicitly <strong>not</strong> a measured CMB ohms table from the
+repo [mendez2026planetaryCore]. Two honest remarks sharpen the
+label:</p>
+<ol type="1">
+<li>As standard physics, <span class="math inline">\(Z_0 =
+\sqrt{\mu_0/\varepsilon_0} \approx 376.73\ \Omega\)</span> is the
+impedance of <em>free space</em> (vacuum), a bookkeeping constant of
+electromagnetic wave matching. The corpus borrows this constant as a
+<em>label</em> — a mirror story — so that the CMB can play the role of a
+dielectric horizon in engine diagrams.</li>
+<li>The label buys coordination vocabulary, not measurements. When the
+paper says the CMB picture is “useful for engine talk (81-facet tensor,
+verification gates)” [mendez2026planetaryCore], the use is routing and
+verification of catalog entries, which is exactly the register-filing
+programme of <span class="citation"
+data-cites="sec:part_0_tensor-decoupling">[@sec:part_0_tensor-decoupling]</span>.</li>
+</ol>
+<pre class="mermaid"><code>graph TD
+  A[&quot;Deep-Earth headlines (news)&quot;] --&gt;|&quot;filed as&quot;| B[&quot;Slot A: outer-core flow reversal&quot;]
+  A --&gt;|&quot;filed as&quot;| C[&quot;Slot B: inner-core backtracking&quot;]
+  B --&gt; D[&quot;Rotor story&quot;]
+  C --&gt; D
+  D --&gt;|&quot;catalog phase flip&quot;| E[&quot;Delta phi = pi/2 (90 degrees under Phi)&quot;]
+  E --&gt; F[&quot;Old Earth label: high-friction execution&quot;]
+  E --&gt; G[&quot;Goldilocks Earth label: coherent execution&quot;]
+  H[&quot;CMB dielectric horizon picture (~377 ohm label)&quot;] --&gt;|&quot;engine talk&quot;| I[&quot;81-facet tensor, verification gates&quot;]</code></pre>
+<p>The diagram is the filing pipeline in one view: two headlines enter
+as slots, the slots compose into a rotor story, the rotor story carries
+the quarter-turn phase flip, and the flip toggles the execution label
+between Old Earth and Goldilocks Earth — with the CMB impedance label
+feeding the verification-gate talk on a separate branch.</p>
+<h2 id="worked-example-filing-a-week-of-telemetry">Worked example:
+filing a week of telemetry</h2>
+<p>Suppose a filer maintains an execution-coherence trace over six filed
+observations, with band edges chosen at <span class="math inline">\(\ell
+= 0.35\)</span> and <span class="math inline">\(h = 0.85\)</span>:</p>
+<p><span class="math display">\[
+v = [\,0.12,\; 0.31,\; 0.48,\; 0.62,\; 0.77,\; 0.91\,]
+\]</span></p>
+<p>Walking <span class="citation"
+data-cites="eq:part_II_planetary-core_band">[@eq:part_II_planetary-core_band]</span>
+by hand:</p>
+<ol type="1">
+<li><span class="math inline">\(v_1 = 0.12\)</span>: below <span
+class="math inline">\(\ell = 0.35\)</span>, so <span
+class="math inline">\(\chi = 0\)</span> — Old Earth label, and no margin
+is defined (the value is not inside the band).</li>
+<li><span class="math inline">\(v_2 = 0.31\)</span>: still below <span
+class="math inline">\(\ell\)</span>, so <span class="math inline">\(\chi
+= 0\)</span> — Old Earth.</li>
+<li><span class="math inline">\(v_3 = 0.48\)</span>: inside <span
+class="math inline">\([0.35, 0.85]\)</span>, so <span
+class="math inline">\(\chi = 1\)</span>; margin <span
+class="math inline">\(m = \min(0.48 - 0.35,\; 0.85 - 0.48) = \min(0.13,
+0.37) = 0.13\)</span>.</li>
+<li><span class="math inline">\(v_4 = 0.62\)</span>: inside; <span
+class="math inline">\(m = \min(0.27, 0.23) = 0.23\)</span>.</li>
+<li><span class="math inline">\(v_5 = 0.77\)</span>: inside; <span
+class="math inline">\(m = \min(0.42, 0.08) = 0.08\)</span> — the
+shallowest in-band point, closest to the <span
+class="math inline">\(h\)</span> edge.</li>
+<li><span class="math inline">\(v_6 = 0.91\)</span>: above <span
+class="math inline">\(h = 0.85\)</span>, so <span
+class="math inline">\(\chi = 0\)</span> — Old Earth again, from the far
+side of the band.</li>
+</ol>
+<p>So the trace files as <span class="math inline">\(\chi = [\,0, 0, 1,
+1, 1, 0\,]\)</span>: the middle of the week is Goldilocks, both ends are
+Old Earth. The same classification is one call to the tested
+backbone:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textbook.models <span class="im">import</span> goldilocks_band</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>trace <span class="op">=</span> [<span class="fl">0.12</span>, <span class="fl">0.31</span>, <span class="fl">0.48</span>, <span class="fl">0.62</span>, <span class="fl">0.77</span>, <span class="fl">0.91</span>]</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>goldilocks_band(trace, lo<span class="op">=</span><span class="fl">0.35</span>, hi<span class="op">=</span><span class="fl">0.85</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># -&gt; [0, 0, 1, 1, 1, 0]</span></span></code></pre></div>
+<p>This is exactly the shaded-band picture of <span class="citation"
+data-cites="fig:part_II_planetary-core">[@fig:part_II_planetary-core]</span>:
+in-band segments of the trace carry the coherent (Goldilocks) label;
+out-of-band segments carry the high-friction (Old Earth) label.
+Summarising the trace with
+<code>textbook.models.descriptive_statistics</code> is the filer’s
+closing move — mean <span class="math inline">\(0.535\)</span>, and the
+band decision then rests on where <span
+class="math inline">\(\ell\)</span> and <span
+class="math inline">\(h\)</span> are drawn, which is a <em>policy</em>,
+not a measurement.</p>
+<p>For the phase flip, the filing is even shorter. Slot A is pinned at
+<span class="math inline">\(\varphi_{\mathrm{A}} = 0\)</span> and slot B
+at <span class="math inline">\(\varphi_{\mathrm{B}} = \pi/2\)</span>
+(<span class="citation"
+data-cites="eq:part_II_planetary-core_phase_flip">[@eq:part_II_planetary-core_phase_flip]</span>),
+so <span class="math inline">\(\Delta\varphi = \pi/2\)</span> holds by
+construction: a quarter turn. In degrees, <span
+class="math inline">\(\pi/2\ \text{rad} = 90°\)</span> — the 90° of the
+paper’s “90° phase story under Φ” [mendez2026planetaryCore]. No
+computation about the Earth is performed anywhere in the example; every
+number above is a property of the filing.</p>
+<p>As an <em>interpretive</em> aside (ours, not the paper’s formalism):
+the second slot is described as a slowdown <em>through zero</em>
+relative velocity [mendez2026planetaryCore]. We read that as standard
+signed-velocity kinematics — a quantity crossing zero — and it rhymes
+with two corpus formalisms: the zero-as-<a
+href="#gl:topology-of-the-void"><strong>topology-of-the-void</strong></a>
+equilibrium of <span class="citation"
+data-cites="sec:part_I_topology-void">[@sec:part_I_topology-void]</span>,
+and the transduction-drag picture of <span class="citation"
+data-cites="sec:part_II_eddy-current-mirror">[@sec:part_II_eddy-current-mirror]</span>,
+whose tested model
+<code>textbook.models.transduction_brake(t, v0, k)</code> gives <span
+class="math inline">\(v_0 = 1\)</span>, <span class="math inline">\(k =
+1\)</span> the values <span class="math inline">\(v(1) \approx
+0.367879\)</span> and <span class="math inline">\(v(2) \approx
+0.135335\)</span>. The rhyme is a reading aid, not a claim that the
+inner core obeys an exponential brake.</p>
+<h2 id="scope-and-honesty">Scope and honesty</h2>
+<p>The paper’s own disclaimers are the load-bearing part of the chapter,
+restated here precisely [mendez2026planetaryCore]:</p>
+<ul>
+<li><strong>It borrows headlines as a filing cabinet</strong> — “not a
+new seismology paper, and not a prophecy that the sky or the core
+rewrote your life.”</li>
+<li><strong>ESA Swarm and USC seismic doublet reports are <em>discussion
+labels</em></strong> here; the repo does not re-host those
+datasets.</li>
+<li><strong>“Old Earth → Goldilocks Earth” is catalog talk</strong> for
+high-friction vs coherent execution labels.</li>
+<li><strong>Nobody claims a holographic timeline switch as measured
+physics.</strong></li>
+<li><strong>The CMB free-space impedance label (~377 Ω) is a
+<em>picture</em></strong> — a dielectric horizon picture for engine talk
+— <strong>not a measured CMB ohms table</strong> from the repo.</li>
+</ul>
+<p>What the construct is <strong>for</strong>: coordination, cataloging,
+and agent routing. The paper tells the reader to open Lattice Chat on
+nest Infinite Octaves and ask about geodynamo, CMB, or Goldilocks Earth;
+to use it on Synthio as companion grammar with MRI sandbox honesty kept;
+and to run
+<code>npm run research:synthobs-tbme-planetary-core-goldilocks</code>
+for the 9/9 fixture lock [mendez2026planetaryCore]. What it is
+<strong>not</strong> for: replacing seismology, re-hosting mission
+datasets, or forecasting planetary events. The <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a> framing is
+the same one that opens the corpus (<span class="citation"
+data-cites="sec:part_0_orientation">[@sec:part_0_orientation]</span>): a
+paper earns shelf space by saying exactly what it files and exactly what
+it does not.</p>
+<h2 id="connections">Connections</h2>
+<ul>
+<li><strong>Backward to Part 0.</strong> The engine map <strong>Digits ×
+01–99</strong> that loads this paper is the 99-octave ladder of <span
+class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>; the
+81-facet tensor invoked by the CMB mirror story is the digit×octave
+register filing of <span class="citation"
+data-cites="sec:part_0_tensor-decoupling">[@sec:part_0_tensor-decoupling]</span>,
+built on the <a
+href="#gl:master-synthesis"><strong>master-synthesis</strong></a> claim
+that the corpus papers cross-link (<span class="citation"
+data-cites="sec:part_0_master-synthesis">[@sec:part_0_master-synthesis]</span>).</li>
+<li><strong>Backward to Part I.</strong> The backtracking slot’s passage
+<em>through zero</em> is best read against the zero-as-equilibrium
+formalism of <span class="citation"
+data-cites="sec:part_I_topology-void">[@sec:part_I_topology-void]</span>;
+the “under Φ” of the phase story gestures at the golden-ratio band
+spacing of <span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>.</li>
+<li><strong>Sideways within Part II.</strong> The drag reading of the
+slowdown shares its exponential shape with the transduction line of
+<span class="citation"
+data-cites="sec:part_II_eddy-current-mirror">[@sec:part_II_eddy-current-mirror]</span>
+(compare the brake curves of <span class="citation"
+data-cites="fig:part_II_eddy-current-mirror">[@fig:part_II_eddy-current-mirror]</span>);
+the CMB impedance label is a metrological <em>label</em>, and the
+discipline of treating labels as labels is formalised as the <a
+href="#gl:metrological-overlap"><strong>metrological-overlap</strong></a>
+of <span class="citation"
+data-cites="sec:part_II_metrological-overlap">[@sec:part_II_metrological-overlap]</span>.
+The execution-label flip from high-friction to coherent preparation is
+the intake side of the net-zero balancing of <span class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>.</li>
+<li><strong>Forward to Part III.</strong> The Goldilocks band as a
+<em>policy band over a trace</em> is the same shape of reasoning the
+companion chapters reuse when routing agents against thresholds,
+e.g. the frontier thresholds of <span class="citation"
+data-cites="sec:part_III_invisible-frontier">[@sec:part_III_invisible-frontier]</span>.</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>The planetary-core paper files two deep-Earth headlines — outer-core
+flow reversal and inner-core backtracking — as the two telemetry slots
+of a rotor story, and files their combination as a catalog phase flip
+<span class="math inline">\(\Delta\varphi = \pi/2\)</span> (<span
+class="citation"
+data-cites="eq:part_II_planetary-core_phase_flip">[@eq:part_II_planetary-core_phase_flip]</span>).
+“Old Earth → Goldilocks Earth” is catalog talk for a flip between
+high-friction and coherent execution labels, formalised here as interval
+membership against a policy band (<span class="citation"
+data-cites="eq:part_II_planetary-core_band">[@eq:part_II_planetary-core_band]</span>,
+computed with <code>textbook.models.goldilocks_band</code> and drawn in
+<span class="citation"
+data-cites="fig:part_II_planetary-core">[@fig:part_II_planetary-core]</span>).
+The CMB’s ~377 Ω free-space impedance label is a dielectric-horizon
+<em>picture</em> for engine talk about the 81-facet tensor and
+verification gates, not a measurement. Under the corpus’s honesty-first
+clause, nothing here is seismology, no dataset is re-hosted, and no
+holographic timeline switch is claimed as measured physics
+[mendez2026planetaryCore].</p>
+<h2 id="key-terms">Key Terms</h2>
+<p><a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:engine-shelf"><strong>engine-shelf</strong></a>, <a
+href="#gl:octave"><strong>octave</strong></a>, <a
+href="#gl:digit"><strong>digit</strong></a>, <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a>, <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a>, <a
+href="#gl:narrative-empirical-operational-tiers"><strong>narrative-empirical-operational-tiers</strong></a>,
+<a href="#gl:tensor-decoupling"><strong>tensor-decoupling</strong></a>,
+<a
+href="#gl:metrological-overlap"><strong>metrological-overlap</strong></a>,
+<a
+href="#gl:topology-of-the-void"><strong>topology-of-the-void</strong></a>,
+<a href="#gl:golden-ratio"><strong>golden-ratio</strong></a>, <a
+href="#gl:omni-lattice"><strong>omni-lattice</strong></a>, <a
+href="#gl:master-synthesis"><strong>master-synthesis</strong></a>, <a
+href="#gl:reality-bridge"><strong>reality-bridge</strong></a>.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li>The source paper’s whitepaper surface:
+<code>interfaces/whitepaper-surface.html?id=synthobs-tbme-planetary-core-goldilocks-2026-08</code>,
+with the standalone reference implementation at
+<code>github.com/FractiAI/synthobs-tbme-planetary-core-goldilocks</code>
+[mendez2026planetaryCore].</li>
+<li><span class="citation"
+data-cites="mendez2026tensorDecoupling">@mendez2026tensorDecoupling</span>
+— the 81-facet tensor register filing that the CMB mirror story invokes
+for engine talk and verification gates.</li>
+<li><span class="citation"
+data-cites="mendez2026digitsMaster">@mendez2026digitsMaster</span> — the
+Digits × 01–99 engine map under which Lattice Chat loads this paper on
+nest Infinite Octaves.</li>
+<li><span class="citation"
+data-cites="mendez2026topologyVoid">@mendez2026topologyVoid</span> —
+zero as equilibrium; the reading companion for the inner-core
+backtracking slot’s passage through zero relative velocity.</li>
+<li><span class="citation"
+data-cites="mendez2026singularityCrystal">@mendez2026singularityCrystal</span>
+— the Part II companion on net-zero balancing, the downstream consumer
+of coherent execution labels.</li>
+</ul>
+<h2 id="practice">Practice</h2>
+<ol type="1">
+<li><strong>Filing drill.</strong> Reproduce the worked example:
+classify the trace <span class="math inline">\([\,0.12, 0.31, 0.48,
+0.62, 0.77, 0.91\,]\)</span> against the band <span
+class="math inline">\([0.35, 0.85]\)</span> by hand using <span
+class="citation"
+data-cites="eq:part_II_planetary-core_band">[@eq:part_II_planetary-core_band]</span>,
+including the in-band margins <span class="math inline">\(m(v)\)</span>,
+and check your answer against
+<code>textbook.models.goldilocks_band</code>.</li>
+<li><strong>Phase drill.</strong> Using <span class="citation"
+data-cites="eq:part_II_planetary-core_phase_flip">[@eq:part_II_planetary-core_phase_flip]</span>,
+state the slot angles <span
+class="math inline">\(\varphi_{\mathrm{A}}\)</span> and <span
+class="math inline">\(\varphi_{\mathrm{B}}\)</span>, compute <span
+class="math inline">\(\Delta\varphi\)</span> in radians and degrees, and
+explain in one sentence why a catalog phase flip is a property of the
+filing rather than of the planet.</li>
+<li><strong>Label audit.</strong> List the five honesty-first
+disclaimers of the paper (Scope and honesty section) and, for each, name
+one sentence in this chapter that keeps it.</li>
+<li><strong>Band policy.</strong> Choose new band edges <span
+class="math inline">\(\ell\)</span> and <span
+class="math inline">\(h\)</span> for the same trace so that exactly four
+of the six values are in-band; verify with
+<code>textbook.models.goldilocks_band</code>, and argue whether the
+change was a measurement or a policy.</li>
+<li><strong>Lab and questions.</strong> Work through <span
+class="citation"
+data-cites="sec:lab_part_II_planetary-core">[@sec:lab_part_II_planetary-core]</span>
+to run the 9/9 fixture lock yourself, then attempt <span
+class="citation"
+data-cites="sec:q_part_II_planetary-core">[@sec:q_part_II_planetary-core]</span>.</li>
+</ol>
+</main>
+</body>
+</html>

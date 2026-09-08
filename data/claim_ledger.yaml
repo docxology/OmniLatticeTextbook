@@ -1,57 +1,1807 @@
 claims:
-  - claim_id: chapter-count
-    kind: number
-    value: 12
-    source: projects/templates/template_textbook/manuscript/config.yaml declared chapter count
-    source_tier: project_source
-    freshness: active
-    artifact_path: manuscript/config.yaml
-  - claim_id: part-count
-    kind: number
-    value: 4
-    source: projects/templates/template_textbook/manuscript/config.yaml declared part count
-    source_tier: project_source
-    freshness: active
-    artifact_path: manuscript/config.yaml
-  - claim_id: citation-key-count
-    kind: number
-    value: 10
-    source: projects/templates/template_textbook/src/textbook/constants.py CITATION_KEYS whitelist
-    source_tier: project_source
-    freshness: active
-    artifact_path: manuscript/references.bib
-  - claim_id: glossary-anchor-count
-    kind: number
-    value: 15
-    source: projects/templates/template_textbook/src/textbook/constants.py GLOSSARY_ANCHORS
-    source_tier: project_source
-    freshness: active
-    artifact_path: manuscript/glossary.md
-  - claim_id: stub-marker-types
-    kind: number
-    value: 3
-    source: projects/templates/template_textbook/src/textbook/constants.py STUB_MARKERS count
-    source_tier: project_source
-    freshness: active
-    artifact_path: tests/test_manuscript_integrity.py
-  - claim_id: required-section-headings
-    kind: number
-    value: 5
-    source: projects/templates/template_textbook/src/textbook/constants.py REQUIRED_SECTION_HEADINGS
-    source_tier: project_source
-    freshness: active
-    artifact_path: src/textbook/constants.py
-  - claim_id: model-function-count
-    kind: number
-    value: 7
-    source: projects/templates/template_textbook/src/textbook/models.py worked formalism count
-    source_tier: project_source
-    freshness: active
-    artifact_path: src/textbook/models.py
-  - claim_id: inverse-time-unit-exponent
-    kind: number
-    value: -1
-    source: textbook formalism parameter tables use reciprocal seconds for rate constants
-    source_tier: project_source
-    freshness: active
-    artifact_path: manuscript/appendices/appendix_formalisms.md
+- claim_id: chapter-count
+  kind: number
+  value: 30
+  source: OmniLatticeTextbook docs/manuscript/config.yaml declared chapter count
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/config.yaml
+- claim_id: part-count
+  kind: number
+  value: 4
+  source: OmniLatticeTextbook docs/manuscript/config.yaml declared part count
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/config.yaml
+- claim_id: citation-key-count
+  kind: number
+  value: 31
+  source: OmniLatticeTextbook src/textbook/constants.py CITATION_KEYS whitelist
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/references.bib
+- claim_id: glossary-anchor-count
+  kind: number
+  value: 44
+  source: OmniLatticeTextbook src/textbook/constants.py GLOSSARY_ANCHORS
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/glossary.md
+- claim_id: stub-marker-types
+  kind: number
+  value: 3
+  source: OmniLatticeTextbook src/textbook/constants.py STUB_MARKERS count
+  source_tier: project_source
+  freshness: active
+  artifact_path: tests/test_manuscript_integrity.py
+- claim_id: required-section-headings
+  kind: number
+  value: 5
+  source: OmniLatticeTextbook src/textbook/constants.py REQUIRED_SECTION_HEADINGS
+  source_tier: project_source
+  freshness: active
+  artifact_path: src/textbook/constants.py
+- claim_id: model-function-count
+  kind: number
+  value: 23
+  source: OmniLatticeTextbook src/textbook/models.py worked formalism functions exported in __all__
+  source_tier: project_source
+  freshness: active
+  artifact_path: src/textbook/models.py
+- claim_id: inverse-time-unit-exponent
+  kind: number
+  value: -1
+  source: Omni-Lattice formalism parameter tables use reciprocal units for rate constants
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_formalisms.md
+- claim_id: num-evidence-005-appendices-appendix-format-gallery-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/appendices/appendix_format_gallery.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_format_gallery.md
+- claim_id: num-evidence-006-appendices-appendix-math-review-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/appendices/appendix_math_review.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_math_review.md
+- claim_id: num-evidence-007-appendices-appendix-math-review-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/appendices/appendix_math_review.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_math_review.md
+- claim_id: num-evidence-008-appendices-appendix-math-review-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/appendices/appendix_math_review.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_math_review.md
+- claim_id: num-evidence-009-appendices-appendix-math-review-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/appendices/appendix_math_review.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_math_review.md
+- claim_id: num-evidence-010-appendices-appendix-math-review-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/appendices/appendix_math_review.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_math_review.md
+- claim_id: num-evidence-011-appendices-appendix-math-review-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/appendices/appendix_math_review.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_math_review.md
+- claim_id: num-evidence-015-appendices-appendix-notation-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/appendices/appendix_notation.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_notation.md
+- claim_id: num-evidence-016-appendices-appendix-notation-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/appendices/appendix_notation.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_notation.md
+- claim_id: num-evidence-017-appendices-appendix-notation-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/appendices/appendix_notation.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_notation.md
+- claim_id: num-evidence-018-appendices-appendix-notation-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/appendices/appendix_notation.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_notation.md
+- claim_id: num-evidence-019-appendices-appendix-notation-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/appendices/appendix_notation.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_notation.md
+- claim_id: num-evidence-020-appendices-appendix-notation-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/appendices/appendix_notation.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_notation.md
+- claim_id: num-evidence-021-appendices-appendix-notation-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/appendices/appendix_notation.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_notation.md
+- claim_id: num-evidence-024-appendices-appendix-notation-md
+  kind: number
+  value: '2.609438'
+  source: docs/manuscript/appendices/appendix_notation.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_notation.md
+- claim_id: num-evidence-027-labs-part-0-lab-tensor-decoupling-md
+  kind: number
+  value: '0.090170'
+  source: docs/manuscript/labs/part_0/lab_tensor-decoupling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_0/lab_tensor-decoupling.md
+- claim_id: num-evidence-030-labs-part-i-lab-fractal-constant-md
+  kind: number
+  value: '049.80'
+  source: docs/manuscript/labs/part_I/lab_fractal-constant.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_I/lab_fractal-constant.md
+- claim_id: num-evidence-036-labs-part-i-lab-prime-parity-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/labs/part_I/lab_prime-parity.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_I/lab_prime-parity.md
+- claim_id: num-evidence-051-labs-part-iii-lab-pdvsa-gateway-md
+  kind: number
+  value: '2.828427'
+  source: docs/manuscript/labs/part_III/lab_pdvsa-gateway.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_pdvsa-gateway.md
+- claim_id: num-evidence-052-labs-part-iii-lab-pdvsa-gateway-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/labs/part_III/lab_pdvsa-gateway.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_pdvsa-gateway.md
+- claim_id: num-evidence-053-labs-part-iii-lab-reality-bridge-md
+  kind: number
+  value: '1.666667'
+  source: docs/manuscript/labs/part_III/lab_reality-bridge.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_reality-bridge.md
+- claim_id: num-evidence-056-part-0-master-synthesis-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/part_0/master-synthesis.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/master-synthesis.md
+- claim_id: num-evidence-057-part-0-octave-map-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/part_0/octave-map.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/octave-map.md
+- claim_id: num-evidence-058-part-0-octave-map-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/part_0/octave-map.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/octave-map.md
+- claim_id: num-evidence-059-part-0-octave-map-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/part_0/octave-map.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/octave-map.md
+- claim_id: num-evidence-060-part-0-octave-map-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/part_0/octave-map.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/octave-map.md
+- claim_id: num-evidence-061-part-0-octave-map-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/part_0/octave-map.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/octave-map.md
+- claim_id: num-evidence-062-part-0-octave-map-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/part_0/octave-map.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/octave-map.md
+- claim_id: num-evidence-063-part-0-octave-map-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/part_0/octave-map.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/octave-map.md
+- claim_id: num-evidence-064-part-0-orientation-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/part_0/orientation.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/orientation.md
+- claim_id: num-evidence-065-part-0-tensor-decoupling-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/part_0/tensor-decoupling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/tensor-decoupling.md
+- claim_id: num-evidence-067-part-0-tensor-decoupling-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/part_0/tensor-decoupling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/tensor-decoupling.md
+- claim_id: num-evidence-069-part-0-tensor-decoupling-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/part_0/tensor-decoupling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/tensor-decoupling.md
+- claim_id: num-evidence-071-part-0-tensor-decoupling-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/part_0/tensor-decoupling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/tensor-decoupling.md
+- claim_id: num-evidence-073-part-0-tensor-decoupling-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/part_0/tensor-decoupling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/tensor-decoupling.md
+- claim_id: num-evidence-074-part-0-tensor-decoupling-md
+  kind: number
+  value: '0.090170'
+  source: docs/manuscript/part_0/tensor-decoupling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/tensor-decoupling.md
+- claim_id: num-evidence-075-part-0-tensor-decoupling-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/part_0/tensor-decoupling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/tensor-decoupling.md
+- claim_id: num-evidence-080-part-i-holographic-rhyme-md
+  kind: number
+  value: '-4.000000'
+  source: docs/manuscript/part_I/holographic-rhyme.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/holographic-rhyme.md
+- claim_id: num-evidence-081-part-i-holographic-rhyme-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/part_I/holographic-rhyme.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/holographic-rhyme.md
+- claim_id: num-evidence-082-part-i-multidimensional-rhyme-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/part_I/multidimensional-rhyme.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/multidimensional-rhyme.md
+- claim_id: num-evidence-083-part-i-multidimensional-rhyme-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/part_I/multidimensional-rhyme.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/multidimensional-rhyme.md
+- claim_id: num-evidence-084-part-i-multidimensional-rhyme-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/part_I/multidimensional-rhyme.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/multidimensional-rhyme.md
+- claim_id: num-evidence-085-part-i-multidimensional-rhyme-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/part_I/multidimensional-rhyme.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/multidimensional-rhyme.md
+- claim_id: num-evidence-086-part-i-multidimensional-rhyme-md
+  kind: number
+  value: '1.666667'
+  source: docs/manuscript/part_I/multidimensional-rhyme.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/multidimensional-rhyme.md
+- claim_id: num-evidence-087-part-i-prime-parity-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/part_I/prime-parity.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/prime-parity.md
+- claim_id: num-evidence-088-part-i-prime-parity-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/part_I/prime-parity.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/prime-parity.md
+- claim_id: num-evidence-089-part-i-prime-parity-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/part_I/prime-parity.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/prime-parity.md
+- claim_id: num-evidence-090-part-i-prime-parity-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/part_I/prime-parity.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/prime-parity.md
+- claim_id: num-evidence-091-part-i-prime-parity-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/part_I/prime-parity.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/prime-parity.md
+- claim_id: num-evidence-092-part-i-prime-parity-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/part_I/prime-parity.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/prime-parity.md
+- claim_id: num-evidence-093-part-i-prime-parity-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/part_I/prime-parity.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/prime-parity.md
+- claim_id: num-evidence-094-part-i-prime-parity-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/part_I/prime-parity.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/prime-parity.md
+- claim_id: num-evidence-095-part-ii-crystalline-field-md
+  kind: number
+  value: '16.180340'
+  source: docs/manuscript/part_II/crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/crystalline-field.md
+- claim_id: num-evidence-096-part-ii-crystalline-field-md
+  kind: number
+  value: '6.180340'
+  source: docs/manuscript/part_II/crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/crystalline-field.md
+- claim_id: num-evidence-097-part-ii-crystalline-field-md
+  kind: number
+  value: '26.180340'
+  source: docs/manuscript/part_II/crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/crystalline-field.md
+- claim_id: num-evidence-098-part-ii-crystalline-field-md
+  kind: number
+  value: '3.819660'
+  source: docs/manuscript/part_II/crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/crystalline-field.md
+- claim_id: num-evidence-099-part-ii-crystalline-field-md
+  kind: number
+  value: '42.360680'
+  source: docs/manuscript/part_II/crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/crystalline-field.md
+- claim_id: num-evidence-100-part-ii-crystalline-field-md
+  kind: number
+  value: '2.360680'
+  source: docs/manuscript/part_II/crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/crystalline-field.md
+- claim_id: num-evidence-105-part-ii-metamorphic-octaves-md
+  kind: number
+  value: '1.693147'
+  source: docs/manuscript/part_II/metamorphic-octaves.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/metamorphic-octaves.md
+- claim_id: num-evidence-106-part-ii-metamorphic-octaves-md
+  kind: number
+  value: '2.098612'
+  source: docs/manuscript/part_II/metamorphic-octaves.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/metamorphic-octaves.md
+- claim_id: num-evidence-107-part-ii-metamorphic-octaves-md
+  kind: number
+  value: '3.197225'
+  source: docs/manuscript/part_II/metamorphic-octaves.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/metamorphic-octaves.md
+- claim_id: num-evidence-108-part-ii-proton-theater-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/part_II/proton-theater.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/proton-theater.md
+- claim_id: num-evidence-110-part-ii-proton-theater-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/part_II/proton-theater.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/proton-theater.md
+- claim_id: num-evidence-111-part-ii-proton-theater-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/part_II/proton-theater.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/proton-theater.md
+- claim_id: num-evidence-112-part-ii-singularity-crystal-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/part_II/singularity-crystal.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/singularity-crystal.md
+- claim_id: num-evidence-125-part-iii-invisible-frontier-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/part_III/invisible-frontier.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/invisible-frontier.md
+- claim_id: num-evidence-126-part-iii-invisible-frontier-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/part_III/invisible-frontier.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/invisible-frontier.md
+- claim_id: num-evidence-127-part-iii-invisible-frontier-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/part_III/invisible-frontier.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/invisible-frontier.md
+- claim_id: num-evidence-128-part-iii-invisible-frontier-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/part_III/invisible-frontier.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/invisible-frontier.md
+- claim_id: num-evidence-129-part-iii-invisible-frontier-md
+  kind: number
+  value: '1.666667'
+  source: docs/manuscript/part_III/invisible-frontier.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/invisible-frontier.md
+- claim_id: num-evidence-130-part-iii-invisible-frontier-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/part_III/invisible-frontier.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/invisible-frontier.md
+- claim_id: num-evidence-131-part-iii-invisible-frontier-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/part_III/invisible-frontier.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/invisible-frontier.md
+- claim_id: num-evidence-133-part-iii-kinematic-recycling-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/part_III/kinematic-recycling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/kinematic-recycling.md
+- claim_id: num-evidence-134-part-iii-macro-protein-md
+  kind: number
+  value: '521.0019'
+  source: docs/manuscript/part_III/macro-protein.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/macro-protein.md
+- claim_id: num-evidence-135-part-iii-macro-protein-md
+  kind: number
+  value: '1.6180258'
+  source: docs/manuscript/part_III/macro-protein.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/macro-protein.md
+- claim_id: num-evidence-136-part-iii-macro-protein-md
+  kind: number
+  value: '842.9988'
+  source: docs/manuscript/part_III/macro-protein.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/macro-protein.md
+- claim_id: num-evidence-138-part-iii-macro-protein-md
+  kind: number
+  value: '1.6180371'
+  source: docs/manuscript/part_III/macro-protein.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/macro-protein.md
+- claim_id: num-evidence-139-part-iii-macro-protein-md
+  kind: number
+  value: '1364.0007'
+  source: docs/manuscript/part_III/macro-protein.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/macro-protein.md
+- claim_id: num-evidence-141-part-iii-macro-protein-md
+  kind: number
+  value: '1.6180328'
+  source: docs/manuscript/part_III/macro-protein.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/macro-protein.md
+- claim_id: num-evidence-142-part-iii-macro-protein-md
+  kind: number
+  value: '2206.9995'
+  source: docs/manuscript/part_III/macro-protein.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/macro-protein.md
+- claim_id: num-evidence-143-part-iii-macro-protein-md
+  kind: number
+  value: '1.6180344'
+  source: docs/manuscript/part_III/macro-protein.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/macro-protein.md
+- claim_id: num-evidence-144-part-iii-macro-protein-md
+  kind: number
+  value: '3571.0003'
+  source: docs/manuscript/part_III/macro-protein.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/macro-protein.md
+- claim_id: num-evidence-145-part-iii-macro-protein-md
+  kind: number
+  value: '1.6180338'
+  source: docs/manuscript/part_III/macro-protein.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/macro-protein.md
+- claim_id: num-evidence-147-part-iii-reality-bridge-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/part_III/reality-bridge.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/reality-bridge.md
+- claim_id: num-evidence-156-part-iii-y-chromosome-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/part_III/y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/y-chromosome.md
+- claim_id: num-evidence-157-part-iii-y-chromosome-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/part_III/y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/y-chromosome.md
+- claim_id: num-evidence-158-part-iii-y-chromosome-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/part_III/y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/y-chromosome.md
+- claim_id: num-evidence-159-part-iii-y-chromosome-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/part_III/y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/y-chromosome.md
+- claim_id: num-evidence-160-part-iii-y-chromosome-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/part_III/y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/y-chromosome.md
+- claim_id: num-evidence-161-appendices-appendix-authoring-guide-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/appendices/appendix_authoring_guide.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_authoring_guide.md
+- claim_id: num-evidence-162-appendices-appendix-authoring-guide-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/appendices/appendix_authoring_guide.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_authoring_guide.md
+- claim_id: num-evidence-165-appendices-appendix-authoring-guide-md
+  kind: number
+  value: '2.609438'
+  source: docs/manuscript/appendices/appendix_authoring_guide.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_authoring_guide.md
+- claim_id: num-evidence-166-appendices-appendix-formalisms-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/appendices/appendix_formalisms.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_formalisms.md
+- claim_id: num-evidence-168-appendices-appendix-format-gallery-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/appendices/appendix_format_gallery.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_format_gallery.md
+- claim_id: num-evidence-169-appendices-appendix-format-gallery-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/appendices/appendix_format_gallery.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_format_gallery.md
+- claim_id: num-evidence-171-appendices-appendix-math-review-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/appendices/appendix_math_review.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_math_review.md
+- claim_id: num-evidence-172-appendices-appendix-math-review-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/appendices/appendix_math_review.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_math_review.md
+- claim_id: num-evidence-174-appendices-appendix-math-review-md
+  kind: number
+  value: '1.609438'
+  source: docs/manuscript/appendices/appendix_math_review.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_math_review.md
+- claim_id: num-evidence-175-appendices-appendix-math-review-md
+  kind: number
+  value: '2.609438'
+  source: docs/manuscript/appendices/appendix_math_review.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/appendices/appendix_math_review.md
+- claim_id: num-evidence-178-labs-part-0-lab-living-pem-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/labs/part_0/lab_living-pem.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_0/lab_living-pem.md
+- claim_id: num-evidence-179-labs-part-0-lab-living-pem-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/labs/part_0/lab_living-pem.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_0/lab_living-pem.md
+- claim_id: num-evidence-182-labs-part-0-lab-master-synthesis-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/labs/part_0/lab_master-synthesis.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_0/lab_master-synthesis.md
+- claim_id: num-evidence-183-labs-part-0-lab-master-synthesis-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/labs/part_0/lab_master-synthesis.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_0/lab_master-synthesis.md
+- claim_id: num-evidence-186-labs-part-0-lab-master-synthesis-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/labs/part_0/lab_master-synthesis.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_0/lab_master-synthesis.md
+- claim_id: num-evidence-187-labs-part-0-lab-master-synthesis-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/labs/part_0/lab_master-synthesis.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_0/lab_master-synthesis.md
+- claim_id: num-evidence-188-labs-part-0-lab-master-synthesis-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/labs/part_0/lab_master-synthesis.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_0/lab_master-synthesis.md
+- claim_id: num-evidence-189-labs-part-0-lab-master-synthesis-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/labs/part_0/lab_master-synthesis.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_0/lab_master-synthesis.md
+- claim_id: num-evidence-190-labs-part-0-lab-master-synthesis-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/labs/part_0/lab_master-synthesis.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_0/lab_master-synthesis.md
+- claim_id: num-evidence-191-labs-part-0-lab-master-synthesis-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/labs/part_0/lab_master-synthesis.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_0/lab_master-synthesis.md
+- claim_id: num-evidence-192-labs-part-0-lab-octave-map-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/labs/part_0/lab_octave-map.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_0/lab_octave-map.md
+- claim_id: num-evidence-193-labs-part-0-lab-octave-map-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/labs/part_0/lab_octave-map.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_0/lab_octave-map.md
+- claim_id: num-evidence-194-labs-part-0-lab-octave-map-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/labs/part_0/lab_octave-map.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_0/lab_octave-map.md
+- claim_id: num-evidence-195-labs-part-0-lab-octave-map-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/labs/part_0/lab_octave-map.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_0/lab_octave-map.md
+- claim_id: num-evidence-196-labs-part-0-lab-octave-map-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/labs/part_0/lab_octave-map.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_0/lab_octave-map.md
+- claim_id: num-evidence-197-labs-part-0-lab-octave-map-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/labs/part_0/lab_octave-map.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_0/lab_octave-map.md
+- claim_id: num-evidence-198-labs-part-0-lab-octave-map-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/labs/part_0/lab_octave-map.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_0/lab_octave-map.md
+- claim_id: num-evidence-199-labs-part-0-lab-octave-map-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/labs/part_0/lab_octave-map.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_0/lab_octave-map.md
+- claim_id: num-evidence-202-labs-part-0-lab-tensor-decoupling-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/labs/part_0/lab_tensor-decoupling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_0/lab_tensor-decoupling.md
+- claim_id: num-evidence-204-labs-part-0-lab-tensor-decoupling-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/labs/part_0/lab_tensor-decoupling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_0/lab_tensor-decoupling.md
+- claim_id: num-evidence-208-labs-part-i-lab-fractal-constant-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/labs/part_I/lab_fractal-constant.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_I/lab_fractal-constant.md
+- claim_id: num-evidence-209-labs-part-i-lab-fractal-constant-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/labs/part_I/lab_fractal-constant.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_I/lab_fractal-constant.md
+- claim_id: num-evidence-210-labs-part-i-lab-fractal-constant-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/labs/part_I/lab_fractal-constant.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_I/lab_fractal-constant.md
+- claim_id: num-evidence-211-labs-part-i-lab-fractal-constant-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/labs/part_I/lab_fractal-constant.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_I/lab_fractal-constant.md
+- claim_id: num-evidence-212-labs-part-i-lab-fractal-constant-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/labs/part_I/lab_fractal-constant.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_I/lab_fractal-constant.md
+- claim_id: num-evidence-213-labs-part-i-lab-fractal-constant-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/labs/part_I/lab_fractal-constant.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_I/lab_fractal-constant.md
+- claim_id: num-evidence-214-labs-part-i-lab-fractal-constant-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/labs/part_I/lab_fractal-constant.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_I/lab_fractal-constant.md
+- claim_id: num-evidence-215-labs-part-i-lab-fractal-constant-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/labs/part_I/lab_fractal-constant.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_I/lab_fractal-constant.md
+- claim_id: num-evidence-216-labs-part-i-lab-fractal-constant-md
+  kind: number
+  value: '29.034442'
+  source: docs/manuscript/labs/part_I/lab_fractal-constant.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_I/lab_fractal-constant.md
+- claim_id: num-evidence-217-labs-part-i-lab-fractal-constant-md
+  kind: number
+  value: '46.978714'
+  source: docs/manuscript/labs/part_I/lab_fractal-constant.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_I/lab_fractal-constant.md
+- claim_id: num-evidence-226-labs-part-i-lab-holographic-rhyme-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/labs/part_I/lab_holographic-rhyme.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_I/lab_holographic-rhyme.md
+- claim_id: num-evidence-228-labs-part-i-lab-prime-parity-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/labs/part_I/lab_prime-parity.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_I/lab_prime-parity.md
+- claim_id: num-evidence-229-labs-part-i-lab-prime-parity-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/labs/part_I/lab_prime-parity.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_I/lab_prime-parity.md
+- claim_id: num-evidence-230-labs-part-i-lab-prime-parity-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/labs/part_I/lab_prime-parity.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_I/lab_prime-parity.md
+- claim_id: num-evidence-231-labs-part-i-lab-prime-parity-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/labs/part_I/lab_prime-parity.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_I/lab_prime-parity.md
+- claim_id: num-evidence-232-labs-part-i-lab-prime-parity-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/labs/part_I/lab_prime-parity.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_I/lab_prime-parity.md
+- claim_id: num-evidence-233-labs-part-i-lab-prime-parity-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/labs/part_I/lab_prime-parity.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_I/lab_prime-parity.md
+- claim_id: num-evidence-242-labs-part-ii-lab-crystalline-field-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/labs/part_II/lab_crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_crystalline-field.md
+- claim_id: num-evidence-243-labs-part-ii-lab-crystalline-field-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/labs/part_II/lab_crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_crystalline-field.md
+- claim_id: num-evidence-244-labs-part-ii-lab-crystalline-field-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/labs/part_II/lab_crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_crystalline-field.md
+- claim_id: num-evidence-245-labs-part-ii-lab-crystalline-field-md
+  kind: number
+  value: '16.180340'
+  source: docs/manuscript/labs/part_II/lab_crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_crystalline-field.md
+- claim_id: num-evidence-246-labs-part-ii-lab-crystalline-field-md
+  kind: number
+  value: '6.180340'
+  source: docs/manuscript/labs/part_II/lab_crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_crystalline-field.md
+- claim_id: num-evidence-247-labs-part-ii-lab-crystalline-field-md
+  kind: number
+  value: '26.180340'
+  source: docs/manuscript/labs/part_II/lab_crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_crystalline-field.md
+- claim_id: num-evidence-248-labs-part-ii-lab-crystalline-field-md
+  kind: number
+  value: '3.819660'
+  source: docs/manuscript/labs/part_II/lab_crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_crystalline-field.md
+- claim_id: num-evidence-249-labs-part-ii-lab-crystalline-field-md
+  kind: number
+  value: '42.360680'
+  source: docs/manuscript/labs/part_II/lab_crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_crystalline-field.md
+- claim_id: num-evidence-250-labs-part-ii-lab-crystalline-field-md
+  kind: number
+  value: '2.360680'
+  source: docs/manuscript/labs/part_II/lab_crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_crystalline-field.md
+- claim_id: num-evidence-251-labs-part-ii-lab-crystalline-field-md
+  kind: number
+  value: '16.18182'
+  source: docs/manuscript/labs/part_II/lab_crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_crystalline-field.md
+- claim_id: num-evidence-252-labs-part-ii-lab-crystalline-field-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/labs/part_II/lab_crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_crystalline-field.md
+- claim_id: num-evidence-253-labs-part-ii-lab-crystalline-field-md
+  kind: number
+  value: '179.44272'
+  source: docs/manuscript/labs/part_II/lab_crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_crystalline-field.md
+- claim_id: num-evidence-262-labs-part-ii-lab-eddy-current-mirror-md
+  kind: number
+  value: '1.386294'
+  source: docs/manuscript/labs/part_II/lab_eddy-current-mirror.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_eddy-current-mirror.md
+- claim_id: num-evidence-265-labs-part-ii-lab-metamorphic-octaves-md
+  kind: number
+  value: '2.609438'
+  source: docs/manuscript/labs/part_II/lab_metamorphic-octaves.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_metamorphic-octaves.md
+- claim_id: num-evidence-267-labs-part-ii-lab-metamorphic-octaves-md
+  kind: number
+  value: '1.098612'
+  source: docs/manuscript/labs/part_II/lab_metamorphic-octaves.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_metamorphic-octaves.md
+- claim_id: num-evidence-268-labs-part-ii-lab-metamorphic-octaves-md
+  kind: number
+  value: '1.609438'
+  source: docs/manuscript/labs/part_II/lab_metamorphic-octaves.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_metamorphic-octaves.md
+- claim_id: num-evidence-269-labs-part-ii-lab-metamorphic-octaves-md
+  kind: number
+  value: '2.197225'
+  source: docs/manuscript/labs/part_II/lab_metamorphic-octaves.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_metamorphic-octaves.md
+- claim_id: num-evidence-270-labs-part-ii-lab-metamorphic-octaves-md
+  kind: number
+  value: '1.693147'
+  source: docs/manuscript/labs/part_II/lab_metamorphic-octaves.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_metamorphic-octaves.md
+- claim_id: num-evidence-271-labs-part-ii-lab-metamorphic-octaves-md
+  kind: number
+  value: '2.098612'
+  source: docs/manuscript/labs/part_II/lab_metamorphic-octaves.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_metamorphic-octaves.md
+- claim_id: num-evidence-272-labs-part-ii-lab-metamorphic-octaves-md
+  kind: number
+  value: '3.197225'
+  source: docs/manuscript/labs/part_II/lab_metamorphic-octaves.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_metamorphic-octaves.md
+- claim_id: num-evidence-277-labs-part-ii-lab-metrological-overlap-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/labs/part_II/lab_metrological-overlap.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_metrological-overlap.md
+- claim_id: num-evidence-278-labs-part-ii-lab-metrological-overlap-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/labs/part_II/lab_metrological-overlap.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_metrological-overlap.md
+- claim_id: num-evidence-283-labs-part-ii-lab-proton-theater-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/labs/part_II/lab_proton-theater.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_proton-theater.md
+- claim_id: num-evidence-285-labs-part-ii-lab-proton-theater-md
+  kind: number
+  value: '3.236068'
+  source: docs/manuscript/labs/part_II/lab_proton-theater.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_proton-theater.md
+- claim_id: num-evidence-286-labs-part-ii-lab-proton-theater-md
+  kind: number
+  value: '1.236068'
+  source: docs/manuscript/labs/part_II/lab_proton-theater.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_proton-theater.md
+- claim_id: num-evidence-287-labs-part-ii-lab-proton-theater-md
+  kind: number
+  value: '4.854102'
+  source: docs/manuscript/labs/part_II/lab_proton-theater.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_proton-theater.md
+- claim_id: num-evidence-288-labs-part-ii-lab-proton-theater-md
+  kind: number
+  value: '1.854102'
+  source: docs/manuscript/labs/part_II/lab_proton-theater.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_proton-theater.md
+- claim_id: num-evidence-289-labs-part-ii-lab-proton-theater-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/labs/part_II/lab_proton-theater.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_proton-theater.md
+- claim_id: num-evidence-291-labs-part-ii-lab-singularity-crystal-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/labs/part_II/lab_singularity-crystal.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_singularity-crystal.md
+- claim_id: num-evidence-295-labs-part-ii-lab-viscosity-light-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/labs/part_II/lab_viscosity-light.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_II/lab_viscosity-light.md
+- claim_id: num-evidence-296-labs-part-iii-lab-cmos-protonic-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/labs/part_III/lab_cmos-protonic.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_cmos-protonic.md
+- claim_id: num-evidence-297-labs-part-iii-lab-cmos-protonic-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/labs/part_III/lab_cmos-protonic.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_cmos-protonic.md
+- claim_id: num-evidence-298-labs-part-iii-lab-cmos-protonic-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/labs/part_III/lab_cmos-protonic.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_cmos-protonic.md
+- claim_id: num-evidence-299-labs-part-iii-lab-cmos-protonic-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/labs/part_III/lab_cmos-protonic.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_cmos-protonic.md
+- claim_id: num-evidence-300-labs-part-iii-lab-invisible-frontier-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/labs/part_III/lab_invisible-frontier.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_invisible-frontier.md
+- claim_id: num-evidence-301-labs-part-iii-lab-invisible-frontier-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/labs/part_III/lab_invisible-frontier.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_invisible-frontier.md
+- claim_id: num-evidence-302-labs-part-iii-lab-invisible-frontier-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/labs/part_III/lab_invisible-frontier.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_invisible-frontier.md
+- claim_id: num-evidence-303-labs-part-iii-lab-invisible-frontier-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/labs/part_III/lab_invisible-frontier.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_invisible-frontier.md
+- claim_id: num-evidence-304-labs-part-iii-lab-invisible-frontier-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/labs/part_III/lab_invisible-frontier.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_invisible-frontier.md
+- claim_id: num-evidence-305-labs-part-iii-lab-invisible-frontier-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/labs/part_III/lab_invisible-frontier.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_invisible-frontier.md
+- claim_id: num-evidence-306-labs-part-iii-lab-invisible-frontier-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/labs/part_III/lab_invisible-frontier.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_invisible-frontier.md
+- claim_id: num-evidence-307-labs-part-iii-lab-invisible-frontier-md
+  kind: number
+  value: '1.666667'
+  source: docs/manuscript/labs/part_III/lab_invisible-frontier.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_invisible-frontier.md
+- claim_id: num-evidence-314-labs-part-iii-lab-invisible-frontier-md
+  kind: number
+  value: '2.944439'
+  source: docs/manuscript/labs/part_III/lab_invisible-frontier.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_invisible-frontier.md
+- claim_id: num-evidence-315-labs-part-iii-lab-kinematic-recycling-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/labs/part_III/lab_kinematic-recycling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_kinematic-recycling.md
+- claim_id: num-evidence-318-labs-part-iii-lab-kinematic-recycling-md
+  kind: number
+  value: '0.503710'
+  source: docs/manuscript/labs/part_III/lab_kinematic-recycling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_kinematic-recycling.md
+- claim_id: num-evidence-321-labs-part-iii-lab-kinematic-recycling-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/labs/part_III/lab_kinematic-recycling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_kinematic-recycling.md
+- claim_id: num-evidence-322-labs-part-iii-lab-kinematic-recycling-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/labs/part_III/lab_kinematic-recycling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_kinematic-recycling.md
+- claim_id: num-evidence-323-labs-part-iii-lab-kinematic-recycling-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/labs/part_III/lab_kinematic-recycling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_kinematic-recycling.md
+- claim_id: num-evidence-324-labs-part-iii-lab-kinematic-recycling-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/labs/part_III/lab_kinematic-recycling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_kinematic-recycling.md
+- claim_id: num-evidence-325-labs-part-iii-lab-kinematic-recycling-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/labs/part_III/lab_kinematic-recycling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_kinematic-recycling.md
+- claim_id: num-evidence-327-labs-part-iii-lab-macro-protein-md
+  kind: number
+  value: '3571.000'
+  source: docs/manuscript/labs/part_III/lab_macro-protein.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_macro-protein.md
+- claim_id: num-evidence-330-labs-part-iii-lab-macro-protein-md
+  kind: number
+  value: '1.618026'
+  source: docs/manuscript/labs/part_III/lab_macro-protein.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_macro-protein.md
+- claim_id: num-evidence-333-labs-part-iii-lab-macro-protein-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/labs/part_III/lab_macro-protein.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_macro-protein.md
+- claim_id: num-evidence-349-labs-part-iii-lab-pdvsa-gateway-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/labs/part_III/lab_pdvsa-gateway.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_pdvsa-gateway.md
+- claim_id: num-evidence-350-labs-part-iii-lab-pdvsa-gateway-md
+  kind: number
+  value: '3.236068'
+  source: docs/manuscript/labs/part_III/lab_pdvsa-gateway.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_pdvsa-gateway.md
+- claim_id: num-evidence-351-labs-part-iii-lab-pdvsa-gateway-md
+  kind: number
+  value: '4.854102'
+  source: docs/manuscript/labs/part_III/lab_pdvsa-gateway.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_pdvsa-gateway.md
+- claim_id: num-evidence-352-labs-part-iii-lab-reality-bridge-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/labs/part_III/lab_reality-bridge.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_reality-bridge.md
+- claim_id: num-evidence-353-labs-part-iii-lab-reality-bridge-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/labs/part_III/lab_reality-bridge.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_reality-bridge.md
+- claim_id: num-evidence-354-labs-part-iii-lab-reality-bridge-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/labs/part_III/lab_reality-bridge.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_reality-bridge.md
+- claim_id: num-evidence-355-labs-part-iii-lab-reality-bridge-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/labs/part_III/lab_reality-bridge.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_reality-bridge.md
+- claim_id: num-evidence-356-labs-part-iii-lab-reality-bridge-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/labs/part_III/lab_reality-bridge.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_reality-bridge.md
+- claim_id: num-evidence-357-labs-part-iii-lab-reality-bridge-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/labs/part_III/lab_reality-bridge.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_reality-bridge.md
+- claim_id: num-evidence-358-labs-part-iii-lab-reality-bridge-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/labs/part_III/lab_reality-bridge.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_reality-bridge.md
+- claim_id: num-evidence-362-labs-part-iii-lab-volumetric-storage-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/labs/part_III/lab_volumetric-storage.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_volumetric-storage.md
+- claim_id: num-evidence-363-labs-part-iii-lab-volumetric-storage-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/labs/part_III/lab_volumetric-storage.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_volumetric-storage.md
+- claim_id: num-evidence-364-labs-part-iii-lab-y-chromosome-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/labs/part_III/lab_y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_y-chromosome.md
+- claim_id: num-evidence-365-labs-part-iii-lab-y-chromosome-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/labs/part_III/lab_y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_y-chromosome.md
+- claim_id: num-evidence-366-labs-part-iii-lab-y-chromosome-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/labs/part_III/lab_y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_y-chromosome.md
+- claim_id: num-evidence-367-labs-part-iii-lab-y-chromosome-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/labs/part_III/lab_y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_y-chromosome.md
+- claim_id: num-evidence-368-labs-part-iii-lab-y-chromosome-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/labs/part_III/lab_y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_y-chromosome.md
+- claim_id: num-evidence-369-labs-part-iii-lab-y-chromosome-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/labs/part_III/lab_y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_y-chromosome.md
+- claim_id: num-evidence-370-labs-part-iii-lab-y-chromosome-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/labs/part_III/lab_y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_y-chromosome.md
+- claim_id: num-evidence-371-labs-part-iii-lab-y-chromosome-md
+  kind: number
+  value: '29.034442'
+  source: docs/manuscript/labs/part_III/lab_y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_y-chromosome.md
+- claim_id: num-evidence-372-labs-part-iii-lab-y-chromosome-md
+  kind: number
+  value: '46.978714'
+  source: docs/manuscript/labs/part_III/lab_y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_y-chromosome.md
+- claim_id: num-evidence-373-labs-part-iii-lab-y-chromosome-md
+  kind: number
+  value: '4.045085'
+  source: docs/manuscript/labs/part_III/lab_y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_y-chromosome.md
+- claim_id: num-evidence-374-labs-part-iii-lab-y-chromosome-md
+  kind: number
+  value: '6.545085'
+  source: docs/manuscript/labs/part_III/lab_y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_y-chromosome.md
+- claim_id: num-evidence-375-labs-part-iii-lab-y-chromosome-md
+  kind: number
+  value: '10.590170'
+  source: docs/manuscript/labs/part_III/lab_y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_y-chromosome.md
+- claim_id: num-evidence-376-labs-part-iii-lab-y-chromosome-md
+  kind: number
+  value: '1.666667'
+  source: docs/manuscript/labs/part_III/lab_y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/labs/part_III/lab_y-chromosome.md
+- claim_id: num-evidence-379-part-0-living-pem-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/part_0/living-pem.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/living-pem.md
+- claim_id: num-evidence-380-part-0-master-synthesis-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/part_0/master-synthesis.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/master-synthesis.md
+- claim_id: num-evidence-383-part-0-master-synthesis-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/part_0/master-synthesis.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/master-synthesis.md
+- claim_id: num-evidence-384-part-0-master-synthesis-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/part_0/master-synthesis.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/master-synthesis.md
+- claim_id: num-evidence-385-part-0-master-synthesis-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/part_0/master-synthesis.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/master-synthesis.md
+- claim_id: num-evidence-386-part-0-master-synthesis-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/part_0/master-synthesis.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/master-synthesis.md
+- claim_id: num-evidence-387-part-0-master-synthesis-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/part_0/master-synthesis.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/master-synthesis.md
+- claim_id: num-evidence-388-part-0-master-synthesis-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/part_0/master-synthesis.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/master-synthesis.md
+- claim_id: num-evidence-389-part-0-octave-map-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/part_0/octave-map.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/octave-map.md
+- claim_id: num-evidence-390-part-0-octave-map-md
+  kind: number
+  value: '1.666667'
+  source: docs/manuscript/part_0/octave-map.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/octave-map.md
+- claim_id: num-evidence-393-part-0-orientation-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/part_0/orientation.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/orientation.md
+- claim_id: num-evidence-394-part-0-orientation-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/part_0/orientation.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/orientation.md
+- claim_id: num-evidence-395-part-0-orientation-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/part_0/orientation.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/orientation.md
+- claim_id: num-evidence-396-part-0-orientation-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/part_0/orientation.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/orientation.md
+- claim_id: num-evidence-397-part-0-orientation-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/part_0/orientation.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/orientation.md
+- claim_id: num-evidence-398-part-0-orientation-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/part_0/orientation.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/orientation.md
+- claim_id: num-evidence-399-part-0-orientation-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/part_0/orientation.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/orientation.md
+- claim_id: num-evidence-401-part-0-tensor-decoupling-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/part_0/tensor-decoupling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/tensor-decoupling.md
+- claim_id: num-evidence-402-part-0-tensor-decoupling-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/part_0/tensor-decoupling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_0/tensor-decoupling.md
+- claim_id: num-evidence-407-part-i-fractal-constant-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/part_I/fractal-constant.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/fractal-constant.md
+- claim_id: num-evidence-409-part-i-fractal-constant-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/part_I/fractal-constant.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/fractal-constant.md
+- claim_id: num-evidence-410-part-i-fractal-constant-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/part_I/fractal-constant.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/fractal-constant.md
+- claim_id: num-evidence-411-part-i-fractal-constant-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/part_I/fractal-constant.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/fractal-constant.md
+- claim_id: num-evidence-412-part-i-fractal-constant-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/part_I/fractal-constant.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/fractal-constant.md
+- claim_id: num-evidence-413-part-i-fractal-constant-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/part_I/fractal-constant.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/fractal-constant.md
+- claim_id: num-evidence-414-part-i-fractal-constant-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/part_I/fractal-constant.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/fractal-constant.md
+- claim_id: num-evidence-416-part-i-fractal-constant-md
+  kind: number
+  value: '049.80'
+  source: docs/manuscript/part_I/fractal-constant.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/fractal-constant.md
+- claim_id: num-evidence-421-part-i-fractal-constant-md
+  kind: number
+  value: '11.090'
+  source: docs/manuscript/part_I/fractal-constant.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/fractal-constant.md
+- claim_id: num-evidence-430-part-i-holographic-rhyme-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/part_I/holographic-rhyme.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/holographic-rhyme.md
+- claim_id: num-evidence-431-part-i-multidimensional-rhyme-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/part_I/multidimensional-rhyme.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/multidimensional-rhyme.md
+- claim_id: num-evidence-432-part-i-multidimensional-rhyme-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/part_I/multidimensional-rhyme.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/multidimensional-rhyme.md
+- claim_id: num-evidence-433-part-i-topology-void-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/part_I/topology-void.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_I/topology-void.md
+- claim_id: num-evidence-440-part-ii-crystalline-field-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/part_II/crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/crystalline-field.md
+- claim_id: num-evidence-441-part-ii-crystalline-field-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/part_II/crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/crystalline-field.md
+- claim_id: num-evidence-442-part-ii-crystalline-field-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/part_II/crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/crystalline-field.md
+- claim_id: num-evidence-443-part-ii-crystalline-field-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/part_II/crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/crystalline-field.md

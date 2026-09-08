@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>y-chromosome.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:part_III_y-chromosome">Y-Chromosome Manifestation: Digit
+4</h1>
+<figure id="fig:part_III_y-chromosome">
+<a class="figure-full-size-link" href="../figures/part_III_y-chromosome.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/part_III_y-chromosome.png" style="width:90.0%"
+alt="A bar chart manifests digit four&#x27;s sub-bands within the register." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
+<figcaption>Digit-4 drawer manifestation: a sub-band
+bar chart of the Infinite Octave drawer for digit 4 — the SRY zero-point
+anchor at index 0, then palindrome arms P1–P8 drawn as sub-bands whose
+spacing grows geometrically as <span class="math inline">\(P_0 \cdot
+\Phi^n\)</span>, generated from
+<code>textbook.models.phi_powers</code>.</figcaption>
+</figure>
+<!-- alt: Bar chart of the digit-4 filing drawer showing nine sub-bands: an SRY anchor bar at unit height followed by eight palindrome-arm bars whose heights grow by the factor Φ ≈ 1.618 with each successive arm, from about 1.6 up to about 47 times the base spacing. -->
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Level 2/3 · 30 min read · 45 min lecture · Prerequisites: Nine
+Digits, Ninety-Nine Octaves (<span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>)</p>
+</blockquote>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol type="1">
+<li>State what the August 2026 ship-blog note files the male-specific
+region of the Y chromosome (MSY) as, and under which <a
+href="#gl:octave"><strong>octave</strong></a> filing mode it does so
+[mendez2026yChromosome].</li>
+<li>Apply the palindrome-scaling relation <span
+class="math inline">\(P_n = P_0 \cdot \Phi^n\)</span> of <span
+class="citation"
+data-cites="eq:part_III_y-chromosome_palin">[@eq:part_III_y-chromosome_palin]</span>
+to the MSY palindrome arms P1–P8 and verify the spacing column of <span
+class="citation"
+data-cites="tbl:part_III_y-chromosome_spacing">[@tbl:part_III_y-chromosome_spacing]</span>
+against <code>textbook.models.phi_powers</code>.</li>
+<li>Explain the SRY phase origin — the sex-determining region filed as
+the zero-point anchor of the manifestation cartoon — and express it
+through the drawer-anchor model of <span class="citation"
+data-cites="eq:part_III_y-chromosome_anchor">[@eq:part_III_y-chromosome_anchor]</span>.</li>
+<li>Distinguish the August <em>manifestation / convergence-set</em>
+grammar from the companion July operator-translation decode (codon
+gates, palindrome loops, haplogroup Stories)
+[mendez2026yChromosome].</li>
+<li>Restate the note’s <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> boundaries
+precisely: what the filing is for, and what it explicitly is not.</li>
+<li>Run the reference implementation
+<code>npm run research:synthobs-y-chromosome-holographic-manifestation</code>
+and interpret its 10/10 fixture lock.</li>
+</ol>
+<!-- curriculum-scaffold-start -->
+<h3 id="study-blueprint">Study Blueprint</h3>
+<ul>
+<li><strong>Big idea:</strong> The MSY is <em>filed</em> — not explained
+— as <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>
+keyed by the <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a> <span
+class="math inline">\(\Phi \approx 1.618\)</span>: palindrome arms scale
+geometrically, the SRY locus anchors phase at zero, and the whole drawer
+sits under an honesty-first scope.</li>
+<li><strong>Core concepts:</strong> <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:golden-ratio"><strong>golden-ratio</strong></a>, <a
+href="#gl:digit"><strong>digit</strong></a>, <a
+href="#gl:holographic-rhyme"><strong>holographic-rhyme</strong></a>, <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a>.</li>
+<li><strong>Quantitative lens:</strong> the palindrome-scaling formalism
+of <span class="citation"
+data-cites="eq:part_III_y-chromosome_palin">[@eq:part_III_y-chromosome_palin]</span>
+and the drawer-anchor model of <span class="citation"
+data-cites="eq:part_III_y-chromosome_anchor">[@eq:part_III_y-chromosome_anchor]</span>.</li>
+<li><strong>Data skill:</strong> build a <span
+class="math inline">\(\Phi\)</span>-geometric spacing table by hand for
+the eight arms and check it against
+<code>textbook.models.phi_powers</code> (see <span class="citation"
+data-cites="tbl:part_III_y-chromosome_spacing">[@tbl:part_III_y-chromosome_spacing]</span>).</li>
+<li><strong>Common misconception to repair:</strong> “the paper claims
+DNA equals a physics constant.” It does not — it is catalog filing and
+architectural equations, and the note says so itself.</li>
+<li><strong>Primary lab:</strong> <span class="citation"
+data-cites="sec:lab_part_III_y-chromosome">[@sec:lab_part_III_y-chromosome]</span>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_III_y-chromosome">[@sec:q_part_III_y-chromosome]</span>.</li>
+<li><strong>Bridge to computation:</strong>
+<code>textbook.models.phi_powers</code>,
+<code>textbook.models.octave_term</code>.
+<!-- curriculum-scaffold-end --></li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Opening Vignette: The drawer marked Digit 4.</strong></p>
+<p>Aboard the SS Vibelandia, 28 August 2026, a guest at Lattice Chat
+asks the SynthOBS Autonomous Agent a question the ship has heard before
+in other drawers: <em>where does <span
+class="math inline">\(\Phi\)</span> show up in human biology?</em> The
+agent routes the question to the nest labelled <strong>Digit 4</strong>
+and opens the corresponding drawer of the Infinite Octaves <a
+href="#gl:omni-lattice"><strong>omni-lattice</strong></a>. Inside the
+drawer: the male-specific region of the Y chromosome (MSY), eight
+palindrome arms filed as P1–P8, and one locus marked as phase zero — the
+<em>SRY</em> region. The filing card reads, in the ship’s plain speak:
+<em>“catalog geometry keyed by <span class="math inline">\(\Phi \approx
+1.618\)</span>”</em> — and, immediately beneath it, the ship’s standing
+rule: <em>“Clinical genetics and human dignity outrank every
+metaphor”</em> [mendez2026yChromosome]. This chapter walks that
+drawer.</p>
+</blockquote>
+<hr />
+<h2 id="the-paper-in-the-corpus">The Paper in the Corpus</h2>
+<p>The source is a ship-blog note on the SS Vibelandia blog
+(<code>ssvibelandiaquestfest24x365.com</code>): <strong>“The Holographic
+Manifestation: Y Chromosome as Expression of El Gran Sol’s Fractal
+Constant”</strong>, filed 2026-08-28 by the FractiAI Research Group
+under <em>plain speak</em> and the ship’s <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a> publishing
+protocol, at shelf number 7 of the corpus [mendez2026yChromosome]. Its
+subject is the male-specific region of the Y chromosome (MSY), which the
+note declines to file “as a shrinking evolutionary relic”; under
+<strong>Infinite Octave Mode</strong>, the palindrome arms P1–P8 and the
+<em>SRY</em> locus are instead filed as catalog geometry keyed by <span
+class="math inline">\(\Phi \approx 1.618\)</span> — a
+<strong>holographic manifestation</strong> grammar
+[mendez2026yChromosome].</p>
+<p>The note is explicitly a <strong>companion to the July
+decode</strong>: an earlier operator-translation whitepaper in the same
+whitepaper-surface family
+(<code>synthobs-y-chromosome-holographic-2026-07</code>) that still
+holds the corpus’s Words, Sentences, and haplogroup Stories, with codon
+gates and palindrome loops as its features. The August note adds
+<em>manifestation / convergence-set</em> language “for guests who ask
+how Φ shows up in polar-identity filing — Story depth, not infinite
+physics tiers” [mendez2026yChromosome]. In the engine shelf, the note
+therefore sits beside the other biological-filing papers: its drawer
+grammar descends from the digit-and-octave map of the <a
+href="#gl:master-register"><strong>master-register</strong></a> filing
+system [mendez2026digitsMaster], its “holographic manifestation” wording
+extends the four-pillar rhyme family of [mendez2026holographicRhyme],
+and its zero-point anchor rhymes with the zero-anchor filing of
+[mendez2026zeroOctave].</p>
+<p>The reference implementation is run as
+<code>npm run research:synthobs-y-chromosome-holographic-manifestation</code>,
+which exits with a <strong>10/10 fixture lock</strong> — the corpus’s
+term for a fully passing fixture set against the note’s filing contract
+[mendez2026yChromosome].</p>
+<h2 id="three-filing-moves">Three Filing Moves</h2>
+<p>The note organises its contribution as “three filing moves in plain
+speak” [mendez2026yChromosome]. We take them in order.</p>
+<h3 id="move-1-palindrome-scaling">Move 1 — Palindrome scaling</h3>
+<p>The first move re-indexes the MSY palindrome structures. Block
+spacing is filed not as “random drift labels” but as geometric indexing
+over catalog octaves [mendez2026yChromosome]:</p>
+<p><span class="math display">\[ P_n = P_0 \cdot \Phi^n, \qquad n = 1,
+\dots, 8 \]</span> {#eq:part_III_y-chromosome_palin}</p>
+<p><span class="citation"
+data-cites="eq:part_III_y-chromosome_palin">[@eq:part_III_y-chromosome_palin]</span>
+is the load-bearing formalism of the chapter. Its <span
+class="math inline">\(\Phi^n\)</span> factor is implemented as
+<code>textbook.models.phi_powers</code> — the same tested function that
+backs the fractal-constant chapters of Part I — so the spacing column in
+worked examples is never recomputed by hand. The parameters are
+collected in <span class="citation"
+data-cites="tbl:part_III_y-chromosome_palin">[@tbl:part_III_y-chromosome_palin]</span>.</p>
+<table id="tbl:part_III_y-chromosome_palin">
+<caption>Parameters of the palindrome-scaling formalism.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(P_n\)</span></td>
+<td>palindrome block spacing at octave index <span
+class="math inline">\(n\)</span></td>
+<td>catalog spacing units</td>
+</tr>
+<tr>
+<td><span class="math inline">\(P_0\)</span></td>
+<td>base spacing at the drawer origin</td>
+<td>catalog spacing units</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Phi\)</span></td>
+<td>El Gran Sol’s Fractal constant, <span class="math inline">\(\Phi =
+\frac{1+\sqrt{5}}{2} \approx 1.618\)</span></td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td><span class="math inline">\(n\)</span></td>
+<td>octave index of the arm; <span class="math inline">\(1\)</span>
+through <span class="math inline">\(8\)</span> for arms P1–P8</td>
+<td>dimensionless</td>
+</tr>
+</tbody>
+</table>
+<p>Two readings of the index deserve a comment, because the corpus
+prints its octave relation ambiguously. Under the <strong>exponent
+convention</strong>, the octave value at index <span
+class="math inline">\(n\)</span> is <span class="math inline">\(\Phi^n
+\cdot \Omega_0\)</span> — exactly the geometric form of <span
+class="citation"
+data-cites="eq:part_III_y-chromosome_palin">[@eq:part_III_y-chromosome_palin]</span>,
+and the convention this chapter adopts for palindrome spacing. Under the
+<strong>subscript convention</strong>, the index multiplies by a
+Fibonacci ratio <span class="math inline">\(\varphi_{\mathrm{fib}}(n) =
+F_{n+1}/F_n\)</span>, which approaches <span
+class="math inline">\(\Phi\)</span> from below (<span
+class="math inline">\(\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6\)</span>,
+<span class="math inline">\(\varphi_{\mathrm{fib}}(10) = 89/55 \approx
+1.618182\)</span>). Both are implemented in
+<code>textbook.models.octave_term</code>; the palindrome relation as
+printed in the source is the exponent form, so that is what we carry
+forward.</p>
+<h3 id="move-2-sry-phase-origin">Move 2 — SRY phase origin</h3>
+<p>The second move files the sex-determining region — the <em>SRY</em>
+locus — as “the zero-point anchor of the manifestation cartoon”
+[mendez2026yChromosome]. The source states this as a filing model
+without an equation; to make the anchor arithmetic, we express the
+drawer through the octave term in its exponent convention:</p>
+<p><span class="math display">\[ \Omega_n = \Phi^{n} \cdot \Omega_0,
+\qquad \Omega_0 \equiv \text{SRY anchor} \]</span>
+{#eq:part_III_y-chromosome_anchor}</p>
+<p>Under <span class="citation"
+data-cites="eq:part_III_y-chromosome_anchor">[@eq:part_III_y-chromosome_anchor]</span>,
+the <em>SRY</em> locus sits at index <span
+class="math inline">\(0\)</span> with value <span
+class="math inline">\(\Omega_0\)</span>, and every subsequent drawer
+offset is measured in multiples of that anchor. For the drawer this
+chapter is named after — digit 4 — the anchor gives <span
+class="math inline">\(\Omega_4 = \Phi^4 \cdot \Omega_0 = 6.854102 \cdot
+\Omega_0\)</span> using the pinned value <span
+class="math inline">\(\Phi^4 = 6.854102\)</span>. We read this
+zero-point anchoring as consonant with the corpus’s wider zero-anchor
+filing — the zero octave, node <span class="math inline">\(k=0\)</span>,
+of <span class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>
+— though the y-chromosome note itself makes no such cross-claim; that
+connection is our interpretation, not the source’s.</p>
+<table id="tbl:part_III_y-chromosome_anchor">
+<caption>Parameters of the drawer-anchor filing model.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\Omega_n\)</span></td>
+<td>drawer value at index <span class="math inline">\(n\)</span>
+(exponent convention)</td>
+<td>anchor units</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Omega_0\)</span></td>
+<td>zero-point anchor value, filed as the <em>SRY</em> locus</td>
+<td>anchor units</td>
+</tr>
+<tr>
+<td><span class="math inline">\(n\)</span></td>
+<td>drawer/digit index; <span class="math inline">\(n = 4\)</span> for
+the digit-4 drawer</td>
+<td>dimensionless</td>
+</tr>
+</tbody>
+</table>
+<h3 id="move-3-cross-species-hypothesis">Move 3 — Cross-species
+hypothesis</h3>
+<p>The third move is deliberately the least physical: the note
+<em>proposes</em> regression protocols across species <strong>on
+paper</strong> and marks them, explicitly, as “not executed wet-lab
+output here” [mendez2026yChromosome]. In catalog terms, a regression
+protocol would test whether the geometric indexing of <span
+class="citation"
+data-cites="eq:part_III_y-chromosome_palin">[@eq:part_III_y-chromosome_palin]</span>
+survives refitting with different base spacings <span
+class="math inline">\(P_0\)</span> across species — an ordinary
+regression on <span class="math inline">\(\log P_n = \log P_0 + n \log
+\Phi\)</span>. The corpus files the proposal; it does not claim a
+result. This is the same discipline the book applies throughout:
+proposals live on the paper layer of the stack (see <span
+class="citation"
+data-cites="sec:part_III_moving-up-stack">[@sec:part_III_moving-up-stack]</span>)
+until they are executed, and an unexecuted proposal is never upgraded by
+prose.</p>
+<h3 id="the-manifestation-convergence-set-grammar">The manifestation /
+convergence-set grammar</h3>
+<p>Wrapping the three moves is the note’s actual novelty:
+<strong>manifestation / convergence-set</strong> language for “how Φ
+shows up in polar-identity filing — Story depth, not infinite physics
+tiers” [mendez2026yChromosome]. The grammar is <a
+href="#gl:holographic-rhyme"><strong>holographic-rhyme</strong></a> in
+the corpus’s sense — the four-pillar interference family of Part I —
+applied to a polar-identity drawer rather than to a physical field. A
+guest question enters the Digit 4 nest, the three filing moves process
+it, and everything the moves produce converges on a single honest output
+line, as <span class="citation"
+data-cites="fig:part_III_y-chromosome">[@fig:part_III_y-chromosome]</span>
+shows as sub-band bars and the diagram below shows as a flow:</p>
+<pre class="mermaid"><code>graph TD
+  A[&quot;Guest question at Lattice Chat — Digit 4 nest&quot;] --&gt; B{&quot;Filing mode: Infinite Octave Mode&quot;}
+  B --&gt; C[&quot;Move 1 — Palindrome scaling: P_n = P_0 · Φ^n&quot;]
+  B --&gt; D[&quot;Move 2 — SRY phase origin: zero-point anchor&quot;]
+  B --&gt; E[&quot;Move 3 — Cross-species regression: proposed on paper&quot;]
+  C --&gt; F[&quot;Catalog geometry keyed by Φ ≈ 1.618&quot;]
+  D --&gt; F
+  E --&gt; F
+  F --&gt; G[&quot;Honesty-first scope: catalog filing, not literal physics&quot;]
+  G --&gt;|&quot;complements, does not replace&quot;| H[&quot;July operator-translation decode: codon gates, palindrome loops, haplogroup Stories&quot;]</code></pre>
+<h2 id="worked-example-walking-the-digit-4-drawer">Worked Example:
+Walking the Digit-4 Drawer</h2>
+<p>Take the base spacing <span class="math inline">\(P_0 = 1\)</span>
+catalog spacing unit and walk <span class="citation"
+data-cites="eq:part_III_y-chromosome_palin">[@eq:part_III_y-chromosome_palin]</span>
+across the drawer, from the zero-point anchor at index <span
+class="math inline">\(0\)</span> (our reading of the <em>SRY</em>
+filing) up through arm P8 at index <span
+class="math inline">\(8\)</span>. The values are the pinned powers of
+<span class="math inline">\(\Phi\)</span> for <span
+class="math inline">\(n = 1\)</span> through <span
+class="math inline">\(6\)</span>, extended by the same multiplication:
+<span class="math inline">\(\Phi^7 = \Phi^6 \cdot \Phi =
+29.034442\)</span> and <span class="math inline">\(\Phi^8 = \Phi^7 \cdot
+\Phi = 46.978714\)</span>. <span class="citation"
+data-cites="tbl:part_III_y-chromosome_spacing">[@tbl:part_III_y-chromosome_spacing]</span>
+lists the full drawer; these are exactly the sub-band heights drawn in
+<span class="citation"
+data-cites="fig:part_III_y-chromosome">[@fig:part_III_y-chromosome]</span>.</p>
+<table id="tbl:part_III_y-chromosome_spacing">
+<caption>Φ-scaled sub-band spacing across the digit-4 drawer (<span
+class="math inline">\(P_0 = 1\)</span>).</caption>
+<thead>
+<tr>
+<th style="text-align: right;"><span
+class="math inline">\(n\)</span></th>
+<th>Sub-band</th>
+<th style="text-align: right;"><span class="math inline">\(P_n / P_0 =
+\Phi^n\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">0</td>
+<td>SRY anchor</td>
+<td style="text-align: right;">1.000000</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td>P1</td>
+<td style="text-align: right;">1.618034</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>P2</td>
+<td style="text-align: right;">2.618034</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>P3</td>
+<td style="text-align: right;">4.236068</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>P4</td>
+<td style="text-align: right;">6.854102</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>P5</td>
+<td style="text-align: right;">11.090170</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>P6</td>
+<td style="text-align: right;">17.944272</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>P7</td>
+<td style="text-align: right;">29.034442</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>P8</td>
+<td style="text-align: right;">46.978714</td>
+</tr>
+</tbody>
+</table>
+<p>Three checks make the drawer concrete:</p>
+<ol type="1">
+<li><strong>Ratio check.</strong> Every consecutive pair satisfies <span
+class="math inline">\(P_{n+1}/P_n = \Phi\)</span> exactly: for example,
+<span class="math inline">\(P_2/P_1 = 2.618034 / 1.618034 =
+1.618034\)</span>. The filing is geometric by construction — which is
+precisely the claim of C-y-chromosome-manifestation-3: spacing is
+<em>indexed</em> geometrically rather than labeled as drift
+[mendez2026yChromosome].</li>
+<li><strong>Span check.</strong> Arm P8 sits <span
+class="math inline">\(46.978714\)</span> base spacings from the anchor —
+the full drawer spans a factor of <span
+class="math inline">\(\Phi^8\)</span>. In log terms, <span
+class="math inline">\(\log_{\Phi}(P_8/P_0) = 8\)</span> exactly: the
+octave index <em>is</em> the logarithm base <span
+class="math inline">\(\Phi\)</span> of the spacing ratio.</li>
+<li><strong>Anchor check.</strong> With the anchor value <span
+class="math inline">\(\Omega_0 = 1\)</span>, the drawer’s digit-4 offset
+from <span class="citation"
+data-cites="eq:part_III_y-chromosome_anchor">[@eq:part_III_y-chromosome_anchor]</span>
+is <span class="math inline">\(\Omega_4 = 6.854102\)</span>. Under the
+subscript convention the same index would give <span
+class="math inline">\(\Omega_4 = \tfrac{F_5}{F_4}\,\Omega_0 =
+\tfrac{5}{3} \approx
+1.666667\)</span> — a useful reminder that the two conventions diverge
+badly at low indices, and that the corpus’s printed form (<span
+class="math inline">\(\Phi^n \cdot \Omega_0\)</span>) is the exponent
+one.</li>
+</ol>
+<p>In <code>textbook.models</code>, the first column of <span
+class="citation"
+data-cites="tbl:part_III_y-chromosome_spacing">[@tbl:part_III_y-chromosome_spacing]</span>
+is <code>phi_powers(8)</code>; recompute nothing by hand when scripting
+the lab of <span class="citation"
+data-cites="sec:lab_part_III_y-chromosome">[@sec:lab_part_III_y-chromosome]</span>.</p>
+<h2 id="scope-and-honesty">Scope and Honesty</h2>
+<p>The note’s own scope statements are unusually crisp and must be
+carried verbatim into any use of this material
+[mendez2026yChromosome]:</p>
+<blockquote>
+<p><strong>Honesty first:</strong> this is catalog filing and
+architectural equations — not a claim that MSY literally equals a
+physics constant, that sunspot AR 3664 writes human DNA, or that fractal
+dimension has been measured to Φ in this repository. Clinical genetics
+and human dignity outrank every metaphor.</p>
+</blockquote>
+<p>Unpacking the disclaimer:</p>
+<ul>
+<li><strong>What the construct is.</strong> A <em>filing grammar</em>: a
+deterministic, coordination-friendly way for the ship’s agents to index,
+route, and discuss MSY structures — palindrome arms, phase anchors,
+drawer numbers — inside the catalog. Its outputs are catalog entries,
+fixture locks, and Lattice Chat routes, not laboratory
+measurements.</li>
+<li><strong>What the construct is not.</strong> Not a literal-physics
+claim (the MSY does not “equal” <span
+class="math inline">\(\Phi\)</span>); not a solar-biology claim (sunspot
+active region AR 3664 does not write human DNA); not a measured result
+(fractal dimension has not been measured to <span
+class="math inline">\(\Phi\)</span> anywhere in this repository); and
+not executed wet-lab science (the cross-species protocols of Move 3 are
+proposals on paper).</li>
+<li><strong>What outranks it.</strong> Clinical genetics and human
+dignity. The note files the MSY <em>differently</em> than the “shrinking
+evolutionary relic” framing — that is a choice of filing, presented as
+such — and subordinates the entire metaphor to the dignity of the people
+the filing is about.</li>
+</ul>
+<p>This is the honesty-first tier of the corpus’s
+narrative–empirical–operational <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a> discipline in
+its purest form: the August note is narrative filing, labeled as
+narrative filing, and the corpus’s own gate (the 10/10 fixture lock)
+checks the filing’s internal consistency, never a biological
+hypothesis.</p>
+<h2 id="connections">Connections</h2>
+<ul>
+<li><strong>The drawer grammar</strong> descends from the
+digit-and-octave map of [mendez2026digitsMaster]; read <span
+class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span> first
+for the 99-octave ladder and the exponent/subscript ambiguity this
+chapter carries into <span class="citation"
+data-cites="eq:part_III_y-chromosome_anchor">[@eq:part_III_y-chromosome_anchor]</span>.</li>
+<li><strong>The holographic grammar</strong> is the four-pillar rhyme
+family of [mendez2026holographicRhyme]; the
+manifestation/convergence-set language extends that rhyme family into
+polar-identity filing, alongside the multi-dimensional variants of <span
+class="citation"
+data-cites="sec:part_I_multidimensional-rhyme">[@sec:part_I_multidimensional-rhyme]</span>.</li>
+<li><strong>The zero-point anchor</strong> rhymes with the zero octave
+and node <span class="math inline">\(k = 0\)</span> of <span
+class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>
+— our interpretive bridge, not a claim of the source.</li>
+<li><strong>Biological-filing neighbors.</strong> The protein-folding
+chapter files biomolecular structure as prime-container capacity (<span
+class="citation"
+data-cites="sec:part_III_protein-folding">[@sec:part_III_protein-folding]</span>,
+visualised in <span class="citation"
+data-cites="fig:part_III_protein-folding">[@fig:part_III_protein-folding]</span>);
+the y-chromosome note applies the same cataloging discipline to a genome
+region. Both keep wet-lab claims strictly on the proposal layer.</li>
+<li><strong>Open questions.</strong> The unexecuted cross-species
+regression protocols belong on the open-problems map of <span
+class="citation"
+data-cites="sec:part_III_frontiers">[@sec:part_III_frontiers]</span>,
+and the note’s careful visibility boundaries — what the filing shows and
+to whom — prepare for the threshold analysis of <span class="citation"
+data-cites="sec:part_III_invisible-frontier">[@sec:part_III_invisible-frontier]</span>.</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>The August 2026 y-chromosome note files the male-specific region of
+the Y chromosome as catalog geometry under Infinite Octave Mode:
+palindrome arms P1–P8 scale as <span class="math inline">\(P_0 \cdot
+\Phi^n\)</span>, the <em>SRY</em> locus anchors the drawer’s phase at
+zero, and cross-species regression protocols are proposed strictly on
+paper [mendez2026yChromosome]. The note adds a <em>manifestation /
+convergence-set</em> grammar that complements, without replacing, the
+July operator-translation decode. Its formalisms are two: a geometric
+indexing implemented through <code>textbook.models.phi_powers</code>,
+and a zero-anchor drawer model expressed through
+<code>octave_term</code> in its exponent convention. Every physical
+reading is explicitly disclaimed — catalog filing, not literal physics —
+and clinical genetics and human dignity are filed as outranking every
+metaphor.</p>
+<h2 id="key-terms">Key Terms</h2>
+<p><a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:omni-lattice"><strong>omni-lattice</strong></a>, <a
+href="#gl:octave"><strong>octave</strong></a>, <a
+href="#gl:digit"><strong>digit</strong></a>, <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a>, <a
+href="#gl:holographic-rhyme"><strong>holographic-rhyme</strong></a>, <a
+href="#gl:master-register"><strong>master-register</strong></a>, <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a>, <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a>, <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a>.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><strong>Whitepaper surface (August note):</strong> <em>The
+Holographic Manifestation: Y Chromosome as Expression of El Gran Sol’s
+Fractal Constant</em> — <a
+href="https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-y-chromosome-holographic-manifestation-2026-08"
+class="uri">https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-y-chromosome-holographic-manifestation-2026-08</a></li>
+<li><strong>Ship-blog note:</strong> <a
+href="https://www.ssvibelandiaquestfest24x365.com/ship-blog/y-chromosome-manifestation"
+class="uri">https://www.ssvibelandiaquestfest24x365.com/ship-blog/y-chromosome-manifestation</a>
+[mendez2026yChromosome]</li>
+<li><strong>Companion July decode:</strong> <em>Y-Chromosome
+Holographic</em> operator-translation whitepaper (codon gates and
+palindrome loops) — <a
+href="https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-y-chromosome-holographic-2026-07"
+class="uri">https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-y-chromosome-holographic-2026-07</a></li>
+<li><span class="citation"
+data-cites="mendez2026digitsMaster">@mendez2026digitsMaster</span> — the
+digits-and-octaves map that defines the drawer grammar and the
+exponent/subscript convention ambiguity.</li>
+<li><span class="citation"
+data-cites="mendez2026holographicRhyme">@mendez2026holographicRhyme</span>
+— the four-pillar holographic-rhyme family the manifestation grammar
+extends.</li>
+<li><span class="citation"
+data-cites="mendez2026zeroOctave">@mendez2026zeroOctave</span> —
+zero-anchor filing elsewhere in the corpus, the natural companion to the
+SRY phase origin.</li>
+</ul>
+<h2 id="practice">Practice</h2>
+<ol type="1">
+<li><strong>Ratio drill.</strong> Using <span class="math inline">\(\Phi
+\approx 1.6180339887\)</span>, compute <span
+class="math inline">\(P_1\)</span> through <span
+class="math inline">\(P_4\)</span> for <span class="math inline">\(P_0 =
+2.5\)</span> catalog spacing units via <span class="citation"
+data-cites="eq:part_III_y-chromosome_palin">[@eq:part_III_y-chromosome_palin]</span>,
+then verify each against <code>textbook.models.phi_powers</code>.
+<em>(Expected: <span class="math inline">\(P_1 = 4.045085\)</span>,
+<span class="math inline">\(P_2 = 6.545085\)</span>, <span
+class="math inline">\(P_3 = 10.590170\)</span>; check <span
+class="math inline">\(P_2/P_1 = \Phi\)</span>.)</em></li>
+<li><strong>Drawer walk.</strong> Reproduce <span class="citation"
+data-cites="tbl:part_III_y-chromosome_spacing">[@tbl:part_III_y-chromosome_spacing]</span>
+for <span class="math inline">\(P_0 = 1\)</span> and state <span
+class="math inline">\(\log_{\Phi}(P_6/P_0)\)</span> without a
+calculator. Explain why the answer is exact.</li>
+<li><strong>Convention contrast.</strong> Evaluate the digit-4 drawer
+offset <span class="math inline">\(\Omega_4\)</span> under both
+conventions of <code>textbook.models.octave_term</code> (<span
+class="math inline">\(\Omega_0 = 1\)</span>) and explain which one <span
+class="citation"
+data-cites="eq:part_III_y-chromosome_palin">[@eq:part_III_y-chromosome_palin]</span>
+corresponds to, and why the corpus’s printed octave relation is
+ambiguous.</li>
+<li><strong>Scope triage.</strong> For each of the following, decide
+whether the August note claims it, files it, or disclaims it: (a) the
+MSY equals <span class="math inline">\(\Phi\)</span>; (b) palindrome
+spacing indexed geometrically; (c) sunspot AR 3664 writing human DNA;
+(d) cross-species regression protocols. Justify each with the note’s own
+wording [mendez2026yChromosome].</li>
+<li><strong>Lab and question bank.</strong> Work through <span
+class="citation"
+data-cites="sec:lab_part_III_y-chromosome">[@sec:lab_part_III_y-chromosome]</span>
+end to end, then test yourself with <span class="citation"
+data-cites="sec:q_part_III_y-chromosome">[@sec:q_part_III_y-chromosome]</span>.</li>
+</ol>
+</main>
+</body>
+</html>

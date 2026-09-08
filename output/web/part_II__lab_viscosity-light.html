@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>lab_viscosity-light.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:lab_part_II_viscosity-light">Lab — The Viscosity of
+Light</h1>
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Lab · 60 min · Materials: notebook, calculator (or
+<code>textbook.models</code>), terminal with <code>npm</code> and
+<code>python3</code></p>
+</blockquote>
+<h2 id="objectives">Objectives</h2>
+<p>After this lab you will be able to: (1) run the Viscosity-of-Light
+paper’s own EGS Viscosity Engine reference implementation and describe
+what it emits; (2) compute the viscous floor <span
+class="math inline">\(v(t) = v_0 e^{-kt}\)</span> of <span
+class="citation"
+data-cites="eq:part_II_viscosity-light_viscous_floor">[@eq:part_II_viscosity-light_viscous_floor]</span>
+by hand at three story-times and verify each against the tested
+<code>textbook.models.transduction_brake</code>; (3) recover a drag
+coefficient <span class="math inline">\(k\)</span> from a single
+velocity reading, the inverse-reading skill behind the ladder of <span
+class="citation"
+data-cites="eq:part_II_viscosity-light_family">[@eq:part_II_viscosity-light_family]</span>;
+and (4) sort the paper’s artefacts onto the <a
+href="#gl:narrative-empirical-operational-tiers"><strong>narrative-empirical-operational-tiers</strong></a>
+ladder.</p>
+<h2 id="background">Background</h2>
+<p>The chapter (<span class="citation"
+data-cites="sec:part_II_viscosity-light">[@sec:part_II_viscosity-light]</span>)
+read the paper’s filing — the speed of light as <em>frictional
+drag</em>, non-local intent meeting a viscous floor at <span
+class="math inline">\(c\)</span> under <span class="math inline">\(\Phi
+\approx 1.618\)</span> — and modelled that floor with the transduction
+brake of <span class="citation"
+data-cites="eq:part_II_viscosity-light_viscous_floor">[@eq:part_II_viscosity-light_viscous_floor]</span>
+[mendez2026viscosityLight]. The paper states the filing in prose; the
+brake is the book’s formalisation. Your job here is twofold: observe
+what the corpus’s own machinery actually outputs, and check the book’s
+model against hand arithmetic so prose and computation cannot silently
+disagree. The <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a> clause
+applies to everything you touch: none of it is a measurement of
+light.</p>
+<h2 id="procedure">Procedure</h2>
+<ol type="1">
+<li><strong>Predict before running.</strong> The EGS Viscosity Engine is
+catalog machinery [mendez2026viscosityLight]. Predict what it emits:
+registry artefacts and shelf metadata, or physical measurements of
+light? Write your prediction down before step 2.</li>
+<li><strong>Run the reference implementation.</strong> From the
+standalone repository
+(<code>github.com/FractiAI/synthobs-viscosity-of-light</code>), execute
+<code>npm run research:synthobs-viscosity-of-light</code>. Alternatively
+run the engine script directly:
+<code>python3 research/synthobs-viscosity-of-light/reference/egs_viscosity_of_light_engine.py</code>
+[mendez2026viscosityLight]. Record: what artefacts appear, and does the
+9/9-passing suite print any physical quantity? Compare with your
+prediction in step 1.</li>
+<li><strong>Compute the floor by hand.</strong> With <span
+class="math inline">\(v_0 = 1\)</span> and <span class="math inline">\(k
+= 1\)</span>, evaluate <span class="citation"
+data-cites="eq:part_II_viscosity-light_viscous_floor">[@eq:part_II_viscosity-light_viscous_floor]</span>
+at story-times <span class="math inline">\(t = 1, 2, 3\)</span>. Expect
+<span class="math inline">\(v(1) = e^{-1} \approx 0.367879\)</span>,
+<span class="math inline">\(v(2) \approx 0.135335\)</span>, <span
+class="math inline">\(v(3) \approx 0.049787\)</span>. Then step one
+<span class="math inline">\(\Phi\)</span>-rung up the ladder of <span
+class="citation"
+data-cites="eq:part_II_viscosity-light_family">[@eq:part_II_viscosity-light_family]</span>
+to <span class="math inline">\(k = \Phi \approx 1.618034\)</span> and
+compute <span class="math inline">\(v(1)\)</span> and <span
+class="math inline">\(v(2)\)</span>.</li>
+<li><strong>Check against the tested function.</strong> In a Python
+session, import <code>transduction_brake</code> from
+<code>textbook.models</code>, evaluate it at <span
+class="math inline">\(t = 0, 1, 2, 3\)</span> for <span
+class="math inline">\(k = 1\)</span> and at <span
+class="math inline">\(t = 1, 2\)</span> for <span
+class="math inline">\(k = \Phi\)</span>, and diff against your hand
+values (see the Computational Workflow below).</li>
+<li><strong>Invert a reading.</strong> Suppose a floor probe reports
+<span class="math inline">\(v(1) = 0.135335\)</span> with <span
+class="math inline">\(v_0 = 1\)</span>. Recover <span
+class="math inline">\(k = -\ln v(1)\)</span>, verify with the tested
+function, and name the ladder rung of <span class="citation"
+data-cites="eq:part_II_viscosity-light_family">[@eq:part_II_viscosity-light_family]</span>
+it occupies.</li>
+<li><strong>Sort the artefacts.</strong> Place the paper’s four “What
+landed” items — <span class="math inline">\(c\)</span> as viscosity,
+cognitive non-locality Soft Story, EGS Viscosity Engine, engine shelf
+#24 [mendez2026viscosityLight] — on the tiers ladder, one sentence of
+justification each.</li>
+</ol>
+<h2 id="analysis">Analysis</h2>
+<ul>
+<li>Your step-1 prediction should have been artefacts, not measurements:
+a 9/9 suite certifies agreement between implementation and specification
+— the right kind of evidence for a <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>
+filing, and the wrong kind for a physical claim about <span
+class="math inline">\(c\)</span>.</li>
+<li>The hand/function agreement in step 4 shows the <em>model</em> is
+reproducible; the paper’s disclaimer (not relativity retirement, not FTL
+thought, not NOAA causation [mendez2026viscosityLight]) bounds what that
+reproducibility means.</li>
+<li>From the step-5 inversion, <span class="math inline">\(k =
+2\)</span>: drag recoverable from a single reading is exactly what makes
+the family of <span class="citation"
+data-cites="fig:part_II_viscosity-light">[@fig:part_II_viscosity-light]</span>
+a usable catalog instrument.</li>
+<li>Summarise your six hand values with
+<code>textbook.models.descriptive_statistics</code> (mean, spread) and
+note how much faster the <span class="math inline">\(k = \Phi\)</span>
+rung drains the remaining velocity: one <span
+class="math inline">\(\Phi\)</span>-step multiplies any remaining
+velocity by <span class="math inline">\(e^{-1/\Phi} \approx
+0.539\)</span>.</li>
+</ul>
+<h2 id="computational-workflow">Computational Workflow</h2>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textbook.models <span class="im">import</span> transduction_brake, descriptive_statistics</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: unity drag, the backbone values</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>hand_k1 <span class="op">=</span> np.array([<span class="fl">1.0</span>, <span class="fl">0.367879</span>, <span class="fl">0.135335</span>, <span class="fl">0.049787</span>])</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>model_k1 <span class="op">=</span> transduction_brake(np.array([<span class="fl">0.0</span>, <span class="fl">1.0</span>, <span class="fl">2.0</span>, <span class="fl">3.0</span>]), v0<span class="op">=</span><span class="fl">1.0</span>, k<span class="op">=</span><span class="fl">1.0</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> np.allclose(model_k1, hand_k1, atol<span class="op">=</span><span class="fl">1e-6</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: one Phi-rung up the ladder</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>phi <span class="op">=</span> (<span class="dv">1</span> <span class="op">+</span> <span class="dv">5</span><span class="op">**</span><span class="fl">0.5</span>) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>hand_phi <span class="op">=</span> np.array([<span class="fl">0.198288</span>, <span class="fl">0.039318</span>])</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>model_phi <span class="op">=</span> transduction_brake(np.array([<span class="fl">1.0</span>, <span class="fl">2.0</span>]), v0<span class="op">=</span><span class="fl">1.0</span>, k<span class="op">=</span>phi)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> np.allclose(model_phi, hand_phi, atol<span class="op">=</span><span class="fl">1e-6</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: invert a reading</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>k_recovered <span class="op">=</span> <span class="op">-</span>np.log(<span class="fl">0.135335</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(k_recovered)  <span class="co"># -&gt; 2.000001...</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Spread of your six hand values</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(descriptive_statistics(np.concatenate([hand_k1[<span class="dv">1</span>:], hand_phi])))</span></code></pre></div>
+<h2 id="reflection">Reflection</h2>
+<ol type="1">
+<li>The paper’s headline says light “slows thought down”
+[mendez2026viscosityLight]. In brake vocabulary, what is being slowed,
+what is the floor, and why does “slow” not mean “stop” (<span
+class="math inline">\(v(t) &gt; 0\)</span> for all finite <span
+class="math inline">\(t\)</span>)?</li>
+<li>The engine’s 9/9 suite and the tested
+<code>transduction_brake</code> are two different guarantees. Which one
+certifies the corpus against itself, and which certifies this book’s
+model against arithmetic?</li>
+<li>If a future paper operationalised cognitive non-locality into a
+measurable protocol, which of the paper’s disclaimers would have to be
+withdrawn, and what would the <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> clause
+require before the Soft Story could change tiers?</li>
+</ol>
+</main>
+</body>
+</html>

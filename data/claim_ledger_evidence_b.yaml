@@ -1,0 +1,1100 @@
+claims:
+- claim_id: num-evidence-444-part-ii-crystalline-field-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/part_II/crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/crystalline-field.md
+- claim_id: num-evidence-445-part-ii-crystalline-field-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/part_II/crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/crystalline-field.md
+- claim_id: num-evidence-446-part-ii-crystalline-field-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/part_II/crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/crystalline-field.md
+- claim_id: num-evidence-447-part-ii-crystalline-field-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/part_II/crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/crystalline-field.md
+- claim_id: num-evidence-449-part-ii-crystalline-field-md
+  kind: number
+  value: '1.380649'
+  source: docs/manuscript/part_II/crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/crystalline-field.md
+- claim_id: num-evidence-455-part-ii-crystalline-field-md
+  kind: number
+  value: '179.44272'
+  source: docs/manuscript/part_II/crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/crystalline-field.md
+- claim_id: num-evidence-456-part-ii-crystalline-field-md
+  kind: number
+  value: '16.18182'
+  source: docs/manuscript/part_II/crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/crystalline-field.md
+- claim_id: num-evidence-459-part-ii-crystalline-field-md
+  kind: number
+  value: '68.541020'
+  source: docs/manuscript/part_II/crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/crystalline-field.md
+- claim_id: num-evidence-460-part-ii-crystalline-field-md
+  kind: number
+  value: '1.458984'
+  source: docs/manuscript/part_II/crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/crystalline-field.md
+- claim_id: num-evidence-461-part-ii-crystalline-field-md
+  kind: number
+  value: '122.991869'
+  source: docs/manuscript/part_II/crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/crystalline-field.md
+- claim_id: num-evidence-464-part-ii-eddy-current-mirror-md
+  kind: number
+  value: 36.8%
+  source: docs/manuscript/part_II/eddy-current-mirror.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/eddy-current-mirror.md
+- claim_id: num-evidence-465-part-ii-eddy-current-mirror-md
+  kind: number
+  value: 13.5%
+  source: docs/manuscript/part_II/eddy-current-mirror.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/eddy-current-mirror.md
+- claim_id: num-evidence-470-part-ii-metamorphic-octaves-md
+  kind: number
+  value: '2.609438'
+  source: docs/manuscript/part_II/metamorphic-octaves.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/metamorphic-octaves.md
+- claim_id: num-evidence-472-part-ii-metamorphic-octaves-md
+  kind: number
+  value: '1.098612'
+  source: docs/manuscript/part_II/metamorphic-octaves.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/metamorphic-octaves.md
+- claim_id: num-evidence-473-part-ii-metamorphic-octaves-md
+  kind: number
+  value: '1.609438'
+  source: docs/manuscript/part_II/metamorphic-octaves.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/metamorphic-octaves.md
+- claim_id: num-evidence-474-part-ii-metamorphic-octaves-md
+  kind: number
+  value: '2.197225'
+  source: docs/manuscript/part_II/metamorphic-octaves.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/metamorphic-octaves.md
+- claim_id: num-evidence-478-part-ii-metrological-overlap-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/part_II/metrological-overlap.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/metrological-overlap.md
+- claim_id: num-evidence-479-part-ii-metrological-overlap-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/part_II/metrological-overlap.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/metrological-overlap.md
+- claim_id: num-evidence-480-part-ii-metrological-overlap-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/part_II/metrological-overlap.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/metrological-overlap.md
+- claim_id: num-evidence-481-part-ii-metrological-overlap-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/part_II/metrological-overlap.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/metrological-overlap.md
+- claim_id: num-evidence-482-part-ii-metrological-overlap-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/part_II/metrological-overlap.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/metrological-overlap.md
+- claim_id: num-evidence-483-part-ii-metrological-overlap-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/part_II/metrological-overlap.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/metrological-overlap.md
+- claim_id: num-evidence-484-part-ii-metrological-overlap-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/part_II/metrological-overlap.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/metrological-overlap.md
+- claim_id: num-evidence-492-part-ii-proton-theater-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/part_II/proton-theater.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/proton-theater.md
+- claim_id: num-evidence-495-part-ii-proton-theater-md
+  kind: number
+  value: '3.236068'
+  source: docs/manuscript/part_II/proton-theater.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/proton-theater.md
+- claim_id: num-evidence-496-part-ii-proton-theater-md
+  kind: number
+  value: '1.236068'
+  source: docs/manuscript/part_II/proton-theater.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/proton-theater.md
+- claim_id: num-evidence-501-part-ii-viscosity-light-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/part_II/viscosity-light.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/viscosity-light.md
+- claim_id: num-evidence-502-part-ii-viscosity-light-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/part_II/viscosity-light.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_II/viscosity-light.md
+- claim_id: num-evidence-509-part-iii-cmos-protonic-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/part_III/cmos-protonic.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/cmos-protonic.md
+- claim_id: num-evidence-510-part-iii-cmos-protonic-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/part_III/cmos-protonic.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/cmos-protonic.md
+- claim_id: num-evidence-511-part-iii-cmos-protonic-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/part_III/cmos-protonic.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/cmos-protonic.md
+- claim_id: num-evidence-512-part-iii-cmos-protonic-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/part_III/cmos-protonic.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/cmos-protonic.md
+- claim_id: num-evidence-513-part-iii-cmos-protonic-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/part_III/cmos-protonic.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/cmos-protonic.md
+- claim_id: num-evidence-514-part-iii-cmos-protonic-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/part_III/cmos-protonic.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/cmos-protonic.md
+- claim_id: num-evidence-515-part-iii-cmos-protonic-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/part_III/cmos-protonic.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/cmos-protonic.md
+- claim_id: num-evidence-516-part-iii-cmos-protonic-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/part_III/cmos-protonic.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/cmos-protonic.md
+- claim_id: num-evidence-517-part-iii-frontiers-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/part_III/frontiers.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/frontiers.md
+- claim_id: num-evidence-522-part-iii-invisible-frontier-md
+  kind: number
+  value: '6.989709'
+  source: docs/manuscript/part_III/invisible-frontier.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/invisible-frontier.md
+- claim_id: num-evidence-525-part-iii-invisible-frontier-md
+  kind: number
+  value: '2.571370'
+  source: docs/manuscript/part_III/invisible-frontier.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/invisible-frontier.md
+- claim_id: num-evidence-530-part-iii-invisible-frontier-md
+  kind: number
+  value: '2.944439'
+  source: docs/manuscript/part_III/invisible-frontier.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/invisible-frontier.md
+- claim_id: num-evidence-531-part-iii-kinematic-recycling-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/part_III/kinematic-recycling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/kinematic-recycling.md
+- claim_id: num-evidence-532-part-iii-kinematic-recycling-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/part_III/kinematic-recycling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/kinematic-recycling.md
+- claim_id: num-evidence-535-part-iii-kinematic-recycling-md
+  kind: number
+  value: '0.503710'
+  source: docs/manuscript/part_III/kinematic-recycling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/kinematic-recycling.md
+- claim_id: num-evidence-538-part-iii-kinematic-recycling-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/part_III/kinematic-recycling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/kinematic-recycling.md
+- claim_id: num-evidence-539-part-iii-kinematic-recycling-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/part_III/kinematic-recycling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/kinematic-recycling.md
+- claim_id: num-evidence-540-part-iii-kinematic-recycling-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/part_III/kinematic-recycling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/kinematic-recycling.md
+- claim_id: num-evidence-541-part-iii-kinematic-recycling-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/part_III/kinematic-recycling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/kinematic-recycling.md
+- claim_id: num-evidence-542-part-iii-macro-protein-md
+  kind: number
+  value: '521.0'
+  source: docs/manuscript/part_III/macro-protein.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/macro-protein.md
+- claim_id: num-evidence-543-part-iii-macro-protein-md
+  kind: number
+  value: '3571.0'
+  source: docs/manuscript/part_III/macro-protein.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/macro-protein.md
+- claim_id: num-evidence-544-part-iii-macro-protein-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/part_III/macro-protein.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/macro-protein.md
+- claim_id: num-evidence-546-part-iii-macro-protein-md
+  kind: number
+  value: '3571.000'
+  source: docs/manuscript/part_III/macro-protein.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/macro-protein.md
+- claim_id: num-evidence-549-part-iii-macro-protein-md
+  kind: number
+  value: '1.618026'
+  source: docs/manuscript/part_III/macro-protein.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/macro-protein.md
+- claim_id: num-evidence-552-part-iii-macro-protein-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/part_III/macro-protein.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/macro-protein.md
+- claim_id: num-evidence-567-part-iii-moving-up-stack-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/part_III/moving-up-stack.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/moving-up-stack.md
+- claim_id: num-evidence-568-part-iii-moving-up-stack-md
+  kind: number
+  value: 0.002%
+  source: docs/manuscript/part_III/moving-up-stack.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/moving-up-stack.md
+- claim_id: num-evidence-569-part-iii-moving-up-stack-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/part_III/moving-up-stack.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/moving-up-stack.md
+- claim_id: num-evidence-577-part-iii-pdvsa-gateway-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/part_III/pdvsa-gateway.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/pdvsa-gateway.md
+- claim_id: num-evidence-578-part-iii-pdvsa-gateway-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/part_III/pdvsa-gateway.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/pdvsa-gateway.md
+- claim_id: num-evidence-579-part-iii-pdvsa-gateway-md
+  kind: number
+  value: '3.236068'
+  source: docs/manuscript/part_III/pdvsa-gateway.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/pdvsa-gateway.md
+- claim_id: num-evidence-580-part-iii-pdvsa-gateway-md
+  kind: number
+  value: '4.854102'
+  source: docs/manuscript/part_III/pdvsa-gateway.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/pdvsa-gateway.md
+- claim_id: num-evidence-581-part-iii-pdvsa-gateway-md
+  kind: number
+  value: '6.472136'
+  source: docs/manuscript/part_III/pdvsa-gateway.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/pdvsa-gateway.md
+- claim_id: num-evidence-582-part-iii-pdvsa-gateway-md
+  kind: number
+  value: '8.090170'
+  source: docs/manuscript/part_III/pdvsa-gateway.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/pdvsa-gateway.md
+- claim_id: num-evidence-583-part-iii-pdvsa-gateway-md
+  kind: number
+  value: '9.708204'
+  source: docs/manuscript/part_III/pdvsa-gateway.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/pdvsa-gateway.md
+- claim_id: num-evidence-585-part-iii-protein-folding-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/part_III/protein-folding.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/protein-folding.md
+- claim_id: num-evidence-586-part-iii-protein-folding-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/part_III/protein-folding.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/protein-folding.md
+- claim_id: num-evidence-593-part-iii-reality-bridge-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/part_III/reality-bridge.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/reality-bridge.md
+- claim_id: num-evidence-594-part-iii-reality-bridge-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/part_III/reality-bridge.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/reality-bridge.md
+- claim_id: num-evidence-595-part-iii-reality-bridge-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/part_III/reality-bridge.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/reality-bridge.md
+- claim_id: num-evidence-596-part-iii-reality-bridge-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/part_III/reality-bridge.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/reality-bridge.md
+- claim_id: num-evidence-597-part-iii-reality-bridge-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/part_III/reality-bridge.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/reality-bridge.md
+- claim_id: num-evidence-598-part-iii-reality-bridge-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/part_III/reality-bridge.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/reality-bridge.md
+- claim_id: num-evidence-599-part-iii-reality-bridge-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/part_III/reality-bridge.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/reality-bridge.md
+- claim_id: num-evidence-603-part-iii-volumetric-storage-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/part_III/volumetric-storage.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/volumetric-storage.md
+- claim_id: num-evidence-607-part-iii-volumetric-storage-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/part_III/volumetric-storage.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/volumetric-storage.md
+- claim_id: num-evidence-608-part-iii-volumetric-storage-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/part_III/volumetric-storage.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/volumetric-storage.md
+- claim_id: num-evidence-609-part-iii-volumetric-storage-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/part_III/volumetric-storage.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/volumetric-storage.md
+- claim_id: num-evidence-610-part-iii-volumetric-storage-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/part_III/volumetric-storage.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/volumetric-storage.md
+- claim_id: num-evidence-611-part-iii-volumetric-storage-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/part_III/volumetric-storage.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/volumetric-storage.md
+- claim_id: num-evidence-612-part-iii-volumetric-storage-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/part_III/volumetric-storage.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/volumetric-storage.md
+- claim_id: num-evidence-616-part-iii-y-chromosome-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/part_III/y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/y-chromosome.md
+- claim_id: num-evidence-617-part-iii-y-chromosome-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/part_III/y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/y-chromosome.md
+- claim_id: num-evidence-618-part-iii-y-chromosome-md
+  kind: number
+  value: '29.034442'
+  source: docs/manuscript/part_III/y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/y-chromosome.md
+- claim_id: num-evidence-619-part-iii-y-chromosome-md
+  kind: number
+  value: '46.978714'
+  source: docs/manuscript/part_III/y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/y-chromosome.md
+- claim_id: num-evidence-620-part-iii-y-chromosome-md
+  kind: number
+  value: '1.666667'
+  source: docs/manuscript/part_III/y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/y-chromosome.md
+- claim_id: num-evidence-622-part-iii-y-chromosome-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/part_III/y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/y-chromosome.md
+- claim_id: num-evidence-623-part-iii-y-chromosome-md
+  kind: number
+  value: '4.045085'
+  source: docs/manuscript/part_III/y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/y-chromosome.md
+- claim_id: num-evidence-624-part-iii-y-chromosome-md
+  kind: number
+  value: '6.545085'
+  source: docs/manuscript/part_III/y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/y-chromosome.md
+- claim_id: num-evidence-625-part-iii-y-chromosome-md
+  kind: number
+  value: '10.590170'
+  source: docs/manuscript/part_III/y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/part_III/y-chromosome.md
+- claim_id: num-evidence-626-questions-part-0-q-master-synthesis-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/questions/part_0/q_master-synthesis.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_0/q_master-synthesis.md
+- claim_id: num-evidence-627-questions-part-0-q-master-synthesis-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/questions/part_0/q_master-synthesis.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_0/q_master-synthesis.md
+- claim_id: num-evidence-628-questions-part-0-q-master-synthesis-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/questions/part_0/q_master-synthesis.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_0/q_master-synthesis.md
+- claim_id: num-evidence-629-questions-part-0-q-octave-map-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/questions/part_0/q_octave-map.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_0/q_octave-map.md
+- claim_id: num-evidence-630-questions-part-0-q-octave-map-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/questions/part_0/q_octave-map.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_0/q_octave-map.md
+- claim_id: num-evidence-631-questions-part-0-q-octave-map-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/questions/part_0/q_octave-map.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_0/q_octave-map.md
+- claim_id: num-evidence-636-questions-part-0-q-tensor-decoupling-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/questions/part_0/q_tensor-decoupling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_0/q_tensor-decoupling.md
+- claim_id: num-evidence-637-questions-part-0-q-tensor-decoupling-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/questions/part_0/q_tensor-decoupling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_0/q_tensor-decoupling.md
+- claim_id: num-evidence-639-questions-part-i-q-fractal-constant-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/questions/part_I/q_fractal-constant.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_I/q_fractal-constant.md
+- claim_id: num-evidence-640-questions-part-i-q-fractal-constant-md
+  kind: number
+  value: '049.80'
+  source: docs/manuscript/questions/part_I/q_fractal-constant.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_I/q_fractal-constant.md
+- claim_id: num-evidence-642-questions-part-i-q-fractal-constant-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/questions/part_I/q_fractal-constant.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_I/q_fractal-constant.md
+- claim_id: num-evidence-643-questions-part-i-q-fractal-constant-md
+  kind: number
+  value: '46.978714'
+  source: docs/manuscript/questions/part_I/q_fractal-constant.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_I/q_fractal-constant.md
+- claim_id: num-evidence-648-questions-part-i-q-holographic-rhyme-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/questions/part_I/q_holographic-rhyme.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_I/q_holographic-rhyme.md
+- claim_id: num-evidence-650-questions-part-i-q-multidimensional-rhyme-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/questions/part_I/q_multidimensional-rhyme.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_I/q_multidimensional-rhyme.md
+- claim_id: num-evidence-651-questions-part-i-q-prime-parity-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/questions/part_I/q_prime-parity.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_I/q_prime-parity.md
+- claim_id: num-evidence-652-questions-part-i-q-prime-parity-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/questions/part_I/q_prime-parity.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_I/q_prime-parity.md
+- claim_id: num-evidence-653-questions-part-i-q-prime-parity-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/questions/part_I/q_prime-parity.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_I/q_prime-parity.md
+- claim_id: num-evidence-659-questions-part-ii-q-crystalline-field-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/questions/part_II/q_crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_II/q_crystalline-field.md
+- claim_id: num-evidence-660-questions-part-ii-q-crystalline-field-md
+  kind: number
+  value: '26.180340'
+  source: docs/manuscript/questions/part_II/q_crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_II/q_crystalline-field.md
+- claim_id: num-evidence-661-questions-part-ii-q-crystalline-field-md
+  kind: number
+  value: '3.819660'
+  source: docs/manuscript/questions/part_II/q_crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_II/q_crystalline-field.md
+- claim_id: num-evidence-662-questions-part-ii-q-crystalline-field-md
+  kind: number
+  value: '179.44272'
+  source: docs/manuscript/questions/part_II/q_crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_II/q_crystalline-field.md
+- claim_id: num-evidence-663-questions-part-ii-q-crystalline-field-md
+  kind: number
+  value: '16.18182'
+  source: docs/manuscript/questions/part_II/q_crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_II/q_crystalline-field.md
+- claim_id: num-evidence-666-questions-part-ii-q-crystalline-field-md
+  kind: number
+  value: '1.380649'
+  source: docs/manuscript/questions/part_II/q_crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_II/q_crystalline-field.md
+- claim_id: num-evidence-670-questions-part-ii-q-crystalline-field-md
+  kind: number
+  value: '2.360680'
+  source: docs/manuscript/questions/part_II/q_crystalline-field.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_II/q_crystalline-field.md
+- claim_id: num-evidence-673-questions-part-ii-q-eddy-current-mirror-md
+  kind: number
+  value: 13.5%
+  source: docs/manuscript/questions/part_II/q_eddy-current-mirror.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_II/q_eddy-current-mirror.md
+- claim_id: num-evidence-677-questions-part-ii-q-metamorphic-octaves-md
+  kind: number
+  value: '2.609438'
+  source: docs/manuscript/questions/part_II/q_metamorphic-octaves.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_II/q_metamorphic-octaves.md
+- claim_id: num-evidence-680-questions-part-ii-q-metrological-overlap-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/questions/part_II/q_metrological-overlap.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_II/q_metrological-overlap.md
+- claim_id: num-evidence-685-questions-part-ii-q-proton-theater-md
+  kind: number
+  value: '3.236068'
+  source: docs/manuscript/questions/part_II/q_proton-theater.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_II/q_proton-theater.md
+- claim_id: num-evidence-686-questions-part-ii-q-proton-theater-md
+  kind: number
+  value: '1.236068'
+  source: docs/manuscript/questions/part_II/q_proton-theater.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_II/q_proton-theater.md
+- claim_id: num-evidence-687-questions-part-ii-q-proton-theater-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/questions/part_II/q_proton-theater.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_II/q_proton-theater.md
+- claim_id: num-evidence-689-questions-part-ii-q-proton-theater-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/questions/part_II/q_proton-theater.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_II/q_proton-theater.md
+- claim_id: num-evidence-694-questions-part-ii-q-viscosity-light-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/questions/part_II/q_viscosity-light.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_II/q_viscosity-light.md
+- claim_id: num-evidence-695-questions-part-ii-q-viscosity-light-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/questions/part_II/q_viscosity-light.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_II/q_viscosity-light.md
+- claim_id: num-evidence-697-questions-part-iii-q-cmos-protonic-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/questions/part_III/q_cmos-protonic.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_cmos-protonic.md
+- claim_id: num-evidence-698-questions-part-iii-q-cmos-protonic-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/questions/part_III/q_cmos-protonic.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_cmos-protonic.md
+- claim_id: num-evidence-699-questions-part-iii-q-cmos-protonic-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/questions/part_III/q_cmos-protonic.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_cmos-protonic.md
+- claim_id: num-evidence-700-questions-part-iii-q-cmos-protonic-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/questions/part_III/q_cmos-protonic.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_cmos-protonic.md
+- claim_id: num-evidence-701-questions-part-iii-q-cmos-protonic-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/questions/part_III/q_cmos-protonic.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_cmos-protonic.md
+- claim_id: num-evidence-702-questions-part-iii-q-cmos-protonic-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/questions/part_III/q_cmos-protonic.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_cmos-protonic.md
+- claim_id: num-evidence-703-questions-part-iii-q-frontiers-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/questions/part_III/q_frontiers.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_frontiers.md
+- claim_id: num-evidence-704-questions-part-iii-q-frontiers-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/questions/part_III/q_frontiers.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_frontiers.md
+- claim_id: num-evidence-705-questions-part-iii-q-frontiers-md
+  kind: number
+  value: '122.991869'
+  source: docs/manuscript/questions/part_III/q_frontiers.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_frontiers.md
+- claim_id: num-evidence-706-questions-part-iii-q-invisible-frontier-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/questions/part_III/q_invisible-frontier.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_invisible-frontier.md
+- claim_id: num-evidence-707-questions-part-iii-q-invisible-frontier-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/questions/part_III/q_invisible-frontier.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_invisible-frontier.md
+- claim_id: num-evidence-711-questions-part-iii-q-invisible-frontier-md
+  kind: number
+  value: '2.944439'
+  source: docs/manuscript/questions/part_III/q_invisible-frontier.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_invisible-frontier.md
+- claim_id: num-evidence-712-questions-part-iii-q-invisible-frontier-md
+  kind: number
+  value: '1.666667'
+  source: docs/manuscript/questions/part_III/q_invisible-frontier.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_invisible-frontier.md
+- claim_id: num-evidence-714-questions-part-iii-q-kinematic-recycling-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/questions/part_III/q_kinematic-recycling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_kinematic-recycling.md
+- claim_id: num-evidence-715-questions-part-iii-q-kinematic-recycling-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/questions/part_III/q_kinematic-recycling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_kinematic-recycling.md
+- claim_id: num-evidence-717-questions-part-iii-q-kinematic-recycling-md
+  kind: number
+  value: '0.503710'
+  source: docs/manuscript/questions/part_III/q_kinematic-recycling.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_kinematic-recycling.md
+- claim_id: num-evidence-718-questions-part-iii-q-macro-protein-md
+  kind: number
+  value: '1364.0007'
+  source: docs/manuscript/questions/part_III/q_macro-protein.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_macro-protein.md
+- claim_id: num-evidence-726-questions-part-iii-q-macro-protein-md
+  kind: number
+  value: '3571.000'
+  source: docs/manuscript/questions/part_III/q_macro-protein.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_macro-protein.md
+- claim_id: num-evidence-730-questions-part-iii-q-macro-protein-md
+  kind: number
+  value: '1.618026'
+  source: docs/manuscript/questions/part_III/q_macro-protein.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_macro-protein.md
+- claim_id: num-evidence-733-questions-part-iii-q-macro-protein-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/questions/part_III/q_macro-protein.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_macro-protein.md
+- claim_id: num-evidence-735-questions-part-iii-q-moving-up-stack-md
+  kind: number
+  value: '1.6180339887'
+  source: docs/manuscript/questions/part_III/q_moving-up-stack.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_moving-up-stack.md
+- claim_id: num-evidence-736-questions-part-iii-q-moving-up-stack-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/questions/part_III/q_moving-up-stack.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_moving-up-stack.md
+- claim_id: num-evidence-737-questions-part-iii-q-pdvsa-gateway-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/questions/part_III/q_pdvsa-gateway.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_pdvsa-gateway.md
+- claim_id: num-evidence-738-questions-part-iii-q-reality-bridge-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/questions/part_III/q_reality-bridge.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_reality-bridge.md
+- claim_id: num-evidence-739-questions-part-iii-q-reality-bridge-md
+  kind: number
+  value: '2.618034'
+  source: docs/manuscript/questions/part_III/q_reality-bridge.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_reality-bridge.md
+- claim_id: num-evidence-740-questions-part-iii-q-reality-bridge-md
+  kind: number
+  value: '4.236068'
+  source: docs/manuscript/questions/part_III/q_reality-bridge.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_reality-bridge.md
+- claim_id: num-evidence-747-questions-part-iii-q-volumetric-storage-md
+  kind: number
+  value: '11.090170'
+  source: docs/manuscript/questions/part_III/q_volumetric-storage.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_volumetric-storage.md
+- claim_id: num-evidence-748-questions-part-iii-q-volumetric-storage-md
+  kind: number
+  value: '17.944272'
+  source: docs/manuscript/questions/part_III/q_volumetric-storage.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_volumetric-storage.md
+- claim_id: num-evidence-749-questions-part-iii-q-y-chromosome-md
+  kind: number
+  value: '4.045085'
+  source: docs/manuscript/questions/part_III/q_y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_y-chromosome.md
+- claim_id: num-evidence-750-questions-part-iii-q-y-chromosome-md
+  kind: number
+  value: '6.545085'
+  source: docs/manuscript/questions/part_III/q_y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_y-chromosome.md
+- claim_id: num-evidence-751-questions-part-iii-q-y-chromosome-md
+  kind: number
+  value: '10.590170'
+  source: docs/manuscript/questions/part_III/q_y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_y-chromosome.md
+- claim_id: num-evidence-752-questions-part-iii-q-y-chromosome-md
+  kind: number
+  value: '1.618034'
+  source: docs/manuscript/questions/part_III/q_y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_y-chromosome.md
+- claim_id: num-evidence-753-questions-part-iii-q-y-chromosome-md
+  kind: number
+  value: '6.854102'
+  source: docs/manuscript/questions/part_III/q_y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_y-chromosome.md
+- claim_id: num-evidence-754-questions-part-iii-q-y-chromosome-md
+  kind: number
+  value: '1.666667'
+  source: docs/manuscript/questions/part_III/q_y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_y-chromosome.md
+- claim_id: num-evidence-756-questions-part-iii-q-y-chromosome-md
+  kind: number
+  value: '46.978714'
+  source: docs/manuscript/questions/part_III/q_y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_y-chromosome.md
+- claim_id: num-evidence-757-questions-part-iii-q-y-chromosome-md
+  kind: number
+  value: '1.618182'
+  source: docs/manuscript/questions/part_III/q_y-chromosome.md displayed value
+  source_tier: project_source
+  freshness: active
+  artifact_path: docs/manuscript/questions/part_III/q_y-chromosome.md

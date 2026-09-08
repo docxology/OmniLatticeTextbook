@@ -147,3 +147,241 @@ diagrams:
       - name: "Study"
         steps:
           - {task: "Do lab", score: 3, actors: [Reader, Instructor]}
+
+  - name: corpus_map
+    kind: flowchart
+    title: "Omni-Lattice corpus pipeline"
+    direction: TD
+    nodes:
+      - {id: Ship, label: "Source papers shipped"}
+      - {id: Catalog, label: "Engine catalog"}
+      - {id: Shelf, label: "Engine shelf (24 papers)"}
+      - {id: Companions, label: "Companion volumes"}
+      - {id: Textbook, label: "Omni-Lattice textbook"}
+    edges:
+      - {from: Ship, to: Catalog}
+      - {from: Catalog, to: Shelf, label: "papers"}
+      - {from: Shelf, to: Companions, label: "synthesis"}
+      - {from: Companions, to: Textbook}
+
+  - name: engine_shelf_order
+    kind: flowchart
+    title: "Engine shelf ordering (positions 1-8)"
+    direction: LR
+    nodes:
+      - {id: P1, label: "CMOS/Protonic"}
+      - {id: P2, label: "Tensor Decoupling"}
+      - {id: P3, label: "Master Synthesis"}
+      - {id: P4, label: "Digits"}
+      - {id: P5, label: "Metamorphic"}
+      - {id: P6, label: "Planetary Core"}
+      - {id: P7, label: "Y-Chromosome"}
+      - {id: P8, label: "Invisible Frontier"}
+    edges:
+      - {from: P1, to: P2}
+      - {from: P2, to: P3}
+      - {from: P3, to: P4}
+      - {from: P4, to: P5}
+      - {from: P5, to: P6}
+      - {from: P6, to: P7}
+      - {from: P7, to: P8}
+
+  - name: octave_register
+    kind: flowchart
+    title: "Octave register catalog sizing"
+    direction: TD
+    nodes:
+      - {id: Drawers, label: "9 Digit Drawers"}
+      - {id: Bands, label: "99 Octave Bands"}
+      - {id: Register, label: "Master Register"}
+      - {id: Size, label: "8019 catalog size"}
+    edges:
+      - {from: Drawers, to: Bands}
+      - {from: Bands, to: Register}
+      - {from: Register, to: Size}
+
+  - name: rhyme_combination
+    kind: flowchart
+    title: "Multi-dimensional rhyme composition"
+    direction: LR
+    nodes:
+      - {id: Pillar, label: "Four-Pillar Rhyme"}
+      - {id: Diagonal, label: "xD±yD"}
+      - {id: Multi, label: "Multi-Dimensional Rhyme"}
+    edges:
+      - {from: Pillar, to: Multi}
+      - {from: Diagonal, to: Multi}
+
+  - name: transduction_line
+    kind: flowchart
+    title: "Non-local to local transduction line"
+    direction: LR
+    nodes:
+      - {id: Idea, label: "Non-local ideation"}
+      - {id: Bridge, label: "c-bridge (impedance match)"}
+      - {id: Drag, label: "Self-observation drag"}
+      - {id: Mass, label: "Localized mass"}
+    edges:
+      - {from: Idea, to: Bridge}
+      - {from: Bridge, to: Drag}
+      - {from: Drag, to: Mass}
+
+  - name: metrological_overlap
+    kind: state
+    title: "Unit systems converging on one metrology"
+    transitions:
+      - {from: "[*]", to: Units}
+      - {from: Units, to: Overlap, label: "compare instruments"}
+      - {from: Overlap, to: Unified, label: "agree standards"}
+      - {from: Unified, to: "[*]"}
+
+  - name: net_zero_ledger
+    kind: flowchart
+    title: "Net-zero ledger balance"
+    direction: TD
+    nodes:
+      - {id: In, label: "Inflows"}
+      - {id: Out, label: "Outflows"}
+      - {id: Residual, label: "Residual = 0"}
+      - {id: Crystal, label: "Net Zero Crystal"}
+    edges:
+      - {from: In, to: Residual}
+      - {from: Out, to: Residual}
+      - {from: Residual, to: Crystal}
+
+  - name: lattice_linear_gateway
+    kind: flowchart
+    title: "Lattice-linear gateway (PDVSA companion)"
+    direction: LR
+    nodes:
+      - {id: Field, label: "Source field"}
+      - {id: Transport, label: "Lattice-linear transport"}
+      - {id: Gateway, label: "Gateway ops"}
+    edges:
+      - {from: Field, to: Transport}
+      - {from: Transport, to: Gateway}
+
+  - name: set_recycling_cycle
+    kind: state
+    title: "Set recycling lifecycle"
+    transitions:
+      - {from: "[*]", to: Active, label: "allocate"}
+      - {from: Active, to: Parked, label: "idle"}
+      - {from: Parked, to: Recycled, label: "collect"}
+      - {from: Recycled, to: Active, label: "reuse"}
+
+  - name: pem_lifecycle
+    kind: journey
+    title: "Paper-engineering module journey"
+    sections:
+      - name: "Engineer"
+        steps:
+          - {task: "File a paper", score: 5, actors: [Author]}
+          - {task: "Wire reference implementation", score: 4, actors: [Author, Engineer]}
+          - {task: "Run fixture suite", score: 4, actors: [Engineer]}
+          - {task: "Pin to engine shelf", score: 5, actors: [Author, Engineer]}
+
+  - name: honesty_tier_flow
+    kind: flowchart
+    title: "Honesty tiers meet Fair Exchange disclosure"
+    direction: TD
+    nodes:
+      - {id: Narrative, label: "Narrative tier"}
+      - {id: Empirical, label: "Empirical tier"}
+      - {id: Operational, label: "Operational tier"}
+      - {id: Disclosure, label: "Fair Exchange disclosure"}
+      - {id: Reader, label: "Reader"}
+    edges:
+      - {from: Narrative, to: Disclosure, label: "stories, framing, cover art"}
+      - {from: Empirical, to: Disclosure, label: "counts, tables, pinned constants"}
+      - {from: Operational, to: Disclosure, label: "fixtures, suite locks, npm run"}
+      - {from: Disclosure, to: Reader, label: "disclosed scope"}
+
+  - name: octave_convention_decision
+    kind: flowchart
+    title: "Octave convention: exponent vs subscript"
+    direction: TD
+    nodes:
+      - {id: Printed, label: "Printed shorthand Ωn = Φn·Ω0"}
+      - {id: Exponent, label: "Exponent reading Φ^n·Ω0"}
+      - {id: Subscript, label: "Subscript reading φ_fib(n)·Ω0"}
+      - {id: Register, label: "Octave register"}
+    edges:
+      - {from: Printed, to: Exponent, label: "n read as superscript"}
+      - {from: Printed, to: Subscript, label: "n read as index"}
+      - {from: Exponent, to: Register, label: "Φ^n spacing"}
+      - {from: Subscript, to: Register, label: "Fibonacci-ratio spacing"}
+
+  - name: digit_drawer_map
+    kind: flowchart
+    title: "Digit drawers to 8,019 addresses"
+    direction: LR
+    nodes:
+      - {id: Drawers, label: "9 digit drawers"}
+      - {id: Register, label: "Master register"}
+      - {id: Bands, label: "99 octave bands"}
+      - {id: Catalog, label: "Catalog size 8,019"}
+    edges:
+      - {from: Drawers, to: Register, label: "digit rows"}
+      - {from: Register, to: Bands, label: "octave columns"}
+      - {from: Bands, to: Catalog, label: "99 × 81 = 8,019"}
+
+  - name: engine_shelf_full
+    kind: flowchart
+    title: "Engine shelf grouped 1-8, 9-16, 17-24"
+    direction: LR
+    nodes:
+      - {id: S1_8, label: "Shelf 1-8 · CMOS/Protonic · Tensor Decoupling · Master Synthesis · Digits · Metamorphic Octaves · Planetary Core · Y-Chromosome · Invisible Frontier"}
+      - {id: S9_16, label: "Shelf 9-16 · Reality Bridge · Higgs Awareness · Prime Parity · Moving Up the Stack · Stack Valuation · Protein Folding · Volumetric Storage · Proton Theater"}
+      - {id: S17_24, label: "Shelf 17-24 · Topology of the Void · Holographic Rhyme · Multidimensional Rhyme · Singularity Crystal · Kinematic Set-Recycling · Eddy-Current Mirror · Metrological Overlap · Viscosity of Light"}
+    edges:
+      - {from: S1_8, to: S9_16}
+      - {from: S9_16, to: S17_24}
+
+  - name: pdvsa_three_zone
+    kind: flowchart
+    title: "PDVSA gateway three-zone topology"
+    direction: LR
+    nodes:
+      - {id: Up, label: "Upstream zone (plant enclosure)"}
+      - {id: Gather, label: "Gather"}
+      - {id: Decide, label: "Decide"}
+      - {id: Act, label: "Act"}
+      - {id: Down, label: "Downstream zone (partner boundary)"}
+    edges:
+      - {from: Up, to: Gather, label: "summaries out"}
+      - {from: Gather, to: Decide, label: "one shared brief"}
+      - {from: Decide, to: Act, label: "nine takeaways"}
+      - {from: Act, to: Down, label: "summaries only"}
+      - {from: Down, to: Up, label: "token-bound feedback"}
+
+  - name: pem_runtime_chain
+    kind: sequence
+    title: "PEM runtime chain"
+    participants: [Reader, LatticeChat, PEMPin, Whitepaper, Implementation, Fixtures]
+    messages:
+      - {from: Reader, to: LatticeChat, text: "open lattice chat workstream"}
+      - {from: LatticeChat, to: PEMPin, text: "request engine-shelf pin"}
+      - {from: PEMPin, to: Whitepaper, text: "surface whitepaper"}
+      - {from: Whitepaper, to: Implementation, text: "reference implementation (npm run)"}
+      - {from: Implementation, to: Fixtures, text: "run fixture suite"}
+      - {from: Fixtures, to: Reader, text: "suite locks 9/9", dashed: true}
+
+  - name: net_zero_crystal
+    kind: state
+    title: "Net-zero crystal"
+    transitions:
+      - {from: Inflows, to: Crystal, label: "converge"}
+      - {from: Crystal, to: Outflows, label: "residual = 0"}
+      - {from: Outflows, to: "[*]", label: "crystal complete"}
+
+  - name: research_program
+    kind: mindmap
+    root: "Open problems"
+    branches:
+      - label: "Consistency audits"
+        children: ["octave convention", "overlap census"]
+      - label: "Automation"
+        children: ["net-zero ledger"]
+      - label: "Theses"
+        children: ["stack layer", "invisible frontier", "cascade grammar", "crystal diagnostic"]

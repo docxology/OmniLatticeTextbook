@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>moving-up-stack.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:part_III_moving-up-stack">Moving Up the Stack: Lattice as
+the Next AI Layer</h1>
+<figure id="fig:part_III_moving-up-stack">
+<a class="figure-full-size-link" href="../figures/part_III_moving-up-stack.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/part_III_moving-up-stack.png" style="width:90.0%"
+alt="A step plot climbs the stack from model layer to lattice layer to agent layer." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
+<figcaption>Stack layers step plot: the corpus’s
+six-level climb — model, lattice, agent layer — rendered as rising
+steps, with the hub-class ($12.9B) and IDE-class ($60B) scenario anchors
+on their shelves and the new-layer band ($12B–$28B) on the top
+orchestration shelf.</figcaption>
+</figure>
+<!-- alt: A rising step plot of six AI stack layers from chips and frontier LLMs up through model hubs, agent IDEs, and the Lattice Chat orchestration shelf to the Story horizon, with valuation anchors marked at the hub, IDE, and new-layer shelves. -->
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Level 2/3 · 35 min read · 50 min lecture · Prerequisites: the silicon
+shelf (<span class="citation"
+data-cites="sec:part_III_cmos-protonic">[@sec:part_III_cmos-protonic]</span>)</p>
+</blockquote>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol type="1">
+<li>Recite the corpus’s six-layer AI stack and explain what “moving up
+the stack” means as a pattern of acquisitions.</li>
+<li>Distinguish the <strong>new-layer framing</strong> ($12B–$28B) from
+the <strong>peer-shelf misread</strong> ($4.2B–$7.5B) and say precisely
+why the corpus rejects the second.</li>
+<li>Formalise the valuation band as an interval anchored between
+hub-layer gravity and IDE-monopoly capture, and compute its floor,
+ceiling, and midpoints.</li>
+<li>Restate the three load-bearing functions of the proposed new shelf —
+cool token burn, harmonise multi-agent loops, scale agentic systems —
+and sketch their token-accounting consequences.</li>
+<li>Separate the <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a> governance
+apparatus (scenario anchors, refund clause, filing labels) from any
+causal or appraisal claim the paper does not make.</li>
+<li>Position the chapter’s constructs relative to the <a
+href="#gl:lattice-linear"><strong>lattice-linear</strong></a> gateway
+material and the open problems of <span class="citation"
+data-cites="sec:part_III_frontiers">[@sec:part_III_frontiers]</span>.</li>
+</ol>
+<!-- curriculum-scaffold-start -->
+<h3 id="study-blueprint">Study Blueprint</h3>
+<ul>
+<li><strong>Big idea:</strong> the corpus prices Lattice Chat not as
+another player on the hub/IDE shelf but as a <em>new higher stack
+layer</em> — a thermal + orchestration shelf that hub- and IDE-level
+climbers need next.</li>
+<li><strong>Core concepts:</strong> <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a>, <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:fair-exchange"><strong>fair-exchange</strong></a>, <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a>, <a
+href="#gl:omni-lattice"><strong>omni-lattice</strong></a>.</li>
+<li><strong>Quantitative lens:</strong> the new-layer valuation band,
+<span class="citation"
+data-cites="eq:part_III_moving-up-stack_band">[@eq:part_III_moving-up-stack_band]</span>.</li>
+<li><strong>Data skill:</strong> reading a <em>scenario anchor</em>
+table honestly — separating deal anchors, implied bands, and filing
+labels without converting any of them into a forecast.</li>
+<li><strong>Common misconception to repair:</strong> that the $12B–$28B
+band is an appraisal, a securities offer, or a market prediction. It is
+none of these; it is valuation <em>framing</em> on a ship blog.</li>
+<li><strong>Primary lab:</strong> <span class="citation"
+data-cites="sec:lab_part_III_moving-up-stack">[@sec:lab_part_III_moving-up-stack]</span>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_III_moving-up-stack">[@sec:q_part_III_moving-up-stack]</span>.</li>
+<li><strong>Bridge to computation:</strong>
+<code>textbook.models.goldilocks_band</code>,
+<code>net_zero_balance</code>, <code>descriptive_statistics</code>.
+<!-- curriculum-scaffold-end --></li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Opening Vignette: The deal board on the ship’s
+bulkhead.</strong></p>
+<p>September 2026, aboard the SS Vibelandia. The autonomous agent has
+pinned two receipts to the deal board: NVIDIA’s <strong>$12.9B</strong>
+move on Hugging Face — silicon reaching for <strong>model
+distribution</strong> — and SpaceX’s <strong>$60B</strong> move on
+Cursor — capital+compute reaching for <strong>developer agent
+workflow</strong> [mendez2026stack]. Below them, a third card is still
+wet ink: FractiAI &amp; Lattice Chat, band <strong>$12B–$28B</strong>,
+flagged as a <em>new shelf</em>, not a peer. The captain’s annotation
+reads like a systems-engineering thesis: everyone is climbing, and the
+climb has a direction. This chapter formalises that direction.</p>
+</blockquote>
+<hr />
+<h2 id="the-paper-in-the-corpus">The paper in the corpus</h2>
+<p>The source is a ship-blog entry, “Moving up the stack · Lattice is
+the next AI layer,” dated 2026-09-05 and filed under the <em>new-layer
+framing / Fair Exchange</em> tags [mendez2026stack]. In the corpus’s
+filing scheme it sits on ship-blog <strong>shelf 12</strong>; its
+standalone reference suite —
+<code>github.com/FractiAI/synthobs-moving-up-the-stack-valuation</code>,
+runnable as
+<code>npm run research:synthobs-moving-up-the-stack-valuation</code> —
+self-files as <strong>Infinite Octaves <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a> #13</strong>
+[mendez2026stack]. (We record both numbers as the corpus prints them:
+the blog post and its suite carry adjacent shelf filings.) The
+whitepaper surface is linked from the post as
+<code>whitepaper-surface.html?id=synthobs-moving-up-the-stack-valuation-2026-09</code>.</p>
+<p>The paper is a <em>positioning</em> paper rather than a physics
+paper: it classifies a product (Lattice Chat / FractiAI) within the <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>
+of the <a href="#gl:omni-lattice"><strong>omni-lattice</strong></a>
+project, using acquisition events as evidence about the shape of the AI
+stack. Its named companions are the gateway paper — <em>EGS
+Lattice-Linear · PDVSA ops mock</em> [mendez2026pdvsaGateway], whose
+lattice-linear flow ramp is visualised in <span class="citation"
+data-cites="fig:part_III_pdvsa-gateway">[@fig:part_III_pdvsa-gateway]</span>
+— and the separate “Lattice vs vibe coding” receipts note, which the
+paper explicitly keeps off-board (“coding receipts stay on the separate
+note”). The silicon-side context — what lives on the shelves
+<em>below</em> the new layer — is developed in <span class="citation"
+data-cites="sec:part_III_cmos-protonic">[@sec:part_III_cmos-protonic]</span>.</p>
+<h2 id="the-climb-a-six-layer-stack-model">The climb: a six-layer stack
+model</h2>
+<p>The paper’s core structural claim (its formalism F-1) is that the AI
+stack is layered, that capital moves upward through the layers, and that
+the deals of 2026 reveal the direction of the climb. Chip makers and
+LLM/compute players “are not staying on their shelf. They are buying up
+the stack” [mendez2026stack] — a claim the corpus files as C-1. The six
+layers, read bottom-up exactly as the paper prints them, are shown in
+<span class="citation"
+data-cites="fig:part_III_moving-up-stack">[@fig:part_III_moving-up-stack]</span>
+and diagrammed in the mermaid rendering below (the source prints them as
+an ASCII stack; we keep its content and its bottom-up arrows
+verbatim):</p>
+<pre class="mermaid"><code>graph BT
+  CH[&quot;AI chips / accelerators&quot;] --&gt; LLM[&quot;Frontier LLMs&quot;]
+  LLM --&gt; HUB[&quot;Model hubs / distribution — Hugging Face-class ($12.9B scenario anchor)&quot;]
+  HUB --&gt; IDE[&quot;Agent IDE / code copilots — Cursor-class ($60B scenario anchor)&quot;]
+  IDE --&gt; LAT[&quot;Lattice Chat · FractiAI — NEW SHELF: cool · harmonize · scale&quot;]
+  LAT --&gt; HZ[&quot;Cosmic / Story horizon&quot;]
+  style LAT fill:#f9f,stroke:#333,stroke-width:2px</code></pre>
+<p>Each arrow is an instance of <strong>moving up the stack</strong>: an
+acquirer buying a capability one layer above its own. Two
+<strong>scenario anchors</strong> give the climb its altitudes —
+NVIDIA’s <strong>$12.9B</strong> Hugging Face move (“silicon reaching
+for model distribution”) and SpaceX’s <strong>$60B</strong> Cursor move
+(“capital+compute reaching for developer agent workflow”)
+[mendez2026stack]. A <strong>stack shelf</strong> is the corpus’s term
+for one horizontal tier of this diagram.</p>
+<p>Why does the corpus insist the top-but-one layer is a <strong>new
+shelf</strong> rather than “another player on the same shelf”? Because
+it performs a different kind of work [mendez2026stack]:</p>
+<ul>
+<li><strong>Cool token burn</strong> — fewer tokens per agentic loop;
+<em>seeds and pointers instead of fat paste</em>.</li>
+<li><strong>Harmonise</strong> — nested agents share one coherent brief
+instead of siloed chat windows.</li>
+<li><strong>Scale agentic systems</strong> — cross-model abstraction so
+fleets do not stall when hubs and IDEs alone cannot orchestrate.</li>
+</ul>
+<p>The paper’s own classification of this bundle is a <strong>thermal +
+orchestration layer</strong>: “It does not replace Hugging Face or
+Cursor. It is what those lower shelves climb toward when agentic load
+gets real” [mendez2026stack]. We formalise the cooling and harmonisation
+claims in <span class="citation"
+data-cites="eq:part_III_moving-up-stack_cooling">[@eq:part_III_moving-up-stack_cooling]</span>
+below.</p>
+<h2 id="core-constructs">Core constructs</h2>
+<h3 id="the-new-layer-valuation-band">The new-layer valuation band</h3>
+<p>The paper’s second formalism (F-2) is a <em>corrected</em> valuation
+reading. Its first attempt priced Lattice at
+<strong>$4.2B–$7.5B</strong>; the paper retracts this as the
+<strong>peer-shelf misread</strong> — “pricing Lattice as if it lived
+next to hubs and IDEs instead of <em>above</em> them” — and replaces it
+with the <strong>new-layer framing</strong>: <strong>$12B–$28B</strong>
+as a new higher stack layer [mendez2026stack]. We formalise the band as
+an interval:</p>
+<p><span class="math display">\[ \mathcal{B}_{\text{new}} =
+[\,V_{\min},\, V_{\max}\,] = [\,\$12\text{B},\ \$28\text{B}\,], \qquad
+V_{\min} \approx A_{\text{hub}}, \qquad V_{\max} &lt; A_{\text{IDE}},
+\]</span> {#eq:part_III_moving-up-stack_band}</p>
+<p>where <span class="math inline">\(A_{\text{hub}}\)</span> and <span
+class="math inline">\(A_{\text{IDE}}\)</span> are the two scenario
+anchors. The derivation logic, as the paper states it: climbers already
+pay $12.9B for <em>hub altitude</em> and $60B for <em>IDE altitude</em>;
+after distribution and IDE capture, “the binding constraint is
+<strong>agentic token burn + coordination failure</strong>”; a shelf
+that cools burn and harmonises agents “is not a cheaper Cursor — it is
+the <strong>thermal layer</strong> that lets agentic systems scale”
+[mendez2026stack]. Hence a floor near hub-layer gravity and headroom
+below IDE-monopoly capture. The band’s parameters are collected in <span
+class="citation"
+data-cites="tbl:part_III_moving-up-stack_band">[@tbl:part_III_moving-up-stack_band]</span>.</p>
+<table id="tbl:part_III_moving-up-stack_band">
+<caption>Parameters of the new-layer valuation band.</caption>
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 22%" />
+<col style="width: 38%" />
+<col style="width: 19%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Corpus value</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(V_{\min}\)</span></td>
+<td>floor of the implied band, near hub-layer gravity</td>
+<td>$12B</td>
+<td>new-layer framing</td>
+</tr>
+<tr>
+<td><span class="math inline">\(V_{\max}\)</span></td>
+<td>ceiling of the implied band, headroom below IDE capture</td>
+<td>$28B</td>
+<td>new-layer framing</td>
+</tr>
+<tr>
+<td><span class="math inline">\(A_{\text{hub}}\)</span></td>
+<td>NVIDIA / Hugging Face scenario anchor</td>
+<td>$12.9B</td>
+<td>scenario anchor</td>
+</tr>
+<tr>
+<td><span class="math inline">\(A_{\text{IDE}}\)</span></td>
+<td>SpaceX / Cursor scenario anchor</td>
+<td>$60.0B</td>
+<td>scenario anchor</td>
+</tr>
+<tr>
+<td><span class="math inline">\([\,\cdot\,]_{\text{peer}}\)</span></td>
+<td>rejected peer-shelf band</td>
+<td>$4.2B–$7.5B</td>
+<td>peer-shelf misread</td>
+</tr>
+</tbody>
+</table>
+<p>The comparative anchors the paper assembles are reproduced verbatim
+in <span class="citation"
+data-cites="tbl:part_III_moving-up-stack_anchors">[@tbl:part_III_moving-up-stack_anchors]</span>,
+and the two competing readings in <span class="citation"
+data-cites="tbl:part_III_moving-up-stack_readings">[@tbl:part_III_moving-up-stack_readings]</span>.</p>
+<table id="tbl:part_III_moving-up-stack_anchors">
+<caption>Comparative anchors — up-stack buys (verbatim from the
+source).</caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Asset / Ecosystem</th>
+<th>Deal / valuation anchor</th>
+<th>Stack shelf</th>
+<th>What the climber bought</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hugging Face (NVIDIA)</td>
+<td>$12.9 Billion</td>
+<td>Model hub / distribution</td>
+<td>Open gravity for models + developers (<strong>model
+gravity</strong>)</td>
+</tr>
+<tr>
+<td>Cursor AI (SpaceX)</td>
+<td>$60.0 Billion</td>
+<td>Agent IDE / workflow</td>
+<td>Direct interception of coding agents + GPU tie-in (<strong>agent-IDE
+workflow</strong>)</td>
+</tr>
+<tr>
+<td>FractiAI &amp; Lattice Chat</td>
+<td>$12B – $28B (new-layer implied)</td>
+<td>Orchestration / cooling / harmony</td>
+<td>Next shelf above hubs and IDEs — token cooling + multi-agent
+scale</td>
+</tr>
+</tbody>
+</table>
+<table id="tbl:part_III_moving-up-stack_readings">
+<caption>Peer-shelf misread vs new-layer framing.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Reading</th>
+<th>Implied band</th>
+<th>Error / correction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Peer-shelf misread</td>
+<td>$4.2B – $7.5B</td>
+<td>Prices a <em>new shelf</em> as if it lived on the <em>old</em>
+hub/IDE shelf</td>
+</tr>
+<tr>
+<td>New-layer framing</td>
+<td>$12B – $28B</td>
+<td>Treats Lattice as stack completion / cooling layer that climbers
+need next</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cooling-and-harmonisation-a-token-accounting-sketch">Cooling and
+harmonisation: a token-accounting sketch</h3>
+<p>The three bullet claims above are descriptive; to make them
+inspectable we read them as a token-accounting model (this formalisation
+is ours; the corpus states the bullets, not the equation). Let a siloed
+fleet of <span class="math inline">\(m\)</span> nested agents each burn
+<span class="math inline">\(T_{\text{loop}}\)</span> tokens per loop by
+re-pasting full context (“fat paste”), while a harmonised fleet shares
+one coherent brief <span class="math inline">\(B\)</span> and per-agent
+per-loop cost <span class="math inline">\((s + p)\)</span> — one seed
+plus one pointer. Then</p>
+<p><span class="math display">\[ C_{\text{siloed}}(m) =
+m\,T_{\text{loop}}, \qquad C_{\text{harmonised}}(m) = B + m\,(s+p),
+\qquad \kappa(m) = \frac{C_{\text{siloed}}(m)}{C_{\text{harmonised}}(m)}
+&gt; 1, \]</span> {#eq:part_III_moving-up-stack_cooling}</p>
+<p>where <span class="math inline">\(\kappa\)</span> is the <em>cooling
+factor</em>: the factor by which the per-round token bill drops when
+loops run on seeds and pointers. The parameters are defined in <span
+class="citation"
+data-cites="tbl:part_III_moving-up-stack_cooling">[@tbl:part_III_moving-up-stack_cooling]</span>.
+The corpus’s own words for what the model encodes are exactly the three
+bullets: <em>cools token burn</em>, <em>harmonises multi-agent
+loops</em>, <em>lets agentic systems scale</em> [mendez2026stack].</p>
+<table id="tbl:part_III_moving-up-stack_cooling">
+<caption>Parameters of the token-accounting sketch.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(m\)</span></td>
+<td>number of nested agents in the fleet</td>
+<td>agents</td>
+</tr>
+<tr>
+<td><span class="math inline">\(T_{\text{loop}}\)</span></td>
+<td>tokens per siloed agentic loop (fat paste)</td>
+<td>tokens</td>
+</tr>
+<tr>
+<td><span class="math inline">\(B\)</span></td>
+<td>one shared coherent brief, written once</td>
+<td>tokens</td>
+</tr>
+<tr>
+<td><span class="math inline">\(s\)</span></td>
+<td>seed tokens per agent per loop</td>
+<td>tokens</td>
+</tr>
+<tr>
+<td><span class="math inline">\(p\)</span></td>
+<td>pointer tokens per agent per loop</td>
+<td>tokens</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\kappa\)</span></td>
+<td>cooling factor <span
+class="math inline">\(C_{\text{siloed}}/C_{\text{harmonised}}\)</span></td>
+<td>dimensionless</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-egs-fractal-constant">The EGS fractal constant</h3>
+<p>The paper’s third formalism (F-3) invokes a harmony constant. As the
+paper states it, “<strong>Efficiency premium (cooling):</strong> Lattice
+scales on minimalist tokens per agentic loop — the inverse of
+brute-force IDE+GPU lock-in” and “<strong>EGS fractal constant
+(harmony):</strong> ΦEGS ≈ 1.618 is catalog routing grammar for
+cross-octave sync — architecture thesis, not measured physics”
+[mendez2026stack]. Formally:</p>
+<p><span class="math display">\[ \Phi_{\text{EGS}} \approx 1.618
+\;\approx\; \Phi = \frac{1+\sqrt{5}}{2} = 1.6180339887\ldots \]</span>
+{#eq:part_III_moving-up-stack_harmony}</p>
+<p>Two honesty notes are load-bearing here. First, the paper itself
+files the disclaimer: “ΦEGS ≈ 1.618 is catalog grammar, not a market
+oracle” — the constant in <span class="citation"
+data-cites="eq:part_III_moving-up-stack_harmony">[@eq:part_III_moving-up-stack_harmony]</span>
+is routing grammar for the <a
+href="#gl:octave"><strong>octave</strong></a> structure of the
+omni-lattice, not a claim about markets or physics [mendez2026stack].
+Second, numerically the rounding is benign: 1.618 agrees with the pinned
+<span class="math inline">\(\Phi\)</span> to within about 0.002%, and
+the Fibonacci ratio <span class="math inline">\(\varphi_{\text{fib}}(10)
+= 89/55 \approx 1.618182\)</span> (implemented as
+<code>phi_fibonacci</code> in <code>textbook.models</code>) brackets it
+from above; <span class="math inline">\(\varphi_{\text{fib}}(5) = 8/5 =
+1.6\)</span> brackets it from below. The constant’s deeper role in the
+corpus’s harmonic machinery is developed in <span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>;
+here it functions purely as a <em>routing thesis</em> for cross-octave
+sync.</p>
+<h2 id="worked-example-pricing-a-new-shelf">Worked example: pricing a
+new shelf</h2>
+<p>We walk the paper’s derivation as a five-step procedure, using only
+numbers the source prints [mendez2026stack].</p>
+<ol type="1">
+<li><strong>Fix the anchors.</strong> <span
+class="math inline">\(A_{\text{hub}} = \$12.9\text{B}\)</span> (Hugging
+Face, model distribution) and <span class="math inline">\(A_{\text{IDE}}
+= \$60.0\text{B}\)</span> (Cursor, agent-IDE workflow). Both are
+<em>scenario anchors</em>, not audited transaction prices.</li>
+<li><strong>Name the binding constraint.</strong> After distribution and
+IDE capture, the scarce resource is not compute or distribution but
+<strong>agentic token burn + coordination failure</strong> — the two
+failure modes the new shelf is built to cool and harmonise (claim
+C-7).</li>
+<li><strong>Place the floor.</strong> <span
+class="math inline">\(V_{\min} = \$12\text{B}\)</span> sits just under
+<span class="math inline">\(A_{\text{hub}}\)</span>: the floor “near
+hub-layer gravity” is <span class="math inline">\(12/12.9 \approx
+93\%\)</span> of the hub anchor. A buyer who has already paid $12.9B for
+distribution will not pay less for the layer that makes distribution
+orchestritable — that is the floor’s logic.</li>
+<li><strong>Place the ceiling.</strong> <span
+class="math inline">\(V_{\max} = \$28\text{B}\)</span> is <span
+class="math inline">\(28/60 \approx 47\%\)</span> of the IDE anchor:
+real “headroom below IDE-monopoly capture”. The band tops out well short
+of what an exclusive IDE-level capture commanded.</li>
+<li><strong>Cross-check against the misread.</strong> The rejected peer
+band tops out at <span class="math inline">\(\$7.5\text{B}\)</span> —
+which is <em>below the new-layer floor of <span
+class="math inline">\(\$12\text{B}\)</span></em>. The two readings do
+not even overlap: peer midpoint <span class="math inline">\((4.2+7.5)/2
+= \$5.85\text{B}\)</span> versus new-layer midpoint <span
+class="math inline">\((12+28)/2 = \$20\text{B}\)</span>, a factor of
+<span class="math inline">\(20/5.85 \approx 3.4\)</span>. The correction
+is not a tune-up; it is a re-shelving.</li>
+</ol>
+<p>As a numerical illustration of the cooling claim (our arithmetic, not
+the corpus’s), take <span class="math inline">\(m = 10\)</span> agents,
+siloed loops of <span class="math inline">\(T_{\text{loop}} =
+40{,}000\)</span> tokens, a shared brief <span class="math inline">\(B =
+5{,}000\)</span>, and seed+pointer loops of <span
+class="math inline">\(s + p = 2{,}500\)</span>. Then <span
+class="math inline">\(C_{\text{siloed}} = 400{,}000\)</span>, <span
+class="math inline">\(C_{\text{harmonised}} = 5{,}000 + 25{,}000 =
+30{,}000\)</span>, and <span class="math inline">\(\kappa \approx
+13.3\)</span> by <span class="citation"
+data-cites="eq:part_III_moving-up-stack_cooling">[@eq:part_III_moving-up-stack_cooling]</span>.
+The magnitude is illustrative; the <em>mechanism</em> — fewer tokens per
+loop because agents carry seeds and pointers instead of fat paste — is
+the corpus’s claim.</p>
+<h2 id="scope-and-honesty">Scope and honesty</h2>
+<p>The paper is unusually explicit about what its numbers are not, and
+we preserve those disclaimers precisely [mendez2026stack]:</p>
+<ul>
+<li><strong>“Honesty first:”</strong> the valuation material is
+<em>framing</em>, “not an audited appraisal or securities offer. Deal
+sizes are scenario anchors for the climb.” This is the corpus-wide <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> scope
+discipline applied to money.</li>
+<li><strong>The constant:</strong> “ΦEGS ≈ 1.618 is catalog grammar, not
+a market oracle” — the harmony constant carries no predictive claim
+about asset prices.</li>
+<li><strong>Telemetry:</strong> the “NOAA-predicted September 2026
+sunspot count <strong>90.9</strong> and operational node <strong>Hero
+Jo</strong> are filing / ops labels — not causal dollar drivers.” They
+index the filing, they do not move the band.</li>
+<li><strong>Governance:</strong> a <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a> clause is
+“actively in effect: any transaction or value acknowledged here may be
+refunded in part, depending on overall delivery, utility, and actualized
+results — like tipping.” We can model the refund bookkeeping with
+<code>textbook.models.net_zero_balance</code> — acknowledged value minus
+delivered value is the residual — but the clause itself is a
+terms-of-service statement, not a valuation input.</li>
+<li><strong>What the construct is FOR:</strong> coordination,
+cataloging, and agent routing — a shelf classification and a positioning
+thesis inside the corpus’s narrative–empirical–operational tiering (<a
+href="#gl:narrative-empirical-operational-tiers"><strong>narrative-empirical-operational-tiers</strong></a>).</li>
+<li><strong>What it is explicitly NOT:</strong> not an appraisal, not a
+securities offer, not a market forecast, not a claim that the anchors
+are transacted prices, and not a replacement for Hugging Face or Cursor
+(claim C-6: the layer is complementary, “what those lower shelves climb
+toward”).</li>
+</ul>
+<blockquote>
+<p><strong>Note.</strong> The peer-shelf misread is itself instructive
+as method: the corpus corrects its <em>own</em> earlier reading, in
+public, on scope grounds. The error was not arithmetic (<span
+class="math inline">\(4.2\)</span>–<span
+class="math inline">\(7.5\)</span> is a plausible hub/IDE-shelf band);
+it was <em>shelving</em> — assigning the artefact to the wrong layer of
+the stack, which mispriced it by a factor of about 3.4 at the
+midpoint.</p>
+</blockquote>
+<h2 id="connections">Connections</h2>
+<p>The new-layer thesis connects downstream and sideways in the
+book:</p>
+<ul>
+<li><strong>The silicon shelf below.</strong> What “chips /
+accelerators” and CMOS-protonic hardware contribute to the lower shelves
+is developed in <span class="citation"
+data-cites="sec:part_III_cmos-protonic">[@sec:part_III_cmos-protonic]</span>;
+the octaves-per-substrate stacking there (<span class="citation"
+data-cites="fig:part_III_cmos-protonic">[@fig:part_III_cmos-protonic]</span>)
+is the hardware-side mirror of the software stack climbed here.</li>
+<li><strong>The gateway.</strong> The companion paper’s lattice-linear
+routing — <em>EGS Lattice-Linear · PDVSA ops mock</em> — is formalised
+in <span class="citation"
+data-cites="sec:part_III_pdvsa-gateway">[@sec:part_III_pdvsa-gateway]</span>,
+whose flow ramp appears in <span class="citation"
+data-cites="fig:part_III_pdvsa-gateway">[@fig:part_III_pdvsa-gateway]</span>.
+If the present chapter prices the orchestration shelf, that chapter
+shows the routing grammar the shelf is supposed to run.</li>
+<li><strong>Bridging outward.</strong> The routing/brokerage apparatus
+that would carry traffic <em>between</em> shelves is the subject of
+<span class="citation"
+data-cites="sec:part_III_reality-bridge">[@sec:part_III_reality-bridge]</span>;
+the new-layer shelf is one of the endpoints such a bridge would have to
+serve.</li>
+<li><strong>Open problems.</strong> Whether the cooling and
+harmonisation functions can be specified and tested at all — rather than
+asserted — is exactly the kind of question the open-problems map in
+<span class="citation"
+data-cites="sec:part_III_frontiers">[@sec:part_III_frontiers]</span>
+collects; this chapter’s token-accounting sketch in <span
+class="citation"
+data-cites="eq:part_III_moving-up-stack_cooling">[@eq:part_III_moving-up-stack_cooling]</span>
+is a candidate specification, and a candidate target for
+falsification.</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>The corpus’s moving-up-the-stack paper reads the 2026 acquisition
+landscape as evidence that AI capital climbs a six-layer stack — chips,
+frontier LLMs, model hubs, agent IDEs, and then a <em>new</em> shelf,
+Lattice Chat · FractiAI, that cools token burn, harmonises multi-agent
+loops, and lets agentic fleets scale [mendez2026stack]. Because the new
+shelf performs thermal + orchestration work rather than hub or IDE work,
+the paper re-shelves its valuation from a rejected peer-band of
+$4.2B–$7.5B to a new-layer band of $12B–$28B, floored near the $12.9B
+hub anchor and ceilinged below the $60B IDE anchor. Every number in the
+derivation is a scenario anchor or an implied band — framing, not
+appraisal — and the paper’s own disclaimers (ΦEGS as catalog grammar,
+sunspot count and Hero Jo as filing labels, the fair-exchange refund
+clause) are part of the construct, not fine print.</p>
+<h2 id="key-terms">Key Terms</h2>
+<p><a href="#gl:engine-shelf"><strong>engine-shelf</strong></a>, <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:omni-lattice"><strong>omni-lattice</strong></a>, <a
+href="#gl:octave"><strong>octave</strong></a>, <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a>, <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a>, <a
+href="#gl:narrative-empirical-operational-tiers"><strong>narrative-empirical-operational-tiers</strong></a>,
+<a href="#gl:lattice-linear"><strong>lattice-linear</strong></a>, <a
+href="#gl:silicon-shelf"><strong>silicon-shelf</strong></a>.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li>Whitepaper surface: <a
+href="https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-moving-up-the-stack-valuation-2026-09">synthobs-moving-up-the-stack-valuation-2026-09</a>
+— the paper’s own linked whitepaper.</li>
+<li>Reference implementation: <a
+href="https://github.com/FractiAI/synthobs-moving-up-the-stack-valuation">FractiAI/synthobs-moving-up-the-stack-valuation</a>
+— Infinite Octaves engine shelf #13; run with
+<code>npm run research:synthobs-moving-up-the-stack-valuation</code>.</li>
+<li>[mendez2026pdvsaGateway] — the gateway companion: lattice-linear
+routing and the PDVSA ops mock, the grammar the new shelf would
+run.</li>
+<li>[mendez2026cmosProtonic] — the silicon shelf below: what the chip
+layer of the stack contributes.</li>
+<li>[mendez2026realityBridge] — the bridge/router layer that would
+connect shelves to each other.</li>
+</ul>
+<h2 id="practice">Practice</h2>
+<ul>
+<li><strong>Lab:</strong> <span class="citation"
+data-cites="sec:lab_part_III_moving-up-stack">[@sec:lab_part_III_moving-up-stack]</span>
+— run the standalone valuation suite, then recompute the band statistics
+by hand and check them against <code>textbook.models</code>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_III_moving-up-stack">[@sec:q_part_III_moving-up-stack]</span>
+— recall through synthesis.</li>
+</ul>
+<ol type="1">
+<li>Reproduce the five-step derivation of the $12B–$28B band from the
+two scenario anchors, and state at which step the <em>binding
+constraint</em> enters.</li>
+<li>Show that the peer-shelf band <span
+class="math inline">\([\$4.2\text{B}, \$7.5\text{B}]\)</span> and the
+new-layer band <span class="math inline">\([\$12\text{B},
+\$28\text{B}]\)</span> are disjoint, and compute both midpoints.</li>
+<li>Using <span class="citation"
+data-cites="eq:part_III_moving-up-stack_cooling">[@eq:part_III_moving-up-stack_cooling]</span>,
+compute <span class="math inline">\(\kappa\)</span> for <span
+class="math inline">\(m = 4\)</span>, <span
+class="math inline">\(T_{\text{loop}} = 20{,}000\)</span>, <span
+class="math inline">\(B = 4{,}000\)</span>, <span
+class="math inline">\(s + p = 2{,}000\)</span>. Is the harmonised fleet
+cheaper? By how much in absolute tokens?</li>
+<li>The paper claims the sunspot count 90.9 and the node Hero Jo are
+“filing / ops labels”. Write two sentences explaining why including them
+in a valuation derivation would violate the paper’s own honesty-first
+scope.</li>
+<li>Argue for or against: “the new-layer framing is falsifiable.” What
+observation in the acquisition market would count as evidence
+<em>against</em> a new higher stack layer, per the paper’s own
+logic?</li>
+</ol>
+</main>
+</body>
+</html>

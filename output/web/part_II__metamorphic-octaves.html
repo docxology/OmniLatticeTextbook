@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>metamorphic-octaves.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:part_II_metamorphic-octaves">Metamorphic Octaves:
+Densification</h1>
+<figure id="fig:part_II_metamorphic-octaves">
+<a class="figure-full-size-link" href="../figures/part_II_metamorphic-octaves.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/part_II_metamorphic-octaves.png"
+style="width:90.0%"
+alt="The densification curve rises logarithmically with exposure." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
+<figcaption>The densification curve <span
+class="math inline">\(D(x) = D_0\,(1 + k\ln(1+x))\)</span> for <span
+class="math inline">\(D_0 = 1\)</span>, <span class="math inline">\(k =
+1\)</span>: a logarithmic rise that climbs steeply at first and then
+flattens as exposure <span class="math inline">\(x\)</span> grows,
+matching the corpus’s mud → shale → schist reading of accumulated
+“cooking” — early transformation is fast, later transformation is slower
+but still real. Produced by the companion visualization agent from
+<code>textbook.models.densification</code>.</figcaption>
+</figure>
+<!-- alt: A single rising curve of densification against exposure, steep near the origin and flattening logarithmically, with the worked points at exposures 1, 2, 4 and 8 marked on the curve. -->
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none — the
+<a href="#gl:octave"><strong>octave</strong></a> ladder of <span
+class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span> helps
+but is not required</p>
+</blockquote>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol type="1">
+<li>Explain how the metamorphic-octaves paper borrows the mud → shale →
+schist story as a <a href="#gl:catalog-architecture"><strong>filing
+cabinet</strong></a> for people and software under Φ, and why the paper
+insists it is neither a geology theorem nor medical advice
+[mendez2026metamorphic].</li>
+<li>State the two furnaces — personal heat and professional heat — and
+use the Goldilocks lock to file a scenario as magma/burnout, dormant, or
+recrystallisation.</li>
+<li>Formalise the paper’s dual-axis filing rule as the labelled map of
+<span class="citation"
+data-cites="eq:part_II_metamorphic-octaves_filing">[@eq:part_II_metamorphic-octaves_filing]</span>
+and place the “schist” label within it.</li>
+<li>Compute the densification curve of <span class="citation"
+data-cites="eq:part_II_metamorphic-octaves_densification">[@eq:part_II_metamorphic-octaves_densification]</span>
+with <code>textbook.models.densification</code>, including the pinned
+value <span class="math inline">\(D(4) = 1 + \ln 5 \approx
+2.609438\)</span>, and reason about its decreasing marginal gain using
+<span class="citation"
+data-cites="eq:part_II_metamorphic-octaves_marginal">[@eq:part_II_metamorphic-octaves_marginal]</span>.</li>
+<li>Restate, precisely, what the paper claims and refuses to claim, and
+connect the filing cartoon to the other <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a> papers it
+names as siblings.</li>
+</ol>
+<!-- curriculum-scaffold-start -->
+<h3 id="study-blueprint">Study Blueprint</h3>
+<ul>
+<li><strong>Big idea:</strong> The corpus files transformation — of
+people, of software — the way a geologist files rock: heat plus
+directional pressure across the 99-octave <a
+href="#gl:omni-lattice"><strong>omni-lattice</strong></a> yields a
+“schist” label, and the book reads that accumulation as a logarithmic
+densification curve.</li>
+<li><strong>Core concepts:</strong> <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:octave"><strong>octave</strong></a>, <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a>, <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a>, the two
+furnaces, the Goldilocks lock.</li>
+<li><strong>Quantitative lens:</strong> the densification model of <span
+class="citation"
+data-cites="eq:part_II_metamorphic-octaves_densification">[@eq:part_II_metamorphic-octaves_densification]</span>.</li>
+<li><strong>Data skill:</strong> evaluate a logarithmic model at given
+exposures by hand and confirm against
+<code>textbook.models.densification</code>; read marginal change off
+<span class="math inline">\(1/(1+x)\)</span>.</li>
+<li><strong>Common misconception to repair:</strong> that the schist
+label is a promise that “pressure makes you unbreakable.” The paper
+explicitly files it as a way to sort experience, not a prophecy — and
+heat <em>without</em> a container files as melt/burnout, not
+growth.</li>
+<li><strong>Primary lab:</strong> <span class="citation"
+data-cites="sec:lab_part_II_metamorphic-octaves">[@sec:lab_part_II_metamorphic-octaves]</span>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_II_metamorphic-octaves">[@sec:q_part_II_metamorphic-octaves]</span>.</li>
+<li><strong>Bridge to computation:</strong>
+<code>textbook.models.densification</code>.
+<!-- curriculum-scaffold-end --></li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Opening Vignette: A rock that remembers being
+soft.</strong></p>
+<p>Mud settles in quiet water — formless, layered, anonymous. Buried, it
+hardens into shale. And if the crust cooks and squeezes it long enough,
+something new appears: glittering schist, its mica flakes all pointing
+the same way, a record of every direction the pressure came from. The
+ship-blog paper takes precisely that story and borrows it — not as
+geology, but as a <strong>filing cabinet</strong> for people and
+software under Φ [mendez2026metamorphic]. The filing question it asks is
+disarmingly practical: when life cooks you, what label does the catalog
+put on the result?</p>
+</blockquote>
+<hr />
+<h2 id="orientation">Orientation</h2>
+<p>This chapter sits on shelf 5 of the <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a>, as Part XIII
+of the SS Vibelandia ship blog — a plain-speak note filed under the
+site’s <a href="#gl:fair-exchange"><strong>fair-exchange</strong></a>
+framing, titled “When life cooks you, you can come out denser”
+[mendez2026metamorphic]. Its raw material is a story every reader
+already owns: soft mud, then shale, then — under sustained crustal heat
+<em>and</em> directional pressure — schist with mica all pointing the
+same way. The paper’s move is to borrow that story as a filing cabinet
+for people and software under Φ, the <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a> constant that
+threads the corpus.</p>
+<p>Three honesty markers frame everything that follows, and we restate
+them now so they are impossible to lose [mendez2026metamorphic]:</p>
+<ul>
+<li>“It is not a new geology theorem, and it is not a doctor’s
+note.”</li>
+<li>“Heat without a container is melt / burnout talk. Pressure without
+heat is just sitting there. Both together, across 99 catalog octaves, is
+the ‘schist’ label.”</li>
+<li>“Nobody here is claiming you become unbreakable rock.”</li>
+</ul>
+<p>Our job as textbook authors is the corpus’s own job: formalise the
+filing rule, map its vocabulary, and run its reference implementation —
+while preserving those disclaimers exactly.</p>
+<h2 id="the-paper-in-the-corpus">The paper in the corpus</h2>
+<p>The metamorphic-octaves note loads into Lattice Chat on nest
+<strong>Infinite Octaves</strong> through the engine map <strong>Digits
+× 01–99</strong> [mendez2026metamorphic]: the same Digits × 01–99
+lattice that the <a
+href="#gl:omni-lattice"><strong>omni-lattice</strong></a> chapter <span
+class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>
+develops, in which every filing lives at a digit row of the <a
+href="#gl:master-register"><strong>master-register</strong></a> and an
+octave column — <span class="math inline">\(99 \times 81 =
+8{,}019\)</span> register bins as computed by
+<code>catalog_size(octaves=99, precision_digits=81)</code>. On Synthio
+the paper is used as <em>companion grammar</em>, with the corpus’s
+MRI-sandbox honesty kept intact [mendez2026metamorphic].</p>
+<p>The paper explicitly names its siblings: it is the “same cartoon as
+the 99 Octave engine’s other shelves — CMOS, tensors, digits — a way to
+file, not a prophecy” [mendez2026metamorphic]. Those shelf-mates are
+treated in [mendez2026cmosProtonic] (CMOS), [mendez2026tensorDecoupling]
+(tensors), and [mendez2026digitsMaster] (digits). The note ships with a
+runnable reference implementation: the whitepaper lives at
+<code>ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-tbme-metamorphic-octaves-2026-08</code>,
+the standalone repo is
+<code>github.com/FractiAI/synthobs-tbme-metamorphic-octaves</code>, and
+<code>npm run research:synthobs-tbme-metamorphic-octaves</code> returns
+the suite’s <strong>9/9 fixture lock</strong> [mendez2026metamorphic].
+The lab (<span class="citation"
+data-cites="sec:lab_part_II_metamorphic-octaves">[@sec:lab_part_II_metamorphic-octaves]</span>)
+walks that run.</p>
+<pre class="mermaid"><code>graph TD
+  H[&quot;Personal heat h&lt;br/&gt;(identity shake-ups · grief · body at its limit ·&lt;br/&gt;holding two true things at once)&quot;]
+  P[&quot;Professional heat p&lt;br/&gt;(too many roles · zero-mock gates ·&lt;br/&gt;scarce money and time · public stakes)&quot;]
+  H --&gt; G{&quot;Goldilocks lock&quot;}
+  P --&gt; G
+  G --&gt;|&quot;h ≥ h_crit, p = 0&quot;| M[&quot;Magma / burnout labels&quot;]
+  G --&gt;|&quot;h = 0, p &gt; 0&quot;| S[&quot;Dormant — pressure without heat,&lt;br/&gt;&#39;just sitting there&#39;&quot;]
+  G --&gt;|&quot;h &gt; 0, p &gt; 0&quot;| R[&quot;Recrystallisation labels&quot;]
+  R --&gt;|&quot;sustained across the 99-octave ladder&quot;| SCH[&quot;Schist label:&lt;br/&gt;mica all pointing the same way&quot;]
+  M -.-&gt;|&quot;re-file with a container&quot;| G</code></pre>
+<h2 id="core-construct-i-the-two-furnaces-and-the-filing-map">Core
+construct I: the two furnaces and the filing map</h2>
+<p>The paper’s first formalism (digest
+F-synthobs-tbme-metamorphic-octaves-1) is a <em>dual-axis heat
+model</em>. Two furnaces supply the axes, and the corpus is specific
+about what each contains [mendez2026metamorphic]:</p>
+<ul>
+<li><strong>Personal heat</strong> (<span
+class="math inline">\(h\)</span>): identity shake-ups, grief, the body
+at its limit, holding two true things at once.</li>
+<li><strong>Professional heat</strong> (<span
+class="math inline">\(p\)</span>): too many roles, zero-mock gates,
+scarce money and time, public stakes.</li>
+</ul>
+<p>The catalog “needs both axes — not that you should seek either as a
+lifestyle” [mendez2026metamorphic]. We formalise the corpus’s filing
+rule as a labelled map over the two axes; every branch below is a direct
+restatement of the paper’s own filings (digest claims C-3 and C-6),
+arranged into one construct:</p>
+<p><span class="math display">\[
+L(h, p) \;=\;
+\begin{cases}
+\textsf{magma / burnout}, &amp; h \ge h_{\text{crit}},\; p = 0,\\[2pt]
+\textsf{dormant}, &amp; h = 0,\; p &gt; 0,\\[2pt]
+\textsf{recrystallisation}, &amp; h &gt; 0,\; p &gt; 0,\\[2pt]
+\textsf{schist}, &amp; h &gt; 0,\; p &gt; 0 \ \text{sustained across the
+octave ladder}.
+\end{cases}
+\]</span> {#eq:part_II_metamorphic-octaves_filing}</p>
+<p>Read <span class="citation"
+data-cites="eq:part_II_metamorphic-octaves_filing">[@eq:part_II_metamorphic-octaves_filing]</span>
+branch by branch. Heat above the threshold <span
+class="math inline">\(h_{\text{crit}}\)</span> with no container — no
+directional pressure — files as <strong>magma / burnout labels</strong>:
+“heat without a container is melt / burnout talk.” Pressure with no heat
+is the dormant branch: “pressure without heat is just sitting there.”
+Heat <em>plus constraint</em> files as <strong>recrystallisation
+labels</strong>; and when that dual-axis state is sustained “across 99
+catalog octaves,” the filing matures into the <strong>schist
+label</strong> — the mica-all-one-way result. The parameters of the map
+are collected in <span class="citation"
+data-cites="tbl:part_II_metamorphic-octaves_filing">[@tbl:part_II_metamorphic-octaves_filing]</span>.</p>
+<p>:: Parameters of the filing map <span
+class="math inline">\(L(h,p)\)</span>.
+{#tbl:part_II_metamorphic-octaves_filing}</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 36%" />
+<col style="width: 31%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Domain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(h\)</span></td>
+<td>personal heat: identity shake-ups, grief, the body at its limit,
+holding two true things at once</td>
+<td><span class="math inline">\(\mathbb{R}_{\ge 0}\)</span>, ordinal
+filing axis</td>
+</tr>
+<tr>
+<td><span class="math inline">\(p\)</span></td>
+<td>professional heat / directional pressure: too many roles, zero-mock
+gates, scarce money and time, public stakes</td>
+<td><span class="math inline">\(\mathbb{R}_{\ge 0}\)</span>, ordinal
+filing axis</td>
+</tr>
+<tr>
+<td><span class="math inline">\(h_{\text{crit}}\)</span></td>
+<td>heat level beyond which unconstrained heat files as magma / burnout
+rather than melt-talk avoided</td>
+<td>ordinal threshold</td>
+</tr>
+<tr>
+<td><span class="math inline">\(L\)</span></td>
+<td>the filed label</td>
+<td>{magma/burnout, dormant, recrystallisation, schist}</td>
+</tr>
+</tbody>
+</table>
+<p>The map is deliberately a <em>cartoon</em> — the paper’s own word for
+the shared filing device of its sibling shelves — and the Goldilocks
+lock is its gating rule (digest F-2): too much heat with no directional
+pressure files one way; heat plus constraint files another. The lock
+gets its name from the same too-much / just-right gating the corpus uses
+elsewhere; in this book the nearest cousin is the goldilocks band of the
+planetary-core chapter, drawn as band shading in <span class="citation"
+data-cites="fig:part_II_planetary-core">[@fig:part_II_planetary-core]</span>
+and formalised in <span class="citation"
+data-cites="sec:part_II_planetary-core">[@sec:part_II_planetary-core]</span>.</p>
+<h2 id="core-construct-ii-densification-under-exposure">Core construct
+II: densification under exposure</h2>
+<p>The rock story is cumulative — mud does not become schist in one
+event but under sustained exposure. The book gives that accumulation a
+quantitative lens: we read the borrowed story as a <strong>densification
+curve</strong>, implemented as
+<code>textbook.models.densification(exposure, density0, rate)</code>:</p>
+<p><span class="math display">\[
+D(x) \;=\; D_0 \left( 1 + k \, \ln\!\left(1 + x\right) \right)
+\]</span> {#eq:part_II_metamorphic-octaves_densification}</p>
+<p>This is <em>our</em> formalisation, marked as interpretation: the
+digest’s rock story names no equation. What makes the logarithm the
+honest choice is its shape — early exposure transforms a soft, formless
+filing quickly, while later exposure still changes the result but ever
+more slowly. That is exactly the corpus’s moral ordering of “cooking”:
+the paper never claims unbounded hardening, and a logarithm never
+reaches an “unbreakable” asymptote of invulnerability. The parameters
+are given in <span class="citation"
+data-cites="tbl:part_II_metamorphic-octaves_densification">[@tbl:part_II_metamorphic-octaves_densification]</span>.</p>
+<p>:: Parameters of the densification model.
+{#tbl:part_II_metamorphic-octaves_densification}</p>
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 21%" />
+<col style="width: 15%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+<th>Reference value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(x\)</span></td>
+<td>accumulated exposure (time under dual-axis heat and pressure)</td>
+<td>exposure units</td>
+<td>—</td>
+</tr>
+<tr>
+<td><span class="math inline">\(D_0\)</span></td>
+<td>baseline density of the filing before exposure</td>
+<td>density units</td>
+<td><span class="math inline">\(1\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(k\)</span></td>
+<td>densification rate per unit exposure</td>
+<td>1/exposure</td>
+<td><span class="math inline">\(1\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(D(x)\)</span></td>
+<td>filed density after exposure <span
+class="math inline">\(x\)</span></td>
+<td>density units</td>
+<td>computed</td>
+</tr>
+</tbody>
+</table>
+<p>The marginal effect of exposure follows immediately by
+differentiating <span class="citation"
+data-cites="eq:part_II_metamorphic-octaves_densification">[@eq:part_II_metamorphic-octaves_densification]</span>:</p>
+<p><span class="math display">\[
+\frac{\mathrm{d}D}{\mathrm{d}x} \;=\; \frac{k\, D_0}{1 + x}
+\]</span> {#eq:part_II_metamorphic-octaves_marginal}</p>
+<p><span class="citation"
+data-cites="eq:part_II_metamorphic-octaves_marginal">[@eq:part_II_metamorphic-octaves_marginal]</span>
+is strictly decreasing in <span class="math inline">\(x\)</span>: the
+<em>next</em> unit of exposure always buys less than the previous one,
+yet it never buys zero. Densification is honest compounding —
+front-loaded, never finished. This is the curve drawn in <span
+class="citation"
+data-cites="fig:part_II_metamorphic-octaves">[@fig:part_II_metamorphic-octaves]</span>,
+and it is the numbered sequence the reader verifies by hand in the
+lab.</p>
+<h2 id="worked-example-walking-the-densification-curve">Worked example:
+walking the densification curve</h2>
+<p>Take the pinned reference values <span class="math inline">\(D_0 =
+1\)</span>, <span class="math inline">\(k = 1\)</span> and evaluate
+<span class="citation"
+data-cites="eq:part_II_metamorphic-octaves_densification">[@eq:part_II_metamorphic-octaves_densification]</span>
+at four exposures. By hand, using <span class="math inline">\(\ln 2
+\approx 0.693147\)</span>, <span class="math inline">\(\ln 3 \approx
+1.098612\)</span>, <span class="math inline">\(\ln 5 \approx
+1.609438\)</span>, <span class="math inline">\(\ln 9 \approx
+2.197225\)</span>. The four checkpoints are collected in <span
+class="citation"
+data-cites="tbl:part_II_metamorphic-octaves_checkpoints">[@tbl:part_II_metamorphic-octaves_checkpoints]</span>:</p>
+<table id="tbl:part_II_metamorphic-octaves_checkpoints">
+<caption>Worked densification checkpoints for <span
+class="math inline">\(D_0 = 1\)</span>, <span class="math inline">\(k =
+1\)</span>, matching the curve : in <span class="citation"
+data-cites="fig:part_II_metamorphic-octaves">[@fig:part_II_metamorphic-octaves]</span>.</caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Exposure <span class="math inline">\(x\)</span></th>
+<th><span class="math inline">\(1 + x\)</span></th>
+<th><span class="math inline">\(\ln(1+x)\)</span></th>
+<th><span class="math inline">\(D(x) = 1 + \ln(1+x)\)</span></th>
+<th>Filing reading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>0.693147</td>
+<td>1.693147</td>
+<td>first dual-axis season: fast early densification</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>1.098612</td>
+<td>2.098612</td>
+<td>still steep — shale-forming</td>
+</tr>
+<tr>
+<td>4</td>
+<td>5</td>
+<td>1.609438</td>
+<td>2.609438</td>
+<td>the pinned fixture value <code>densification(4, 1, 1)</code></td>
+</tr>
+<tr>
+<td>8</td>
+<td>9</td>
+<td>2.197225</td>
+<td>3.197225</td>
+<td>late-stage: slower, still accumulating</td>
+</tr>
+</tbody>
+</table>
+<p>The exposure-4 row is the corpus-pinned checkpoint: with <span
+class="math inline">\(D_0 = 1\)</span> and <span class="math inline">\(k
+= 1\)</span>, <code>densification(4, density0=1, rate=1)</code> returns
+<span class="math inline">\(1 + \ln 5 \approx 2.609438\)</span>, exactly
+the value in the book’s computational backbone. Confirm the others the
+same way — never by retyping the maths, but by calling the tested
+function:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textbook.models <span class="im">import</span> densification</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>[densification(x, density0<span class="op">=</span><span class="dv">1</span>, rate<span class="op">=</span><span class="dv">1</span>) <span class="cf">for</span> x <span class="kw">in</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">8</span>)]</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># -&gt; [1.693147..., 2.098612..., 2.609438..., 3.197225...]</span></span></code></pre></div>
+<p>Now read the sequence through <span class="citation"
+data-cites="eq:part_II_metamorphic-octaves_marginal">[@eq:part_II_metamorphic-octaves_marginal]</span>.
+The marginal gain falls from <span class="math inline">\(k D_0/(1+1) =
+0.5\)</span> per unit exposure at <span
+class="math inline">\(x=1\)</span>, to <span
+class="math inline">\(0.2\)</span> at <span
+class="math inline">\(x=4\)</span>, to <span
+class="math inline">\(0.1\overline{1}\)</span> at <span
+class="math inline">\(x=8\)</span>. Equal <em>absolute</em> exposures
+buy less and less; only <em>doubling</em> exposure holds its value, and
+even that gain approaches <span class="math inline">\(\ln 2 \approx
+0.693147\)</span> from below (<span
+class="math inline">\(\Delta(1{\to}2) = 0.405465\)</span> versus <span
+class="math inline">\(\Delta(4{\to}8) = 0.587787\)</span>). This is the
+quantitative face of the honesty-first framing: sustained exposure
+densifies the filing, but no exposure makes it “unbreakable rock” —
+<span class="math inline">\(D(x)\)</span> grows without bound yet with
+vanishing marginal return, and the paper claims no asymptote of
+invulnerability [mendez2026metamorphic].</p>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>Why does the filing live “across 99 catalog octaves” rather than in
+one drawer? Because the engine map is Digits × 01–99: a filing is placed
+at a digit row and an octave column, and the schist label is a property
+of a <em>sustained run</em> through that ladder — <span
+class="math inline">\(99 \times 81 = 8{,}019\)</span> register bins per
+<code>catalog_size()</code>. The schist label is therefore a
+<em>trajectory</em> filing, not a snapshot filing.</p>
+</blockquote>
+<h2 id="scope-and-honesty">Scope and honesty</h2>
+<p>The metamorphic-octaves paper is unusually explicit about its own
+edges, and we restate each disclaimer precisely
+[mendez2026metamorphic]:</p>
+<ul>
+<li><strong>Not geology, not medicine.</strong> “This note borrows that
+story as a filing cabinet for people and software under Φ. It is not a
+new geology theorem, and it is not a doctor’s note.”</li>
+<li><strong>No invulnerability claim.</strong> “Nobody here is claiming
+you become unbreakable rock.”</li>
+<li><strong>No lifestyle prescription.</strong> “The paper says the
+catalog needs both axes — not that you should seek either as a
+lifestyle.” Neither furnace is to be sought; they are axes of the filing
+grid, not goals.</li>
+<li><strong>Heat without a container is a warning, not a stage.</strong>
+The magma/burnout branch of <span class="citation"
+data-cites="eq:part_II_metamorphic-octaves_filing">[@eq:part_II_metamorphic-octaves_filing]</span>
+is the paper’s own guard-rail: uncontained heat files as burnout, not as
+progress.</li>
+<li><strong>A way to file, not a prophecy.</strong> The cartoon is
+shared with the CMOS, tensor, and digits shelves
+[mendez2026cmosProtonic; mendez2026tensorDecoupling;
+mendez2026digitsMaster] precisely because its job is cataloguing — agent
+routing, coordination, shared vocabulary — consistent with the corpus’s
+<a href="#gl:honesty-first"><strong>honesty-first</strong></a> scope
+disclaimers across the <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>.</li>
+</ul>
+<p>What the construct is <em>for</em>: a shared grammar on QUESTFEST —
+open Lattice Chat on nest Infinite Octaves and ask about shale, schist,
+or dual-axis heat; use it on Synthio as companion grammar, keeping MRI
+sandbox honesty [mendez2026metamorphic]. What it is <em>not</em>: a
+physical model of rock, a clinical instrument, or a promise about
+people.</p>
+<h2 id="connections">Connections</h2>
+<p>The Goldilocks lock is one instance of the corpus’s too-much /
+just-right gating; the planetary-core chapter draws the same idea as a
+goldilocks band over a value trace in <span class="citation"
+data-cites="fig:part_II_planetary-core">[@fig:part_II_planetary-core]</span>
+(<span class="citation"
+data-cites="sec:part_II_planetary-core">[@sec:part_II_planetary-core]</span>).
+The densification curve of <span class="citation"
+data-cites="eq:part_II_metamorphic-octaves_densification">[@eq:part_II_metamorphic-octaves_densification]</span>
+is a <em>cumulative</em> lens, and its natural companion is the
+<em>conservation</em> lens of the singularity-crystal chapter, where
+inflows and outflows are balanced to a zero residual (<span
+class="citation"
+data-cites="fig:part_II_singularity-crystal">[@fig:part_II_singularity-crystal]</span>;
+<span class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>):
+one asks how much a filing has accumulated, the other whether its books
+balance. On the measurement side, the pairwise-overlap machinery of
+<span class="citation"
+data-cites="sec:part_II_metrological-overlap">[@sec:part_II_metrological-overlap]</span>
+is what lets two agents compare their filing vocabularies — the same
+companion-grammar role this paper plays on Synthio. Looking forward, the
+shelf cartoon reappears when Part III climbs the stack onto silicon in
+<span class="citation"
+data-cites="sec:part_III_cmos-protonic">[@sec:part_III_cmos-protonic]</span>
+and when the moving-up-stack chapter files whole agents onto the
+lattice.</p>
+<h2 id="summary">Summary</h2>
+<p>The metamorphic-octaves paper borrows the mud → shale → schist story
+as a <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>
+filing cabinet for people and software under Φ, filed on engine shelf 5
+through the Digits × 01–99 map [mendez2026metamorphic]. Its dual-axis
+model weighs personal heat against professional heat, and its Goldilocks
+lock files unconstrained heat as magma/burnout, pressure without heat as
+dormant, and heat plus constraint as recrystallisation — maturing across
+99 octaves into the schist label, formalised in <span class="citation"
+data-cites="eq:part_II_metamorphic-octaves_filing">[@eq:part_II_metamorphic-octaves_filing]</span>.
+The book reads the cumulative story as the densification curve of <span
+class="citation"
+data-cites="eq:part_II_metamorphic-octaves_densification">[@eq:part_II_metamorphic-octaves_densification]</span>,
+whose marginal gain <span class="math inline">\(D&#39;(x) =
+kD_0/(1+x)\)</span> in <span class="citation"
+data-cites="eq:part_II_metamorphic-octaves_marginal">[@eq:part_II_metamorphic-octaves_marginal]</span>
+shrinks but never vanishes — an honest picture of transformation with no
+“unbreakable rock” asymptote. The paper’s own disclaimers hold
+throughout: not geology, not medicine, not a lifestyle prescription — a
+way to file, not a prophecy.</p>
+<h2 id="key-terms">Key Terms</h2>
+<p><a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:octave"><strong>octave</strong></a>, <a
+href="#gl:digit"><strong>digit</strong></a>, <a
+href="#gl:omni-lattice"><strong>omni-lattice</strong></a>, <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a>, <a
+href="#gl:master-register"><strong>master-register</strong></a>, <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a>, <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a>, <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a>.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><a
+href="https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-tbme-metamorphic-octaves-2026-08">Whitepaper
+surface — <em>synthobs-tbme-metamorphic-octaves-2026-08</em></a> — the
+source note itself, with its honesty-first block intact.</li>
+<li><a
+href="https://github.com/FractiAI/synthobs-tbme-metamorphic-octaves">Standalone
+repo — <code>FractiAI/synthobs-tbme-metamorphic-octaves</code></a> —
+reference implementation;
+<code>npm run research:synthobs-tbme-metamorphic-octaves</code> yields
+the 9/9 fixture lock.</li>
+<li>[mendez2026ship] — the ship-blog series frame in which this Part
+XIII note sits; read for the Fair Exchange plain-speak convention.</li>
+<li>[mendez2026zeroOctave] — the octave ladder’s origin note; pairs with
+<span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span> for
+the Digits × 01–99 map.</li>
+<li>[mendez2026cmosProtonic] — the named sibling shelf (CMOS), same
+filing cartoon on a hardware substrate.</li>
+<li>[mendez2026digitsMaster] — the named sibling shelf (digits), the
+register-row half of the engine map.</li>
+</ul>
+<h2 id="practice">Practice</h2>
+<ul>
+<li><strong>Lab:</strong> <span class="citation"
+data-cites="sec:lab_part_II_metamorphic-octaves">[@sec:lab_part_II_metamorphic-octaves]</span>
+— run the 9/9 fixture lock, compute the densification checkpoints by
+hand, and verify them against
+<code>textbook.models.densification</code>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_II_metamorphic-octaves">[@sec:q_part_II_metamorphic-octaves]</span>
+— recall through synthesis.</li>
+<li><strong>Exercise 1.</strong> File each of the following with the
+Goldilocks lock, citing the branch of <span class="citation"
+data-cites="eq:part_II_metamorphic-octaves_filing">[@eq:part_II_metamorphic-octaves_filing]</span>:
+(a) a team with three concurrent roles and public deadlines but no
+identity shake-ups;
+(b) a person in sustained grief <em>and</em> a zero-mock-gated project;
+(c) an agent holding two contradictory true states with no external
+constraint.</li>
+<li><strong>Exercise 2.</strong> Without a calculator, order <span
+class="math inline">\(D(3)\)</span>, <span
+class="math inline">\(D(7)\)</span>, and <span
+class="math inline">\(D(15)\)</span> for the pinned parameters, then
+justify the ordering using <span class="citation"
+data-cites="eq:part_II_metamorphic-octaves_marginal">[@eq:part_II_metamorphic-octaves_marginal]</span>.</li>
+<li><strong>Exercise 3.</strong> Show that doubling the exposure from
+<span class="math inline">\(x\)</span> to <span
+class="math inline">\(2x\)</span> adds <span class="math inline">\(D_0 k
+\ln\!\bigl(\tfrac{1+2x}{1+x}\bigr)\)</span> to the filing, and evaluate
+the limit of that increment as <span class="math inline">\(x \to
+\infty\)</span>. What does the limit say about the schist label’s honest
+reading?</li>
+<li><strong>Exercise 4.</strong> Explain, in one paragraph each, why the
+paper’s disclaimers rule out (a) reading <span
+class="math inline">\(D(x)\)</span> as a hardening curve toward an
+invulnerability asymptote, and (b) prescribing either furnace as a
+goal.</li>
+</ul>
+</main>
+</body>
+</html>

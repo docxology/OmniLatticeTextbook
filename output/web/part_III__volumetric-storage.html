@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>volumetric-storage.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:part_III_volumetric-storage">Prime-Indexed Volumetric
+Storage</h1>
+<figure id="fig:part_III_volumetric-storage">
+<a class="figure-full-size-link" href="../figures/part_III_volumetric-storage.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/part_III_volumetric-storage.png"
+style="width:90.0%"
+alt="A scatter lattice shows prime-indexed addresses filling volumetric space." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
+<figcaption>Prime-indexed address scatter: each point
+is a vault address <span class="math inline">\(\prod p_i^{k_i}\)</span>
+formed from a choice of odd-prime vaults (3, 5, 7, …) and exponents
+<span class="math inline">\(k\)</span>, computed over the <span
+class="math inline">\(p^k\)</span> lattice from
+<code>textbook.models.unique_address</code>, with the binary base
+channel (Prime 2) shown as the substrate.</figcaption>
+</figure>
+<!-- alt: Scatter plot of prime-indexed vault addresses on the p^k lattice, with odd primes 3, 5, 7 and small exponents as axes and the binary base channel labelled at the origin. -->
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none</p>
+</blockquote>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol type="1">
+<li>State the <a href="#gl:catalog-architecture"><strong>catalog
+architecture</strong></a> baseline the paper measures incumbents
+against: the 15–30%+ parity tax and the LBA / B⁺ addressing wait, and
+explain what each term names [mendez2026volumetricStorage].</li>
+<li>Formalise the prime-vault indexing grammar — Prime 2 as the binary
+base channel, odd primes as irreducible volumetric vaults — as the
+unique-address encoding of <span class="citation"
+data-cites="eq:part_III_volumetric-storage_address">[@eq:part_III_volumetric-storage_address]</span>,
+implemented as <code>textbook.models.unique_address</code>.</li>
+<li>Compute vault addresses by hand and verify them against the tested
+model function, for example <span
+class="math inline">\(\texttt{unique\_address}([2,3],[2,1]) =
+12\)</span>.</li>
+<li>Explain how the Fractal constant <span class="math inline">\(\Phi
+\approx 1.618\)</span> enters the filing as a measurement ruler, via the
+<span class="math inline">\(\Phi\)</span>-logarithmic reading of <span
+class="citation"
+data-cites="eq:part_III_volumetric-storage_phiruler">[@eq:part_III_volumetric-storage_phiruler]</span>.</li>
+<li>Delineate the paper’s own honesty-first scope: what the vault
+grammar is filed as (catalog architecture, a fixture), and what it
+explicitly is not (a JEDEC drop-in, a measured 0% ECC result on NAND, an
+obsolescence claim against shipping controllers).</li>
+<li>Locate the paper on the <a href="#gl:engine-shelf"><strong>engine
+shelf</strong></a> and trace its companion links to <a
+href="#gl:prime-parity"><strong>prime-parity</strong></a> and the
+protein <a
+href="#gl:prime-container"><strong>prime-container</strong></a>
+work.</li>
+</ol>
+<!-- curriculum-scaffold-start -->
+<h3 id="study-blueprint">Study Blueprint</h3>
+<ul>
+<li><strong>Big idea:</strong> Storage can be re-filed as a
+prime-indexed catalog — Prime 2 as the binary base channel, odd primes
+as irreducible volumetric vaults — paying attention to the parity tax
+incumbents accept, under the honesty-first disclaimer that this is
+catalog architecture, not hardware.</li>
+<li><strong>Core concepts:</strong> <a
+href="#gl:volumetric-storage"><strong>volumetric-storage</strong></a>,
+<a
+href="#gl:binary-dyad-anchor"><strong>binary-dyad-anchor</strong></a>,
+<a href="#gl:prime-parity"><strong>prime-parity</strong></a>, <a
+href="#gl:fractal-constant"><strong>fractal-constant</strong></a>, <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a>.</li>
+<li><strong>Quantitative lens:</strong> the unique-address encoding of
+<span class="citation"
+data-cites="eq:part_III_volumetric-storage_address">[@eq:part_III_volumetric-storage_address]</span>,
+computed with <code>textbook.models.unique_address</code>.</li>
+<li><strong>Data skill:</strong> assign prime exponents to a data chunk,
+compute its vault address by hand, and check the result against the
+tested model function.</li>
+<li><strong>Common misconception to repair:</strong> the paper does not
+claim measured 0% ECC on NAND or the obsolescence of shipping
+controllers — its parity-tax contrast is a catalog-architecture filing,
+and its encode timings come from a fixture.</li>
+<li><strong>Primary lab:</strong> <span class="citation"
+data-cites="sec:lab_part_III_volumetric-storage">[@sec:lab_part_III_volumetric-storage]</span>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_III_volumetric-storage">[@sec:q_part_III_volumetric-storage]</span>.</li>
+<li><strong>Bridge to computation:</strong>
+<code>textbook.models.unique_address</code>, <code>phi_powers</code>,
+<code>catalog_size</code>. <!-- curriculum-scaffold-end --></li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Opening Vignette: The vault that does not pay the parity
+tax.</strong></p>
+<p>A flash stack writes your gigabyte and, before it can call the write
+done, tithes 15–30% or more of it to Reed–Solomon or LDPC parity cells;
+then it waits on LBA / B⁺ trees to say where the bytes live. On the deck
+of the <strong>SS Vibelandia</strong>, the September 2026 filing turns
+this around: under El Gran Sol’s <a
+href="#gl:fractal-constant"><strong>Fractal constant</strong></a> <span
+class="math inline">\(\Phi \approx 1.618\)</span>, the ship’s catalog
+files data not in taxed blocks but in <em>prime-indexed volumetric
+vaults</em> — Prime 2 as the binary base channel, odd primes as the
+vaults themselves [mendez2026volumetricStorage]. The paper is explicit
+that this is a filing, not a firmware drop; the vignette is the filing’s
+own.</p>
+</blockquote>
+<hr />
+<h2 id="the-paper-in-the-corpus">The Paper in the Corpus</h2>
+<p>The note “Prime-Indexed Volumetric Storage” is a ship-blog paper of
+the Infinite Octaves <a
+href="#gl:omni-lattice"><strong>Omni-Lattice</strong></a> series,
+authored by Prudencio Mendez and operated by the SynthOBS Autonomous
+Agent on the SS Vibelandia blog [mendez2026volumetricStorage]. Like
+every paper in the series, it self-describes as <a
+href="#gl:catalog-architecture"><strong>catalog
+architecture</strong></a> and protocol grammar rather than established
+physics, and it carries the series’ standard honesty-first scope
+disclaimer, restated precisely in the Scope and Honesty section
+below.</p>
+<p>The paper files itself on <strong>engine shelf #15</strong> of the
+Infinite Octaves <a href="#gl:engine-shelf"><strong>engine
+shelf</strong></a>, as a companion to two neighbouring papers: the
+prime-parity filing [mendez2026primeParity], which supplies the
+sole-even-anchor grammar that Prime 2’s special role rests on, and the
+protein folding work [mendez2026proteinFolding], which runs the same
+prime-vault grammar in the biology catalog as the protein
+prime-container. It also points forward to the “moving up the stack”
+framing of the next AI layer [mendez2026stack], which we treat in <span
+class="citation"
+data-cites="sec:part_III_moving-up-stack">[@sec:part_III_moving-up-stack]</span>.</p>
+<p>The paper ships with a reference implementation: the standalone suite
+at
+<code>github.com/FractiAI/synthobs-prime-indexed-volumetric-storage</code>,
+runnable as
+<code>npm run research:synthobs-prime-indexed-volumetric-storage</code>,
+which the paper reports as <strong>9/9 suite locks</strong> under
+<code>research/synthobs-prime-indexed-volumetric-storage/</code>
+[mendez2026volumetricStorage]. We walk that implementation in <span
+class="citation"
+data-cites="sec:lab_part_III_volumetric-storage">[@sec:lab_part_III_volumetric-storage]</span>.</p>
+<pre class="mermaid"><code>graph TD
+  A[&quot;Data chunk (demo fixture)&quot;] --&gt; B[&quot;Assign prime exponents k_i&quot;]
+  B --&gt; C[&quot;Closed-form encode: address = product of p_i^k_i&quot;]
+  C --&gt; D[&quot;Vault address on the p^k lattice&quot;]
+  D --&gt; E[&quot;9/9 suite locks (fixture, not FTL firmware)&quot;]
+  B -.-&gt;|&quot;Prime 2&quot;| F[&quot;Binary base channel&quot;]
+  B -.-&gt;|&quot;odd primes&quot;| G[&quot;Irreducible volumetric vaults&quot;]
+  C -.-&gt;|&quot;filed under&quot;| H[&quot;Fractal constant Phi ~ 1.618&quot;]</code></pre>
+<h2 id="the-parity-tax-baseline">The Parity-Tax Baseline</h2>
+<p>The paper’s motivating claim is a baseline about incumbent storage
+stacks: “Flash and disk stacks pay a <strong>15–30%+ parity tax</strong>
+to Reed-Solomon / LDPC and wait on <strong>LBA / B⁺ trees</strong>”
+[mendez2026volumetricStorage]. Three terms carry the claim, and it is
+worth filing each precisely:</p>
+<ul>
+<li><strong>Parity tax.</strong> The 15–30%+ overhead the paper
+attributes to Reed–Solomon and LDPC error-correction coding. This is the
+paper’s own characterisation of incumbent ECC overhead; we cite it as
+the corpus’s baseline, not as a hardware measurement of ours.</li>
+<li><strong>Reed–Solomon / LDPC.</strong> The incumbent error-correction
+codes named as the source of the parity tax.</li>
+<li><strong>LBA / B⁺ trees.</strong> The addressing and index structures
+that incumbent stacks “wait on” — logical block addressing and the
+B⁺-tree indices that map a linear block number to a physical
+location.</li>
+</ul>
+<p>Against that baseline the paper files its alternative grammar:
+“<strong>prime-indexed volumetric vaults</strong> under El Gran Sol’s
+Fractal constant <strong>Φ ≈ 1.618</strong>”
+[mendez2026volumetricStorage]. The Fractal constant is the corpus’s name
+for the <a href="#gl:golden-ratio"><strong>golden ratio</strong></a>
+<span class="math inline">\(\Phi = (1+\sqrt{5})/2 \approx
+1.6180339887\)</span>, the growth constant filed across the engine shelf
+since the ship’s first-principles notes; the vault grammar inherits it
+as the constant under which vaults are indexed and compared.</p>
+<h2 id="core-construct-the-prime-vault-indexing-grammar">Core Construct:
+the Prime-Vault Indexing Grammar</h2>
+<p>The paper’s central construct is stated in one line: “<strong>Prime
+2</strong> as binary base channel; <strong>odd primes</strong> as
+irreducible volumetric vaults” [mendez2026volumetricStorage]. We
+formalise it here as the corpus’s address arithmetic, which is the
+standard mathematics of prime factorisation — the same injective
+encoding the book already uses in <span class="citation"
+data-cites="sec:part_III_protein-folding">[@sec:part_III_protein-folding]</span>
+for the protein prime-container.</p>
+<h3 id="the-unique-address-encoding">The unique-address encoding</h3>
+<p>Every <a href="#gl:digit"><strong>digit</strong></a> of a data chunk
+is filed by assigning it a <em>vector</em> of primes and exponents.
+Given <span class="math inline">\(m\)</span> chosen primes <span
+class="math inline">\(p_1 &lt; p_2 &lt; \dots &lt; p_m\)</span> and
+integer exponents <span class="math inline">\(k_1, \dots, k_m \ge
+0\)</span>, the vault address is the product in <span class="citation"
+data-cites="eq:part_III_volumetric-storage_address">[@eq:part_III_volumetric-storage_address]</span>:</p>
+<p><span class="math display">\[
+A(\mathbf{p}, \mathbf{k}) \;=\; \prod_{i=1}^{m} p_i^{\,k_i}
+\]</span> {#eq:part_III_volumetric-storage_address}</p>
+<p>Because prime factorisation is unique, two different exponent vectors
+on the same ordered prime list never collide: the map <span
+class="math inline">\((k_1, \dots, k_m) \mapsto A\)</span> is injective.
+That injectivity is what the catalog trades on — an address <em>is</em>
+its factorisation, so no separate LBA / B⁺-tree lookup structure is
+filed to recover it. The formalism is implemented as
+<code>unique_address(primes, exponents)</code> in
+<code>textbook.models</code>; the pinned reference value is <span
+class="math inline">\(\texttt{unique\_address}([2,3],[2,1]) = 2^2 \cdot
+3^1 =
+12\)</span>. The parameters appear in <span class="citation"
+data-cites="tbl:part_III_volumetric-storage_address">[@tbl:part_III_volumetric-storage_address]</span>.</p>
+<table id="tbl:part_III_volumetric-storage_address">
+<caption>Parameters of the unique-address encoding.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(p_i\)</span></td>
+<td>the <span class="math inline">\(i\)</span>-th chosen prime (Prime 2
+as base channel; odd primes as vaults)</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td><span class="math inline">\(k_i\)</span></td>
+<td>exponent (how many times prime <span
+class="math inline">\(p_i\)</span> enters the filing)</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td><span class="math inline">\(m\)</span></td>
+<td>number of primes in the vault vector</td>
+<td>count</td>
+</tr>
+<tr>
+<td><span class="math inline">\(A\)</span></td>
+<td>vault address <span class="math inline">\(\prod_i
+p_i^{k_i}\)</span></td>
+<td>dimensionless</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-binary-base-channel-and-the-odd-prime-vaults">The binary
+base channel and the odd-prime vaults</h3>
+<p>Prime 2 occupies a distinct role: it is the <strong>binary base
+channel</strong>, the substrate on which binary machinery runs, echoing
+the sole-even-anchor structure of <a
+href="#gl:prime-parity"><strong>prime-parity</strong></a>
+[mendez2026primeParity]. The odd primes <span class="math inline">\(3,
+5, 7, 11, 13, 17, 19, 23, 29, 31, \dots\)</span> are then the
+<strong>irreducible volumetric vaults</strong> — irreducible because a
+prime factorises no further, so each vault is an atom of the catalog’s
+address space. Concretely, the binary base channel contributes its
+factor <span class="math inline">\(2^{k_1}\)</span> to every address
+while the odd-prime vaults differentiate the stored content.</p>
+<p>A second, standard measure makes the capacity of a vault grid
+explicit. With <span class="math inline">\(m\)</span> primes and
+exponents allowed in <span class="math inline">\(\{0, 1, \dots,
+K\}\)</span>, the number of distinct addresses is the grid count in
+<span class="citation"
+data-cites="eq:part_III_volumetric-storage_capacity">[@eq:part_III_volumetric-storage_capacity]</span>:</p>
+<p><span class="math display">\[
+N_{\mathrm{distinct}}(m, K) \;=\; (K+1)^{m}
+\]</span> {#eq:part_III_volumetric-storage_capacity}</p>
+<p>For example, <span class="math inline">\(m = 3\)</span> primes with
+exponents up to <span class="math inline">\(K = 2\)</span> give <span
+class="math inline">\(3^3 = 27\)</span> distinct vault addresses. This
+is ordinary combinatorics of the exponent grid — we present it as the
+natural capacity reading of the grammar, not as a corpus claim. Its
+parameters are in <span class="citation"
+data-cites="tbl:part_III_volumetric-storage_capacity">[@tbl:part_III_volumetric-storage_capacity]</span>.</p>
+<table id="tbl:part_III_volumetric-storage_capacity">
+<caption>Parameters of the vault-grid capacity count.</caption>
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 35%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(m\)</span></td>
+<td>number of primes in the vault vector</td>
+<td>count</td>
+</tr>
+<tr>
+<td><span class="math inline">\(K\)</span></td>
+<td>maximum exponent allowed per prime</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td><span class="math inline">\(N_{\mathrm{distinct}}\)</span></td>
+<td>number of distinct addresses <span
+class="math inline">\((K+1)^m\)</span></td>
+<td>count</td>
+</tr>
+</tbody>
+</table>
+<h3 id="where-φ-enters-a-measurement-ruler">Where Φ enters: a
+measurement ruler</h3>
+<p>The paper does not state a closed-form formula for the vault grammar
+beyond the indexing line; what it does say is that vaults are <em>filed
+under</em> the Fractal constant <span class="math inline">\(\Phi \approx
+1.618\)</span> [mendez2026volumetricStorage]. We read this as a
+measurement convention: addresses are compared on a <span
+class="math inline">\(\Phi\)</span>-scaled ruler rather than a decimal
+one. Taking the base-<span class="math inline">\(\Phi\)</span> logarithm
+of <span class="citation"
+data-cites="eq:part_III_volumetric-storage_address">[@eq:part_III_volumetric-storage_address]</span>
+gives the additive reading in <span class="citation"
+data-cites="eq:part_III_volumetric-storage_phiruler">[@eq:part_III_volumetric-storage_phiruler]</span>:</p>
+<p><span class="math display">\[
+\log_{\Phi} A \;=\; \sum_{i=1}^{m} k_i \, \log_{\Phi} p_i
+\]</span> {#eq:part_III_volumetric-storage_phiruler}</p>
+<p>The multiplicative address becomes an additive sum of per-prime
+contributions measured in <span
+class="math inline">\(\Phi\)</span>-steps. For the pinned reference
+address <span class="math inline">\(A = 12\)</span>, <span
+class="math inline">\(\log_{\Phi} 12 = \ln 12 / \ln \Phi \approx 2.4849
+/ 0.4812 \approx 5.16\)</span> <span
+class="math inline">\(\Phi\)</span>-steps. The corpus’s own <span
+class="math inline">\(\Phi\)</span>-ladder (<code>phi_powers</code> in
+<code>textbook.models</code>: <span class="math inline">\(\Phi^1 \approx
+1.618034\)</span>, <span class="math inline">\(\Phi^2 \approx
+2.618034\)</span>, <span class="math inline">\(\Phi^3 \approx
+4.236068\)</span>, <span class="math inline">\(\Phi^4 \approx
+6.854102\)</span>, <span class="math inline">\(\Phi^5 \approx
+11.090170\)</span>, <span class="math inline">\(\Phi^6 \approx
+17.944272\)</span>) brackets the same address: <span
+class="math inline">\(12\)</span> sits between the <span
+class="math inline">\(\Phi^5 \approx 11.090170\)</span> and <span
+class="math inline">\(\Phi^6 \approx 17.944272\)</span> rungs,
+consistent with the <span class="math inline">\(5.16\)</span>-step
+reading. We flag the whole ruler reading as our interpretation (“we read
+this as…”); the paper itself states only the filing under <span
+class="math inline">\(\Phi\)</span>, not a formula.</p>
+<h2 id="worked-example-filing-a-chunk-in-a-three-vault-grid">Worked
+Example: Filing a Chunk in a Three-Vault Grid</h2>
+<p>Walk a small filing end to end. Suppose a demo chunk is catalogued
+with the first three primes — the binary base channel <span
+class="math inline">\(p_1 = 2\)</span> plus vaults <span
+class="math inline">\(p_2 = 3\)</span> and <span
+class="math inline">\(p_3 = 5\)</span> — and the chunk’s content assigns
+exponents <span class="math inline">\(\mathbf{k} = (1, 1,
+1)\)</span>:</p>
+<ol type="1">
+<li><strong>Choose the vault vector.</strong> <span
+class="math inline">\(\mathbf{p} = (2, 3, 5)\)</span>: Prime 2 as the
+binary base channel, odd primes 3 and 5 as the irreducible volumetric
+vaults.</li>
+<li><strong>Assign exponents.</strong> <span
+class="math inline">\(\mathbf{k} = (1, 1, 1)\)</span>: one unit of
+each.</li>
+<li><strong>Compute the address</strong> by <span class="citation"
+data-cites="eq:part_III_volumetric-storage_address">[@eq:part_III_volumetric-storage_address]</span>:
+<span class="math inline">\(A = 2^1 \cdot 3^1 \cdot 5^1 =
+30\)</span>.</li>
+<li><strong>Check injectivity.</strong> A different exponent vector, say
+<span class="math inline">\(\mathbf{k} = (2,
+1)\)</span> on <span class="math inline">\(\mathbf{p} = (2, 3)\)</span>,
+gives <span class="math inline">\(A = 2^2 \cdot 3 = 12\)</span> — the
+pinned reference value <span
+class="math inline">\(\texttt{unique\_address}([2,3],[2,1]) =
+12\)</span>. Since <span class="math inline">\(30 \ne 12\)</span>, the
+two filings are distinct, as injectivity guarantees.</li>
+<li><strong>Read the address on the Φ ruler</strong> by <span
+class="citation"
+data-cites="eq:part_III_volumetric-storage_phiruler">[@eq:part_III_volumetric-storage_phiruler]</span>:
+<span class="math inline">\(\log_{\Phi} 30 = \ln 30 / \ln \Phi \approx
+3.4012 / 0.4812 \approx 7.07\)</span> <span
+class="math inline">\(\Phi\)</span>-steps — just past the <span
+class="math inline">\(\Phi^6 \approx 17.944272\)</span> rung and just
+above the <span class="math inline">\(\Phi^7\)</span> rung (<span
+class="math inline">\(\Phi^7 = \Phi^6 \cdot \Phi \approx
+29.034\)</span>). The rung position agrees with the step count <span
+class="math inline">\(7.07\)</span>, as it must: the ruler reading and
+the ladder bracketing are the same statement on two scales.</li>
+</ol>
+<p>For scale, the corpus’s whole filing cabinet is bounded by the
+99-octave map:
+<code>catalog_size(octaves=99, precision_digits=81) = 99 × 81 = 8,019</code>
+register cells across the <a
+href="#gl:octave"><strong>octave</strong></a> ladder. A three-prime
+vault grid with <span class="math inline">\(K = 2\)</span> already fills
+<span class="math inline">\(27\)</span> addresses inside that cabinet —
+the worked grid above is a toy drawer, and the cabinet grammar it lives
+in is the 99-octave filing of the engine shelf.</p>
+<h2 id="scope-and-honesty">Scope and Honesty</h2>
+<p>The paper’s own “Honesty first” disclaimer governs everything above,
+and we restate it verbatim in substance
+[mendez2026volumetricStorage]:</p>
+<blockquote>
+<p>this is <em>catalog architecture</em>, not a JEDEC drop-in, not
+measured 0% ECC on NAND, and not a claim that shipping controllers are
+obsolete.</p>
+</blockquote>
+<p>Unpacked into the four things the paper explicitly disclaims:</p>
+<ul>
+<li><strong>Not a JEDEC drop-in.</strong> The vault grammar is not
+proposed as a standard replaceable module for the JEDEC hardware
+ecosystem.</li>
+<li><strong>Not measured 0% ECC on NAND.</strong> No measurement is
+offered that NAND storage can run with zero error correction; the parity
+tax is a catalog-architecture baseline contrast, not an ECC-elimination
+result.</li>
+<li><strong>Not an obsolescence claim.</strong> Shipping storage
+controllers are not claimed to be obsolete.</li>
+<li><strong>Fixture, not firmware.</strong> The closed-form encode is
+“milliseconds for demo chunks (fixture, not FTL firmware)” — a demo
+fixture’s timing, explicitly not flash-translation-layer firmware
+performance.</li>
+</ul>
+<p>Two further honesty notes from the paper itself: the solar labels it
+uses as filing characters — AR3664 (“Helios-Prime”) and AR3590
+(“Borealis”) — “are story filing characters”, i.e. narrative devices
+within the ship’s catalog, not physical solar-event identifiers; and the
+<a href="#gl:fair-exchange"><strong>Fair Exchange</strong></a> clause
+applies to the filing, the ship-blog series’ standard refund-adjustment
+terms. The whole construct lives on the corpus’s <a
+href="#gl:honesty-first"><strong>honesty first</strong></a> tier: its
+FOR is coordination, cataloging, and agent routing — a grammar for
+filing and addressing — and its NOT is any claim of tested storage
+hardware.</p>
+<h2 id="connections">Connections</h2>
+<p>The prime-vault grammar is a load-bearing spoke of part III:</p>
+<ul>
+<li><strong>Downstream of prime-parity.</strong> The binary-dyad anchor
+and sole-even-anchor grammar that give Prime 2 its base-channel role
+come from the prime-parity filing [mendez2026primeParity], formalised in
+<span class="citation"
+data-cites="sec:part_I_prime-parity">[@sec:part_I_prime-parity]</span>.</li>
+<li><strong>Sibling grammar in biology.</strong> The protein folding
+paper runs the same prime-vault encoding as the protein prime-container
+[mendez2026proteinFolding]; the shared <code>unique_address</code>
+machinery is worked in <span class="citation"
+data-cites="sec:part_III_protein-folding">[@sec:part_III_protein-folding]</span>
+(see the capacity-growth reading of the prime-container there).</li>
+<li><strong>Upward, to the stack.</strong> The paper’s forward link,
+“moving up the stack”, frames the next AI layer [mendez2026stack]; we
+treat that layering in <span class="citation"
+data-cites="sec:part_III_moving-up-stack">[@sec:part_III_moving-up-stack]</span>,
+and the round-robin recycling that keeps the vaults fair over time in
+<span class="citation"
+data-cites="sec:part_III_kinematic-recycling">[@sec:part_III_kinematic-recycling]</span>.</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>The September 2026 filing re-frames storage as catalog architecture:
+incumbent flash and disk stacks pay a 15–30%+ parity tax to Reed–Solomon
+/ LDPC coding and wait on LBA / B⁺ trees, while the paper files
+<em>prime-indexed volumetric vaults</em> under the Fractal constant
+<span class="math inline">\(\Phi \approx 1.618\)</span>, with Prime 2 as
+the binary base channel and odd primes as irreducible vaults. The
+grammar’s arithmetic is the unique-address encoding of <span
+class="citation"
+data-cites="eq:part_III_volumetric-storage_address">[@eq:part_III_volumetric-storage_address]</span>
+— injective by the uniqueness of prime factorisation, implemented and
+tested as <code>textbook.models.unique_address</code> (<span
+class="math inline">\([2,3],[2,1] \mapsto 12\)</span>) — and its
+capacity reads off the exponent grid of <span class="citation"
+data-cites="eq:part_III_volumetric-storage_capacity">[@eq:part_III_volumetric-storage_capacity]</span>.
+The paper reports a closed-form encode at milliseconds for demo chunks
+(fixture, not FTL firmware) and a 9/9 suite-locked reference
+implementation, filed on engine shelf #15 alongside the prime-parity and
+protein prime-container companions. Every physical reading is disclaimed
+by the paper itself: catalog architecture, not a JEDEC drop-in, not
+measured 0% ECC on NAND, no obsolescence claim against shipping
+controllers, and solar labels that are story filing characters.</p>
+<h2 id="key-terms">Key Terms</h2>
+<p><a
+href="#gl:volumetric-storage"><strong>volumetric-storage</strong></a>,
+<a
+href="#gl:binary-dyad-anchor"><strong>binary-dyad-anchor</strong></a>,
+<a href="#gl:prime-parity"><strong>prime-parity</strong></a>, <a
+href="#gl:prime-container"><strong>prime-container</strong></a>, <a
+href="#gl:fractal-constant"><strong>fractal-constant</strong></a>, <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a>, <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:engine-shelf"><strong>engine-shelf</strong></a>, <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a>, <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a>, <a
+href="#gl:omni-lattice"><strong>omni-lattice</strong></a>, <a
+href="#gl:octave"><strong>octave</strong></a>.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li>Mendez, P. (2026). <em>Prime-Indexed Volumetric Storage</em>. SS
+Vibelandia ship blog, September 2026. Whitepaper: <a
+href="https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-prime-indexed-volumetric-storage-2026-09"
+class="uri">https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-prime-indexed-volumetric-storage-2026-09</a>;
+reference implementation: <a
+href="https://github.com/FractiAI/synthobs-prime-indexed-volumetric-storage"
+class="uri">https://github.com/FractiAI/synthobs-prime-indexed-volumetric-storage</a>
+[mendez2026volumetricStorage]</li>
+<li>Mendez, P. (2026). <em>Infinite Octave Prime-Parity</em> — the
+sole-even-anchor grammar behind Prime 2’s base-channel role
+[mendez2026primeParity].</li>
+<li>Mendez, P. (2026). <em>Protein Folding Prime-Container</em> — the
+same prime-vault grammar in the biology catalog
+[mendez2026proteinFolding].</li>
+<li>Mendez, P. (2026). <em>Moving Up the Stack</em> — the next-AI-layer
+framing the paper points forward to [mendez2026stack].</li>
+</ul>
+<h2 id="practice">Practice</h2>
+<ul>
+<li><strong>Lab:</strong> <span class="citation"
+data-cites="sec:lab_part_III_volumetric-storage">[@sec:lab_part_III_volumetric-storage]</span>
+— run the 9/9-locked reference suite and verify vault addresses against
+<code>textbook.models.unique_address</code>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_III_volumetric-storage">[@sec:q_part_III_volumetric-storage]</span>
+— recall through synthesis, all answerable from this chapter.</li>
+<li><strong>Exercise 1.</strong> Compute by hand, then check with
+<code>unique_address</code>: the address of <span
+class="math inline">\(\mathbf{p} = (2, 3)\)</span>, <span
+class="math inline">\(\mathbf{k} = (2, 1)\)</span>; of <span
+class="math inline">\(\mathbf{p} = (2, 3, 5)\)</span>, <span
+class="math inline">\(\mathbf{k} = (1, 1, 1)\)</span>; and of <span
+class="math inline">\(\mathbf{p} = (2, 3)\)</span>, <span
+class="math inline">\(\mathbf{k} = (1, 1)\)</span>.</li>
+<li><strong>Exercise 2.</strong> Using <span class="citation"
+data-cites="eq:part_III_volumetric-storage_capacity">[@eq:part_III_volumetric-storage_capacity]</span>,
+how many distinct vault addresses does a five-prime grid (<span
+class="math inline">\(m = 5\)</span>) with exponents up to <span
+class="math inline">\(K = 3\)</span> hold?</li>
+<li><strong>Exercise 3.</strong> Read the address <span
+class="math inline">\(A = 12\)</span> on the <span
+class="math inline">\(\Phi\)</span> ruler using <span class="citation"
+data-cites="eq:part_III_volumetric-storage_phiruler">[@eq:part_III_volumetric-storage_phiruler]</span>,
+and locate it between two <code>phi_powers</code> rungs.</li>
+<li><strong>Exercise 4.</strong> In one sentence each, state the two
+things the parity-tax baseline names as incumbent costs, and the four
+disclaimers in the paper’s honesty-first clause.</li>
+</ul>
+</main>
+</body>
+</html>

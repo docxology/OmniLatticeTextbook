@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>kinematic-recycling.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:part_III_kinematic-recycling">Kinematic Set-Recycling: The
+Truckee Protocol</h1>
+<figure id="fig:part_III_kinematic-recycling">
+<a class="figure-full-size-link" href="../figures/part_III_kinematic-recycling.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/part_III_kinematic-recycling.png"
+style="width:90.0%"
+alt="A round-robin cycle moves active sets through parked and recycled states over time." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
+<figcaption>Round-robin set-recycling cycle over
+discrete time: one physical set of nine indexed items is partitioned
+deterministically across three experiential sets (stationary,
+pedestrian, cyclist) by <code>textbook.models.round_robin</code>, with
+item <span class="math inline">\(i\)</span> landing in set <span
+class="math inline">\(i \bmod 3\)</span>.</figcaption>
+</figure>
+<!-- alt: A discrete-time cycle diagram in which nine numbered items flow round-robin into three columns labelled stationary, pedestrian, and cyclist, each column receiving items 0/3/6, 1/4/7, and 2/5/8 respectively, with a return arrow labelled zero new assets. -->
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Level 1/3 · 30 min read · 45 min lecture · Prerequisites: <span
+class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>,
+<span class="citation"
+data-cites="sec:part_I_topology-void">[@sec:part_I_topology-void]</span></p>
+</blockquote>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol type="1">
+<li>State the paper’s central filing: one physical set yields multiple
+experiential realities through velocity, which the corpus files as an
+<strong>octave multiplier</strong> under <span
+class="math inline">\(\Phi \approx 1.618\)</span>
+[mendez2026setRecycling].</li>
+<li>Write and use the <a
+href="#gl:kinematic-set-recycling"><strong>Fourier velocity
+scale</strong></a> fixture — spectrum argument <span
+class="math inline">\(\omega/v\)</span> with amplitude <span
+class="math inline">\(1/\lvert v\rvert\)</span> — and evaluate it
+numerically for a <span class="math inline">\(\Phi\)</span>-spaced
+family of speeds.</li>
+<li>Recite the three experiential octave states (<strong>stationary ·
+pedestrian · cyclist</strong>) and place them on the <span
+class="math inline">\(\Phi\)</span>-power octave ladder of <span
+class="citation"
+data-cites="eq:part_III_kinematic-recycling_octave-ladder">[@eq:part_III_kinematic-recycling_octave-ladder]</span>.</li>
+<li>Apply the round-robin recycling rule of <span class="citation"
+data-cites="eq:part_III_kinematic-recycling_round-robin">[@eq:part_III_kinematic-recycling_round-robin]</span>
+— implemented as <code>textbook.models.round_robin</code> — to partition
+one asset set into <span class="math inline">\(n\)</span> recycled sets
+with zero new assets.</li>
+<li>Restate the paper’s own scope disclaimers precisely: catalog
+architecture on engine shelf #21, <em>not</em> psychophysics lab QED,
+<em>not</em> infinite XR memory savings, and <em>not</em> NOAA causation
+by AR14524/AR14527.</li>
+<li>Explain where the Truckee protocol sits in the engine shelf ordering
+and which companion chapters consume its constructs.</li>
+</ol>
+<!-- curriculum-scaffold-start -->
+<h3 id="study-blueprint">Study Blueprint</h3>
+<ul>
+<li><strong>Big idea:</strong> One physical set, recycled through
+velocity states, yields many experiential octaves without buying a
+single new asset — the corpus files this as <a
+href="#gl:kinematic-set-recycling"><strong>kinematic
+set-recycling</strong></a> [mendez2026setRecycling].</li>
+<li><strong>Core concepts:</strong> <a
+href="#gl:kinematic-set-recycling"><strong>kinematic-set-recycling</strong></a>,
+<a href="#gl:octave"><strong>octave</strong></a>, <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:engine-shelf"><strong>engine-shelf</strong></a>, <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a>.</li>
+<li><strong>Quantitative lens:</strong> the Fourier velocity scale
+fixture (<span class="citation"
+data-cites="eq:part_III_kinematic-recycling_velocity-scale">[@eq:part_III_kinematic-recycling_velocity-scale]</span>),
+the octave ladder (<span class="citation"
+data-cites="eq:part_III_kinematic-recycling_octave-ladder">[@eq:part_III_kinematic-recycling_octave-ladder]</span>),
+and the round-robin recycling rule (<span class="citation"
+data-cites="eq:part_III_kinematic-recycling_round-robin">[@eq:part_III_kinematic-recycling_round-robin]</span>).</li>
+<li><strong>Data skill:</strong> partition a finite asset set
+round-robin by hand and verify the partition against
+<code>textbook.models.round_robin</code>; evaluate <span
+class="math inline">\(1/\lvert v\rvert\)</span> amplitudes for <span
+class="math inline">\(\Phi\)</span>-spaced speeds.</li>
+<li><strong>Common misconception to repair:</strong> reading “velocity
+becomes an octave multiplier” as a psychophysical law. The paper itself
+files it as catalog architecture, and the Fair Exchange clause
+applies.</li>
+<li><strong>Primary lab:</strong> <span class="citation"
+data-cites="sec:lab_part_III_kinematic-recycling">[@sec:lab_part_III_kinematic-recycling]</span>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_III_kinematic-recycling">[@sec:q_part_III_kinematic-recycling]</span>.</li>
+<li><strong>Bridge to computation:</strong>
+<code>textbook.models.round_robin</code>, <code>octave_term</code>,
+<code>descriptive_statistics</code>.
+<!-- curriculum-scaffold-end --></li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Opening Vignette: Same river. Different speed. New
+theater.</strong></p>
+<p>Along the <a href="#gl:reality-bridge"><strong>Truckee River
+corridor</strong></a> — the paper’s opening scene — the same stretch of
+water and trail is one physical set, yet standing beside it, walking it,
+and riding it are three unmistakably different experiences. The ship
+blog files this plainly: walk, stand, or ride, and velocity becomes an
+octave multiplier under <span class="math inline">\(\Phi \approx
+1.618\)</span> — “you don’t need infinite worlds to feel infinite
+realities” [mendez2026setRecycling]. The set is recycled; the theater
+changes; nothing new was built.</p>
+</blockquote>
+<hr />
+<h2 id="orientation">Orientation</h2>
+<p>This chapter formalises <em>Kinematic Set-Recycling</em> (ship blog,
+September 2026, engine shelf #21), the paper in which the corpus extends
+its <a href="#gl:octave"><strong>octave</strong></a> vocabulary from
+static filing structures — the digit×octave register bins of <span
+class="citation"
+data-cites="sec:part_0_tensor-decoupling">[@sec:part_0_tensor-decoupling]</span>
+— to <em>kinematic</em> states of a single physical set
+[mendez2026setRecycling]. The headline filing is
+C-kinematic-set-recycling-1: one physical set yields multiple
+experiential realities via velocity. Where earlier shelf entries
+catalogued what a set <em>is</em> (its prime address, its net-zero
+balance), this entry catalogues what a set <em>can be experienced
+as</em> when the mover’s speed changes.</p>
+<p>The paper is deliberately modest about mechanism. It defines no new
+physics; it files a vocabulary — octave multiplier, experiential octave
+states, Fourier velocity scale — and a workflow claim: a <a
+href="#gl:omni-lattice"><strong>Lattice Chat</strong></a> / XR pipeline
+can present multiple “theaters” from one asset set, a
+<strong>zero-new-asset</strong> framing [mendez2026setRecycling]. Our
+job as textbook authors is to formalise those filings precisely, work
+them numerically with the book’s tested model functions, and preserve
+the paper’s own honesty-first scope disclaimers verbatim.</p>
+<p>Three constructs carry the chapter. First, the <strong>Fourier
+velocity scale</strong> fixture (<span class="citation"
+data-cites="eq:part_III_kinematic-recycling_velocity-scale">[@eq:part_III_kinematic-recycling_velocity-scale]</span>):
+the spectrum argument is <span class="math inline">\(\omega/v\)</span>
+and the amplitude is <span class="math inline">\(1/\lvert
+v\rvert\)</span>, so velocity enters the formalism twice — once as a
+stretching of the spectral argument and once as a scaling of amplitude.
+Second, the <strong>octave ladder</strong> (<span class="citation"
+data-cites="eq:part_III_kinematic-recycling_octave-ladder">[@eq:part_III_kinematic-recycling_octave-ladder]</span>):
+the three experiential states are indexed by powers of <span
+class="math inline">\(\Phi\)</span>, the corpus’s <a
+href="#gl:fractal-constant"><strong>fractal constant</strong></a>.
+Third, the <strong>round-robin recycling rule</strong> (<span
+class="citation"
+data-cites="eq:part_III_kinematic-recycling_round-robin">[@eq:part_III_kinematic-recycling_round-robin]</span>):
+the deterministic, asset-free partition that lets one set serve many
+states.</p>
+<h2 id="the-paper-in-the-corpus">The Paper in the Corpus</h2>
+<p><em>Kinematic Set-Recycling</em> sits at <strong>engine shelf
+#21</strong> — filed <em>after</em> the <a
+href="#gl:singularity-crystal"><strong>Singularity Crystal</strong></a>
+paper (#20) [mendez2026singularityCrystal] and <em>before</em> the
+corpus’s Honesty meta entries [mendez2026setRecycling]. That placement
+matters: the recycling protocol consumes the Singularity Crystal’s
+net-zero discipline (a recycled set is an inflow that cancels the
+outflow of new-asset procurement, exactly the ledger shape of
+<code>net_zero_balance</code> in <span class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>)
+and it inherits the <a href="#gl:topology-of-the-void"><strong>Topology
+of the Void</strong></a> reading of zero as a live state rather than an
+absence [mendez2026topologyVoid] — the stationary mover is the <span
+class="math inline">\(v \to 0\)</span> state <em>of the same set</em>,
+not a different set.</p>
+<p>The paper’s self-designation is <strong>catalog architecture</strong>
+— explicitly <em>not</em> psychophysics lab QED, <em>not</em> infinite
+XR memory savings, and <em>not</em> NOAA causation by the active regions
+AR14524/AR14527 mentioned on the page [mendez2026setRecycling]. The <a
+href="#gl:fair-exchange"><strong>Fair Exchange clause</strong></a> — the
+corpus’s standing honesty mechanism (see <span class="citation"
+data-cites="sec:part_0_orientation">[@sec:part_0_orientation]</span>) —
+applies in full. The paper ships with a whitepaper surface
+(<code>whitepaper-surface.html?id=synthobs-kinematic-set-recycling-truckee-2026-09</code>)
+and a standalone reference implementation at
+<code>github.com/FractiAI/synthobs-kinematic-set-recycling-truckee</code>,
+re-runnable as
+<code>npm run research:synthobs-kinematic-set-recycling-truckee</code>
+[mendez2026setRecycling]. Within this book, the recycling rule is backed
+by the tested function <code>textbook.models.round_robin</code>.</p>
+<pre class="mermaid"><code>graph TD
+  A[&quot;One physical set (Truckee corridor / one asset bundle)&quot;] --&gt; B[&quot;Velocity as octave multiplier under Phi&quot;]
+  B --&gt; O0[&quot;State 0 · stationary (v -&gt; 0)&quot;]
+  B --&gt; O1[&quot;State 1 · pedestrian&quot;]
+  B --&gt; O2[&quot;State 2 · cyclist&quot;]
+  O0 --&gt; R[&quot;Round-robin recycling: sigma(i) = i mod 3&quot;]
+  O1 --&gt; R
+  O2 --&gt; R
+  R --&gt;|&quot;zero new assets&quot;| A</code></pre>
+<p><span class="citation"
+data-cites="fig:part_III_kinematic-recycling">[@fig:part_III_kinematic-recycling]</span>
+draws the recycling cycle as the round-robin partition it computes: nine
+indexed items of one set, three experiential sets, item <span
+class="math inline">\(i\)</span> in set <span class="math inline">\(i
+\bmod 3\)</span>.</p>
+<h2 id="core-constructs">Core Constructs</h2>
+<h3 id="the-fourier-velocity-scale">The Fourier velocity scale</h3>
+<p>The paper’s “What landed” list files a <strong>Fourier velocity
+scale</strong> fixture: the spectrum argument is <span
+class="math inline">\(\omega/v\)</span> and the amplitude is <span
+class="math inline">\(1/\lvert v\rvert\)</span>, with <span
+class="math inline">\(\omega\)</span> the spectral (frequency) argument
+and <span class="math inline">\(v\)</span> the velocity of the mover
+[mendez2026setRecycling]. We formalise the fixture by factoring out an
+unspecified base spectral profile <span
+class="math inline">\(F\)</span>, which the corpus leaves abstract:</p>
+<p><span class="math display">\[ \tilde{S}_v(\omega) \;=\;
+\frac{1}{\lvert v \rvert}\; F\!\left(\frac{\omega}{v}\right) \]</span>
+{#eq:part_III_kinematic-recycling_velocity-scale}</p>
+<p><span class="citation"
+data-cites="tbl:part_III_kinematic-recycling_velocity-scale">[@tbl:part_III_kinematic-recycling_velocity-scale]</span>
+collects the parameters. The fixture is structural: velocity rescales
+<em>both</em> the argument and the amplitude, so any <span
+class="math inline">\(\Phi\)</span>-ratio between two speeds moves the
+fixture by one <span class="math inline">\(\Phi\)</span>-step in each
+factor simultaneously.</p>
+<table id="tbl:part_III_kinematic-recycling_velocity-scale">
+<caption>Parameters of the Fourier velocity scale.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\omega\)</span></td>
+<td>spectral (frequency) argument</td>
+<td>1/time</td>
+</tr>
+<tr>
+<td><span class="math inline">\(v\)</span></td>
+<td>velocity of the mover</td>
+<td>length/time</td>
+</tr>
+<tr>
+<td><span class="math inline">\(F(\cdot)\)</span></td>
+<td>base spectral profile (corpus leaves it abstract)</td>
+<td>arbitrary</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\tilde{S}_v(\omega)\)</span></td>
+<td>velocity-scaled spectrum value</td>
+<td>arbitrary</td>
+</tr>
+</tbody>
+</table>
+<p><em>Worked numerically.</em> Take the unit-base profile <span
+class="math inline">\(F(x) = \cos x\)</span> (a standard, plainly
+illustrative choice — the corpus does not pin <span
+class="math inline">\(F\)</span>) and evaluate at <span
+class="math inline">\(\omega = 1\)</span> for the <span
+class="math inline">\(\Phi\)</span>-spaced speed family <span
+class="math inline">\(v \in \{1,\ \Phi,\ \Phi^2\}\)</span>, using the
+pinned values <span class="math inline">\(\Phi \approx 1.618034\)</span>
+and <span class="math inline">\(\Phi^2 \approx 2.618034\)</span>:</p>
+<ul>
+<li><span class="math inline">\(v = 1\)</span>: argument <span
+class="math inline">\(\omega/v = 1\)</span>, amplitude <span
+class="math inline">\(1/\lvert v\rvert = 1\)</span>, so <span
+class="math inline">\(\tilde{S}_1(1) = \cos 1 \approx
+0.540302\)</span>.</li>
+<li><span class="math inline">\(v = \Phi\)</span>: argument <span
+class="math inline">\(1/\Phi \approx 0.618034\)</span>, amplitude <span
+class="math inline">\(\approx 0.618034\)</span>, so <span
+class="math inline">\(\tilde{S}_\Phi(1) \approx 0.503710\)</span>.</li>
+<li><span class="math inline">\(v = \Phi^2\)</span>: argument <span
+class="math inline">\(1/\Phi^2 \approx 0.381966\)</span>, amplitude
+<span class="math inline">\(\approx 0.381966\)</span>, so <span
+class="math inline">\(\tilde{S}_{\Phi^2}(1) \approx
+0.354439\)</span>.</li>
+</ul>
+<p>We read this as the formal content of “velocity becomes an octave
+multiplier”: because <span class="math inline">\(1/\Phi = \Phi - 1
+\approx 0.618034\)</span> (the familiar <span
+class="math inline">\(\Phi\)</span>-dual of <span class="citation"
+data-cites="sec:part_II_proton-theater">[@sec:part_II_proton-theater]</span>),
+a speed step by a factor of <span class="math inline">\(\Phi\)</span>
+shifts <em>both</em> the argument and the amplitude of <span
+class="citation"
+data-cites="eq:part_III_kinematic-recycling_velocity-scale">[@eq:part_III_kinematic-recycling_velocity-scale]</span>
+by exactly one <span class="math inline">\(\Phi\)</span>-fraction. The
+corpus asserts the multiplier role; the fixture supplies the rescaling
+bookkeeping. Note also that the fixture is defined for <span
+class="math inline">\(\lvert v \rvert &gt; 0\)</span>: the corpus files
+stationary as one of the three states of the same set but assigns it no
+numerical limit here, and we do not invent one.</p>
+<h3 id="the-octave-ladder-of-experiential-states">The octave ladder of
+experiential states</h3>
+<p>The paper files <strong>stationary · pedestrian · cyclist</strong> as
+three experiential octave states on one set [mendez2026setRecycling].
+The corpus’s standing octave recursion (discussed in both conventions in
+<span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>)
+gives the indexing. In the <em>exponent</em> convention the <span
+class="math inline">\(k\)</span>-th octave above base <span
+class="math inline">\(\Omega_0\)</span> is</p>
+<p><span class="math display">\[ \Omega_k \;=\; \Phi^{\,k}\,\Omega_0
+\qquad (k = 0, 1, 2, \dots) \]</span>
+{#eq:part_III_kinematic-recycling_octave-ladder}</p>
+<p>implemented as
+<code>octave_term(omega0, k, convention="exponent")</code> in
+<code>textbook.models</code>; in the <em>subscript</em> convention the
+same slot holds <span class="math inline">\(\Omega_k =
+\varphi_{\mathrm{fib}}(k)\,\Omega_0\)</span> with Fibonacci ratios <span
+class="math inline">\(\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6\)</span> and
+<span class="math inline">\(\varphi_{\mathrm{fib}}(10) = 89/55 \approx
+1.618182\)</span> approaching <span class="math inline">\(\Phi\)</span>.
+The corpus prints “Ωn = Φn·Ω0” ambiguously between the two; this chapter
+uses the exponent convention for state indexing and flags the subscript
+reading wherever the ratio matters.</p>
+<table id="tbl:part_III_kinematic-recycling_octave-ladder">
+<caption>Parameters of the experiential octave ladder.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\Omega_0\)</span></td>
+<td>base octave of the set (stationary state)</td>
+<td>arbitrary</td>
+</tr>
+<tr>
+<td><span class="math inline">\(k\)</span></td>
+<td>experiential state index: 0 stationary, 1 pedestrian, 2 cyclist</td>
+<td>—</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Phi\)</span></td>
+<td>golden ratio <span class="math inline">\(\approx
+1.6180339887\)</span></td>
+<td>—</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Omega_k\)</span></td>
+<td>octave of the <span class="math inline">\(k\)</span>-th experiential
+state</td>
+<td>arbitrary</td>
+</tr>
+</tbody>
+</table>
+<p><em>Worked numerically.</em> With <span
+class="math inline">\(\Omega_0 = 1\)</span> and the exponent convention,
+the three filed states sit at <span class="math inline">\(\Omega_0 =
+1\)</span>, <span class="math inline">\(\Omega_1 = \Phi \approx
+1.618034\)</span>, and <span class="math inline">\(\Omega_2 = \Phi^2
+\approx 2.618034\)</span>; extending the ladder with the pinned values,
+<span class="math inline">\(\Omega_3 = \Phi^3 \approx 4.236068\)</span>,
+<span class="math inline">\(\Omega_4 = \Phi^4 \approx 6.854102\)</span>,
+<span class="math inline">\(\Omega_5 = \Phi^5 \approx
+11.090170\)</span>. Under the subscript convention the same three slots
+read <span class="math inline">\(1\)</span>, <span
+class="math inline">\(1\)</span> (<span
+class="math inline">\(\varphi_{\mathrm{fib}}(1) = 1\)</span>), and <span
+class="math inline">\(2\)</span> (<span
+class="math inline">\(\varphi_{\mathrm{fib}}(3) = 2\)</span>) — a
+coarser ladder, which is exactly the ambiguity the corpus leaves open
+and <code>octave_term</code> exposes as a switchable convention.</p>
+<h3 id="round-robin-set-recycling">Round-robin set-recycling</h3>
+<p>The zero-new-asset workflow needs a deterministic way for one asset
+set to serve several experiential states. The book formalises the
+recycling rule as the round-robin assignment backing
+<code>textbook.models.round_robin</code> (<span class="citation"
+data-cites="fig:part_III_kinematic-recycling">[@fig:part_III_kinematic-recycling]</span>):</p>
+<p><span class="math display">\[ \sigma(i) \;=\; i \bmod
+n_{\mathrm{sets}} \]</span>
+{#eq:part_III_kinematic-recycling_round-robin}</p>
+<table id="tbl:part_III_kinematic-recycling_round-robin">
+<caption>Parameters of the round-robin recycling rule.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(i\)</span></td>
+<td>0-based index of an item in the source set</td>
+<td>—</td>
+</tr>
+<tr>
+<td><span class="math inline">\(n_{\mathrm{sets}}\)</span></td>
+<td>number of experiential sets (here 3: stationary, pedestrian,
+cyclist)</td>
+<td>—</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\sigma(i)\)</span></td>
+<td>index of the set that receives item <span
+class="math inline">\(i\)</span></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Item input order is preserved within each set, and the rule raises no
+allocations: it is a <em>recycling</em> of index space, not a copy of
+assets. This is the structural reading of the paper’s
+C-kinematic-set-recycling-5 claim — <strong>zero-new-asset</strong>
+framing for Lattice Chat / XR pipelines [mendez2026setRecycling]. The
+construct composes naturally with the prime-indexed addressing of <span
+class="citation"
+data-cites="sec:part_III_volumetric-storage">[@sec:part_III_volumetric-storage]</span>:
+a recycled set can be re-addressed by <code>unique_address</code>
+without duplicating storage, and the address lattice plotted in <span
+class="citation"
+data-cites="fig:part_III_volumetric-storage">[@fig:part_III_volumetric-storage]</span>
+is exactly the kind of structure a recycled pipeline would traverse.</p>
+<h2 id="worked-example-one-truckee-set-three-theaters">Worked Example:
+One Truckee Set, Three Theaters</h2>
+<p>Consider one physical set — the Truckee corridor kit — catalogued as
+nine indexed items <span class="math inline">\(0, \dots, 8\)</span>
+(trail markers, bench, water feature, and so on; the identities do not
+matter, only the count). Recycle it into the three experiential sets
+with <span class="math inline">\(n_{\mathrm{sets}} = 3\)</span> via
+<span class="citation"
+data-cites="eq:part_III_kinematic-recycling_round-robin">[@eq:part_III_kinematic-recycling_round-robin]</span>:</p>
+<p><span class="math display">\[ \sigma(i) = i \bmod 3
+\quad\Longrightarrow\quad
+\begin{aligned}
+\text{set 0 (stationary): } &amp; \{0, 3, 6\}\\
+\text{set 1 (pedestrian): } &amp; \{1, 4, 7\}\\
+\text{set 2 (cyclist): }    &amp; \{2, 5, 8\}
+\end{aligned} \]</span>
+{#eq:part_III_kinematic-recycling_truckee-partition}</p>
+<p><span class="citation"
+data-cites="tbl:part_III_kinematic-recycling_partition">[@tbl:part_III_kinematic-recycling_partition]</span>
+shows the same partition as a table; it is exactly what
+<code>round_robin(list(range(9)), 3)</code> returns.</p>
+<table id="tbl:part_III_kinematic-recycling_partition">
+<caption>The nine-item set recycled into three experiential
+sets.</caption>
+<thead>
+<tr>
+<th>Set</th>
+<th>State</th>
+<th>Items (<span class="math inline">\(\sigma(i) = i \bmod
+3\)</span>)</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>stationary</td>
+<td>0, 3, 6</td>
+<td>3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>pedestrian</td>
+<td>1, 4, 7</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>cyclist</td>
+<td>2, 5, 8</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>Three checks make the example load-bearing:</p>
+<ol type="1">
+<li><strong>Balance.</strong> Nine items over three sets is exactly
+balanced; with ten items, set 0 would take the spare (item 9, since
+<span class="math inline">\(9 \bmod 3 = 0\)</span>) and the sets would
+read 4/3/3 — the rule is deterministic, not magically even.</li>
+<li><strong>Zero new assets.</strong> The ledger of assets consumed
+versus assets supplied nets to zero in the sense of
+<code>net_zero_balance</code> from <span class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>:
+all nine presentations are drawn from the original nine items, and the
+“new assets purchased” outflow column is empty. This is the structural
+content of the paper’s headline that one set yields many realities
+[mendez2026setRecycling].</li>
+<li><strong>Velocity bookkeeping.</strong> If the mover walks the same
+corridor at a speed <span class="math inline">\(\Phi\)</span> times a
+reference walker’s speed, <span class="citation"
+data-cites="eq:part_III_kinematic-recycling_velocity-scale">[@eq:part_III_kinematic-recycling_velocity-scale]</span>
+shifts the fixture’s argument <em>and</em> amplitude by <span
+class="math inline">\(1/\Phi \approx 0.618034\)</span> at every <span
+class="math inline">\(\omega\)</span> — the <span
+class="math inline">\(\Phi\)</span>-step of <span class="citation"
+data-cites="eq:part_III_kinematic-recycling_octave-ladder">[@eq:part_III_kinematic-recycling_octave-ladder]</span>
+realised as kinematics rather than as new scenery.</li>
+</ol>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>The paper’s page also references two active regions, AR14524/AR14527,
+in the context of what the protocol is <em>not</em> about: it explicitly
+disclaims NOAA causation by them [mendez2026setRecycling]. Keep that
+disclaimer attached to any reuse of the paper’s imagery — the fixture is
+catalog bookkeeping, not a solar-terrestrial mechanism.</p>
+</blockquote>
+<h2 id="scope-and-honesty">Scope and Honesty</h2>
+<p>The paper’s honesty-first block is short enough to restate nearly
+verbatim, and the contract of this book is to preserve it: <em>“this is
+catalog architecture — engine shelf #21 — not psychophysics lab QED, not
+infinite XR memory savings, and not NOAA causation by AR14524/AR14527.
+Fair Exchange clause applies”</em> [mendez2026setRecycling]. Unpacking
+each clause:</p>
+<ul>
+<li><strong>Not psychophysics lab QED.</strong> The claim “velocity
+becomes an octave multiplier” is a filing about experiential
+<em>states</em>, filed in the <a
+href="#gl:narrative-empirical-operational-tiers"><strong>narrative-empirical-operational
+tiers</strong></a> as narrative/architectural vocabulary. No controlled
+experiment is cited, and none is claimed. Readers wanting the empirical
+tier must supply it themselves.</li>
+<li><strong>Not infinite XR memory savings.</strong> The zero-new-asset
+framing is a <em>workflow</em> observation about Lattice Chat / XR
+pipelines — one set, recycled [mendez2026setRecycling]. It is not a
+compression theorem, and <span class="citation"
+data-cites="eq:part_III_kinematic-recycling_round-robin">[@eq:part_III_kinematic-recycling_round-robin]</span>
+saves no memory at all: it moves index space, it does not shrink
+it.</li>
+<li><strong>Not NOAA causation by AR14524/AR14527.</strong>
+Space-weather imagery on the page is scene-setting; the paper disclaims
+the causal reading explicitly.</li>
+<li><strong>What it is FOR.</strong> Coordination and cataloging: giving
+agent-routing and content-pipeline designers a shared vocabulary (“same
+set, new theater”) for reusing one asset across experiential states,
+consistent with the corpus’s standing rule that the map is for
+coordination, not cosmic destiny.</li>
+</ul>
+<h2 id="connections">Connections</h2>
+<p>The Truckee protocol is a small shelf entry with wide fan-out.
+Downstream in this part, <span class="citation"
+data-cites="sec:part_III_moving-up-stack">[@sec:part_III_moving-up-stack]</span>
+consumes the zero-new-asset framing when it argues for the lattice as
+the next AI layer — a recycled set is the cheapest possible new “layer”
+— and <span class="citation"
+data-cites="sec:part_III_reality-bridge">[@sec:part_III_reality-bridge]</span>
+reuses the one-set-many-theaters vocabulary for its human-as-bridge
+filing. Upstream, the net-zero ledger discipline comes from the
+Singularity Crystal (<span class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>),
+and the treatment of the <span class="math inline">\(v \to 0\)</span>
+stationary state as a live member of the state family echoes the <a
+href="#gl:topology-of-the-void"><strong>Topology of the
+Void</strong></a> reading of zero (<span class="citation"
+data-cites="sec:part_I_topology-void">[@sec:part_I_topology-void]</span>)
+[mendez2026topologyVoid]. The prime-addressing composition suggested
+above runs through <span class="citation"
+data-cites="sec:part_III_volumetric-storage">[@sec:part_III_volumetric-storage]</span>.
+Within the corpus ordering, the paper is filed after the Singularity
+Crystal (#20) and before the Honesty meta entries, so its disclaimers
+are the last word before the shelf turns meta
+[mendez2026setRecycling].</p>
+<h2 id="summary">Summary</h2>
+<p><em>Kinematic Set-Recycling</em> files one idea in three formalisms:
+a single physical set (the Truckee corridor) yields multiple
+experiential realities because velocity acts as an octave multiplier
+under <span class="math inline">\(\Phi \approx 1.618\)</span>
+[mendez2026setRecycling]. The Fourier velocity scale (<span
+class="citation"
+data-cites="eq:part_III_kinematic-recycling_velocity-scale">[@eq:part_III_kinematic-recycling_velocity-scale]</span>)
+rescales both spectrum argument (<span
+class="math inline">\(\omega/v\)</span>) and amplitude (<span
+class="math inline">\(1/\lvert v\rvert\)</span>); the octave ladder
+(<span class="citation"
+data-cites="eq:part_III_kinematic-recycling_octave-ladder">[@eq:part_III_kinematic-recycling_octave-ladder]</span>)
+indexes the three filed states — stationary, pedestrian, cyclist — at
+<span class="math inline">\(\Phi^k\)</span>; and the round-robin rule
+(<span class="citation"
+data-cites="eq:part_III_kinematic-recycling_round-robin">[@eq:part_III_kinematic-recycling_round-robin]</span>)
+recycles one asset set into many experiential sets with zero new assets,
+as worked in <span class="citation"
+data-cites="tbl:part_III_kinematic-recycling_partition">[@tbl:part_III_kinematic-recycling_partition]</span>.
+The paper is catalog architecture on engine shelf #21, filed after the
+Singularity Crystal and before the Honesty meta; its claims are for
+coordination and cataloging, not psychophysics, not XR compression, and
+not space-weather causation.</p>
+<h2 id="key-terms">Key Terms</h2>
+<p><a href="#gl:kinematic-set-recycling"><strong>kinematic
+set-recycling</strong></a>, <a
+href="#gl:octave"><strong>octave</strong></a>, <a
+href="#gl:catalog-architecture"><strong>catalog
+architecture</strong></a>, <a href="#gl:engine-shelf"><strong>engine
+shelf</strong></a>, <a href="#gl:fair-exchange"><strong>Fair
+Exchange</strong></a>, <a href="#gl:honesty-first"><strong>honesty
+first</strong></a>, <a
+href="#gl:omni-lattice"><strong>Omni-Lattice</strong></a>, <a
+href="#gl:topology-of-the-void"><strong>Topology of the
+Void</strong></a>.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li>The source paper’s whitepaper surface: <a
+href="https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-kinematic-set-recycling-truckee-2026-09"
+class="uri">https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-kinematic-set-recycling-truckee-2026-09</a>
+[mendez2026setRecycling]; reference implementation: <a
+href="https://github.com/FractiAI/synthobs-kinematic-set-recycling-truckee"
+class="uri">https://github.com/FractiAI/synthobs-kinematic-set-recycling-truckee</a>
+(re-run via
+<code>npm run research:synthobs-kinematic-set-recycling-truckee</code>).</li>
+<li><span class="citation"
+data-cites="mendez2026singularityCrystal">@mendez2026singularityCrystal</span>
+— companion named by the paper: the net-zero ledger discipline that the
+zero-new-asset framing reuses.</li>
+<li><span class="citation"
+data-cites="mendez2026topologyVoid">@mendez2026topologyVoid</span> —
+companion named by the paper: zero as equilibrium, the reading we apply
+to the stationary state.</li>
+<li><span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span> — the
+two octave conventions used in <span class="citation"
+data-cites="eq:part_III_kinematic-recycling_octave-ladder">[@eq:part_III_kinematic-recycling_octave-ladder]</span>,
+discussed at length.</li>
+</ul>
+<h2 id="practice">Practice</h2>
+<ul>
+<li><strong>Lab:</strong> <span class="citation"
+data-cites="sec:lab_part_III_kinematic-recycling">[@sec:lab_part_III_kinematic-recycling]</span>
+— partition the Truckee set by hand, check it against
+<code>textbook.models.round_robin</code>, and evaluate the
+velocity-scale fixture for <span
+class="math inline">\(\Phi\)</span>-spaced speeds.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_III_kinematic-recycling">[@sec:q_part_III_kinematic-recycling]</span>
+— recall through synthesis on the recycling protocol.</li>
+<li>Re-run the paper’s reference implementation
+(<code>npm run research:synthobs-kinematic-set-recycling-truckee</code>)
+and list which of the five digest claims (C-kinematic-set-recycling-1
+through 5) its output actually exercises — and which remain narrative
+filings.</li>
+<li>Take <span class="math inline">\(n_{\mathrm{sets}} = 3\)</span> and
+a 10-item set: which set receives the spare item, and why? Then re-run
+with 11 items and verify the pattern.</li>
+<li>Write one paragraph in the paper’s own voice that applies the Fair
+Exchange clause to a claim <em>you</em> might be tempted to make about
+walking speeds. What does the clause forbid?</li>
+</ul>
+</main>
+</body>
+</html>

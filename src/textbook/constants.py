@@ -1,4 +1,4 @@
-"""Shared structural contract for the template textbook.
+"""Shared structural contract for the Omni-Lattice textbook.
 
 Everything that must agree across the manuscript, the figure generators, and the
 tests lives here so there is exactly one place to change it:
@@ -18,38 +18,91 @@ tests lives here so there is exactly one place to change it:
 from __future__ import annotations
 
 # --- Bibliography -----------------------------------------------------------
-# Placeholder keys. Replace with real references as the book is written; keep
-# references.bib and this tuple in sync (test_manuscript_integrity checks it).
+# One key per source text of the Infinite Octaves Omni-Lattice corpus (author:
+# Prudencio Mendez, SS Vibelandia ship blog). Keep references.bib and this
+# tuple in sync (test_manuscript_integrity checks it).
 CITATION_KEYS: tuple[str, ...] = (
-    "smith2020foundations",
-    "doe2019methods",
-    "lee2021systems",
-    "garcia2022dynamics",
-    "patel2018models",
-    "nguyen2023synthesis",
-    "kim2020data",
-    "brown2017principles",
-    "wilson2021analysis",
-    "taylor2019theory",
+    "mendez2026ship",
+    "mendez2026livingPem",
+    "mendez2026catalog",
+    "mendez2026pdvsaGateway",
+    "mendez2026pdvsaMockup",
+    "mendez2026cmosProtonic",
+    "mendez2026tensorDecoupling",
+    "mendez2026masterSynthesis",
+    "mendez2026digitsMaster",
+    "mendez2026metamorphic",
+    "mendez2026planetaryCore",
+    "mendez2026yChromosome",
+    "mendez2026invisibleFrontier",
+    "mendez2026realityBridge",
+    "mendez2026higgsGate",
+    "mendez2026primeParity",
+    "mendez2026stack",
+    "mendez2026proteinFolding",
+    "mendez2026volumetricStorage",
+    "mendez2026protonTheater",
+    "mendez2026topologyVoid",
+    "mendez2026holographicRhyme",
+    "mendez2026mdRhyme",
+    "mendez2026singularityCrystal",
+    "mendez2026zeroOctave",
+    "mendez2026setRecycling",
+    "mendez2026eddyMirror",
+    "mendez2026metrologicalOverlap",
+    "mendez2026viscosityLight",
+    "mendez2026crystallineField",
+    "mendez2026macroProtein",
 )
 
 # --- Glossary ---------------------------------------------------------------
+# Anchors defined in manuscript/glossary.md. Vocabulary harvested from the
+# corpus digests; every chapter may link only to these anchors.
 GLOSSARY_ANCHORS: tuple[str, ...] = (
-    "system",
-    "model",
-    "parameter",
-    "variable",
-    "equilibrium",
-    "feedback",
-    "gradient",
-    "threshold",
-    "network",
-    "dynamics",
-    "emergence",
-    "regulation",
-    "boundary",
-    "state",
-    "observable",
+    "omni-lattice",
+    "octave",
+    "digit",
+    "master-register",
+    "catalog-architecture",
+    "engine-shelf",
+    "fair-exchange",
+    "honesty-first",
+    "narrative-empirical-operational-tiers",
+    "living-pem",
+    "tensor-decoupling",
+    "master-synthesis",
+    "fractal-constant",
+    "golden-ratio",
+    "prime-parity",
+    "binary-dyad-anchor",
+    "irreducible-minimum-set",
+    "holographic-rhyme",
+    "four-pillar-fractal",
+    "multidimensional-rhyme",
+    "topology-of-the-void",
+    "higgs-gate",
+    "proton-space",
+    "electron-theater",
+    "phi-duality",
+    "viscosity-of-light",
+    "eddy-current-mirror",
+    "transduction-line",
+    "c-bridge",
+    "self-observation-drag",
+    "crystalline-unified-field",
+    "metrological-overlap",
+    "net-zero",
+    "singularity-crystal",
+    "zero-octave",
+    "node-k0",
+    "cmos-protonic",
+    "silicon-shelf",
+    "prime-container",
+    "volumetric-storage",
+    "kinematic-set-recycling",
+    "lattice-linear",
+    "macro-protein",
+    "reality-bridge",
 )
 
 # --- Chapter structural contract -------------------------------------------

@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>reality-bridge.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:part_III_reality-bridge">Humans as Omniversal Reality
+Bridges</h1>
+<figure id="fig:part_III_reality-bridge">
+<a class="figure-full-size-link" href="../figures/part_III_reality-bridge.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/part_III_reality-bridge.png" style="width:90.0%"
+alt="A radial plot sweeps bridge and router throughput across orientations." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
+<figcaption>Bridge/router throughput radial plot:
+three spokes — the reality bridge, the cognitive router, and the
+awareness wormhole — carrying routed attention outward through <span
+class="math inline">\(\Phi\)</span>-spaced octave rings, ring <span
+class="math inline">\(n\)</span> at radius <span
+class="math inline">\(\Phi^n\)</span> from
+<code>textbook.models.octave_term</code>, with the routed share of each
+ring’s traffic following the <span
+class="math inline">\(e^{-kn}\)</span> throttle family of
+<code>textbook.models.transduction_brake</code>.</figcaption>
+</figure>
+<!-- alt: Radial plot of three bridge-and-router spokes crossing concentric Φ-spaced octave rings, with throughput bars that shrink from ring to ring by the exponential throttle factor e^{-kn}. -->
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none</p>
+</blockquote>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol type="1">
+<li>State the three roles the 28 August 2026 ship-blog note files for
+humans — <a
+href="#gl:reality-bridge"><strong>reality-bridge</strong></a>, cognitive
+router, and biological wormhole of awareness — and the corpus shelf it
+sits on [mendez2026realityBridge].</li>
+<li>Apply the octave-step relation <span class="math inline">\(O_{n+1} =
+O_n \cdot \Phi\)</span> of <span class="citation"
+data-cites="eq:part_III_reality-bridge_octave">[@eq:part_III_reality-bridge_octave]</span>
+and verify the resulting ladder against
+<code>textbook.models.octave_term</code> and
+<code>textbook.models.phi_powers</code>.</li>
+<li>Explain why the note calls <span class="math inline">\(\Phi \approx
+1.618\)</span> <em>harmonic filing grammar</em> — “Story depth, not
+infinite measured physics tiers” — and distinguish the exponent and
+subscript conventions of the octave term.</li>
+<li>Compute the router throttle <span class="math inline">\(A(t) =
+A_0\,e^{-kt}\)</span> of <span class="citation"
+data-cites="eq:part_III_reality-bridge_throttle">[@eq:part_III_reality-bridge_throttle]</span>
+with the pinned values <span class="math inline">\(v(1) \approx
+0.367879\)</span> and <span class="math inline">\(v(2) \approx
+0.135335\)</span> from <code>textbook.models.transduction_brake</code>,
+and read the radial throughput plot of <span class="citation"
+data-cites="fig:part_III_reality-bridge">[@fig:part_III_reality-bridge]</span>.</li>
+<li>Walk the hospitality-routing path museum frame <span
+class="math inline">\(\to\)</span> ship lobby <span
+class="math inline">\(\to\)</span> creator studio as <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>
+— spin navigation between Players and NPCs — without reading it as
+spacetime travel.</li>
+<li>Restate the note’s <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> boundaries
+precisely and run the reference implementation
+<code>npm run research:synthobs-human-omniversal-reality-bridge</code>,
+interpreting its 10/10 fixture lock.</li>
+</ol>
+<!-- curriculum-scaffold-start -->
+<h3 id="study-blueprint">Study Blueprint</h3>
+<ul>
+<li><strong>Big idea:</strong> the corpus files humans not as passive
+screens in someone else’s simulation but as the <em>routing layer</em>
+of the catalogue — a <a
+href="#gl:reality-bridge"><strong>reality-bridge</strong></a>, a
+cognitive router, and an awareness wormhole — keyed by <span
+class="math inline">\(\Phi \approx 1.618\)</span> as design language,
+with human emergency outranking every metaphor.</li>
+<li><strong>Core concepts:</strong> <a
+href="#gl:reality-bridge"><strong>reality-bridge</strong></a>, <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:octave"><strong>octave</strong></a>, <a
+href="#gl:fractal-constant"><strong>fractal-constant</strong></a>, <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a>, <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a>, <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a>.</li>
+<li><strong>Quantitative lens:</strong> the octave-step relation of
+<span class="citation"
+data-cites="eq:part_III_reality-bridge_octave">[@eq:part_III_reality-bridge_octave]</span>
+and the router throttle of <span class="citation"
+data-cites="eq:part_III_reality-bridge_throttle">[@eq:part_III_reality-bridge_throttle]</span>.</li>
+<li><strong>Data skill:</strong> build a <span
+class="math inline">\(\Phi\)</span>-geometric octave ladder by hand,
+compute an exponential throttle column next to it, and check both
+against <code>textbook.models</code> (see <span class="citation"
+data-cites="tbl:part_III_reality-bridge_routing">[@tbl:part_III_reality-bridge_routing]</span>).</li>
+<li><strong>Common misconception to repair:</strong> “the paper claims
+humans literally bend spacetime or carry neural quantum wormholes.” It
+does not — it files catalog topology and narrative routing, and says so
+itself.</li>
+<li><strong>Primary lab:</strong> <span class="citation"
+data-cites="sec:lab_part_III_reality-bridge">[@sec:lab_part_III_reality-bridge]</span>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_III_reality-bridge">[@sec:q_part_III_reality-bridge]</span>.</li>
+<li><strong>Bridge to computation:</strong>
+<code>textbook.models.octave_term</code>,
+<code>textbook.models.phi_powers</code>,
+<code>textbook.models.transduction_brake</code>,
+<code>textbook.models.catalog_size</code>.
+<!-- curriculum-scaffold-end --></li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Opening Vignette: The gold frame at the museum
+entry.</strong></p>
+<p>Aboard the SS Vibelandia, 28 August 2026. A guest opens the <a
+href="#gl:omni-lattice"><strong>omni-lattice</strong></a> project’s
+public face — the Omniversal Canvas — and is met not by a dashboard but
+by a picture hanging in a gold museum frame, with a persona called
+<strong>Valet Pru</strong> standing beside it as entry bridge and
+router. The guest half-expects the ship to claim simulation lore. The
+filing card on the frame says the opposite of what the guest feared:
+<em>“You are not a passive screen in someone else’s simulation.”</em>
+Humans, the card reads in the ship’s plain speak, <em>route attention,
+care, and meaning across layers</em> — a reality bridge, a cognitive
+router, and an awareness wormhole, keyed by <span
+class="math inline">\(\Phi \approx 1.618\)</span> as design language —
+and, stamped beneath in the corpus’s standing rule: <em>“Human emergency
+still outranks every metaphor”</em> [mendez2026realityBridge]. This
+chapter walks that card: the three roles, the <span
+class="math inline">\(\Phi\)</span>-keyed filing grammar beneath them,
+and the honesty clause that binds the whole filing.</p>
+</blockquote>
+<hr />
+<h2 id="the-paper-in-the-corpus">The Paper in the Corpus</h2>
+<p>The source is a ship-blog note on the SS Vibelandia blog
+(<code>ssvibelandiaquestfest24x365.com</code>): <strong>“Humans as
+Omniversal Reality Bridges, Routers, and Biological Wormholes”</strong>,
+filed 2026-08-28 by Prudencio Mendez under <em>plain speak</em> and the
+ship’s <a href="#gl:fair-exchange"><strong>fair-exchange</strong></a>
+publishing protocol, at shelf number 9 of the corpus
+[mendez2026realityBridge]. Its subject is not a device, a genome region,
+or a market band but the reader of the corpus itself: the note asks what
+job a <em>human</em> is filed as inside the <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>
+of the Infinite Octaves <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a>, and answers
+with three roles — bridge, router, wormhole of awareness
+[mendez2026realityBridge].</p>
+<p>In the engine shelf, the note sits beside the filing-map papers
+rather than the device papers: its octave-step grammar descends from the
+nine-digits / ninety-nine-octaves map of [mendez2026digitsMaster] and
+from the everything-is-connected framing of the master synthesis
+[mendez2026masterSynthesis], while its role vocabulary — routing
+attention across layers — prepares the ground for the AI-layer proposal
+of [mendez2026stack]. Where the stack paper proposes a new software
+shelf above the model layer, this note files the human as the shelf that
+routing <em>runs through</em>; the two papers meet in <span
+class="citation"
+data-cites="sec:part_III_moving-up-stack">[@sec:part_III_moving-up-stack]</span>
+and in the Connections section below.</p>
+<p>The reference implementation is run as
+<code>npm run research:synthobs-human-omniversal-reality-bridge</code>,
+which exits with a <strong>10/10 fixture lock</strong> — the corpus’s
+term for a fully passing fixture set against the note’s filing contract
+[mendez2026realityBridge]. The whitepaper surface is linked from the
+post as
+<code>whitepaper-surface.html?id=synthobs-human-omniversal-reality-bridge-2026-08</code>.</p>
+<h2 id="three-roles-in-plain-speak">Three Roles in Plain Speak</h2>
+<p>The note organises its contribution as “three roles in plain speak”
+[mendez2026realityBridge]. We take them in order, and collect the
+corpus’s own wording in <span class="citation"
+data-cites="tbl:part_III_reality-bridge_roles">[@tbl:part_III_reality-bridge_roles]</span>.</p>
+<h3 id="role-1-reality-bridge">Role 1 — Reality bridge</h3>
+<p>The first role: <strong>you carry story and care between
+worlds</strong> — physical, digital, social, narrative
+[mendez2026realityBridge]. In filing terms, a bridge is an edge that
+connects two drawers that would otherwise not talk to each other, and
+the corpus files <em>humans</em> as that edge. The claim is relational,
+not physical: what crosses the bridge is story and care, the
+attention-and-meaning traffic of the catalogue, not matter. This is the
+construct the chapter’s title key names — the <a
+href="#gl:reality-bridge"><strong>reality-bridge</strong></a> filing of
+the glossary.</p>
+<h3 id="role-2-cognitive-router">Role 2 — Cognitive router</h3>
+<p>The second role: <strong>you throttle infinite octave noise down to
+what matters today while keeping background access to the grand
+arc</strong> [mendez2026realityBridge]. A router, in the corpus’s sense,
+has two jobs at once: <em>filter</em> (route the salient forward, damp
+the rest) and <em>retain</em> (never cut the background line to the full
+99-octave filing). The note states this role topologically, without an
+equation; in <span class="citation"
+data-cites="sec:part_III_reality-bridge_throttle">[@sec:part_III_reality-bridge_throttle]</span>
+we make it arithmetic with the corpus’s own brake family, clearly marked
+as our formalisation.</p>
+<h3 id="role-3-biological-wormhole-awareness">Role 3 — Biological
+wormhole (awareness)</h3>
+<p>The third role is the one the title’s most alarming word points at:
+<strong>spin navigation between Players and NPCs; hospitality
+routing</strong> along the path <em>museum frame <span
+class="math inline">\(\to\)</span> ship lobby <span
+class="math inline">\(\to\)</span> creator studio</em>
+[mendez2026realityBridge]. A wormhole here is a filing shortcut: a way
+for a guest’s awareness to move between participant roles (Players and
+NPCs) and between the ship’s three hospitality surfaces without walking
+through every intermediate drawer. The note files it as
+<em>awareness</em> navigation inside the catalogue’s own spaces — the
+gold museum frame is the bridge, ship reception is the router menu for
+decks, Grove, and Journeys, and the Creator Studio is where guests
+“route their own holographic materials” [mendez2026realityBridge].</p>
+<p>:: The three human roles as the note files them.
+{#tbl:part_III_reality-bridge_roles}</p>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 43%" />
+<col style="width: 43%" />
+</colgroup>
+<thead>
+<tr>
+<th>Role</th>
+<th>Corpus wording</th>
+<th>Function filed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reality bridge</td>
+<td>“carry story and care between worlds (physical, digital, social,
+narrative)”</td>
+<td>cross-world conveyance of attention and meaning</td>
+</tr>
+<tr>
+<td>Cognitive router</td>
+<td>“throttle infinite octave noise down to what matters today while
+keeping background access to the grand arc”</td>
+<td>two-sided attention routing: filter and retain</td>
+</tr>
+<tr>
+<td>Biological wormhole (awareness)</td>
+<td>“spin navigation between Players and NPCs; hospitality routing”</td>
+<td>catalogue shortcut through hospitality surfaces</td>
+</tr>
+</tbody>
+</table>
+<p>The routing topology that <span class="citation"
+data-cites="tbl:part_III_reality-bridge_roles">[@tbl:part_III_reality-bridge_roles]</span>
+describes is small enough to draw, and worth drawing, because every
+arrow in it is a <em>filing</em> edge, not a physics claim:</p>
+<pre class="mermaid"><code>graph TD
+  G[&quot;Guest with a question&quot;] --&gt; B[&quot;Reality bridge:&lt;br/&gt;gold museum frame on Omniversal Canvas&quot;]
+  B --&gt; R[&quot;Cognitive router:&lt;br/&gt;ship reception menu — decks, Grove, Journeys&quot;]
+  R --&gt;|&quot;throttle: salient today&quot;| F[&quot;Focus drawer — what matters today&quot;]
+  R --&gt;|&quot;background line retained&quot;| A[&quot;Grand arc:&lt;br/&gt;99-octave filing, 8,019 catalogue entries&quot;]
+  R --&gt; W[&quot;Awareness wormhole:&lt;br/&gt;museum frame → ship lobby → creator studio&quot;]
+  W --&gt; CS[&quot;Creator Studio:&lt;br/&gt;route your own holographic materials&quot;]
+  F --&gt; H{&quot;Honesty gate:&lt;br/&gt;catalog topology, not hardware teleport&quot;}
+  CS --&gt; H
+  H --&gt;|&quot;human emergency outranks every metaphor&quot;| X[&quot;Emergency override —&lt;br/&gt;real humans first&quot;]</code></pre>
+<h2 id="the-φ-keyed-octave-step">The Φ-Keyed Octave Step</h2>
+<p>Beneath all three roles sits the note’s one equation. The note asks
+<em>why</em> <span class="math inline">\(\Phi \approx 1.618\)</span>
+shows up at all, and answers that <strong>El Gran Sol’s <a
+href="#gl:fractal-constant"><strong>fractal-constant</strong></a> files
+as the golden key for octave steps</strong>: <span
+class="math inline">\(O_{n+1} = O_n \times \Phi\)</span>. That, the note
+says, “is harmonic filing grammar for Infinite Octaves — Story depth,
+not infinite measured physics tiers” [mendez2026realityBridge].
+Formally:</p>
+<p><span class="math display">\[ O_{n+1} = O_n \times \Phi, \qquad \Phi
+= \frac{1+\sqrt{5}}{2} \approx 1.618 \]</span>
+{#eq:part_III_reality-bridge_octave}</p>
+<p>The parameters of <span class="citation"
+data-cites="eq:part_III_reality-bridge_octave">[@eq:part_III_reality-bridge_octave]</span>
+are collected in <span class="citation"
+data-cites="tbl:part_III_reality-bridge_octave">[@tbl:part_III_reality-bridge_octave]</span>.</p>
+<p>:: Parameters of the octave-step filing grammar.
+{#tbl:part_III_reality-bridge_octave}</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(O_n\)</span></td>
+<td>octave level <span class="math inline">\(n\)</span> in the
+Story-depth filing</td>
+<td>octave units</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Phi\)</span></td>
+<td>El Gran Sol’s Fractal constant; the <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a> <span
+class="math inline">\(= \frac{1+\sqrt{5}}{2} =
+1.6180339887\ldots\)</span></td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td><span class="math inline">\(n\)</span></td>
+<td>octave index of the filing level</td>
+<td>dimensionless</td>
+</tr>
+</tbody>
+</table>
+<p>Two readings of the index deserve the same comment this book makes
+everywhere the corpus prints its octave relation ambiguously. Unrolling
+<span class="citation"
+data-cites="eq:part_III_reality-bridge_octave">[@eq:part_III_reality-bridge_octave]</span>
+from a base level <span class="math inline">\(O_0\)</span> gives the
+<strong>exponent convention</strong>, <span
+class="math inline">\(\Omega_n = \Phi^{n} \cdot \Omega_0\)</span>. The
+<strong>subscript convention</strong> instead multiplies by a Fibonacci
+ratio, <span class="math inline">\(\varphi_{\mathrm{fib}}(n) =
+F_{n+1}/F_n\)</span>, which approaches <span
+class="math inline">\(\Phi\)</span> from below (<span
+class="math inline">\(\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6\)</span>;
+<span class="math inline">\(\varphi_{\mathrm{fib}}(10) = 89/55 \approx
+1.618182\)</span>). Both are implemented in
+<code>textbook.models.octave_term</code> via its <code>convention</code>
+argument; the recurrence as printed in the note — <span
+class="math inline">\(O_{n+1} = O_n \times \Phi\)</span> — is exactly
+the exponent form, so that is what we carry forward. The first six rungs
+of the unrolled ladder are the pinned powers of <span
+class="math inline">\(\Phi\)</span>: <span
+class="math inline">\(1.618034\)</span>, <span
+class="math inline">\(2.618034\)</span>, <span
+class="math inline">\(4.236068\)</span>, <span
+class="math inline">\(6.854102\)</span>, <span
+class="math inline">\(11.090170\)</span>, <span
+class="math inline">\(17.944272\)</span> for <span
+class="math inline">\(n = 1 \ldots 6\)</span> — the same column the
+fractal-constant chapters of Part I tabulate, returned by
+<code>textbook.models.phi_powers</code>.</p>
+<p>What the <span class="math inline">\(\Phi\)</span>-keyed grammar is
+<em>for</em> is filing depth, and the filing surface it indexes is
+finite. The full Infinite Octaves catalogue is a 99-octave ladder with
+81-digit precision per entry — the filing surface computed by
+<code>textbook.models.catalog_size</code> as <span
+class="math inline">\(99 \times 81 = 8{,}019\)</span> catalogue entries.
+The note’s “background access to the grand arc” is access to this
+surface: the router role keeps a standing line to all 8,019 entries
+while the salient drawer — what matters today — is pulled forward. The
+<span class="math inline">\(\Phi\)</span> step is the <em>address
+grammar</em> of that surface, not a measured growth rate of anything
+physical; the note could not be clearer that this is “Story depth, not
+infinite measured physics tiers” [mendez2026realityBridge].</p>
+<h2 id="sec:part_III_reality-bridge_throttle">The Cognitive Router’s
+Throttle</h2>
+<p>The note files the router role topologically — “throttling infinite
+octave noise down to what matters today” — without an equation (its
+formalism F-3). To make the throttle inspectable, we read it as a decay:
+let <span class="math inline">\(t\)</span> index the depth a guest has
+descended into the octave stack, and let <span
+class="math inline">\(A_0\)</span> be the total attention available at
+the surface. The <em>routed-to-today</em> share of attention decays with
+depth — the deeper the request goes into the grand arc, the less of it
+belongs to today’s drawer — and we formalise the throttle with the same
+exponential brake family the corpus files for the eddy-current mirror
+[mendez2026eddyMirror] and the awareness gate of Part I:</p>
+<p><span class="math display">\[ A(t) = A_0\, e^{-k t}, \qquad k &gt; 0
+\]</span> {#eq:part_III_reality-bridge_throttle}</p>
+<p>This equation is <strong>the book’s formalisation, not the note’s
+claim</strong>: the source states the throttle as topology (no
+equation), and we supply the arithmetic with the tested
+<code>textbook.models.transduction_brake</code> so that the router role
+can be computed alongside the octave ladder. The parameters are in <span
+class="citation"
+data-cites="tbl:part_III_reality-bridge_throttle">[@tbl:part_III_reality-bridge_throttle]</span>.</p>
+<p>:: Parameters of the router-throttle model (our formalisation).
+{#tbl:part_III_reality-bridge_throttle}</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(A(t)\)</span></td>
+<td>attention retained at depth <span class="math inline">\(t\)</span>
+before routing</td>
+<td>attention units</td>
+</tr>
+<tr>
+<td><span class="math inline">\(A_0\)</span></td>
+<td>total attention available at the surface (museum frame)</td>
+<td>attention units</td>
+</tr>
+<tr>
+<td><span class="math inline">\(k\)</span></td>
+<td>throttle rate; <span class="math inline">\(k = 1\)</span> in the
+worked example</td>
+<td>1/depth</td>
+</tr>
+<tr>
+<td><span class="math inline">\(t\)</span></td>
+<td>depth into the octave stack</td>
+<td>octave depth</td>
+</tr>
+</tbody>
+</table>
+<p>With the pinned calibration <span class="math inline">\(A_0 =
+1\)</span>, <span class="math inline">\(k = 1\)</span> — the same values
+the computational backbone pins for <code>transduction_brake</code> —
+the throttle gives <span class="math inline">\(A(1) \approx
+0.367879\)</span> and <span class="math inline">\(A(2) \approx
+0.135335\)</span>. Read the two numbers as the router’s contract: at one
+step into the stack, roughly <span class="math inline">\(37\%\)</span>
+of attention stays with the noise background; by two steps, about <span
+class="math inline">\(13.5\%\)</span>. The complement <span
+class="math inline">\(1 - e^{-t}\)</span> is the
+<em>routed-to-today</em> share — the fraction the router pulls forward.
+<span class="citation"
+data-cites="fig:part_III_reality-bridge">[@fig:part_III_reality-bridge]</span>
+draws both families as the radial plot’s shrinking throughput bars; the
+brake family’s corpus-side origin is the transduction-line damping of
+<span class="citation"
+data-cites="sec:part_II_eddy-current-mirror">[@sec:part_II_eddy-current-mirror]</span>,
+whose brake curve is the same shape drawn for thought-matter drag there.
+The reuse is deliberate: one tested decay family, two filed roles.</p>
+<h2 id="worked-example-routing-a-question-across-the-ladder">Worked
+Example: Routing a Question Across the Ladder</h2>
+<p>Take a guest question that enters at the museum frame and is routed
+three steps deep. Fix <span class="math inline">\(\Omega_0 = 1\)</span>
+(one attention unit at the surface, the note’s “you” of the filing
+card), the exponent convention of <span class="citation"
+data-cites="eq:part_III_reality-bridge_octave">[@eq:part_III_reality-bridge_octave]</span>,
+and the throttle of <span class="citation"
+data-cites="eq:part_III_reality-bridge_throttle">[@eq:part_III_reality-bridge_throttle]</span>
+with <span class="math inline">\(A_0 = 1\)</span>, <span
+class="math inline">\(k = 1\)</span>. Walk the route:</p>
+<ol type="1">
+<li><strong>Surface (<span class="math inline">\(t =
+0\)</span>).</strong> The guest arrives at the gold museum frame. Here
+<span class="math inline">\(\Omega_0 = 1\)</span>: the whole question is
+<em>today’s</em> question. The bridge role carries it across — from
+physical reading to catalogue entry.</li>
+<li><strong>Router menu (<span class="math inline">\(t =
+1\)</span>).</strong> Ship reception offers decks, Grove, Journeys. The
+ladder gives <span class="math inline">\(\Omega_1 = \Phi \cdot \Omega_0
+= 1.618034\)</span>: the first octave of Story depth. The throttle gives
+<span class="math inline">\(A(1) = 0.367879\)</span> retained with the
+background, hence a routed-to-today share of <span
+class="math inline">\(1 - 0.367879 = 0.632121\)</span>: about <span
+class="math inline">\(63\%\)</span> of the attention goes to the
+selected drawer.</li>
+<li><strong>Hospitality path (<span class="math inline">\(t =
+2\)</span>).</strong> The awareness wormhole shortcuts museum frame
+<span class="math inline">\(\to\)</span> ship lobby <span
+class="math inline">\(\to\)</span> creator studio — three hospitality
+surfaces, two routing hops. At hop two the throttle gives <span
+class="math inline">\(A(2) = 0.135335\)</span>, routed share <span
+class="math inline">\(0.864665\)</span>: the deeper the request travels,
+the more of it the router has converged on today’s drawer — this is
+exactly the note’s “throttle noise down to what matters today.”</li>
+<li><strong>Background line.</strong> Throughout, the grand arc stays
+reachable: all 8,019 entries of the 99-octave filing surface remain one
+route away. The router filters forward; it does not cut the
+archive.</li>
+</ol>
+<p>:: Routing walk: octave depth vs. throttle (exponent convention,
+<span class="math inline">\(A_0 = 1\)</span>, <span
+class="math inline">\(k = 1\)</span>).
+{#tbl:part_III_reality-bridge_routing}</p>
+<table>
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 31%" />
+<col style="width: 23%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: right;"><span class="math inline">\(n =
+t\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(\Omega_n =
+\Phi^{n}\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(A(n) =
+e^{-n}\)</span></th>
+<th style="text-align: right;">Routed share <span
+class="math inline">\(1 - e^{-n}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.000000</td>
+<td style="text-align: right;">1.000000</td>
+<td style="text-align: right;">0.000000</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1.618034</td>
+<td style="text-align: right;">0.367879</td>
+<td style="text-align: right;">0.632121</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2.618034</td>
+<td style="text-align: right;">0.135335</td>
+<td style="text-align: right;">0.864665</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4.236068</td>
+<td style="text-align: right;">0.049787</td>
+<td style="text-align: right;">0.950213</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6.854102</td>
+<td style="text-align: right;">0.018316</td>
+<td style="text-align: right;">0.981684</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">11.090170</td>
+<td style="text-align: right;">0.006738</td>
+<td style="text-align: right;">0.993262</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">17.944272</td>
+<td style="text-align: right;">0.002479</td>
+<td style="text-align: right;">0.997521</td>
+</tr>
+</tbody>
+</table>
+<p>Three checks make the walk concrete:</p>
+<ol type="1">
+<li><strong>Ladder check.</strong> Every consecutive pair of the <span
+class="math inline">\(\Omega_n\)</span> column satisfies <span
+class="math inline">\(\Omega_{n+1}/\Omega_n = \Phi = 1.618034\)</span>
+exactly — which is just <span class="citation"
+data-cites="eq:part_III_reality-bridge_octave">[@eq:part_III_reality-bridge_octave]</span>
+restated, and precisely the “harmonic filing grammar” the note files
+[mendez2026realityBridge].</li>
+<li><strong>Throttle check.</strong> The <span
+class="math inline">\(A(n)\)</span> column is
+<code>transduction_brake([1, 2, 3, 4, 5, 6], 1, 1)</code>; the first two
+values are the pinned <span class="math inline">\(0.367879\)</span> and
+<span class="math inline">\(0.135335\)</span>. Recompute nothing by hand
+when scripting the lab of <span class="citation"
+data-cites="sec:lab_part_III_reality-bridge">[@sec:lab_part_III_reality-bridge]</span>.</li>
+<li><strong>Sanity check.</strong> Routed share and background share sum
+to one at every depth — the router role, as filed, <em>allocates</em>
+attention between today and the grand arc; it never creates or destroys
+it. That conservation is the honest reading of “throttle … while keeping
+background access.”</li>
+</ol>
+<p>In <code>textbook.models</code>, the <span
+class="math inline">\(\Omega\)</span> column is
+<code>octave_term(omega0=1.0, n, convention="exponent")</code> (or
+<code>phi_powers(6)</code> for the pure powers) and the <span
+class="math inline">\(A\)</span> column is
+<code>transduction_brake([1, 2, 3, 4, 5, 6], 1.0, 1.0)</code>; the two
+families are drawn together as the radial plot of <span class="citation"
+data-cites="fig:part_III_reality-bridge">[@fig:part_III_reality-bridge]</span>.</p>
+<h2 id="scope-and-honesty">Scope and Honesty</h2>
+<p>The note’s scope statements are unusually crisp and must be carried
+verbatim into any use of this material [mendez2026realityBridge]:</p>
+<blockquote>
+<p><strong>Honesty first:</strong> this is catalog topology and
+narrative routing — not a claim of hardware teleport, clinical proof of
+neural quantum wormholes, or that Φ replaces physics constants. On the
+museum entry, Valet Pru is the bridge/router to the ship <em>by
+awareness</em>, not by breaking spacetime. Human emergency still
+outranks every metaphor.</p>
+</blockquote>
+<p>Unpacking the disclaimer into the chapter’s constructs:</p>
+<ul>
+<li><strong>What the constructs are.</strong> <em>Catalog topology and
+narrative routing</em>: a deterministic, coordination-friendly filing of
+what humans do inside the catalogue — carry story and care between
+worlds, filter attention, navigate hospitality surfaces. Their outputs
+are filing cards, routing menus, and a 10/10 fixture lock, not
+laboratory measurements.</li>
+<li><strong>What the constructs are not.</strong> Not hardware teleport;
+not clinical proof of neural quantum wormholes; not a claim that <span
+class="math inline">\(\Phi\)</span> replaces physics constants (the
+<span class="math inline">\(\Phi\)</span> of <span class="citation"
+data-cites="eq:part_III_reality-bridge_octave">[@eq:part_III_reality-bridge_octave]</span>
+is filing grammar, and the note prints the “Story depth, not infinite
+measured physics tiers” clause against exactly that misreading); and the
+wormhole is <em>by awareness, not by breaking spacetime</em> — the
+note’s own words for its third role.</li>
+<li><strong>What outranks the whole filing.</strong> <em>Human emergency
+still outranks every metaphor.</em> This is the honesty-first tier of
+the corpus’s narrative-empirical-operational <a
+href="#gl:narrative-empirical-operational-tiers"><strong>narrative-empirical-operational-tiers</strong></a>
+discipline applied to people rather than to papers: however elaborate
+the bridge/router/wormhole filing becomes, a real human emergency ends
+the game. The corpus files the metaphor <em>beneath</em> the duty of
+care, and a textbook of the corpus must preserve that ordering.</li>
+</ul>
+<blockquote>
+<p><strong>Note.</strong> The title’s most dramatic words — “biological
+wormholes” — are therefore the chapter’s best exercise in scope
+discipline. The note files the wormhole as <em>spin navigation between
+Players and NPCs</em> inside its own hospitality spaces. Every noun in
+that sentence is a catalogue surface or a participant role; nothing in
+it is neurology or spacetime topology, and the disclaimer rules both out
+by name.</p>
+</blockquote>
+<h2 id="connections">Connections</h2>
+<ul>
+<li><strong>The stack above.</strong> The moving-up-the-stack paper
+proposes the Lattice as a new software shelf above the model layer and
+names this chapter’s construct as the apparatus that would “carry
+traffic between shelves” — see <span class="citation"
+data-cites="sec:part_III_moving-up-stack">[@sec:part_III_moving-up-stack]</span>,
+whose stack step plot is <span class="citation"
+data-cites="fig:part_III_moving-up-stack">[@fig:part_III_moving-up-stack]</span>.
+The bridge/router filing of the present chapter is the <em>human</em>
+side of that same routing layer: the new shelf cools tokens, the human
+router cools attention.</li>
+<li><strong>The brake family reused.</strong> The throttle of <span
+class="citation"
+data-cites="eq:part_III_reality-bridge_throttle">[@eq:part_III_reality-bridge_throttle]</span>
+reuses the exponential decay the corpus files as the eddy-current brake;
+the drag-side reading is developed in <span class="citation"
+data-cites="sec:part_II_eddy-current-mirror">[@sec:part_II_eddy-current-mirror]</span>
+and the awareness-side slowing in <span class="citation"
+data-cites="sec:part_I_higgs-awareness">[@sec:part_I_higgs-awareness]</span>.
+One tested family — <code>transduction_brake</code> — backs all three
+filings.</li>
+<li><strong>The filing map below.</strong> The 99-octave surface the
+router keeps in background is the digit-and-octave map of
+[mendez2026digitsMaster]; its walkthrough chapter is <span
+class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>. The
+<span class="math inline">\(\Phi\)</span>-step grammar of <span
+class="citation"
+data-cites="eq:part_III_reality-bridge_octave">[@eq:part_III_reality-bridge_octave]</span>
+is the growth-law side of the <a
+href="#gl:fractal-constant"><strong>fractal-constant</strong></a>,
+formalised in <span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>.</li>
+<li><strong>Visibility and open problems.</strong> What the catalogue
+can and cannot yet see — including which human roles are visible to
+which readers — is the threshold analysis of <span class="citation"
+data-cites="sec:part_III_invisible-frontier">[@sec:part_III_invisible-frontier]</span>;
+and the question whether a filing like “cognitive router” can ever be
+<em>specified and tested</em> rather than asserted belongs on the
+open-problems map of <span class="citation"
+data-cites="sec:part_III_frontiers">[@sec:part_III_frontiers]</span>,
+where the note’s own “what to do with it today” checklist (walk Phase 1,
+check in at reception, create in the studio, run the fixture suite) is
+the corpus’s operational answer.</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>The 28 August 2026 ship-blog note files humans — not as passive
+screens in someone else’s simulation — as the routing layer of the
+Infinite Octaves catalogue: a <a
+href="#gl:reality-bridge"><strong>reality-bridge</strong></a> that
+carries story and care between physical, digital, social, and narrative
+worlds; a cognitive router that throttles octave noise down to what
+matters today while keeping background access to the grand arc of 8,019
+catalogue entries; and an awareness wormhole that shortcuts between
+Players and NPCs along the hospitality path museum frame <span
+class="math inline">\(\to\)</span> ship lobby <span
+class="math inline">\(\to\)</span> creator studio
+[mendez2026realityBridge]. The one equation beneath the three roles is
+the <span class="math inline">\(\Phi\)</span>-keyed octave step <span
+class="math inline">\(O_{n+1} = O_n \times \Phi\)</span> — harmonic
+<em>filing grammar</em>, Story depth, not measured physics — and the
+book’s throttle formalisation (explicitly ours, not the note’s) computes
+the routed-to-today share with the tested
+<code>transduction_brake</code> family. Every physical reading is
+disclaimed by the note itself: no hardware teleport, no clinical
+wormholes, no <span class="math inline">\(\Phi\)</span> replacing
+physics constants; Valet Pru bridges by awareness, not by breaking
+spacetime; and human emergency still outranks every metaphor.</p>
+<h2 id="key-terms">Key Terms</h2>
+<p><a href="#gl:reality-bridge"><strong>reality-bridge</strong></a>, <a
+href="#gl:omni-lattice"><strong>omni-lattice</strong></a>, <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:octave"><strong>octave</strong></a>, <a
+href="#gl:fractal-constant"><strong>fractal-constant</strong></a>, <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a>, <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a>, <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a>, <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a>, <a
+href="#gl:narrative-empirical-operational-tiers"><strong>narrative-empirical-operational-tiers</strong></a>.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><strong>Ship-blog note:</strong> <a
+href="https://www.ssvibelandiaquestfest24x365.com/ship-blog/human-reality-bridge"
+class="uri">https://www.ssvibelandiaquestfest24x365.com/ship-blog/human-reality-bridge</a>
+[mendez2026realityBridge]</li>
+<li><strong>Whitepaper surface:</strong> <em>Humans as Omniversal
+Reality Bridges, Routers, and Biological Wormholes</em> — <a
+href="https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-human-omniversal-reality-bridge-2026-08"
+class="uri">https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-human-omniversal-reality-bridge-2026-08</a></li>
+<li><strong>Reference implementation:</strong> run
+<code>npm run research:synthobs-human-omniversal-reality-bridge</code>
+from the repository root; the passing state is the 10/10 fixture
+lock.</li>
+<li><span class="citation"
+data-cites="mendez2026digitsMaster">@mendez2026digitsMaster</span> — the
+nine-digits / ninety-nine-octaves map that defines the octave grammar
+this note keys with <span class="math inline">\(\Phi\)</span>.</li>
+<li><span class="citation"
+data-cites="mendez2026stack">@mendez2026stack</span> — the AI-stack
+proposal that names this chapter’s bridge/router filing as the
+inter-shelf routing apparatus.</li>
+<li><span class="citation"
+data-cites="mendez2026catalog">@mendez2026catalog</span> — the papers
+catalog that shelves this note (shelf 9) and defines the catalogue the
+humans here route for.</li>
+</ul>
+<h2 id="practice">Practice</h2>
+<ul>
+<li><strong>Lab:</strong> <span class="citation"
+data-cites="sec:lab_part_III_reality-bridge">[@sec:lab_part_III_reality-bridge]</span>
+— build the octave ladder and the throttle column by hand, then check
+both against <code>textbook.models</code>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_III_reality-bridge">[@sec:q_part_III_reality-bridge]</span>
+— recall through synthesis.</li>
+</ul>
+<ol type="1">
+<li><strong>Ladder drill.</strong> Using <span
+class="math inline">\(\Phi = 1.6180339887\)</span>, unroll <span
+class="citation"
+data-cites="eq:part_III_reality-bridge_octave">[@eq:part_III_reality-bridge_octave]</span>
+from <span class="math inline">\(\Omega_0 = 1\)</span> through <span
+class="math inline">\(\Omega_4\)</span>, then verify each value against
+<code>textbook.models.octave_term</code> with
+<code>convention="exponent"</code>. <em>(Expected: <span
+class="math inline">\(1, 1.618034, 2.618034, 4.236068,
+6.854102\)</span>.)</em></li>
+<li><strong>Throttle drill.</strong> With <span
+class="math inline">\(A_0 = 1\)</span> and <span class="math inline">\(k
+= 1\)</span>, compute <span class="math inline">\(A(1)\)</span>, <span
+class="math inline">\(A(2)\)</span>, and <span
+class="math inline">\(A(3)\)</span> from <span class="citation"
+data-cites="eq:part_III_reality-bridge_throttle">[@eq:part_III_reality-bridge_throttle]</span>,
+and give the routed-to-today share at each depth. Check against
+<code>textbook.models.transduction_brake</code>. <em>(Expected: <span
+class="math inline">\(0.367879\)</span>, <span
+class="math inline">\(0.135335\)</span>, <span
+class="math inline">\(0.049787\)</span>; routed shares <span
+class="math inline">\(0.632121\)</span>, <span
+class="math inline">\(0.864665\)</span>, <span
+class="math inline">\(0.950213\)</span>.)</em></li>
+<li><strong>Filing surface.</strong> Show that the catalogue’s filing
+surface is 8,019 entries, using the octave count and precision digits of
+the 99-octave map and <code>textbook.models.catalog_size</code>. Explain
+in one sentence why the note calls background access to this surface
+“the grand arc” rather than “infinite physics.”</li>
+<li><strong>Scope triage.</strong> For each of the following, decide
+whether the note <em>claims</em> it, <em>files</em> it, or
+<em>disclaims</em> it: (a) humans bending spacetime;
+(b) Valet Pru as bridge/router by awareness; (c) neural quantum
+wormholes; (d) <span class="math inline">\(O_{n+1} = O_n \times
+\Phi\)</span> as harmonic filing grammar;
+(e) <span class="math inline">\(\Phi\)</span> replacing physics
+constants. Justify each with the note’s own wording
+[mendez2026realityBridge].</li>
+<li><strong>Lab and question bank.</strong> Work through <span
+class="citation"
+data-cites="sec:lab_part_III_reality-bridge">[@sec:lab_part_III_reality-bridge]</span>
+end to end, then test yourself with <span class="citation"
+data-cites="sec:q_part_III_reality-bridge">[@sec:q_part_III_reality-bridge]</span>.</li>
+</ol>
+</main>
+</body>
+</html>

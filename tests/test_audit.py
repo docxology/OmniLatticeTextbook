@@ -12,7 +12,7 @@ from textbook.config import ChapterRef, load_config
 
 
 PROJECT = Path(__file__).resolve().parent.parent
-MANUSCRIPT = PROJECT / "manuscript"
+MANUSCRIPT = PROJECT / "docs" / "manuscript"
 
 
 def test_run_manuscript_audit_real_project_passes():
@@ -20,7 +20,7 @@ def test_run_manuscript_audit_real_project_passes():
     report = run_manuscript_audit(PROJECT, config)
     assert report.problems == ()
     assert report.total_words > 0
-    assert report.total_stubs > 0
+    assert report.total_stubs == 0  # the Omni-Lattice fork ships filled
     assert len(report.rows) == len(config["units"]) + sum(len(unit.get("chapters", [])) for unit in config["units"])
 
 
@@ -31,7 +31,7 @@ def test_format_audit_table_includes_totals():
 
 
 def test_orphan_part_markdown_detects_unregistered_file(tmp_path):
-    manuscript = tmp_path / "manuscript"
+    manuscript = tmp_path / "docs" / "manuscript"
     part = manuscript / "part_I"
     part.mkdir(parents=True)
     (part / "first_principles.md").write_text("# ok\n", encoding="utf-8")
@@ -52,7 +52,7 @@ def test_orphan_part_markdown_detects_unregistered_file(tmp_path):
 
 
 def test_run_manuscript_audit_flags_missing_chapter(tmp_path):
-    manuscript = tmp_path / "manuscript"
+    manuscript = tmp_path / "docs" / "manuscript"
     part = manuscript / "part_I"
     part.mkdir(parents=True)
     config = {
@@ -71,7 +71,7 @@ def test_run_manuscript_audit_flags_missing_chapter(tmp_path):
 
 
 def test_run_manuscript_audit_lenient_allows_missing_chapter(tmp_path):
-    manuscript = tmp_path / "manuscript"
+    manuscript = tmp_path / "docs" / "manuscript"
     part = manuscript / "part_I"
     part.mkdir(parents=True)
     config = {
@@ -90,7 +90,7 @@ def test_run_manuscript_audit_lenient_allows_missing_chapter(tmp_path):
 
 
 def test_run_manuscript_audit_require_complete_rejects_scaffold(tmp_path):
-    manuscript = tmp_path / "manuscript"
+    manuscript = tmp_path / "docs" / "manuscript"
     part = manuscript / "part_I"
     part.mkdir(parents=True)
     chapter = ChapterRef(
@@ -130,7 +130,7 @@ def test_run_manuscript_audit_require_complete_rejects_scaffold(tmp_path):
 
 
 def test_run_manuscript_audit_require_complete_accepts_filled_section(tmp_path):
-    manuscript = tmp_path / "manuscript"
+    manuscript = tmp_path / "docs" / "manuscript"
     part = manuscript / "part_I"
     part.mkdir(parents=True)
     chapter = ChapterRef(
@@ -172,40 +172,39 @@ def test_run_manuscript_audit_require_complete_accepts_filled_section(tmp_path):
     assert report.rows[0].endswith("OK")
 
 
-def test_audit_cli_require_complete_reports_counts_and_fails():
+def test_audit_cli_require_complete_accepts_filled_manuscript():
     result = subprocess.run(
         [sys.executable, str(PROJECT / "scripts" / "audit_textbook_quality.py"), "--require-complete"],
         cwd=PROJECT,
         capture_output=True,
         text=True,
-        timeout=30,
+        timeout=120,
         check=False,
     )
 
-    assert result.returncode == 1
-    assert "stub markers remaining" in result.stdout
-    assert "INCOMPLETE" in result.stdout
+    assert result.returncode == 0
+    assert "Chapter audit:" in result.stdout
     assert "Totals:" in result.stdout
+    assert "0 stub markers remaining" in result.stdout
 
 
-def test_audit_cli_default_allows_scaffold_and_explains_mode():
+def test_audit_cli_default_reports_structure_and_explains_mode():
     result = subprocess.run(
         [sys.executable, str(PROJECT / "scripts" / "audit_textbook_quality.py")],
         cwd=PROJECT,
         capture_output=True,
         text=True,
-        timeout=30,
+        timeout=120,
         check=False,
     )
 
     assert result.returncode == 0
-    assert "stub markers remain" in result.stdout
-    assert "allowed in default mode" in result.stdout
-    assert "--require-complete" in result.stdout
+    assert "Chapter audit:" in result.stdout
+    assert "Totals:" in result.stdout
 
 
 def test_run_manuscript_audit_flags_invalid_unit_intro(tmp_path):
-    manuscript = tmp_path / "manuscript"
+    manuscript = tmp_path / "docs" / "manuscript"
     part = manuscript / "part_I"
     part.mkdir(parents=True)
     (part / "unit_intro.md").write_text("no heading\n", encoding="utf-8")

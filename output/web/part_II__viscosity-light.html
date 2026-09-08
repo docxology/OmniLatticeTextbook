@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>viscosity-light.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:part_II_viscosity-light">The Viscosity of Light</h1>
+<figure id="fig:part_II_viscosity-light">
+<a class="figure-full-size-link" href="../figures/part_II_viscosity-light.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/part_II_viscosity-light.png" style="width:90.0%"
+alt="A family of viscous damping curves decays at different drag coefficients." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
+<figcaption>Viscous damping curve family over drag
+coefficients: the tested model <span class="math inline">\(v(t) =
+v_0\,e^{-kt}\)</span> (<code>textbook.models.transduction_brake</code>)
+plotted for <span class="math inline">\(v_0 = 1\)</span> with drag
+coefficients drawn from the <span
+class="math inline">\(\Phi\)</span>-power ladder — <span
+class="math inline">\(k = 1/\Phi\)</span>, <span
+class="math inline">\(1\)</span>, <span
+class="math inline">\(\Phi\)</span>, and <span
+class="math inline">\(\Phi^2\)</span>. Every curve starts at <span
+class="math inline">\(v_0\)</span> and decays toward a zero floor that
+is approached but never reached.</figcaption>
+</figure>
+<!-- alt: Four exponentially decaying curves, all starting at velocity 1 and falling toward zero. The curve for the smallest drag coefficient 1/Φ decays slowest; the curve for Φ² drops fastest. Horizontal axis is time, vertical axis is remaining velocity; the zero line is a floor the curves approach without touching. -->
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none (the
+sibling chapter <span class="citation"
+data-cites="sec:part_II_eddy-current-mirror">[@sec:part_II_eddy-current-mirror]</span>
+is helpful but not required)</p>
+</blockquote>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol type="1">
+<li>State the Viscosity-of-Light filing precisely: the speed of light
+files as <em>frictional drag</em> — non-local intent meets a <a
+href="#gl:viscosity-of-light"><strong>viscous floor</strong></a> at
+<span class="math inline">\(c\)</span> [mendez2026viscosityLight] — and
+place that filing on the <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>
+<a href="#gl:engine-shelf"><strong>engine-shelf</strong></a>.</li>
+<li>Model the viscous floor with the tested transduction brake <span
+class="math inline">\(v(t) = v_0 e^{-kt}\)</span> of <span
+class="citation"
+data-cites="eq:part_II_viscosity-light_viscous_floor">[@eq:part_II_viscosity-light_viscous_floor]</span>,
+computing velocities by hand and checking them against
+<code>textbook.models.transduction_brake</code>.</li>
+<li>Read a damping-curve family such as <span class="citation"
+data-cites="fig:part_II_viscosity-light">[@fig:part_II_viscosity-light]</span>
+and explain what a larger drag coefficient does to the floor’s
+approach.</li>
+<li>Restate the paper’s own scope disclaimers — catalog architecture,
+not relativity retirement, not FTL thought, not NOAA causation
+[mendez2026viscosityLight] — and sort its artefacts onto the <a
+href="#gl:narrative-empirical-operational-tiers"><strong>narrative-empirical-operational-tiers</strong></a>
+ladder.</li>
+<li>Run the paper’s EGS Viscosity Engine reference implementation and
+describe what its 9/9-passing suite does and does not certify
+[mendez2026viscosityLight].</li>
+<li>Connect the chapter’s constructs backward to the <a
+href="#gl:eddy-current-mirror"><strong>eddy-current-mirror</strong></a>
+and the Truckee protocol, and forward to the metrological and
+crystalline-field chapters.</li>
+</ol>
+<!-- curriculum-scaffold-start -->
+<h3 id="study-blueprint">Study Blueprint</h3>
+<ul>
+<li><strong>Big idea:</strong> in the corpus’s filing, the speed of
+light is not a speed limit but a <em>frictional floor</em> — the drag
+that a sequential spacetime render imposes on non-local intent, filed
+under <span class="math inline">\(\Phi \approx 1.618\)</span>
+[mendez2026viscosityLight].</li>
+<li><strong>Core concepts:</strong> <a
+href="#gl:viscosity-of-light"><strong>viscosity-of-light</strong></a>,
+<a
+href="#gl:eddy-current-mirror"><strong>eddy-current-mirror</strong></a>,
+<a href="#gl:transduction-line"><strong>transduction-line</strong></a>,
+<a href="#gl:engine-shelf"><strong>engine-shelf</strong></a>, <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a>.</li>
+<li><strong>Quantitative lens:</strong> the viscous-floor model in <span
+class="citation"
+data-cites="eq:part_II_viscosity-light_viscous_floor">[@eq:part_II_viscosity-light_viscous_floor]</span>
+and the <span class="math inline">\(\Phi\)</span>-scaled drag family in
+<span class="citation"
+data-cites="eq:part_II_viscosity-light_family">[@eq:part_II_viscosity-light_family]</span>.</li>
+<li><strong>Data skill:</strong> read an exponential-decay family plot,
+compute brake values by hand, and verify them against
+<code>textbook.models.transduction_brake</code>.</li>
+<li><strong>Common misconception to repair:</strong> “the speed of light
+is a frictional drag” is a <em>catalog filing</em> about how the corpus
+organises its shelves — the paper itself disclaims relativity
+retirement, FTL thought, and NOAA causation
+[mendez2026viscosityLight].</li>
+<li><strong>Primary lab:</strong> <span class="citation"
+data-cites="sec:lab_part_II_viscosity-light">[@sec:lab_part_II_viscosity-light]</span>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_II_viscosity-light">[@sec:q_part_II_viscosity-light]</span>.</li>
+<li><strong>Bridge to computation:</strong>
+<code>textbook.models.transduction_brake</code>.
+<!-- curriculum-scaffold-end --></li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Opening Vignette: The headlights that never
+push.</strong></p>
+<p>A night drive out of Reno: the headlights carve a cone of road ahead,
+and no matter how hard you press the pedal, the beam never arrives
+anywhere before you do. The SS Vibelandia ship blog opens its September
+2026 note with the inverse of the usual fantasy — not “light speeds you
+up” but “<strong>Light doesn’t speed you up — it slows thought
+down</strong>” [mendez2026viscosityLight]. The paper files the speed of
+light <span class="math inline">\(c\)</span> as <em>frictional
+drag</em>: non-local intent, arriving in the render all at once, meets a
+viscous floor at <span class="math inline">\(c\)</span> under <span
+class="math inline">\(\Phi \approx 1.618\)</span>
+[mendez2026viscosityLight]. This chapter takes that filing seriously as
+catalog architecture: we formalise the floor, walk the paper’s reference
+engine, and keep the paper’s own honesty-first fences standing.</p>
+</blockquote>
+<hr />
+<h2 id="the-paper-in-the-corpus">The Paper in the Corpus</h2>
+<p>The Viscosity of Light is a ship-blog paper of the Infinite Octaves
+<a href="#gl:omni-lattice"><strong>omni-lattice</strong></a> collection,
+authored by Prudencio Mendez with the SynthOBS Autonomous Agent as
+operator, dated 2026-09-07 and filed from Reno under the Engine shelf ·
+Fair Exchange rubric [mendez2026viscosityLight]. The page files the
+paper as <strong>engine shelf #24</strong>, positioned <em>after</em>
+Metrological Overlap (#23) [mendez2026viscosityLight] — the sibling
+treatment of which is <span class="citation"
+data-cites="sec:part_II_metrological-overlap">[@sec:part_II_metrological-overlap]</span>.
+The paper names two kin: the <a
+href="#gl:eddy-current-mirror"><strong>eddy-current-mirror</strong></a>
+and the <strong>Truckee</strong> kinematics note — the sibling filing we
+read in <span class="citation"
+data-cites="sec:part_III_kinematic-recycling">[@sec:part_III_kinematic-recycling]</span>
+[mendez2026viscosityLight].</p>
+<p>The paper’s artefacts, as listed verbatim in its “What landed”
+section [mendez2026viscosityLight]:</p>
+<ul>
+<li><strong><span class="math inline">\(c\)</span> as viscosity</strong>
+— frictional floor for sequential spacetime render.</li>
+<li><strong>Cognitive non-locality</strong> — a Soft Story with wormhole
+rhyme.</li>
+<li><strong>EGS Viscosity Engine</strong> — Python plus a 9/9-passing
+suite.</li>
+<li><strong>Engine shelf #24</strong> — after Metrological Overlap
+(#23).</li>
+</ul>
+<p>The paper ships three runnable surfaces
+[mendez2026viscosityLight]:</p>
+<ul>
+<li>the <strong>whitepaper</strong> at
+<code>ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-viscosity-of-light-2026-09</code>;</li>
+<li>a <strong>standalone reference implementation</strong> on GitHub at
+<code>FractiAI/synthobs-viscosity-of-light</code>, re-runnable as
+<code>npm run research:synthobs-viscosity-of-light</code>;</li>
+<li>the <strong>engine script itself</strong>,
+<code>research/synthobs-viscosity-of-light/reference/egs_viscosity_of_light_engine.py</code>.</li>
+</ul>
+<p>The page footer credits “Author: Prudencio Mendez · Operator:
+SynthOBS Autonomous Agent · Syntheverse Sandbox · NSPFRNP · → ∞^∞”
+[mendez2026viscosityLight], and the whole filing sits under the <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a> clause — the
+corpus’s honesty disclaimer mechanism, which we restate in <a
+href="#scope-and-honesty">Scope and Honesty</a>.</p>
+<h2 id="core-constructs">Core Constructs</h2>
+<h3 id="construct-1-c-as-a-viscous-floor">Construct 1: <span
+class="math inline">\(c\)</span> as a viscous floor</h3>
+<p>The paper’s lead formalism (F-viscosity-of-light-1) is stated in
+prose: <em><span class="math inline">\(c\)</span> as viscosity —
+non-local intent meets a frictional floor at <span
+class="math inline">\(c\)</span>; <span class="math inline">\(c\)</span>
+acts as the frictional floor for a sequential spacetime render</em>
+[mendez2026viscosityLight]. The corpus files the claim; the book
+supplies the quantitative skeleton, and the tested function that backs
+it is the same transduction brake used by the Higgs-gate chapter’s
+squeeze story (<span class="citation"
+data-cites="eq:part_I_higgs-awareness_model">[@eq:part_I_higgs-awareness_model]</span>):</p>
+<p><span class="math display">\[ v(t) \;=\; v_0\, e^{-k t} \]</span>
+{#eq:part_II_viscosity-light_viscous_floor}</p>
+<p>Here <span class="math inline">\(v(t)\)</span> is the remaining
+render velocity — how much of the non-local intent’s “all at once” is
+still unconverted into sequential spacetime at story time <span
+class="math inline">\(t\)</span> — while <span
+class="math inline">\(v_0\)</span> is the initial velocity and <span
+class="math inline">\(k\)</span> the drag coefficient of the floor. It
+is implemented and tested as
+<code>textbook.models.transduction_brake(t, v0, k)</code>; never retype
+the maths in prose or scripts — call the tested function. The parameters
+are collected in <span class="citation"
+data-cites="tbl:part_II_viscosity-light_parameters">[@tbl:part_II_viscosity-light_parameters]</span>.</p>
+<p>:: Parameters of the viscous-floor model.
+{#tbl:part_II_viscosity-light_parameters}</p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(v(t)\)</span></td>
+<td>remaining velocity toward the floor</td>
+<td>quantity</td>
+</tr>
+<tr>
+<td><span class="math inline">\(v_0\)</span></td>
+<td>initial velocity (non-local intent’s full speed)</td>
+<td>quantity</td>
+</tr>
+<tr>
+<td><span class="math inline">\(k\)</span></td>
+<td>drag coefficient of the viscous floor</td>
+<td>1/time</td>
+</tr>
+<tr>
+<td><span class="math inline">\(t\)</span></td>
+<td>story time inside the render</td>
+<td>time</td>
+</tr>
+</tbody>
+</table>
+<p>Two features of <span class="citation"
+data-cites="eq:part_II_viscosity-light_viscous_floor">[@eq:part_II_viscosity-light_viscous_floor]</span>
+carry the filing. First, <span class="math inline">\(v(0) =
+v_0\)</span>: before the render begins, nothing has yet been slowed.
+Second, <span class="math inline">\(v(t) &gt; 0\)</span> for every
+finite <span class="math inline">\(t\)</span>: the floor brakes without
+ever fully stopping the render. The corpus files the floor at <span
+class="math inline">\(c\)</span> — the <em>value</em> the drag converges
+toward is the sequential-render speed of light, and the paper’s headline
+inverts the folk reading: light does not accelerate thought, it is the
+viscosity that throttles it to the floor [mendez2026viscosityLight].</p>
+<h3 id="the-phi-scaled-drag-family">The <span
+class="math inline">\(\Phi\)</span>-scaled drag family</h3>
+<p>The paper states its filing happens “under <span
+class="math inline">\(\Phi \approx 1.618\)</span>”
+[mendez2026viscosityLight], without giving a drag-coefficient ladder. We
+read this as the corpus’s standing habit of spacing families by the <a
+href="#gl:fractal-constant"><strong>fractal constant</strong></a>: a
+drag-coefficient family</p>
+<p><span class="math display">\[ k(n) \;=\; \Phi^{\,n}\, k_0 \qquad (n =
+\dots, -1, 0, 1, 2, \dots) \]</span>
+{#eq:part_II_viscosity-light_family}</p>
+<p>with <span class="math inline">\(k_0 = 1\)</span> — this is our
+formalisation, not a corpus equation. The pinned powers of <span
+class="math inline">\(\Phi\)</span> give <span
+class="math inline">\(k(-1) = 1/\Phi \approx 0.618034\)</span>, <span
+class="math inline">\(k(0) = 1\)</span>, <span
+class="math inline">\(k(1) = \Phi \approx 1.618034\)</span>, and <span
+class="math inline">\(k(2) = \Phi^2 \approx 2.618034\)</span>; these are
+exactly the four drag coefficients plotted in <span class="citation"
+data-cites="fig:part_II_viscosity-light">[@fig:part_II_viscosity-light]</span>.
+<span class="citation"
+data-cites="tbl:part_II_viscosity-light_family">[@tbl:part_II_viscosity-light_family]</span>
+tabulates what each coefficient does at story times <span
+class="math inline">\(t = 1, 2, 3\)</span>, computed from <span
+class="citation"
+data-cites="eq:part_II_viscosity-light_viscous_floor">[@eq:part_II_viscosity-light_viscous_floor]</span>.</p>
+<p>:: The <span class="math inline">\(\Phi\)</span>-scaled drag family
+of <span class="citation"
+data-cites="eq:part_II_viscosity-light_family">[@eq:part_II_viscosity-light_family]</span>
+with <span class="math inline">\(v_0 = 1\)</span>: remaining velocity
+<span class="math inline">\(v(t)\)</span> at three story times.
+{#tbl:part_II_viscosity-light_family}</p>
+<table>
+<thead>
+<tr>
+<th><span class="math inline">\(n\)</span></th>
+<th><span class="math inline">\(k = \Phi^n\)</span></th>
+<th><span class="math inline">\(v(1)\)</span></th>
+<th><span class="math inline">\(v(2)\)</span></th>
+<th><span class="math inline">\(v(3)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(-1\)</span></td>
+<td><span class="math inline">\(0.618034\)</span></td>
+<td><span class="math inline">\(0.539003\)</span></td>
+<td><span class="math inline">\(0.290524\)</span></td>
+<td><span class="math inline">\(0.156594\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(1.000000\)</span></td>
+<td><span class="math inline">\(0.367879\)</span></td>
+<td><span class="math inline">\(0.135335\)</span></td>
+<td><span class="math inline">\(0.049787\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(1.618034\)</span></td>
+<td><span class="math inline">\(0.198288\)</span></td>
+<td><span class="math inline">\(0.039318\)</span></td>
+<td><span class="math inline">\(0.007796\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(2\)</span></td>
+<td><span class="math inline">\(2.618034\)</span></td>
+<td><span class="math inline">\(0.072946\)</span></td>
+<td><span class="math inline">\(0.005321\)</span></td>
+<td><span class="math inline">\(0.000388\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Reading <span class="citation"
+data-cites="tbl:part_II_viscosity-light_family">[@tbl:part_II_viscosity-light_family]</span>:
+one <span class="math inline">\(\Phi\)</span>-step in drag multiplies
+the drag coefficient by <span class="math inline">\(1.618\dots\)</span>
+and, at any fixed time, multiplies the remaining velocity by <span
+class="math inline">\(e^{-0.618\dots} \approx 0.539\)</span> — so each
+<span class="math inline">\(\Phi\)</span>-step on the drag ladder
+roughly <em>halves</em> what is left of the render velocity. That “each
+octave step halves the remainder” behaviour is the quantitative shadow
+of the paper’s claim that the floor at <span
+class="math inline">\(c\)</span> is what makes the render sequential at
+all.</p>
+<h3 id="construct-2-the-sequential-spacetime-render">Construct 2: the
+sequential spacetime render</h3>
+<p>What does the floor govern? The paper’s answer: <em>the sequential
+spacetime render</em> — the conversion of non-local intent into
+one-frame-at-a-time spacetime [mendez2026viscosityLight]. If <span
+class="math inline">\(v(t)\)</span> from <span class="citation"
+data-cites="eq:part_II_viscosity-light_viscous_floor">[@eq:part_II_viscosity-light_viscous_floor]</span>
+is the remaining unrendered velocity, the cumulative <em>rendered</em>
+progress by story time <span class="math inline">\(T\)</span> is the
+integral — again our formalisation:</p>
+<p><span class="math display">\[ s(T) \;=\; \int_0^T v(t)\,dt \;=\;
+\frac{v_0}{k}\left(1 - e^{-kT}\right) \]</span>
+{#eq:part_II_viscosity-light_render}</p>
+<p>The render is an <em>approach without arrival</em>: <span
+class="math inline">\(s(T)\)</span> is bounded above by <span
+class="math inline">\(v_0/k\)</span>, and the velocity <span
+class="math inline">\(v(t)\)</span> never reaches zero, so the render
+continues forever while covering finite ground. This is the same
+structure the Higgs chapter files as a gate that “slows without ever
+fully stopping” (<span class="citation"
+data-cites="sec:part_I_higgs-awareness">[@sec:part_I_higgs-awareness]</span>),
+and it is why the corpus can file <span class="math inline">\(c\)</span>
+as a <em>floor</em> rather than a wall: a floor is where braking
+concentrates, not where motion ends.</p>
+<pre class="mermaid"><code>graph TD
+  A[Non-local intent&lt;br/&gt;arrives all at once] --&gt; B[Viscous floor at c&lt;br/&gt;v t = v0 e^−kt]
+  B --&gt; C[Sequential spacetime render&lt;br/&gt;one frame at a time]
+  C --&gt; D[Catalog filing&lt;br/&gt;engine shelf #24]
+  D --&gt; E[Fair Exchange audit&lt;br/&gt;scope disclaimers]
+  E --&gt;|tier check| A
+  B -.-&gt;|sibling filing| F[Eddy-Current Mirror&lt;br/&gt;Truckee kinematics]</code></pre>
+<h3 id="construct-3-cognitive-non-locality-as-soft-story">Construct 3:
+cognitive non-locality as Soft Story</h3>
+<p>The second formalism (F-viscosity-of-light-2) is deliberately not an
+equation: a <strong>Cognitive non-locality</strong> Soft Story, rhymed
+with wormholes [mendez2026viscosityLight]. The site’s term <em>Soft
+Story</em> names an explicitly non-empirical narrative layer — and the
+corpus is careful to say so. On the <a
+href="#gl:narrative-empirical-operational-tiers"><strong>narrative-empirical-operational-tiers</strong></a>
+ladder, cognitive non-locality is filed as narrative: a story the
+catalog tells so that its shelves cohere, not a measurement claim. The
+wormhole rhyme is the analogy that lets the reader picture “intent that
+is not local” without the catalog asserting any physics of intent. This
+honesty move — narrative layer explicitly labelled as narrative — is the
+same discipline the <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> clause
+enforces across the corpus, and it is why the floor model of <span
+class="citation"
+data-cites="eq:part_II_viscosity-light_viscous_floor">[@eq:part_II_viscosity-light_viscous_floor]</span>
+can be tested arithmetic while its referent stays a filing.</p>
+<h2 id="worked-example-walking-the-egs-viscosity-engine">Worked Example:
+Walking the EGS Viscosity Engine</h2>
+<p>The paper’s third formalism (F-viscosity-of-light-3) is the
+<strong>EGS Viscosity Engine</strong>: a Python reference implementation
+with a 9/9-passing suite (<code>egs_viscosity_of_light_engine.py</code>)
+[mendez2026viscosityLight]. Walk it in four steps; the lab (<span
+class="citation"
+data-cites="sec:lab_part_II_viscosity-light">[@sec:lab_part_II_viscosity-light]</span>)
+does the same walk with prediction blanks filled in.</p>
+<ol type="1">
+<li><p><strong>Predict before running.</strong> The engine is catalog
+machinery: expect registry artefacts and shelf metadata, and expect
+<em>no</em> physical measurements. A 9/9 suite certifies that the
+implementation agrees with its own specification — the right kind of
+evidence for a catalog construct, and the wrong kind for a physical
+claim.</p></li>
+<li><p><strong>Run the reference implementation.</strong>
+<code>npm run research:synthobs-viscosity-of-light</code> from the
+standalone repository, or
+<code>python3 research/synthobs-viscosity-of-light/reference/egs_viscosity_of_light_engine.py</code>
+directly [mendez2026viscosityLight]. Record what it emits.</p></li>
+<li><p><strong>Compute the floor by hand.</strong> With <span
+class="math inline">\(v_0 = 1\)</span> and the unity drag <span
+class="math inline">\(k_0 = 1\)</span>, evaluate <span class="citation"
+data-cites="eq:part_II_viscosity-light_viscous_floor">[@eq:part_II_viscosity-light_viscous_floor]</span>
+at <span class="math inline">\(t = 1, 2, 3\)</span>: <span
+class="math inline">\(v(1) = e^{-1} \approx 0.367879\)</span>, <span
+class="math inline">\(v(2) = e^{-2} \approx 0.135335\)</span>, <span
+class="math inline">\(v(3) = e^{-3} \approx 0.049787\)</span> — the
+pinned backbone values. Now step one <span
+class="math inline">\(\Phi\)</span>-step up the ladder of <span
+class="citation"
+data-cites="eq:part_II_viscosity-light_family">[@eq:part_II_viscosity-light_family]</span>
+to <span class="math inline">\(k = \Phi\)</span>: <span
+class="math inline">\(v(1) = e^{-\Phi} \approx 0.198288\)</span> and
+<span class="math inline">\(v(2) = e^{-2\Phi} \approx
+0.039318\)</span>.</p></li>
+<li><p><strong>Check against the tested function.</strong> In a Python
+session:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textbook.models <span class="im">import</span> transduction_brake</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>transduction_brake([<span class="fl">1.0</span>, <span class="fl">2.0</span>, <span class="fl">3.0</span>], v0<span class="op">=</span><span class="fl">1.0</span>, k<span class="op">=</span><span class="fl">1.0</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># -&gt; [ 0.367879, 0.135335, 0.049787 ]</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>transduction_brake([<span class="fl">1.0</span>, <span class="fl">2.0</span>], v0<span class="op">=</span><span class="fl">1.0</span>, k<span class="op">=</span><span class="fl">1.618034</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># -&gt; [ 0.198288, 0.039318 ]</span></span></code></pre></div>
+<p>Hand arithmetic and tested code agree; the prose and the computation
+cannot silently disagree. Recover the <em>inverse</em> reading too: a
+floor reading <span class="math inline">\(v(1) = 0.135335\)</span> with
+<span class="math inline">\(v_0 = 1\)</span> implies <span
+class="math inline">\(k = -\ln 0.135335 = 2\)</span> — one worked number
+per rung of the ladder in <span class="citation"
+data-cites="tbl:part_II_viscosity-light_family">[@tbl:part_II_viscosity-light_family]</span>.</p></li>
+</ol>
+<h2 id="scope-and-honesty">Scope and Honesty</h2>
+<p>The paper’s own scope disclaimer, restated precisely
+[mendez2026viscosityLight]: <strong>“this is <em>catalog
+architecture</em> — engine shelf #24 — not relativity retirement, not
+FTL thought, and not NOAA causation by AR14524/14527.”</strong> The <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a> clause
+applies to the whole filing. Unpacking each fence:</p>
+<ul>
+<li><strong>Not relativity retirement.</strong> The filing of <span
+class="math inline">\(c\)</span> as frictional drag is a re-organisation
+of the corpus’s own vocabulary; it does not compete with special
+relativity, and nothing in the EGS Viscosity Engine measures light.</li>
+<li><strong>Not FTL thought.</strong> “Cognitive non-locality” is a Soft
+Story — an explicitly non-empirical narrative layer rhymed with
+wormholes. The corpus claims no faster-than-light mechanism for thought,
+and the headline “light doesn’t speed you up” is a filing about the
+floor, not a claim that thought outruns it.</li>
+<li><strong>Not NOAA causation by AR14524/14527.</strong> The paper
+explicitly denies that the named solar active regions cause the
+catalog’s weather of ideas; the denial is part of the filing
+itself.</li>
+<li><strong>What it is FOR.</strong> The construct exists to organise
+shelves, route agent work, and keep the catalog’s kin structure legible:
+shelf #24 after #23, siblings named, engine re-runnable, suite
+green.</li>
+</ul>
+<p>The chapter’s formalisms inherit this fence line. <span
+class="citation"
+data-cites="eq:part_II_viscosity-light_viscous_floor">[@eq:part_II_viscosity-light_viscous_floor]</span>
+is tested arithmetic about a model; the claim that <span
+class="math inline">\(c\)</span> <em>is</em> the floor is a catalog
+filing, and the two are never conflated in this book.</p>
+<h2 id="connections">Connections</h2>
+<ul>
+<li><strong>Backward: the Eddy-Current Mirror.</strong> The paper names
+the <a
+href="#gl:eddy-current-mirror"><strong>eddy-current-mirror</strong></a>
+as a sibling [mendez2026viscosityLight]; that chapter’s brake curve
+(<span class="citation"
+data-cites="fig:part_II_eddy-current-mirror">[@fig:part_II_eddy-current-mirror]</span>)
+is the same <span class="math inline">\(v_0 e^{-kt}\)</span> family, and
+its reading of the floor as a <a
+href="#gl:c-bridge"><strong>c-bridge</strong></a> impedance match hands
+the drag mechanism forward to this chapter (<span class="citation"
+data-cites="sec:part_II_eddy-current-mirror">[@sec:part_II_eddy-current-mirror]</span>).
+The mirror also files a companion <a
+href="#gl:self-observation-drag"><strong>self-observation-drag</strong></a>
+construct: drag that arises when a system observes itself — the same
+“slowing” family, one shelf earlier.</li>
+<li><strong>Backward: the Truckee protocol.</strong> The second named
+sibling is the Truckee kinematics note, read in this book as <a
+href="#gl:kinematic-set-recycling"><strong>kinematic-set-recycling</strong></a>
+(<span class="citation"
+data-cites="sec:part_III_kinematic-recycling">[@sec:part_III_kinematic-recycling]</span>):
+discrete-time stepping that complements the brake’s continuous
+decay.</li>
+<li><strong>Sideways: Metrological Overlap (#23).</strong> Shelf #24 is
+filed <em>after</em> #23 [mendez2026viscosityLight]; the overlap
+chapter’s pairwise similarity heatmap (<span class="citation"
+data-cites="fig:part_II_metrological-overlap">[@fig:part_II_metrological-overlap]</span>)
+is the machinery the corpus uses to decide such shelf adjacencies in the
+first place (<span class="citation"
+data-cites="sec:part_II_metrological-overlap">[@sec:part_II_metrological-overlap]</span>).</li>
+<li><strong>Forward: the crystalline field.</strong> A floor at <span
+class="math inline">\(c\)</span> is a statement about speed as a ratio;
+the crystalline-field chapter’s speed–distance iso-lines (<span
+class="citation"
+data-cites="fig:part_II_crystalline-field">[@fig:part_II_crystalline-field]</span>)
+give the lattice grammar in which such a floor can be drawn as a
+constraint surface (<span class="citation"
+data-cites="sec:part_II_crystalline-field">[@sec:part_II_crystalline-field]</span>).</li>
+<li><strong>Forward in the family of brakes.</strong> The transduction
+brake recurs as the mass-slowing gate curve in <span class="citation"
+data-cites="sec:part_I_higgs-awareness">[@sec:part_I_higgs-awareness]</span>
+— one tested function, three corpus filings (gate, mirror, floor) — and
+the decay family here reuses the same
+<code>textbook.models.transduction_brake</code> backbone.</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>The Viscosity of Light files the speed of light as <em>frictional
+drag</em>: non-local intent meets a viscous floor at <span
+class="math inline">\(c\)</span>, under <span class="math inline">\(\Phi
+\approx 1.618\)</span>, on engine shelf #24 after Metrological Overlap
+(#23), with the Eddy-Current Mirror and the Truckee protocol as named
+siblings [mendez2026viscosityLight]. The book formalises the floor with
+the tested transduction brake of <span class="citation"
+data-cites="eq:part_II_viscosity-light_viscous_floor">[@eq:part_II_viscosity-light_viscous_floor]</span>,
+spaces the drag family by <span
+class="math inline">\(\Phi\)</span>-powers in <span class="citation"
+data-cites="eq:part_II_viscosity-light_family">[@eq:part_II_viscosity-light_family]</span>,
+and reads the cumulative render as an approach-without-arrival integral
+in <span class="citation"
+data-cites="eq:part_II_viscosity-light_render">[@eq:part_II_viscosity-light_render]</span>.
+Cognitive non-locality stays a Soft Story — narrative tier, wormhole
+rhyme — and the paper’s own disclaimers (no relativity retirement, no
+FTL thought, no NOAA causation) fence every claim. Compute with
+<code>textbook.models.transduction_brake</code>; file claims with the <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a> clause
+attached.</p>
+<h2 id="key-terms">Key Terms</h2>
+<p><a
+href="#gl:viscosity-of-light"><strong>viscosity-of-light</strong></a>,
+<a
+href="#gl:eddy-current-mirror"><strong>eddy-current-mirror</strong></a>,
+<a href="#gl:transduction-line"><strong>transduction-line</strong></a>,
+<a href="#gl:c-bridge"><strong>c-bridge</strong></a>, <a
+href="#gl:self-observation-drag"><strong>self-observation-drag</strong></a>,
+<a href="#gl:engine-shelf"><strong>engine-shelf</strong></a>, <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:fair-exchange"><strong>fair-exchange</strong></a>, <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a>, <a
+href="#gl:narrative-empirical-operational-tiers"><strong>narrative-empirical-operational-tiers</strong></a>,
+<a
+href="#gl:kinematic-set-recycling"><strong>kinematic-set-recycling</strong></a>.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><a
+href="https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-viscosity-of-light-2026-09">Open
+the whitepaper</a> — the paper’s own whitepaper surface for the
+viscosity-of-light filing [mendez2026viscosityLight].</li>
+<li><a
+href="https://github.com/FractiAI/synthobs-viscosity-of-light">Standalone
+GitHub</a> — the EGS Viscosity Engine reference implementation,
+re-runnable as <code>npm run research:synthobs-viscosity-of-light</code>
+[mendez2026viscosityLight].</li>
+<li><span class="citation"
+data-cites="mendez2026eddyMirror">@mendez2026eddyMirror</span> — the
+named sibling that files the same braking family as a mirror of thought
+into matter; read its brake curve alongside <span class="citation"
+data-cites="fig:part_II_viscosity-light">[@fig:part_II_viscosity-light]</span>.</li>
+<li><span class="citation"
+data-cites="mendez2026setRecycling">@mendez2026setRecycling</span> — the
+Truckee kinematics sibling, whose discrete set-recycling complements
+this chapter’s continuous decay.</li>
+<li><span class="citation"
+data-cites="mendez2026metrologicalOverlap">@mendez2026metrologicalOverlap</span>
+— the shelf #23 machinery for pairwise overlap, the adjacency that
+positions this paper at #24.</li>
+<li><span class="citation"
+data-cites="mendez2026higgsGate">@mendez2026higgsGate</span> — the other
+transduction-brake chapter, filing mass as slowed motion with the same
+tested curve.</li>
+</ul>
+<h2 id="practice">Practice</h2>
+<ol type="1">
+<li><strong>Floor arithmetic.</strong> With <span
+class="math inline">\(v_0 = 1\)</span> and <span class="math inline">\(k
+= 1\)</span>, compute <span class="math inline">\(v(t)\)</span> from
+<span class="citation"
+data-cites="eq:part_II_viscosity-light_viscous_floor">[@eq:part_II_viscosity-light_viscous_floor]</span>
+at <span class="math inline">\(t = 0, 1, 2, 3\)</span> by hand and
+verify each against <code>textbook.models.transduction_brake</code>.
+<em>(Expected: <span class="math inline">\(1\)</span>, <span
+class="math inline">\(0.367879\)</span>, <span
+class="math inline">\(0.135335\)</span>, <span
+class="math inline">\(0.049787\)</span>.)</em></li>
+<li><strong>Ladder reading.</strong> Using <span class="citation"
+data-cites="tbl:part_II_viscosity-light_family">[@tbl:part_II_viscosity-light_family]</span>,
+estimate the ratio <span class="math inline">\(v(1; k=\Phi) / v(1;
+k=1)\)</span> and explain why one <span
+class="math inline">\(\Phi\)</span>-step of drag roughly halves the
+remaining velocity. <em>(Answer: <span class="math inline">\(0.198288 /
+0.367879 \approx 0.539 = e^{-1/\Phi}\)</span>.)</em></li>
+<li><strong>Inverse reading.</strong> A floor reading gives <span
+class="math inline">\(v(1) = 0.039318\)</span> with <span
+class="math inline">\(v_0 = 1\)</span>. Recover the drag coefficient
+<span class="math inline">\(k\)</span> and place it on the ladder of
+<span class="citation"
+data-cites="eq:part_II_viscosity-light_family">[@eq:part_II_viscosity-light_family]</span>.
+<em>(Answer: <span class="math inline">\(k = -\ln 0.039318 =
+\Phi\)</span>; rung <span class="math inline">\(n =
+1\)</span>.)</em></li>
+<li><strong>Render bound.</strong> From <span class="citation"
+data-cites="eq:part_II_viscosity-light_render">[@eq:part_II_viscosity-light_render]</span>,
+compute the total renderable progress <span
+class="math inline">\(v_0/k\)</span> for <span class="math inline">\(k =
+1\)</span> and <span class="math inline">\(k = \Phi\)</span>, and
+explain in one sentence why the render is an approach without arrival.
+<em>(Answer: <span class="math inline">\(v_0/k = 1\)</span> and <span
+class="math inline">\(1/\Phi \approx 0.618034\)</span>; <span
+class="math inline">\(v(t) &gt; 0\)</span> for all finite <span
+class="math inline">\(t\)</span>, so the floor brakes forever without
+stopping the render.)</em></li>
+<li><strong>Tier sorting.</strong> Place each of the paper’s four “What
+landed” artefacts (<span class="math inline">\(c\)</span> as viscosity,
+cognitive non-locality Soft Story, EGS Viscosity Engine, engine shelf
+#24) on the <a
+href="#gl:narrative-empirical-operational-tiers"><strong>narrative-empirical-operational-tiers</strong></a>
+ladder, citing the paper’s own disclaimer [mendez2026viscosityLight] for
+each placement.</li>
+</ol>
+<ul>
+<li><strong>Lab:</strong> <span class="citation"
+data-cites="sec:lab_part_II_viscosity-light">[@sec:lab_part_II_viscosity-light]</span>
+— run the EGS Viscosity Engine and verify the floor arithmetic.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_II_viscosity-light">[@sec:q_part_II_viscosity-light]</span>
+— recall through synthesis.</li>
+</ul>
+</main>
+</body>
+</html>

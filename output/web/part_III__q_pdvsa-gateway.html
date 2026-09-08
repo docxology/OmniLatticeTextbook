@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>q_pdvsa-gateway.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:q_part_III_pdvsa-gateway">Question Bank — PDVSA Gateway Ops:
+The EGS Lattice-Linear Companion</h1>
+<p>Linked chapter: <span class="citation"
+data-cites="sec:part_III_pdvsa-gateway">[@sec:part_III_pdvsa-gateway]</span>.</p>
+<h2 id="recall">Recall</h2>
+<ol type="1">
+<li>What is the PDVSA Gateway Ops artifact, exactly as the honesty-first
+disclaimer files it? <em>(Answer: a </em>simulator* and catalog map —
+not live PDVSA telemetry and not a Protokol Sistemas contract audit;
+each takeaway card opens the backing paper (math + empirics), not a
+measured oilfield SLA, and the IBM SNA ↔︎ TCP/IP gateway case study is
+the <em>historical rhyme</em>, not the product name
+[mendez2026pdvsaMockup].)*</li>
+<li>Name the four enterprise domain cards of the gateway console, the
+system each maps to, and the object that joins them. <em>(Answer:
+Production (ERP), Field (SCADA), Compliance (Legal), Export (Logistics),
+joined on one incident object; clicking a domain pulls it into the
+shared brief while the other domains stay lit — no tab reset
+[mendez2026pdvsaGateway].)</em></li>
+<li>What is the ops decision cycle, what are its three sub-labels, and
+what is its relationship to MCA? <em>(Answer: Gather → Decide → Act —
+“signals in” → “one next action” → “execute &amp; notify”; it is the
+console rendering of the MCA cycle Metabolize → Crystallize → Animate,
+filed as the mechanism that “turns incident noise into a next-action
+band” — forecasting as operational rehearsal, not prophecy
+[mendez2026pdvsaGateway; mendez2026pdvsaMockup].)</em></li>
+</ol>
+<h2 id="application">Application</h2>
+<ol start="4" type="1">
+<li>Using the flow ramp of <span class="citation"
+data-cites="eq:part_III_pdvsa-gateway_model">[@eq:part_III_pdvsa-gateway_model]</span>,
+<span class="math inline">\(F_i = i \cdot
+r\)</span>, compute the profile for <span class="math inline">\(n =
+5\)</span> steps at rate <span class="math inline">\(r = 2\)</span> by
+hand, and state what
+<code>textbook.models.lattice_linear_profile(5, 2)</code> returns.
+<em>(Answer: <span class="math inline">\(F_1 = 2, F_2 = 4, F_3 = 6, F_4
+= 8, F_5 = 10\)</span>, i.e. the ramp <span class="math inline">\(2, 4,
+6, 8, 10\)</span>; the function returns exactly <span
+class="math inline">\([2, 4, 6, 8, 10]\)</span> — the <span
+class="math inline">\(n\)</span>-th value sits at <span
+class="math inline">\(n \cdot r\)</span>
+[mendez2026pdvsaGateway].)</em></li>
+<li>Place each console caption in its correct data-locality zone: “ERP /
+SCADA enclosure”, “Lattice joins domains here”, “safe summary out · no
+core dump”. <em>(Answer: Plant systems ↔︎ Integration bridge ↔︎ Partners
+&amp; export, respectively — the three-zone topology in which the
+enclosure stays protected while the gateway mediates continuity toward
+partners [mendez2026pdvsaGateway].)</em></li>
+<li>Two of the gateway’s numeric takeaways are the savings claim
+(context cost under 15% of flat token dumps at <span
+class="math inline">\(N \geq 6\)</span>) and the harmony claim (high
+coherence at <span class="math inline">\(K = 12\)</span>). What
+evidentiary status does the page assign them, <em>(Answer: labelled
+simulator gains backed by companion empirics — not measured oilfield
+SLAs; the labelling forbids reading either number as a production
+deployment measurement of PDVSA operations
+[mendez2026pdvsaGateway].)</em></li>
+</ol>
+<h2 id="synthesis">Synthesis</h2>
+<ol start="7" type="1">
+<li>The mockup’s lede calls the SNA ↔︎ TCP/IP case study a “historical
+rhyme” and <span class="math inline">\(\Phi \approx 1.618\)</span>
+“Lattice-Linear routing grammar”. Assemble these into a one-paragraph
+account of how the corpus uses analogies and constants without
+converting them into claims. <em>(Answer: both are filed as framing, not
+fact — the rhyme situates the gateway in engineering history (SNA Core
+vs Edge handoffs) while the meta description insists the page is “not
+live PDVSA telemetry”, and <span class="math inline">\(\Phi\)</span> is
+filed as routing </em>grammar* for the console rather than as a measured
+constant of oilfield flows. In both cases the corpus labels the status
+of the construct at the point of use — rhyme, grammar, simulator — so
+the reader can separate catalog structure from operational claim, the
+same discipline the chapter’s honesty-first section enforces
+[mendez2026pdvsaMockup; mendez2026pdvsaGateway].)*</li>
+<li>The gateway’s flow ramp is exactly linear (<span
+class="math inline">\(F_n = n \cdot r\)</span>), yet the corpus also
+files <span class="math inline">\(\Phi\)</span>-compounding octaves
+elsewhere (e.g. <span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>).
+Explain what work each construct does and why the gateway needs the
+linear one. <em>(Answer: the octave ladder <span
+class="math inline">\(\Omega_n =
+\Phi^n \Omega_0\)</span> ranks registers on a compounding exponential
+scale, while the gateway ramp is a deterministic per-step routing
+profile — step <span class="math inline">\(i\)</span> carries <span
+class="math inline">\(i \cdot r\)</span>, so the executive thread
+advances by fixed increments and doubling the rate doubles every value;
+with <span class="math inline">\(\Phi \approx 1.618\)</span> as the rate
+the profile is <span class="math inline">\(i\Phi\)</span>, not <span
+class="math inline">\(\Phi^i\)</span> (<span
+class="math inline">\(\Phi^3 \approx 4.236068\)</span> would be a ladder
+value). The gateway needs linearity because its claim is coordination of
+<span class="math inline">\(N\)</span> domains in one thread — a
+schedule — not growth [mendez2026pdvsaGateway;
+mendez2026pdvsaMockup].)</em></li>
+<li>The mockup files the gateway on the engine shelf as the “enterprise
+gateway companion”, noting engine inclusion of the AGENT_SYNC sync-stack
+and a Lattice Chat workstream while it “does not displace the CMOS pin”.
+Sketch how the gateway consumes upstream part III constructs and feeds
+downstream ones, naming one construct in each direction. <em>(Answer:
+upstream, it borrows the substrate-layer discipline of the CMOS protonic
+filing — its companion status is defined relative to that pin (<span
+class="citation"
+data-cites="sec:part_III_cmos-protonic">[@sec:part_III_cmos-protonic]</span>
+[mendez2026cmosProtonic]) — and it routes multi-domain work the way the
+moving-up-stack chapter argues the lattice serves as the next AI layer
+(<span class="citation"
+data-cites="sec:part_III_moving-up-stack">[@sec:part_III_moving-up-stack]</span>);
+downstream, part III consumers include the reality-bridge’s router
+vocabulary (<span class="citation"
+data-cites="sec:part_III_reality-bridge">[@sec:part_III_reality-bridge]</span>),
+with the single-shared-brief incident object prefiguring stack-level
+integration [mendez2026pdvsaMockup].)</em></li>
+</ol>
+</main>
+</body>
+</html>

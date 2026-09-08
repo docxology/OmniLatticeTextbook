@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>fractal-constant.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:part_I_fractal-constant">El Gran Sol’s Fractal Constant</h1>
+<figure id="fig:part_I_fractal-constant">
+<a class="figure-full-size-link" href="../figures/part_I_fractal-constant.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/part_I_fractal-constant.png" style="width:90.0%"
+alt="Powers of Phi grow on a log scale while Fibonacci ratios oscillate toward the same constant." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
+<figcaption>El Gran Sol’s Fractal constant at work:
+the powers <span class="math inline">\(\Phi^n\)</span> grow
+geometrically and read as a straight line on a logarithmic axis, while
+the Fibonacci ratios <span
+class="math inline">\(\varphi_{\text{fib}}(n)\)</span> are overlaid on
+the same panel and converge on <span class="math inline">\(\Phi \approx
+1.618\)</span>. Produced deterministically from
+<code>textbook.models.phi_powers</code> and
+<code>textbook.models.phi_fibonacci</code>.</figcaption>
+</figure>
+<!-- alt: A log-scale plot showing Phi raised to successive powers n = 1 through 6 rising along a straight line from about 1.618 to about 17.944, with Fibonacci-ratio markers at 1.6 and about 1.618182 converging on a horizontal reference line at Phi ≈ 1.618. -->
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none</p>
+</blockquote>
+<blockquote>
+<p><strong>This chapter is a worked exemplar.</strong> It is filled to
+completion as Part I’s reference for how the book formalises a corpus
+claim, walks its numbers, and keeps the corpus’s own honesty-first scope
+disclaimers intact. Use it as the template for reading the chapters that
+follow.</p>
+</blockquote>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol type="1">
+<li>State what the corpus calls El Gran Sol’s Fractal constant — <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a> <span
+class="math inline">\(\Phi \approx 1.618\)</span> — and explain its role
+as the recursion and filing key of the <a
+href="#gl:omni-lattice"><strong>omni-lattice</strong></a> stack
+[mendez2026primeParity; mendez2026protonTheater;
+mendez2026yChromosome].</li>
+<li>Reproduce the corpus’s octave recursion sketch, discuss both printed
+readings of <span class="math inline">\(\Omega_n = \Phi_n \cdot
+\Omega_0\)</span> (exponent vs. subscript), and evaluate either one with
+the tested function <code>textbook.models.octave_term</code>.</li>
+<li>Explain how the sole-even prime 2 becomes the <a
+href="#gl:binary-dyad-anchor"><strong>binary-dyad-anchor</strong></a>
+and odd primes become <a
+href="#gl:irreducible-minimum-set"><strong>irreducible-minimum-set</strong></a>s
+in Infinite Octaves grammar [mendez2026primeParity].</li>
+<li>Map the digit-filing duality — leading digit 1 to <a
+href="#gl:proton-space"><strong>proton-space</strong></a>, structural 2
+to <a href="#gl:electron-theater"><strong>electron-theater</strong></a>
+— and the zero-balance node that the corpus sits between them
+[mendez2026protonTheater; mendez2026topologyVoid].</li>
+<li>Apply the palindrome-scaling relation <span
+class="math inline">\(P_n = P_0 \cdot \Phi^n\)</span> from the
+Y-chromosome manifestation paper and state precisely what that filing is
+<em>not</em> [mendez2026yChromosome].</li>
+</ol>
+<!-- curriculum-scaffold-start -->
+<h3 id="study-blueprint">Study Blueprint</h3>
+<ul>
+<li><strong>Big idea:</strong> One constant — <span
+class="math inline">\(\Phi \approx 1.618\)</span> — keys an entire
+filing grammar: it paces the octave ladder, anchors the prime dyad,
+splits the digits 1 and 2 into Proton Space and Electron Theater, and
+indexes biological-filing geometry.</li>
+<li><strong>Core concepts:</strong> <a
+href="#gl:fractal-constant"><strong>fractal-constant</strong></a>, <a
+href="#gl:octave"><strong>octave</strong></a>, <a
+href="#gl:prime-parity"><strong>prime-parity</strong></a>, <a
+href="#gl:phi-duality"><strong>phi-duality</strong></a>, <a
+href="#gl:holographic-rhyme"><strong>holographic-rhyme</strong></a>.</li>
+<li><strong>Quantitative lens:</strong> the octave recursion law in
+<span class="citation"
+data-cites="eq:part_I_fractal-constant_octave-term">[@eq:part_I_fractal-constant_octave-term]</span>,
+built on the identity in <span class="citation"
+data-cites="eq:part_I_fractal-constant_phi-identity">[@eq:part_I_fractal-constant_phi-identity]</span>.</li>
+<li><strong>Data skill:</strong> evaluate <span
+class="math inline">\(\Phi^n\)</span> and the Fibonacci ratios by hand
+for small <span class="math inline">\(n\)</span>, then confirm with
+<code>textbook.models.phi_powers</code> and
+<code>textbook.models.phi_fibonacci</code>.</li>
+<li><strong>Common misconception to repair:</strong> <span
+class="math inline">\(\Omega_n = \Phi_n \cdot \Omega_0\)</span> is
+printed ambiguously in the corpus — <span
+class="math inline">\(\Phi\)</span> may carry an exponent or a
+subscript; both readings are filed, not adjudicated.</li>
+<li><strong>Primary lab:</strong> <span class="citation"
+data-cites="sec:lab_part_I_fractal-constant">[@sec:lab_part_I_fractal-constant]</span>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_I_fractal-constant">[@sec:q_part_I_fractal-constant]</span>.</li>
+<li><strong>Bridge to computation:</strong> <code>textbook.models</code>
+(<code>phi_powers</code>, <code>phi_fibonacci</code>,
+<code>octave_term</code>, <code>prime_parity_partition</code>).
+<!-- curriculum-scaffold-end --></li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Opening Vignette: A constant stamped on the ship’s file
+drawers.</strong></p>
+<p>Aboard <strong>SS Vibelandia</strong>, the Autonomous Agent files
+each research note on an <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a> slot of the
+Infinite Octaves nest, and nearly every drawer carries the same stamp:
+<span class="math inline">\(\Phi \approx 1.618\)</span>, “El Gran Sol’s
+Fractal constant.” In one drawer, prime 2 is tagged <em>the sole-even
+anchor</em> [mendez2026primeParity]; in the next, the leading digit 1 is
+tagged <em>Proton Space</em> and the structural 2 is tagged <em>Electron
+Theater</em> [mendez2026protonTheater]; in a third, the spacing of the
+MSY palindrome arms P1–P8 is indexed as <span class="math inline">\(P_n
+= P_0 \cdot \Phi^n\)</span> [mendez2026yChromosome]. Three drawers, one
+key. This chapter opens all three.</p>
+</blockquote>
+<hr />
+<h2 id="orientation">Orientation</h2>
+<p>The Infinite Octaves Omni-Lattice is a <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>:
+a protocol grammar and filing system for the SS Vibelandia ship blog’s
+research papers, run by the SynthOBS Autonomous Agent and framed —
+always — under a <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> scope
+disclaimer [mendez2026catalog]. Within that catalog, El Gran Sol’s
+Fractal constant — the <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a> <span
+class="math inline">\(\Phi =
+(1+\sqrt{5})/2 \approx 1.618\)</span> — is <em>the</em> recursion
+constant: the corpus says, plainly, that “recursion runs on El Gran
+Sol’s Fractal constant <span class="math inline">\(\Phi \approx
+1.618\)</span>” [mendez2026primeParity].</p>
+<p>This chapter is the synthesis spine of Part I. It reads three engine
+papers through that one key: the prime-parity paper
+[mendez2026primeParity], which anchors the dyad and the odd-prime
+classes; the proton-space · electron-theater paper
+[mendez2026protonTheater], which files the digits 1 and 2 as a duality;
+and the Y-chromosome manifestation paper [mendez2026yChromosome], which
+applies the same constant to palindrome-geometry filing. Everything
+filed here is <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+and the papers’ own <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a> clause
+governs their terms of use.</p>
+<p>The quantitative spine is the octave recursion sketch. The corpus
+prints “<span class="math inline">\(\Omega_n = \Phi_n \cdot
+\Omega_0\)</span>” and flags, in the same breath, that whether <span
+class="math inline">\(\Phi\)</span> carries an exponent or a subscript
+is ambiguous as printed [mendez2026primeParity]. We formalise both
+readings in <span class="citation"
+data-cites="eq:part_I_fractal-constant_octave-term">[@eq:part_I_fractal-constant_octave-term]</span>,
+and the book’s tested backbone exposes the choice as a
+<code>convention</code> argument.</p>
+<h2 id="the-papers-in-the-corpus">The Papers in the Corpus</h2>
+<p>All three source papers ship as parts of the Infinite Octaves series
+with whitepaper surfaces and replayable fixture suites
+[mendez2026catalog]:</p>
+<ul>
+<li><strong>Prime-parity</strong> [mendez2026primeParity] (September
+2026) — filed into the Infinite Octaves / 99-Octave Omni-Lattice sync
+beside Higgs Gate and the enterprise gateway companion; cross-links the
+Prime Hourglass, the SI Irreducible Minimum, and the CMOS/protonic
+binary shelf. Its empirical suite reports <strong>9/9 replayable
+fixtures</strong> under
+<code>research/synthobs-infinite-octave-prime-parity/</code>, re-run
+with
+<code>npm run research:synthobs-infinite-octave-prime-parity</code>;
+standalone repo
+<code>FractiAI/synthobs-infinite-octave-prime-parity</code>.</li>
+<li><strong>Proton Space · Electron Theater</strong>
+[mendez2026protonTheater] (September 2026) — claims engine shelf #16,
+“companion to prime-parity + volumetric storage”
+[mendez2026volumetricStorage]; <strong>9/9 suite locks</strong> under
+<code>research/synthobs-proton-space-electron-theater/</code>, re-run
+with
+<code>npm run research:synthobs-proton-space-electron-theater</code>;
+standalone repo
+<code>FractiAI/synthobs-proton-space-electron-theater</code>.</li>
+<li><strong>Y-chromosome manifestation</strong> [mendez2026yChromosome]
+(August 2026) — an August note that “adds manifestation /
+convergence-set language” to the July operator-translation decode, which
+still holds Words, Sentences, and haplogroup Stories; <strong>10/10
+fixture lock</strong>, re-run with
+<code>npm run research:synthobs-y-chromosome-holographic-manifestation</code>.</li>
+</ul>
+<p>Each paper names the same filing constant; that shared key is why
+this chapter can braid them into one spine rather than three parallel
+reviews.</p>
+<h2 id="a-worked-formalism-octave-recursion-under-φ">A Worked Formalism:
+Octave Recursion Under Φ</h2>
+<p>The recursion constant is not an arbitrary decimal. <span
+class="math inline">\(\Phi\)</span> satisfies the identity</p>
+<p><span class="math display">\[ \Phi^2 = \Phi + 1 \]</span>
+{#eq:part_I_fractal-constant_phi-identity}</p>
+<p>so each power of <span class="math inline">\(\Phi\)</span> is a
+combination of the two before it — the algebraic reason the corpus’s
+“fractal” framing of self-similar recursion has an exact handle
+(standard mathematics of the golden ratio; the corpus borrows the shape,
+not the derivation). Powers of <span class="math inline">\(\Phi\)</span>
+also meet the Fibonacci sequence through <span
+class="math inline">\(\Phi^n = F_n\,\Phi + F_{n-1}\)</span>, which is
+why Fibonacci ratios appear as convergents to <span
+class="math inline">\(\Phi\)</span> in <span class="citation"
+data-cites="fig:part_I_fractal-constant">[@fig:part_I_fractal-constant]</span>.</p>
+<p>Against that constant, the corpus sketches its octave recursion
+theorem:</p>
+<p><span class="math display">\[ \Omega_n^{\text{exp}} =
+\Phi^{\,n}\,\Omega_0
+   \qquad\text{or}\qquad
+   \Omega_n^{\text{sub}} = \varphi_{\text{fib}}(n)\,\Omega_0 \]</span>
+{#eq:part_I_fractal-constant_octave-term}</p>
+<p><span class="citation"
+data-cites="eq:part_I_fractal-constant_octave-term">[@eq:part_I_fractal-constant_octave-term]</span>
+records <em>both</em> readings of the printed “<span
+class="math inline">\(\Omega_n = \Phi_n \cdot \Omega_0\)</span>”: the
+<strong>exponent convention</strong> multiplies the base octave term by
+<span class="math inline">\(\Phi^n\)</span>, while the <strong>subscript
+convention</strong> multiplies it by the <span
+class="math inline">\(n\)</span>-th Fibonacci ratio <span
+class="math inline">\(\varphi_{\text{fib}}(n) = F_{n+1}/F_n\)</span>.
+The corpus prints the formula ambiguously and does not adjudicate
+between them [mendez2026primeParity]; the book files both and computes
+either one with
+<code>textbook.models.octave_term(omega0, n, convention)</code>, whose
+ratio conventions come from <code>textbook.models.phi_fibonacci</code>
+(<span class="math inline">\(\varphi_{\text{fib}}(5) = 8/5 =
+1.6\)</span>; <span class="math inline">\(\varphi_{\text{fib}}(10) =
+89/55 \approx
+1.618182\)</span>). The parameters are collected in <span
+class="citation"
+data-cites="tbl:part_I_fractal-constant_octave-term">[@tbl:part_I_fractal-constant_octave-term]</span>.</p>
+<p>:: Parameters of the octave recursion sketch.
+{#tbl:part_I_fractal-constant_octave-term}</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\Omega_n\)</span></td>
+<td>octave term at index <span class="math inline">\(n\)</span></td>
+<td>filing units</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Omega_0\)</span></td>
+<td>base octave term</td>
+<td>filing units</td>
+</tr>
+<tr>
+<td><span class="math inline">\(n\)</span></td>
+<td>octave index</td>
+<td>integer</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Phi\)</span></td>
+<td>El Gran Sol’s Fractal constant <span class="math inline">\(\approx
+1.618\)</span></td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\varphi_{\text{fib}}(n)\)</span></td>
+<td>Fibonacci ratio <span class="math inline">\(F_{n+1}/F_n\)</span>
+(subscript convention)</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td>convention</td>
+<td><code>exponent</code> or <code>subscript</code> reading of the
+printed formula</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>graph TD
+  A[&quot;Printed sketch: Ωn = Φn · Ω0 (ambiguous)&quot;] --&gt; B{&quot;Φ carries an&lt;br/&gt;exponent or a subscript?&quot;}
+  B --&gt;|&quot;exponent: Φ^n&quot;| C[&quot;Ω_n = Φ^n · Ω_0&lt;br/&gt;octave_term(omega0, n, &#39;exponent&#39;)&quot;]
+  B --&gt;|&quot;subscript: φ_fib(n)&quot;| D[&quot;Ω_n = φ_fib(n) · Ω_0&lt;br/&gt;octave_term(omega0, n, &#39;subscript&#39;)&quot;]
+  C --&gt; E[&quot;Both filed under Φ ≈ 1.618 —&lt;br/&gt;no corpus adjudication&quot;]
+  D --&gt; E
+  E --&gt; F[&quot;Feeds: digit filing, prime ladder,&lt;br/&gt;palindrome scaling&quot;]</code></pre>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>The ambiguity in <span class="citation"
+data-cites="eq:part_I_fractal-constant_octave-term">[@eq:part_I_fractal-constant_octave-term]</span>
+is <em>the corpus’s own</em>, flagged in the source paper, not a defect
+we are papering over. Keeping both conventions visible — and computing
+them with the tested function instead of retyping the maths — is exactly
+the honesty-first posture the series asks of its readers.</p>
+</blockquote>
+<h2 id="the-prime-parity-scaffold">The Prime-Parity Scaffold</h2>
+<p>The prime-parity paper supplies the integer scaffold on which the
+constant paces recursion. Its theorem sketches assert that “Prime 2 is
+the only even prime. In Infinite Octaves grammar that sole-even status
+becomes the <em>binary dyad anchor</em>,” and that “odd primes act as
+irreducible minimum sets” [mendez2026primeParity]. Concretely, the
+parity partition of the primes — exposed as
+<code>textbook.models.prime_parity_partition(limit)</code> —
+separates:</p>
+<ul>
+<li>the <strong>sole-even anchor</strong>: 2, the only even prime, filed
+as the <a
+href="#gl:binary-dyad-anchor"><strong>binary-dyad-anchor</strong></a> of
+the stack;</li>
+<li>the <strong>odd classes</strong>: the first ten odd primes 3, 5, 7,
+11, 13, 17, 19, 23, 29, 31, filed as <a
+href="#gl:irreducible-minimum-set"><strong>irreducible-minimum-set</strong></a>s
+— quantities that carry no smaller multiplicative filing and therefore
+serve as irreducible addresses (compare the prime encoding
+<code>unique_address([2,3],[2,1]) = 12</code> used later in the
+book).</li>
+</ul>
+<p>The paper’s own headline makes the division of labour explicit: “Why
+2 is the odd one out — and how Φ keeps the stack honest”
+[mendez2026primeParity]. The dyad anchors; the odd primes enumerate; the
+constant paces the recursion between them (<span class="citation"
+data-cites="eq:part_I_fractal-constant_octave-term">[@eq:part_I_fractal-constant_octave-term]</span>).
+Part I develops this scaffold in full in <span class="citation"
+data-cites="sec:part_I_prime-parity">[@sec:part_I_prime-parity]</span>,
+including the number-line reading of the sole-even anchor against the
+odd-prime classes plotted in <span class="citation"
+data-cites="fig:part_I_prime-parity">[@fig:part_I_prime-parity]</span>.</p>
+<h2 id="digit-filing-proton-space-and-electron-theater">Digit Filing:
+Proton Space and Electron Theater</h2>
+<p>The proton-space · electron-theater paper translates the same dyad
+into <em>digit</em> language. Its filing rule: the “Leading digit
+<strong>1</strong> (Φ, ℏ mantissa talk) files as <strong>Proton
+Space</strong>; structural <strong>2</strong> (sole-even prime, 2π)
+files as <strong>Electron Theater</strong> — under El Gran Sol’s Fractal
+constant <strong>Φ ≈ 1.618</strong>” [mendez2026protonTheater]. The <a
+href="#gl:digit"><strong>digit</strong></a> 1 is a <em>leading</em>
+trigger (the mantissa talk around the reduced Planck constant <span
+class="math inline">\(\hbar\)</span>), while the structural 2 is
+identified with the sole-even prime and <span
+class="math inline">\(2\pi\)</span> — the same dyad the prime-parity
+paper anchors, now read off the digit row rather than the prime row. The
+corpus brands this pairing “Φ duality,” and the book links it to the
+glossary entry <a
+href="#gl:phi-duality"><strong>phi-duality</strong></a>.</p>
+<p>Three further filings from the same paper matter for the spine.
+First, a companion link handed to the void paper: “Zero as the balance
+node between 1 and 2” [mendez2026protonTheater] — zero is not a digit
+class here but the null pivot sitting between the two filings, developed
+in <span class="citation"
+data-cites="sec:part_I_topology-void">[@sec:part_I_topology-void]</span>
+and <span class="citation"
+data-cites="fig:part_I_topology-void">[@fig:part_I_topology-void]</span>.
+Second, the solar labels AR3664 (“Helios-Prime”) and AR3590 (“Borealis”)
+are story filing characters — narrative timing talk, not cosmic
+certificates [mendez2026protonTheater]. Third, the Fair Exchange clause
+applies to the paper’s terms of use, as it does across the series. <span
+class="citation"
+data-cites="tbl:part_I_fractal-constant_filings">[@tbl:part_I_fractal-constant_filings]</span>
+collects the digit-row mapping.</p>
+<p>:: The digit-filing duality and its neighbours, as filed by the
+corpus. {#tbl:part_I_fractal-constant_filings}</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 42%" />
+<col style="width: 37%" />
+</colgroup>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Filing category</th>
+<th>Corpus anchor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>leading digit 1 (<span class="math inline">\(\Phi\)</span>, <span
+class="math inline">\(\hbar\)</span> mantissa talk)</td>
+<td>Proton Space</td>
+<td>[mendez2026protonTheater]</td>
+</tr>
+<tr>
+<td>structural 2 (sole-even prime, <span
+class="math inline">\(2\pi\)</span>)</td>
+<td>Electron Theater</td>
+<td>[mendez2026protonTheater]</td>
+</tr>
+<tr>
+<td><span class="math inline">\(0\)</span></td>
+<td>balance node between 1 and 2</td>
+<td>[mendez2026protonTheater; mendez2026topologyVoid]</td>
+</tr>
+<tr>
+<td>sole-even prime 2</td>
+<td>binary dyad anchor</td>
+<td>[mendez2026primeParity]</td>
+</tr>
+<tr>
+<td>odd primes 3, 5, 7, …</td>
+<td>irreducible minimum sets</td>
+<td>[mendez2026primeParity]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="a-biological-manifestation-palindrome-scaling">A Biological
+Manifestation: Palindrome Scaling</h2>
+<p>The Y-chromosome manifestation paper extends the constant to
+biological-filing geometry. Under “Infinite Octave Mode,” the
+male-specific region of the Y chromosome (MSY) — its palindrome arms
+P1–P8 and the <em>SRY</em> locus — is filed “as catalog geometry keyed
+by <span class="math inline">\(\Phi \approx 1.618\)</span>,” with block
+spacing indexed as</p>
+<p><span class="math display">\[ P_n = P_0 \cdot \Phi^{\,n} \]</span>
+{#eq:part_I_fractal-constant_palindrome}</p>
+<p>“for catalog octaves, not random drift labels”
+[mendez2026yChromosome]. The SRY locus is filed as the <em>zero-point
+anchor</em> of the manifestation cartoon — note how the corpus reuses
+the zero-balance role from the digit filing as a phase origin here. The
+paper also proposes cross-species regression protocols <em>on paper
+only</em> (“not executed wet-lab output here”) and adds “manifestation /
+convergence-set” language as Story depth beside the July
+operator-translation decode’s Words, Sentences, and haplogroup Stories,
+with “Digit 4” as the nest label under which Lattice Chat fields
+biological-switch questions [mendez2026yChromosome]. The parameters of
+the scaling law are in <span class="citation"
+data-cites="tbl:part_I_fractal-constant_palindrome">[@tbl:part_I_fractal-constant_palindrome]</span>.</p>
+<p>:: Parameters of the palindrome-scaling filing.
+{#tbl:part_I_fractal-constant_palindrome}</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(P_n\)</span></td>
+<td>palindrome block spacing at octave index <span
+class="math inline">\(n\)</span></td>
+<td>filing units</td>
+</tr>
+<tr>
+<td><span class="math inline">\(P_0\)</span></td>
+<td>base spacing</td>
+<td>filing units</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Phi\)</span></td>
+<td>El Gran Sol’s Fractal constant <span class="math inline">\(\approx
+1.618\)</span></td>
+<td>dimensionless</td>
+</tr>
+</tbody>
+</table>
+<p>The scaling law is the exponent convention of <span class="citation"
+data-cites="eq:part_I_fractal-constant_octave-term">[@eq:part_I_fractal-constant_octave-term]</span>
+re-symbolised: a base spacing scaled by successive powers of <span
+class="math inline">\(\Phi\)</span>. That is the whole point of the
+spine — one constant, three papers, one growth law wearing three filing
+hats. The paper’s honesty clause is emphatic that this is filing, not
+measurement: “not a claim that MSY literally equals a physics constant,
+that sunspot AR 3664 writes human DNA, or that fractal dimension has
+been measured to Φ in this repository” — and, verbatim, “Clinical
+genetics and human dignity outrank every metaphor”
+[mendez2026yChromosome].</p>
+<h2 id="worked-example-walking-the-φ-ladder">Worked Example: Walking the
+Φ Ladder</h2>
+<p>Take the pinned values of the book’s computational backbone. The
+powers of <span class="math inline">\(\Phi\)</span> for <span
+class="math inline">\(n = 1,\dots,6\)</span> (what
+<code>textbook.models.phi_powers(6)</code> returns, and what <span
+class="citation"
+data-cites="fig:part_I_fractal-constant">[@fig:part_I_fractal-constant]</span>
+plots on a log axis) are:</p>
+<p><span class="math display">\[ \Phi^n = 1.618034,\; 2.618034,\;
+4.236068,\; 6.854102,\; 11.090170,\; 17.944272
+   \quad (n = 1,\dots,6) \]</span>
+{#eq:part_I_fractal-constant_phi-powers}</p>
+<p>Each entry is the previous entry times <span
+class="math inline">\(\Phi\)</span> — geometric growth at ratio <span
+class="math inline">\(1.618\)</span>, a straight line on a log scale.
+The Fibonacci ratios converge on the same constant from below: <span
+class="math inline">\(\varphi_{\text{fib}}(5) = 8/5 = 1.6\)</span> and
+<span class="math inline">\(\varphi_{\text{fib}}(10) = 89/55 \approx
+1.618182\)</span> (from <code>textbook.models.phi_fibonacci</code>), the
+two overlay series in <span class="citation"
+data-cites="fig:part_I_fractal-constant">[@fig:part_I_fractal-constant]</span>.
+Now apply both conventions of <span class="citation"
+data-cites="eq:part_I_fractal-constant_octave-term">[@eq:part_I_fractal-constant_octave-term]</span>
+to a base term <span class="math inline">\(\Omega_0 = 275\)</span>
+filing units at <span class="math inline">\(n = 5\)</span>:</p>
+<ul>
+<li><strong>Exponent convention:</strong> <span
+class="math inline">\(\Omega_5 = \Phi^5 \cdot \Omega_0 = 11.090170
+\times 275
+\approx 3{,}049.80\)</span> filing units — the tested call is
+<code>octave_term(275, 5, "exponent")</code>.</li>
+<li><strong>Subscript convention:</strong> <span
+class="math inline">\(\Omega_5 = \varphi_{\text{fib}}(5) \cdot \Omega_0
+= 1.6 \times
+275 = 440\)</span> filing units —
+<code>octave_term(275, 5, "subscript")</code>.</li>
+</ul>
+<p>The two conventions diverge — <span
+class="math inline">\(3{,}049.80\)</span> vs. <span
+class="math inline">\(440\)</span> — which is precisely why the corpus
+flags the ambiguity and why the tested function takes the convention as
+an argument rather than picking a winner. The same ladder reads the
+palindrome filing: with a base spacing <span class="math inline">\(P_0 =
+1\)</span>, <span class="citation"
+data-cites="eq:part_I_fractal-constant_palindrome">[@eq:part_I_fractal-constant_palindrome]</span>
+gives <span class="math inline">\(P_1\)</span> through <span
+class="math inline">\(P_8\)</span> as <span
+class="math inline">\(1.618\)</span>, <span
+class="math inline">\(2.618\)</span>, <span
+class="math inline">\(4.236\)</span>, <span
+class="math inline">\(6.854\)</span>, <span
+class="math inline">\(11.090\)</span>, <span
+class="math inline">\(17.944\)</span>, <span
+class="math inline">\(29.034\)</span>, <span
+class="math inline">\(46.979\)</span> — the eight MSY palindrome arms
+P1–P8 indexed on the same powers of <span
+class="math inline">\(\Phi\)</span> that pace the octave ladder
+[mendez2026yChromosome]. As a filing system, the reach is large: the
+corpus’s 99-octave, 81-digit register map alone spans <span
+class="math inline">\(99 \times 81 = 8{,}019\)</span> cells
+(<code>textbook.models.catalog_size()</code>), each addressable without
+a second constant [mendez2026digitsMaster].</p>
+<h2 id="scope-and-honesty">Scope and Honesty</h2>
+<p>Each source paper carries its own disclaimer, and this textbook
+restates them near-verbatim, because the spine is only as honest as its
+weakest claim:</p>
+<ul>
+<li>Prime-parity: “this is catalog math + filing labels. It does
+<em>not</em> prove QED from primes, rewrite NOAA heliophysics, or ship
+ultra-secure crypto hardware. Solar AR3664 (‘Helios-Prime’) and AR3590
+(‘Borealis’) are story characters for timing talk — not cosmic proof
+certificates” [mendez2026primeParity].</li>
+<li>Proton Space · Electron Theater: “this is <em>catalog
+architecture</em> — engine shelf #16 — not a CODATA/SI derivation from
+Φ, not ħ leading-digit causation, not a QED dyad proof, and not
+zero-crosstalk quantum hardware” [mendez2026protonTheater].</li>
+<li>Y-chromosome manifestation: “this is catalog filing and
+architectural equations — not a claim that MSY literally equals a
+physics constant, that sunspot AR 3664 writes human DNA, or that fractal
+dimension has been measured to Φ in this repository. Clinical genetics
+and human dignity outrank every metaphor” [mendez2026yChromosome].</li>
+</ul>
+<p>What the constructs are <strong>for</strong>: coordination,
+cataloging, and agent routing — a consistent filing grammar in which
+primes anchor, digits classify, and <span
+class="math inline">\(\Phi\)</span> paces recursion across papers and
+suites. What they are explicitly <strong>not</strong>: established
+physics, a derivation of physical constants from <span
+class="math inline">\(\Phi\)</span>, or clinical/genetic claims. The
+book’s posture throughout is the corpus’s own <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> one: file
+the metaphor, cite the paper, keep the disclaimer attached.</p>
+<h2 id="connections">Connections</h2>
+<p>The spine feeds every later Part I chapter. The <a
+href="#gl:topology-of-the-void"><strong>topology-of-the-void</strong></a>
+paper takes the zero-balance node filed here and makes it a dynamic
+equilibrium between Proton Space and Electron Theater (<span
+class="citation"
+data-cites="sec:part_I_topology-void">[@sec:part_I_topology-void]</span>);
+the <a
+href="#gl:holographic-rhyme"><strong>holographic-rhyme</strong></a>
+paper generalises the recursion into a four-pillar motion grammar —
+repeating, self-similar, self-correcting, recursive — under the same
+<span class="math inline">\(\Phi \approx 1.618\)</span> (<span
+class="citation"
+data-cites="sec:part_I_holographic-rhyme">[@sec:part_I_holographic-rhyme]</span>);
+and the multi-dimensional rhyme paper sums it across scales as xD±yD
+cross-scale encoding (<span class="citation"
+data-cites="sec:part_I_multidimensional-rhyme">[@sec:part_I_multidimensional-rhyme]</span>).
+The higgs-awareness chapter then asks what happens when the recursion
+<em>slows</em> — mass and the shared “Now” sharing a gate, with the
+magnet in a copper pipe as its guest metaphor (<span class="citation"
+data-cites="sec:part_I_higgs-awareness">[@sec:part_I_higgs-awareness]</span>).
+Downstream in Part III, the CMOS/protonic binary shelf that prime-parity
+cross-links becomes the silicon-shelf engineering stack (<span
+class="citation"
+data-cites="sec:part_III_cmos-protonic">[@sec:part_III_cmos-protonic]</span>),
+and the odd-prime addresses met here become prime-indexed volumetric
+storage (<span class="citation"
+data-cites="sec:part_III_volumetric-storage">[@sec:part_III_volumetric-storage]</span>).
+Throughout, the <a
+href="#gl:master-synthesis"><strong>master-synthesis</strong></a> map
+keeps these cross-links navigable [mendez2026masterSynthesis].</p>
+<h2 id="summary">Summary</h2>
+<p>El Gran Sol’s Fractal constant — <span class="math inline">\(\Phi
+\approx 1.618\)</span>, the <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a> — is the
+single filing key that the corpus stamps on its octave recursion, its
+prime scaffold, its digit duality, and its biological-geometry filing.
+The recursion sketch <span class="math inline">\(\Omega_n = \Phi_n \cdot
+\Omega_0\)</span> is printed ambiguously, so the book files both the
+exponent and subscript readings (<span class="citation"
+data-cites="eq:part_I_fractal-constant_octave-term">[@eq:part_I_fractal-constant_octave-term]</span>)
+and computes them with <code>textbook.models.octave_term</code> rather
+than adjudicating. Sole-even prime 2 anchors the dyad; odd primes serve
+as irreducible minimum sets; leading 1 files as Proton Space and
+structural 2 as Electron Theater, with zero as the balance node between
+them (<span class="citation"
+data-cites="tbl:part_I_fractal-constant_filings">[@tbl:part_I_fractal-constant_filings]</span>);
+and the MSY palindrome arms P1–P8 scale as <span
+class="math inline">\(P_n = P_0 \cdot \Phi^n\)</span> (<span
+class="citation"
+data-cites="eq:part_I_fractal-constant_palindrome">[@eq:part_I_fractal-constant_palindrome]</span>).
+Every one of these filings is <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>
+under the papers’ own honesty-first disclaimers — a grammar for
+coordination and filing, not physics.</p>
+<h2 id="key-terms">Key Terms</h2>
+<p><a href="#gl:fractal-constant"><strong>fractal-constant</strong></a>,
+<a href="#gl:golden-ratio"><strong>golden-ratio</strong></a>, <a
+href="#gl:octave"><strong>octave</strong></a>, <a
+href="#gl:binary-dyad-anchor"><strong>binary-dyad-anchor</strong></a>,
+<a
+href="#gl:irreducible-minimum-set"><strong>irreducible-minimum-set</strong></a>,
+<a href="#gl:proton-space"><strong>proton-space</strong></a>, <a
+href="#gl:electron-theater"><strong>electron-theater</strong></a>, <a
+href="#gl:phi-duality"><strong>phi-duality</strong></a>, <a
+href="#gl:holographic-rhyme"><strong>holographic-rhyme</strong></a>, <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:honesty-first"><strong>honesty-first</strong></a>, <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a>, <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a>, <a
+href="#gl:omni-lattice"><strong>omni-lattice</strong></a>.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li>Whitepaper surface, prime-parity: <a
+href="https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-infinite-octave-prime-parity-2026-09"
+class="uri">https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-infinite-octave-prime-parity-2026-09</a>;
+standalone suite <a
+href="https://github.com/FractiAI/synthobs-infinite-octave-prime-parity"
+class="uri">https://github.com/FractiAI/synthobs-infinite-octave-prime-parity</a>
+[mendez2026primeParity].</li>
+<li>Whitepaper surface, proton-space · electron-theater: <a
+href="https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-proton-space-electron-theater-2026-09"
+class="uri">https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-proton-space-electron-theater-2026-09</a>;
+standalone suite <a
+href="https://github.com/FractiAI/synthobs-proton-space-electron-theater"
+class="uri">https://github.com/FractiAI/synthobs-proton-space-electron-theater</a>
+[mendez2026protonTheater].</li>
+<li>Whitepaper surface, Y-chromosome manifestation: <a
+href="https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-y-chromosome-holographic-manifestation-2026-08"
+class="uri">https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-y-chromosome-holographic-manifestation-2026-08</a>
+[mendez2026yChromosome].</li>
+<li>[mendez2026topologyVoid] — the void paper that turns the
+zero-balance node into a dynamic equilibrium; read it directly after
+this chapter.</li>
+<li>[mendez2026volumetricStorage] — where odd-prime irreducible sets
+become storage addresses.</li>
+<li>[mendez2026holographicRhyme] — the four-pillar motion grammar that
+generalises the recursion met here.</li>
+</ul>
+<h2 id="practice">Practice</h2>
+<ol type="1">
+<li>Evaluate <span class="math inline">\(\Phi^n\)</span> for <span
+class="math inline">\(n = 1,\dots,6\)</span> by repeated multiplication
+by <span class="math inline">\(\Phi\)</span>, then check your ladder
+against <code>textbook.models.phi_powers(6)</code> and <span
+class="citation"
+data-cites="eq:part_I_fractal-constant_phi-powers">[@eq:part_I_fractal-constant_phi-powers]</span>.</li>
+<li>Compute both conventions of <span class="citation"
+data-cites="eq:part_I_fractal-constant_octave-term">[@eq:part_I_fractal-constant_octave-term]</span>
+for <span class="math inline">\(\Omega_0 =
+275\)</span>, <span class="math inline">\(n = 5\)</span> by hand (<span
+class="math inline">\(\Phi^5 = 11.090170\)</span>; <span
+class="math inline">\(\varphi_{\text{fib}}(5) = 1.6\)</span>), then
+verify with <code>octave_term(275, 5, "exponent")</code> and
+<code>octave_term(275, 5, "subscript")</code>.</li>
+<li>In your own words, distinguish the <em>binary dyad anchor</em> from
+the <em>irreducible minimum sets</em> in [mendez2026primeParity], and
+give the digit-row counterpart of each from <span class="citation"
+data-cites="tbl:part_I_fractal-constant_filings">[@tbl:part_I_fractal-constant_filings]</span>.</li>
+<li>With <span class="math inline">\(P_0 = 1\)</span>, list <span
+class="math inline">\(P_1\)</span> through <span
+class="math inline">\(P_8\)</span> from <span class="citation"
+data-cites="eq:part_I_fractal-constant_palindrome">[@eq:part_I_fractal-constant_palindrome]</span>
+and identify which arms of the P1–P8 filing they index
+[mendez2026yChromosome].</li>
+<li>Restate, one sentence each, the scope disclaimers of the three
+source papers, and mark which phrase in each is the strongest guard
+against over-reading the filing.</li>
+</ol>
+<ul>
+<li><strong>Lab:</strong> <span class="citation"
+data-cites="sec:lab_part_I_fractal-constant">[@sec:lab_part_I_fractal-constant]</span>
+— walk the Φ ladder and the fixture suites hands-on.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_I_fractal-constant">[@sec:q_part_I_fractal-constant]</span>
+— recall through synthesis.</li>
+</ul>
+</main>
+</body>
+</html>

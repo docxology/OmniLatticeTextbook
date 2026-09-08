@@ -1,0 +1,293 @@
+{
+  "figures": [
+    {
+      "alt": "A vertical bar chart compares several labeled categories, with bar height encoding each category's value.",
+      "caption": "Bar chart.",
+      "filename": "gallery/gallery_bar.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:gallery_bar",
+      "source_markdown": "appendices/appendix_format_gallery.md"
+    },
+    {
+      "alt": "Six condition means rise from left to right; every point has a vertical standard-error interval.",
+      "caption": "Means with standard-error bars.",
+      "filename": "gallery/gallery_errorbar.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:gallery_errorbar",
+      "source_markdown": "appendices/appendix_format_gallery.md"
+    },
+    {
+      "alt": "Three sinusoidal curves share one time axis, with progressively higher oscillation frequency.",
+      "caption": "A multi-series line plot of three sine waves, produced by\n`visualization.gallery.line_plot`.",
+      "filename": "gallery/gallery_line.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:gallery_line",
+      "source_markdown": "appendices/appendix_format_gallery.md"
+    },
+    {
+      "alt": "A rectangular heatmap uses a light-to-dark color scale to encode values across rows and columns.",
+      "caption": "A generated heatmap embedded as a raster\nimage.",
+      "filename": "gallery/gallery_heatmap.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:gallery_media",
+      "source_markdown": "appendices/appendix_format_gallery.md"
+    },
+    {
+      "alt": "A two-by-two composite contains a line chart, scatter plot, bar chart, and histogram.",
+      "caption": "A 2\u00d72 composite: line, scatter, bar, and histogram\npanels.",
+      "filename": "gallery/gallery_multipanel.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:gallery_multipanel",
+      "source_markdown": "appendices/appendix_format_gallery.md"
+    },
+    {
+      "alt": "A circular chart is divided into labeled slices whose angles encode category proportions.",
+      "caption": "Pie chart.",
+      "filename": "gallery/gallery_pie.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:gallery_pie",
+      "source_markdown": "appendices/appendix_format_gallery.md"
+    },
+    {
+      "alt": "A staged ladder plot walks the Living PEM engineering lifecycle from filing to pinning.",
+      "caption": "The PEM engineering lifecycle rendered as a staged ladder plot: the six onboarding stages (Stage 0 edge seat through Stage 5 full fluency) climbing alongside the 26 ordered steps of the living engine shelf, with the auto-sync loop feeding back from each stage to the shelf module.",
+      "filename": "part_0_living-pem.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_0_living-pem",
+      "source_markdown": "part_0/living-pem.md"
+    },
+    {
+      "alt": "A cross-link adjacency heatmap maps which corpus papers reference one another.",
+      "caption": "Cross-link adjacency heatmap of the corpus papers: rows and columns are the papers of the engine shelf ordered by shelf number, and each cell's intensity encodes how strongly two papers cross-reference one another. The master-synthesis row (shelf 3) is among the densest in the matrix, reflecting this paper's role as the corpus's connective tissue \u2014 the note that files every other shelf on one board.",
+      "filename": "part_0_master-synthesis.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_0_master-synthesis",
+      "source_markdown": "part_0/master-synthesis.md"
+    },
+    {
+      "alt": "The ninety-nine octave ladder rises with golden-ratio spaced band boundaries across the register.",
+      "caption": "The 99-octave ladder: octaves 01\u201399 drawn as nested bands whose boundaries follow the golden-ratio key (\u03a6-spaced), with the nine digit drawers shown as coarse labels along the side. Produced deterministically from `textbook.models.octave_term`.",
+      "filename": "part_0_octave-map.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_0_octave-map",
+      "source_markdown": "part_0/octave-map.md"
+    },
+    {
+      "alt": "A timeline of the engine shelf places each corpus paper at its shelf position from the CMOS/protonic bridge to the frontier notes.",
+      "caption": "The engine-shelf timeline: the 24 engine-shelf papers this book covers, positioned by shelf number \u2014 from the CMOS/protonic engineering bridge at shelf 1, through the tensor filing cabinet (2) and the master synthesis (3), out to the newest September 2026 engine papers at shelf 24 \u2014 with the framework pages that feed Part 0 marked separately.",
+      "filename": "part_0_orientation.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_0_orientation",
+      "source_markdown": "part_0/orientation.md"
+    },
+    {
+      "alt": "A digit-by-octave heatmap shows the nine drawer rows and ninety-nine band columns of the master register.",
+      "caption": "Digit\u00d7octave filing heatmap: 99 octave rows (11 shelves \u00d7 9 slots) binned against the 81-digit precision register, shaded by \u03a6-scaled register weight, rendered from `textbook.models.catalog_size` and `textbook.models.phi_powers`.",
+      "filename": "part_0_tensor-decoupling.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_0_tensor-decoupling",
+      "source_markdown": "part_0/tensor-decoupling.md"
+    },
+    {
+      "alt": "Stacked bars allocate octave bands across silicon shelf tiers.",
+      "caption": "Octaves-per-substrate stacked bars for the silicon shelf: the binary CMOS gate occupies octave tier $n = 1$ (one octave of the 99-octave ladder), while hydrogen-regulated protonic two-terminal devices span bands $n = 2$ through $99$ (98 octaves), drawn as stacked silicon-shelf tiers.",
+      "filename": "part_III_cmos-protonic.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_III_cmos-protonic",
+      "source_markdown": "part_III/cmos-protonic.md"
+    },
+    {
+      "alt": "A quadrant map places open problems by value and effort for the research program.",
+      "caption": "Open-problems quadrant map for the closing chapter: the seven open problems of the Omni-Lattice research program plotted by expected value (vertical axis) against effort (horizontal axis), scored with the chapter's quadrant model; the high-value, low-effort do-first quadrant is shaded, with the octave-convention audit and the net-zero ledger automation leading the queue.",
+      "filename": "part_III_frontiers.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_III_frontiers",
+      "source_markdown": "part_III/frontiers.md"
+    },
+    {
+      "alt": "A visibility threshold curve separates the visible frontier from the invisible one.",
+      "caption": "Visibility threshold frontier curve: the chapter's logistic visibility model, the fraction $V(t)$ of the \"second chart\" that a linear-awareness frame registers as cumulative exposure $t$ grows, drawn for $V_0 = 0.05$ and $r = 1$. The frontier is the steep region around the half-visibility crossing at $t = \\ln 19 \\approx 2.94$.",
+      "filename": "part_III_invisible-frontier.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_III_invisible-frontier",
+      "source_markdown": "part_III/invisible-frontier.md"
+    },
+    {
+      "alt": "A round-robin cycle moves active sets through parked and recycled states over time.",
+      "caption": "Round-robin set-recycling cycle over discrete time: one physical set of nine indexed items is partitioned deterministically across three experiential sets (stationary, pedestrian, cyclist) by `textbook.models.round_robin`, with item $i$ landing in set $i \\bmod 3$.",
+      "filename": "part_III_kinematic-recycling.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_III_kinematic-recycling",
+      "source_markdown": "part_III/kinematic-recycling.md"
+    },
+    {
+      "alt": "The macro-protein work engine's output curve rises with each work cycle.",
+      "caption": "The macro-protein work-engine output curve: the filed work output $W(n) = w_0 \\cdot \\Omega_n$ of an organism-as-work-engine evaluated across the biological tier band from $\\theta_{\\mathrm{bio}} = 13$ to $17$ under both readings of the corpus's octave term (`textbook.models.octave_term`) \u2014 a steep exponential ramp under the exponent convention, an essentially flat ladder under the Fibonacci-subscript convention.",
+      "filename": "part_III_macro-protein.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_III_macro-protein",
+      "source_markdown": "part_III/macro-protein.md"
+    },
+    {
+      "alt": "A step plot climbs the stack from model layer to lattice layer to agent layer.",
+      "caption": "Stack layers step plot: the corpus's six-level climb \u2014 model, lattice, agent layer \u2014 rendered as rising steps, with the hub-class ($12.9B) and IDE-class ($60B) scenario anchors on their shelves and the new-layer band ($12B\u2013$28B) on the top orchestration shelf.",
+      "filename": "part_III_moving-up-stack.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_III_moving-up-stack",
+      "source_markdown": "part_III/moving-up-stack.md"
+    },
+    {
+      "alt": "A lattice-linear flow ramps linearly through the gateway stages.",
+      "caption": "The lattice-linear flow ramp of the EGS Lattice-Linear Gateway: cumulative flow $L_n = n\\,r$ rises in equal increments across the ops decision cycle (Gather \u2192 Decide \u2192 Act), generated from `textbook.models.lattice_linear_profile`.",
+      "filename": "part_III_pdvsa-gateway.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_III_pdvsa-gateway",
+      "source_markdown": "part_III/pdvsa-gateway.md"
+    },
+    {
+      "alt": "Prime-container capacity grows through unique prime-indexed addresses.",
+      "caption": "Prime-container capacity: the growth sequence of `textbook.models.unique_address` as vault primes are added one at a time \u2014 each additional odd prime vault multiplies the number of distinct residue-index addresses the container can file.",
+      "filename": "part_III_protein-folding.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_III_protein-folding",
+      "source_markdown": "part_III/protein-folding.md"
+    },
+    {
+      "alt": "A radial plot sweeps bridge and router throughput across orientations.",
+      "caption": "Bridge/router throughput radial plot: three spokes \u2014 the reality bridge, the cognitive router, and the awareness wormhole \u2014 carrying routed attention outward through $\\Phi$-spaced octave rings, ring $n$ at radius $\\Phi^n$ from `textbook.models.octave_term`, with the routed share of each ring's traffic following the $e^{-kn}$ throttle family of `textbook.models.transduction_brake`.",
+      "filename": "part_III_reality-bridge.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_III_reality-bridge",
+      "source_markdown": "part_III/reality-bridge.md"
+    },
+    {
+      "alt": "A scatter lattice shows prime-indexed addresses filling volumetric space.",
+      "caption": "Prime-indexed address scatter: each point is a vault address $\\prod p_i^{k_i}$ formed from a choice of odd-prime vaults (3, 5, 7, \u2026) and exponents $k$, computed over the $p^k$ lattice from `textbook.models.unique_address`, with the binary base channel (Prime 2) shown as the substrate.",
+      "filename": "part_III_volumetric-storage.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_III_volumetric-storage",
+      "source_markdown": "part_III/volumetric-storage.md"
+    },
+    {
+      "alt": "A bar chart manifests digit four's sub-bands within the register.",
+      "caption": "Digit-4 drawer manifestation: a sub-band bar chart of the Infinite Octave drawer for digit 4 \u2014 the SRY zero-point anchor at index 0, then palindrome arms P1\u2013P8 drawn as sub-bands whose spacing grows geometrically as $P_0 \\cdot \\Phi^n$, generated from `textbook.models.phi_powers`.",
+      "filename": "part_III_y-chromosome.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_III_y-chromosome",
+      "source_markdown": "part_III/y-chromosome.md"
+    },
+    {
+      "alt": "Iso-lines of constant travel time lattice the speed-distance plane.",
+      "caption": "Speed\u2013distance iso-lines of the crystalline-field lattice: each curve is the locus $d = v\\,\\tau$ for one fixed access time $\\tau$ (the $c = d/t$ lattice), computed with `textbook.models`. Steeper iso-lines correspond to shorter access times; the topmost curve carries the corpus's anchor speed $c$.",
+      "filename": "part_II_crystalline-field.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_II_crystalline-field",
+      "source_markdown": "part_II/crystalline-field.md"
+    },
+    {
+      "alt": "An eddy brake curve decays exponentially with an inset showing the drag force.",
+      "caption": "The eddy brake: velocity $v(t) = v_0 e^{-kt}$ decaying exponentially from $v_0 = 1$ under drag coefficient $k = 1$, with an inset showing the drag force $F(t) = m k v(t)$ decaying on the same schedule. Produced from `textbook.models.transduction_brake`.",
+      "filename": "part_II_eddy-current-mirror.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_II_eddy-current-mirror",
+      "source_markdown": "part_II/eddy-current-mirror.md"
+    },
+    {
+      "alt": "The densification curve rises logarithmically with exposure.",
+      "caption": "The densification curve $D(x) = D_0\\,(1 + k\\ln(1+x))$ for $D_0 = 1$, $k = 1$: a logarithmic rise that climbs steeply at first and then flattens as exposure $x$ grows, matching the corpus's mud \u2192 shale \u2192 schist reading of accumulated \"cooking\" \u2014 early transformation is fast, later transformation is slower but still real. Produced by the companion visualization agent from `textbook.models.densification`.",
+      "filename": "part_II_metamorphic-octaves.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_II_metamorphic-octaves",
+      "source_markdown": "part_II/metamorphic-octaves.md"
+    },
+    {
+      "alt": "A pairwise heatmap scores metrological overlap between unit families.",
+      "caption": "Pairwise metrological-overlap heatmap: each cell shades the min-normalised overlap $\\lvert A \\cap B\\rvert/\\min(\\lvert A\\rvert,\\lvert B\\rvert)$ returned by `textbook.models.metrological_overlap` for a pair of constant registers drawn from the five-constant map $h$, $\\Phi$, $p_n$, $\\nu_{\\mathrm{HI}}$, $c$; diagonal cells are 1, register pairs sharing one entry sit at 0.5, and disjoint registers sit at 0.",
+      "filename": "part_II_metrological-overlap.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_II_metrological-overlap",
+      "source_markdown": "part_II/metrological-overlap.md"
+    },
+    {
+      "alt": "A value trace crosses shaded goldilocks bands marking the viable region.",
+      "caption": "Goldilocks band shading over a value trace: a trace of filed execution-coherence\nvalues moves through time while the coherent band running from $\\ell$ to $h$ is shaded; trace\nsegments inside the band are labelled Goldilocks (coherent execution) and\nsegments outside are labelled Old Earth (high-friction execution), as classified\nby `textbook.models.goldilocks_band`.",
+      "filename": "part_II_planetary-core.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_II_planetary-core",
+      "source_markdown": "part_II/planetary-core.md"
+    },
+    {
+      "alt": "A symmetric mirror plot contrasts x times Phi against x divided by Phi.",
+      "caption": "The \u03a6-duality mirror plot, generated by the companion visualization from\n`textbook.models.phi_dual`: each input $x$ is filed into an upper branch\n$x\\Phi$ and a lower branch $x/\\Phi$, symmetric about the input line with a\nlog-scale offset of $\\pm\\ln\\Phi \\approx \\pm 0.481212$.",
+      "filename": "part_II_proton-theater.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_II_proton-theater",
+      "source_markdown": "part_II/proton-theater.md"
+    },
+    {
+      "alt": "Inflow and outflow balance bars cancel to a zero residual at the crystal node.",
+      "caption": "Net-zero inflow/outflow balance bars with zero residual, computed with `textbook.models.net_zero_balance`: paired inflow and outflow bars cancel exactly, leaving a residual bar of height zero at the crystal's balance point.",
+      "filename": "part_II_singularity-crystal.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_II_singularity-crystal",
+      "source_markdown": "part_II/singularity-crystal.md"
+    },
+    {
+      "alt": "A family of viscous damping curves decays at different drag coefficients.",
+      "caption": "Viscous damping curve family over drag coefficients: the tested model $v(t) = v_0\\,e^{-kt}$ (`textbook.models.transduction_brake`) plotted for $v_0 = 1$ with drag coefficients drawn from the $\\Phi$-power ladder \u2014 $k = 1/\\Phi$, $1$, $\\Phi$, and $\\Phi^2$. Every curve starts at $v_0$ and decays toward a zero floor that is approached but never reached.",
+      "filename": "part_II_viscosity-light.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_II_viscosity-light",
+      "source_markdown": "part_II/viscosity-light.md"
+    },
+    {
+      "alt": "Powers of Phi grow on a log scale while Fibonacci ratios oscillate toward the same constant.",
+      "caption": "El Gran Sol's Fractal constant at work: the powers $\\Phi^n$ grow geometrically and read as a straight line on a logarithmic axis, while the Fibonacci ratios $\\varphi_{\\text{fib}}(n)$ are overlaid on the same panel and converge on $\\Phi \\approx 1.618$. Produced deterministically from `textbook.models.phi_powers` and `textbook.models.phi_fibonacci`.",
+      "filename": "part_I_fractal-constant.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_I_fractal-constant",
+      "source_markdown": "part_I/fractal-constant.md"
+    },
+    {
+      "alt": "A family of slowing curves shows mass-weighted gating toward a shared Now.",
+      "caption": "Mass-slowing gate curve: the transduction-brake family $v(t) = v_0\\,e^{-kt}$, the book's tested model of the corpus's \"squeeze story\", plotted for $v_0 = 1$ with drag constants $k = 0.5$, $1.0$, and $2.0$. A larger $k$ means the gate closes faster; every curve decays toward zero without ever reaching it.",
+      "filename": "part_I_higgs-awareness.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_I_higgs-awareness",
+      "source_markdown": "part_I/higgs-awareness.md"
+    },
+    {
+      "alt": "A four-pillar interference field shows constructive and destructive rhyme across the plane.",
+      "caption": "Four-pillar interference field computed by `textbook.models.holographic_rhyme_field` with $P = 4$ evenly spaced directional pillars: bright lattice nodes where all four plane waves align constructively and dark nodes where pairs cancel.",
+      "filename": "part_I_holographic-rhyme.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_I_holographic-rhyme",
+      "source_markdown": "part_I/holographic-rhyme.md"
+    },
+    {
+      "alt": "Contour bands show the xD plus-or-minus yD combination of two interference fields.",
+      "caption": "xD\u00b1yD combined interference contours: the summed ($+$) and differenced ($-$) cross-scale encodings of the four-pillar holographic rhyme field over the $(x,y)$ plane, computed from `textbook.models.holographic_rhyme_field` and combined with `textbook.models.xd_yd_combine`.",
+      "filename": "part_I_multidimensional-rhyme.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_I_multidimensional-rhyme",
+      "source_markdown": "part_I/multidimensional-rhyme.md"
+    },
+    {
+      "alt": "Primes sit on a number line with the sole-even anchor highlighted against odd-prime classes.",
+      "caption": "The primes below 31 laid out on a number line, with the sole-even prime 2 singled\nout above the line as the binary dyad anchor and the odd primes grouped below it as\nirreducible minimum sets. Produced deterministically by the companion visualization\nagent from `textbook.models.prime_parity_partition`.",
+      "filename": "part_I_prime-parity.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_I_prime-parity",
+      "source_markdown": "part_I/prime-parity.md"
+    },
+    {
+      "alt": "A potential well bottoms out at zero with restoring arrows pointing back to equilibrium.",
+      "caption": "The zero-as-equilibrium potential well: a symmetric quadratic well centred on\nzero, with restoring arrows on both slopes pointing back toward the null-space\npivot at $x = 0$.",
+      "filename": "part_I_topology-void.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_I_topology-void",
+      "source_markdown": "part_I/topology-void.md"
+    }
+  ],
+  "schema_version": "template-textbook-figure-registry-v1"
+}

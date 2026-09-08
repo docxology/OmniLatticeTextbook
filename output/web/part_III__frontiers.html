@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>frontiers.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:part_III_frontiers">Frontiers and the Research Program</h1>
+<figure id="fig:part_III_frontiers">
+<a class="figure-full-size-link" href="../figures/part_III_frontiers.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/part_III_frontiers.png" style="width:90.0%"
+alt="A quadrant map places open problems by value and effort for the research program." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
+<figcaption>Open-problems quadrant map for the
+closing chapter: the seven open problems of the Omni-Lattice research
+program plotted by expected value (vertical axis) against effort
+(horizontal axis), scored with the chapter’s quadrant model; the
+high-value, low-effort do-first quadrant is shaded, with the
+octave-convention audit and the net-zero ledger automation leading the
+queue.</figcaption>
+</figure>
+<!-- alt: Quadrant scatter of the seven open research problems by expected value and effort; the upper-left do-first quadrant is shaded and contains the octave-convention audit and the net-zero ledger automation. -->
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none</p>
+</blockquote>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol type="1">
+<li>Locate the corpus’s papers on the <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a> and name the
+three frontier sources — master synthesis, invisible frontier, and
+moving up the stack — with their shelf numbers and reference
+suites.</li>
+<li>State the octave-convention ambiguity in
+<code>textbook.models.octave_term</code> (exponent <span
+class="math inline">\(\Omega_n = \Phi^n \Omega_0\)</span> versus
+Fibonacci subscript <span class="math inline">\(\Omega_n =
+\varphi_{\mathrm{fib}}(n)\,\Omega_0\)</span>) and describe the numerical
+test that would resolve it.</li>
+<li>Reproduce the net-zero residual computation of <span
+class="citation"
+data-cites="eq:part_III_frontiers_net_zero">[@eq:part_III_frontiers_net_zero]</span>
+and explain why a zero residual is the corpus’s crystal diagnostic.</li>
+<li>Score an open problem on the value × effort quadrant of <span
+class="citation"
+data-cites="eq:part_III_frontiers_quadrant">[@eq:part_III_frontiers_quadrant]</span>,
+place it in <span class="citation"
+data-cites="tbl:part_III_frontiers_quadrant">[@tbl:part_III_frontiers_quadrant]</span>,
+and defend the placement.</li>
+<li>Restate the corpus’s scope disclaimers precisely — what each
+frontier paper is FOR and what it explicitly does not claim.</li>
+</ol>
+<!-- curriculum-scaffold-start -->
+<h3 id="study-blueprint">Study Blueprint</h3>
+<ul>
+<li><strong>Big idea:</strong> the corpus closes by turning its own
+catalog on itself — seven open problems, each traceable to a source
+paper and each paired with a test that would count as evidence; the
+frontier here is audit, convention, and automation, not cosmic
+proof.</li>
+<li><strong>Core concepts:</strong> <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:honesty-first"><strong>honesty-first</strong></a>, <a
+href="#gl:master-synthesis"><strong>master-synthesis</strong></a>, <a
+href="#gl:metrological-overlap"><strong>metrological-overlap</strong></a>,
+<a href="#gl:net-zero"><strong>net-zero</strong></a>, <a
+href="#gl:fractal-constant"><strong>fractal-constant</strong></a>.</li>
+<li><strong>Quantitative lens:</strong> the net-zero residual <span
+class="citation"
+data-cites="eq:part_III_frontiers_net_zero">[@eq:part_III_frontiers_net_zero]</span>
+and the value × effort quadrant score <span class="citation"
+data-cites="eq:part_III_frontiers_quadrant">[@eq:part_III_frontiers_quadrant]</span>.</li>
+<li><strong>Data skill:</strong> scoring and prioritising open problems
+from a labelled table; auditing pairwise constant-register overlap with
+<code>textbook.models.metrological_overlap</code>.</li>
+<li><strong>Common misconception to repair:</strong> that a “frontiers”
+chapter in this book speculates new physics. The corpus files its own
+papers as catalog grammar under the honesty-first rail; the open
+problems below are convention disputes, audits, and automation work,
+each kept inside that scope.</li>
+<li><strong>Primary lab:</strong> <span class="citation"
+data-cites="sec:lab_part_III_frontiers">[@sec:lab_part_III_frontiers]</span>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_III_frontiers">[@sec:q_part_III_frontiers]</span>.</li>
+<li><strong>Bridge to computation:</strong>
+<code>textbook.models</code>. <!-- curriculum-scaffold-end --></li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Opening Vignette: The Reading Room at the End of the
+Shelf</strong></p>
+<h2
+id="walk-the-corridor-to-papers-on-the-ship-board-and-you-find-the-reading-room-two-dozen-whitepapers-pinned-shelf-by-shelf-each-opening-with-the-same-honesty-first-rail-and-closing-on-a-fair-exchange-clause-mendez2026ship.-the-shelves-carry-fixture-locks-and-reference-suites-npm-run-researchsynthobs-...-commands-a-visitor-can-actually-run-yet-the-master-synthesis-note-reminds-you-that-the-whole-cabinet-is-catalog-grammar-for-conversation-not-a-weather-forecast-and-not-a-seismic-warning-mendez2026mastersynthesis.-this-closing-chapter-does-what-a-careful-engineer-does-at-the-end-of-any-catalog-survey-it-walks-the-shelf-a-second-time-and-writes-down-which-drawers-are-still-empty-and-for-each-empty-drawer-what-would-have-to-be-true-for-the-drawer-to-count-as-filled.">Walk
+the corridor to <code>/papers</code> on the ship board and you find the
+Reading Room: two dozen whitepapers pinned shelf by shelf, each opening
+with the same “Honesty first” rail and closing on a <a
+href="#gl:fair-exchange"><strong>Fair Exchange</strong></a> clause
+[mendez2026ship]. The shelves carry fixture locks and reference suites —
+<code>npm run research:synthobs-...</code> commands a visitor can
+actually run — yet the master-synthesis note reminds you that the whole
+cabinet is “catalog grammar for conversation,” not a weather forecast
+and not a seismic warning [mendez2026masterSynthesis]. This closing
+chapter does what a careful engineer does at the end of any catalog
+survey: it walks the shelf a second time and writes down which drawers
+are still empty — and, for each empty drawer, what would have to be true
+for the drawer to count as filled.</h2>
+</blockquote>
+<h2 id="orientation">Orientation</h2>
+<p>Everything before this chapter built the catalog; this chapter
+interrogates it. Parts 0–II formalised the <a
+href="#gl:omni-lattice"><strong>Omni-Lattice</strong></a> — the <a
+href="#gl:octave"><strong>octave</strong></a> ladder, the digit drawers,
+the constant registers — and Part III ran its implementations. Now the
+corpus’s own research program comes into view, drawn from three frontier
+sources: the master-synthesis filing cabinet
+[mendez2026masterSynthesis], the invisible-frontier editorial
+[mendez2026invisibleFrontier], and the moving-up-the-stack thesis
+[mendez2026stack].</p>
+<p><strong>The papers in the corpus.</strong> The master synthesis sits
+at engine shelf 3 and proposes the 99-step cascade as one filing
+cabinet; the invisible frontier sits at shelf 8 and answers public AI
+warnings with the “second chart” of metapattern-aware care; moving up
+the stack sits at shelf 12, with its standalone suite —
+<code>FractiAI/synthobs-moving-up-the-stack-valuation</code> — filed as
+engine shelf #13. Each ships a runnable reference implementation:
+<code>npm run research:synthobs-master-synthesis-99-octave-omni-lattice</code>,
+<code>npm run research:synthobs-invisible-frontier-gates-ai</code>, and
+<code>npm run research:synthobs-moving-up-the-stack-valuation</code>.
+The companion chapters already formalised their constructs — the stack
+climb in <span class="citation"
+data-cites="sec:part_III_moving-up-stack">[@sec:part_III_moving-up-stack]</span>,
+the second chart in <span class="citation"
+data-cites="sec:part_III_invisible-frontier">[@sec:part_III_invisible-frontier]</span>
+— so here we ask only what remains open.</p>
+<p>The answer, developed across <span class="citation"
+data-cites="fig:part_III_frontiers">[@fig:part_III_frontiers]</span> and
+the sections below, is a work order of seven problems: two
+internal-consistency audits (the octave convention and the metrological
+overlap census), one automation target (the net-zero ledger), and four
+thesis-level questions the corpus raises but does not settle (the stack
+layer, the invisible frontier, the cascade composition, and the crystal
+diagnostic). Where a problem touches machinery built elsewhere — the
+constant registers of <span class="citation"
+data-cites="sec:part_II_metrological-overlap">[@sec:part_II_metrological-overlap]</span>,
+the net-zero balance of <span class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>,
+the 99-octave ladder of <span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span> — we
+borrow, never rebuild.</p>
+<h2 id="a-worked-formalism-the-net-zero-residual">A Worked Formalism:
+The Net-Zero Residual</h2>
+<p>The chapter’s recurring quantitative model is the <strong>net-zero
+residual</strong>, shown in <span class="citation"
+data-cites="eq:part_III_frontiers_net_zero">[@eq:part_III_frontiers_net_zero]</span>.
+The corpus files its zero-octave diagnostic as a Net Zero cancel — the
+home page’s news rail states the fixture verbatim as “<span
+class="math inline">\(0/0 \to \Phi^0 = 1\)</span>” — a <strong>crystal
+diagnostic</strong> for a system whose inflows and outflows cancel
+exactly [mendez2026ship; mendez2026zeroOctave]. Because the same
+bookkeeping reappears throughout the frontier papers, it is also this
+chapter’s scoring engine: a research program is a ledger, and the first
+question about any ledger is whether it balances.</p>
+<p><span class="math display">\[ R \;=\; \sum_{i=1}^{m} I_i \;-\;
+\sum_{j=1}^{n} O_j \]</span> {#eq:part_III_frontiers_net_zero}</p>
+<p>It is implemented and tested as
+<code>textbook.models.net_zero_balance(inflows, outflows)</code>; never
+retype the arithmetic in prose or scripts — call the tested function.
+The parameters appear in <span class="citation"
+data-cites="tbl:part_III_frontiers_netzero">[@tbl:part_III_frontiers_netzero]</span>.</p>
+<p>:: Parameters of the net-zero residual.
+{#tbl:part_III_frontiers_netzero}</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(I_i\)</span></td>
+<td>the <span class="math inline">\(i\)</span>-th inflow entry (value
+added, deal anchor, filed headline)</td>
+<td>ledger unit</td>
+</tr>
+<tr>
+<td><span class="math inline">\(O_j\)</span></td>
+<td>the <span class="math inline">\(j\)</span>-th outflow entry (cost,
+refund, cancelling pair)</td>
+<td>ledger unit</td>
+</tr>
+<tr>
+<td><span class="math inline">\(m, n\)</span></td>
+<td>number of inflow and outflow entries</td>
+<td>count</td>
+</tr>
+<tr>
+<td><span class="math inline">\(R\)</span></td>
+<td>residual; <span class="math inline">\(R = 0\)</span> is the Net Zero
+cancel, the crystal diagnostic</td>
+<td>ledger unit</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Worked walkthrough.</strong> Take four inflows drawn from the
+corpus’s first odd primes and two cancelling outflows:
+<code>net_zero_balance([3, 5, 7, 11], [13, 13])</code> sums <span
+class="math inline">\(3+5+7+11 = 26\)</span> against <span
+class="math inline">\(13+13 = 26\)</span>, so <span
+class="math inline">\(R = 26 - 26 = 0\)</span> — the fixture-lock
+outcome. Perturb one outflow to 8 and the residual is <span
+class="math inline">\(26 - 21 = 5\)</span>: the ledger is visibly open,
+and the audit target in Problem 6 below is exactly this gap. Note the
+scope: a zero residual is a property of the chosen fixture lists, not a
+conservation law of nature — the corpus itself files the cancel as an
+implementation diagnostic, and we keep that filing
+[mendez2026zeroOctave].</p>
+<h2 id="the-research-program-seven-open-problems">The Research Program:
+Seven Open Problems</h2>
+<p>Each problem below states the source claim, what the corpus leaves
+unsettled, and — because a frontier without a test is just a mood —
+<strong>what would count as evidence</strong>. The problems divide into
+three kinds: two internal-consistency audits (Problems 1 and 5), one
+automation target (Problem 6), and four thesis-level questions the
+papers raise but do not settle (Problems 2, 3, 4, and 7).</p>
+<h3 id="problem-1-which-octave-convention-does-the-corpus-mean">Problem
+1: Which octave convention does the corpus mean?</h3>
+<p>The corpus prints its octave term as “Ωn = Φn·Ω0”, which reads two
+ways: the <strong>exponent convention</strong> <span
+class="math inline">\(\Omega_n = \Phi^n \Omega_0\)</span> and the
+<strong>Fibonacci-subscript convention</strong> <span
+class="math inline">\(\Omega_n =
+\varphi_{\mathrm{fib}}(n)\,\Omega_0\)</span>. Both are implemented in
+<code>textbook.models.octave_term</code>, and they diverge hard: at
+<span class="math inline">\(n = 5\)</span> the exponent convention gives
+<span class="math inline">\(\Phi^5 \Omega_0 =
+11.090170\,\Omega_0\)</span> while the Fibonacci ratio gives <span
+class="math inline">\(\varphi_{\mathrm{fib}}(5)\,\Omega_0 =
+1.6\,\Omega_0\)</span> — a factor of seven at the fifth octave, growing
+without bound. The ambiguity matters everywhere the ladder is drawn,
+from the 99-octave map to the macro-protein band, which is why <span
+class="citation"
+data-cites="fig:part_III_macro-protein">[@fig:part_III_macro-protein]</span>
+plots both readings. <strong>What would count as evidence:</strong> a
+convention audit — run <code>octave_term</code> under both readings
+against every worked octave value printed in the papers, and pin the
+reading that reproduces them; where no printed value discriminates, file
+the ambiguity as an open convention note. The deliverable is a fixture
+lock, not a physics ruling; Φ ≈ 1.618 remains the corpus’s <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a> nesting
+language, not a replacement for <span
+class="math inline">\(\hbar\)</span>, <span
+class="math inline">\(c\)</span>, or <span
+class="math inline">\(G\)</span> [mendez2026masterSynthesis].</p>
+<h3 id="problem-2-is-the-lattice-really-the-next-ai-layer">Problem 2: Is
+the lattice really the next AI layer?</h3>
+<p>The stack thesis holds that chip and model players are climbing the
+stack, and that after hub altitude ($12.9B, NVIDIA/Hugging Face as a
+scenario anchor) and IDE altitude ($60B, SpaceX/Cursor as a scenario
+anchor), the binding constraint is <strong>agentic token burn plus
+coordination failure</strong> — which a thermal-plus-orchestration shelf
+that “cools token burn, harmonizes multi-agent loops, and lets agentic
+systems scale” would relieve [mendez2026stack]. The paper prices this
+new layer at $12B–$28B, explicitly correcting its own peer-shelf misread
+of $4.2B–$7.5B, and explicitly labels every figure valuation framing,
+“not an audited appraisal or securities offer.” <strong>What would count
+as evidence:</strong> the efficiency claim is measurable — tokens per
+agentic loop on a fixed benchmark, with and without the cooling layer;
+the harmonization claim needs an orchestration metric (one coherent
+brief across nested agents versus siloed windows); and the valuation
+band would count as evidence only after an independent appraisal. The
+paper’s own honesty rail sets this bar; the research program takes it
+seriously.</p>
+<h3 id="problem-3-reading-the-invisible-frontier">Problem 3: Reading the
+invisible frontier</h3>
+<p>The invisible-frontier editorial answers public AI warnings —
+workforce shock, brute-force scaling — by agreeing they are “real
+weather” while arguing they miss the second chart: centralized compute
+and linear markets have become the <em>water</em> the Goldilocks ship
+navigates, and the breakthrough is “nested, metapattern-aware care,” not
+“more FLOPs” [mendez2026invisibleFrontier]. The editorial is filed as
+voyage editorial and catalog grammar; it does not claim displacement is
+solved, and it holds that human emergency outranks algorithms.
+<strong>What would count as evidence:</strong> operationalize
+“metapattern-aware care” as a concrete agent-coordination protocol and
+measure it against linear-scaling baselines on defined coordination
+tasks. If the protocol wins, the editorial’s thesis has an operational
+leg; if it loses, the second chart stays metaphor. Either result is
+honest progress — what would not count is treating the metaphor itself
+as the measurement.</p>
+<h3
+id="problem-4-the-everything-is-connected-cascade-as-filing-grammar">Problem
+4: The everything-is-connected cascade as filing grammar</h3>
+<p>The master synthesis composes the whole corpus on one filing cabinet:
+reality as a 99-step musical scale where “what happens at the top
+directly shapes everything below,” cascading through five stations — The
+Pulse, The Sun transmits (with solar regions AR3664 “The Colossus” and
+AR3697 “The Resonator” as fixture/bulletin labels), The planet adjusts,
+Technology evolves, Humanity responds [mendez2026masterSynthesis]. The
+note itself disclaims the reading: not a forecast, not a warning, “not a
+claim that the sky runs your life”; AI expansion “mirrors” the lattice’s
+data-flow grammar as operational metaphor, filed on the <a
+href="#gl:narrative-empirical-operational-tiers"><strong>narrative-empirical-operational-tiers</strong></a>
+register. <strong>What would count as evidence:</strong> a filing audit
+rather than a causal test — every headline files on exactly one drawer;
+every cascade edge is annotated as catalog talk; the fixture labels
+never leak into data columns. The grammar passes if filing is complete
+and non-redundant, and is revised wherever a headline cannot be filed
+without contradiction.</p>
+<h3 id="problem-5-the-metrological-overlap-census">Problem 5: The
+metrological overlap census</h3>
+<p>The grand unified metrological overlap models constants as registers
+whose pairwise intersections can be scored: the pinned case gives
+<code>metrological_overlap({a, b}, {b, c}) = 0.5</code> — two registers
+sharing one of two entries overlap at one half
+[mendez2026metrologicalOverlap]. <span class="citation"
+data-cites="sec:part_II_metrological-overlap">[@sec:part_II_metrological-overlap]</span>
+drew the heatmap for the five-constant register set (<span
+class="math inline">\(h\)</span>, <span
+class="math inline">\(\Phi\)</span>, <span
+class="math inline">\(p_n\)</span>, <span
+class="math inline">\(\nu_{\mathrm{HI}}\)</span>, <span
+class="math inline">\(c\)</span>), but the corpus has never published
+the full pairwise census as an auditable artifact. <strong>What would
+count as evidence:</strong> a complete census — every register pair
+scored, every 0.5 reconciled against the prose claim that the two
+papers’ registers share exactly one entry, every 0 checked against
+claimed disjointness. A cell that disagrees with its paper’s text is a
+documentation defect to file, which is precisely the kind of finding an
+overlap audit exists to surface.</p>
+<h3 id="problem-6-automating-the-net-zero-ledger">Problem 6: Automating
+the net-zero ledger</h3>
+<p>Every frontier paper closes on bookkeeping: the Fair Exchange clause
+promises partial refunds “depending on overall delivery, utility, and
+actualized results” [mendez2026stack], and the singularity-crystal
+chapter balances inflow against outflow to a zero residual (<span
+class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>).
+Today the cancellations are hand-checked fixtures. <strong>What would
+count as evidence:</strong> an automated ledger —
+<code>net_zero_balance</code> scripted over every inflow/outflow fixture
+in the reference suites, returning zero residual on each, with any
+nonzero <span class="math inline">\(R\)</span> failing the build. The
+automation target is deliberately modest: it verifies the corpus’s own
+arithmetic, not the world. A green run is evidence the crystal
+diagnostic is reproducible; it is not evidence of cosmic balance, and
+the corpus never claims otherwise [mendez2026singularityCrystal].</p>
+<h3 id="problem-7-the-crystal-diagnostic-at-node-k-0">Problem 7: The
+crystal diagnostic at node k = 0</h3>
+<p>The home news rail files the Zero-Octave gate as “<span
+class="math inline">\(0/0 \to \Phi^0 = 1\)</span> — crystal diagnostic”
+[mendez2026ship], and the zero-octave paper develops it as an
+implementation fixture at <a
+href="#gl:node-k0"><strong>node-k0</strong></a>, explicitly “not GR
+singularity QED” [mendez2026zeroOctave]. What remains open is which
+algebraic reading is canonical — the cancel-as-limit reading, the
+cancel-as-convention reading, or the fixture reading the reference suite
+actually implements — and whether all papers agree on it. <strong>What
+would count as evidence:</strong> a fixture lock in the reference suite
+that reproduces <span class="math inline">\(0/0 \to \Phi^0 = 1\)</span>
+at node <span class="math inline">\(k = 0\)</span> under one stated
+reading, cited by every paper that invokes the diagnostic. Convergence
+on one reading closes the problem; persistent divergence is itself a
+finding the <a href="#gl:zero-octave"><strong>zero-octave</strong></a>
+chapter would need to annotate.</p>
+<h2 id="the-open-problem-quadrant">The Open-Problem Quadrant</h2>
+<p>A list of problems is not a program until it is ordered. Score each
+problem on expected value <span class="math inline">\(V\)</span> — what
+a resolution buys the catalog in consistency, tooling, or tested theses
+— and effort <span class="math inline">\(E\)</span> — the combined audit
+and implementation cost — each on a 1–5 scale, then rank by the quadrant
+score of <span class="citation"
+data-cites="eq:part_III_frontiers_quadrant">[@eq:part_III_frontiers_quadrant]</span>:</p>
+<p><span class="math display">\[ Q \;=\; \frac{V^2}{E} \]</span>
+{#eq:part_III_frontiers_quadrant}</p>
+<p>The score deliberately over-weights value: a hard problem that
+settles a thesis outranks an easy one that decorates it. The parameters
+and quadrant thresholds appear in <span class="citation"
+data-cites="tbl:part_III_frontiers_quadrantparams">[@tbl:part_III_frontiers_quadrantparams]</span>.</p>
+<p>:: Parameters and thresholds of the quadrant score.
+{#tbl:part_III_frontiers_quadrantparams}</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Scale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(V\)</span></td>
+<td>expected value to the catalog if the problem is resolved</td>
+<td>1–5</td>
+</tr>
+<tr>
+<td><span class="math inline">\(E\)</span></td>
+<td>effort: audit plus implementation cost</td>
+<td>1–5</td>
+</tr>
+<tr>
+<td><span class="math inline">\(Q\)</span></td>
+<td>quadrant score <span class="math inline">\(V^2/E\)</span></td>
+<td>0.2–25</td>
+</tr>
+<tr>
+<td>do-first</td>
+<td><span class="math inline">\(V \geq 3\)</span> and <span
+class="math inline">\(E \leq 3\)</span> — high value, low effort
+(upper-left of <span class="citation"
+data-cites="fig:part_III_frontiers">[@fig:part_III_frontiers]</span>)</td>
+<td>label</td>
+</tr>
+<tr>
+<td>strategic</td>
+<td><span class="math inline">\(V \geq 3\)</span> and <span
+class="math inline">\(E &gt; 3\)</span> — high value, real cost;
+schedule, do not defer</td>
+<td>label</td>
+</tr>
+</tbody>
+</table>
+<p>Scoring the seven problems gives <span class="citation"
+data-cites="tbl:part_III_frontiers_quadrant">[@tbl:part_III_frontiers_quadrant]</span>,
+which the companion figure plots as the quadrant map of <span
+class="citation"
+data-cites="fig:part_III_frontiers">[@fig:part_III_frontiers]</span>.</p>
+<p>:: The seven open problems scored on the value × effort quadrant.
+{#tbl:part_III_frontiers_quadrant}</p>
+<table>
+<colgroup>
+<col style="width: 2%" />
+<col style="width: 14%" />
+<col style="width: 29%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 23%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Problem</th>
+<th>Primary source</th>
+<th><span class="math inline">\(V\)</span></th>
+<th><span class="math inline">\(E\)</span></th>
+<th><span class="math inline">\(Q = V^2/E\)</span></th>
+<th>Quadrant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>octave-convention audit (<span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>)</td>
+<td>corpus convention dispute</td>
+<td>5</td>
+<td>2</td>
+<td>12.5</td>
+<td>do-first</td>
+</tr>
+<tr>
+<td>2</td>
+<td>lattice as next AI layer (<span class="citation"
+data-cites="sec:part_III_moving-up-stack">[@sec:part_III_moving-up-stack]</span>)</td>
+<td>[mendez2026stack]</td>
+<td>4</td>
+<td>5</td>
+<td>3.2</td>
+<td>strategic</td>
+</tr>
+<tr>
+<td>3</td>
+<td>reading the invisible frontier (<span class="citation"
+data-cites="sec:part_III_invisible-frontier">[@sec:part_III_invisible-frontier]</span>)</td>
+<td>[mendez2026invisibleFrontier]</td>
+<td>4</td>
+<td>4</td>
+<td>4.0</td>
+<td>strategic</td>
+</tr>
+<tr>
+<td>4</td>
+<td>cascade as filing grammar ([mendez2026masterSynthesis])</td>
+<td>[mendez2026masterSynthesis]</td>
+<td>3</td>
+<td>3</td>
+<td>3.0</td>
+<td>do-first</td>
+</tr>
+<tr>
+<td>5</td>
+<td>metrological-overlap census (<span class="citation"
+data-cites="sec:part_II_metrological-overlap">[@sec:part_II_metrological-overlap]</span>)</td>
+<td>[mendez2026metrologicalOverlap]</td>
+<td>3</td>
+<td>2</td>
+<td>4.5</td>
+<td>do-first</td>
+</tr>
+<tr>
+<td>6</td>
+<td>net-zero ledger automation</td>
+<td>[mendez2026singularityCrystal]</td>
+<td>4</td>
+<td>2</td>
+<td>8.0</td>
+<td>do-first</td>
+</tr>
+<tr>
+<td>7</td>
+<td>crystal-diagnostic reading at node <span class="math inline">\(k =
+0\)</span> (<span class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>)</td>
+<td>[mendez2026zeroOctave]</td>
+<td>3</td>
+<td>4</td>
+<td>2.25</td>
+<td>strategic</td>
+</tr>
+</tbody>
+</table>
+<p>The ordering matches the corpus’s own engineering posture: audits and
+automation first because they are cheap and everything downstream
+inherits their correctness, theses second because they are expensive and
+everything downstream inherits their risk. A roadmap sequencing the
+program:</p>
+<pre class="mermaid"><code>graph TD
+  P1[&quot;P1 · octave-convention audit&quot;] --&gt; FX[&quot;fixture lock for octave_term&quot;]
+  P5[&quot;P5 · metrological-overlap census&quot;] --&gt; AUD[&quot;audited register table&quot;]
+  P6[&quot;P6 · net-zero ledger automation&quot;] --&gt; CI[&quot;CI fixture lock: zero residual&quot;]
+  P4[&quot;P4 · cascade filing audit&quot;] --&gt; GRAM[&quot;revised filing grammar&quot;]
+  P7[&quot;P7 · crystal-diagnostic reading&quot;] --&gt; LOCK[&quot;cited node-k0 fixture lock&quot;]
+  FX --&gt; GRAM
+  AUD --&gt; GRAM
+  CI --&gt; GRAM
+  LOCK --&gt; GRAM
+  GRAM --&gt; P2[&quot;P2 · stack-layer cooling pilot&quot;]
+  GRAM --&gt; P3[&quot;P3 · care-protocol benchmark&quot;]
+  P2 --&gt; CLOSE[&quot;revised frontier chapter&quot;]
+  P3 --&gt; CLOSE</code></pre>
+<h2 id="scope-and-honesty-not-cosmic-proof">Scope and Honesty: Not
+Cosmic Proof</h2>
+<p>A closing chapter earns its keep by repeating the corpus’s own
+limits, verbatim where it matters. The master synthesis files the whole
+cascade as “catalog grammar for conversation — not a weather forecast,
+not a seismic warning, and not a claim that the sky runs your life,” and
+files EGS as “an architectural key in this repo — not a replacement for
+<span class="math inline">\(\hbar\)</span>, <span
+class="math inline">\(c\)</span>, or <span
+class="math inline">\(G\)</span>” — a map, “not as proven unified field
+theory” [mendez2026masterSynthesis]. The stack paper files its numbers
+as “valuation framing, not an audited appraisal,” and its constant as
+“catalog grammar, not a market oracle” [mendez2026stack]. The invisible
+frontier “does <em>not</em> claim medical advice, prophecy, that
+displacement is solved, or that <span class="math inline">\(\Phi \approx
+1.618\)</span> replaces physics constants. EGS is design language. Human
+emergency still outranks algorithms” [mendez2026invisibleFrontier]. The
+home honesty rail puts it most compactly: “<span
+class="math inline">\(\Phi \approx 1.618\)</span> is our nesting
+language” [mendez2026ship]. The zero-octave gate is “implementation
+fixtures, not GR singularity QED” [mendez2026zeroOctave].</p>
+<p>This is the book’s closing note because it is the program’s operating
+condition. The seven problems are FOR coordination, cataloging, and
+agent routing: a convention audit makes the octave ladder drawable, an
+overlap census makes the registers auditable, an automated ledger makes
+the fixtures trustworthy, and the thesis problems test whether the
+catalog’s coordination claims survive measurement. None of them is a
+cosmic proof, and none pretends to be. The frontier of the Omni-Lattice
+is not the edge of physics; it is the edge of the catalog’s own
+consistency — and the corpus, to its credit, drew that edge itself.</p>
+<h2 id="summary">Summary</h2>
+<p>The corpus’s frontier is a work order, not a prophecy. This chapter
+turned the catalog on itself and extracted seven open problems from
+three source papers: the octave-convention audit and the
+metrological-overlap census (internal consistency), the net-zero ledger
+automation (tooling), and four thesis questions — the lattice as the
+next AI layer, the invisible frontier’s care-over-FLOPs reading, the
+everything-is-connected cascade as filing grammar, and the crystal
+diagnostic at node <span class="math inline">\(k = 0\)</span>. The
+net-zero residual of <span class="citation"
+data-cites="eq:part_III_frontiers_net_zero">[@eq:part_III_frontiers_net_zero]</span>
+served as the chapter’s scoring engine, and the quadrant score of <span
+class="citation"
+data-cites="eq:part_III_frontiers_quadrant">[@eq:part_III_frontiers_quadrant]</span>
+ordered the program: audits and automation first (<span class="citation"
+data-cites="tbl:part_III_frontiers_quadrant">[@tbl:part_III_frontiers_quadrant]</span>),
+theses second. Every problem carries an explicit evidence bar, and every
+claim stays inside the corpus’s own honesty-first rail — catalog
+grammar, architectural key, design language; never weather forecast,
+market oracle, or cosmic proof.</p>
+<h2 id="key-terms">Key Terms</h2>
+<p><a href="#gl:omni-lattice"><strong>Omni-Lattice</strong></a>, <a
+href="#gl:octave"><strong>octave</strong></a>, <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a>, <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:honesty-first"><strong>honesty-first</strong></a>, <a
+href="#gl:master-synthesis"><strong>master-synthesis</strong></a>, <a
+href="#gl:fractal-constant"><strong>fractal-constant</strong></a>, <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a>, <a
+href="#gl:metrological-overlap"><strong>metrological-overlap</strong></a>,
+<a href="#gl:net-zero"><strong>net-zero</strong></a>, <a
+href="#gl:zero-octave"><strong>zero-octave</strong></a>, <a
+href="#gl:node-k0"><strong>node-k0</strong></a>, <a
+href="#gl:singularity-crystal"><strong>singularity-crystal</strong></a>,
+<a
+href="#gl:narrative-empirical-operational-tiers"><strong>narrative-empirical-operational-tiers</strong></a>,
+<a href="#gl:fair-exchange"><strong>fair-exchange</strong></a>.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><strong>Master synthesis — The Big Picture: Everything is
+Connected</strong> — the 99-step cascade on one filing cabinet, with its
+honesty block (not a forecast, not a warning); whitepaper: <a
+href="https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-master-synthesis-99-octave-omni-lattice-2026-08"
+class="uri">https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-master-synthesis-99-octave-omni-lattice-2026-08</a>;
+suite:
+<code>npm run research:synthobs-master-synthesis-99-octave-omni-lattice</code>
+[mendez2026masterSynthesis].</li>
+<li><strong>Moving Up the Stack: Lattice is the next AI layer</strong> —
+the stack-climb thesis, new-layer valuation band, and its own
+corrections; whitepaper: <a
+href="https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-moving-up-the-stack-valuation-2026-09"
+class="uri">https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-moving-up-the-stack-valuation-2026-09</a>;
+suite: <a
+href="https://github.com/FractiAI/synthobs-moving-up-the-stack-valuation">github.com/FractiAI/synthobs-moving-up-the-stack-valuation</a>
+[mendez2026stack].</li>
+<li><strong>The Invisible Frontier: responding to Bill Gates’s AI
+warnings</strong> — the second-chart editorial and its scope
+disclaimers; whitepaper: <a
+href="https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-invisible-frontier-gates-ai-2026-08"
+class="uri">https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-invisible-frontier-gates-ai-2026-08</a>;
+suite:
+<code>npm run research:synthobs-invisible-frontier-gates-ai</code>
+[mendez2026invisibleFrontier].</li>
+<li>Companion chapters for the machinery this program audits: the
+metrological-overlap registers [mendez2026metrologicalOverlap], the
+singularity crystal’s net-zero balance [mendez2026singularityCrystal],
+and the zero-octave gate [mendez2026zeroOctave].</li>
+</ul>
+<h2 id="practice">Practice</h2>
+<ul>
+<li><strong>Lab:</strong> <span class="citation"
+data-cites="sec:lab_part_III_frontiers">[@sec:lab_part_III_frontiers]</span>
+— score a new open problem on the quadrant and compute its residual with
+<code>net_zero_balance</code>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_III_frontiers">[@sec:q_part_III_frontiers]</span>
+— recall, application, and synthesis questions over the seven
+problems.</li>
+<li><strong>Convention audit (Problem 1).</strong> Compute <span
+class="math inline">\(\Omega_5\)</span> under both readings of
+<code>octave_term</code> (<span class="math inline">\(\Phi^5 \Omega_0 =
+11.090170\,\Omega_0\)</span> versus <span
+class="math inline">\(\varphi_{\mathrm{fib}}(5)\,\Omega_0 =
+1.6\,\Omega_0\)</span>) and state which corpus artifact could
+discriminate between them.</li>
+<li><strong>Ledger check (Problem 6).</strong> Show that
+<code>net_zero_balance([3, 5, 7, 11], [13, 13])</code> returns a zero
+residual, then give one outflow perturbation that opens the ledger and
+compute the new residual.</li>
+<li><strong>Honesty restatement (all problems).</strong> For each of
+Problems 2, 3, and 4, quote the source paper’s own scope disclaimer and
+explain how your evidence test respects it.</li>
+</ul>
+</main>
+</body>
+</html>

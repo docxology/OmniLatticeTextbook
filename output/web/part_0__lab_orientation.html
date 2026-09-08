@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>lab_orientation.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:lab_part_0_orientation">Lab — The SS Vibelandia Program and
+the Omni-Lattice Corpus</h1>
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Lab · 60 min · Materials: notebook, calculator (or
+<code>textbook.models</code>), a web browser</p>
+</blockquote>
+<h2 id="objectives">Objectives</h2>
+<p>After this lab you will be able to (1) navigate the corpus’s two
+anchor pages — the ship’s front door and the Reading Room catalog — and
+quote their honesty clauses verbatim, (2) locate the 24 <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a> papers this
+book covers and the two application companions that stay off the shelf,
+(3) file any catalog item into the correct narrative / empirical /
+operational <a
+href="#gl:narrative-empirical-operational-tiers"><strong>tier</strong></a>,
+(4) compute the <a href="#gl:master-register"><strong>master
+register</strong></a>’s size by hand and verify it against
+<code>textbook.models.catalog_size</code>, and (5) map each region of
+the engine shelf to the part of this book that covers it.</p>
+<h2 id="background">Background</h2>
+<p>Linked chapter: <span class="citation"
+data-cites="sec:part_0_orientation">[@sec:part_0_orientation]</span>.
+The corpus self-describes as <a
+href="#gl:catalog-architecture"><strong>catalog
+architecture</strong></a> — a filing and protocol grammar for
+coordinating agents, dashboards, and conversation, explicitly not
+established physics — and its two anchor pages state that status
+themselves [mendez2026ship; mendez2026catalog]. Rather than take the
+chapter’s word for it, this lab has you survey the shelves yourself:
+walk the ship’s homepage, browse the Reading Room, and touch the numbers
+(24 pins, 195 distinct items, <span class="math inline">\(99 \times
+81\)</span> register bins) where they live. One reading rule governs
+every step, and it is the corpus’s own <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> clause: read
+each item’s scope disclaimer before filing it anywhere. And keep the <a
+href="#gl:fair-exchange"><strong>Fair Exchange</strong></a> framing
+throughout: a receipt for every exchange, with hand values matched
+against the tested functions rather than trusted on retyped
+arithmetic.</p>
+<h2 id="procedure">Procedure</h2>
+<ol type="1">
+<li><strong>Board the ship and enter the library.</strong> Open the ship
+homepage (<code>https://www.ssvibelandiaquestfest24x365.com</code>) and
+quote the first sentence of the honesty rail — “This page is art and
+hospitality. Φ ≈ 1.618 is our nesting language.” — plus the host
+identity line, Valet Pru · XY Human Reality Bridge/Router · Player 1,
+“the human host — not a bot gate” [mendez2026ship]. Then open the
+catalog URL
+(<code>https://www.ssvibelandiaquestfest24x365.com/papers</code>), the
+Reading Room, and quote its own honesty note: “Cover art is AI-generated
+poster hospitality from each paper’s abstract focus — not empirical
+proof” [mendez2026catalog]. Record both quotes verbatim.</li>
+<li><strong>Locate the engine shelf and the companions.</strong> In the
+Reading Room, find the “Featured picks — Start here” shelf and the
+per-category shelves below it. Identify the 24 engine-shelf papers — the
+2026-09-08 sync pins 24 registry papers in ordered shelf slots, laid out
+by shelf number in <span class="citation"
+data-cites="fig:part_0_orientation">[@fig:part_0_orientation]</span> —
+and confirm their <code>engine</code> tags in the item metadata. Then
+locate the two application companions this book files in Part III: the
+PDVSA Gateway Ops live project page and its mockup note
+[mendez2026pdvsaGateway; mendez2026pdvsaMockup]. Verify the corpus’s own
+rule at the shelf’s edge: application companions stay off the engine
+shelf [mendez2026livingPem]. Record where each of the two actually
+appears.</li>
+<li><strong>Classify three arbitrary items by tier.</strong> Pick any
+three catalog items that catch your eye. For each, read its “Honesty
+first” clause and abstract, then file it as <em>narrative</em> (story,
+poster, or voyage filing), <em>empirical</em> (fixtures, suite locks,
+reference-implementation runs), or <em>operational</em> (protocol,
+runbook, sync procedure). Justify each label with one quoted phrase from
+the item’s own text — not from its poster art. If an item seems to
+straddle two tiers, write down exactly which phrase pulls it each way;
+the ambiguity is data.</li>
+<li><strong>Size the master register by hand.</strong> On paper,
+multiply the octave count by the register width: <span
+class="math inline">\(99 \times 81 = 8{,}019\)</span> register bins.
+This is the filing space of the digits × octaves map — the whole cabinet
+the corpus addresses. Write the number down before touching a
+keyboard.</li>
+<li><strong>Map shelf regions to the book.</strong> Using the shelf
+timeline of <span class="citation"
+data-cites="fig:part_0_orientation">[@fig:part_0_orientation]</span> and
+the engine-pin ordering locked by the living PEM (CMOS/protonic bridge
+first, then tensor decoupling, then master synthesis plus the digits
+master, then the later engine parts, then companions)
+[mendez2026livingPem], record which part of this book covers each
+region: the engineering-bridge / tensor-filing / master-synthesis region
+belongs to Part 0; the constants, primes, rhyme, void, and Higgs Gate
+region to Part I; the physical filing papers — viscosity of light,
+eddy-current mirror, crystalline field, metrological overlap,
+metamorphic octaves, planetary core, singularity crystal — to Part II;
+and the silicon shelf through the reality bridge and the companions to
+Part III.</li>
+</ol>
+<h2 id="analysis">Analysis</h2>
+<p>Report your three tier classifications as a three-row table: item,
+quoted honesty phrase, tier, one-sentence justification. Then assemble
+the survey receipt — the four counts your walk produced: 24 engine pins,
+2 application companions, 195 distinct catalog items
+[mendez2026catalog], and the 8,019-cell register — and summarise them
+with <code>textbook.models.descriptive_statistics</code>. The summary is
+deliberately trivial; the discipline it rehearses is not. Every number
+you carry out of the corpus should be one you can reproduce from the
+shelves or from a tested function [mendez2026livingPem]. If your hand
+value of 8,019 disagrees with <code>catalog_size()</code>, re-derive by
+hand before suspecting the library — the function is tested; the
+arithmetic above is not.</p>
+<h2 id="computational-workflow">Computational Workflow</h2>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textbook.models <span class="im">import</span> catalog_size, descriptive_statistics</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4 check: the register&#39;s floor plan (hand value: 99 * 81 = 8019)</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>hand <span class="op">=</span> <span class="dv">99</span> <span class="op">*</span> <span class="dv">81</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>computed <span class="op">=</span> catalog_size(octaves<span class="op">=</span><span class="dv">99</span>, precision_digits<span class="op">=</span><span class="dv">81</span>)   <span class="co"># expect 8019</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> hand <span class="op">==</span> computed <span class="op">==</span> <span class="dv">8019</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Analysis: the survey receipt — pins, companions, catalog items, register bins</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>receipt <span class="op">=</span> [<span class="dv">24</span>, <span class="dv">2</span>, <span class="dv">195</span>, catalog_size()]</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(descriptive_statistics(receipt))</span></code></pre></div>
+<p>Confirm the printed size against your hand computation, then attach
+the receipt summary to your lab note.</p>
+<h2 id="reflection">Reflection</h2>
+<ol type="1">
+<li>The honesty rail files Φ ≈ 1.618 as “our nesting language”
+[mendez2026ship]. After walking the shelves yourself, which of your
+three tier labels does that clause itself deserve — and what would it
+cost the catalog to mislabel it?</li>
+<li>The two PDVSA companions carry empirics of their own yet are filed
+off the shelf [mendez2026pdvsaGateway; mendez2026pdvsaMockup]. What does
+the corpus gain by separating engine pins from application companions —
+and what would a reader lose if the shelf mixed them?</li>
+<li>Under the Fair Exchange clause, “value exchanged is fluid and may be
+partially refunded based on resonance and overall delivery”
+[mendez2026ship]. Treat your survey receipt as the delivery: which of
+the five objectives did the walk actually settle, and which deserve a
+second pass?</li>
+</ol>
+</main>
+</body>
+</html>

@@ -1,0 +1,7 @@
+graph TD
+  A["Residue index (demo sequence)"] --> B["Prime-container registry:<br/>2 = binary dyad anchor;<br/>3, 5, 7, 11, ... = containment vaults"]
+  B --> C["Deterministic catalog solver<br/>(closed-form energy + coordinate sketch,<br/>milliseconds on CPU — fixture-grade)"]
+  C --> D["Address a = product of p_i^e_i<br/>(unique_address)"]
+  D --> E["Retrieve: factor a back to (p_i, e_i)"]
+  E -->|"factorisation is unique"| B
+  H["Honesty-first gate:<br/>catalog architecture, not CASP,<br/>not clinical, not a PDB replacement"] -.->|scopes| C

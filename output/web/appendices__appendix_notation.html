@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>appendix_notation.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:appendix_notation">Appendix B — Notation and Symbols</h1>
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Reference appendix · Symbol glossary for the worked models.</p>
+</blockquote>
+<p>This appendix lists the symbols used by the worked formalisms of the
+Infinite Octaves Omni-Lattice and by the tested implementations in <a
+href="../../../src/textbook/models.py"><code>src/textbook/models.py</code></a>.
+Keep it in sync with the parameter tables (<code>{#tbl:...}</code>) in
+the chapters: every symbol that appears in an equation
+<code>{#eq:...}</code> should have a row here. Corpus symbols are filed
+exactly as the papers file them — as <a
+href="../glossary.md#gl:catalog-architecture">catalog architecture</a>
+vocabulary [mendez2026digitsMaster; mendez2026masterSynthesis].</p>
+<h2 id="conventions">Conventions</h2>
+<ul>
+<li>Scalars are italic lowercase (e.g. <em>n</em>, <em>t</em>); sets and
+spaces are uppercase.</li>
+<li>Subscript <code>0</code> denotes a base or initial value (e.g. <span
+class="math inline">\(\Omega_0\)</span>, <span
+class="math inline">\(P_0\)</span>).</li>
+<li>“Filed as” is the corpus’s own verb: it marks a catalog filing, not
+a physical derivation (<a
+href="../glossary.md#gl:honesty-first">honesty-first</a>).</li>
+<li>Units are stated where the underlying mathematics has them; most
+catalog quantities are dimensionless filing labels.</li>
+</ul>
+<h2 id="core-omni-lattice-symbols">Core Omni-Lattice Symbols</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Appears in</th>
+<th>Units</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\Phi\)</span></td>
+<td>El Gran Sol’s Fractal Constant (golden ratio)</td>
+<td><code>phi_powers</code>, <code>octave_term</code>,
+<code>phi_dual</code></td>
+<td>dimensionless</td>
+<td><span class="math inline">\((1+\sqrt{5})/2 \approx
+1.6180339887\)</span>; architectural key, not a replacement for <span
+class="math inline">\(\hbar, c, G\)</span>
+[mendez2026masterSynthesis]</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Phi^n\)</span></td>
+<td>golden-ratio powers</td>
+<td><code>phi_powers</code></td>
+<td>dimensionless</td>
+<td><span class="math inline">\(1.618034, 2.618034, 4.236068, 6.854102,
+11.090170, 17.944272\)</span> for <span class="math inline">\(n =
+1..6\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\varphi_{\mathrm{fib}}(n)\)</span></td>
+<td>Fibonacci ratio</td>
+<td><code>phi_fibonacci</code></td>
+<td>dimensionless</td>
+<td><span class="math inline">\(F_{n+1}/F_n\)</span>; <span
+class="math inline">\(\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6\)</span>,
+<span class="math inline">\(\varphi_{\mathrm{fib}}(10) = 89/55 \approx
+1.618182\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Omega_n\)</span></td>
+<td>octave term at index <span class="math inline">\(n\)</span></td>
+<td><code>octave_term</code></td>
+<td>dimensionless</td>
+<td>Printed ambiguously as “Ωn = Φn · Ω0”; exponent reading <span
+class="math inline">\(\Omega_n = \Phi^n \Omega_0\)</span> vs subscript
+reading <span class="math inline">\(\Omega_n =
+\varphi_{\mathrm{fib}}(n)\,\Omega_0\)</span> — both implemented
+[mendez2026primeParity]</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Omega_0\)</span></td>
+<td>base octave term</td>
+<td><code>octave_term</code></td>
+<td>dimensionless</td>
+<td>value at <span class="math inline">\(n = 0\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(n\)</span></td>
+<td>octave index / tier</td>
+<td>all octave models</td>
+<td>dimensionless</td>
+<td>octaves are bands <span class="math inline">\(01\)</span>–<span
+class="math inline">\(99\)</span>; <span class="math inline">\(n =
+1\)</span> is the binary CMOS tier [mendez2026cmosProtonic]</td>
+</tr>
+<tr>
+<td><span class="math inline">\(d\)</span></td>
+<td>digit (0–9)</td>
+<td>digit × octave filing</td>
+<td>dimensionless</td>
+<td>coarse bins labelling kinds of pattern [mendez2026digitsMaster]</td>
+</tr>
+<tr>
+<td><span class="math inline">\(81\)</span></td>
+<td>precision register width</td>
+<td><code>catalog_size</code></td>
+<td>digits</td>
+<td>per-octave digit precision of the master register</td>
+</tr>
+<tr>
+<td><span class="math inline">\(8{,}019\)</span></td>
+<td>holographic catalog size</td>
+<td><code>catalog_size</code></td>
+<td>entries</td>
+<td><span class="math inline">\(99 \times 81\)</span>; “for dashboards
+and agent routing, not for measuring magma”
+[mendez2026digitsMaster]</td>
+</tr>
+<tr>
+<td><span class="math inline">\(k\)</span></td>
+<td>node index; brake constant</td>
+<td><code>net_zero_balance</code> context;
+<code>transduction_brake</code></td>
+<td>index; 1/time</td>
+<td><span class="math inline">\(k = 0\)</span> is the zero-octave node
+(<a href="../glossary.md#gl:node-k0">node k0</a>)
+[mendez2026zeroOctave]; in <code>transduction_brake</code> <span
+class="math inline">\(k\)</span> is the drag rate</td>
+</tr>
+<tr>
+<td><span class="math inline">\(2\)</span></td>
+<td>sole-even prime (binary dyad anchor)</td>
+<td><code>prime_parity_partition</code>,
+<code>unique_address</code></td>
+<td>dimensionless</td>
+<td>the only even prime; anchors the binary layer
+[mendez2026primeParity]</td>
+</tr>
+<tr>
+<td><span class="math inline">\(p_n\)</span></td>
+<td>the <span class="math inline">\(n\)</span>-th prime (odd primes as
+irreducible sets)</td>
+<td><code>prime_parity_partition</code>,
+<code>unique_address</code></td>
+<td>dimensionless</td>
+<td>first ten odd primes: 3, 5, 7, 11, 13, 17, 19, 23, 29, 31</td>
+</tr>
+<tr>
+<td><span class="math inline">\(c\)</span></td>
+<td>speed of light, filed as transduction line / viscous floor</td>
+<td><code>transduction_brake</code> narrative</td>
+<td>1 (filing)</td>
+<td>catalog filing, not relativity retirement [mendez2026eddyMirror;
+mendez2026viscosityLight]</td>
+</tr>
+<tr>
+<td><span class="math inline">\(v_0\)</span>, <span
+class="math inline">\(k\)</span></td>
+<td>initial speed, drag rate</td>
+<td><code>transduction_brake</code></td>
+<td>speed; 1/time</td>
+<td><span class="math inline">\(v(t) = v_0 e^{-kt}\)</span>; <span
+class="math inline">\(v_0 = 1, k = 1 \Rightarrow v(1) \approx
+0.367879\)</span>, <span class="math inline">\(v(2) \approx
+0.135335\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(h\)</span></td>
+<td>Planck’s constant (“Planck’s grain”)</td>
+<td><code>metrological_overlap</code> narrative</td>
+<td>J·s</td>
+<td>first of the five-constant map [mendez2026metrologicalOverlap]</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\nu_{\mathrm{HI}}\)</span>, <span
+class="math inline">\(\lambda_{\mathrm{HI}}\)</span></td>
+<td>hydrogen-line clock frequency, wavelength</td>
+<td><code>metrological_overlap</code> narrative</td>
+<td>Hz; length</td>
+<td>“hydrogen wave clock” of the five-constant map</td>
+</tr>
+<tr>
+<td><span class="math inline">\(m_{\mathrm{catalog}}\)</span></td>
+<td>catalog mass sum</td>
+<td><code>metrological_overlap</code> narrative</td>
+<td>filing label</td>
+<td>explicitly not identified with electron or proton mass</td>
+</tr>
+<tr>
+<td><span class="math inline">\(A\)</span>, <span
+class="math inline">\(B\)</span></td>
+<td>label sets</td>
+<td><code>metrological_overlap</code></td>
+<td>sets</td>
+<td>overlap <span class="math inline">\(= |A \cap B| / |A \cup
+B|\)</span>; <span
+class="math inline">\(\mathrm{overlap}(\{a,b\},\{b,c\}) =
+0.5\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(W(n)\)</span></td>
+<td>metabolic work tensor</td>
+<td>macro-protein filing</td>
+<td>filing label</td>
+<td>organisms filed on band <span
+class="math inline">\(\theta_{\mathrm{bio}} \in [13,17]\)</span>
+[mendez2026macroProtein]</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\theta_{\mathrm{bio}}\)</span></td>
+<td>logarithmic length ratio (biology band)</td>
+<td><code>goldilocks_band</code> narrative</td>
+<td>dimensionless</td>
+<td><span class="math inline">\([13, 17]\)</span> on the octave
+ladder</td>
+</tr>
+<tr>
+<td><span class="math inline">\(A\)</span>, <span
+class="math inline">\(B\)</span></td>
+<td>label sets</td>
+<td><code>metrological_overlap</code></td>
+<td>sets</td>
+<td>min-normalized overlap <span class="math inline">\(|A \cap B| /
+\min(|A|,|B|)\)</span>; <span
+class="math inline">\(\mathrm{overlap}(\{a,b\},\{b,c\}) =
+0.5\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\((a, b)\)</span></td>
+<td>prime base, exponents</td>
+<td><code>unique_address</code></td>
+<td>lists</td>
+<td>injective encoding <span class="math inline">\(\prod
+p_i^{e_i}\)</span>; <code>unique_address([2,3],[2,1]) = 12</code></td>
+</tr>
+<tr>
+<td><span class="math inline">\(x\)</span>, <span
+class="math inline">\(e\)</span></td>
+<td>exposure, density parameters</td>
+<td><code>densification</code></td>
+<td>dimensionless</td>
+<td><span class="math inline">\(D = D_0 + r\,\ln(1 + x)\)</span>; <span
+class="math inline">\(D_0 = 1, r = 1, x = 4 \Rightarrow 1 + \ln 5
+\approx 2.609438\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(r\)</span></td>
+<td>linear filing rate</td>
+<td><code>lattice_linear_profile</code></td>
+<td>1/step</td>
+<td>lattice-linear ramp of the PDVSA gateway
+[mendez2026pdvsaGateway]</td>
+</tr>
+<tr>
+<td><span class="math inline">\(x_i, y_j\)</span></td>
+<td>spatial coordinates</td>
+<td><code>holographic_rhyme_field</code>,
+<code>xd_yd_combine</code></td>
+<td>dimensionless</td>
+<td>four-pillar interference field; <span
+class="math inline">\(\mathrm{xD} \pm \mathrm{yD}\)</span> cross-scale
+summation</td>
+</tr>
+<tr>
+<td><span class="math inline">\(x\)</span></td>
+<td>duality argument</td>
+<td><code>phi_dual</code></td>
+<td>dimensionless</td>
+<td><span class="math inline">\(\Phi\)</span> duality pair <span
+class="math inline">\(x \cdot \Phi\)</span> and <span
+class="math inline">\(x / \Phi\)</span> [mendez2026protonTheater]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="template-legacy-symbols">Template-Legacy Symbols</h2>
+<p>The backbone also retains the template’s general model functions;
+their symbols appear in the format gallery and in the mathematical
+review.</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>Appears in</th>
+<th>Units</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>t</em></td>
+<td>time / independent variable</td>
+<td>all dynamic models</td>
+<td>s (or chapter unit)</td>
+<td>continuous argument of growth/decay models</td>
+</tr>
+<tr>
+<td><em>N</em></td>
+<td>state quantity / population</td>
+<td><code>logistic_growth</code></td>
+<td>dimensionless</td>
+<td>state of the modelled quantity</td>
+</tr>
+<tr>
+<td><em>N</em>₀</td>
+<td>initial state</td>
+<td><code>logistic_growth</code>, <code>exponential_decay</code></td>
+<td>dimensionless</td>
+<td>value at <span class="math inline">\(t = 0\)</span></td>
+</tr>
+<tr>
+<td><em>r</em></td>
+<td>intrinsic growth rate</td>
+<td><code>logistic_growth</code></td>
+<td>1/time</td>
+<td>drives sigmoid saturation at <em>K</em></td>
+</tr>
+<tr>
+<td><em>K</em></td>
+<td>carrying capacity</td>
+<td><code>logistic_growth</code></td>
+<td>dimensionless</td>
+<td>saturation level</td>
+</tr>
+<tr>
+<td><em>λ</em> (lambda)</td>
+<td>decay constant</td>
+<td><code>exponential_decay</code>, <code>half_life</code></td>
+<td>1/time</td>
+<td><span class="math inline">\(N(t) = N_0 e^{-\lambda t}\)</span></td>
+</tr>
+<tr>
+<td><em>t</em>½</td>
+<td>half-life</td>
+<td><code>half_life</code></td>
+<td>time</td>
+<td><span class="math inline">\(t_{1/2} = \ln 2 / \lambda\)</span></td>
+</tr>
+<tr>
+<td><em>V</em>max</td>
+<td>maximum response</td>
+<td><code>saturating_response</code></td>
+<td>response unit</td>
+<td>asymptote of the saturating curve</td>
+</tr>
+<tr>
+<td><em>K</em>ₘ</td>
+<td>half-saturation constant</td>
+<td><code>saturating_response</code></td>
+<td>input unit</td>
+<td>input giving <span class="math inline">\(V_{\max}/2\)</span></td>
+</tr>
+<tr>
+<td><em>x</em>, <em>y</em></td>
+<td>paired observations</td>
+<td><code>linear_fit</code></td>
+<td>data unit</td>
+<td>least-squares inputs</td>
+</tr>
+<tr>
+<td><em>m</em>, <em>b</em></td>
+<td>slope, intercept</td>
+<td><code>linear_fit</code></td>
+<td>derived</td>
+<td>fitted trend parameters</td>
+</tr>
+<tr>
+<td><em>μ</em>, <em>σ</em></td>
+<td>mean, standard deviation</td>
+<td><code>descriptive_statistics</code></td>
+<td>data unit</td>
+<td>first descriptors of any observable</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reused-greek-letters">Reused Greek Letters</h2>
+<ul>
+<li><strong><span class="math inline">\(\Phi\)</span></strong> — always
+El Gran Sol’s Fractal Constant <span class="math inline">\(\approx
+1.618\)</span> in corpus context. (The Higgs papers also use <span
+class="math inline">\(\Phi_{\mathrm{Higgs}}\)</span> for the Higgs field
+with <span class="math inline">\(\langle\Phi\rangle \approx 246\)</span>
+GeV as a PDG literature anchor — always subscripted, never confused with
+the catalog key [mendez2026higgsGate].)</li>
+<li><strong><span class="math inline">\(\varphi\)</span></strong> — the
+Fibonacci ratio family <span
+class="math inline">\(\varphi_{\mathrm{fib}}(n)\)</span>, and <span
+class="math inline">\(\Delta\varphi = \pi/2\)</span> for the
+planetary-core catalog phase flip [mendez2026planetaryCore].</li>
+<li><strong><span class="math inline">\(\lambda\)</span></strong> —
+decay constant in the legacy models; <span
+class="math inline">\(\lambda_{\mathrm{HI}}\)</span> (subscripted) is
+the hydrogen wavelength in the metrological overlap.</li>
+</ul>
+<p>See also: <a href="appendix_math_review.md">Appendix C — Mathematical
+Review</a> for the worked numbers behind these rows.</p>
+</main>
+</body>
+</html>

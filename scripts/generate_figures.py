@@ -2,7 +2,10 @@
 
 Delegates chapter plots to ``visualization.plots.generate_all_figures``, the
 optional format gallery to ``visualization.gallery.generate_gallery_figures``,
-and registry emission to ``visualization.registry.write_figure_registry``.
+the deterministic book cover to ``visualization.plots.omnilattice_cover``
+(written to ``docs/manuscript/assets/cover/`` per ``book.cover`` in the
+manuscript config), and registry emission to
+``visualization.registry.write_figure_registry``.
 Default output: ``<project_root>/output/figures/``. Prints each path for
 manifest collection by the pipeline.
 """
@@ -20,8 +23,9 @@ ensure_project_paths()
 def main() -> int:
     """CLI entry point."""
     from textbook_logging import get_logger
+    from textbook.config import load_config
     from visualization.gallery import generate_gallery_figures
-    from visualization.plots import generate_all_figures
+    from visualization.plots import generate_all_figures, omnilattice_cover
     from visualization.registry import write_figure_registry
 
     logger = get_logger(__name__)
@@ -33,10 +37,18 @@ def main() -> int:
         help="Skip the plot-type gallery (figures/gallery/).",
     )
     args = parser.parse_args()
-
     paths = generate_all_figures(args.output_dir)
     for path in paths:
         print(f"  ✓ {path}")
+
+    # The book cover is a tracked manuscript asset, not an output/ artifact:
+    # regenerate it from config's book.cover.image location.
+    config = load_config()
+    cover_image = str(config.get("book", {}).get("cover", {}).get("image", "assets/cover/omnilattice_cover.png"))
+    cover_dir = PROJECT_DIR / "docs" / "manuscript" / Path(cover_image).parent
+    cover_path = omnilattice_cover(cover_dir)
+    print(f"  ✓ {cover_path}")
+    paths.append(cover_path)
     if not args.no_gallery:
         gallery_paths = generate_gallery_figures(args.output_dir / "gallery")
         for path in gallery_paths:

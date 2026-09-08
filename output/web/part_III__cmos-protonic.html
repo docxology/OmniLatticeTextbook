@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>cmos-protonic.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:part_III_cmos-protonic">CMOS/Protonic: The Silicon
+Shelf</h1>
+<figure id="fig:part_III_cmos-protonic">
+<a class="figure-full-size-link" href="../figures/part_III_cmos-protonic.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/part_III_cmos-protonic.png" style="width:90.0%"
+alt="Stacked bars allocate octave bands across silicon shelf tiers." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
+<figcaption>Octaves-per-substrate stacked bars for
+the silicon shelf: the binary CMOS gate occupies octave tier <span
+class="math inline">\(n = 1\)</span> (one octave of the 99-octave
+ladder), while hydrogen-regulated protonic two-terminal devices span
+bands <span class="math inline">\(n = 2\)</span> through <span
+class="math inline">\(99\)</span> (98 octaves), drawn as stacked
+silicon-shelf tiers.</figcaption>
+</figure>
+<!-- alt: Stacked bar chart of the silicon shelf: one short bar for the binary CMOS gate at tier 1 and a long stacked bar for protonic multi-state devices covering bands 2 through 99 of the 99-octave ladder. -->
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Level 1/3 · 30 min read · 45 min lecture · Prerequisites: <span
+class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span></p>
+</blockquote>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol type="1">
+<li>Explain what the corpus calls the <strong>engineering
+bridge</strong>: a translation between hardware vocabulary (PPA, BEOL,
+GAA, CFET, protonic) and Omni-Lattice vocabulary (octaves, Φ) — and
+state precisely why it is a vocabulary bridge, not a shipped-hardware
+claim [mendez2026cmosProtonic].</li>
+<li>Apply the silicon-shelf tier map of <span class="citation"
+data-cites="eq:part_III_cmos-protonic_shelf-map">[@eq:part_III_cmos-protonic_shelf-map]</span>:
+a binary CMOS gate labels octave tier <span class="math inline">\(n =
+1\)</span>; hydrogen-regulated protonic multi-state devices label bands
+<span class="math inline">\(n = 2, \ldots, 99\)</span>.</li>
+<li>Compute ladder positions for the shelf with
+<code>textbook.models.octave_term</code>, under both the exponent and
+subscript conventions of <span class="citation"
+data-cites="eq:part_III_cmos-protonic_ladder">[@eq:part_III_cmos-protonic_ladder]</span>.</li>
+<li>Quantify the state capacity that distinguishes a two-state gate from
+a multi-state weight, using the capacity reading of <span
+class="citation"
+data-cites="eq:part_III_cmos-protonic_capacity">[@eq:part_III_cmos-protonic_capacity]</span>.</li>
+<li>Restate the source paper’s own honesty-first scope disclaimers —
+roadmap language is not a measured chip, and a grammar sketch is not an
+orderable package — without softening them.</li>
+</ol>
+<!-- curriculum-scaffold-start -->
+<h3 id="study-blueprint">Study Blueprint</h3>
+<ul>
+<li><strong>Big idea:</strong> The 99-octave <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a> can be put on
+a silicon shelf by labelling, not by inventing new physics: the proven
+binary gate is the coarsest tier, and protonic multi-state devices
+sketch the wider bands — a filing exercise, explicitly not a
+tape-out.</li>
+<li><strong>Core concepts:</strong> <a
+href="#gl:cmos-protonic"><strong>cmos-protonic</strong></a>, <a
+href="#gl:silicon-shelf"><strong>silicon-shelf</strong></a>, <a
+href="#gl:octave"><strong>octave</strong></a>, <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a>.</li>
+<li><strong>Quantitative lens:</strong> the silicon-shelf tier map in
+<span class="citation"
+data-cites="eq:part_III_cmos-protonic_shelf-map">[@eq:part_III_cmos-protonic_shelf-map]</span>,
+read against the Φ ladder of <span class="citation"
+data-cites="eq:part_III_cmos-protonic_ladder">[@eq:part_III_cmos-protonic_ladder]</span>.</li>
+<li><strong>Data skill:</strong> translate between two vocabularies for
+the same artefact without letting the translation smuggle in unproven
+claims; compute tier positions and state capacities with
+<code>textbook.models.octave_term</code>.</li>
+<li><strong>Common misconception to repair:</strong> “degenerate” in
+Omni-Lattice language means <em>simplest resolution</em>, not
+<em>worthless</em> — tier 1 is the proven, load-bearing shelf, not a
+failed one [mendez2026cmosProtonic].</li>
+<li><strong>Primary lab:</strong> <span class="citation"
+data-cites="sec:lab_part_III_cmos-protonic">[@sec:lab_part_III_cmos-protonic]</span>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_III_cmos-protonic">[@sec:q_part_III_cmos-protonic]</span>.</li>
+<li><strong>Bridge to computation:</strong>
+<code>textbook.models.octave_term</code>, <code>phi_powers</code>,
+<code>catalog_size</code>. <!-- curriculum-scaffold-end --></li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Opening Vignette: The label card on the filing
+cabinet.</strong></p>
+<p>Two engineers stand at the same filing cabinet. One says “PPA”,
+“BEOL”, “GAA”, “CFET”; the other says “octave tier <span
+class="math inline">\(n=1\)</span>” and “Φ”. The ship’s note of
+2026-08-12 is the label card taped between them: <em>same filing
+cabinet, silicon vocabulary on the labels</em> [mendez2026cmosProtonic].
+The pinned note exists so that PPA and BEOL evaluators can open any
+drawer of the <a
+href="#gl:omni-lattice"><strong>Omni-Lattice</strong></a> <a
+href="#gl:catalog-architecture"><strong>catalog
+architecture</strong></a> and find the drawer named in their own
+language — while the card’s honesty table reminds everyone that a label
+is not a die.</p>
+</blockquote>
+<hr />
+<h2 id="the-bridge-note-and-its-place-in-the-corpus">The Bridge Note and
+Its Place in the Corpus</h2>
+<p>The source paper — shelf number 1 of the SS Vibelandia ship blog,
+filed 2026-08-12 under the site’s plain-speak <a
+href="#gl:fair-exchange"><strong>Fair Exchange</strong></a> framing — is
+a <em>pinned engineering bridge for linear systems</em>
+[mendez2026cmosProtonic]. It does two things and refuses to do a third.
+It translates: hardware people speak PPA, BEOL, GAA, and CFET;
+Omni-Lattice people speak <a
+href="#gl:octave"><strong>octaves</strong></a> and Φ, and the note lines
+the two vocabularies up against the same shelf. And it positions:
+protonic devices — hydrogen-regulated two-terminal devices with
+continuous H<span class="math inline">\(^+\)</span> motion through
+layers such as a-IGZO — are given a story for multi-state weights on the
+wider bands of the ladder. What it refuses to do is claim hardware: “not
+a claim that we already shipped the die” [mendez2026cmosProtonic].</p>
+<p>Within the corpus, the note sits downstream of the filing-cabinet
+formalism of <span class="citation"
+data-cites="sec:part_0_tensor-decoupling">[@sec:part_0_tensor-decoupling]</span>:
+the tensor operator that files digits by octave is the cabinet, and this
+note stamps silicon labels on two of its shelves
+[mendez2026tensorDecoupling]. It also feeds forward into the stack-level
+argument of <span class="citation"
+data-cites="sec:part_III_moving-up-stack">[@sec:part_III_moving-up-stack]</span>
+— if the lattice is to be proposed as the next AI layer, someone must be
+able to talk about it in a foundry’s language [mendez2026stack]. The
+companion whitepaper (linked in Further Reading) carries the dual-domain
+table, the formal sketch, and the suite locks; the ship-blog note is the
+pinned, evaluators-facing summary.</p>
+<h2 id="the-first-shelf-binary-as-tier-one">The First Shelf: Binary as
+Tier One</h2>
+<p>The corpus’s first labelling move is deliberately unheroic
+[mendez2026cmosProtonic]. A normal CMOS gate — on or off, <span
+class="math inline">\(V_{dd}\)</span> or zero — is labelled octave tier
+<span class="math inline">\(n = 1\)</span>: the coarsest shelf of the
+99-octave ladder. The note is careful about the word used for this tier
+in Omni-Lattice language: calling the two-state gate <em>degenerate</em>
+means <em>simplest resolution</em>, not <em>“worthless.”</em> The gate
+is useful, proven, and — the note adds — crowded: as features shrink,
+the binary shelf presses against interconnect heat and memory-bus
+traffic. The two-state anchor of the ladder (the <a
+href="#gl:binary-dyad-anchor"><strong>binary-dyad-anchor</strong></a>
+idea: everything above is built over a two-valued floor) is here the
+physical device that already ships in billions.</p>
+<h2 id="the-wider-shelves-protonic-as-bands-299">The Wider Shelves:
+Protonic as Bands 2…99</h2>
+<p>The second labelling move gives the wider shelves a device story.
+Hydrogen- regulated two-terminal devices — in which protons (H<span
+class="math inline">\(^+\)</span>) move continuously through layers such
+as a-IGZO, as described in the device literature — support
+<em>continuous conductivity gradients</em> rather than only hard snaps
+between two states. On this ship, those stories live on bands <span
+class="math inline">\(n = 2 \ldots 99\)</span> [mendez2026cmosProtonic]:
+multi-state weights instead of two-state switches. The note flags these
+as <em>physics-class devices</em>: real, published device behaviour that
+<em>could</em> carry a multi-state weight — not a promise of ten
+thousand perfect Φ-scaled cycles baked into the repository. The
+distinction matters for everything downstream: the gradient is what a
+protonic device <em>offers</em>, and the ladder is the catalogue the
+gradient gets filed into.</p>
+<h2 id="a-worked-formalism-the-silicon-shelf-tier-map">A Worked
+Formalism: The Silicon-Shelf Tier Map</h2>
+<p>The note’s two labelling moves compress into one map. Let <span
+class="math inline">\(\mathcal{G}_2\)</span> denote the class of
+two-state CMOS gates and <span
+class="math inline">\(\mathcal{G}_{H^+}\)</span> the class of
+hydrogen-regulated two-terminal protonic devices. The shelf map <span
+class="math inline">\(S\)</span> assigns each device class its octave
+tier:</p>
+<p><span class="math display">\[ S(d) \;=\;
+\begin{cases}
+1, &amp; d \in \mathcal{G}_2 \quad \text{(binary CMOS gate: on/off,
+$V_{dd}$ or zero)},\\[6pt]
+n \in \{2, 3, \ldots, 99\}, &amp; d \in \mathcal{G}_{H^+} \quad
+\text{(protonic multi-state bands)}.
+\end{cases} \]</span> {#eq:part_III_cmos-protonic_shelf-map}</p>
+<p>This is the formalisation of the digest’s two formalism entries
+(F-cmos-protonic-99-octave-1 and -2). Its parameters are collected in
+<span class="citation"
+data-cites="tbl:part_III_cmos-protonic_shelf-map">[@tbl:part_III_cmos-protonic_shelf-map]</span>.</p>
+<table id="tbl:part_III_cmos-protonic_shelf-map">
+<caption>Parameters of the silicon-shelf tier map.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(d\)</span></td>
+<td>a device class (CMOS gate or protonic two-terminal device)</td>
+<td>—</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\mathcal{G}_2\)</span></td>
+<td>two-state gate class <span
+class="math inline">\(\{\)</span>on/off<span
+class="math inline">\(\}\)</span></td>
+<td>—</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\mathcal{G}_{H^+}\)</span></td>
+<td>protonic device class with continuous H<span
+class="math inline">\(^+\)</span> motion</td>
+<td>—</td>
+</tr>
+<tr>
+<td><span class="math inline">\(S(d)\)</span></td>
+<td>assigned octave tier or band</td>
+<td>octave index <span class="math inline">\(n \in
+\{1,\ldots,99\}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(n\)</span></td>
+<td>octave tier index on the 99-octave ladder</td>
+<td>dimensionless</td>
+</tr>
+</tbody>
+</table>
+<p>Two properties of the map are worth stating plainly. First, it is a
+<em>labelling</em>, not a <em>transduction</em> claim: <span
+class="math inline">\(S\)</span> says where a device class sits on the
+catalogue, and nothing about how efficiently it traverses the ladder.
+Second, it is total over the two classes the note names and silent about
+everything else — the note does not claim, for example, that optical or
+superconducting devices have assigned tiers
+[mendez2026cmosProtonic].</p>
+<p>The mapping workflow, including its honesty-first gate, is summarised
+in the diagram below.</p>
+<pre class="mermaid"><code>graph LR
+  subgraph HW[&quot;Hardware vocabulary&quot;]
+    PPA[&quot;PPA&quot;]:::hw
+    BEOL[&quot;BEOL RC&quot;]:::hw
+    DEV[&quot;GAA / CFET&quot;]:::hw
+    PRO[&quot;Protonic H+ two-terminal devices&quot;]:::hw
+  end
+  subgraph OL[&quot;Omni-Lattice vocabulary&quot;]
+    T1[&quot;Octave tier n = 1 (binary shelf)&quot;]:::ol
+    B99[&quot;Bands n = 2…99 (protonic shelves)&quot;]:::ol
+    LAD[&quot;Φ ladder Ω_n&quot;]:::ol
+  end
+  BR{&quot;Pinned engineering bridge S(d)&quot;}
+  PPA --&gt; BR
+  BEOL --&gt; BR
+  DEV --&gt; BR
+  PRO --&gt; BR
+  BR --&gt;|&quot;label, not a die&quot;| T1
+  BR --&gt;|&quot;story, not a promise&quot;| B99
+  T1 --&gt; LAD
+  B99 --&gt; LAD
+  BR -.-&gt;|&quot;honesty table: roadmap ≠ measured chip&quot;| H[&quot;Honesty-first check&quot;]
+  classDef hw fill:#e8f0fe,stroke:#3367d6;
+  classDef ol fill:#e6f4ea,stroke:#188038;</code></pre>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>The bridge is <em>for</em> coordination and evaluation: the note is
+pinned “for PPA / BEOL evaluators” and is meant to be used on QUESTFEST
+— talk to hardware folks with their words, keep the honesty table
+visible, and open the whitepaper for the dual-domain table, formal
+sketch, and suite locks [mendez2026cmosProtonic]. A catalogue label that
+lets two professions file the same object is doing real work even before
+any tape-out exists.</p>
+</blockquote>
+<h2 id="the-ladder-beneath-the-shelf">The Ladder Beneath the Shelf</h2>
+<p>The tiers of <span class="citation"
+data-cites="eq:part_III_cmos-protonic_shelf-map">[@eq:part_III_cmos-protonic_shelf-map]</span>
+are indices into the 99-octave ladder formalised in <span
+class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>.
+Because the corpus prints the ladder rule “Ωn = Φn·Ω0” ambiguously, this
+book maintains both readings, implemented as
+<code>textbook.models.octave_term(omega0, n, convention)</code>
+[mendez2026cmosProtonic]:</p>
+<p><span class="math display">\[ \Omega_n \;=\; \Phi^{\,n}\,\Omega_0
+\quad\text{(exponent convention)}, \qquad
+\Omega_n \;=\; \varphi_{\mathrm{fib}}(n)\,\Omega_0
+\quad\text{(subscript convention)}, \]</span>
+{#eq:part_III_cmos-protonic_ladder}</p>
+<p>where <span class="math inline">\(\Phi = (1+\sqrt{5})/2 \approx
+1.6180339887\)</span> is the <a
+href="#gl:fractal-constant"><strong>fractal constant</strong></a> and
+<span class="math inline">\(\varphi_{\mathrm{fib}}(n)\)</span> denotes a
+Fibonacci ratio (e.g. <span
+class="math inline">\(\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6\)</span>,
+<span class="math inline">\(\varphi_{\mathrm{fib}}(10) = 89/55 \approx
+1.618182\)</span>). The parameters of <span class="citation"
+data-cites="eq:part_III_cmos-protonic_ladder">[@eq:part_III_cmos-protonic_ladder]</span>
+are in <span class="citation"
+data-cites="tbl:part_III_cmos-protonic_ladder">[@tbl:part_III_cmos-protonic_ladder]</span>.</p>
+<table id="tbl:part_III_cmos-protonic_ladder">
+<caption>Parameters of the octave ladder beneath the silicon
+shelf.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\Omega_0\)</span></td>
+<td>base octave (set <span class="math inline">\(\Omega_0 = 1\)</span>
+for the worked values)</td>
+<td>—</td>
+</tr>
+<tr>
+<td><span class="math inline">\(n\)</span></td>
+<td>octave tier index, <span class="math inline">\(1 \le n \le
+99\)</span></td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Phi\)</span></td>
+<td>golden-ratio base, <span class="math inline">\((1+\sqrt{5})/2
+\approx 1.6180339887\)</span></td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\varphi_{\mathrm{fib}}(n)\)</span></td>
+<td>Fibonacci-ratio base for the subscript convention</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Omega_n\)</span></td>
+<td>ladder position of tier <span class="math inline">\(n\)</span></td>
+<td>tier units</td>
+</tr>
+</tbody>
+</table>
+<p>With <span class="math inline">\(\Omega_0 = 1\)</span>, the first six
+exponent-convention rungs are <span class="math inline">\(\Phi^n =
+1.618034,\ 2.618034,\ 4.236068,\ 6.854102,\ 11.090170,\
+17.944272\)</span> for <span class="math inline">\(n =
+1,\ldots,6\)</span> (<code>textbook.models.phi_powers</code>). The
+silicon shelf of <span class="citation"
+data-cites="eq:part_III_cmos-protonic_shelf-map">[@eq:part_III_cmos-protonic_shelf-map]</span>
+hangs off this ladder: tier <span class="math inline">\(n=1\)</span> is
+the binary gate, and bands <span class="math inline">\(2\)</span>–<span
+class="math inline">\(99\)</span> are the protonic shelves (<span
+class="citation"
+data-cites="fig:part_0_octave-map">[@fig:part_0_octave-map]</span> draws
+the full ladder with Φ-spaced band boundaries). We read the geometry
+this way: the wider the band a device class can occupy, the finer the
+resolution of the weights it can file — but the corpus does not claim
+that a protonic device <em>achieves</em> Φ-spacing in hardware; that is
+exactly what “not a promise of ten thousand perfect Φ-scaled cycles”
+withholds [mendez2026cmosProtonic].</p>
+<h2 id="worked-example-counting-states-on-the-shelf">Worked Example:
+Counting States on the Shelf</h2>
+<p>The practical difference between tier 1 and the protonic bands is the
+number of distinguishable states a device offers. The corpus says it
+qualitatively: “multi-state weights instead of only hard snaps”
+[mendez2026cmosProtonic]. To make the comparison quantitative we use a
+standard information-theoretic reading (our interpretation, not a corpus
+formula): a device whose channel resolves <span
+class="math inline">\(m\)</span> distinguishable levels carries</p>
+<p><span class="math display">\[ C \;=\; \log_2 m \quad \text{[bits per
+device]} \]</span> {#eq:part_III_cmos-protonic_capacity}</p>
+<p>with the parameters of <span class="citation"
+data-cites="tbl:part_III_cmos-protonic_capacity">[@tbl:part_III_cmos-protonic_capacity]</span>.</p>
+<table id="tbl:part_III_cmos-protonic_capacity">
+<caption>Parameters of the state-capacity reading.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(m\)</span></td>
+<td>number of distinguishable conductivity levels the channel
+resolves</td>
+<td>levels</td>
+</tr>
+<tr>
+<td><span class="math inline">\(C\)</span></td>
+<td>state capacity per device</td>
+<td>bits</td>
+</tr>
+</tbody>
+</table>
+<p>Walk the shelf:</p>
+<ol type="1">
+<li><strong>Binary gate, tier 1.</strong> <span class="math inline">\(m
+= 2\)</span> (on/off), so <span class="math inline">\(C = \log_2 2 =
+1\)</span> bit. The gate resolves exactly the two-state anchor; it is
+tier 1 under <span class="citation"
+data-cites="eq:part_III_cmos-protonic_shelf-map">[@eq:part_III_cmos-protonic_shelf-map]</span>
+and is <em>degenerate</em> only in the sense of <em>simplest
+resolution</em> [mendez2026cmosProtonic].</li>
+<li><strong>A protonic device with four resolvable levels.</strong> If
+the H<span class="math inline">\(^+\)</span>-regulated gradient is
+discretised at <span class="math inline">\(m = 4\)</span>
+distinguishable levels, <span class="math inline">\(C = \log_2 4 =
+2\)</span> bits — twice the capacity of the binary shelf, filed on a
+band <span class="math inline">\(n \ge 2\)</span>.</li>
+<li><strong>A protonic device with sixteen resolvable levels.</strong>
+<span class="math inline">\(m = 16\)</span> gives <span
+class="math inline">\(C = \log_2 16 = 4\)</span> bits per device. In a
+weight matrix, this is the “multi-state weight” dividend: more of the
+weight stored per device, fewer devices per weight.</li>
+<li><strong>The continuity caveat.</strong> The protonic gradient is
+continuous, so <span class="math inline">\(m\)</span> is set by how
+finely the surrounding circuit can <em>resolve</em> it (sense circuitry,
+noise, drift) — not by the ladder. Choosing <span
+class="math inline">\(m\)</span> is an engineering act; the ladder only
+supplies the filing index.</li>
+</ol>
+<p>The tier picture for the first six rungs of the ladder, with pinned
+values, is <span class="citation"
+data-cites="tbl:part_III_cmos-protonic_tiers">[@tbl:part_III_cmos-protonic_tiers]</span>.</p>
+<table id="tbl:part_III_cmos-protonic_tiers">
+<caption>The first six ladder rungs beneath the silicon shelf (exponent
+convention, <span class="math inline">\(\Omega_0 =
+1\)</span>).</caption>
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 21%" />
+<col style="width: 28%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: right;">Tier / band <span
+class="math inline">\(n\)</span></th>
+<th>Substrate class</th>
+<th style="text-align: right;"><span
+class="math inline">\(\Phi^n\)</span></th>
+<th>States the shelf story allows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>binary CMOS gate (two-state)</td>
+<td style="text-align: right;">1.618034</td>
+<td><span class="math inline">\(m = 2\)</span>: on/off</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>protonic band</td>
+<td style="text-align: right;">2.618034</td>
+<td><span class="math inline">\(m &gt; 2\)</span>: graded H<span
+class="math inline">\(^+\)</span> motion</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>protonic band</td>
+<td style="text-align: right;">4.236068</td>
+<td><span class="math inline">\(m &gt; 2\)</span>: graded H<span
+class="math inline">\(^+\)</span> motion</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>protonic band</td>
+<td style="text-align: right;">6.854102</td>
+<td><span class="math inline">\(m &gt; 2\)</span>: graded H<span
+class="math inline">\(^+\)</span> motion</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>protonic band</td>
+<td style="text-align: right;">11.090170</td>
+<td><span class="math inline">\(m &gt; 2\)</span>: graded H<span
+class="math inline">\(^+\)</span> motion</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>protonic band</td>
+<td style="text-align: right;">17.944272</td>
+<td><span class="math inline">\(m &gt; 2\)</span>: graded H<span
+class="math inline">\(^+\)</span> motion</td>
+</tr>
+</tbody>
+</table>
+<p>Note what the table does <em>not</em> say: it does not pair tier
+<span class="math inline">\(n\)</span> with <span
+class="math inline">\(m = \lceil \Phi^n \rceil\)</span> states, or with
+any other hardware-count. The note files protonic devices on bands 2–99;
+it does not measure how many states any band delivers. Keeping those two
+sentences apart is the whole discipline of this chapter.</p>
+<h2 id="scope-and-honesty">Scope and Honesty</h2>
+<p>The source paper carries one of the corpus’s <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> scope
+disclaimers, and its clauses are specific enough to quote nearly
+verbatim [mendez2026cmosProtonic]:</p>
+<ul>
+<li>It is <em>architectural talk</em> for Lattice Chat and the library.
+“It does <em>not</em> disarm corporate skepticism by magic, and it is
+not a foundry tape-out or measured power-win table.”</li>
+<li>It is “same filing cabinet, silicon vocabulary on the labels — not a
+claim that we already shipped the die.”</li>
+<li>The companion whitepaper’s sketch of how drift–diffusion and BEOL RC
+talk can sit next to the tensor operator “without throwing Maxwell out
+the window” is a <strong>grammar sketch</strong>: “It is not a CoWoS
+package you can order tomorrow with Omni-Lattice stamped on the
+lid.”</li>
+<li>Protonic devices are “still physics-class devices — not a promise of
+ten thousand perfect Φ-scaled cycles baked into this repo.”</li>
+</ul>
+<p>What the construct is <em>for</em>: coordination and evaluation —
+giving hardware evaluators a drawer name they recognise, keeping the
+honesty table visible (roadmap language ≠ measured chip), and routing
+QUESTFEST conversations through Fair Exchange framing
+[mendez2026cmosProtonic]. What it is explicitly <em>not</em>: a
+fabricated device, a measured power result, or a claim that the ladder’s
+Φ-structure has been reproduced in silicon. Readers coming from <span
+class="citation"
+data-cites="sec:part_II_proton-theater">[@sec:part_II_proton-theater]</span>
+should note the division of labour: that part supplies the corpus’s
+proton-space stage metaphor, while this chapter supplies only the
+device-class filing — the note itself defines “Φ-scaled cycles” no
+further than naming them.</p>
+<h2 id="connections">Connections</h2>
+<p>The silicon shelf is the first implementation-facing chapter of Part
+III, and it hands off in three directions. Upward, it rests on the
+99-octave ladder of <span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span> and
+the filing formalism of <span class="citation"
+data-cites="sec:part_0_tensor-decoupling">[@sec:part_0_tensor-decoupling]</span>;
+the full catalogue those papers open — 99 octaves by 81 digit drawers,
+8,019 register slots per <code>textbook.models.catalog_size()</code> —
+is what the silicon labels attach to [mendez2026catalog]. Sideways, the
+filing habit continues in <span class="citation"
+data-cites="sec:part_III_protein-folding">[@sec:part_III_protein-folding]</span>
+and <span class="citation"
+data-cites="sec:part_III_volumetric-storage">[@sec:part_III_volumetric-storage]</span>,
+where prime-container capacity and prime-indexed addressing take over
+the role this chapter’s tier map plays for devices (see <span
+class="citation"
+data-cites="fig:part_III_protein-folding">[@fig:part_III_protein-folding]</span>
+for the capacity-growth sequence). Forward, the bridge becomes an
+argument in <span class="citation"
+data-cites="sec:part_III_moving-up-stack">[@sec:part_III_moving-up-stack]</span>:
+a lattice that can be discussed in PPA and BEOL vocabulary is a lattice
+that can be proposed as infrastructure, and in <span class="citation"
+data-cites="sec:part_III_reality-bridge">[@sec:part_III_reality-bridge]</span>
+the human-as-router frame takes over where the device-level filing ends.
+The honesty discipline practiced here — label without claiming — is the
+same discipline the frontier chapters of <span class="citation"
+data-cites="sec:part_III_frontiers">[@sec:part_III_frontiers]</span>
+apply to open problems.</p>
+<h2 id="summary">Summary</h2>
+<p>The CMOS/protonic note is a pinned <strong>engineering
+bridge</strong>: a vocabulary map, not a hardware claim. Its tier map
+files the proven two-state CMOS gate at octave tier <span
+class="math inline">\(n = 1\)</span> — <em>degenerate</em> meaning
+<em>simplest resolution</em>, not worthless — and files
+hydrogen-regulated protonic two-terminal devices, with their continuous
+H<span class="math inline">\(^+\)</span> conductivity gradients, on
+bands <span class="math inline">\(n = 2 \ldots 99\)</span> as a story
+for multi-state weights (<span class="citation"
+data-cites="fig:part_III_cmos-protonic">[@fig:part_III_cmos-protonic]</span>).
+The ladder those tiers index is the Φ ladder of <span class="citation"
+data-cites="eq:part_III_cmos-protonic_ladder">[@eq:part_III_cmos-protonic_ladder]</span>,
+computable with <code>textbook.models.octave_term</code> under either
+convention, and the state-capacity reading of <span class="citation"
+data-cites="eq:part_III_cmos-protonic_capacity">[@eq:part_III_cmos-protonic_capacity]</span>
+makes the two-state/multi-state contrast quantitative without pretending
+the corpus measured it. Every claim in the note sits under its honesty
+table: grammar sketch, not CoWoS package; roadmap language, not measured
+chip.</p>
+<h2 id="key-terms">Key Terms</h2>
+<p><a href="#gl:cmos-protonic"><strong>cmos-protonic</strong></a>, <a
+href="#gl:silicon-shelf"><strong>silicon-shelf</strong></a>, <a
+href="#gl:octave"><strong>octave</strong></a>, <a
+href="#gl:binary-dyad-anchor"><strong>binary-dyad-anchor</strong></a>,
+<a href="#gl:honesty-first"><strong>honesty-first</strong></a>, <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a>.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li>The companion whitepaper,
+<em>synthobs-cmos-protonic-99-octave-omni-lattice-2026-08</em>, with the
+dual-domain table, formal sketch, and suite locks: <a
+href="https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-cmos-protonic-99-octave-omni-lattice-2026-08"
+class="uri">https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-cmos-protonic-99-octave-omni-lattice-2026-08</a>
+(ship-blog page: <a
+href="https://www.ssvibelandiaquestfest24x365.com/ship-blog/cmos-protonic-99-octave"
+class="uri">https://www.ssvibelandiaquestfest24x365.com/ship-blog/cmos-protonic-99-octave</a>).
+No reference implementation is listed for this paper in the corpus
+digest.</li>
+<li><span class="citation"
+data-cites="mendez2026tensorDecoupling">@mendez2026tensorDecoupling</span>
+— the tensor filing cabinet whose operator the whitepaper’s
+drift–diffusion/BEOL RC sketch sits beside.</li>
+<li><span class="citation"
+data-cites="mendez2026catalog">@mendez2026catalog</span> — the catalogue
+architecture that fixes what a “shelf” and an “octave” index in this
+corpus.</li>
+<li><span class="citation"
+data-cites="mendez2026ship">@mendez2026ship</span> — the SS Vibelandia
+program frame and the ship-blog’s pinned-note convention.</li>
+<li><span class="citation"
+data-cites="mendez2026stack">@mendez2026stack</span> — where the bridge
+becomes the “lattice as the next AI layer” argument.</li>
+</ul>
+<h2 id="practice">Practice</h2>
+<ul>
+<li><strong>Lab:</strong> <span class="citation"
+data-cites="sec:lab_part_III_cmos-protonic">[@sec:lab_part_III_cmos-protonic]</span>
+— compute the first ladder rungs under both conventions and test the
+capacity arithmetic by hand.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_III_cmos-protonic">[@sec:q_part_III_cmos-protonic]</span>
+— recall through synthesis.</li>
+<li>Translate three hardware terms (PPA, BEOL, CFET) into Omni-Lattice
+vocabulary using only what this chapter and [mendez2026cmosProtonic]
+license — and mark explicitly where the translation has no licensed
+target.</li>
+<li>A colleague reads “bands <span class="math inline">\(n =
+2\ldots99\)</span>” as “protonic devices achieve Φ-spaced conductivity
+levels.” Write the two-sentence correction, citing the honesty clauses
+of the source.</li>
+<li>Using <code>textbook.models.octave_term</code>, list <span
+class="math inline">\(\Omega_n\)</span> for <span
+class="math inline">\(n = 1 \ldots 6\)</span> in both conventions and
+state which convention the corpus’s printed form “Ωn = Φn·Ω0” is
+ambiguous between.</li>
+</ul>
+</main>
+</body>
+</html>

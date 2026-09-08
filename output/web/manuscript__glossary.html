@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>glossary.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="appendix-f-master-glossary">Appendix F — Master Glossary</h1>
+<p>This glossary defines the working vocabulary of the Infinite Octaves
+<a href="#gl:omni-lattice"><strong>Omni-Lattice</strong></a>. Every
+entry is grounded in the source papers of the SS Vibelandia ship blog
+[mendez2026ship; mendez2026catalog] and carries a <code>{#gl:...}</code>
+anchor so chapter prose can link to it with
+<code>[**term**](#gl:...)</code>. The anchor set is a closed contract:
+it must match <code>GLOSSARY_ANCHORS</code> in
+<code>src/textbook/constants.py</code> (checked by
+<code>tests/test_manuscript_integrity.py</code>).</p>
+<p>Two reading rules apply book-wide. First, most terms below are
+<em>filing</em> vocabulary: the corpus “files as” a construct under its
+scale key <span class="math inline">\(\Phi \approx 1.618\)</span>, which
+is catalog grammar, not a physics derivation. Second, where a term names
+a claim, the entry preserves the source’s own scope disclaimer — the
+corpus is <a href="#gl:honesty-first"><strong>honesty-first</strong></a>
+by construction.</p>
+<hr />
+<h3 id="gl:binary-dyad-anchor">Binary Dyad Anchor</h3>
+<p>The filing role given to the sole-even prime <span
+class="math inline">\(2\)</span> in Infinite Octaves grammar: because
+<span class="math inline">\(2\)</span> is the only even prime, the
+corpus casts it as the anchor of the binary (two-state) layer — later
+reused as the binary dyad anchor for CMOS filing and as the binary base
+channel of prime-indexed storage [mendez2026primeParity;
+mendez2026volumetricStorage].</p>
+<h3 id="gl:c-bridge">C-Bridge</h3>
+<p>The impedance match between “thought talk” and “material grammar”
+proposed in the Eddy-Current Mirror paper: the speed of light <span
+class="math inline">\(c\)</span> is filed as the bridge element that
+lets non-local ideation language connect to localized material language.
+Catalog architecture — not a claim of engineered superluminal hardware
+[mendez2026eddyMirror].</p>
+<h3 id="gl:catalog-architecture">Catalog Architecture</h3>
+<p>The corpus’s own self-description of its status: a filing and
+protocol grammar for coordinating agents, dashboards, and conversation —
+explicitly not established physics, clinical advice, or a Theory of
+Everything. Every source paper carries an honesty clause restating this
+scope [mendez2026catalog; mendez2026masterSynthesis].</p>
+<h3 id="gl:cmos-protonic">CMOS-Protonic</h3>
+<p>The pinned engineering-bridge paper that maps the 99-octave
+Omni-Lattice into semiconductor vocabulary: a binary CMOS gate (on/off)
+files as octave tier <span class="math inline">\(n = 1\)</span>, and
+hydrogen-regulated protonic devices with continuous conductivity
+gradients file as the wider bands <span class="math inline">\(n = 2
+\ldots 99\)</span>. Architecture, not a foundry tape-out
+[mendez2026cmosProtonic].</p>
+<h3 id="gl:crystalline-unified-field">Crystalline Unified Field</h3>
+<p>The filing of speed, distance, and time as three facets of a single
+“access crystal” under <span class="math inline">\(\Phi \approx
+1.618\)</span>: the facet identity <span class="math inline">\(d = v
+\cdot t\)</span> with access time <span class="math inline">\(\tau =
+d/v\)</span>, plus a Landauer rail (<span class="math inline">\(k_B T
+\ln 2\)</span>) filed as the dissipation grain by literature reference,
+not re-derivation [mendez2026crystallineField].</p>
+<h3 id="gl:digit">Digit</h3>
+<p>Digits 0–9 as <em>coarse bins</em> — ways to label kinds of pattern
+in the <a href="#gl:master-register"><strong>master
+register</strong></a>. Nine digit drawers crossed with ninety-nine <a
+href="#gl:octave"><strong>octave</strong></a> shelves produce the
+catalog size 8,019, a dashboard number only
+[mendez2026digitsMaster].</p>
+<h3 id="gl:eddy-current-mirror">Eddy-Current Mirror</h3>
+<p>The paper that files the speed of light as a <a
+href="#gl:transduction-line"><strong>transduction line</strong></a>:
+self-observation brakes non-local ideation into localized mass,
+analogised to a magnet falling through a copper pipe (Lenz-law eddy
+braking). The eddy currents are the <em>analogy</em>; the paper is
+catalog architecture, engine shelf #22 — not relativity retirement
+[mendez2026eddyMirror].</p>
+<h3 id="gl:electron-theater">Electron Theater</h3>
+<p>The filing category assigned to the structural digit <span
+class="math inline">\(2\)</span> — identified with the sole-even prime
+and the constant <span class="math inline">\(2\pi\)</span> — in the
+Proton Space / Electron Theater duality. Catalog filing under <span
+class="math inline">\(\Phi \approx 1.618\)</span>, explicitly not a
+CODATA/SI derivation or a QED dyad proof [mendez2026protonTheater].</p>
+<h3 id="gl:engine-shelf">Engine Shelf</h3>
+<p>The ordered pin list of engine papers at the core of the Omni-Lattice
+program: each paper occupies a numbered shelf slot (CMOS/protonic #1,
+tensor #2, …), and the Living PEM regenerates its shelf table from the
+same source of truth. Application companions stay off the shelf
+[mendez2026livingPem].</p>
+<h3 id="gl:fair-exchange">Fair Exchange</h3>
+<p>The corpus’s reciprocity clause: “value exchanged is fluid and may be
+partially refunded based on resonance and overall delivery.” It runs
+through the Purser’s Desk aboard SS Vibelandia and appears as a “Fair
+Exchange clause” on every ship note — an economic-honesty companion to
+the scope disclaimers [mendez2026masterSynthesis;
+mendez2026livingPem].</p>
+<h3 id="gl:four-pillar-fractal">Four-Pillar Fractal</h3>
+<p>The four filing labels a fractal must carry to count as a <a
+href="#gl:holographic-rhyme"><strong>holographic rhyme</strong></a>:
+<em>repeating · self-similar · self-correcting · recursive</em>. Locked
+as catalog filing labels, not as a measured property of any physical
+system [mendez2026holographicRhyme].</p>
+<h3 id="gl:fractal-constant">Fractal Constant</h3>
+<p>El Gran Sol’s Fractal Constant (EGS): <span
+class="math inline">\(\Phi \approx 1.618\)</span>, the single harmonic
+blueprint the catalog runs on — a “master translator” that keeps the
+same geometric shape across all 99 octaves <em>as a map</em>. The corpus
+is explicit that it is an architectural key, not a replacement for <span
+class="math inline">\(\hbar\)</span>, <span
+class="math inline">\(c\)</span>, or <span
+class="math inline">\(G\)</span> [mendez2026masterSynthesis].</p>
+<h3 id="gl:golden-ratio">Golden Ratio</h3>
+<p>The mathematical constant <span class="math inline">\(\Phi =
+(1+\sqrt{5})/2 \approx 1.618\)</span>. In the corpus’s own honesty rail
+it is “our nesting language” — the design key that keeps the octave
+shelves self-similar (<span class="math inline">\(\Omega_n = \Phi^n
+\cdot \Omega_0\)</span>, with a subscript reading <span
+class="math inline">\(\varphi_{\mathrm{fib}}(n) \cdot \Omega_0\)</span>
+discussed alongside) [mendez2026ship; mendez2026primeParity].</p>
+<h3 id="gl:higgs-gate">Higgs Gate</h3>
+<p>Short for the Higgs-Awareness Phase Coupling Theorem: a triadic
+matrix in which cosmic velocity, particle mass, and conscious presence
+(“Now”) share one deceleration (“squeeze”) story, guest-metaphored by a
+magnet falling through a copper pipe. Catalog grammar — it does not
+overturn Standard Model Higgs physics [mendez2026higgsGate].</p>
+<h3 id="gl:honesty-first">Honesty-First</h3>
+<p>The corpus’s disclosure convention: every paper opens with an
+“Honesty first” clause stating what the construct is (catalog grammar,
+fixtures, filing labels) and what it is explicitly <em>not</em>
+(relativity retirement, clinical QED, forecasting). This textbook
+preserves those disclaimers near-verbatim wherever a claim is restated
+[mendez2026ship; mendez2026catalog].</p>
+<h3 id="gl:holographic-rhyme">Holographic Rhyme</h3>
+<p>The filing of a fractal as a <em>motion grammar</em> rather than a
+static shape: under <span class="math inline">\(\Phi \approx
+1.618\)</span>, a fractal counts as a holographic rhyme when it is
+repeating, self-similar, self-correcting, and recursive — the <a
+href="#gl:four-pillar-fractal"><strong>four-pillar fractal</strong></a>.
+The corpus locks the four pillars as catalog filing labels, not as
+measured physics [mendez2026holographicRhyme].</p>
+<h3 id="gl:irreducible-minimum-set">Irreducible Minimum Set</h3>
+<p>The role given to the odd primes <span class="math inline">\(3, 5, 7,
+11, \ldots\)</span> in Infinite Octaves grammar: each odd prime acts as
+an irreducible minimal container/label, the complement of the sole-even
+<a href="#gl:binary-dyad-anchor"><strong>binary dyad anchor</strong></a>
+[mendez2026primeParity].</p>
+<h3 id="gl:kinematic-set-recycling">Kinematic Set-Recycling</h3>
+<p>The Truckee-corridor filing in which one physical set (walk, stand,
+or ride) yields multiple experiential <a
+href="#gl:octave"><strong>octave</strong></a> states because velocity
+acts as an octave multiplier under <span class="math inline">\(\Phi
+\approx 1.618\)</span> — “same river. Different speed. New theater.” Not
+psychophysics QED [mendez2026setRecycling].</p>
+<h3 id="gl:lattice-linear">Lattice-Linear</h3>
+<p>The EGS Lattice-Linear Gateway console grammar of the PDVSA Gateway
+Ops companion: Production, Field, Compliance, and Export domains joined
+on one shared incident object instead of silo-hopping, with the IBM
+SNA↔︎TCP/IP gateway as the historical rhyme. A labeled simulator, not
+live telemetry [mendez2026pdvsaGateway].</p>
+<h3 id="gl:living-pem">Living PEM</h3>
+<p>The Living Product Engineering Manual of the Lattice Chat product: an
+onboarding and operations map that auto-regenerates from the <a
+href="#gl:engine-shelf"><strong>engine shelf</strong></a> whenever a
+paper is pinned, keeping the documentation in lockstep with the corpus.
+Honesty-boundary tables are its first section [mendez2026livingPem].</p>
+<h3 id="gl:macro-protein">Macro-Protein</h3>
+<p>The filing of a whole living body as a <em>macro-protein work
+engine</em>: metabolic work <span class="math inline">\(W(n)\)</span>
+mapped onto Infinite Octave tier band <span
+class="math inline">\(\theta_{\mathrm{bio}} \in [13, 17]\)</span>, with
+Kleiber’s <span class="math inline">\(\approx 3/4\)</span> law and WBE
+scaling cited as compatible published locks (framing only). An
+application companion, not an engine-shelf pin
+[mendez2026macroProtein].</p>
+<h3 id="gl:master-register">Master Register</h3>
+<p>The 9 <a href="#gl:digit"><strong>digits</strong></a> × 99 <a
+href="#gl:octave"><strong>octaves</strong></a> construct read as a
+library map: nine kinds of digit drawers, ninety-nine nested octave
+shelves, kept self-similar by the golden-ratio key. “The map is for
+coordination, not cosmic destiny” [mendez2026digitsMaster].</p>
+<h3 id="gl:master-synthesis">Master Synthesis</h3>
+<p>The “everything is connected” paper that files reality as a giant
+99-step musical scale on one filing cabinet and walks a five-step
+cascade (Pulse → Sun transmits → planet adjusts → technology evolves →
+humanity responds) as catalog talk — not a forecast and not a claim that
+the sky runs your life [mendez2026masterSynthesis].</p>
+<h3 id="gl:metrological-overlap">Metrological Overlap</h3>
+<p>The Grand Unified Metrological Overlap: five constants — Planck’s
+<span class="math inline">\(h\)</span>, <span
+class="math inline">\(\Phi\)</span>, the primes <span
+class="math inline">\(p_n\)</span>, the hydrogen-line clock <span
+class="math inline">\(\nu_{\mathrm{HI}}\)</span>, and <span
+class="math inline">\(c\)</span> — interlocked “as gears,” with an
+overlap solver under which rest mass files as an interference pattern,
+not a brick. The catalog mass sum <span
+class="math inline">\(m_{\mathrm{catalog}}\)</span> is explicitly not
+identified with electron or proton mass
+[mendez2026metrologicalOverlap].</p>
+<h3 id="gl:multidimensional-rhyme">Multidimensional Rhyme</h3>
+<p>The cross-scale extension of the <a
+href="#gl:holographic-rhyme"><strong>holographic rhyme</strong></a>:
+summation across dimensions denoted <span
+class="math inline">\(\mathrm{xD} \pm \mathrm{yD}\)</span> under <span
+class="math inline">\(\Phi \approx 1.618\)</span>, filing holography as
+bidirectional Infinite Octave encoding — a catalog contrast to static
+boundary-only screens; not AdS/CFT falsification
+[mendez2026mdRhyme].</p>
+<h3 id="gl:net-zero">Net-Zero</h3>
+<p>Zero (<span class="math inline">\(0\)</span>) filed as an <em>active
+equilibrium</em> rather than emptiness: a Net Zero field-cancellation
+lock realized as “Goldilocks equilibrium grammar,” hosted at the <a
+href="#gl:zero-octave"><strong>zero octave</strong></a>
+[mendez2026singularityCrystal].</p>
+<h3 id="gl:node-k0">Node k0</h3>
+<p>Node <span class="math inline">\(k = 0\)</span>, styled the Awakening
+Phase Gate: the locus hosting the Net Zero cancel, the <span
+class="math inline">\(0/0 \rightarrow \Phi^0 = 1\)</span> crystal
+baseline, and a runnable Prime Vault diagnostic. Implementation fixtures
+— catalog algebra, not singularity QED [mendez2026zeroOctave].</p>
+<h3 id="gl:octave">Octave</h3>
+<p>Octaves 01–99 as <em>nested bands</em> — finer shelves inside each
+story of the <a href="#gl:master-register"><strong>master
+register</strong></a>. Successive octaves step by the golden-ratio key
+(<span class="math inline">\(O_{n+1} = O_n \times \Phi\)</span> as
+harmonic filing grammar); “Infinite” names recursive nesting depth, not
+unbounded measured physics tiers [mendez2026digitsMaster;
+mendez2026realityBridge].</p>
+<h3 id="gl:omni-lattice">Omni-Lattice</h3>
+<p>The Infinite Octaves Omni-Lattice: the catalog engine synthesized by
+the corpus — a 99-octave digit×octave filing map keyed by <span
+class="math inline">\(\Phi\)</span>, pinned from a silicon engineering
+bridge up through cosmic-layer narratives, and operated for agent
+coordination and routing. The framework this textbook formalises
+[mendez2026cmosProtonic; mendez2026digitsMaster;
+mendez2026livingPem].</p>
+<h3 id="gl:phi-duality">Phi Duality</h3>
+<p>The 1↔︎2 filing pair read under <span
+class="math inline">\(\Phi\)</span>: leading digit <span
+class="math inline">\(1\)</span> as <a
+href="#gl:proton-space"><strong>proton space</strong></a> versus
+structural digit <span class="math inline">\(2\)</span> as <a
+href="#gl:electron-theater"><strong>electron theater</strong></a>, with
+zero as the balance node between them [mendez2026protonTheater;
+mendez2026topologyVoid].</p>
+<h3 id="gl:prime-container">Prime Container</h3>
+<p>The protein-folding grammar in which odd primes act as irreducible
+containment vaults for residue indices, with a deterministic catalog
+solver — an alternative filing to statistical structure prediction,
+offered as catalog architecture, not a PDB replacement
+[mendez2026proteinFolding].</p>
+<h3 id="gl:prime-parity">Prime Parity</h3>
+<p>The framework that splits the primes by parity for filing: sole-even
+<span class="math inline">\(2\)</span> as the <a
+href="#gl:binary-dyad-anchor"><strong>binary dyad anchor</strong></a>,
+odd primes as <a href="#gl:irreducible-minimum-set"><strong>irreducible
+minimum sets</strong></a>, and octave recursion running on the <a
+href="#gl:fractal-constant"><strong>fractal constant</strong></a> (<span
+class="math inline">\(\Omega_n = \Phi_n \cdot \Omega_0\)</span>, printed
+ambiguously as “Ωn = Φn · Ω0”) [mendez2026primeParity].</p>
+<h3 id="gl:proton-space">Proton Space</h3>
+<p>The filing category assigned to the leading digit <span
+class="math inline">\(1\)</span> — the digit heading <span
+class="math inline">\(\Phi\)</span> and <span
+class="math inline">\(\hbar\)</span> mantissa talk — in the Phi duality.
+Catalog filing, not a CODATA/SI derivation from <span
+class="math inline">\(\Phi\)</span> [mendez2026protonTheater].</p>
+<h3 id="gl:reality-bridge">Reality Bridge</h3>
+<p>The filing of humans as active routers of attention, care, and
+meaning across layers — a reality bridge, a cognitive router, and an
+awareness wormhole. The paper is explicit that this is catalog topology
+and narrative routing, not hardware teleport
+[mendez2026realityBridge].</p>
+<h3 id="gl:self-observation-drag">Self-Observation Drag</h3>
+<p>The Lenz-law / eddy-current analogy for how self-observation slows
+ideation into matter: as the falling magnet’s own induced currents brake
+it, self-observation brakes non-local thought toward localization
+[mendez2026eddyMirror].</p>
+<h3 id="gl:silicon-shelf">Silicon Shelf</h3>
+<p>The nickname for the CMOS/protonic engineering bridge — “putting the
+99 Octave engine on a silicon shelf”: the same filing cabinet with
+silicon vocabulary on the labels (PPA, BEOL, GAA, CFET alongside octaves
+and <span class="math inline">\(\Phi\)</span>). Roadmap language, not a
+measured chip [mendez2026cmosProtonic].</p>
+<h3 id="gl:singularity-crystal">Singularity Crystal</h3>
+<p>The bounded filing of the indeterminate form <span
+class="math inline">\(0/0\)</span> under <span
+class="math inline">\(\Phi \approx 1.618\)</span>: in catalog algebra it
+resolves as <span class="math inline">\(0/0 \rightarrow \Phi^0 =
+1\)</span>, implemented by fixtures that map NaN at the origin to <span
+class="math inline">\(\Phi^0 = 1\)</span>. Catalog algebra, not GR/QFT
+singularity retirement [mendez2026singularityCrystal;
+mendez2026zeroOctave].</p>
+<h3 id="gl:tensor-decoupling">Tensor Decoupling</h3>
+<p>The filing discipline of labeling layers (crust, ocean heat,
+ionosphere, …, master band — eleven shelves of nine slots) on one shared
+bulletin board instead of smushing every headline into one cause. Key
+figures: <span class="math inline">\(11 \times 9
+= 99\)</span> (octave ladder), <span class="math inline">\(9 \times 81 =
+729\)</span> (per-block precision matrix), and <span
+class="math inline">\(\Phi^{-n}\)</span> shelf scaling as a dashboard
+dial [mendez2026tensorDecoupling].</p>
+<h3 id="gl:topology-of-the-void">Topology of the Void</h3>
+<p>The filing of zero (<span class="math inline">\(0\)</span>) as the
+<em>dynamic equilibrium</em> — the null-space pivot — between <a
+href="#gl:proton-space"><strong>proton space</strong></a> (<span
+class="math inline">\(1\)</span>) and <a
+href="#gl:electron-theater"><strong>electron theater</strong></a> (<span
+class="math inline">\(2\)</span>), realized as a zero-balance operator
+(odd-function phase cancellation) and a null-space capacity fixture
+[mendez2026topologyVoid].</p>
+<h3 id="gl:transduction-line">Transduction Line</h3>
+<p>The filing of the speed of light <span
+class="math inline">\(c\)</span> as the line that converts (brakes)
+non-local ideation into localized mass — the central formalism of the
+Eddy-Current Mirror paper. Catalog architecture; the corpus files it
+“as,” not “as measured” [mendez2026eddyMirror].</p>
+<h3 id="gl:viscosity-of-light">Viscosity of Light</h3>
+<p>The filing of the speed of light <span
+class="math inline">\(c\)</span> as <em>frictional drag</em>: non-local
+intent meets a viscous floor at <span class="math inline">\(c\)</span>,
+the localized deceleration rate required to render non-local cognitive
+potential into sequential spacetime matter. Soft Story layered on
+catalog architecture — not FTL thought or relativity retirement
+[mendez2026viscosityLight].</p>
+<h3 id="gl:volumetric-storage">Volumetric Storage</h3>
+<p>The prime-indexed volumetric vault grammar for storage: Prime <span
+class="math inline">\(2\)</span> as the binary base channel, odd primes
+as irreducible vaults, and a closed-form encode contrasted with the
+15–30%+ parity tax of Reed-Solomon/LDPC stacks. A fixture, not JEDEC
+firmware [mendez2026volumetricStorage].</p>
+<h3 id="gl:zero-octave">Zero-Octave</h3>
+<p>The zero octave of the ladder, hosted at <a
+href="#gl:node-k0"><strong>node k0</strong></a>: the locus where the Net
+Zero cancel and the <span class="math inline">\(0/0
+\rightarrow \Phi^0 = 1\)</span> crystal baseline live, with a runnable
+Prime Vault diagnostic under <span class="math inline">\(\Phi \approx
+1.618\)</span> [mendez2026zeroOctave].</p>
+<h3
+id="gl:narrative-empirical-operational-tiers">Narrative-Empirical-Operational
+Tiers</h3>
+<p>The corpus’s honesty separation of claim types — narrative, catalog,
+empirical, operational — which the digit/octave map is explicitly
+designed to keep apart: “sunspot talk, biology metaphors, and
+deep-cosmic horizons can point at the same shelves without pretending
+they are the same science.” Fluency in the corpus means placing every
+claim in its correct tier [mendez2026digitsMaster;
+mendez2026livingPem].</p>
+<hr />
+<p>Cross-reference: the <a
+href="appendices/appendix_notation.md">notation appendix</a> gives the
+symbol table (<span class="math inline">\(\Phi\)</span>, <span
+class="math inline">\(\Omega_n\)</span>, digit and octave indices, <span
+class="math inline">\(k=0\)</span>), and the <a
+href="appendices/appendix_math_review.md">mathematical review</a> works
+the numbers behind the definitions above.</p>
+</main>
+</body>
+</html>

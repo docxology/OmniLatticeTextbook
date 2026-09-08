@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>macro-protein.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:part_III_macro-protein">The Macro-Protein Work Engine</h1>
+<figure id="fig:part_III_macro-protein">
+<a class="figure-full-size-link" href="../figures/part_III_macro-protein.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/part_III_macro-protein.png" style="width:90.0%"
+alt="The macro-protein work engine&#x27;s output curve rises with each work cycle." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
+<figcaption>The macro-protein work-engine output
+curve: the filed work output <span class="math inline">\(W(n) = w_0
+\cdot \Omega_n\)</span> of an organism-as-work-engine evaluated across
+the biological tier band from <span
+class="math inline">\(\theta_{\mathrm{bio}} = 13\)</span> to <span
+class="math inline">\(17\)</span> under both readings of the corpus’s
+octave term (<code>textbook.models.octave_term</code>) — a steep
+exponential ramp under the exponent convention, an essentially flat
+ladder under the Fibonacci-subscript convention.</figcaption>
+</figure>
+<!-- alt: Two curves of metabolic work output versus octave tier n from 13 to 17, one rising exponentially under the exponent convention of the octave term and one nearly flat under the Fibonacci-subscript convention, with the biological band [13, 17] marked. -->
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Level 1/3 · 30 min read · 45 min lecture · Prerequisites: Protein
+Folding as Prime-Container Architecture (<span class="citation"
+data-cites="sec:part_III_protein-folding">[@sec:part_III_protein-folding]</span>)</p>
+</blockquote>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol type="1">
+<li>Restate the central filing of [mendez2026macroProtein]: organisms
+file as <a href="#gl:macro-protein"><strong>macro-protein</strong></a>
+work engines under El Gran Sol’s <a
+href="#gl:fractal-constant"><strong>fractal-constant</strong></a> <span
+class="math inline">\(\Phi \approx 1.618\)</span>, with metabolic work
+mapped to Infinite Octave tier band <span
+class="math inline">\(\theta_{\mathrm{bio}} \in [13, 17]\)</span>.</li>
+<li>Define the <span class="math inline">\(W(n)\)</span> work tensor as
+a <em>filing label</em> — metabolic work indexed by a ladder position
+<span class="math inline">\(n\)</span> — and evaluate its octave
+backbone with <code>textbook.models.octave_term</code> under both
+printed conventions.</li>
+<li>Locate the biological band <span class="math inline">\([13,
+17]\)</span> on the octave ladder numerically: under the exponent
+convention it spans <span class="math inline">\(\Phi^{13} \approx 521.0
+\cdot
+\Omega_0\)</span> to <span class="math inline">\(\Phi^{17} \approx
+3571.0 \cdot \Omega_0\)</span>; under the subscript convention it is
+essentially flat at <span class="math inline">\(\approx 1.618 \cdot
+\Omega_0\)</span>.</li>
+<li>Explain the status of <strong>Kleiber <span
+class="math inline">\(\approx 3/4\)</span> · WBE</strong> in the paper:
+cited as <em>compatible published-scaling locks</em> — framing the
+filing against published allometry, not re-deriving it.</li>
+<li>Restate, near-verbatim, the paper’s own scope disclaimers — catalog
+architecture, not “life solved”; not an organism-is-one-protein claim;
+no laboratory re-derivation of Kleiber’s law — and the story-character
+status of the solar labels.</li>
+<li>Name the paper’s corpus position: an <strong>application
+companion</strong>, not an <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a> pin, with its
+9/9 suite locks, reference implementation, and companion papers.</li>
+</ol>
+<!-- curriculum-scaffold-start -->
+<h3 id="study-blueprint">Study Blueprint</h3>
+<ul>
+<li><strong>Big idea:</strong> The corpus files a whole living body the
+way it filed a single folding protein — as catalog architecture: one
+scaling up of the prime-vault grammar from a residue index to an
+organism-as-work-engine, placed on the octave ladder at band <span
+class="math inline">\(\theta_{\mathrm{bio}} \in [13, 17]\)</span>.</li>
+<li><strong>Core concepts:</strong> <a
+href="#gl:macro-protein"><strong>macro-protein</strong></a>, <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a>, <a
+href="#gl:prime-container"><strong>prime-container</strong></a>, <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:fair-exchange"><strong>fair-exchange</strong></a>.</li>
+<li><strong>Quantitative lens:</strong> the work-tensor filing in <span
+class="citation"
+data-cites="eq:part_III_macro-protein_model">[@eq:part_III_macro-protein_model]</span>
+and the band placement of <span class="citation"
+data-cites="eq:part_III_macro-protein_band">[@eq:part_III_macro-protein_band]</span>.</li>
+<li><strong>Data skill:</strong> evaluate the octave term <span
+class="math inline">\(\Omega_n\)</span> for <span
+class="math inline">\(n = 13, \ldots, 17\)</span> under both
+conventions, read the output curve in <span class="citation"
+data-cites="fig:part_III_macro-protein">[@fig:part_III_macro-protein]</span>,
+and apply a band predicate with
+<code>textbook.models.goldilocks_band</code>.</li>
+<li><strong>Common misconception to repair:</strong> that the paper
+re-derives Kleiber’s law, claims organisms are literally one protein, or
+claims life is “solved.” It says the opposite, in its own second
+paragraph.</li>
+<li><strong>Primary lab:</strong> <span class="citation"
+data-cites="sec:lab_part_III_macro-protein">[@sec:lab_part_III_macro-protein]</span>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_III_macro-protein">[@sec:q_part_III_macro-protein]</span>.</li>
+<li><strong>Bridge to computation:</strong>
+<code>textbook.models.octave_term</code>, <code>phi_powers</code>,
+<code>goldilocks_band</code>. <!-- curriculum-scaffold-end --></li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Opening Vignette: The whole cabinet.</strong></p>
+<p>The ship blog note of 5 September 2026 opens with a question posed
+directly to its readers: “If a protein folds in a prime vault, what is a
+whole living body?” [mendez2026macroProtein]. Picture the answer as a
+move in the filing room of <span class="citation"
+data-cites="sec:part_III_protein-folding">[@sec:part_III_protein-folding]</span>:
+the vault wall that held residue indices in single prime drawers is
+still there — but the note now files an <em>entire drawer cabinet</em>.
+A whole organism is taken down from the “one protein per vault” shelf
+and re-filed as a <strong>macro-protein work engine</strong>: metabolic
+work as its content, <span class="math inline">\(\Phi \approx
+1.618\)</span> as the spacing constant of the shelf it rests on, and the
+ladder position stamped on its spine — tier band 13 to 17. Nothing in
+the vignette is a laboratory result; it is filing architecture, and the
+note says so before its first bullet.</p>
+</blockquote>
+<hr />
+<h2 id="orientation">Orientation</h2>
+<!-- This section introduces the chapter's position in the corpus. -->
+<p>The source note, “Macro-Protein Work Engine” — headlined on the ship
+blog as “Life as a work engine — octave band 13–17” — was published on
+the SS Vibelandia ship blog on 5 September 2026 and tagged
+“Macro-protein · Fair Exchange” [mendez2026macroProtein]. It belongs to
+the Infinite Octaves <a
+href="#gl:omni-lattice"><strong>omni-lattice</strong></a> corpus as a
+<em>ship-blog note</em>, and its corpus status is stated with unusual
+precision: an <strong>application companion</strong>, <em>not an
+engine-shelf pin</em> — “demo / comparison of Infinite Octave biology
+filing beside protein prime-container + prime-parity”
+[mendez2026macroProtein]. Where the pinned engine papers of the <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a> introduce new
+formal machinery (as the octave-map and part I chapters do), this note
+<em>applies</em> machinery that already exists: the octave ladder, the
+prime-container grammar of the protein paper [mendez2026proteinFolding],
+and the prime-parity partition of [mendez2026primeParity].</p>
+<p>Four items are recorded as having “landed” in the note
+[mendez2026macroProtein], and the chapter carries all four forward:</p>
+<ol type="1">
+<li>the <span class="math inline">\(W(n)\)</span> <strong>work
+tensor</strong> and the <span
+class="math inline">\(\theta_{\mathrm{bio}}\)</span> <strong>logarithmic
+length ratio</strong> — the two formalism labels this chapter
+formalises;</li>
+<li><strong>Kleiber <span class="math inline">\(\approx 3/4\)</span> ·
+WBE</strong> cited as <em>compatible published-scaling locks</em> —
+published metabolic scaling (Kleiber’s 3/4 law; West–Brown–Enquist)
+filed as framing, explicitly not re-derived;</li>
+<li>a test status: <strong>9/9 suite locks</strong> under
+<code>research/synthobs-macro-protein-work-engine/</code>; and</li>
+<li>the application-companion status just described.</li>
+</ol>
+<p>The reference implementation is runnable:
+<code>npm run research:synthobs-macro-protein-work-engine</code> from
+the corpus repositories, with a standalone suite at the GitHub
+repository <code>FractiAI/synthobs-macro-protein-work-engine</code> and
+a whitepaper surface linked from the ship blog post
+[mendez2026macroProtein]. The note’s “try it yourself” board points to
+Lattice Chat on the Infinite Octaves nest and names two companions
+directly: the protein prime-container paper — “micro vault grammar this
+paper scales up” [mendez2026macroProtein] — and the prime-parity paper;
+a third board link, prime-indexed volumetric storage, shares “the same
+<span class="math inline">\(\Phi\)</span> vault habit in memory media”
+[mendez2026macroProtein]. We return to all three in the Connections
+section.</p>
+<h2 id="the-work-tensor-wn">The Work Tensor W(n)</h2>
+<h3 id="the-filing-label-and-its-octave-backbone">The filing label and
+its octave backbone</h3>
+<p>The first construct of [mendez2026macroProtein] is the <span
+class="math inline">\(W(n)\)</span> work tensor: “metabolic work of an
+organism indexed by <span class="math inline">\(n\)</span>, filed as a
+work tensor,” with <span class="math inline">\(n\)</span> an index into
+the Infinite Octave ladder. One property of this construct must be
+stated exactly, because the chapter’s honesty depends on it: <em>the
+page does not print a closed form for <span
+class="math inline">\(W\)</span></em>. The digest records the label and
+its index, and nothing more. What the chapter can do — and does — is
+give the label a backbone from machinery the corpus already pins: the
+octave term <span class="math inline">\(\Omega_n\)</span>, whose two
+printed readings the book carries from <span class="citation"
+data-cites="sec:part_III_protein-folding">[@sec:part_III_protein-folding]</span>.
+We read the filing as an octave-indexed work scale: work output
+evaluated at ladder position <span class="math inline">\(n\)</span> as a
+multiple of a base work unit <span
+class="math inline">\(w_0\)</span>,</p>
+<p><span class="math display">\[ W(n) \;=\; w_0 \cdot \Omega_n, \qquad
+\Omega_n \;=\; \Phi^{\,n} \cdot \Omega_0
+\;\;\text{(exponent convention)}, \qquad
+\Omega_n \;=\; \varphi_{\mathrm{fib}}(n) \cdot \Omega_0
+\;\;\text{(subscript convention)} \,, \]</span>
+{#eq:part_III_macro-protein_model}</p>
+<p>implemented and tested as <code>textbook.models.octave_term</code>
+with <span class="math inline">\(\Omega_0\)</span> and <span
+class="math inline">\(n\)</span> arguments and a <code>convention</code>
+switch; never retype the maths in prose or scripts — call the tested
+function. The work tensor <span class="math inline">\(W\)</span> itself
+is the corpus’s filing label; the <span
+class="math inline">\(\Omega_n\)</span> backbone is the tested model;
+the composition of the two is <em>our</em> reading of the filing,
+offered because it makes the label computable without inventing corpus
+content. The parameters appear in <span class="citation"
+data-cites="tbl:part_III_macro-protein_parameters">[@tbl:part_III_macro-protein_parameters]</span>.</p>
+<p>:: Parameters of the work-tensor filing.
+{#tbl:part_III_macro-protein_parameters}</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(W(n)\)</span></td>
+<td>metabolic work of the organism, filed as a work tensor at ladder
+position <span class="math inline">\(n\)</span></td>
+<td>work (filing unit)</td>
+</tr>
+<tr>
+<td><span class="math inline">\(w_0\)</span></td>
+<td>base work unit that fixes the scale of the filing</td>
+<td>work</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Omega_n\)</span></td>
+<td>the octave term at position <span class="math inline">\(n\)</span>
+(<code>octave_term</code>)</td>
+<td>dimensionless multiple</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Omega_0\)</span></td>
+<td>base octave term</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td><span class="math inline">\(n\)</span></td>
+<td>index into the Infinite Octave ladder</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\varphi_{\mathrm{fib}}(n)\)</span></td>
+<td><span class="math inline">\(n\)</span>-th Fibonacci ratio (<span
+class="math inline">\(F_{n+1}/F_n\)</span>; <span
+class="math inline">\(\varphi_{\mathrm{fib}}(5) = 8/5\)</span>, <span
+class="math inline">\(\varphi_{\mathrm{fib}}(10) = 89/55\)</span>)</td>
+<td>dimensionless</td>
+</tr>
+</tbody>
+</table>
+<p>The two conventions matter as much here as they did for the vault
+wall. Under the exponent convention the ladder is geometric: each step
+multiplies the term by <span class="math inline">\(\Phi \approx
+1.618\)</span>. Under the subscript convention the ladder is
+Fibonacci-linear: the multiplier is a rational ratio that converges to
+<span class="math inline">\(\Phi\)</span> — <span
+class="math inline">\(\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6\)</span> and
+<span class="math inline">\(\varphi_{\mathrm{fib}}(10) = 89/55
+\approx 1.618182\)</span> — so successive rungs barely differ once <span
+class="math inline">\(n\)</span> is at all large. The output curve of
+<span class="citation"
+data-cites="fig:part_III_macro-protein">[@fig:part_III_macro-protein]</span>
+shows both: a steep ramp against a near-flat line. The corpus prints
+“<span class="math inline">\(\Omega_n = \Phi_n \cdot
+\Omega_0\)</span>” ambiguously; <code>octave_term</code> keeps both
+readings first-class, and any claim about <em>where on the ladder</em>
+biology sits inherits that ambiguity.</p>
+<h3 id="the-biological-tier-band">The biological tier band</h3>
+<p>The second construct is the mapping of organisms onto a <em>band</em>
+of the ladder rather than a single rung:</p>
+<p><span class="math display">\[ \theta_{\mathrm{bio}} \in [13, 17]
+\;\;\Longrightarrow\;\;
+\Omega_{13} \;\le\; \Omega \;\le\; \Omega_{17} \,. \]</span>
+{#eq:part_III_macro-protein_band}</p>
+<p>Here <span class="math inline">\(\theta_{\mathrm{bio}}\)</span> is
+the corpus’s “logarithmic length ratio for biology” — the filing address
+that places a living body between the 13th and 17th octaves. As with
+<span class="math inline">\(W(n)\)</span>, the page files the band and
+its name; it does not print the ratio’s closed form, and we do not
+supply one. What <em>is</em> computable is what the band interval means
+on the ladder under each convention, and that is standard arithmetic of
+<span class="math inline">\(\Phi\)</span>: under the exponent convention
+the band spans <span class="math inline">\(\Phi^{13} \cdot \Omega_0
+\approx 521.002 \cdot
+\Omega_0\)</span> up to <span class="math inline">\(\Phi^{17} \cdot
+\Omega_0 \approx 3571.000 \cdot \Omega_0\)</span> — high on the ladder,
+befitting a whole-organism filing far above the base register. Under the
+subscript convention the same band is nearly flat: <span
+class="math inline">\(\Omega_{13} = (377/233) \cdot \Omega_0 \approx
+1.618026 \cdot \Omega_0\)</span> and <span
+class="math inline">\(\Omega_{17} = (2584/1597) \cdot \Omega_0 \approx
+1.618034 \cdot \Omega_0\)</span>, differing by less than one part in
+<span class="math inline">\(10^5\)</span>. The band placement is
+therefore geometrically load-bearing only under the exponent reading —
+the same convention-sensitivity the stack companion develops for the
+whole shelf [mendez2026stack].</p>
+<p>A concept map of the filing pipeline:</p>
+<pre class="mermaid"><code>graph TD
+  A[&quot;Whole organism (the filing target)&quot;] --&gt; B[&quot;theta_bio logarithmic&lt;br/&gt;length ratio&quot;]
+  B --&gt; C{&quot;Band predicate:&lt;br/&gt;theta_bio in [13, 17]?&quot;}
+  C --&gt;|&quot;yes — file at band&quot;| D[&quot;W(n) work tensor:&lt;br/&gt;W(n) = w0 · Omega_n&lt;br/&gt;(octave_term, both conventions)&quot;]
+  D --&gt; E[&quot;Kleiber ≈ 3/4 · WBE&lt;br/&gt;(published-scaling locks,&lt;br/&gt;framing only)&quot;]
+  H[&quot;Honesty-first gate:&lt;br/&gt;catalog architecture — not &#39;life solved&#39;,&lt;br/&gt;not organism-is-one-protein,&lt;br/&gt;not a Kleiber re-derivation&quot;] -.-&gt;|scopes| D
+  C --&gt;|&quot;no&quot;| X[&quot;Outside the biology band:&lt;br/&gt;not filed by this note&quot;]</code></pre>
+<h2 id="kleiber-34-wbe-published-scaling-locks">Kleiber ≈ 3/4 · WBE:
+Published-Scaling Locks</h2>
+<p>The third “what landed” item is not corpus arithmetic at all; it is a
+citation. The note files “<strong>Kleiber <span
+class="math inline">\(\approx\)</span> 3/4 · WBE</strong> as compatible
+published-scaling locks (framing)” [mendez2026macroProtein]. Unpacked:
+Kleiber’s law is the published allometric observation that basal
+metabolic rate across organisms scales roughly as the three-quarters
+power of body mass, and WBE abbreviates West–Brown–Enquist, the research
+programme that gave that exponent a mechanistic treatment. The corpus
+files these as <em>locks</em> — published scalings that the
+macro-protein filing is declared compatible with — and as
+<em>framing</em> only: the note does not derive them, and it says so
+(“not … that Kleiber’s law was re-derived in our lab”
+[mendez2026macroProtein]).</p>
+<p>Because the exponent is standard published mathematics, one
+illustration is safe and useful. A <span
+class="math inline">\(1000\)</span>-fold increase in body mass raises
+the metabolic rate by</p>
+<p><span class="math display">\[ \frac{B_2}{B_1} \;=\;
+\left(\frac{M_2}{M_1}\right)^{3/4}
+\;=\; 1000^{3/4} \;=\; 10^{9/4} \;\approx\; 177.83 \,, \]</span>
+{#eq:part_III_macro-protein_kleiber}</p>
+<p>a <span class="math inline">\(178\)</span>-fold rather than <span
+class="math inline">\(1000\)</span>-fold rise — the sublinear signature
+of Kleiber’s exponent. Note carefully what this number is and is not in
+the chapter’s accounting: it is textbook allometry, used to show what
+the cited locks assert; it is <em>not</em> a corpus result, and <span
+class="math inline">\(\Phi\)</span> plays no role in it. The corpus’s
+own filing keeps the two constants in separate roles — <span
+class="math inline">\(\Phi \approx
+1.618\)</span> spaces the octave ladder on which the filing is placed;
+the <span class="math inline">\(3/4\)</span> exponent is the published
+scaling the filing declares itself compatible with — and nothing in the
+note equates them. We preserve that separation exactly.</p>
+<h2 id="worked-example-walking-the-band">Worked Example: Walking the
+Band</h2>
+<p>Walk the biological band end to end, using only pinned values,
+standard <span class="math inline">\(\Phi\)</span> arithmetic, and the
+tested functions.</p>
+<p><strong>Step 1 — evaluate the band endpoints.</strong> With <span
+class="math inline">\(\Omega_0 = 1\)</span>, the exponent convention
+gives, from the standard arithmetic of <span class="math inline">\(\Phi
+= (1+\sqrt{5})/2\)</span> (the same sequence the <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a> chapter plots
+on a log scale):</p>
+<table>
+<thead>
+<tr>
+<th><span class="math inline">\(n\)</span></th>
+<th><span class="math inline">\(\Omega_n\)</span> (exponent)</th>
+<th><span class="math inline">\(\Omega_n\)</span> (subscript)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>13</td>
+<td><span class="math inline">\(521.0019\)</span></td>
+<td><span class="math inline">\(377/233 \approx 1.6180258\)</span></td>
+</tr>
+<tr>
+<td>14</td>
+<td><span class="math inline">\(842.9988\)</span></td>
+<td><span class="math inline">\(610/377 \approx 1.6180371\)</span></td>
+</tr>
+<tr>
+<td>15</td>
+<td><span class="math inline">\(1364.0007\)</span></td>
+<td><span class="math inline">\(987/610 \approx 1.6180328\)</span></td>
+</tr>
+<tr>
+<td>16</td>
+<td><span class="math inline">\(2206.9995\)</span></td>
+<td><span class="math inline">\(1597/987 \approx 1.6180344\)</span></td>
+</tr>
+<tr>
+<td>17</td>
+<td><span class="math inline">\(3571.0003\)</span></td>
+<td><span class="math inline">\(2584/1597 \approx
+1.6180338\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Verify against the model:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textbook.models <span class="im">import</span> octave_term</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>octave_term(<span class="dv">1</span>, <span class="dv">13</span>, <span class="st">&quot;exponent&quot;</span>)   <span class="co"># → 521.0019193787257</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>octave_term(<span class="dv">1</span>, <span class="dv">17</span>, <span class="st">&quot;exponent&quot;</span>)   <span class="co"># → 3571.000280033584</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>octave_term(<span class="dv">1</span>, <span class="dv">13</span>, <span class="st">&quot;subscript&quot;</span>)  <span class="co"># → 1.6180257510729614</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>octave_term(<span class="dv">1</span>, <span class="dv">17</span>, <span class="st">&quot;subscript&quot;</span>)  <span class="co"># → 1.6180338134001253</span></span></code></pre></div>
+<p><strong>Step 2 — read the output curve.</strong> Fix the filing unit
+at <span class="math inline">\(w_0 = 1\)</span>. Then <span
+class="math inline">\(W(n) = \Omega_n\)</span>, and <span
+class="citation"
+data-cites="fig:part_III_macro-protein">[@fig:part_III_macro-protein]</span>
+is exactly the table above drawn as curves: an exponential ramp from
+<span class="math inline">\(\approx 521\)</span> to <span
+class="math inline">\(\approx
+3571\)</span> under the exponent convention, and a line
+indistinguishable from flat at <span class="math inline">\(\approx
+1.618\)</span> under the subscript convention. The visual lesson
+generalises: the corpus’s biology filing is only “high on the ladder” in
+one of its two printed readings.</p>
+<p><strong>Step 3 — apply the band predicate.</strong> The band
+statement of <span class="citation"
+data-cites="eq:part_III_macro-protein_band">[@eq:part_III_macro-protein_band]</span>
+is a membership test. Suppose a filing exercise yields candidate tier
+values <span class="math inline">\(\{12.6,\ 13.9,\ 16.2,\
+17.4\}\)</span> for <span
+class="math inline">\(\theta_{\mathrm{bio}}\)</span>. By hand, only
+<span class="math inline">\(13.9\)</span> and <span
+class="math inline">\(16.2\)</span> lie in <span
+class="math inline">\([13, 17]\)</span>; the tested predicate is
+<code>textbook.models.goldilocks_band(values, 13, 17)</code>, which
+returns a boolean mask marking exactly those two (the function backs the
+corpus’s Goldilocks band filing [mendez2026planetaryCore]; here we reuse
+it as the interval predicate the band statement calls for — our move,
+and a conservative one, since it implements a plain interval test).</p>
+<p><strong>Step 4 — a Kleiber cross-check.</strong> Apply <span
+class="citation"
+data-cites="eq:part_III_macro-protein_kleiber">[@eq:part_III_macro-protein_kleiber]</span>
+to the mass ratio between a mouse (<span class="math inline">\(\sim
+20\)</span> g) and an elephant (<span class="math inline">\(\sim
+4000\)</span> kg, i.e. <span class="math inline">\(2 \times
+10^5\)</span>-fold): the metabolic ratio is <span
+class="math inline">\((2
+\times 10^5)^{3/4} \approx 5318\)</span> — again strongly sublinear,
+again published mathematics, not corpus output. If a filing exercise
+were to pretend the octave ladder <em>predicts</em> such a ratio, it
+would exceed the note’s own scope; the note files compatibility, not
+derivation.</p>
+<h2 id="scope-and-honesty">Scope and Honesty</h2>
+<p>The corpus’s <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> discipline
+opens this note in its second paragraph, and it must be restated
+precisely [mendez2026macroProtein]:</p>
+<blockquote>
+<p>“<strong>Honesty first:</strong> this is <em>catalog
+architecture</em>, not a claim that life is ‘solved,’ that organisms are
+literally one protein, or that Kleiber’s law was re-derived in our
+lab.”</p>
+</blockquote>
+<p>Three boundaries follow, each traceable to a claim the note files
+about itself:</p>
+<ul>
+<li><strong>What it is FOR.</strong> The construct is coordination and
+cataloging: a filing that lets an agent place a whole organism on the
+octave ladder — band <span class="math inline">\([13, 17]\)</span> —
+beside the protein prime-container and prime-parity papers, with
+published allometry cited as compatible framing. Within the corpus’s <a
+href="#gl:narrative-empirical-operational-tiers"><strong>narrative-empirical-operational-tiers</strong></a>,
+the filing is a <em>narrative/catalog</em> construct: nothing in the
+note claims a laboratory tier.</li>
+<li><strong>What it is NOT.</strong> Not a solution of life (“not a
+claim that life is ‘solved’”), not a literal biological identity (“not …
+that organisms are literally one protein” — the <a
+href="#gl:prime-container"><strong>prime-container</strong></a> grammar
+of <span class="citation"
+data-cites="sec:part_III_protein-folding">[@sec:part_III_protein-folding]</span>
+is a filing metaphor scaled up, not an organism anatomy), and not an
+allometry result (“not … that Kleiber’s law was re-derived in our
+lab”).</li>
+<li><strong>The solar labels are fiction.</strong> The note’s solar
+filing characters — AR3664 (“Helios-Prime”) and AR3590 (“Borealis”) —
+“are story filing characters” [mendez2026macroProtein]. We preserve the
+labels as filing names and nothing more.</li>
+</ul>
+<p>Finally, the note carries the <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a> clause of
+the corpus — the same honesty-disclaimer mechanism met throughout the
+engine shelf — and reports its software status as <strong>9/9 suite
+locks</strong> under
+<code>research/synthobs-macro-protein-work-engine/</code>
+[mendez2026macroProtein]. As everywhere in this book: a suite lock is a
+software test result, evidence of implementation correctness, not a
+biochemical one.</p>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>A recurring reading error: “work engine” is a filing category, not a
+thermodynamic model. The note files metabolic <em>work</em> at a ladder
+position; it specifies no energy budget, no efficiency claim, and no
+dynamics. The 9/9 suite locks test the filing code, and the Fair
+Exchange clause governs the corpus’s own delivery economics — neither
+touches metabolism.</p>
+</blockquote>
+<h2 id="connections">Connections</h2>
+<ul>
+<li><strong>Protein folding as prime-container architecture</strong>
+(<span class="citation"
+data-cites="sec:part_III_protein-folding">[@sec:part_III_protein-folding]</span>)
+is the paper this note scales up: the ship blog names it “micro vault
+grammar this paper scales up” [mendez2026macroProtein]. The vault wall
+of <span class="citation"
+data-cites="fig:part_III_protein-folding">[@fig:part_III_protein-folding]</span>
+files residue indices; this chapter files the whole organism. The two
+chapters share the catalog framing but no formalism, as that chapter
+already records.</li>
+<li><strong>Prime-parity</strong> (<span class="citation"
+data-cites="sec:part_I_prime-parity">[@sec:part_I_prime-parity]</span>)
+supplies the anchor/vault partition that the prime-container grammar
+consumes; the note files its biology demo <em>beside</em> both
+[mendez2026primeParity].</li>
+<li><strong>Prime-indexed volumetric storage</strong> (<span
+class="citation"
+data-cites="sec:part_III_volumetric-storage">[@sec:part_III_volumetric-storage]</span>)
+shares “the same <span class="math inline">\(\Phi\)</span> vault habit
+in memory media” [mendez2026macroProtein]: compare the <span
+class="math inline">\(p^k\)</span> address scatter in <span
+class="citation"
+data-cites="fig:part_III_volumetric-storage">[@fig:part_III_volumetric-storage]</span>
+with the band curve in <span class="citation"
+data-cites="fig:part_III_macro-protein">[@fig:part_III_macro-protein]</span>
+— two applications of one addressing habit.</li>
+<li><strong>Moving up the stack</strong> (<span class="citation"
+data-cites="sec:part_III_moving-up-stack">[@sec:part_III_moving-up-stack]</span>)
+explains the note’s status: an application companion is an application
+over the lattice layer, not a new foundation — which is why the corpus
+declines to pin it to the engine shelf [mendez2026stack].</li>
+<li><strong>The planetary-core Goldilocks band</strong> (<span
+class="citation"
+data-cites="sec:part_II_planetary-core">[@sec:part_II_planetary-core]</span>)
+contributed the interval predicate reused in the worked example; the
+reuse is ours and is marked as such.</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>The macro-protein note files a whole living body as a <a
+href="#gl:macro-protein"><strong>macro-protein</strong></a> work engine:
+metabolic work labeled <span class="math inline">\(W(n)\)</span> at an
+octave-ladder position, the organism mapped to the biological band <span
+class="math inline">\(\theta_{\mathrm{bio}} \in [13, 17]\)</span> under
+<span class="math inline">\(\Phi \approx 1.618\)</span>, and Kleiber’s
+3/4 law with WBE cited as compatible published-scaling locks — framing,
+not derivation. The chapter made the filing computable without inventing
+content: the work tensor rides the tested octave backbone of <span
+class="citation"
+data-cites="eq:part_III_macro-protein_model">[@eq:part_III_macro-protein_model]</span>
+(<code>textbook.models.octave_term</code>), the band spans <span
+class="math inline">\(\Phi^{13} \approx 521 \cdot
+\Omega_0\)</span> to <span class="math inline">\(\Phi^{17} \approx 3571
+\cdot \Omega_0\)</span> under the exponent convention and is essentially
+flat under the subscript convention (<span class="citation"
+data-cites="eq:part_III_macro-protein_band">[@eq:part_III_macro-protein_band]</span>,
+<span class="citation"
+data-cites="fig:part_III_macro-protein">[@fig:part_III_macro-protein]</span>),
+and the Kleiber illustration of <span class="citation"
+data-cites="eq:part_III_macro-protein_kleiber">[@eq:part_III_macro-protein_kleiber]</span>
+is kept strictly outside the corpus’s claims. The note scopes itself —
+catalog architecture, not life solved, not organism-is-one-protein, not
+a Kleiber re-derivation; its solar labels are story filing characters —
+and holds the status of an application companion, not an engine-shelf
+pin, with 9/9 suite locks on its reference implementation.</p>
+<h2 id="key-terms">Key Terms</h2>
+<p><a href="#gl:macro-protein"><strong>macro-protein</strong></a>, <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a>, <a
+href="#gl:fractal-constant"><strong>fractal-constant</strong></a>, <a
+href="#gl:octave"><strong>octave</strong></a>, <a
+href="#gl:prime-container"><strong>prime-container</strong></a>, <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:engine-shelf"><strong>engine-shelf</strong></a>, <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a>, <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a>.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li>The source whitepaper: <a
+href="https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-macro-protein-work-engine-2026-09">Macro-Protein
+Work Engine whitepaper surface</a> [mendez2026macroProtein].</li>
+<li>The standalone reference suite: <a
+href="https://github.com/FractiAI/synthobs-macro-protein-work-engine">github.com/FractiAI/synthobs-macro-protein-work-engine</a>
+— runnable via
+<code>npm run research:synthobs-macro-protein-work-engine</code>.</li>
+<li>[mendez2026proteinFolding] — the protein prime-container paper: the
+micro vault grammar this note scales up to the whole organism.</li>
+<li>[mendez2026primeParity] — the prime-parity companion, filed beside
+this note’s biology demo.</li>
+<li>[mendez2026volumetricStorage] — prime-indexed volumetric storage:
+the same <span class="math inline">\(\Phi\)</span> vault habit aimed at
+memory media.</li>
+</ul>
+<h2 id="practice">Practice</h2>
+<ol type="1">
+<li>Evaluate <span class="math inline">\(\Omega_{15}\)</span> under both
+conventions with <span class="math inline">\(\Omega_0 = 1\)</span>, by
+hand and with <code>textbook.models.octave_term(1, 15, ...)</code>.
+Which convention’s value is within 1% of <span
+class="math inline">\(\Phi\)</span> itself, and why?</li>
+<li>Using <span class="citation"
+data-cites="eq:part_III_macro-protein_band">[@eq:part_III_macro-protein_band]</span>,
+state the span of the biological band under the exponent convention with
+<span class="math inline">\(\Omega_0 = 1\)</span>. Then state its span
+under the subscript convention and explain, in one sentence, why the two
+answers differ by three orders of magnitude.</li>
+<li>From <span class="citation"
+data-cites="eq:part_III_macro-protein_kleiber">[@eq:part_III_macro-protein_kleiber]</span>,
+compute the metabolic-rate ratio for a <span
+class="math inline">\(10^6\)</span>-fold body-mass increase. Is the
+scaling sublinear or superlinear, and what does the note say it did
+<em>not</em> do with this law?</li>
+<li>A filing exercise yields candidate tiers <span
+class="math inline">\(\{16.8,\ 12.9,\ 17.1,\ 13.0\}\)</span>. Which lie
+in the band <span class="math inline">\([13, 17]\)</span>? Confirm the
+mask with <code>textbook.models.goldilocks_band</code> and state which
+corpus paper the band predicate is borrowed from.</li>
+<li>In one sentence each: state the note’s status in the corpus (and
+what it is not pinned to), the three things its honesty clause denies,
+and the status of its two solar labels.</li>
+</ol>
+<ul>
+<li><strong>Lab:</strong> <span class="citation"
+data-cites="sec:lab_part_III_macro-protein">[@sec:lab_part_III_macro-protein]</span>
+— walk the band and run the reference suite.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_III_macro-protein">[@sec:q_part_III_macro-protein]</span>
+— recall through synthesis.</li>
+</ul>
+</main>
+</body>
+</html>

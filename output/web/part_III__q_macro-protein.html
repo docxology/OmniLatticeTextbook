@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>q_macro-protein.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:q_part_III_macro-protein">Question Bank — The Macro-Protein
+Work Engine</h1>
+<p>Linked chapter: <span class="citation"
+data-cites="sec:part_III_macro-protein">[@sec:part_III_macro-protein]</span>.</p>
+<h2 id="recall">Recall</h2>
+<ol type="1">
+<li>What does the note [mendez2026macroProtein] file a whole living body
+as, and under which constant and tier band? <em>(Answer: as a <a
+href="#gl:macro-protein"><strong>macro-protein</strong></a> work engine
+— metabolic work filed under El Gran Sol’s <a
+href="#gl:fractal-constant"><strong>fractal-constant</strong></a> <span
+class="math inline">\(\Phi \approx 1.618\)</span>, with metabolic work
+mapped to the Infinite Octave tier band <span
+class="math inline">\(\theta_{\mathrm{bio}} \in [13,
+17]\)</span>.)</em></li>
+<li>State the note’s honesty-first disclaimer, near-verbatim.
+<em>(Answer: “this is <em>catalog architecture</em>, not a claim that
+life is ‘solved,’ that organisms are literally one protein, or that
+Kleiber’s law was re-derived in our lab”
+[mendez2026macroProtein].)</em></li>
+<li>What status does the note claim in the corpus, and what does it
+explicitly decline? <em>(Answer: an <strong>application
+companion</strong> — demo / comparison of Infinite Octave biology filing
+beside the protein prime-container and prime-parity papers — explicitly
+</em>not* an <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a> pin
+[mendez2026macroProtein].)*</li>
+</ol>
+<h2 id="application">Application</h2>
+<ol start="4" type="1">
+<li>Write the work-tensor filing of <span class="citation"
+data-cites="eq:part_III_macro-protein_model">[@eq:part_III_macro-protein_model]</span>
+and evaluate <span class="math inline">\(W(15)\)</span> with <span
+class="math inline">\(w_0 = \Omega_0 = 1\)</span> under the exponent
+convention. <em>(Answer: <span class="math inline">\(W(n) = w_0 \cdot
+\Omega_n\)</span>; under the exponent convention <span
+class="math inline">\(\Omega_{15} = \Phi^{15} \approx
+1364.0007\)</span>, so <span class="math inline">\(W(15) \approx
+1364.0007\)</span>; verify with
+<code>textbook.models.octave_term(1, 15, "exponent")</code>.)</em></li>
+<li>Candidate tier values <span class="math inline">\(\{12.6,\ 13.9,\
+16.2,\ 17.4\}\)</span> arise in a filing exercise. Which lie in the
+biology band, and which tested function implements the predicate?
+<em>(Answer: <span class="math inline">\(13.9\)</span> and <span
+class="math inline">\(16.2\)</span> lie in <span
+class="math inline">\([13, 17]\)</span>; the mask is returned by
+<code>textbook.models.goldilocks_band</code> per <span class="citation"
+data-cites="eq:part_III_macro-protein_band">[@eq:part_III_macro-protein_band]</span>
+— a plain interval test the chapter borrows from the corpus’s Goldilocks
+band filing.)</em></li>
+<li>Using <span class="citation"
+data-cites="eq:part_III_macro-protein_kleiber">[@eq:part_III_macro-protein_kleiber]</span>,
+compute the metabolic-rate ratio for a <span
+class="math inline">\(1000\)</span>-fold body-mass increase, and state
+what the note says it did <em>not</em> do with Kleiber’s law.
+<em>(Answer: <span class="math inline">\(1000^{3/4} = 10^{9/4}
+\approx 177.83\)</span> — a sublinear rise; the note explicitly does not
+claim that Kleiber’s law was re-derived in its lab — it cites Kleiber
+<span class="math inline">\(\approx 3/4\)</span> · WBE as
+</em>compatible published-scaling locks<em>, framing only
+[mendez2026macroProtein].)</em></li>
+</ol>
+<h2 id="synthesis">Synthesis</h2>
+<ol start="7" type="1">
+<li>The band <span class="math inline">\(\theta_{\mathrm{bio}} \in [13,
+17]\)</span> spans wildly different intervals under the corpus’s two
+printed octave conventions. Construct the two spans and explain the
+consequence for the filing. <em>(Answer: exponent convention — from
+<span class="math inline">\(\Phi^{13} \cdot \Omega_0 \approx 521.002
+\cdot
+\Omega_0\)</span> to <span class="math inline">\(\Phi^{17} \cdot
+\Omega_0 \approx 3571.000 \cdot \Omega_0\)</span>, a <span
+class="math inline">\(\sim 6.9\times\)</span> span high on a geometric
+ladder; subscript convention — from <span class="math inline">\(377/233
+\approx 1.618026\)</span> to <span class="math inline">\(2584/1597
+\approx 1.618034\)</span>, less than one part in <span
+class="math inline">\(10^5\)</span>, essentially flat. Because the
+corpus prints “<span class="math inline">\(\Omega_n = \Phi_n \cdot
+\Omega_0\)</span>” ambiguously, any claim about </em>where on the
+ladder* biology sits is convention-sensitive — the same ambiguity
+<code>textbook.models.octave_term</code> resolves by making the
+convention an explicit argument.)*</li>
+<li>The note cites <strong>Kleiber <span class="math inline">\(\approx
+3/4\)</span> · WBE</strong> as “compatible published-scaling locks
+(framing).” Explain what each of the three roles — compatible,
+published, framing — rules out, drawing on <span class="citation"
+data-cites="eq:part_III_macro-protein_kleiber">[@eq:part_III_macro-protein_kleiber]</span>.
+<em>(Answer: </em>compatible* — the filing declares no conflict with the
+<span class="math inline">\(3/4\)</span> allometric exponent but does
+not derive or reproduce it; <em>published</em> — the scalings come from
+the literature (Kleiber; West–Brown–Enquist), not from the corpus;
+<em>framing</em> — they contextualise the filing rather than support it
+evidentially. The <span class="math inline">\(1000^{3/4} \approx
+177.83\)</span> ratio is standard allometry used to show what the locks
+assert; it is not a corpus result, and <span
+class="math inline">\(\Phi\)</span> plays no role in it
+[mendez2026macroProtein].)*</li>
+<li>Position the note in the corpus’s companion graph and explain why
+its application-companion status fits its content. <em>(Answer: it is a
+ship-blog note that </em>applies* existing machinery — the octave
+ladder, the prime-container grammar it names “micro vault grammar this
+paper scales up” [mendez2026macroProtein] from <span class="citation"
+data-cites="sec:part_III_protein-folding">[@sec:part_III_protein-folding]</span>,
+and the prime-parity partition of <span class="citation"
+data-cites="sec:part_I_prime-parity">[@sec:part_I_prime-parity]</span> —
+and it is cross-linked to prime-indexed volumetric storage (<span
+class="citation"
+data-cites="sec:part_III_volumetric-storage">[@sec:part_III_volumetric-storage]</span>)
+as sharing “the same <span class="math inline">\(\Phi\)</span> vault
+habit.” Introducing no new foundation-level formalism, it is filed as an
+application companion rather than an engine-shelf pin, which is exactly
+the layer placement “Moving up the stack” [mendez2026stack] gives
+fixture-grade catalog work.)*</li>
+</ol>
+</main>
+</body>
+</html>

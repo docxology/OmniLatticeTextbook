@@ -1,0 +1,9 @@
+graph TD
+  A["One physical set (Truckee corridor / one asset bundle)"] --> B["Velocity as octave multiplier under Phi"]
+  B --> O0["State 0 · stationary (v -> 0)"]
+  B --> O1["State 1 · pedestrian"]
+  B --> O2["State 2 · cyclist"]
+  O0 --> R["Round-robin recycling: sigma(i) = i mod 3"]
+  O1 --> R
+  O2 --> R
+  R -->|"zero new assets"| A

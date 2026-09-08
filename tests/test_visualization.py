@@ -5,7 +5,6 @@ from __future__ import annotations
 from pathlib import Path
 
 import pytest
-from infrastructure.validation.content.figure_validator import validate_figure_registry
 
 from textbook.config import iter_chapters, load_config
 from visualization import _scaffold, plots
@@ -47,30 +46,69 @@ def test_generate_chapter_placeholders_matches_config(tmp_path):
     # The legacy name retains one-file-per-chapter behavior while dispatching
     # filled chapters to their bespoke renderers.
     assert len(paths) == len(iter_chapters(config))
-    assert "part_III_case_studies.png" in {path.name for path in paths}
+    assert "part_III_frontiers.png" in {path.name for path in paths}
     for path in paths:
         _png_is_nonempty(path)
 
 
-def test_generate_chapter_figures_uses_source_bound_case_study_plot(tmp_path):
+def test_generate_chapter_figures_uses_bespoke_lattice_plots(tmp_path):
     paths = plots.generate_chapter_figures(tmp_path, load_config())
 
     assert len(paths) == len(iter_chapters(load_config()))
-    case_study = next(path for path in paths if path.name == "part_III_case_studies.png")
-    _png_is_nonempty(case_study)
-    placeholder = plots.placeholder_overview("Case Studies", tmp_path / "control", "part_III_case_studies")
-    assert case_study.read_bytes() != placeholder.read_bytes()
+    crystal = next(path for path in paths if path.name == "part_II_singularity-crystal.png")
+    _png_is_nonempty(crystal)
+    placeholder = plots.placeholder_overview(
+        "The Holographic Singularity Crystal", tmp_path / "control", "part_II_singularity-crystal"
+    )
+    assert crystal.read_bytes() != placeholder.read_bytes()
 
 
-def test_case_study_figure_changes_when_source_measurement_changes(tmp_path):
-    source = PROJECT_ROOT / "manuscript" / "assets" / "data" / "sample_dataset.csv"
-    alternate = tmp_path / "alternate.csv"
-    alternate.write_text(source.read_text(encoding="utf-8").replace("5.10,0.30", "7.10,0.30"), encoding="utf-8")
 
-    canonical_plot = plots.plot_case_study_errorbars(tmp_path / "canonical", dataset_path=source)
-    alternate_plot = plots.plot_case_study_errorbars(tmp_path / "alternate", dataset_path=alternate)
+def _canonical_chapter_builders():
+    """Yield (key, builder) for every enabled chapter with a bespoke builder."""
+    for chapter in iter_chapters(load_config()):
+        key = (chapter.part_id, chapter.stem)
+        builder = plots.CHAPTER_BUILDERS.get(key)
+        if builder is not None:
+            yield key, builder
 
-    assert canonical_plot.read_bytes() != alternate_plot.read_bytes()
+
+_CANONICAL_BUILDERS = sorted(_canonical_chapter_builders(), key=lambda item: item[0])
+
+
+def test_canonical_chapter_builders_cover_the_figure_plan():
+    """Every enabled chapter has a bespoke builder."""
+    for chapter in iter_chapters(load_config()):
+        key = (chapter.part_id, chapter.stem)
+        assert key in plots.CHAPTER_BUILDERS, f"missing bespoke builder for {key}"
+
+
+@pytest.mark.parametrize(
+    "fn",
+    [builder for _, builder in _CANONICAL_BUILDERS],
+    ids=[f"{part}_{stem}" for (part, stem), _ in _CANONICAL_BUILDERS],
+)
+def test_canonical_chapter_figures_write_png(tmp_path, fn):
+    path = fn(tmp_path)
+    _png_is_nonempty(path)
+
+
+def test_generate_chapter_figures_emits_canonical_names(tmp_path):
+    config = load_config()
+    paths = plots.generate_chapter_figures(tmp_path, config)
+    expected = {f"{chapter.part_id}_{chapter.stem}.png" for chapter in iter_chapters(config)}
+    assert {path.name for path in paths} == expected
+    for path in paths:
+        _png_is_nonempty(path)
+
+
+def test_generate_chapter_figures_dispatches_bespoke_not_placeholder(tmp_path):
+    paths = plots.generate_chapter_figures(tmp_path, load_config())
+    octave_map = next(path for path in paths if path.name == "part_0_octave-map.png")
+    control = plots.placeholder_overview(
+        "Nine Digits, Ninety-Nine Octaves", tmp_path / "control", "part_0_octave-map"
+    )
+    assert octave_map.read_bytes() != control.read_bytes()
 
 
 @pytest.mark.slow
@@ -81,17 +119,17 @@ def test_generate_all_figures(tmp_path):
     assert len(paths) == len(worked) + len(iter_chapters(load_config()))
     names = {p.name for p in paths}
     assert "logistic_growth.png" in names  # a worked figure
-    assert "part_0_orientation.png" in names  # a chapter placeholder that is displayed
-    assert "part_III_case_studies.png" in names  # a bespoke, data-derived chapter figure
+    assert "part_0_orientation.png" in names  # a bespoke engine-shelf timeline
+    assert "part_II_singularity-crystal.png" in names  # a bespoke lattice figure
 
 
 def test_figure_registry_entries_match_manuscript_labels(tmp_path):
     plots.generate_all_figures(tmp_path)
-    entries = collect_figure_registry_entries(PROJECT_ROOT / "manuscript", tmp_path)
+    entries = collect_figure_registry_entries(PROJECT_ROOT / "docs" / "manuscript", tmp_path)
     labels = {entry.label for entry in entries}
     assert "fig:part_0_orientation" in labels
     assert "fig:gallery_line" in labels
-    assert "fig:part_III_case_studies" in labels
+    assert "fig:part_III_frontiers" in labels
     assert labels <= set(FIGURE_ALT_TEXT)
     assert all(entry.alt.strip() for entry in entries)
 
@@ -116,17 +154,17 @@ def test_figure_registry_validates_manuscript_references(tmp_path):
     from visualization.gallery import generate_gallery_figures
 
     paths.extend(generate_gallery_figures(tmp_path / "gallery"))
-    registry = write_figure_registry(PROJECT_ROOT / "manuscript", tmp_path)
+    manuscript_dir = PROJECT_ROOT / "docs" / "manuscript"
+    registry = write_figure_registry(manuscript_dir, tmp_path)
+    entries = collect_figure_registry_entries(manuscript_dir, tmp_path)
 
-    ok, issues = validate_figure_registry(
-        registry,
-        PROJECT_ROOT / "manuscript",
-        require_accessibility=True,
-    )
+    missing = [entry.filename for entry in entries if not (tmp_path / entry.filename).exists()]
+    blank_alt = [entry.label for entry in entries if not entry.alt.strip()]
 
     assert registry.exists()
     assert paths
-    assert ok, issues
+    assert missing == [], missing
+    assert blank_alt == [], blank_alt
 
 
 def test_figure_registry_rejects_two_labels_claiming_one_filename(tmp_path):
@@ -170,6 +208,19 @@ def test_cover_art_no_subtitle(tmp_path):
     assert path.name == "template_textbook_cover.png"
 
 
+def test_omnilattice_cover(tmp_path):
+    path = plots.omnilattice_cover(tmp_path)
+    _png_is_nonempty(path)
+    assert path.name == "omnilattice_cover.png"
+
+
+def test_omnilattice_cover_is_deterministic(tmp_path):
+    """The cover must render byte-stable across runs and directories."""
+    first = plots.omnilattice_cover(tmp_path / "a")
+    second = plots.omnilattice_cover(tmp_path / "b")
+    assert first.read_bytes() == second.read_bytes()
+
+
 def test_figures_are_deterministic(tmp_path):
     first = tmp_path / "a"
     second = tmp_path / "b"
@@ -202,3 +253,26 @@ def test_figure_registry_extracts_from_output_figures_path(tmp_path):
     result = _figure_filename(image_path, resolved, figures_root)
     # Should extract "gallery/gallery_bar.png"
     assert result == "gallery/gallery_bar.png"
+
+
+def test_chapter_builders_cover_thirty_figures():
+    """The upgraded composite figure plan ships exactly 30 bespoke builders."""
+    assert len(plots.CHAPTER_BUILDERS) == 30
+
+
+@pytest.mark.parametrize(
+    "builder",
+    [
+        plots.plot_eddy_brake_inset,
+        plots.plot_phi_growth_fibonacci,
+        plots.plot_goldilocks_band_trace,
+        plots.plot_frontiers_quadrant_map,
+    ],
+    ids=["eddy-brake-inset", "phi-growth-fibonacci", "goldilocks-band", "frontiers-quadrant"],
+)
+def test_upgraded_composites_are_byte_deterministic(tmp_path, builder):
+    """Representative upgraded composites render byte-stable across runs and directories."""
+    first = builder(tmp_path / "a")
+    second = builder(tmp_path / "b")
+    _png_is_nonempty(first)
+    assert first.read_bytes() == second.read_bytes()

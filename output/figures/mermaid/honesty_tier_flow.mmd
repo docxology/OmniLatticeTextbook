@@ -1,0 +1,10 @@
+graph TD
+  Narrative["Narrative tier"]
+  Empirical["Empirical tier"]
+  Operational["Operational tier"]
+  Disclosure["Fair Exchange disclosure"]
+  Reader["Reader"]
+  Narrative -->|stories, framing, cover art| Disclosure
+  Empirical -->|counts, tables, pinned constants| Disclosure
+  Operational -->|fixtures, suite locks, npm run| Disclosure
+  Disclosure -->|disclosed scope| Reader

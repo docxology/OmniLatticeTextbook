@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>q_y-chromosome.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:q_part_III_y-chromosome">Question Bank — Y-Chromosome
+Manifestation: Digit 4</h1>
+<p>Linked chapter: <span class="citation"
+data-cites="sec:part_III_y-chromosome">[@sec:part_III_y-chromosome]</span>.</p>
+<h2 id="recall">Recall</h2>
+<ol type="1">
+<li>Under which filing mode does the August 2026 note treat the MSY
+palindrome arms P1–P8 and the <em>SRY</em> locus, and what constant keys
+that filing? <em>(Answer: <strong>Infinite Octave Mode</strong>; the
+arms and locus are filed as catalog geometry keyed by <span
+class="math inline">\(\Phi \approx 1.618\)</span>, El Gran Sol’s Fractal
+constant [mendez2026yChromosome].)</em></li>
+<li>Write the palindrome-scaling relation and name every symbol in it.
+<em>(Answer: <span class="math inline">\(P_n = P_0 \cdot \Phi^n\)</span>
+for <span class="math inline">\(n = 1,\dots,8\)</span>, where <span
+class="math inline">\(P_n\)</span> is the palindrome block spacing at
+octave index <span class="math inline">\(n\)</span>, <span
+class="math inline">\(P_0\)</span> is the base spacing, <span
+class="math inline">\(\Phi \approx 1.618\)</span>, and <span
+class="math inline">\(n\)</span> indexes arms P1–P8; implemented as
+<code>textbook.models.phi_powers</code>.)</em></li>
+<li>What is the SRY phase origin, and how does the note position the MSY
+relative to the “shrinking evolutionary relic” framing? <em>(Answer: the
+sex-determining region is filed as the zero-point anchor of the
+manifestation cartoon — index <span class="math inline">\(0\)</span> of
+the drawer; the note declines to file the MSY as a shrinking
+evolutionary relic, instead filing it as geometrically indexed catalog
+structure.)</em></li>
+</ol>
+<h2 id="application">Application</h2>
+<ol start="4" type="1">
+<li>With <span class="math inline">\(P_0 = 2.5\)</span> catalog spacing
+units, compute <span class="math inline">\(P_1\)</span>, <span
+class="math inline">\(P_2\)</span>, and <span
+class="math inline">\(P_3\)</span> from the palindrome-scaling relation,
+and verify the geometric signature. <em>(Answer: <span
+class="math inline">\(P_1 = 4.045085\)</span>, <span
+class="math inline">\(P_2 = 6.545085\)</span>, <span
+class="math inline">\(P_3 = 10.590170\)</span>; each consecutive ratio
+equals <span class="math inline">\(\Phi = 1.618034\)</span> exactly,
+which is the “indexed, not drift” property the note files.)</em></li>
+<li>Evaluate the digit-4 drawer offset <span
+class="math inline">\(\Omega_4\)</span> with <span
+class="math inline">\(\Omega_0 = 1\)</span> under both
+<code>octave_term</code> conventions, and state which one matches the
+printed palindrome relation. <em>(Answer: exponent convention: <span
+class="math inline">\(\Omega_4 = \Phi^4 \cdot \Omega_0 =
+6.854102\)</span>; subscript convention: <span
+class="math inline">\(\Omega_4 = \tfrac{F_5}{F_4}\,\Omega_0 =
+\tfrac{5}{3} \approx 1.666667\)</span>. The printed form <span
+class="math inline">\(P_0 \cdot \Phi^n\)</span> is the exponent
+convention.)</em></li>
+<li>List three claims the note’s honesty-first disclaimer explicitly
+rules out, and name what the note says outranks every metaphor.
+<em>(Answer: that the MSY literally equals a physics constant; that
+sunspot AR 3664 writes human DNA; that fractal dimension has been
+measured to <span class="math inline">\(\Phi\)</span> in this repository
+(also: the cross-species protocols are not executed wet-lab output).
+Clinical genetics and human dignity outrank every metaphor.)</em></li>
+</ol>
+<h2 id="synthesis">Synthesis</h2>
+<ol start="7" type="1">
+<li>Explain how the August note’s <em>manifestation /
+convergence-set</em> language complements — rather than replaces — the
+July operator-translation decode. <em>(Answer: the July decode still
+holds Words, Sentences, and haplogroup Stories, with codon gates and
+palindrome loops; the August note adds manifestation/convergence-set
+language for how <span class="math inline">\(\Phi\)</span> shows up in
+polar-identity filing — “Story depth, not infinite physics tiers” — so
+the two are layered filing grammars over the same drawer, not competing
+claims.)</em></li>
+<li>The cross-species regression protocols are filed “on paper”. Argue
+what would and would not change in the corpus’s filing if such a study
+were executed tomorrow. <em>(Answer: execution would move the proposal
+from the narrative/paper layer toward the empirical tier — e.g. a fitted
+regression <span class="math inline">\(\log P_n = \log P_0 +
+n\log\Phi\)</span> across species could </em>support or fail to support*
+the geometric indexing as a description. It would not change the
+honesty-first scope: the filing would still not become a literal-physics
+claim, and clinical genetics and human dignity would still outrank the
+metaphor.)*</li>
+<li>A reviewer asks why the book walks the digit-4 drawer with the
+exponent convention when the corpus “prints Ωn = Φn·Ω0 ambiguously”.
+Reconstruct the chapter’s argument, using the two conventions’ values at
+index 4. <em>(Answer: at low indices the conventions diverge enormously
+— exponent gives <span
+class="math inline">\(6.854102\,\Omega_0\)</span>, subscript gives <span
+class="math inline">\(\approx 1.666667\,\Omega_0\)</span> — so the
+choice is load-bearing. The palindrome relation as printed, <span
+class="math inline">\(P_0 \cdot \Phi^n\)</span>, is exactly the exponent
+form, and the sub-band table (P8 at <span
+class="math inline">\(46.978714 \times P_0\)</span>) only reproduces the
+drawer the note describes under that reading; the subscript ratio (<span
+class="math inline">\(\varphi_{\mathrm{fib}}(5) = 1.6\)</span>, <span
+class="math inline">\(\varphi_{\mathrm{fib}}(10) \approx
+1.618182\)</span>) merely converges to <span
+class="math inline">\(\Phi\)</span> and never matches the printed
+relation. Hence the chapter pins the exponent convention while still
+implementing both in
+<code>textbook.models.octave_term</code>.)</em></li>
+</ol>
+</main>
+</body>
+</html>

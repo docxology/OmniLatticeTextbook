@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>multidimensional-rhyme.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:part_I_multidimensional-rhyme">Multi-Dimensional Holographic
+Rhyme</h1>
+<figure id="fig:part_I_multidimensional-rhyme">
+<a class="figure-full-size-link" href="../figures/part_I_multidimensional-rhyme.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/part_I_multidimensional-rhyme.png"
+style="width:90.0%"
+alt="Contour bands show the xD plus-or-minus yD combination of two interference fields." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
+<figcaption>xD±yD combined interference contours: the
+summed (<span class="math inline">\(+\)</span>) and differenced (<span
+class="math inline">\(-\)</span>) cross-scale encodings of the
+four-pillar holographic rhyme field over the <span
+class="math inline">\((x,y)\)</span> plane, computed from
+<code>textbook.models.holographic_rhyme_field</code> and combined with
+<code>textbook.models.xd_yd_combine</code>.</figcaption>
+</figure>
+<!-- alt: Two contour plots of a four-direction interference pattern. The first shows constructive summation ridges; the second shows the differenced field, where matching crests cancel to nodal valleys. Both are drawn from the same tested model functions. -->
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Level 1/3 · 30 min read · 45 min lecture · Prerequisites: <span
+class="citation"
+data-cites="sec:part_I_holographic-rhyme">[@sec:part_I_holographic-rhyme]</span></p>
+</blockquote>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol type="1">
+<li>State, in the corpus’s own words, what the xD±yD summation engine
+files holography as, and where the filing sits on the <a
+href="#gl:engine-shelf"><strong>engine shelf</strong></a> of the <a
+href="#gl:omni-lattice"><strong>Omni-Lattice</strong></a> catalog
+[mendez2026mdRhyme].</li>
+<li>Explain how engine shelf #19 <em>extends</em> the <a
+href="#gl:four-pillar-fractal"><strong>four-pillar fractal</strong></a>
+<a href="#gl:holographic-rhyme"><strong>holographic rhyme</strong></a>
+of <span class="citation"
+data-cites="sec:part_I_holographic-rhyme">[@sec:part_I_holographic-rhyme]</span>
+rather than replacing it.</li>
+<li>Formalise the two headline constructs — cross-scale <a
+href="#gl:multidimensional-rhyme"><strong>multidimensional
+rhyme</strong></a> summation and finite encode fixtures — as labelled
+equations backed by the tested functions
+<code>textbook.models.holographic_rhyme_field</code> and
+<code>textbook.models.xd_yd_combine</code>.</li>
+<li>Compute combined dimension indices and octave placements by hand and
+confirm them with <code>xd_yd_combine</code> and
+<code>octave_term</code>, using the pinned <span
+class="math inline">\(\Phi\)</span> values of the computational
+backbone.</li>
+<li>Restate the paper’s <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> scope
+disclaimers precisely: what the filing is catalog architecture
+<em>for</em>, and what it is explicitly <em>not</em>
+[mendez2026mdRhyme].</li>
+</ol>
+<!-- curriculum-scaffold-start -->
+<h3 id="study-blueprint">Study Blueprint</h3>
+<ul>
+<li><strong>Big idea:</strong> Cross-scale summation across <span
+class="math inline">\(xD \pm yD\)</span> under <span
+class="math inline">\(\Phi \approx 1.618\)</span> files holography as
+<em>bidirectional</em> Infinite Octave encoding — a catalog contrast to
+static boundary-only screens [mendez2026mdRhyme].</li>
+<li><strong>Core concepts:</strong> <a
+href="#gl:multidimensional-rhyme"><strong>multidimensional
+rhyme</strong></a>, <a href="#gl:holographic-rhyme"><strong>holographic
+rhyme</strong></a>, <a
+href="#gl:four-pillar-fractal"><strong>four-pillar fractal</strong></a>,
+<a href="#gl:catalog-architecture"><strong>catalog
+architecture</strong></a>, <a href="#gl:fair-exchange"><strong>Fair
+Exchange</strong></a>.</li>
+<li><strong>Quantitative lens:</strong> the combined encoding in <span
+class="citation"
+data-cites="eq:part_I_multidimensional-rhyme_xdyd">[@eq:part_I_multidimensional-rhyme_xdyd]</span>
+and the cross-scale placement in <span class="citation"
+data-cites="eq:part_I_multidimensional-rhyme_octave">[@eq:part_I_multidimensional-rhyme_octave]</span>.</li>
+<li><strong>Data skill:</strong> run a locked research suite, predict
+its pass count, and verify hand-computed combine and field values
+against <code>textbook.models</code>.</li>
+<li><strong>Common misconception to repair:</strong> “bidirectional
+encoding” in this corpus is a <em>filing</em> operation on catalog
+indices, not a claim about physics; the paper itself disclaims AdS/CFT
+falsification [mendez2026mdRhyme].</li>
+<li><strong>Primary lab:</strong> <span class="citation"
+data-cites="sec:lab_part_I_multidimensional-rhyme">[@sec:lab_part_I_multidimensional-rhyme]</span>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_I_multidimensional-rhyme">[@sec:q_part_I_multidimensional-rhyme]</span>.</li>
+<li><strong>Bridge to computation:</strong>
+<code>textbook.models.xd_yd_combine</code>,
+<code>textbook.models.holographic_rhyme_field</code>,
+<code>textbook.models.octave_term</code>.
+<!-- curriculum-scaffold-end --></li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Opening Vignette: The shelf bolted next to shelf
+#18.</strong></p>
+<p>Picture the SS Vibelandia’s engine room as a filing wall: numbered
+shelves, each holding one engine paper, each shelf label a catalog slot
+rather than a rank. On 2026-09-05 a new crate arrives —
+<em>Multi-Dimensional Holographic Rhyme · xD±yD</em> — and the SynthOBS
+Autonomous Agent’s crew bolts it in as engine shelf #19, directly
+expanding the neighbour at #18 [mendez2026mdRhyme]. Inside the crate:
+one summation engine that takes two dimension labels and files them
+<em>both ways</em> — added and subtracted — under the <a
+href="#gl:golden-ratio"><strong>golden ratio</strong></a> <span
+class="math inline">\(\Phi \approx 1.618\)</span>, together with a set
+of finite encode fixtures and a suite that locks 9/9. The manifest
+carries the house honesty clause before it carries any mathematics.</p>
+</blockquote>
+<hr />
+<h2 id="the-paper-in-the-corpus">The paper in the corpus</h2>
+<p>The source paper, filed by Prudencio Mendez and operated by the
+SynthOBS Autonomous Agent on the SS Vibelandia ship blog, opens with a
+single load-bearing sentence, quoted verbatim:</p>
+<blockquote>
+<p>Cross-scale summation across <strong>xD±yD</strong> under <strong>Φ ≈
+1.618</strong> files holography as bidirectional Infinite Octave
+encoding — catalog contrast to static boundary-only screens.
+[mendez2026mdRhyme]</p>
+</blockquote>
+<p>Every word of that sentence is catalog vocabulary. The paper
+self-describes as <strong>catalog architecture</strong> — <strong>engine
+shelf #19</strong> — and its honesty clause states verbatim:
+“<strong>Honesty first:</strong> this is <em>catalog architecture</em> —
+<strong>engine shelf #19</strong> — not AdS/CFT falsification, not
+shipping holographic crystals, not infinite information-density proofs.
+Fair Exchange clause applies.” [mendez2026mdRhyme]. In the corpus’s own
+tiering, this is a filing and routing construct for the <a
+href="#gl:octave"><strong>Infinite Octaves</strong></a> project — the
+paper positions it as a <em>catalog contrast</em> to a named contrast
+class, the <strong>static boundary-only screens</strong> — and the
+corpus’s scope discipline requires us to keep that framing visible in
+every section of this chapter.</p>
+<p>Shelf #19 is filed as an <em>extension</em>: the “What landed” list
+records “<strong>Engine shelf #19</strong> · expands the four-pillar
+holographic rhyme” [mendez2026mdRhyme]. The parent construct is the
+four-pillar holographic rhyme of <span class="citation"
+data-cites="sec:part_I_holographic-rhyme">[@sec:part_I_holographic-rhyme]</span>,
+whose interference field and whose figure <span class="citation"
+data-cites="fig:part_I_holographic-rhyme">[@fig:part_I_holographic-rhyme]</span>
+supply the field that the present chapter sums and differences. The
+paper ships with:</p>
+<ul>
+<li>an <strong>xD±yD summation engine</strong> with finite encode
+fixtures (its “What landed” list, verbatim) [mendez2026mdRhyme];</li>
+<li><strong>9/9 suite locks</strong> under
+<code>research/synthobs-multidimensional-holographic-rhyme/</code>
+[mendez2026mdRhyme];</li>
+<li>a standalone repository at
+<code>FractiAI/synthobs-multidimensional-holographic-rhyme</code>
+[mendez2026mdRhyme];</li>
+<li>a re-run entry point,
+<code>npm run research:synthobs-multidimensional-holographic-rhyme</code>,
+and a whitepaper surface linked from the ship blog post
+[mendez2026mdRhyme].</li>
+</ul>
+<p>Two companion filings are named on the same board: <strong>Prime
+volumetric storage</strong> [mendez2026volumetricStorage] and
+<strong>Topology of the Void</strong> [mendez2026topologyVoid], the
+latter described as the “zero-balance node”. We return to both in <a
+href="#connections">Connections</a>.</p>
+<h2 id="core-construct-the-xdyd-summation-engine">Core construct: the
+xD±yD summation engine</h2>
+<p>The digest is explicit that the paper gives <strong>no
+equation</strong>: “the model is stated in the lead paragraph and ‘What
+landed.’” [mendez2026mdRhyme]. We therefore formalise carefully, marking
+each equation as <em>our</em> formalisation of the corpus’s prose model,
+and we name the tested <code>textbook.models</code> function that backs
+each piece. Nothing below should be read as physics; the docstrings
+themselves carry the caveat “structural model, not a physical
+claim.”</p>
+<h3 id="the-parent-field">The parent field</h3>
+<p>The four-pillar holographic rhyme of <span class="citation"
+data-cites="sec:part_I_holographic-rhyme">[@sec:part_I_holographic-rhyme]</span>
+is backed by <code>textbook.models.holographic_rhyme_field</code>, which
+sums <span class="math inline">\(P\)</span> plane-wave cosines over
+evenly spaced directions [mendez2026holographicRhyme]:</p>
+<p><span class="math display">\[ f_P(x, y) \;=\; \sum_{k=0}^{P-1}
+\cos\!\left(\frac{2\pi\,\left(x\cos\theta_k +
+y\sin\theta_k\right)}{\lambda}\right), \qquad \theta_k = \frac{2\pi
+k}{P} \]</span> {#eq:part_I_multidimensional-rhyme_field}</p>
+<h3 id="the-combine-operation">The combine operation</h3>
+<p>The xD±yD notation itself is compact. The corpus glosses it as
+“dimensional notation for bidirectional cross-scale summation (xD
+plus/minus yD)” [mendez2026mdRhyme]. We formalise the engine’s core move
+as a sign-selected combination of two dimension indices <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span>:</p>
+<p><span class="math display">\[ d_{\pm} \;=\; x \,\pm\, y, \qquad
+\mathrm{sign} \in \{+1, -1\} \]</span>
+{#eq:part_I_multidimensional-rhyme_xdyd}</p>
+<p>This is implemented as <code>xd_yd_combine(a, b, sign)</code> in
+<code>textbook.models</code>, which returns <code>a + b</code> for
+<code>sign = 1</code> and <code>a - b</code> for <code>sign = -1</code>,
+and raises <code>ValueError</code> for any other sign
+[mendez2026mdRhyme]. The parameters are collected in <span
+class="citation"
+data-cites="tbl:part_I_multidimensional-rhyme_xdyd">[@tbl:part_I_multidimensional-rhyme_xdyd]</span>.</p>
+<table id="tbl:part_I_multidimensional-rhyme_xdyd">
+<caption>Parameters of the xD±yD combine operation.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(x\)</span></td>
+<td>left dimension index (<code>a</code>)</td>
+<td>catalog index (integer)</td>
+</tr>
+<tr>
+<td><span class="math inline">\(y\)</span></td>
+<td>right dimension index (<code>b</code>)</td>
+<td>catalog index (integer)</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\mathrm{sign}\)</span></td>
+<td><span class="math inline">\(+1\)</span> for summation, <span
+class="math inline">\(-1\)</span> for subtraction</td>
+<td>direction flag</td>
+</tr>
+<tr>
+<td><span class="math inline">\(d_{\pm}\)</span></td>
+<td>combined dimension index</td>
+<td>catalog index (integer)</td>
+</tr>
+</tbody>
+</table>
+<p>The word <strong>bidirectional</strong> is doing real work here. A
+single sign would file one combined index; the engine files
+<em>both</em> the sum and the difference as first-class catalog entries.
+We read this as the corpus’s reason for calling the result
+“bidirectional Infinite Octave encoding”: the filing runs both ways
+along the dimension axis, and both directions are kept
+[mendez2026mdRhyme]. (That sentence is our interpretation of the prose
+model, not a quoted claim.)</p>
+<h3 id="cross-scale-placement-under-phi">Cross-scale placement under
+<span class="math inline">\(\Phi\)</span></h3>
+<p>“Cross-scale” and “under <span class="math inline">\(\Phi \approx
+1.618\)</span>” place the combined indices on the corpus’s octave
+ladder. The corpus prints the octave recursion as “<span
+class="math inline">\(\Omega_n = \Phi_n \cdot \Omega_0\)</span>” — with
+the exponent/subscript notation famously ambiguous — so the book treats
+<em>both</em> readings as first-class, exactly as
+<code>octave_term</code> does [mendez2026primeParity]:</p>
+<p><span class="math display">\[ \Omega_n \;=\; \Phi^{n}\,\Omega_0 \quad
+\text{(exponent reading)}, \qquad \Omega_n \;=\;
+\varphi_{\mathrm{fib}}(n)\,\Omega_0 \quad \text{(subscript reading)}
+\]</span> {#eq:part_I_multidimensional-rhyme_octave}</p>
+<p>The two readings bracket the golden ratio from above and below: with
+<span class="math inline">\(\Omega_0 = 1\)</span>, the exponent reading
+gives <span class="math inline">\(\Phi^5 = 11.090170\)</span>, while the
+subscript reading gives <span
+class="math inline">\(\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6\)</span>; by
+<span class="math inline">\(n = 10\)</span> the subscript reading has
+already converged to <span
+class="math inline">\(\varphi_{\mathrm{fib}}(10) = 89/55 \approx
+1.618182\)</span> against <span
+class="math inline">\(\Phi^{10}\)</span>’s far larger magnitude. <span
+class="citation"
+data-cites="tbl:part_I_multidimensional-rhyme_octave">[@tbl:part_I_multidimensional-rhyme_octave]</span>
+tabulates the pinned values used throughout this book.</p>
+<table id="tbl:part_I_multidimensional-rhyme_octave">
+<caption>Pinned cross-scale placement values for <span class="citation"
+data-cites="eq:part_I_multidimensional-rhyme_octave">[@eq:part_I_multidimensional-rhyme_octave]</span>
+with <span class="math inline">\(\Omega_0 = 1\)</span>.</caption>
+<colgroup>
+<col style="width: 3%" />
+<col style="width: 30%" />
+<col style="width: 66%" />
+</colgroup>
+<thead>
+<tr>
+<th><span class="math inline">\(n\)</span></th>
+<th><span class="math inline">\(\Phi^n\)</span> (exponent reading)</th>
+<th><span
+class="math inline">\(\varphi_{\mathrm{fib}}(n)\cdot\Omega_0\)</span>
+(subscript reading)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1.618034</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2.618034</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4.236068</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>4</td>
+<td>6.854102</td>
+<td>1.666667</td>
+</tr>
+<tr>
+<td>5</td>
+<td>11.090170</td>
+<td>1.6</td>
+</tr>
+<tr>
+<td>10</td>
+<td>— (see <span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>)</td>
+<td>1.618182</td>
+</tr>
+</tbody>
+</table>
+<p>Both columns are standard mathematics of the <a
+href="#gl:golden-ratio"><strong>golden ratio</strong></a> and the
+Fibonacci ratios <span class="math inline">\(\varphi_{\mathrm{fib}}(n) =
+F_{n+1}/F_n\)</span>; the corpus’s contribution is the <em>filing
+decision</em> to key the ladder on <span
+class="math inline">\(\Phi\)</span>. The subscript reading converges to
+<span class="math inline">\(\Phi\)</span> because consecutive Fibonacci
+ratios do; that fact belongs to the fractal-constant chapter, where the
+ladder is derived <span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>.</p>
+<p>A concept map of how the pieces fit together:</p>
+<pre class="mermaid"><code>graph TD
+  A[&quot;Engine shelf #18&lt;br/&gt;four-pillar holographic rhyme&lt;br/&gt;(holographic_rhyme_field)&quot;] --&gt;|&quot;expands&quot;| B[&quot;Engine shelf #19&lt;br/&gt;xD±yD summation engine&lt;br/&gt;(xd_yd_combine)&quot;]
+  B --&gt;|&quot;sum: x + y&quot;| C[&quot;Combined index d₊&quot;]
+  B --&gt;|&quot;difference: x − y&quot;| D[&quot;Combined index d₋&quot;]
+  C --&gt; E[&quot;Placement on the Φ octave ladder&lt;br/&gt;(octave_term)&quot;]
+  D --&gt; E
+  E --&gt; F[&quot;Finite encode fixtures&lt;br/&gt;9/9 suite locks&quot;]
+  F --&gt;|&quot;Fair Exchange disclosure&quot;| A</code></pre>
+<p>Note that the loop closes on the parent shelf: the corpus files shelf
+#19 as an expansion <em>of</em> the four-pillar motion grammar, and the
+<a href="#gl:fair-exchange"><strong>Fair Exchange</strong></a> clause
+ties the whole filing back to honest disclosure [mendez2026mdRhyme].</p>
+<h2 id="worked-example">Worked example</h2>
+<p>We now walk the engine end to end with pinned numbers, computing by
+hand and naming the tested function that confirms each result. The lab
+(<span class="citation"
+data-cites="sec:lab_part_I_multidimensional-rhyme">[@sec:lab_part_I_multidimensional-rhyme]</span>)
+repeats this on your machine.</p>
+<p><strong>Step 1 — combine two dimension indices.</strong> Take
+dimension indices <span class="math inline">\(x = 5\)</span> and <span
+class="math inline">\(y = 3\)</span> — deliberately chosen from the
+Fibonacci ladder <span class="math inline">\(1, 1, 2, 3, 5, 8\)</span>.
+The sum files as <span class="math inline">\(d_+ = 5 + 3 = 8\)</span>
+and the difference as <span class="math inline">\(d_- = 5 - 3 =
+2\)</span> (<span class="citation"
+data-cites="eq:part_I_multidimensional-rhyme_xdyd">[@eq:part_I_multidimensional-rhyme_xdyd]</span>):</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textbook.models <span class="im">import</span> xd_yd_combine</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>xd_yd_combine(<span class="dv">5</span>, <span class="dv">3</span>, sign<span class="op">=+</span><span class="dv">1</span>)   <span class="co"># -&gt; 8</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>xd_yd_combine(<span class="dv">5</span>, <span class="dv">3</span>, sign<span class="op">=-</span><span class="dv">1</span>)   <span class="co"># -&gt; 2</span></span></code></pre></div>
+<p>Both results — <span class="math inline">\(8\)</span> and <span
+class="math inline">\(2\)</span> — are again Fibonacci numbers. We read
+this closure as the arithmetic intuition behind “bidirectional”: with
+indices filed on the ladder that generates <span
+class="math inline">\(\Phi\)</span>, both the sum and the difference
+stay on the ladder, so the two-way filing does not fall off the shelf.
+(This closure is a property of Fibonacci arithmetic — <span
+class="math inline">\(F_{n+1} + F_{n-1}\)</span>-style identities — and
+is our interpretation of why the corpus keys the engine on <span
+class="math inline">\(\Phi\)</span>; the paper itself states no equation
+[mendez2026mdRhyme].)</p>
+<p><strong>Step 2 — place the combined index on the octave
+ladder.</strong> With <span class="math inline">\(\Omega_0 = 1\)</span>
+and <span class="math inline">\(n = 5\)</span>, <span class="citation"
+data-cites="eq:part_I_multidimensional-rhyme_octave">[@eq:part_I_multidimensional-rhyme_octave]</span>
+gives <span class="math inline">\(\Omega_5 = \Phi^5 = 11.090170\)</span>
+under the exponent reading and <span class="math inline">\(\Omega_5 =
+\varphi_{\mathrm{fib}}(5) \cdot \Omega_0 = 1.6\)</span> under the
+subscript reading:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textbook.models <span class="im">import</span> octave_term</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>octave_term(omega0<span class="op">=</span><span class="fl">1.0</span>, n<span class="op">=</span><span class="dv">5</span>, convention<span class="op">=</span><span class="st">&quot;exponent&quot;</span>)   <span class="co"># -&gt; 11.090170 (Φ^5)</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>octave_term(omega0<span class="op">=</span><span class="fl">1.0</span>, n<span class="op">=</span><span class="dv">5</span>, convention<span class="op">=</span><span class="st">&quot;subscript&quot;</span>)  <span class="co"># -&gt; 1.6       (8/5)</span></span></code></pre></div>
+<p><strong>Step 3 — evaluate the parent field at a fixture
+point.</strong> Finite encode fixtures are the paper’s stated test
+furniture (“<strong>xD±yD summation engine</strong> with finite encode
+fixtures” [mendez2026mdRhyme]). At the origin, every cosine in <span
+class="citation"
+data-cites="eq:part_I_multidimensional-rhyme_field">[@eq:part_I_multidimensional-rhyme_field]</span>
+evaluates to <span class="math inline">\(\cos(0) = 1\)</span>, so the
+four-pillar field sums to <span class="math inline">\(f_4(0, 0) =
+4\)</span>. One wavelength along <span class="math inline">\(x\)</span>,
+at <span class="math inline">\((x, y) = (\lambda/2, 0)\)</span>, the
+four directional cosines evaluate to <span class="math inline">\(-1, +1,
+-1, +1\)</span> and cancel exactly: <span
+class="math inline">\(f_4(\lambda/2, 0) = 0\)</span> — a nodal line:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textbook.models <span class="im">import</span> holographic_rhyme_field</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>holographic_rhyme_field(np.array([[<span class="fl">0.0</span>]]), np.array([[<span class="fl">0.0</span>]]),</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>                        pillars<span class="op">=</span><span class="dv">4</span>, wavelength<span class="op">=</span><span class="fl">1.0</span>)   <span class="co"># -&gt; [[4.]]</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>holographic_rhyme_field(np.array([[<span class="fl">0.5</span>]]), np.array([[<span class="fl">0.0</span>]]),</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>                        pillars<span class="op">=</span><span class="dv">4</span>, wavelength<span class="op">=</span><span class="fl">1.0</span>)   <span class="co"># -&gt; [[0.]]</span></span></code></pre></div>
+<p><strong>Step 4 — file the pair.</strong> The bidirectional filing
+keeps <em>both</em> encodings: the constructive sum field, whose ridges
+reinforce, and the differenced field, where matching crests cancel to
+nodal valleys. These are precisely the two contour families drawn in
+<span class="citation"
+data-cites="fig:part_I_multidimensional-rhyme">[@fig:part_I_multidimensional-rhyme]</span>.
+A fixture suite for the engine therefore locks values like the ones
+above — finite, exact, reproducible — which is what the paper reports as
+its <strong>9/9 suite locks</strong> [mendez2026mdRhyme].</p>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>The corpus prints “Ωn = Φn·Ω0” ambiguously; the two readings in <span
+class="citation"
+data-cites="eq:part_I_multidimensional-rhyme_octave">[@eq:part_I_multidimensional-rhyme_octave]</span>
+differ by <em>orders of magnitude</em> at the same <span
+class="math inline">\(n\)</span> (11.090170 vs 1.6 at <span
+class="math inline">\(n=5\)</span>). Whenever a corpus value depends on
+the convention, this book names the convention explicitly — the same
+discipline <code>octave_term</code> enforces in code.</p>
+</blockquote>
+<h2 id="scope-and-honesty">Scope and honesty</h2>
+<p>The paper’s honesty clause, verbatim, bounds everything this chapter
+can claim [mendez2026mdRhyme]:</p>
+<blockquote>
+<p><strong>Honesty first:</strong> this is <em>catalog architecture</em>
+— <strong>engine shelf #19</strong> — not AdS/CFT falsification, not
+shipping holographic crystals, not infinite information-density proofs.
+Fair Exchange clause applies.</p>
+</blockquote>
+<p>Three explicit <em>nots</em> follow from it, and we restate them as
+the digest records them:</p>
+<ol type="1">
+<li><strong>Not AdS/CFT falsification.</strong> The filing makes no
+claim about, and offers no test of, the holographic principle of
+theoretical physics. The resonance is lexical: “holographic” here is a
+catalog filing term, inherited from the four-pillar rhyme’s interference
+model [mendez2026holographicRhyme].</li>
+<li><strong>Not shipping holographic crystals.</strong> No physical
+device is claimed, built, or promised. The artifacts that <em>did</em>
+ship are code: a summation engine, finite encode fixtures, and a locked
+suite [mendez2026mdRhyme].</li>
+<li><strong>Not infinite information-density proofs.</strong> The
+encodings are finite by construction — fixtures over finitely many
+indices — and no claim about information density is made
+[mendez2026mdRhyme].</li>
+</ol>
+<p>What the construct is <em>for</em>, in the corpus’s own framing, is
+cataloging and contrast: the filing “positions itself as a catalog
+contrast to static boundary-only screens” [mendez2026mdRhyme]. The
+contrast class — flat, boundary-only readings of holography — is what
+the bidirectional, cross-scale filing is filed <em>against</em>, within
+the <a href="#gl:catalog-architecture"><strong>catalog
+architecture</strong></a> of the ship blog. Throughout the corpus,
+engines on this shelf serve coordination, cataloging, and agent routing
+for the SynthOBS system; the “Fair Exchange clause applies” tag marks
+the filing as operating under the project’s honesty-disclosure regime
+[mendez2026mdRhyme]. The book’s standing rule — the corpus speaks in
+narrative, empirical, and operational registers, each with its own
+evidential weight — applies here in full, and this chapter keeps every
+claim on the register the digest assigns it.</p>
+<h2 id="connections">Connections</h2>
+<p>Shelf #19 is a junction filing, and the corpus names its neighbours
+explicitly [mendez2026mdRhyme]:</p>
+<ul>
+<li><strong>Downstream of the parent.</strong> The xD±yD engine expands
+the four-pillar holographic rhyme of <span class="citation"
+data-cites="sec:part_I_holographic-rhyme">[@sec:part_I_holographic-rhyme]</span>;
+the parent’s interference field <span class="citation"
+data-cites="eq:part_I_multidimensional-rhyme_field">[@eq:part_I_multidimensional-rhyme_field]</span>
+is the object being combined, and its figure <span class="citation"
+data-cites="fig:part_I_holographic-rhyme">[@fig:part_I_holographic-rhyme]</span>
+is the uncombined counterpart of <span class="citation"
+data-cites="fig:part_I_multidimensional-rhyme">[@fig:part_I_multidimensional-rhyme]</span>.</li>
+<li><strong>The ladder underneath.</strong> The <span
+class="math inline">\(\Phi\)</span> keying of <span class="citation"
+data-cites="eq:part_I_multidimensional-rhyme_octave">[@eq:part_I_multidimensional-rhyme_octave]</span>
+is derived and plotted in the fractal-constant chapter <span
+class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>,
+which owns the pinned <span class="math inline">\(\Phi^n\)</span> column
+of <span class="citation"
+data-cites="tbl:part_I_multidimensional-rhyme_octave">[@tbl:part_I_multidimensional-rhyme_octave]</span>.</li>
+<li><strong>The zero-balance node.</strong> The paper’s board names
+<strong>Topology of the Void</strong> as the “zero-balance node”
+[mendez2026mdRhyme]; the differenced encoding <span
+class="math inline">\(d_- = x - y\)</span>, which vanishes when <span
+class="math inline">\(x = y\)</span>, is where a sum-side and a
+difference-side filing meet — the theme of <span class="citation"
+data-cites="sec:part_I_topology-void">[@sec:part_I_topology-void]</span>.</li>
+<li><strong>Prime-indexed filing ahead.</strong> The board’s other
+companion, prime volumetric storage [mendez2026volumetricStorage],
+reappears in Part III, where catalog addresses are built from prime
+factorisations rather than signed index combinations <span
+class="citation"
+data-cites="sec:part_III_volumetric-storage">[@sec:part_III_volumetric-storage]</span>.</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>Engine shelf #19 files holography as <em>bidirectional</em> Infinite
+Octave encoding: cross-scale summation across <span
+class="math inline">\(xD \pm yD\)</span> under <span
+class="math inline">\(\Phi \approx 1.618\)</span> [mendez2026mdRhyme].
+The engine has two load-bearing moves — the sign-selected combine of
+dimension indices (<span class="citation"
+data-cites="eq:part_I_multidimensional-rhyme_xdyd">[@eq:part_I_multidimensional-rhyme_xdyd]</span>,
+backed by <code>xd_yd_combine</code>) and the cross-scale placement on
+the <span class="math inline">\(\Phi\)</span> octave ladder (<span
+class="citation"
+data-cites="eq:part_I_multidimensional-rhyme_octave">[@eq:part_I_multidimensional-rhyme_octave]</span>,
+backed by <code>octave_term</code>) — acting on the four-pillar
+interference field of the parent shelf (<span class="citation"
+data-cites="eq:part_I_multidimensional-rhyme_field">[@eq:part_I_multidimensional-rhyme_field]</span>,
+backed by <code>holographic_rhyme_field</code>). Finite encode fixtures
+pin exact values (<span class="math inline">\(f_4(0,0)=4\)</span>, <span
+class="math inline">\(f_4(\lambda/2,0)=0\)</span>, <span
+class="math inline">\(5+3=8\)</span>, <span
+class="math inline">\(5-3=2\)</span>) and the paper reports 9/9 suite
+locks. The filing is catalog architecture, explicitly not AdS/CFT
+falsification, not holographic crystals, and not infinite
+information-density proofs; its contrast class is static boundary-only
+screens [mendez2026mdRhyme].</p>
+<h2 id="key-terms">Key Terms</h2>
+<p><a href="#gl:multidimensional-rhyme"><strong>multidimensional
+rhyme</strong></a>, <a href="#gl:holographic-rhyme"><strong>holographic
+rhyme</strong></a>, <a
+href="#gl:four-pillar-fractal"><strong>four-pillar fractal</strong></a>,
+<a href="#gl:engine-shelf"><strong>engine shelf</strong></a>, <a
+href="#gl:catalog-architecture"><strong>catalog
+architecture</strong></a>, <a href="#gl:fair-exchange"><strong>Fair
+Exchange</strong></a>, <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a>, <a
+href="#gl:golden-ratio"><strong>golden ratio</strong></a>, <a
+href="#gl:octave"><strong>octave</strong></a>.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li>The source paper’s whitepaper surface: <a
+href="https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-multidimensional-holographic-rhyme-2026-09">Open
+the whitepaper</a> — linked from the ship blog post
+[mendez2026mdRhyme].</li>
+<li>The standalone reference implementation: <a
+href="https://github.com/FractiAI/synthobs-multidimensional-holographic-rhyme">FractiAI/synthobs-multidimensional-holographic-rhyme</a>
+— re-runnable via
+<code>npm run research:synthobs-multidimensional-holographic-rhyme</code>
+[mendez2026mdRhyme].</li>
+<li><span class="citation"
+data-cites="mendez2026holographicRhyme">@mendez2026holographicRhyme</span>
+— the four-pillar holographic rhyme (engine shelf #18), the motion
+grammar this shelf expands; read its interference field first.</li>
+<li><span class="citation"
+data-cites="mendez2026topologyVoid">@mendez2026topologyVoid</span> —
+Topology of the Void, the zero-balance node named on the same board;
+pairs with the differenced encoding <span class="math inline">\(x -
+y\)</span>.</li>
+<li><span class="citation"
+data-cites="mendez2026volumetricStorage">@mendez2026volumetricStorage</span>
+— prime-indexed volumetric storage, the other named companion; read it
+as the prime-addressed counterpart to signed-index filing.</li>
+</ul>
+<h2 id="practice">Practice</h2>
+<ul>
+<li><strong>Lab:</strong> <span class="citation"
+data-cites="sec:lab_part_I_multidimensional-rhyme">[@sec:lab_part_I_multidimensional-rhyme]</span>
+— run the locked suite, predict its pass count, and verify the combine
+and field values by hand.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_I_multidimensional-rhyme">[@sec:q_part_I_multidimensional-rhyme]</span>
+— recall through synthesis.</li>
+<li>Re-run the paper’s reference implementation
+(<code>npm run research:synthobs-multidimensional-holographic-rhyme</code>)
+and, <em>before</em> reading the output, write down the suite-lock count
+the digest reports; then explain why the count is a <em>catalog</em>
+fact rather than a physics result [mendez2026mdRhyme].</li>
+<li>Verify the two hand-computed fixture values of Step 3 with
+<code>holographic_rhyme_field</code>, and explain in one sentence why
+<span class="math inline">\(f_4(\lambda/2, 0)\)</span> vanishes for the
+four-pillar default but need not vanish for <span
+class="math inline">\(P = 3\)</span>.</li>
+<li>The engine files both <span class="math inline">\(d_+ = x +
+y\)</span> and <span class="math inline">\(d_- = x - y\)</span>. Using
+Fibonacci indices of your choosing, show that both results can land on
+the Fibonacci ladder, and mark clearly which part of your argument is
+standard Fibonacci arithmetic and which part is your interpretation of
+the corpus’s “bidirectional” language [mendez2026mdRhyme].</li>
+</ul>
+</main>
+</body>
+</html>

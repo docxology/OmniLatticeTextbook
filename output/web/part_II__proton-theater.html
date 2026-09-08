@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>proton-theater.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:part_II_proton-theater">Proton Space, Electron Theater, and
+Φ Duality</h1>
+<figure id="fig:part_II_proton-theater">
+<a class="figure-full-size-link" href="../figures/part_II_proton-theater.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/part_II_proton-theater.png" style="width:90.0%"
+alt="A symmetric mirror plot contrasts x times Phi against x divided by Phi." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
+<figcaption>The Φ-duality mirror plot, generated by
+the companion visualization from <code>textbook.models.phi_dual</code>:
+each input <span class="math inline">\(x\)</span> is filed into an upper
+branch <span class="math inline">\(x\Phi\)</span> and a lower branch
+<span class="math inline">\(x/\Phi\)</span>, symmetric about the input
+line with a log-scale offset of <span class="math inline">\(\pm\ln\Phi
+\approx \pm 0.481212\)</span>.</figcaption>
+</figure>
+<!-- alt: Two mirror-image branches on a logarithmic axis — one rising as x·Φ and one falling as x/Φ — symmetric about the identity line, offset by ±ln Φ. -->
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Level 1/3 · 35 min read · 50 min lecture · Prerequisites: <span
+class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>,
+<span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span></p>
+</blockquote>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol type="1">
+<li>State the digit-filing duality of <span class="citation"
+data-cites="sec:part_II_proton-theater">[@sec:part_II_proton-theater]</span>:
+which digit triggers the <a href="#gl:proton-space"><strong>Proton
+Space</strong></a> filing and which triggers the <a
+href="#gl:electron-theater"><strong>Electron Theater</strong></a>
+filing, and under which filing constant the pair is filed.</li>
+<li>Explain the role of <a href="#gl:fractal-constant"><strong>El Gran
+Sol’s Fractal constant</strong></a> <span class="math inline">\(\Phi
+\approx 1.618\)</span> as the <a href="#gl:engine-shelf"><strong>engine
+shelf</strong></a> filing constant, and distinguish the two conventions
+the corpus uses for octave terms <span
+class="math inline">\(\Omega_n\)</span>.</li>
+<li>Compute the Φ-duality pair <span class="math inline">\((x\Phi,\;
+x/\Phi)\)</span> with the tested function
+<code>textbook.models.phi_dual</code> and verify its mirror identities
+numerically.</li>
+<li>Place the source paper on the engine shelf — <a
+href="#gl:engine-shelf"><strong>engine shelf #16</strong></a>, companion
+to prime-parity and prime volumetric storage — and restate its <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> scope
+disclaimers precisely.</li>
+<li>Describe the zero balance node of the companion paper <a
+href="#gl:topology-of-the-void">Topology of the Void</a> as the corpus
+states it — without inventing a formula the corpus does not give.</li>
+<li>Run the paper’s reference implementation and interpret its reported
+<strong>9/9 suite locks</strong> result as a catalog-architecture
+check.</li>
+</ol>
+<!-- curriculum-scaffold-start -->
+<h3 id="study-blueprint">Study Blueprint</h3>
+<ul>
+<li><strong>Big idea:</strong> the corpus files the structural pair (1,
+2) — leading digit 1 versus structural digit 2 — as two named drawers,
+<em>Proton Space</em> and <em>Electron Theater</em>, under the filing
+constant <span class="math inline">\(\Phi\)</span>; the filing is a
+catalog move, not a physics derivation.</li>
+<li><strong>Core concepts:</strong> <a
+href="#gl:proton-space"><strong>proton-space</strong></a>, <a
+href="#gl:electron-theater"><strong>electron-theater</strong></a>, <a
+href="#gl:fractal-constant"><strong>fractal-constant</strong></a>, <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a>, <a
+href="#gl:prime-parity"><strong>prime-parity</strong></a>, <a
+href="#gl:topology-of-the-void"><strong>topology-of-the-void</strong></a>.</li>
+<li><strong>Quantitative lens:</strong> the Φ-duality mirror of <span
+class="citation"
+data-cites="eq:part_II_proton-theater_duality">[@eq:part_II_proton-theater_duality]</span>
+and its identities in <span class="citation"
+data-cites="eq:part_II_proton-theater_mirror">[@eq:part_II_proton-theater_mirror]</span>.</li>
+<li><strong>Data skill:</strong> compute a duality pair by hand, then
+confirm it against <code>textbook.models.phi_dual</code> and read the
+mirror plot of <span class="citation"
+data-cites="fig:part_II_proton-theater">[@fig:part_II_proton-theater]</span>.</li>
+<li><strong>Common misconception to repair:</strong> the chapter’s
+“proton” and “electron” are filing labels for digits, not particle
+physics — the paper explicitly disclaims any QED dyad proof.</li>
+<li><strong>Primary lab:</strong> <span class="citation"
+data-cites="sec:lab_part_II_proton-theater">[@sec:lab_part_II_proton-theater]</span>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_II_proton-theater">[@sec:q_part_II_proton-theater]</span>.</li>
+<li><strong>Bridge to computation:</strong>
+<code>textbook.models.phi_dual</code>.
+<!-- curriculum-scaffold-end --></li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Opening Vignette: Two drawers on the engine
+shelf.</strong></p>
+<p>Aboard the <em>SS Vibelandia</em>, the catalog clerk stands before <a
+href="#gl:engine-shelf"><strong>engine shelf #16</strong></a> of the
+Infinite Octaves. Every constant that arrives for filing is read digit
+by digit: a value whose <em>leading digit</em> is <strong>1</strong> —
+<span class="math inline">\(\Phi = 1.618\ldots\)</span>, the mantissa
+talk of <span class="math inline">\(\hbar\)</span> — slides into the
+drawer labelled <strong>Proton Space</strong>; a value carrying the
+<em>structural</em> digit <strong>2</strong> — the sole-even prime,
+<span class="math inline">\(2\pi\)</span> — goes into <strong>Electron
+Theater</strong>. Above both drawers hangs a single placard: <em>filed
+under</em> <span class="math inline">\(\Phi \approx 1.618\)</span>. The
+clerk stamps the slip, notes that the solar labels on today’s letters —
+“Helios-Prime” (AR3664) and “Borealis” (AR3590) — are story filing
+characters, and applies the Fair Exchange clause. That is the whole
+scene: a filing act, honestly labelled as such
+[mendez2026protonTheater].</p>
+</blockquote>
+<hr />
+<h2 id="the-paper-in-the-corpus">The paper in the corpus</h2>
+<p>This chapter formalises the ship-blog paper <strong>“Proton Space ·
+Electron Theater · Φ Duality”</strong> (2026-09-05), authored by
+Prudencio Mendez and operated by the SynthOBS Autonomous Agent on the SS
+Vibelandia blog [mendez2026protonTheater]. The paper self-describes as
+<a href="#gl:catalog-architecture"><strong>catalog
+architecture</strong></a> filed at <strong>engine shelf #16</strong> of
+the Infinite Octaves, with a <strong>9/9 suite locks</strong> result
+recorded under
+<code>research/synthobs-proton-space-electron-theater/</code> and a
+standalone wiring at
+<code>FractiAI/synthobs-proton-space-electron-theater</code>
+[mendez2026protonTheater]. Its declared companions are [Topology of the
+Void] — “Zero as the balance node between 1 and 2”
+[mendez2026topologyVoid] — and [Prime-parity] — the sole-even digit 2
+against odd irreducible sets [mendez2026primeParity] — with prime
+volumetric storage named alongside as shelf companion
+[mendez2026volumetricStorage; mendez2026protonTheater].</p>
+<p>The paper sits early in <strong>Part II</strong> deliberately: its
+two drawers are the simplest filing act on the physical engine shelf,
+and the chapters that follow — viscosity of light (<span
+class="citation"
+data-cites="sec:part_II_viscosity-light">[@sec:part_II_viscosity-light]</span>),
+the eddy-current mirror (<span class="citation"
+data-cites="sec:part_II_eddy-current-mirror">[@sec:part_II_eddy-current-mirror]</span>),
+the crystalline unified field (<span class="citation"
+data-cites="sec:part_II_crystalline-field">[@sec:part_II_crystalline-field]</span>)
+— all file under the same <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a> regime with
+the same honesty-first banner.</p>
+<pre class="mermaid"><code>graph TD
+  C[Incoming constant c, read digit by digit] --&gt; D1{Leading digit = 1?}
+  C --&gt; D2{Structural digit = 2?}
+  D1 --&gt;|yes| PS[Proton Space drawer&lt;br/&gt;Φ · ℏ mantissa talk]
+  D2 --&gt;|yes| ET[Electron Theater drawer&lt;br/&gt;sole-even prime · 2π]
+  PS --&gt; Z[Zero — balance node between 1 and 2&lt;br/&gt;Topology of the Void]
+  ET --&gt; Z
+  PS --&gt; FX[Filing constant Φ ≈ 1.618&lt;br/&gt;El Gran Sol&#39;s Fractal constant]
+  ET --&gt; FX
+  FX --&gt; FE[Fair Exchange clause applied]</code></pre>
+<h2 id="the-filing-duality-digit-1-and-digit-2">The filing duality:
+digit 1 and digit 2</h2>
+<p>The paper’s core construct is a two-drawer filing map for digits,
+which we formalise directly from its claim: “Leading digit
+<strong>1</strong> (Φ, ℏ mantissa talk) files as <strong>Proton
+Space</strong>; structural <strong>2</strong> (sole-even prime, 2π)
+files as <strong>Electron Theater</strong>” [mendez2026protonTheater].
+As a catalog rule the map reads:</p>
+<p><span class="math display">\[
+\mathrm{file}(c) =
+\begin{cases}
+\text{Proton Space} &amp; \text{if the leading digit of } c \text{ is }
+1,\\[4pt]
+\text{Electron Theater} &amp; \text{if the structural digit of } c
+\text{ is } 2,
+\end{cases}
+\]</span> {#eq:part_II_proton-theater_filing}</p>
+<p>with the whole map filed under the single constant <span
+class="math inline">\(\Phi \approx 1.618\)</span>
+[mendez2026protonTheater]. The vocabulary of <span class="citation"
+data-cites="eq:part_II_proton-theater_filing">[@eq:part_II_proton-theater_filing]</span>
+is collected in <span class="citation"
+data-cites="tbl:part_II_proton-theater_filingmap">[@tbl:part_II_proton-theater_filingmap]</span>.</p>
+<table id="tbl:part_II_proton-theater_filingmap">
+<caption>Vocabulary of the digit-filing duality, as the paper defines
+each term.</caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 60%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Term</th>
+<th>Corpus definition</th>
+<th>Trigger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proton Space</td>
+<td>filing category for leading digit <strong>1</strong> (Φ, ℏ mantissa
+talk)</td>
+<td>leading digit 1</td>
+</tr>
+<tr>
+<td>Electron Theater</td>
+<td>filing category for structural <strong>2</strong> (sole-even prime,
+<span class="math inline">\(2\pi\)</span>)</td>
+<td>structural digit 2</td>
+</tr>
+<tr>
+<td>leading digit 1</td>
+<td>trigger of the Proton Space filing</td>
+<td>digit-by-digit read</td>
+</tr>
+<tr>
+<td>structural 2</td>
+<td>trigger of the Electron Theater filing; identified with the
+sole-even prime and <span class="math inline">\(2\pi\)</span></td>
+<td>digit-by-digit read</td>
+</tr>
+<tr>
+<td>Φ duality</td>
+<td>the page’s framing of the 1/2 filing pair under <span
+class="math inline">\(\Phi\)</span></td>
+<td>og:title framing</td>
+</tr>
+<tr>
+<td>ℏ mantissa talk</td>
+<td>the reduced-Planck-constant mantissa context assigned to digit
+1</td>
+<td>mantissa framing</td>
+</tr>
+</tbody>
+</table>
+<p>Two of these rows reach outside the chapter and are worth pausing on.
+The <strong>structural 2</strong> row is explicitly identified with the
+sole-even prime, which is the anchor of the prime-parity filing
+[mendez2026primeParity]; we treat that filing in full in <span
+class="citation"
+data-cites="sec:part_I_prime-parity">[@sec:part_I_prime-parity]</span>.
+And the <strong>ℏ mantissa talk</strong> row is a framing about
+<em>digits of constants</em>, not about physics: the paper assigns the
+reduced Planck constant’s mantissa <em>context</em> to digit 1 while
+simultaneously disclaiming any leading-digit causation for <span
+class="math inline">\(\hbar\)</span> [mendez2026protonTheater]. We read
+this as: the mantissa of a physical constant is <em>filed</em> by its
+leading digit, but nothing in the corpus claims the digit
+<em>causes</em> anything.</p>
+<h2 id="φ-as-filing-constant">Φ as filing constant</h2>
+<p>Both drawers hang under one placard: <strong>El Gran Sol’s Fractal
+constant</strong> <span class="math inline">\(\Phi \approx
+1.618\)</span>, the filing constant of the Infinite Octaves engine shelf
+[mendez2026protonTheater]. This is the <a
+href="#gl:golden-ratio"><strong>golden ratio</strong></a>, whose
+standard algebra the corpus leans on:</p>
+<p><span class="math display">\[
+\Phi^{2} = \Phi + 1, \qquad \frac{1}{\Phi} = \Phi - 1, \qquad
+\Phi - \frac{1}{\Phi} = 1
+\]</span> {#eq:part_II_proton-theater_identity}</p>
+<p>Identity <span class="citation"
+data-cites="eq:part_II_proton-theater_identity">[@eq:part_II_proton-theater_identity]</span>
+is ordinary mathematics of the golden ratio (the defining equation <span
+class="math inline">\(\Phi^2 = \Phi + 1\)</span> follows from <span
+class="math inline">\(\Phi = (1+\sqrt{5})/2\)</span>), and it earns its
+place here because the third form — <span class="math inline">\(\Phi -
+1/\Phi = 1\)</span> — makes the digit 1 structurally visible inside
+<span class="math inline">\(\Phi\)</span> itself: the filing constant is
+exactly one unit wider than its own reciprocal. The pinned values used
+throughout this book are collected in <span class="citation"
+data-cites="tbl:part_II_proton-theater_pinned">[@tbl:part_II_proton-theater_pinned]</span>.</p>
+<table id="tbl:part_II_proton-theater_pinned">
+<caption>Pinned values for the Φ-duality filings (from the book’s
+pinned-number contract; <span
+class="math inline">\(\varphi_{\mathrm{fib}}\)</span> is the Fibonacci
+ratio of <code>textbook.models.phi_fibonacci</code>).</caption>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 17%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Value</th>
+<th>Backing function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\Phi\)</span></td>
+<td><span class="math inline">\(1.618034\)</span></td>
+<td><code>textbook.models.PHI</code></td>
+</tr>
+<tr>
+<td><span class="math inline">\(1/\Phi = \Phi - 1\)</span></td>
+<td><span class="math inline">\(0.618034\)</span></td>
+<td><code>phi_dual</code> (lower branch)</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Phi^{2} = \Phi + 1\)</span></td>
+<td><span class="math inline">\(2.618034\)</span></td>
+<td><code>phi_powers</code></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\ln \Phi\)</span></td>
+<td><span class="math inline">\(0.481212\)</span></td>
+<td>(mirror offset, <span class="citation"
+data-cites="fig:part_II_proton-theater">[@fig:part_II_proton-theater]</span>)</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\varphi_{\mathrm{fib}}(5) =
+8/5\)</span></td>
+<td><span class="math inline">\(1.6\)</span></td>
+<td><code>phi_fibonacci(5)</code></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\varphi_{\mathrm{fib}}(10) =
+89/55\)</span></td>
+<td><span class="math inline">\(1.618182\)</span></td>
+<td><code>phi_fibonacci(10)</code></td>
+</tr>
+</tbody>
+</table>
+<p>Because <span class="math inline">\(\Phi\)</span> is also the engine
+shelf’s octave constant, one convention question must be settled here
+rather than later. The corpus prints the octave term ambiguously as
+“<span class="math inline">\(\Omega_n = \Phi^n \Omega_0\)</span>”; the
+book therefore carries both readings, implemented as
+<code>octave_term(omega0, n, convention)</code> in
+<code>textbook.models</code>:</p>
+<p><span class="math display">\[
+\Omega_n = \Phi^{\,n}\,\Omega_0 \;\;\text{(exponent convention)}, \qquad
+\Omega_n = \varphi_{\mathrm{fib}}(n)\,\Omega_0 \;\;\text{(subscript
+convention)}.
+\]</span> {#eq:part_II_proton-theater_octaves}</p>
+<p>With <span class="math inline">\(\Omega_0 = 1\)</span> and <span
+class="math inline">\(n = 5\)</span>, the exponent convention gives
+<span class="math inline">\(\Omega_5 = \Phi^5 = 11.090170\)</span> while
+the subscript convention gives <span
+class="math inline">\(\varphi_{\mathrm{fib}}(5) \cdot 1 = 1.6\)</span> —
+a factor of nearly seven apart, so the choice matters. By <span
+class="math inline">\(n = 10\)</span> the subscript reading has
+converged to <span class="math inline">\(1.618182\)</span>, within <span
+class="math inline">\(0.01\%\)</span> of <span
+class="math inline">\(\Phi\)</span>. The 99-octave ladder these terms
+climb is built in <span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>, and
+the growth-law side of <span class="math inline">\(\Phi\)</span> is the
+subject of <span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>.</p>
+<h2 id="the-φ-duality-mirror">The Φ-duality mirror</h2>
+<p>The chapter’s worked formalism is the pairing that the figure plan
+calls the <strong>Φ duality mirror</strong>: every value <span
+class="math inline">\(x\)</span> filed under <span
+class="math inline">\(\Phi\)</span> acquires two images, an <em>upper
+filing</em> <span class="math inline">\(x\Phi\)</span> and a <em>lower
+filing</em> <span class="math inline">\(x/\Phi\)</span>
+[mendez2026protonTheater]:</p>
+<p><span class="math display">\[
+\Phi_{+}(x) = x\,\Phi, \qquad \Phi_{-}(x) = \frac{x}{\Phi}.
+\]</span> {#eq:part_II_proton-theater_duality}</p>
+<p>The pair is implemented and tested as
+<code>textbook.models.phi_dual(x)</code>, which returns exactly the
+tuple <span class="math inline">\((x\Phi,\; x/\Phi)\)</span>; never
+retype the arithmetic in prose or scripts — call the tested function.
+Three identities follow from <span class="citation"
+data-cites="eq:part_II_proton-theater_identity">[@eq:part_II_proton-theater_identity]</span>
+and <span class="citation"
+data-cites="eq:part_II_proton-theater_duality">[@eq:part_II_proton-theater_duality]</span>
+together, and they are what the mirror plot of <span class="citation"
+data-cites="fig:part_II_proton-theater">[@fig:part_II_proton-theater]</span>
+makes visible:</p>
+<p><span class="math display">\[
+\Phi_{+}(x)\,\Phi_{-}(x) = x^{2}, \qquad
+\frac{\Phi_{+}(x)}{\Phi_{-}(x)} = \Phi^{2}, \qquad
+\Phi_{-}\!\bigl(\Phi_{+}(x)\bigr) = x.
+\]</span> {#eq:part_II_proton-theater_mirror}</p>
+<p>Read <span class="citation"
+data-cites="eq:part_II_proton-theater_mirror">[@eq:part_II_proton-theater_mirror]</span>
+as three statements about the filing. First, the two images multiply
+back to the original value squared: <span
+class="math inline">\(x\)</span> is the geometric mean of its own upper
+and lower filings, so the mirror is balanced — no drawer is privileged.
+Second, the images are a fixed factor <span
+class="math inline">\(\Phi^2\)</span> apart, which on a logarithmic axis
+is a fixed offset of <span class="math inline">\(\ln \Phi^2 = 2\ln\Phi
+\approx 0.962424\)</span>, symmetric about <span
+class="math inline">\(\ln x\)</span>. Third, the filing is an
+involution: filing the upper image back down returns the original value,
+so the duality loses no information — a desirable property in a catalog
+whose first duty is <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> bookkeeping.
+The parameters of <span class="citation"
+data-cites="eq:part_II_proton-theater_duality">[@eq:part_II_proton-theater_duality]</span>
+are collected in <span class="citation"
+data-cites="tbl:part_II_proton-theater_duality">[@tbl:part_II_proton-theater_duality]</span>.</p>
+<table id="tbl:part_II_proton-theater_duality">
+<caption>Parameters of the Φ-duality mirror.</caption>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(x\)</span></td>
+<td>value being filed</td>
+<td>catalog unit</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Phi\)</span></td>
+<td>filing constant, <span
+class="math inline">\((1+\sqrt{5})/2\)</span></td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Phi_{+}(x)\)</span></td>
+<td>upper filing, <span class="math inline">\(x\Phi\)</span></td>
+<td>catalog unit</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Phi_{-}(x)\)</span></td>
+<td>lower filing, <span class="math inline">\(x/\Phi\)</span></td>
+<td>catalog unit</td>
+</tr>
+</tbody>
+</table>
+<h2 id="worked-example-walking-the-mirror">Worked example: walking the
+mirror</h2>
+<p>Take three filed values and compute each duality pair by hand, then
+confirm against <code>textbook.models.phi_dual</code>.</p>
+<p><strong>Step 1 — file <span class="math inline">\(x =
+1\)</span>.</strong> The upper filing is <span
+class="math inline">\(\Phi_{+}(1) = \Phi =
+1.618034\)</span>; the lower filing is <span
+class="math inline">\(\Phi_{-}(1) = 1/\Phi = 0.618034\)</span>. Note
+that the upper image <em>is</em> the filing constant itself — <span
+class="math inline">\(\Phi = 1.618\ldots\)</span>, whose leading digit
+is 1; we read the corpus’s “leading digit 1” filing as attaching to
+<span class="math inline">\(\Phi\)</span> on exactly this ground. Check
+the product identity of <span class="citation"
+data-cites="eq:part_II_proton-theater_mirror">[@eq:part_II_proton-theater_mirror]</span>:
+<span class="math inline">\(1.618034 \times 0.618034 = 1 = 1^2\)</span>.
+✓</p>
+<p><strong>Step 2 — file <span class="math inline">\(x = 2\)</span>, the
+Electron Theater digit.</strong> The upper filing is <span
+class="math inline">\(\Phi_{+}(2) = 2\Phi = 3.236068\)</span>; the lower
+filing is <span class="math inline">\(\Phi_{-}(2) =
+2/\Phi = 1.236068\)</span>. Here a fourth identity, worth adding to the
+mirror set, follows from <span class="math inline">\(\Phi - 1/\Phi =
+1\)</span>:</p>
+<p><span class="math display">\[
+\Phi_{-}(x) \;=\; \Phi_{+}(x) - x,
+\]</span> {#eq:part_II_proton-theater_step}</p>
+<p>since <span class="math inline">\(x/\Phi = x(\Phi - 1) = x\Phi -
+x\)</span>. Check: <span class="math inline">\(3.236068 - 2 =
+1.236068\)</span>. ✓</p>
+<p><strong>Step 3 — close the involution.</strong> Apply the lower map
+to the upper image: <span class="math inline">\(\Phi_{-}(3.236068) =
+3.236068 / 1.618034 = 2\)</span>. The Electron Theater digit returns
+exactly. ✓</p>
+<p><strong>Step 4 — confirm against the tested backbone.</strong></p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textbook.models <span class="im">import</span> phi_dual, PHI</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>PHI                  <span class="co"># 1.618033988749895</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>phi_dual(<span class="dv">1</span>)          <span class="co"># (1.618033988749895, 0.618033988749895)</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>phi_dual(<span class="dv">2</span>)          <span class="co"># (3.23606797749979, 1.2360679774997896)</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>phi_dual(<span class="dv">2</span>)[<span class="dv">0</span>] <span class="op">*</span> phi_dual(<span class="dv">2</span>)[<span class="dv">1</span>]   <span class="co"># 4.000000000000001 ≈ x²</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>phi_dual(phi_dual(<span class="dv">2</span>)[<span class="dv">0</span>])[<span class="dv">1</span>]       <span class="co"># 2.0 — the involution closes</span></span></code></pre></div>
+<p>Every number above matches the hand computation to display precision,
+and the same pairs are the two branches plotted in <span
+class="citation"
+data-cites="fig:part_II_proton-theater">[@fig:part_II_proton-theater]</span>.</p>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>The mirror identities in <span class="citation"
+data-cites="eq:part_II_proton-theater_mirror">[@eq:part_II_proton-theater_mirror]</span>
+and <span class="citation"
+data-cites="eq:part_II_proton-theater_step">[@eq:part_II_proton-theater_step]</span>
+are <em>our</em> formalisation of the corpus’s filing act — standard
+mathematics of <span class="math inline">\(\Phi\)</span> — not claims
+made by the paper. The paper itself files the pair (1, 2) and states no
+formula for it; where the corpus is silent, this book says so.</p>
+</blockquote>
+<h2 id="zero-as-the-balance-node">Zero as the balance node</h2>
+<p>The paper names one companion result without deriving it: “[Topology
+of the Void] — Zero as the balance node between 1 and 2”
+[mendez2026protonTheater; mendez2026topologyVoid]. The corpus gives
+<strong>no formula</strong> for this balance, and the honest reading is
+to leave it so: zero balances the two drawers, in the sense that the <a
+href="#gl:topology-of-the-void"><strong>topology of the
+void</strong></a> treats zero as the equilibrium node the pair is
+measured against. The formal treatment of zero-as-equilibrium belongs to
+<span class="citation"
+data-cites="sec:part_I_topology-void">[@sec:part_I_topology-void]</span>,
+and the same zero reappears in this part as node <span
+class="math inline">\(k = 0\)</span> of the <a
+href="#gl:singularity-crystal"><strong>singularity crystal</strong></a>
+(<span class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>);
+the tested <code>phi_dual</code> function in
+<code>textbook.models</code> carries the singularity-crystal filing in
+its docstring, which is the codebase’s own record that the Φ duality
+feeds that chapter.</p>
+<h2 id="scope-and-honesty">Scope and honesty</h2>
+<p>The paper’s own scope disclaimer is the load-bearing sentence of the
+chapter, and we restate it near-verbatim [mendez2026protonTheater]:</p>
+<blockquote>
+<p>“Honesty first: this is <em>catalog architecture</em> — engine shelf
+#16 — not a CODATA/SI derivation from Φ, not ħ leading-digit causation,
+not a QED dyad proof, and not zero-crosstalk quantum hardware.”</p>
+</blockquote>
+<p>Each negation is precise, and the chapter’s formalisms must be read
+inside them:</p>
+<ul>
+<li><strong>Not a CODATA/SI derivation from Φ</strong> — nothing here
+derives a physical constant’s value from the golden ratio; <span
+class="math inline">\(\Phi\)</span> is a <em>filing</em> constant.</li>
+<li><strong>Not ħ leading-digit causation</strong> — the “ℏ mantissa
+talk” of drawer 1 is a digit-of-constants filing context, not a claim
+that leading digits cause physical behaviour.</li>
+<li><strong>Not a QED dyad proof</strong> — “Proton” and “Electron” are
+drawer labels for digits 1 and 2, not particle physics, and no
+quantum-electrodynamic result is claimed.</li>
+<li><strong>Not zero-crosstalk quantum hardware</strong> — the 9/9 suite
+locks are software catalog checks, not a hardware capability.</li>
+</ul>
+<p>Two further honesty annotations complete the record. The solar labels
+<strong>AR3664 (“Helios-Prime”)</strong> and <strong>AR3590
+(“Borealis”)</strong> are explicitly <em>story filing characters</em> —
+narrative furniture of the ship blog, not solar physics
+[mendez2026protonTheater]. And the <strong>Fair Exchange clause</strong>
+applies to the whole filing: the refund-adjustment terms of the
+ship-blog series govern every drawer on engine shelf #16
+[mendez2026protonTheater]. What the construct is <em>for</em> is
+coordination and cataloging: a deterministic, digit-triggered rule for
+routing constants into named drawers, with a tested suite (9/9 locks)
+verifying the routing. What it is <em>not</em> is a physical theory —
+the corpus says so first, and so does this book.</p>
+<h2 id="connections">Connections</h2>
+<p>The digit-filing duality feeds three directions. Backward, the
+structural-2 drawer is the sole-even anchor of prime parity (<span
+class="citation"
+data-cites="sec:part_I_prime-parity">[@sec:part_I_prime-parity]</span>),
+and the filing constant <span class="math inline">\(\Phi\)</span> is the
+growth law formalised in <span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>.
+Sideways, the zero balance node hands off to the topology of the void
+(<span class="citation"
+data-cites="sec:part_I_topology-void">[@sec:part_I_topology-void]</span>)
+and to node <span class="math inline">\(k = 0\)</span> of the
+singularity crystal (<span class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>),
+whose net-zero balance bars are plotted in <span class="citation"
+data-cites="fig:part_II_singularity-crystal">[@fig:part_II_singularity-crystal]</span>
+— the same balance-node intuition, drawn with inflows and outflows
+instead of drawers. Forward, the volumetric-storage chapter (<span
+class="citation"
+data-cites="sec:part_III_volumetric-storage">[@sec:part_III_volumetric-storage]</span>)
+consumes the shelf-companion relationship the paper declares:
+prime-indexed addressing is the other half of the shelf’s storage story
+[mendez2026volumetricStorage]. Within Part II, the duality’s two-drawer
+discipline — every filed value is honestly labelled and its images
+recoverable — is the template the viscosity-of-light chapter (<span
+class="citation"
+data-cites="sec:part_II_viscosity-light">[@sec:part_II_viscosity-light]</span>)
+applies to drag, and the metrological-overlap chapter (<span
+class="citation"
+data-cites="sec:part_II_metrological-overlap">[@sec:part_II_metrological-overlap]</span>)
+applies to pairwise measurement agreement.</p>
+<h2 id="summary">Summary</h2>
+<p>The ship-blog paper “Proton Space · Electron Theater · Φ Duality”
+files a two-drawer catalog map under engine shelf #16: leading digit
+<strong>1</strong> (Φ, ℏ mantissa talk) into <a
+href="#gl:proton-space"><strong>Proton Space</strong></a>, structural
+<strong>2</strong> (sole-even prime, <span
+class="math inline">\(2\pi\)</span>) into <a
+href="#gl:electron-theater"><strong>Electron Theater</strong></a>, both
+under the filing constant <span class="math inline">\(\Phi \approx
+1.618\)</span> [mendez2026protonTheater]. The book’s worked formalism is
+the Φ-duality mirror of <span class="citation"
+data-cites="eq:part_II_proton-theater_duality">[@eq:part_II_proton-theater_duality]</span>,
+implemented as <code>textbook.models.phi_dual</code>: upper filing <span
+class="math inline">\(x\Phi\)</span> and lower filing <span
+class="math inline">\(x/\Phi\)</span> satisfy the product, ratio, and
+involution identities of <span class="citation"
+data-cites="eq:part_II_proton-theater_mirror">[@eq:part_II_proton-theater_mirror]</span>,
+so the filing is balanced, fixed-ratio, and information-preserving. The
+companion paper Topology of the Void supplies zero as the balance node
+between the two drawers — stated by the corpus without a formula, and
+left without one here [mendez2026topologyVoid]. Everything rests on the
+paper’s own honesty-first disclaimer: catalog architecture, not a
+CODATA/SI derivation, not ħ leading-digit causation, not a QED dyad
+proof, not zero-crosstalk quantum hardware.</p>
+<h2 id="key-terms">Key Terms</h2>
+<p><a href="#gl:proton-space"><strong>proton-space</strong></a>, <a
+href="#gl:electron-theater"><strong>electron-theater</strong></a>, <a
+href="#gl:fractal-constant"><strong>fractal-constant</strong></a>, <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a>, <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a>, <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:honesty-first"><strong>honesty-first</strong></a>, <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a>, <a
+href="#gl:prime-parity"><strong>prime-parity</strong></a>, <a
+href="#gl:topology-of-the-void"><strong>topology-of-the-void</strong></a>,
+<a
+href="#gl:singularity-crystal"><strong>singularity-crystal</strong></a>.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><strong>Whitepaper:</strong> <a
+href="https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-proton-space-electron-theater-2026-09">Proton
+Space · Electron Theater · Φ Duality — whitepaper surface</a> — the
+paper’s own filing record, including the 9/9 suite locks.</li>
+<li><strong>Reference implementation:</strong> <a
+href="https://github.com/FractiAI/synthobs-proton-space-electron-theater">FractiAI/synthobs-proton-space-electron-theater</a>
+— standalone wiring for the digit-filing suite; re-run with
+<code>npm run research:synthobs-proton-space-electron-theater</code>.</li>
+<li><span class="citation"
+data-cites="mendez2026topologyVoid">@mendez2026topologyVoid</span> — the
+companion paper filing zero as the balance node between 1 and 2; read
+for the equilibrium reading of the void.</li>
+<li><span class="citation"
+data-cites="mendez2026primeParity">@mendez2026primeParity</span> — the
+sole-even prime 2 against odd irreducible sets; the structural-2
+drawer’s arithmetic anchor.</li>
+<li><span class="citation"
+data-cites="mendez2026volumetricStorage">@mendez2026volumetricStorage</span>
+— prime-indexed volumetric storage, the shelf’s named storage
+companion.</li>
+</ul>
+<h2 id="practice">Practice</h2>
+<ul>
+<li><strong>Lab:</strong> <span class="citation"
+data-cites="sec:lab_part_II_proton-theater">[@sec:lab_part_II_proton-theater]</span>
+— compute duality pairs by hand and verify them against
+<code>phi_dual</code> and the reference suite.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_II_proton-theater">[@sec:q_part_II_proton-theater]</span>
+— recall through synthesis on the filing map, the mirror identities, and
+the scope disclaimers.</li>
+<li>File the constants <span class="math inline">\(e =
+2.718\ldots\)</span> and <span class="math inline">\(\pi =
+3.141\ldots\)</span> through <span class="citation"
+data-cites="eq:part_II_proton-theater_filing">[@eq:part_II_proton-theater_filing]</span>
+and state, with reasons, which drawer (if either) each enters — and what
+the exercise shows about the map’s coverage.</li>
+<li>Verify the identity <span class="math inline">\(\Phi_{-}(x) =
+\Phi_{+}(x) - x\)</span> of <span class="citation"
+data-cites="eq:part_II_proton-theater_step">[@eq:part_II_proton-theater_step]</span>
+for <span class="math inline">\(x = 5\)</span> by hand, then with
+<code>textbook.models.phi_dual(5)</code>.</li>
+<li>Rewrite the paper’s honesty-first disclaimer from memory, then check
+it against the Scope and honesty section above; any word you changed is
+a word whose precision you should re-examine.</li>
+</ul>
+</main>
+</body>
+</html>

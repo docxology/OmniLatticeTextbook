@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>lab_cmos-protonic.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:lab_part_III_cmos-protonic">Lab — CMOS/Protonic: The Silicon
+Shelf</h1>
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Lab · 60 min · Materials: notebook, calculator (or
+<code>textbook.models</code>)</p>
+</blockquote>
+<h2 id="objectives">Objectives</h2>
+<p>After this lab you will be able to (1) place a device class on the
+silicon-shelf tier map from the chapter, (2) compute the first six rungs
+of the octave ladder under both the exponent and subscript conventions
+with <code>textbook.models.octave_term</code>, and (3) compute state
+capacities for two-state and multi-state devices by hand and check them
+numerically — all while keeping the source paper’s honesty-first
+boundary visible: we are doing catalogue arithmetic, not device
+measurement [mendez2026cmosProtonic].</p>
+<h2 id="background">Background</h2>
+<p>Linked chapter: <span class="citation"
+data-cites="sec:part_III_cmos-protonic">[@sec:part_III_cmos-protonic]</span>.
+The chapter’s tier map (<span class="citation"
+data-cites="eq:part_III_cmos-protonic_shelf-map">[@eq:part_III_cmos-protonic_shelf-map]</span>)
+files a two-state CMOS gate at octave tier <span class="math inline">\(n
+= 1\)</span> and hydrogen-regulated protonic two-terminal devices on
+bands <span class="math inline">\(n = 2 \ldots 99\)</span>. The tiers
+index the Φ ladder of <span class="citation"
+data-cites="eq:part_III_cmos-protonic_ladder">[@eq:part_III_cmos-protonic_ladder]</span>,
+and the capacity reading of <span class="citation"
+data-cites="eq:part_III_cmos-protonic_capacity">[@eq:part_III_cmos-protonic_capacity]</span>
+turns “multi-state weights instead of only hard snaps” into a number:
+<span class="math inline">\(C = \log_2 m\)</span> bits per device. This
+lab runs that arithmetic — and, just as importantly, marks where the
+arithmetic <em>stops</em> being licensed, because the source note is a
+vocabulary bridge, not a measured power-win table
+[mendez2026cmosProtonic].</p>
+<h2 id="procedure">Procedure</h2>
+<ol type="1">
+<li><p><strong>Hand-compute the ladder rungs.</strong> With <span
+class="math inline">\(\Omega_0 = 1\)</span>, compute <span
+class="math inline">\(\Phi^n\)</span> for <span class="math inline">\(n
+= 1, 2, 3\)</span> by hand using <span class="math inline">\(\Phi =
+1.6180339887\)</span> and the identity <span
+class="math inline">\(\Phi^{n+1} = \Phi^n + \Phi^{n-1}\)</span>. You
+should get <span class="math inline">\(\Phi^1 = 1.618034\)</span>, <span
+class="math inline">\(\Phi^2 = \Phi + 1 = 2.618034\)</span>, <span
+class="math inline">\(\Phi^3 = \Phi^2 + \Phi = 4.236068\)</span>. Note
+the shortcut: multiply by Φ or add the previous two rungs — both give
+the same rung.</p></li>
+<li><p><strong>Check against the model.</strong> In Python, verify with
+<code>phi_powers</code> and both <code>octave_term</code>
+conventions:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textbook.models <span class="im">import</span> octave_term, phi_powers</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>[<span class="bu">round</span>(p, <span class="dv">6</span>) <span class="cf">for</span> p <span class="kw">in</span> phi_powers(<span class="dv">6</span>)]</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># → [1.618034, 2.618034, 4.236068, 6.854102, 11.09017, 17.944272]</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>[octave_term(<span class="fl">1.0</span>, n, <span class="st">&quot;exponent&quot;</span>) <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">7</span>)]</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># → same six values: Ω_n = Φ^n · Ω_0</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>[octave_term(<span class="fl">1.0</span>, n, <span class="st">&quot;subscript&quot;</span>) <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">7</span>)]</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># → Fibonacci-ratio rungs: 1.0, 2.0, 1.5, 1.666..., 1.6, 1.625, ...</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">#   (φ_fib(n) = F(n+1)/F(n); e.g. φ_fib(5) = 8/5 = 1.6,</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">#    φ_fib(10) = 89/55 ≈ 1.618182)</span></span></code></pre></div></li>
+<li><p><strong>Compute capacities by hand.</strong> Using <span
+class="math inline">\(C = \log_2 m\)</span>: a binary gate (<span
+class="math inline">\(m = 2\)</span>) → <span class="math inline">\(C =
+1\)</span> bit; a four-level protonic device → <span
+class="math inline">\(C = 2\)</span> bits; a sixteen-level protonic
+device → <span class="math inline">\(C = 4\)</span> bits. Write down,
+for each row, the tier or band the chapter’s shelf map assigns.</p></li>
+<li><p><strong>File the devices.</strong> Build a two-row filing table —
+device class vs. <span class="math inline">\(S(d)\)</span>, <span
+class="math inline">\(m\)</span>, <span class="math inline">\(C\)</span>
+— for the binary CMOS gate and a protonic device with <span
+class="math inline">\(m = 16\)</span>. This table is your deliverable
+(below).</p></li>
+<li><p><strong>Mark the boundary.</strong> Next to your table, write the
+honesty clause each row must carry: the note files device classes; it
+does <em>not</em> measure how many states any band delivers, and
+protonic devices are “still physics-class devices”
+[mendez2026cmosProtonic].</p></li>
+</ol>
+<h2 id="analysis">Analysis</h2>
+<p>Compare the two conventions from step 2. The exponent convention
+grows without bound (<span class="math inline">\(\Phi^{99}\)</span> is
+astronomically large), while the Fibonacci-ratio subscript convention
+converges toward Φ itself. The corpus prints “Ωn = Φn·Ω0”, which is
+ambiguous between the two; the chapter and <span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span> keep
+both readings alive. State in one sentence which convention your filing
+table assumes and why the choice does not affect the <em>tier
+assignment</em> (the map <span class="math inline">\(S\)</span> uses the
+integer index <span class="math inline">\(n\)</span>, not the rung value
+<span class="math inline">\(\Omega_n\)</span>). Summarise your capacity
+column with <code>textbook.models.descriptive_statistics</code> if you
+extended it to more values of <span class="math inline">\(m\)</span> —
+the spread between <span class="math inline">\(C = 1\)</span> bit and
+<span class="math inline">\(C = 4\)</span> bits is the quantitative
+shadow of “multi-state weights instead of only hard snaps.”</p>
+<h2 id="computational-workflow">Computational Workflow</h2>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textbook.models <span class="im">import</span> octave_term, phi_powers</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Ladder rungs for the silicon shelf&#39;s first six tiers (exponent conv.)</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>rungs <span class="op">=</span> [octave_term(<span class="fl">1.0</span>, n, <span class="st">&quot;exponent&quot;</span>) <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">7</span>)]</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> [<span class="bu">round</span>(r, <span class="dv">6</span>) <span class="cf">for</span> r <span class="kw">in</span> rungs] <span class="op">==</span> [</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="fl">1.618034</span>, <span class="fl">2.618034</span>, <span class="fl">4.236068</span>, <span class="fl">6.854102</span>, <span class="fl">11.09017</span>, <span class="fl">17.944272</span>]</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Capacity column C = log2(m) for a chosen resolution ladder</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>capacity <span class="op">=</span> {m: math.log2(m) <span class="cf">for</span> m <span class="kw">in</span> (<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">16</span>)}</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># → {2: 1.0, 4: 2.0, 16: 4.0}</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Filing: shelf map S(d) by device class (from the chapter, not computed)</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>shelf <span class="op">=</span> {<span class="st">&quot;binary CMOS gate&quot;</span>: <span class="dv">1</span>, <span class="st">&quot;protonic (m = 16)&quot;</span>: <span class="st">&quot;2…99&quot;</span>}</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">(extension): add a protonic m = 256 row; what is C, and which band?</span></span></code></pre></div>
+<h2 id="deliverable">Deliverable</h2>
+<p>A two-row filing table (device class, <span
+class="math inline">\(S(d)\)</span>, <span
+class="math inline">\(m\)</span>, <span
+class="math inline">\(C\)</span>, honesty clause) plus your hand-derived
+values for <span class="math inline">\(\Phi^1, \Phi^2, \Phi^3\)</span>
+and the three capacity values, each checked against the
+<code>textbook.models</code> outputs shown above.</p>
+<h2 id="reflection">Reflection</h2>
+<ol type="1">
+<li>The chapter calls tier 1 <em>degenerate</em> in the sense of
+<em>simplest resolution</em>. After computing <span
+class="math inline">\(C = 1\)</span> bit for the binary gate, does
+“simplest” feel like a criticism or a description — and what would be
+lost by reading it as criticism?</li>
+<li>Your capacity numbers came from <em>your</em> choice of <span
+class="math inline">\(m\)</span>. Which parts of this lab are
+corpus-licensed (the tier map, the ladder, the quoted phrases) and which
+are standard-information-theory readings you supplied?</li>
+<li>If a foundry evaluator asked “where is the chip?”, what — precisely,
+per the source note — would you have to say the bridge is and is
+not?</li>
+</ol>
+</main>
+</body>
+</html>

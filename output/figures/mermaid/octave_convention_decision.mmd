@@ -1,0 +1,9 @@
+graph TD
+  Printed["Printed shorthand Ωn = Φn·Ω0"]
+  Exponent["Exponent reading Φ^n·Ω0"]
+  Subscript["Subscript reading φ_fib(n)·Ω0"]
+  Register["Octave register"]
+  Printed -->|n read as superscript| Exponent
+  Printed -->|n read as index| Subscript
+  Exponent -->|Φ^n spacing| Register
+  Subscript -->|Fibonacci-ratio spacing| Register

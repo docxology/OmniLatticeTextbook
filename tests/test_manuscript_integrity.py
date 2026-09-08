@@ -14,15 +14,12 @@ from zipfile import ZIP_STORED, ZipFile
 import defusedxml.ElementTree as ElementTree
 import pytest
 import yaml
-from infrastructure.rendering.epub_renderer import render_epub
-from infrastructure.validation.content import validate_images
-from infrastructure.validation.content.diagnostic_codes import MarkdownCode
 
 from textbook import content
 from textbook.config import iter_chapters, iter_unit_intros, load_config, validate_config
 from textbook.constants import CITATION_KEYS, GLOSSARY_ANCHORS, REQUIRED_SECTION_HEADINGS
 
-MANUSCRIPT = Path(__file__).resolve().parent.parent / "manuscript"
+from textbook_paths import MANUSCRIPT  # canonical docs/manuscript location
 CONFIG = load_config(MANUSCRIPT)
 CHAPTERS = iter_chapters(CONFIG)
 UNIT_INTROS = iter_unit_intros(CONFIG)
@@ -34,7 +31,7 @@ def test_config_is_valid():
 
 def test_claim_ledger_structural_counts_match_config():
     """Declared structural facts cannot drift from the config source of truth."""
-    ledger = yaml.safe_load((MANUSCRIPT.parent / "data" / "claim_ledger.yaml").read_text(encoding="utf-8"))
+    ledger = yaml.safe_load((MANUSCRIPT.parent.parent / "data" / "claim_ledger.yaml").read_text(encoding="utf-8"))
     claims = {claim["claim_id"]: claim["value"] for claim in ledger["claims"]}
     assert claims["chapter-count"] == len(CHAPTERS)
     assert claims["part-count"] == len(CONFIG["units"])
@@ -139,7 +136,7 @@ def test_appendices_only_cite_and_link_defined_targets():
 
 # Finished reference chapters: (part_id, stem). Each must be fully filled —
 # real prose, no stub markers — while still satisfying the structural contract.
-WORKED_EXEMPLARS = [("part_I", "first_principles"), ("part_III", "case_studies")]
+WORKED_EXEMPLARS = [("part_0", "octave-map"), ("part_III", "frontiers")]
 
 
 @pytest.mark.parametrize("part_id,stem", WORKED_EXEMPLARS, ids=[s for _, s in WORKED_EXEMPLARS])
@@ -169,6 +166,10 @@ def test_format_gallery_figure_refs_match_generator():
 
 def test_format_gallery_renders_as_well_formed_epub_xhtml(tmp_path):
     """The authored gallery must produce a structurally valid EPUB archive."""
+    render_epub = pytest.importorskip(
+        "infrastructure.rendering.epub_renderer",
+        reason="EPUB rendering lives in the monorepo renderer",
+    ).render_epub
     gallery = MANUSCRIPT / "appendices" / "appendix_format_gallery.md"
     epub = tmp_path / "format_gallery.epub"
 
@@ -176,7 +177,7 @@ def test_format_gallery_renders_as_well_formed_epub_xhtml(tmp_path):
         gallery,
         epub,
         title="Format Gallery",
-        author="Template Textbook",
+        author="OmniLatticeTextbook",
         extra_args=[f"--resource-path={gallery.parent}"],
     )
 
@@ -233,9 +234,14 @@ def test_every_chapter_figure_resolves_and_is_producible(tmp_path):
 
 def test_documentation_placeholders_do_not_trigger_image_missing_diagnostics() -> None:
     """Validate textbook docs placeholders stay non-failing for image checks."""
-    problems = validate_images(
+    content_mod = pytest.importorskip(
+        "infrastructure.validation.content",
+        reason="markdown image diagnostics live in the monorepo validator",
+    )
+    codes = pytest.importorskip("infrastructure.validation.content.diagnostic_codes")
+    problems = content_mod.validate_images(
         [str(MANUSCRIPT / "AGENTS.md"), str(MANUSCRIPT / "SYNTAX.md")],
         MANUSCRIPT.parent,
     )
-    missing = [problem for problem in problems if problem.code == MarkdownCode.IMG_MISSING]
+    missing = [problem for problem in problems if problem.code == codes.MarkdownCode.IMG_MISSING]
     assert not missing, f"unexpected Markdown image diagnostics: {missing}"

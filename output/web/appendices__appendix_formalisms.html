@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>appendix_formalisms.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:appendix_formalisms">Appendix D — Master Formalism Table of
+the Omni-Lattice</h1>
+<p>This appendix is the master table of every labelled formalism in the
+book. Each row is one equation label harvested from the finished
+chapters of Parts 0–III, paired with the chapter that introduces it, the
+tested function in <code>src/textbook/models.py</code> that implements
+it (where one exists), and a one-line reading of what the formalism
+claims. Use it as a lookup index when a cross-reference such as
+<code>[@eq:part_0_orientation_register]</code> needs context. Symbol
+definitions live in the notation appendix (<span class="citation"
+data-cites="sec:appendix_notation">[@sec:appendix_notation]</span>);
+mathematical prerequisites, including the geometry of <span
+class="math inline">\(\Phi\)</span>, in the mathematical review (<span
+class="citation"
+data-cites="sec:appendix_math_review">[@sec:appendix_math_review]</span>).</p>
+<h2 id="the-two-ω-conventions">The two Ω conventions</h2>
+<p>One formal ambiguity runs through the entire corpus and therefore
+through this table. The source papers print the octave-indexing law as
+“<span class="math inline">\(\Omega_n = \Phi_n
+\cdot \Omega_0\)</span>” without ever defining whether the <span
+class="math inline">\(n\)</span> on <span
+class="math inline">\(\Phi\)</span> is an <em>exponent</em> or a
+<em>subscript</em>. The book keeps both readings first-class rather than
+silently choosing one:</p>
+<ul>
+<li><strong>Exponent convention</strong> — <span
+class="math inline">\(\Omega_n = \Phi^{\,n}\,\Omega_0\)</span>,
+geometric growth at ratio <span class="math inline">\(\Phi \approx
+1.618\)</span> per octave.</li>
+<li><strong>Subscript convention</strong> — <span
+class="math inline">\(\Omega_n = \varphi_{\mathrm{fib}}(n)\,
+\Omega_0\)</span> with <span
+class="math inline">\(\varphi_{\mathrm{fib}}(n) = F_{n+1}/F_n\)</span>,
+a Fibonacci-ratio ladder that converges to the exponent reading from
+below.</li>
+</ul>
+<p>The two readings bracket the golden ratio: they agree asymptotically
+because <span class="math inline">\(F_{n+1}/F_n \to \Phi\)</span>, but
+differ by orders of magnitude at small <span
+class="math inline">\(n\)</span> (at <span class="math inline">\(n =
+5\)</span>: <span class="math inline">\(\Phi^5 = 11.090170\)</span>
+versus <span class="math inline">\(\varphi_{\mathrm{fib}}(5) =
+8/5\)</span>). The tested backbone
+<code>octave_term(omega0, n, convention)</code> implements
+<strong>both</strong> behind a switchable argument, and the chapters pin
+their numbers explicitly to one reading or the other. Where a row below
+says “both conventions”, the equation itself carries the pair side by
+side. Rows whose backing column reads “—” are filed arithmetic,
+literature constants, or narrative cases-maps that the corpus states in
+prose; the book adds no algebra the papers do not supply.</p>
+<hr />
+<h2 id="part-0-orientation-and-quantitative-foundations">Part 0 —
+Orientation and Quantitative Foundations</h2>
+<p>Introduced in <span class="citation"
+data-cites="sec:part_0_orientation">[@sec:part_0_orientation]</span>,
+<span class="citation"
+data-cites="sec:part_0_living-pem">[@sec:part_0_living-pem]</span>,
+<span class="citation"
+data-cites="sec:part_0_tensor-decoupling">[@sec:part_0_tensor-decoupling]</span>,
+<span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>, and
+<span class="citation"
+data-cites="sec:part_0_master-synthesis">[@sec:part_0_master-synthesis]</span>.</p>
+<table>
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 17%" />
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 38%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Formalism</th>
+<th>Label</th>
+<th>Chapter</th>
+<th>Backing model function</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F-01</td>
+<td>EGS fractal constant</td>
+<td><code>[@eq:part_0_living-pem_phi_egs]</code></td>
+<td><code>[@sec:part_0_living-pem]</code></td>
+<td><code>phi_powers(1)</code></td>
+<td>The golden ratio <span class="math inline">\(\Phi_{\mathrm{EGS}}
+\approx 1.618\)</span> filed as the corpus’s engineering-scale constant,
+“not a CODATA replacement”.</td>
+</tr>
+<tr>
+<td>F-02</td>
+<td>Catalog register size</td>
+<td><code>[@eq:part_0_living-pem_catalog]</code></td>
+<td><code>[@sec:part_0_living-pem]</code></td>
+<td><code>catalog_size()</code></td>
+<td>Register capacity <span class="math inline">\(|\mathcal{C}| = O
+\times D = 99 \times 81 = 8{,}019\)</span> bins.</td>
+</tr>
+<tr>
+<td>F-03</td>
+<td>Reciprocal balance</td>
+<td><code>[@eq:part_0_living-pem_balance]</code></td>
+<td><code>[@sec:part_0_living-pem]</code></td>
+<td><code>net_zero_balance(inflows, outflows)</code></td>
+<td>Net balance <span class="math inline">\(B = \sum I_i - \sum
+O_j\)</span> with the Fair-Exchange settlement target <span
+class="math inline">\(B = 0\)</span>.</td>
+</tr>
+<tr>
+<td>F-04</td>
+<td>Master register capacity</td>
+<td><code>[@eq:part_0_master-synthesis_catalog_size]</code></td>
+<td><code>[@sec:part_0_master-synthesis]</code></td>
+<td><code>catalog_size()</code></td>
+<td>The same <span class="math inline">\(99 \times 81 = 8{,}019\)</span>
+capacity restated as the synthesis paper’s cell count <span
+class="math inline">\(N_{\mathrm{cells}}\)</span>.</td>
+</tr>
+<tr>
+<td>F-05</td>
+<td>Φ as a Fibonacci limit</td>
+<td><code>[@eq:part_0_master-synthesis_egs]</code></td>
+<td><code>[@sec:part_0_master-synthesis]</code></td>
+<td><code>phi_fibonacci(n)</code></td>
+<td><span class="math inline">\(\Phi = \lim_{n\to\infty}
+F_{n+1}/F_n\)</span> — the subscript convention’s convergent, defined as
+a limit rather than asserted.</td>
+</tr>
+<tr>
+<td>F-06</td>
+<td>Octave indexing law, both readings</td>
+<td><code>[@eq:part_0_master-synthesis_octave_index]</code></td>
+<td><code>[@sec:part_0_master-synthesis]</code></td>
+<td><code>octave_term(omega0, n, convention)</code></td>
+<td>The two <span class="math inline">\(\Omega\)</span> readings printed
+side by side: <span class="math inline">\(\Phi^n\Omega_0\)</span>
+(exponent) versus <span
+class="math inline">\(\varphi_{\mathrm{fib}}(n)\Omega_0\)</span>
+(subscript).</td>
+</tr>
+<tr>
+<td>F-07</td>
+<td>Exponent-convention octave</td>
+<td><code>[@eq:part_0_octave-map_exponent]</code></td>
+<td><code>[@sec:part_0_octave-map]</code></td>
+<td><code>octave_term(omega0, n, "exponent")</code></td>
+<td>Ladder growth <span class="math inline">\(\Omega_n =
+\Phi^n\Omega_0\)</span> at ratio <span
+class="math inline">\(\Phi\)</span> per octave.</td>
+</tr>
+<tr>
+<td>F-08</td>
+<td>Subscript-convention octave</td>
+<td><code>[@eq:part_0_octave-map_subscript]</code></td>
+<td><code>[@sec:part_0_octave-map]</code></td>
+<td><code>octave_term(omega0, n, "subscript")</code></td>
+<td>Fibonacci-ratio ladder <span class="math inline">\(\Omega_n =
+\varphi_{\mathrm{fib}}(n)\Omega_0\)</span>, converging on the exponent
+reading.</td>
+</tr>
+<tr>
+<td>F-09</td>
+<td>Catalog size from segments × digits</td>
+<td><code>[@eq:part_0_octave-map_catalog]</code></td>
+<td><code>[@sec:part_0_octave-map]</code></td>
+<td><code>catalog_size(99, 81)</code></td>
+<td><span class="math inline">\(N_{\mathrm{cat}} = 99 \times 81 =
+8{,}019\)</span> as octave segments times precision digits.</td>
+</tr>
+<tr>
+<td>F-10</td>
+<td>Catalog register</td>
+<td><code>[@eq:part_0_orientation_register]</code></td>
+<td><code>[@sec:part_0_orientation]</code></td>
+<td><code>catalog_size()</code></td>
+<td>The book’s opening count of the digit × octave register: 8,019
+filing addresses.</td>
+</tr>
+<tr>
+<td>F-11</td>
+<td>Octave ladder</td>
+<td><code>[@eq:part_0_orientation_octave]</code></td>
+<td><code>[@sec:part_0_orientation]</code></td>
+<td><code>octave_term(omega0, n, "exponent")</code></td>
+<td>First statement of the ladder, <span class="math inline">\(\Omega_n
+= \Phi^n\Omega_0\)</span> (exponent reading).</td>
+</tr>
+<tr>
+<td>F-12</td>
+<td>Octave ladder length</td>
+<td><code>[@eq:part_0_tensor-decoupling_ladder]</code></td>
+<td><code>[@sec:part_0_tensor-decoupling]</code></td>
+<td>—</td>
+<td><span class="math inline">\(N_{\mathrm{ladder}} = B \times s = 11
+\times 9 = 99\)</span> octaves: eleven shelf brackets times nine
+slots.</td>
+</tr>
+<tr>
+<td>F-13</td>
+<td>Block precision register</td>
+<td><code>[@eq:part_0_tensor-decoupling_block]</code></td>
+<td><code>[@sec:part_0_tensor-decoupling]</code></td>
+<td>—</td>
+<td>The paper’s own per-block sketch <span
+class="math inline">\(C_{\mathrm{block}} = 9 \times 81 = 729\)</span>
+digits.</td>
+</tr>
+<tr>
+<td>F-14</td>
+<td>Catalog total</td>
+<td><code>[@eq:part_0_tensor-decoupling_catalog]</code></td>
+<td><code>[@sec:part_0_tensor-decoupling]</code></td>
+<td><code>catalog_size()</code></td>
+<td>Tiling identity <span class="math inline">\(99 \times 81 =
+8{,}019\)</span> digits reconciling the per-block sketch with the full
+register.</td>
+</tr>
+<tr>
+<td>F-15</td>
+<td>Shelf-weight decay</td>
+<td><code>[@eq:part_0_tensor-decoupling_model]</code></td>
+<td><code>[@sec:part_0_tensor-decoupling]</code></td>
+<td><code>phi_powers(n)</code></td>
+<td>Bracket weight <span class="math inline">\(w_n =
+w_0\Phi^{-n}\)</span> — the reciprocal of <span
+class="math inline">\(\Phi^n\)</span> along the ladder.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="part-i-structure-and-form">Part I — Structure and Form</h2>
+<p>Introduced in <span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>,
+<span class="citation"
+data-cites="sec:part_I_higgs-awareness">[@sec:part_I_higgs-awareness]</span>,
+<span class="citation"
+data-cites="sec:part_I_holographic-rhyme">[@sec:part_I_holographic-rhyme]</span>,
+<span class="citation"
+data-cites="sec:part_I_multidimensional-rhyme">[@sec:part_I_multidimensional-rhyme]</span>,
+<span class="citation"
+data-cites="sec:part_I_prime-parity">[@sec:part_I_prime-parity]</span>,
+and <span class="citation"
+data-cites="sec:part_I_topology-void">[@sec:part_I_topology-void]</span>.</p>
+<table>
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 17%" />
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 38%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Formalism</th>
+<th>Label</th>
+<th>Chapter</th>
+<th>Backing model function</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F-16</td>
+<td>Golden-ratio identity</td>
+<td><code>[@eq:part_I_fractal-constant_phi-identity]</code></td>
+<td><code>[@sec:part_I_fractal-constant]</code></td>
+<td>—</td>
+<td><span class="math inline">\(\Phi^2 = \Phi + 1\)</span>: each power
+of <span class="math inline">\(\Phi\)</span> is the sum of the two
+before it — the exact handle on the corpus’s “fractal”
+self-similarity.</td>
+</tr>
+<tr>
+<td>F-17</td>
+<td>Octave term, both conventions</td>
+<td><code>[@eq:part_I_fractal-constant_octave-term]</code></td>
+<td><code>[@sec:part_I_fractal-constant]</code></td>
+<td><code>octave_term(omega0, n, convention)</code></td>
+<td>The exponent/subscript pair <span
+class="math inline">\(\Omega^{\text{exp}}_n = \Phi^n\Omega_0\)</span>
+and <span class="math inline">\(\Omega^{\text{sub}}_n =
+\varphi_{\mathrm{fib}}(n)\Omega_0\)</span>, recording both printed
+readings.</td>
+</tr>
+<tr>
+<td>F-18</td>
+<td>Palindrome growth</td>
+<td><code>[@eq:part_I_fractal-constant_palindrome]</code></td>
+<td><code>[@sec:part_I_fractal-constant]</code></td>
+<td><code>phi_powers(n)</code></td>
+<td>Palindrome filings grow as <span class="math inline">\(P_n =
+P_0\Phi^n\)</span> — catalog octaves, not random drift labels.</td>
+</tr>
+<tr>
+<td>F-19</td>
+<td>Pinned Φ powers</td>
+<td><code>[@eq:part_I_fractal-constant_phi-powers]</code></td>
+<td><code>[@sec:part_I_fractal-constant]</code></td>
+<td><code>phi_powers(n)</code></td>
+<td>The value table <span class="math inline">\(\Phi^1, \ldots,
+\Phi^6\)</span> used to pin the exponent reading throughout the
+book.</td>
+</tr>
+<tr>
+<td>F-20</td>
+<td>Transduction brake</td>
+<td><code>[@eq:part_I_higgs-awareness_model]</code></td>
+<td><code>[@sec:part_I_higgs-awareness]</code></td>
+<td><code>transduction_brake(t, v0, k)</code></td>
+<td>Exponential slowdown <span class="math inline">\(v(t) = v_0
+e^{-kt}\)</span> — the “thought meets its mirror and slows into matter”
+filing.</td>
+</tr>
+<tr>
+<td>F-21</td>
+<td>Brake displacement</td>
+<td><code>[@eq:part_I_higgs-awareness_displacement]</code></td>
+<td><code>[@sec:part_I_higgs-awareness]</code></td>
+<td><code>transduction_brake</code> (integrated form)</td>
+<td>Total travel <span class="math inline">\(s(T) = \frac{v_0}{k}(1 -
+e^{-kT})\)</span> is bounded by <span
+class="math inline">\(v_0/k\)</span> no matter how long the story
+runs.</td>
+</tr>
+<tr>
+<td>F-22</td>
+<td>Rhyme field</td>
+<td><code>[@eq:part_I_holographic-rhyme_field]</code></td>
+<td><code>[@sec:part_I_holographic-rhyme]</code></td>
+<td><code>holographic_rhyme_field(xs, ys, pillars, wavelength)</code></td>
+<td>A filing check: the sum of directional cosine pillars of shared
+wavelength <span class="math inline">\(\lambda\)</span>.</td>
+</tr>
+<tr>
+<td>F-23</td>
+<td>Pairwise rhyme reduction</td>
+<td><code>[@eq:part_I_holographic-rhyme_pairwise]</code></td>
+<td><code>[@sec:part_I_holographic-rhyme]</code></td>
+<td><code>holographic_rhyme_field(xs, ys, pillars=4)</code></td>
+<td>The four-pillar field reduced to pairwise cosine interference <span
+class="math inline">\(2\cos(2\pi x/\lambda) + 2\cos(2\pi
+y/\lambda)\)</span>.</td>
+</tr>
+<tr>
+<td>F-24</td>
+<td>Multi-pillar rhyme field</td>
+<td><code>[@eq:part_I_multidimensional-rhyme_field]</code></td>
+<td><code>[@sec:part_I_multidimensional-rhyme]</code></td>
+<td><code>holographic_rhyme_field(xs, ys, pillars, wavelength)</code></td>
+<td>The general field <span class="math inline">\(f_P(x, y)\)</span>
+over <span class="math inline">\(P\)</span> pillars with <span
+class="math inline">\(\theta_k = 2\pi k/P\)</span>.</td>
+</tr>
+<tr>
+<td>F-25</td>
+<td>Xd/Yd combine</td>
+<td><code>[@eq:part_I_multidimensional-rhyme_xdyd]</code></td>
+<td><code>[@sec:part_I_multidimensional-rhyme]</code></td>
+<td><code>xd_yd_combine(a, b, sign)</code></td>
+<td>The ± filing <span class="math inline">\(d_{\pm} = x \pm y\)</span>
+with sign <span class="math inline">\(\in \{+1, -1\}\)</span>.</td>
+</tr>
+<tr>
+<td>F-26</td>
+<td>Octave pair, both readings</td>
+<td><code>[@eq:part_I_multidimensional-rhyme_octave]</code></td>
+<td><code>[@sec:part_I_multidimensional-rhyme]</code></td>
+<td><code>octave_term(omega0, n, convention)</code></td>
+<td>The two <span class="math inline">\(\Omega\)</span> conventions with
+pinned values tabulated for the ladder walk.</td>
+</tr>
+<tr>
+<td>F-27</td>
+<td>Exponent octave (prime parity)</td>
+<td><code>[@eq:part_I_prime-parity_model]</code></td>
+<td><code>[@sec:part_I_prime-parity]</code></td>
+<td><code>octave_term(omega0, n, "exponent")</code></td>
+<td><span class="math inline">\(\Omega_n = \Phi^n\Omega_0\)</span>
+restated for the prime-parity filing: growth at the golden-ratio rate
+per octave.</td>
+</tr>
+<tr>
+<td>F-28</td>
+<td>Subscript octave (prime parity)</td>
+<td><code>[@eq:part_I_prime-parity_subscript]</code></td>
+<td><code>[@sec:part_I_prime-parity]</code></td>
+<td><code>octave_term(omega0, n, "subscript")</code></td>
+<td>Fibonacci-ratio reading <span
+class="math inline">\(\Omega^{\text{sub}}_n =
+\frac{F(n+1)}{F(n)}\Omega_0\)</span>.</td>
+</tr>
+<tr>
+<td>F-29</td>
+<td>Void pivot</td>
+<td><code>[@eq:part_I_topology-void_pivot]</code></td>
+<td><code>[@sec:part_I_topology-void]</code></td>
+<td><code>net_zero_balance(inflows, outflows)</code></td>
+<td>The filing “0 balances <span class="math inline">\(\{1,
+2\}\)</span>” — the zero octave settling the binary pair, with <span
+class="math inline">\(\Phi\)</span> filed alongside.</td>
+</tr>
+<tr>
+<td>F-30</td>
+<td>Even/odd reflection split</td>
+<td><code>[@eq:part_I_topology-void_model]</code></td>
+<td><code>[@sec:part_I_topology-void]</code></td>
+<td>—</td>
+<td>The operator <span class="math inline">\(\mathcal{B}[f](x) =
+\tfrac{1}{2}(f(x) + f(-x))\)</span> averages a signal with its own
+reflection through zero, extracting even and odd parts.</td>
+</tr>
+<tr>
+<td>F-31</td>
+<td>Harmonic well</td>
+<td><code>[@eq:part_I_topology-void_well]</code></td>
+<td><code>[@sec:part_I_topology-void]</code></td>
+<td>—</td>
+<td>Standard mechanics <span class="math inline">\(V(x) =
+\tfrac{1}{2}\kappa x^2\)</span>, <span class="math inline">\(F = -\kappa
+x\)</span>, offered as the “dynamic equilibrium” interpretation.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="part-ii-dynamics-and-change">Part II — Dynamics and Change</h2>
+<p>Introduced in <span class="citation"
+data-cites="sec:part_II_crystalline-field">[@sec:part_II_crystalline-field]</span>,
+<span class="citation"
+data-cites="sec:part_II_eddy-current-mirror">[@sec:part_II_eddy-current-mirror]</span>,
+<span class="citation"
+data-cites="sec:part_II_metamorphic-octaves">[@sec:part_II_metamorphic-octaves]</span>,
+<span class="citation"
+data-cites="sec:part_II_metrological-overlap">[@sec:part_II_metrological-overlap]</span>,
+<span class="citation"
+data-cites="sec:part_II_planetary-core">[@sec:part_II_planetary-core]</span>,
+<span class="citation"
+data-cites="sec:part_II_proton-theater">[@sec:part_II_proton-theater]</span>,
+<span class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>,
+and <span class="citation"
+data-cites="sec:part_II_viscosity-light">[@sec:part_II_viscosity-light]</span>.</p>
+<table>
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 17%" />
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 38%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Formalism</th>
+<th>Label</th>
+<th>Chapter</th>
+<th>Backing model function</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F-32</td>
+<td>Access-crystal facets</td>
+<td><code>[@eq:part_II_crystalline-field_facet]</code></td>
+<td><code>[@sec:part_II_crystalline-field]</code></td>
+<td>—</td>
+<td>The identity <span class="math inline">\(d = v \cdot t\)</span> with
+access time <span class="math inline">\(\tau = d/v\)</span>: speed,
+distance, and time read as three facets of one “access crystal”.</td>
+</tr>
+<tr>
+<td>F-33</td>
+<td>Crystal octave term</td>
+<td><code>[@eq:part_II_crystalline-field_crystal]</code></td>
+<td><code>[@sec:part_II_crystalline-field]</code></td>
+<td><code>octave_term(omega0, n, convention)</code></td>
+<td><span class="math inline">\(\Omega_n = \Phi^n\Omega_0\)</span> with
+both printed conventions implemented in the backbone.</td>
+</tr>
+<tr>
+<td>F-34</td>
+<td>Landauer rail</td>
+<td><code>[@eq:part_II_crystalline-field_landauer]</code></td>
+<td><code>[@sec:part_II_crystalline-field]</code></td>
+<td>—</td>
+<td><span class="math inline">\(E_{\min} = k_B T \ln 2\)</span>, the
+standard Landauer bound, adopted by literature reference rather than
+re-derivation.</td>
+</tr>
+<tr>
+<td>F-35</td>
+<td>Eddy-current brake</td>
+<td><code>[@eq:part_II_eddy-current-mirror_model]</code></td>
+<td><code>[@sec:part_II_eddy-current-mirror]</code></td>
+<td><code>transduction_brake(t, v0, k)</code></td>
+<td>Self-observation drag filed as <span class="math inline">\(v(t) =
+v_0 e^{-kt}\)</span>.</td>
+</tr>
+<tr>
+<td>F-36</td>
+<td>Brake half-life</td>
+<td><code>[@eq:part_II_eddy-current-mirror_halflife]</code></td>
+<td><code>[@sec:part_II_eddy-current-mirror]</code></td>
+<td><code>half_life(k)</code></td>
+<td><span class="math inline">\(t_{1/2} = \ln 2 / k \approx
+0.693147/k\)</span> — the convention-independent decay time.</td>
+</tr>
+<tr>
+<td>F-37</td>
+<td>Drag force</td>
+<td><code>[@eq:part_II_eddy-current-mirror_drag]</code></td>
+<td><code>[@sec:part_II_eddy-current-mirror]</code></td>
+<td><code>transduction_brake(t, v0, k)</code></td>
+<td><span class="math inline">\(F_{\mathrm{drag}}(t) =
+m\,k\,v(t)\)</span>: drag proportional to the instantaneous braked
+speed.</td>
+</tr>
+<tr>
+<td>F-38</td>
+<td>Metamorphic filing map</td>
+<td><code>[@eq:part_II_metamorphic-octaves_filing]</code></td>
+<td><code>[@sec:part_II_metamorphic-octaves]</code></td>
+<td>—</td>
+<td><span class="math inline">\(L(h, p)\)</span> as cases:
+magma/burnout, dormant, recrystallisation, schist — a direct restatement
+of the paper’s own filings.</td>
+</tr>
+<tr>
+<td>F-39</td>
+<td>Densification law</td>
+<td><code>[@eq:part_II_metamorphic-octaves_densification]</code></td>
+<td><code>[@sec:part_II_metamorphic-octaves]</code></td>
+<td><code>densification(exposure)</code></td>
+<td><span class="math inline">\(D(x) = D_0(1 + k\ln(1 + x))\)</span>:
+logarithmic payoff of exposure — “you come out denser, with diminishing
+returns”.</td>
+</tr>
+<tr>
+<td>F-40</td>
+<td>Marginal densification</td>
+<td><code>[@eq:part_II_metamorphic-octaves_marginal]</code></td>
+<td><code>[@sec:part_II_metamorphic-octaves]</code></td>
+<td><code>densification</code> (derivative)</td>
+<td><span class="math inline">\(\mathrm{d}D/\mathrm{d}x = k D_0/(1 +
+x)\)</span>: the diminishing marginal gain per unit exposure.</td>
+</tr>
+<tr>
+<td>F-41</td>
+<td>Metrological gear tuple</td>
+<td><code>[@eq:part_II_metrological-overlap_gears]</code></td>
+<td><code>[@sec:part_II_metrological-overlap]</code></td>
+<td>—</td>
+<td>The five “gears” <span class="math inline">\((h, \Phi, p_n,
+\nu_{\mathrm{HI}}, c)\)</span> the overlap claim couples.</td>
+</tr>
+<tr>
+<td>F-42</td>
+<td>Overlap coefficient</td>
+<td><code>[@eq:part_II_metrological-overlap_model]</code></td>
+<td><code>[@sec:part_II_metrological-overlap]</code></td>
+<td><code>metrological_overlap(a, b)</code></td>
+<td><span class="math inline">\(o(A, B) = |A \cap B| / \min(|A|,
+|B|)\)</span> — an asymmetric set-overlap measure.</td>
+</tr>
+<tr>
+<td>F-43</td>
+<td>Overlap octaves</td>
+<td><code>[@eq:part_II_metrological-overlap_octaves]</code></td>
+<td><code>[@sec:part_II_metrological-overlap]</code></td>
+<td><code>octave_term(omega0, n, "subscript")</code></td>
+<td>Subscript-convention octave spacing used in the gear-mesh
+argument.</td>
+</tr>
+<tr>
+<td>F-44</td>
+<td>Mass-equivalent catalog</td>
+<td><code>[@eq:part_II_metrological-overlap_mcatalog]</code></td>
+<td><code>[@sec:part_II_metrological-overlap]</code></td>
+<td>—</td>
+<td><span class="math inline">\(m_{\mathrm{catalog}} = \sum_n \Delta E_n
+/ c^2\)</span>: filing energy differentials as mass — bookkeeping, not
+measurement.</td>
+</tr>
+<tr>
+<td>F-45</td>
+<td>Phase flip</td>
+<td><code>[@eq:part_II_planetary-core_phase_flip]</code></td>
+<td><code>[@sec:part_II_planetary-core]</code></td>
+<td>—</td>
+<td>The two-state filing <span
+class="math inline">\(\varphi_{\mathrm{A}} = 0\)</span>, <span
+class="math inline">\(\varphi_{\mathrm{B}} = \pi/2\)</span> behind the
+planetary “phase-flip” narrative.</td>
+</tr>
+<tr>
+<td>F-46</td>
+<td>Band margin</td>
+<td><code>[@eq:part_II_planetary-core_band]</code></td>
+<td><code>[@sec:part_II_planetary-core]</code></td>
+<td><code>goldilocks_band(values, lo, hi)</code></td>
+<td><span class="math inline">\(m(v) = \min(v - \ell,\, h - v)\)</span>:
+distance to the nearer edge of the habitable band.</td>
+</tr>
+<tr>
+<td>F-47</td>
+<td>Digit filing map</td>
+<td><code>[@eq:part_II_proton-theater_filing]</code></td>
+<td><code>[@sec:part_II_proton-theater]</code></td>
+<td>—</td>
+<td><span class="math inline">\(\mathrm{file}(c)\)</span>: leading digit
+1 files as Proton Space; structural digit 2 files as Electron
+Theater.</td>
+</tr>
+<tr>
+<td>F-48</td>
+<td>Golden-ratio identity (theater)</td>
+<td><code>[@eq:part_II_proton-theater_identity]</code></td>
+<td><code>[@sec:part_II_proton-theater]</code></td>
+<td><code>phi_dual(x)</code></td>
+<td><span class="math inline">\(\Phi - 1/\Phi = 1\)</span>: the identity
+the dual branches satisfy (<span class="math inline">\(1/\Phi = \Phi -
+1\)</span>).</td>
+</tr>
+<tr>
+<td>F-49</td>
+<td>Theater octaves</td>
+<td><code>[@eq:part_II_proton-theater_octaves]</code></td>
+<td><code>[@sec:part_II_proton-theater]</code></td>
+<td><code>octave_term(omega0, n, "subscript")</code></td>
+<td>The subscript-reading octave ladder inside the theater filing.</td>
+</tr>
+<tr>
+<td>F-50</td>
+<td>Φ-duality filing</td>
+<td><code>[@eq:part_II_proton-theater_duality]</code></td>
+<td><code>[@sec:part_II_proton-theater]</code></td>
+<td><code>phi_dual(x)</code></td>
+<td>Upper branch <span class="math inline">\(\Phi_{+}(x) =
+x\Phi\)</span>, lower branch <span class="math inline">\(\Phi_{-}(x) =
+x/\Phi\)</span>.</td>
+</tr>
+<tr>
+<td>F-51</td>
+<td>Mirror involution</td>
+<td><code>[@eq:part_II_proton-theater_mirror]</code></td>
+<td><code>[@sec:part_II_proton-theater]</code></td>
+<td><code>phi_dual(x)</code></td>
+<td><span class="math inline">\(\Phi_{-}(\Phi_{+}(x)) = x\)</span>: the
+two filings undo each other exactly.</td>
+</tr>
+<tr>
+<td>F-52</td>
+<td>Step relation</td>
+<td><code>[@eq:part_II_proton-theater_step]</code></td>
+<td><code>[@sec:part_II_proton-theater]</code></td>
+<td>—</td>
+<td><span class="math inline">\(\Phi_{-}(x) = \Phi_{+}(x) - x\)</span>:
+arithmetic corollary of the duality pair.</td>
+</tr>
+<tr>
+<td>F-53</td>
+<td>Net-zero residual</td>
+<td><code>[@eq:part_II_singularity-crystal_netzero]</code></td>
+<td><code>[@sec:part_II_singularity-crystal]</code></td>
+<td><code>net_zero_balance(inflows, outflows)</code></td>
+<td><span class="math inline">\(R = \sum \mathrm{in}_i - \sum
+\mathrm{out}_j\)</span> with Net Zero <span class="math inline">\(\iff R
+= 0\)</span>.</td>
+</tr>
+<tr>
+<td>F-54</td>
+<td>Zero-boundary filing</td>
+<td><code>[@eq:part_II_singularity-crystal_crystal]</code></td>
+<td><code>[@sec:part_II_singularity-crystal]</code></td>
+<td>—</td>
+<td><span class="math inline">\(0/0 \mapsto \Phi^0 = 1\)</span>: catalog
+algebra at the zero octave, a filing convention.</td>
+</tr>
+<tr>
+<td>F-55</td>
+<td>Node K₀ anchor</td>
+<td><code>[@eq:part_II_singularity-crystal_nodek0]</code></td>
+<td><code>[@sec:part_II_singularity-crystal]</code></td>
+<td><code>octave_term(omega0, n, "exponent")</code></td>
+<td><span class="math inline">\(\Omega_0 = \Phi^0\Omega_0 =
+\Omega_0\)</span>: the ladder’s self-consistent zero point.</td>
+</tr>
+<tr>
+<td>F-56</td>
+<td>Viscous floor</td>
+<td><code>[@eq:part_II_viscosity-light_viscous_floor]</code></td>
+<td><code>[@sec:part_II_viscosity-light]</code></td>
+<td><code>transduction_brake(t, v0, k)</code></td>
+<td>The “viscosity of light” filed as <span class="math inline">\(v(t) =
+v_0 e^{-kt}\)</span>.</td>
+</tr>
+<tr>
+<td>F-57</td>
+<td>Drag-coefficient family</td>
+<td><code>[@eq:part_II_viscosity-light_family]</code></td>
+<td><code>[@sec:part_II_viscosity-light]</code></td>
+<td><code>octave_term(k0, n, "exponent")</code></td>
+<td><span class="math inline">\(k(n) = \Phi^n k_0\)</span>: drag
+coefficients spaced one octave apart across <span
+class="math inline">\(n = \ldots, -1, 0, 1, 2, \ldots\)</span>.</td>
+</tr>
+<tr>
+<td>F-58</td>
+<td>Rendered displacement</td>
+<td><code>[@eq:part_II_viscosity-light_render]</code></td>
+<td><code>[@sec:part_II_viscosity-light]</code></td>
+<td><code>transduction_brake</code> (integrated form)</td>
+<td><span class="math inline">\(s(T) = \frac{v_0}{k}(1 -
+e^{-kT})\)</span>: the visible stopping distance of the braked
+wave.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="part-iii-applied-frontiers">Part III — Applied Frontiers</h2>
+<p>Introduced in <span class="citation"
+data-cites="sec:part_III_cmos-protonic">[@sec:part_III_cmos-protonic]</span>,
+<span class="citation"
+data-cites="sec:part_III_frontiers">[@sec:part_III_frontiers]</span>,
+<span class="citation"
+data-cites="sec:part_III_invisible-frontier">[@sec:part_III_invisible-frontier]</span>,
+<span class="citation"
+data-cites="sec:part_III_kinematic-recycling">[@sec:part_III_kinematic-recycling]</span>,
+<span class="citation"
+data-cites="sec:part_III_macro-protein">[@sec:part_III_macro-protein]</span>,
+<span class="citation"
+data-cites="sec:part_III_moving-up-stack">[@sec:part_III_moving-up-stack]</span>,
+<span class="citation"
+data-cites="sec:part_III_pdvsa-gateway">[@sec:part_III_pdvsa-gateway]</span>,
+<span class="citation"
+data-cites="sec:part_III_protein-folding">[@sec:part_III_protein-folding]</span>,
+<span class="citation"
+data-cites="sec:part_III_reality-bridge">[@sec:part_III_reality-bridge]</span>,
+<span class="citation"
+data-cites="sec:part_III_volumetric-storage">[@sec:part_III_volumetric-storage]</span>,
+and <span class="citation"
+data-cites="sec:part_III_y-chromosome">[@sec:part_III_y-chromosome]</span>.</p>
+<table>
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 17%" />
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 38%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Formalism</th>
+<th>Label</th>
+<th>Chapter</th>
+<th>Backing model function</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F-59</td>
+<td>Shelf map</td>
+<td><code>[@eq:part_III_cmos-protonic_shelf-map]</code></td>
+<td><code>[@sec:part_III_cmos-protonic]</code></td>
+<td>—</td>
+<td><span class="math inline">\(\mathrm{file}(d)\)</span>: a binary CMOS
+gate files at octave tier 1; protonic multi-state devices file across
+bands <span class="math inline">\(2 \ldots 99\)</span>.</td>
+</tr>
+<tr>
+<td>F-60</td>
+<td>Protonic ladder</td>
+<td><code>[@eq:part_III_cmos-protonic_ladder]</code></td>
+<td><code>[@sec:part_III_cmos-protonic]</code></td>
+<td><code>octave_term(omega0, n, convention)</code></td>
+<td>Both <span class="math inline">\(\Omega\)</span> conventions stated
+for the 99-octave shelf ladder.</td>
+</tr>
+<tr>
+<td>F-61</td>
+<td>Device capacity</td>
+<td><code>[@eq:part_III_cmos-protonic_capacity]</code></td>
+<td><code>[@sec:part_III_cmos-protonic]</code></td>
+<td>—</td>
+<td><span class="math inline">\(C = \log_2 m\)</span> bits per <span
+class="math inline">\(m\)</span>-state device — the capacity reading of
+the shelf map.</td>
+</tr>
+<tr>
+<td>F-62</td>
+<td>Frontier net-zero</td>
+<td><code>[@eq:part_III_frontiers_net_zero]</code></td>
+<td><code>[@sec:part_III_frontiers]</code></td>
+<td><code>net_zero_balance(inflows, outflows)</code></td>
+<td><span class="math inline">\(R = \sum I_i - \sum O_j\)</span>: the
+residual ledger for open-problem bookkeeping.</td>
+</tr>
+<tr>
+<td>F-63</td>
+<td>Quadrant score</td>
+<td><code>[@eq:part_III_frontiers_quadrant]</code></td>
+<td><code>[@sec:part_III_frontiers]</code></td>
+<td>—</td>
+<td><span class="math inline">\(Q = V^2/E\)</span>: value squared over
+effort, the axes of the open-problem quadrant.</td>
+</tr>
+<tr>
+<td>F-64</td>
+<td>Φ-climb</td>
+<td><code>[@eq:part_III_invisible-frontier_phiclimb]</code></td>
+<td><code>[@sec:part_III_invisible-frontier]</code></td>
+<td><code>octave_term(omega0, n, convention)</code></td>
+<td>Both <span class="math inline">\(\Omega\)</span> conventions for the
+frontier-visibility ladder.</td>
+</tr>
+<tr>
+<td>F-65</td>
+<td>Logistic visibility</td>
+<td><code>[@eq:part_III_invisible-frontier_model]</code></td>
+<td><code>[@sec:part_III_invisible-frontier]</code></td>
+<td><code>logistic_growth(t, r, carrying_capacity, initial)</code></td>
+<td>The S-curve <span class="math inline">\(V(t)\)</span> approaching
+carrying capacity <span class="math inline">\(K\)</span> — a threshold
+frontier made quantitative.</td>
+</tr>
+<tr>
+<td>F-66</td>
+<td>Velocity spectral scaling</td>
+<td><code>[@eq:part_III_kinematic-recycling_velocity-scale]</code></td>
+<td><code>[@sec:part_III_kinematic-recycling]</code></td>
+<td>—</td>
+<td><span class="math inline">\(\tilde{S}_v(\omega) = \lvert v
+\rvert^{-1} F(\omega/v)\)</span>: recorded spectra rescale with
+speed.</td>
+</tr>
+<tr>
+<td>F-67</td>
+<td>Kinematic octave ladder</td>
+<td><code>[@eq:part_III_kinematic-recycling_octave-ladder]</code></td>
+<td><code>[@sec:part_III_kinematic-recycling]</code></td>
+<td><code>octave_term(omega0, k, "exponent")</code></td>
+<td><span class="math inline">\(\Omega_k = \Phi^k\Omega_0\)</span>
+indexing the recycled set ladder.</td>
+</tr>
+<tr>
+<td>F-68</td>
+<td>Round-robin assignment</td>
+<td><code>[@eq:part_III_kinematic-recycling_round-robin]</code></td>
+<td><code>[@sec:part_III_kinematic-recycling]</code></td>
+<td><code>round_robin(items, n_sets)</code></td>
+<td><span class="math inline">\(\sigma(i) = i \bmod
+n_{\mathrm{sets}}\)</span> — deterministic recycling of one asset
+set.</td>
+</tr>
+<tr>
+<td>F-69</td>
+<td>Truckee partition</td>
+<td><code>[@eq:part_III_kinematic-recycling_truckee-partition]</code></td>
+<td><code>[@sec:part_III_kinematic-recycling]</code></td>
+<td><code>round_robin(items, n_sets)</code></td>
+<td>The worked partition <span class="math inline">\(\{0,3,6\}\)</span>
+/ <span class="math inline">\(\{1,4,7\}\)</span> / <span
+class="math inline">\(\{2,5,8\}\)</span> of nine indexed items into
+three sets.</td>
+</tr>
+<tr>
+<td>F-70</td>
+<td>Work-engine octave</td>
+<td><code>[@eq:part_III_macro-protein_model]</code></td>
+<td><code>[@sec:part_III_macro-protein]</code></td>
+<td><code>octave_term(omega0, n, convention)</code></td>
+<td><span class="math inline">\(W(n) = w_0 \cdot \Omega_n\)</span> under
+either convention of the octave term.</td>
+</tr>
+<tr>
+<td>F-71</td>
+<td>Bio band</td>
+<td><code>[@eq:part_III_macro-protein_band]</code></td>
+<td><code>[@sec:part_III_macro-protein]</code></td>
+<td><code>goldilocks_band(values, 13, 17)</code></td>
+<td><span class="math inline">\(\theta_{\mathrm{bio}} \in [13,
+17]\)</span> pins the filed octave between <span
+class="math inline">\(\Omega_{13}\)</span> and <span
+class="math inline">\(\Omega_{17}\)</span>.</td>
+</tr>
+<tr>
+<td>F-72</td>
+<td>Kleiber scaling</td>
+<td><code>[@eq:part_III_macro-protein_kleiber]</code></td>
+<td><code>[@sec:part_III_macro-protein]</code></td>
+<td>—</td>
+<td><span class="math inline">\(B_2/B_1 = (M_2/M_1)^{3/4}\)</span>: a
+1000× mass ratio files as <span class="math inline">\(\approx
+177.83\times\)</span> work output.</td>
+</tr>
+<tr>
+<td>F-73</td>
+<td>Rebuilt band</td>
+<td><code>[@eq:part_III_moving-up-stack_band]</code></td>
+<td><code>[@sec:part_III_moving-up-stack]</code></td>
+<td><code>goldilocks_band(values, lo, hi)</code></td>
+<td>The budget band <span class="math inline">\(\mathcal{B}_{\text{new}}
+= [\$12\text{B},\ \$28\text{B}]\)</span> anchored between hub and IDE
+valuations.</td>
+</tr>
+<tr>
+<td>F-74</td>
+<td>Cooling cost ratio</td>
+<td><code>[@eq:part_III_moving-up-stack_cooling]</code></td>
+<td><code>[@sec:part_III_moving-up-stack]</code></td>
+<td>—</td>
+<td><span class="math inline">\(\kappa(m) =
+C_{\text{siloed}}/C_{\text{harmonised}} &gt; 1\)</span>: the
+coordination overhead the harmonised stack saves.</td>
+</tr>
+<tr>
+<td>F-75</td>
+<td>EGS harmony</td>
+<td><code>[@eq:part_III_moving-up-stack_harmony]</code></td>
+<td><code>[@sec:part_III_moving-up-stack]</code></td>
+<td>—</td>
+<td><span class="math inline">\(\Phi_{\text{EGS}} \approx 1.618 \approx
+\Phi\)</span>: numeric harmony filed as coincidence, not identity.</td>
+</tr>
+<tr>
+<td>F-76</td>
+<td>Lattice-linear ramp</td>
+<td><code>[@eq:part_III_pdvsa-gateway_model]</code></td>
+<td><code>[@sec:part_III_pdvsa-gateway]</code></td>
+<td><code>lattice_linear_profile(n_steps, rate)</code></td>
+<td><span class="math inline">\(L_n = n\,r\)</span>: the gateway’s
+equal-increment flow ramp.</td>
+</tr>
+<tr>
+<td>F-77</td>
+<td>Token-cost claim</td>
+<td><code>[@eq:part_III_pdvsa-gateway_tokens]</code></td>
+<td><code>[@sec:part_III_pdvsa-gateway]</code></td>
+<td><code>lattice_linear_profile(n_steps, rate)</code></td>
+<td><span class="math inline">\(C_{\mathrm{lattice}}/C_{\mathrm{flat}}
+&lt; 0.15\)</span> for <span class="math inline">\(N \ge 6\)</span> —
+the gateway’s efficiency claim, checked against the profile.</td>
+</tr>
+<tr>
+<td>F-78</td>
+<td>Prime address</td>
+<td><code>[@eq:part_III_protein-folding_address]</code></td>
+<td><code>[@sec:part_III_protein-folding]</code></td>
+<td><code>unique_address(primes, exponents)</code></td>
+<td><span class="math inline">\(a(\mathbf{e}) = \prod_i
+p_i^{e_i}\)</span>: injective prime-exponent addresses for folding
+states.</td>
+</tr>
+<tr>
+<td>F-79</td>
+<td>Address capacity</td>
+<td><code>[@eq:part_III_protein-folding_capacity]</code></td>
+<td><code>[@sec:part_III_protein-folding]</code></td>
+<td>—</td>
+<td><span class="math inline">\(C(m, E) = (E+1)^m\)</span> distinct
+addresses in an <span class="math inline">\(m\)</span>-prime vault with
+exponent budget <span class="math inline">\(E\)</span>.</td>
+</tr>
+<tr>
+<td>F-80</td>
+<td>Φ and its identity</td>
+<td><code>[@eq:part_III_protein-folding_phi]</code></td>
+<td><code>[@sec:part_III_protein-folding]</code></td>
+<td>—</td>
+<td><span class="math inline">\(\Phi = (1+\sqrt{5})/2\)</span> with
+<span class="math inline">\(\Phi^2 = \Phi + 1\)</span>, restated for the
+folding vault.</td>
+</tr>
+<tr>
+<td>F-81</td>
+<td>Folding octave (exponent)</td>
+<td><code>[@eq:part_III_protein-folding_octave]</code></td>
+<td><code>[@sec:part_III_protein-folding]</code></td>
+<td><code>octave_term(omega0, n, "exponent")</code></td>
+<td><span class="math inline">\(\Omega^{\text{(exp)}}_n =
+\Phi^n\Omega_0\)</span> for the folding ladder.</td>
+</tr>
+<tr>
+<td>F-82</td>
+<td>Folding octave (subscript)</td>
+<td><code>[@eq:part_III_protein-folding_octave_sub]</code></td>
+<td><code>[@sec:part_III_protein-folding]</code></td>
+<td><code>octave_term(omega0, n, "subscript")</code></td>
+<td><span class="math inline">\(\Omega^{\text{(sub)}}_n =
+\varphi_{\text{fib}}(n)\Omega_0\)</span> for the folding ladder.</td>
+</tr>
+<tr>
+<td>F-83</td>
+<td>Bridge octave recurrence</td>
+<td><code>[@eq:part_III_reality-bridge_octave]</code></td>
+<td><code>[@sec:part_III_reality-bridge]</code></td>
+<td><code>octave_term(omega0, n, "exponent")</code></td>
+<td><span class="math inline">\(O_{n+1} = O_n \times \Phi\)</span>: the
+ladder written as a one-step recurrence.</td>
+</tr>
+<tr>
+<td>F-84</td>
+<td>Bridge throttle</td>
+<td><code>[@eq:part_III_reality-bridge_throttle]</code></td>
+<td><code>[@sec:part_III_reality-bridge]</code></td>
+<td><code>transduction_brake(t, v0, k)</code></td>
+<td><span class="math inline">\(A(t) = A_0 e^{-kt}\)</span>, <span
+class="math inline">\(k &gt; 0\)</span>: the throughput throttle on the
+bridge.</td>
+</tr>
+<tr>
+<td>F-85</td>
+<td>Vault address</td>
+<td><code>[@eq:part_III_volumetric-storage_address]</code></td>
+<td><code>[@sec:part_III_volumetric-storage]</code></td>
+<td><code>unique_address(primes, exponents)</code></td>
+<td><span class="math inline">\(A(\mathbf{p}, \mathbf{k}) = \prod_i
+p_i^{k_i}\)</span>: prime-indexed storage addresses.</td>
+</tr>
+<tr>
+<td>F-86</td>
+<td>Vault capacity</td>
+<td><code>[@eq:part_III_volumetric-storage_capacity]</code></td>
+<td><code>[@sec:part_III_volumetric-storage]</code></td>
+<td>—</td>
+<td><span class="math inline">\(N_{\mathrm{distinct}}(m, K) =
+(K+1)^m\)</span> distinct addresses in the vault.</td>
+</tr>
+<tr>
+<td>F-87</td>
+<td>Φ-ruler</td>
+<td><code>[@eq:part_III_volumetric-storage_phiruler]</code></td>
+<td><code>[@sec:part_III_volumetric-storage]</code></td>
+<td>—</td>
+<td><span class="math inline">\(\log_\Phi A = \sum_i k_i \log_\Phi
+p_i\)</span>: address depth read as a golden-ratio-base ruler.</td>
+</tr>
+<tr>
+<td>F-88</td>
+<td>Y-chromosome palindrome</td>
+<td><code>[@eq:part_III_y-chromosome_palin]</code></td>
+<td><code>[@sec:part_III_y-chromosome]</code></td>
+<td><code>phi_powers(n)</code></td>
+<td><span class="math inline">\(P_n = P_0\Phi^n\)</span> for <span
+class="math inline">\(n = 1, \ldots, 8\)</span>: palindrome filings
+along the ladder.</td>
+</tr>
+<tr>
+<td>F-89</td>
+<td>SRY anchor</td>
+<td><code>[@eq:part_III_y-chromosome_anchor]</code></td>
+<td><code>[@sec:part_III_y-chromosome]</code></td>
+<td><code>octave_term(omega0, n, "exponent")</code></td>
+<td><span class="math inline">\(\Omega_n = \Phi^n\Omega_0\)</span> with
+the SRY locus filed as the zero-point anchor <span
+class="math inline">\(\Omega_0\)</span>.</td>
+</tr>
+</tbody>
+</table>
+</main>
+</body>
+</html>

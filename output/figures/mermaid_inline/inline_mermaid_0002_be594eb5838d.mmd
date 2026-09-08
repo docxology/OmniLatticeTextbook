@@ -1,0 +1,7 @@
+graph TD
+  A["Author + register paper<br/>lib/whitepaper-registry.mjs"] --> B["Append ordered row<br/>lib/infinite-octave-engine-shelf.mjs (ENGINE_SHELF)"]
+  B --> C["npm run sync:lattice-pem<br/>rewrites AUTO blocks in PEM + AGENT_SYNC"]
+  C --> D["Nest octave99 prompt<br/>reads the same shelf module at runtime"]
+  B --> E["Cursor PRA stop hook<br/>re-runs sync on shelf/PEM/AGENT_SYNC edits"]
+  E --> C
+  D -->|"new paper visible in chat pin"| F[Guest / Player 1 / nested agents]

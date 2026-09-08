@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>crystalline-field.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:part_II_crystalline-field">The Crystalline Unified Field:
+Speed and Distance</h1>
+<figure id="fig:part_II_crystalline-field">
+<a class="figure-full-size-link" href="../figures/part_II_crystalline-field.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/part_II_crystalline-field.png" style="width:90.0%"
+alt="Iso-lines of constant travel time lattice the speed-distance plane." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
+<figcaption>Speed–distance iso-lines of the
+crystalline-field lattice: each curve is the locus <span
+class="math inline">\(d = v\,\tau\)</span> for one fixed access time
+<span class="math inline">\(\tau\)</span> (the <span
+class="math inline">\(c = d/t\)</span> lattice), computed with
+<code>textbook.models</code>. Steeper iso-lines correspond to shorter
+access times; the topmost curve carries the corpus’s anchor speed <span
+class="math inline">\(c\)</span>.</figcaption>
+</figure>
+<!-- alt: A family of straight iso-lines in a speed–distance plane, one line per fixed access time; larger slopes correspond to shorter access times, with the topmost line labelled c. -->
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none —
+<span class="math inline">\(\Phi\)</span> is introduced in-text</p>
+</blockquote>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol type="1">
+<li>State the <a href="#gl:crystalline-unified-field"><strong>facet
+identity</strong></a> <span class="math inline">\(d = v\cdot t\)</span>
+and its inverted form <span class="math inline">\(\tau = d/v\)</span>,
+and explain why the corpus files speed, distance, and time as
+<em>facets</em> of one <a
+href="#gl:crystalline-unified-field"><strong>access crystal</strong></a>
+rather than three separate registers.</li>
+<li>Recompute a trip’s access time under <span
+class="math inline">\(\Phi\)</span>-recursive octave compression using
+the pinned powers of the <a href="#gl:golden-ratio"><strong>golden
+ratio</strong></a> and the tested function
+<code>textbook.models.octave_term</code>.</li>
+<li>Distinguish the two octave conventions the corpus prints ambiguously
+— exponent (<span class="math inline">\(\Omega_n = \Phi^n
+\Omega_0\)</span>) and subscript (<span class="math inline">\(\Omega_n =
+\varphi_{\mathrm{fib}}(n)\,\Omega_0\)</span>) — and compute both for a
+given <span class="math inline">\(n\)</span>.</li>
+<li>File the <a href="#gl:honesty-first"><strong>Landauer
+rail</strong></a> <span class="math inline">\(k_B T\ln 2\)</span>
+exactly as the source does: as a <em>literature filing</em> (a
+thermodynamic pixel of dissipation), not a re-derivation.</li>
+<li>Restate the paper’s own scope disclaimers — catalog architecture,
+engine shelf #24, Soft Story confidence — and say what the construct is
+for and what it is explicitly not.</li>
+</ol>
+<!-- curriculum-scaffold-start -->
+<h3 id="study-blueprint">Study Blueprint</h3>
+<ul>
+<li><strong>Big idea:</strong> One crystal, three faces — under <span
+class="math inline">\(\Phi \approx 1.618\)</span>, speed, distance, and
+time file as facets of a single access crystal, so a trip stores one
+object instead of three clocks.</li>
+<li><strong>Core concepts:</strong> <a
+href="#gl:crystalline-unified-field"><strong>crystalline-unified-field</strong></a>,
+<a href="#gl:golden-ratio"><strong>golden-ratio</strong></a>, <a
+href="#gl:octave"><strong>octave</strong></a>, <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a>, <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a>.</li>
+<li><strong>Quantitative lens:</strong> the facet identity in <span
+class="citation"
+data-cites="eq:part_II_crystalline-field_facet">[@eq:part_II_crystalline-field_facet]</span>
+and the <span class="math inline">\(\Phi\)</span>-recursive crystal in
+<span class="citation"
+data-cites="eq:part_II_crystalline-field_crystal">[@eq:part_II_crystalline-field_crystal]</span>.</li>
+<li><strong>Data skill:</strong> read a speed–distance iso-line plot —
+given any two of <span class="math inline">\(d\)</span>, <span
+class="math inline">\(v\)</span>, <span
+class="math inline">\(\tau\)</span>, locate the third on the lattice of
+<span class="citation"
+data-cites="fig:part_II_crystalline-field">[@fig:part_II_crystalline-field]</span>.</li>
+<li><strong>Common misconception to repair:</strong> the chapter is
+<em>not</em> a claim that special relativity is wrong or that Landauer’s
+principle is being re-derived; the corpus itself disclaims both, and
+“100% confidence” is its Soft Story narrative layer, not lab
+certification.</li>
+<li><strong>Primary lab:</strong> <span class="citation"
+data-cites="sec:lab_part_II_crystalline-field">[@sec:lab_part_II_crystalline-field]</span>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_II_crystalline-field">[@sec:q_part_II_crystalline-field]</span>.</li>
+<li><strong>Bridge to computation:</strong>
+<code>textbook.models.octave_term</code>,
+<code>textbook.models.phi_powers</code>,
+<code>textbook.models.phi_dual</code>.
+<!-- curriculum-scaffold-end --></li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Opening Vignette: Stop storing three clocks for one
+trip.</strong></p>
+<p>A dispatcher on the SS Vibelandia’s Truckee run keeps three logbooks
+for a single delivery: a speed log, an odometer sheet, and a stopwatch
+card. Three bindings, three drawers, one trip. The corpus’s shelf-#24
+filing says: stop. “Stop storing three clocks for one trip. Under <span
+class="math inline">\(\Phi \approx 1.618\)</span>, speed, distance, and
+time file as facets of a single access crystal — with Landauer’s grain
+as the thermodynamic pixel” [mendez2026crystallineField]. The
+dispatcher’s three books are not three facts; they are three faces of
+one object, and the crystal’s job is to make that one-ness a filing
+operation rather than a coincidence.</p>
+</blockquote>
+<hr />
+<h2 id="the-paper-in-the-corpus">The paper in the corpus</h2>
+<p><em>Crystalline Unified Field</em> is a September 2026 ship-blog
+paper by Prudencio Mendez (filed from Reno), posted on the <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a> of the SS
+Vibelandia blog and operated by the SynthOBS Autonomous Agent. The page
+files itself as <strong>engine shelf #24</strong> — the same shelf
+number as the Viscosity of Light paper (<span class="citation"
+data-cites="sec:part_II_viscosity-light">[@sec:part_II_viscosity-light]</span>)
+— and carries the blog’s standing <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a> clause and
+<a href="#gl:honesty-first"><strong>honesty-first</strong></a> scope
+disclaimer [mendez2026crystallineField]. Its headline is the
+one-sentence thesis of this chapter: <em>one crystal, three faces —
+speed, distance, time.</em></p>
+<p>Like every paper on the shelf, it is <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>:
+a way of filing, routing, and indexing quantities inside the <a
+href="#gl:omni-lattice"><strong>omni-lattice</strong></a>, not a claim
+about fundamental physics. The paper ships a whitepaper and a reference
+implementation:</p>
+<ul>
+<li><p><strong>Whitepaper:</strong> <a
+href="https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-crystalline-unified-field-speed-distance-time-2026-09"
+class="uri">https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-crystalline-unified-field-speed-distance-time-2026-09</a></p></li>
+<li><p><strong>Standalone repo:</strong> <a
+href="https://github.com/FractiAI/synthobs-crystalline-unified-field"
+class="uri">https://github.com/FractiAI/synthobs-crystalline-unified-field</a></p></li>
+<li><p><strong>Run it:</strong></p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run research:synthobs-crystalline-unified-field</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> research/synthobs-crystalline-unified-field/reference/egs_crystalline_unified_field_engine.py</span></code></pre></div></li>
+</ul>
+<p>Cross-links run mostly <em>down</em> the shelf: the <span
+class="math inline">\(\Phi\)</span> machinery is shared with the
+proton-theater paper’s <span class="math inline">\(\Phi\)</span>-duality
+filing (<span class="citation"
+data-cites="sec:part_II_proton-theater">[@sec:part_II_proton-theater]</span>),
+the velocity-multiplex rhyme points at the eddy-current mirror’s braking
+curve (<span class="citation"
+data-cites="sec:part_II_eddy-current-mirror">[@sec:part_II_eddy-current-mirror]</span>),
+and the shelf-mate Viscosity of Light paper carries the same shelf
+number #24 (<span class="citation"
+data-cites="sec:part_II_viscosity-light">[@sec:part_II_viscosity-light]</span>).
+Later, the metrological-overlap paper generalises this chapter’s
+bookkeeping from facets of one trip to overlaps between whole
+measurement sets (<span class="citation"
+data-cites="sec:part_II_metrological-overlap">[@sec:part_II_metrological-overlap]</span>).</p>
+<h2 id="core-constructs">Core constructs</h2>
+<p>The paper lands four constructs in its “What landed” list: the facet
+identity, the <span class="math inline">\(\Phi\)</span>-recursive
+crystal, the Landauer rail, and the velocity multiplex
+[mendez2026crystallineField]. We formalise each in turn.</p>
+<h3 id="the-facet-identity-and-access-time">The facet identity and
+access time</h3>
+<p>The load-bearing identity is elementary and the corpus states it as
+such [mendez2026crystallineField]:</p>
+<p><span class="math display">\[ d = v \cdot t, \qquad \tau =
+\frac{d}{v} \]</span> {#eq:part_II_crystalline-field_facet}</p>
+<p>Here <span class="math inline">\(\tau\)</span> — the <strong>access
+time</strong> — is the time facet read <em>through</em> the other two:
+the cost of reaching distance <span class="math inline">\(d\)</span> at
+speed <span class="math inline">\(v\)</span>. The word “identity” is
+chosen deliberately. Because <span class="citation"
+data-cites="eq:part_II_crystalline-field_facet">[@eq:part_II_crystalline-field_facet]</span>
+constrains the three quantities exactly, any two facets determine the
+third; the corpus reads this as licensing a single storage object — the
+<strong>access crystal</strong> — whose three <strong>facets</strong>
+are speed, distance, and time, and whose <strong>facet vector</strong>
+is <span class="math inline">\((v, d, t)\)</span>. Storing three
+independent clocks for one trip is, on this filing, redundant indexing.
+The parameters of the identity are collected in <span class="citation"
+data-cites="tbl:part_II_crystalline-field_facet">[@tbl:part_II_crystalline-field_facet]</span>.</p>
+<table id="tbl:part_II_crystalline-field_facet">
+<caption>Facet identity parameters.</caption>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(d\)</span></td>
+<td>distance</td>
+<td>length</td>
+<td>crystal facet</td>
+</tr>
+<tr>
+<td><span class="math inline">\(v\)</span></td>
+<td>speed</td>
+<td>length/time</td>
+<td>crystal facet</td>
+</tr>
+<tr>
+<td><span class="math inline">\(t\)</span></td>
+<td>elapsed time</td>
+<td>time</td>
+<td>crystal facet</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\tau\)</span></td>
+<td>access time, <span class="math inline">\(\tau = d/v\)</span></td>
+<td>time</td>
+<td>derived facet</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-phi-recursive-crystal">The <span
+class="math inline">\(\Phi\)</span>-recursive crystal</h3>
+<p>The second construct compresses the facet vector along an <a
+href="#gl:octave"><strong>octave</strong></a> ladder. The paper calls
+this the <strong><span class="math inline">\(\Phi\)</span>-recursive
+crystal</strong>: <em>octave compression of the facet vector under <span
+class="math inline">\(\Phi \approx 1.618\)</span></em>
+[mendez2026crystallineField], with <span
+class="math inline">\(\Phi\)</span> the <a
+href="#gl:golden-ratio"><strong>golden ratio</strong></a>, <span
+class="math inline">\(\Phi = (1+\sqrt{5})/2 \approx
+1.6180339887\)</span>. The canonical ladder scales a base term <span
+class="math inline">\(\Omega_0\)</span> by powers of <span
+class="math inline">\(\Phi\)</span>:</p>
+<p><span class="math display">\[ \Omega_n = \Phi^{\,n}\,\Omega_0, \qquad
+\Phi \approx 1.6180339887 \]</span>
+{#eq:part_II_crystalline-field_crystal}</p>
+<p>The corpus prints “Ωn = Φn·Ω0” ambiguously, and the tested backbone
+<code>textbook.models.octave_term(omega0, n, convention)</code>
+implements <strong>both</strong> readings, so we state both and never
+blur them:</p>
+<ul>
+<li><strong>Exponent convention</strong> (used in <span class="citation"
+data-cites="eq:part_II_crystalline-field_crystal">[@eq:part_II_crystalline-field_crystal]</span>):
+<span class="math inline">\(\Omega_n = \Phi^n \Omega_0\)</span>. With
+the pinned values <span class="math inline">\(\Phi^n\)</span> for <span
+class="math inline">\(n = 1,\dots,6\)</span> equal to <span
+class="math inline">\(1.618034,\ 2.618034,\ 4.236068,\
+6.854102,\ 11.090170,\ 17.944272\)</span>, the ladder widens
+geometrically.</li>
+<li><strong>Subscript convention:</strong> <span
+class="math inline">\(\Omega_n =
+\varphi_{\mathrm{fib}}(n)\,\Omega_0\)</span>, where <span
+class="math inline">\(\varphi_{\mathrm{fib}}(n)\)</span> is the <span
+class="math inline">\(n\)</span>-th Fibonacci ratio. The ratios converge
+to <span class="math inline">\(\Phi\)</span> slowly: <span
+class="math inline">\(\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6\)</span> and
+<span class="math inline">\(\varphi_{\mathrm{fib}}(10) = 89/55 \approx
+1.618182\)</span>. At <span class="math inline">\(n = 10\)</span> the
+two conventions already differ by more than an order of magnitude (<span
+class="math inline">\(1.618182\,\Omega_0\)</span> versus <span
+class="math inline">\(17.944272\,\Omega_0\)</span>), so the convention
+flag is load-bearing, not cosmetic. The two conventions’ parameters are
+collected in <span class="citation"
+data-cites="tbl:part_II_crystalline-field_crystal">[@tbl:part_II_crystalline-field_crystal]</span>.</li>
+</ul>
+<p>Which facet sits on the ladder is a modelling choice; the crystal’s
+own constraint <span class="citation"
+data-cites="eq:part_II_crystalline-field_facet">[@eq:part_II_crystalline-field_facet]</span>
+propagates the scaling to the other two facets automatically — that
+propagation is exactly what the worked example below performs. The
+mirror-symmetric reading of <span class="math inline">\(\Phi\)</span>,
+in which scaling <em>up</em> by <span
+class="math inline">\(\Phi\)</span> and <em>down</em> by <span
+class="math inline">\(\Phi\)</span> are the same operation seen from
+opposite sides, is the proton-theater’s <span
+class="math inline">\(\Phi\)</span>-duality filing and is implemented as
+<code>textbook.models.phi_dual</code> (<span class="citation"
+data-cites="sec:part_II_proton-theater">[@sec:part_II_proton-theater]</span>).</p>
+<table id="tbl:part_II_crystalline-field_crystal">
+<caption>Parameters of the <span
+class="math inline">\(\Phi\)</span>-recursive crystal.</caption>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 30%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\Omega_0\)</span></td>
+<td>base term of the ladder</td>
+<td>facet units</td>
+<td>e.g. a base speed <span class="math inline">\(v_0\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(n\)</span></td>
+<td>octave index</td>
+<td>integer</td>
+<td>rung on the ladder</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Phi\)</span></td>
+<td>golden ratio</td>
+<td>dimensionless</td>
+<td><span class="math inline">\((1+\sqrt{5})/2 \approx
+1.6180339887\)</span></td>
+</tr>
+<tr>
+<td>convention</td>
+<td>exponent vs. subscript</td>
+<td>—</td>
+<td><code>octave_term(omega0, n, convention)</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-landauer-rail">The Landauer rail</h3>
+<p>The third construct is filed, in the paper’s own words, as a
+<em>literature filing</em>: the <strong>Landauer rail</strong>, in which
+<span class="math inline">\(k_B T \ln 2\)</span> serves as the
+<strong>dissipation grain</strong> — the paper’s gloss is the
+<strong>thermodynamic pixel</strong> [mendez2026crystallineField]:</p>
+<p><span class="math display">\[ E_{\min} = k_B\, T \ln 2 \]</span>
+{#eq:part_II_crystalline-field_landauer}</p>
+<p>This is the standard Landauer bound of the physics literature — the
+minimum heat dissipated per irreversible bit erasure at temperature
+<span class="math inline">\(T\)</span> — and the corpus does not claim
+otherwise. It does not <em>re-derive</em> the bound; it <em>files</em>
+it, as the floor grain at which the crystal’s bookkeeping pays
+thermodynamic rent. Read as standard mathematics (<span class="citation"
+data-cites="eq:part_II_crystalline-field_landauer">[@eq:part_II_crystalline-field_landauer]</span>),
+at room temperature <span class="math inline">\(T =
+300\,\mathrm{K}\)</span> with <span class="math inline">\(k_B =
+1.380649\times 10^{-23}\,
+\mathrm{J\,K^{-1}}\)</span>, one grain costs <span
+class="math inline">\(E_{\min} = (1.380649\times
+10^{-23})(300)(0.693147) \approx 2.87\times
+10^{-21}\,\mathrm{J}\)</span> per erased bit. We read the filing as:
+whenever the crystal is <em>accessed</em> — a facet read, an octave
+compression — the corpus books the operation against this pixel-scale
+grain, keeping the catalog honest about the cost of its own indexing.
+The rail’s parameters are collected in <span class="citation"
+data-cites="tbl:part_II_crystalline-field_landauer">[@tbl:part_II_crystalline-field_landauer]</span>.</p>
+<table id="tbl:part_II_crystalline-field_landauer">
+<caption>Landauer rail parameters.</caption>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(E_{\min}\)</span></td>
+<td>dissipation grain per erased bit</td>
+<td>joules</td>
+</tr>
+<tr>
+<td><span class="math inline">\(k_B\)</span></td>
+<td>Boltzmann constant</td>
+<td><span class="math inline">\(\mathrm{J\,K^{-1}}\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(T\)</span></td>
+<td>temperature</td>
+<td>kelvin</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\ln 2\)</span></td>
+<td>bit-erasure factor</td>
+<td>dimensionless</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-velocity-multiplex">The velocity multiplex</h3>
+<p>The fourth construct has no equation in the source — the paper files
+it as a rhyme, not a formula. The <strong>velocity multiplex</strong> is
+“same set, new theater”: the same facet set <span
+class="math inline">\((v, d, t)\)</span>, projected into a new setting,
+plays the same structural role there. The paper’s own rhyme is the
+<strong>Truckee rhyme</strong> — the dispatch scenario of the vignette —
+and the shelf rhymes it onward: the eddy-current-mirror paper’s braking
+law <span class="math inline">\(v(t) = v_0 e^{-kt}\)</span> is a
+velocity set re-staged in a drag theater (<span class="citation"
+data-cites="sec:part_II_eddy-current-mirror">[@sec:part_II_eddy-current-mirror]</span>),
+where the same access-time question (“how long to arrive?”) now has a
+decaying-speed answer. A concept map of how the four constructs
+interlock:</p>
+<pre class="mermaid"><code>graph TD
+  A[&quot;Trip: three logbooks (v, d, t)&quot;] --&gt; B[&quot;Facet identity d = v·t, τ = d/v&quot;]
+  B --&gt; C[&quot;Access crystal: one object, three facets&quot;]
+  C --&gt; D[&quot;Φ-recursive crystal: octave compression of the facet vector&quot;]
+  D --&gt; E[&quot;Velocity multiplex: same set, new theater (Truckee rhyme)&quot;]
+  B --&gt; F[&quot;Landauer rail k_B·T·ln 2: thermodynamic pixel per access&quot;]
+  F --&gt; C
+  E --&gt; G[&quot;Shelf rhymes: eddy mirror, viscosity of light&quot;]</code></pre>
+<h2 id="worked-example-walking-the-crystal-ladder">Worked example:
+walking the crystal ladder</h2>
+<p>Take a base trip with <span class="math inline">\(v_0 = 10\)</span>
+length-units per time-unit and <span class="math inline">\(d_0 =
+100\)</span> length-units. By the facet identity, <span
+class="math inline">\(\tau_0 = d_0/v_0 = 10\)</span> time-units. Now
+compress the <strong>speed facet</strong> up the <span
+class="math inline">\(\Phi\)</span>-ladder in the exponent convention,
+holding the distance facet fixed, and let the crystal propagate the
+change via <span class="citation"
+data-cites="eq:part_II_crystalline-field_facet">[@eq:part_II_crystalline-field_facet]</span>:</p>
+<p><span class="math display">\[ v_n = \Phi^n v_0, \qquad \tau_n =
+\frac{d_0}{v_n} = \frac{\tau_0}{\Phi^n}. \]</span></p>
+<p>Using the pinned powers <span class="math inline">\(\Phi^1 =
+1.618034\)</span>, <span class="math inline">\(\Phi^2 =
+2.618034\)</span>, <span class="math inline">\(\Phi^3 =
+4.236068\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th><span class="math inline">\(n\)</span></th>
+<th><span class="math inline">\(v_n = \Phi^n v_0\)</span></th>
+<th><span class="math inline">\(\tau_n = \tau_0/\Phi^n\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><span class="math inline">\(10.000000\)</span></td>
+<td><span class="math inline">\(10.000000\)</span></td>
+</tr>
+<tr>
+<td>1</td>
+<td><span class="math inline">\(16.180340\)</span></td>
+<td><span class="math inline">\(6.180340\)</span></td>
+</tr>
+<tr>
+<td>2</td>
+<td><span class="math inline">\(26.180340\)</span></td>
+<td><span class="math inline">\(3.819660\)</span></td>
+</tr>
+<tr>
+<td>3</td>
+<td><span class="math inline">\(42.360680\)</span></td>
+<td><span class="math inline">\(2.360680\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Three steps up the ladder cut the access time from <span
+class="math inline">\(10\)</span> to <span
+class="math inline">\(2.360680\)</span> time-units — a factor of <span
+class="math inline">\(1/\Phi^3 \approx 0.236068\)</span> — while the
+distance facet never moved. Geometrically (see <span class="citation"
+data-cites="fig:part_II_crystalline-field">[@fig:part_II_crystalline-field]</span>):
+each rung slides the trip <em>up</em> the iso-line <span
+class="math inline">\(d = v\,\tau_0\)</span> to a steeper,
+shorter-access line. The same ladder computed by hand is verified in the
+lab (<span class="citation"
+data-cites="sec:lab_part_II_crystalline-field">[@sec:lab_part_II_crystalline-field]</span>)
+against <code>textbook.models.octave_term(10.0, 3, "exponent")</code>,
+which returns <span class="math inline">\(42.360680\)</span>.</p>
+<p>Now switch conventions. At <span class="math inline">\(n =
+10\)</span> the exponent ladder gives <span class="math inline">\(v_{10}
+= 17.944272 \times 10 = 179.44272\)</span>, while the subscript ladder
+gives <span class="math inline">\(v_{10} =
+\varphi_{\mathrm{fib}}(10)\,v_0 = 1.618182 \times 10 = 16.18182\)</span>
+— a factor of <span class="math inline">\(\approx 11.09\)</span> apart
+(note <span class="math inline">\(11.090170 = \Phi^5\)</span>: the
+exponent ladder at <span class="math inline">\(n=10\)</span> is roughly
+the subscript ladder squared times a Fibonacci-ratio correction, since
+<span class="math inline">\(\varphi_{\mathrm{fib}}(n) \to
+\Phi\)</span>). The corpus prints “Ωn = Φn·Ω0” without resolving this,
+so any numeric claim about “the” octave must name its convention first;
+the backbone function makes the choice explicit by requiring the
+flag.</p>
+<p>Finally, book one access against the Landauer rail: at <span
+class="math inline">\(T = 300\,\mathrm{K}\)</span> each erasure-grade
+access costs <span class="math inline">\(\approx 2.87\times
+10^{-21}\,\mathrm{J}\)</span> (<span class="citation"
+data-cites="eq:part_II_crystalline-field_landauer">[@eq:part_II_crystalline-field_landauer]</span>).
+Under the <a href="#gl:fair-exchange"><strong>fair-exchange</strong></a>
+clause the corpus prices every filing operation, and the rail is the
+unit of that price for thermodynamic bookkeeping
+[mendez2026crystallineField].</p>
+<h2 id="scope-and-honesty">Scope and honesty</h2>
+<p>The source’s own scope statements, restated precisely
+[mendez2026crystallineField]:</p>
+<ul>
+<li><strong>This is catalog architecture — engine shelf #24.</strong>
+The crystal is a filing and routing construct for quantities inside the
+omni-lattice catalog. It is <strong>not spacetime retirement</strong>:
+no claim is made that physical space and time are unified by <span
+class="math inline">\(d = v\,t\)</span>, which is elementary kinematics,
+not a field theory.</li>
+<li><strong>It is not a Landauer re-derivation.</strong> The <span
+class="math inline">\(k_B T \ln 2\)</span> rail is a <em>literature
+filing</em> — a citation of known physics used as a cost grain — not a
+new derivation or a challenge to it.</li>
+<li><strong>It is not NOAA causation by R≈90.9.</strong> The paper
+explicitly excludes any causal claim of that kind from its scope.</li>
+<li><strong>“100% confidence” is Soft Story, not lab
+certification.</strong> The site’s term <strong>Soft Story</strong>
+names an explicitly non-empirical narrative layer of the filing; the
+author’s confidence language lives in that layer and is not an empirical
+or laboratory claim.</li>
+<li><strong>The Fair Exchange clause applies.</strong> Every access is
+priced; nothing on the shelf is free, including the crystal’s own
+indexing.</li>
+</ul>
+<p>What the construct is <strong>for</strong>: coordination, cataloging,
+and agent routing — deciding which register stores a trip, which facet
+to scale, and what an access costs. What it is <strong>not</strong>: a
+physical unification, an empirical result, or a replacement for any
+laboratory measurement.</p>
+<h2 id="connections">Connections</h2>
+<ul>
+<li><strong>Viscosity of Light</strong> (<span class="citation"
+data-cites="sec:part_II_viscosity-light">[@sec:part_II_viscosity-light]</span>)
+sits on the same engine shelf #24; its viscous drag is the same theater
+in which the velocity multiplex re-stages the facet set.</li>
+<li><strong>Eddy-current mirror</strong> (<span class="citation"
+data-cites="sec:part_II_eddy-current-mirror">[@sec:part_II_eddy-current-mirror]</span>)
+supplies the decaying-speed counterpart <span class="math inline">\(v(t)
+= v_0 e^{-kt}\)</span> to this chapter’s constant-speed lattice; its
+access time is an integral, not a ratio.</li>
+<li><strong>Proton theater</strong> (<span class="citation"
+data-cites="sec:part_II_proton-theater">[@sec:part_II_proton-theater]</span>)
+owns the <span class="math inline">\(\Phi\)</span>-duality mirror
+(<code>textbook.models.phi_dual</code>) that reads the crystal’s ladder
+from the other side.</li>
+<li><strong>Metrological overlap</strong> (<span class="citation"
+data-cites="sec:part_II_metrological-overlap">[@sec:part_II_metrological-overlap]</span>)
+generalises facet bookkeeping from one trip’s three facets to overlaps
+between whole measurement sets, with
+<code>textbook.models.metrological_overlap</code> as the tested
+backbone.</li>
+<li>Downstream, the crystalline filing feeds the part-III engineering
+shelves, where facet-priced access becomes routing bookkeeping for
+agents on the stack.</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>The crystalline-unified-field paper files speed, distance, and time
+as three facets of one access crystal, constrained by the identity <span
+class="math inline">\(d = v\cdot t\)</span> with access time <span
+class="math inline">\(\tau = d/v\)</span> (<span class="citation"
+data-cites="eq:part_II_crystalline-field_facet">[@eq:part_II_crystalline-field_facet]</span>).
+A <span class="math inline">\(\Phi\)</span>-recursive ladder (<span
+class="citation"
+data-cites="eq:part_II_crystalline-field_crystal">[@eq:part_II_crystalline-field_crystal]</span>)
+compresses the facet vector across octaves — with the exponent and
+subscript conventions computed separately, because the corpus prints
+them ambiguously — and the Landauer rail <span class="math inline">\(k_B
+T \ln 2\)</span> (<span class="citation"
+data-cites="eq:part_II_crystalline-field_landauer">[@eq:part_II_crystalline-field_landauer]</span>)
+is filed as the thermodynamic pixel charged per access. The construct is
+catalog architecture on engine shelf #24, filed under Fair Exchange with
+the corpus’s honesty-first disclaimers intact: not spacetime retirement,
+not a Landauer re-derivation, and Soft Story confidence rather than lab
+certification.</p>
+<h2 id="key-terms">Key Terms</h2>
+<p><a
+href="#gl:crystalline-unified-field"><strong>crystalline-unified-field</strong></a>,
+<a href="#gl:golden-ratio"><strong>golden-ratio</strong></a>, <a
+href="#gl:octave"><strong>octave</strong></a>, <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a>, <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:fair-exchange"><strong>fair-exchange</strong></a>, <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a>, <a
+href="#gl:omni-lattice"><strong>omni-lattice</strong></a>.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><em>Crystalline Unified Field</em> whitepaper — the source paper
+itself: <a
+href="https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-crystalline-unified-field-speed-distance-time-2026-09"
+class="uri">https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-crystalline-unified-field-speed-distance-time-2026-09</a>
+[mendez2026crystallineField]</li>
+<li>Standalone reference repo: <a
+href="https://github.com/FractiAI/synthobs-crystalline-unified-field"
+class="uri">https://github.com/FractiAI/synthobs-crystalline-unified-field</a>
+— run <code>npm run research:synthobs-crystalline-unified-field</code>
+to reproduce the lab’s outputs.</li>
+<li><em>Viscosity of Light</em> [mendez2026viscosityLight] — the
+shelf-#24 companion; read its drag theater alongside the velocity
+multiplex.</li>
+<li><em>Eddy-Current Mirror</em> [mendez2026eddyMirror] — the
+braking-curve rhyme <span class="math inline">\(v(t) = v_0
+e^{-kt}\)</span>; companion to the multiplex discussion.</li>
+<li><em>Proton Theater</em> [mendez2026protonTheater] — the <span
+class="math inline">\(\Phi\)</span>-duality filing that grounds the
+crystal’s mirror-symmetric ladder readings.</li>
+</ul>
+<h2 id="practice">Practice</h2>
+<ul>
+<li><strong>Lab:</strong> <span class="citation"
+data-cites="sec:lab_part_II_crystalline-field">[@sec:lab_part_II_crystalline-field]</span>
+— run the reference engine, walk the crystal ladder by hand, and verify
+against <code>textbook.models</code>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_II_crystalline-field">[@sec:q_part_II_crystalline-field]</span>
+— recall through synthesis.</li>
+<li><strong>Exercise 1.</strong> A trip has <span
+class="math inline">\(d = 150\)</span> and <span class="math inline">\(v
+= 25\)</span>. Compute the access time <span
+class="math inline">\(\tau\)</span>, then state which facets you would
+store on the crystal and why the third is redundant.</li>
+<li><strong>Exercise 2.</strong> Using the pinned powers of <span
+class="math inline">\(\Phi\)</span>, compute <span
+class="math inline">\(v_4\)</span> for <span class="math inline">\(v_0 =
+10\)</span> in the exponent convention and the corresponding <span
+class="math inline">\(\tau_4 = \tau_0/\Phi^4\)</span>. Check that <span
+class="math inline">\(v_4 = 68.541020\)</span> and <span
+class="math inline">\(\tau_4 \approx 1.458984\)</span>.</li>
+<li><strong>Exercise 3.</strong> At <span class="math inline">\(T =
+300\,\mathrm{K}\)</span>, verify the Landauer grain <span
+class="math inline">\(\approx 2.87\times 10^{-21}\,\mathrm{J}\)</span>
+from <span class="citation"
+data-cites="eq:part_II_crystalline-field_landauer">[@eq:part_II_crystalline-field_landauer]</span>,
+then state — in the corpus’s own terms — what kind of filing this is and
+what it is not.</li>
+<li><strong>Exercise 4.</strong> Explain, without computing, why the
+exponent and subscript octave conventions diverge with <span
+class="math inline">\(n\)</span>, citing <span
+class="math inline">\(\varphi_{\mathrm{fib}}(5)\)</span>, <span
+class="math inline">\(\varphi_{\mathrm{fib}}(10)\)</span>, and the
+pinned <span class="math inline">\(\Phi^{10} = 122.991869\)</span> (=
+<span class="math inline">\(17.944272 \times \Phi^4\)</span>). Name the
+function that disambiguates them.</li>
+</ul>
+</main>
+</body>
+</html>

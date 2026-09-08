@@ -1,0 +1,1671 @@
+schema_version: template-textbook-numeric-facts-v1
+facts:
+- fact_id: evidence-001-appendices-appendix-formalisms-md
+  source: docs/manuscript/appendices/appendix_formalisms.md
+  needle: '| F-13 | Block precision register | `[@eq:part_0_tensor-decoupling_block]` | `[@sec:part_0_tensor-decoupling]`
+    | — | The paper''s own per-block sketch $C_{\mathrm{block}} = 9 \times 81 = 729$ digits. |'
+  value: 729
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-002-appendices-appendix-formalisms-md
+  source: docs/manuscript/appendices/appendix_formalisms.md
+  needle: '| F-36 | Brake half-life | `[@eq:part_II_eddy-current-mirror_halflife]` | `[@sec:part_II_eddy-current-mirror]`
+    | `half_life(k)` | $t_{1/2} = \ln 2 / k \approx 0.693147/k$ — the convention-independent decay time.
+    |'
+  value: 0.693147
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-003-appendices-appendix-formalisms-md
+  source: docs/manuscript/appendices/appendix_formalisms.md
+  needle: '| F-72 | Kleiber scaling | `[@eq:part_III_macro-protein_kleiber]` | `[@sec:part_III_macro-protein]`
+    | — | $B_2/B_1 = (M_2/M_1)^{3/4}$: a 1000× mass ratio files as $\approx 177.83\times$ work output.
+    |'
+  value: 1000
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-004-appendices-appendix-formalisms-md
+  source: docs/manuscript/appendices/appendix_formalisms.md
+  needle: '| F-72 | Kleiber scaling | `[@eq:part_III_macro-protein_kleiber]` | `[@sec:part_III_macro-protein]`
+    | — | $B_2/B_1 = (M_2/M_1)^{3/4}$: a 1000× mass ratio files as $\approx 177.83\times$ work output.
+    |'
+  value: 177.83
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-012-appendices-appendix-math-review-md
+  source: docs/manuscript/appendices/appendix_math_review.md
+  needle: '| 1 | $e^{-1}$ | $\approx 0.367879$ |'
+  value: 0.367879
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-013-appendices-appendix-math-review-md
+  source: docs/manuscript/appendices/appendix_math_review.md
+  needle: '| 2 | $e^{-2}$ | $\approx 0.135335$ |'
+  value: -2
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-014-appendices-appendix-math-review-md
+  source: docs/manuscript/appendices/appendix_math_review.md
+  needle: '| 2 | $e^{-2}$ | $\approx 0.135335$ |'
+  value: 0.135335
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-022-appendices-appendix-notation-md
+  source: docs/manuscript/appendices/appendix_notation.md
+  needle: '| $v_0$, $k$ | initial speed, drag rate | `transduction_brake` | speed; 1/time | $v(t) = v_0
+    e^{-kt}$; $v_0 = 1, k = 1 \Rightarrow v(1) \approx 0.367879$, $v(2) \approx 0.135335$ |'
+  value: 0.367879
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-023-appendices-appendix-notation-md
+  source: docs/manuscript/appendices/appendix_notation.md
+  needle: '| $v_0$, $k$ | initial speed, drag rate | `transduction_brake` | speed; 1/time | $v(t) = v_0
+    e^{-kt}$; $v_0 = 1, k = 1 \Rightarrow v(1) \approx 0.367879$, $v(2) \approx 0.135335$ |'
+  value: 0.135335
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-025-labs-part-0-lab-tensor-decoupling-md
+  source: docs/manuscript/labs/part_0/lab_tensor-decoupling.md
+  needle: 'Summarise your results with `textbook.models.descriptive_statistics` over the six dial readings
+    $[0.618034, 0.381966, 0.236068, 0.145898, 0.090170, 0.055728]$: report the mean and the ratio of each
+    consecutive pair of readings. You should observe that every consecutive ratio is $\Phi \approx 1.618034$
+    — the dial decays by exactly one golden-ratio factor per rung, which is what makes it a usable ordering
+    key for an agent walking the shelves. In a short paragraph, state which fixture labels share the board
+    and affirm in writing that no causal link was asserted between any two of them, per the paper''s own
+    scope disclaimer.'
+  value: 0.236068
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-026-labs-part-0-lab-tensor-decoupling-md
+  source: docs/manuscript/labs/part_0/lab_tensor-decoupling.md
+  needle: 'Summarise your results with `textbook.models.descriptive_statistics` over the six dial readings
+    $[0.618034, 0.381966, 0.236068, 0.145898, 0.090170, 0.055728]$: report the mean and the ratio of each
+    consecutive pair of readings. You should observe that every consecutive ratio is $\Phi \approx 1.618034$
+    — the dial decays by exactly one golden-ratio factor per rung, which is what makes it a usable ordering
+    key for an agent walking the shelves. In a short paragraph, state which fixture labels share the board
+    and affirm in writing that no causal link was asserted between any two of them, per the paper''s own
+    scope disclaimer.'
+  value: 0.145898
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-028-labs-part-0-lab-tensor-decoupling-md
+  source: docs/manuscript/labs/part_0/lab_tensor-decoupling.md
+  needle: 'Summarise your results with `textbook.models.descriptive_statistics` over the six dial readings
+    $[0.618034, 0.381966, 0.236068, 0.145898, 0.090170, 0.055728]$: report the mean and the ratio of each
+    consecutive pair of readings. You should observe that every consecutive ratio is $\Phi \approx 1.618034$
+    — the dial decays by exactly one golden-ratio factor per rung, which is what makes it a usable ordering
+    key for an agent walking the shelves. In a short paragraph, state which fixture labels share the board
+    and affirm in writing that no causal link was asserted between any two of them, per the paper''s own
+    scope disclaimer.'
+  value: 0.055728
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-029-labs-part-i-lab-fractal-constant-md
+  source: docs/manuscript/labs/part_I/lab_fractal-constant.md
+  needle: before the last digit of rounding. For the two recursion conventions at $\Omega_0 = 275$,
+  value: 275
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-031-labs-part-i-lab-fractal-constant-md
+  source: docs/manuscript/labs/part_I/lab_fractal-constant.md
+  needle: subscript exactly $440$ filing units — a factor of roughly $6.9$ between readings of the
+  value: 440
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-032-labs-part-i-lab-fractal-constant-md
+  source: docs/manuscript/labs/part_I/lab_fractal-constant.md
+  needle: subscript exactly $440$ filing units — a factor of roughly $6.9$ between readings of the
+  value: 6.9
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-033-labs-part-i-lab-higgs-awareness-md
+  source: docs/manuscript/labs/part_I/lab_higgs-awareness.md
+  needle: half-life reading $0.693$.
+  value: 0.693
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-034-labs-part-i-lab-holographic-rhyme-md
+  source: docs/manuscript/labs/part_I/lab_holographic-rhyme.md
+  needle: '$301 \times 301$ grid over $[0,\, 3\lambda]^2$ the expected summary is:'
+  value: 301
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-035-labs-part-i-lab-holographic-rhyme-md
+  source: docs/manuscript/labs/part_I/lab_holographic-rhyme.md
+  needle: standard deviation $\approx 2.003$ reflects the two doubled axis rhymes of
+  value: 2.003
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-037-labs-part-i-lab-prime-parity-md
+  source: docs/manuscript/labs/part_I/lab_prime-parity.md
+  needle: ratio 1.618182 has closed to within $0.01\%$ of $\Phi$. Conclude with the
+  value: 0.01
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-038-labs-part-ii-lab-crystalline-field-md
+  source: docs/manuscript/labs/part_II/lab_crystalline-field.md
+  needle: moves the access time from $10$ toward $2.36$, a factor of $1/\Phi^3 \approx
+  value: 2.36
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-039-labs-part-ii-lab-crystalline-field-md
+  source: docs/manuscript/labs/part_II/lab_crystalline-field.md
+  needle: 0.236068$. If any hand value disagrees with the backbone, the error is in your
+  value: 0.236068
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-040-labs-part-ii-lab-metrological-overlap-md
+  source: docs/manuscript/labs/part_II/lab_metrological-overlap.md
+  needle: $R_c$ (hand expectation $2/3 \approx 0.666667$), and sketch the $3\times 3$
+  value: 0.666667
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-041-labs-part-ii-lab-planetary-core-md
+  source: docs/manuscript/labs/part_II/lab_planetary-core.md
+  needle: the six values is $0.535$, and the band decision rests entirely on where the
+  value: 0.535
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-042-labs-part-ii-lab-proton-theater-md
+  source: docs/manuscript/labs/part_II/lab_proton-theater.md
+  needle: lines on a log axis, offset by $\pm\ln\Phi \approx \pm 0.481212$ about the
+  value: 0.481212
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-043-labs-part-ii-lab-viscosity-light-md
+  source: docs/manuscript/labs/part_II/lab_viscosity-light.md
+  needle: multiplies any remaining velocity by $e^{-1/\Phi} \approx 0.539$.
+  value: 0.539
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-044-labs-part-iii-lab-kinematic-recycling-md
+  source: docs/manuscript/labs/part_III/lab_kinematic-recycling.md
+  needle: the mean is $\approx 3.333$ with spread (standard deviation) $\approx 0.471$,
+  value: 3.333
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-045-labs-part-iii-lab-kinematic-recycling-md
+  source: docs/manuscript/labs/part_III/lab_kinematic-recycling.md
+  needle: the mean is $\approx 3.333$ with spread (standard deviation) $\approx 0.471$,
+  value: 0.471
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-046-labs-part-iii-lab-kinematic-recycling-md
+  source: docs/manuscript/labs/part_III/lab_kinematic-recycling.md
+  needle: and for eleven items the mean is $\approx 3.667$ with spread $\approx 0.577$
+  value: 3.667
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-047-labs-part-iii-lab-kinematic-recycling-md
+  source: docs/manuscript/labs/part_III/lab_kinematic-recycling.md
+  needle: and for eleven items the mean is $\approx 3.667$ with spread $\approx 0.577$
+  value: 0.577
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-048-labs-part-iii-lab-macro-protein-md
+  source: docs/manuscript/labs/part_III/lab_macro-protein.md
+  needle: convention gap) and note that the gap grows from $\sim 521$-fold at $n = 13$
+  value: 521
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-049-labs-part-iii-lab-macro-protein-md
+  source: docs/manuscript/labs/part_III/lab_macro-protein.md
+  needle: 'to $\sim 3571$-fold at $n = 17$: the two printed readings of "$\Omega_n ='
+  value: 3571
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-050-labs-part-iii-lab-moving-up-stack-md
+  source: docs/manuscript/labs/part_III/lab_moving-up-stack.md
+  needle: 'Summarise your results in a three-row table: quantity, hand value, library value. Then answer,
+    in writing: (a) which of your numbers are *derived from the corpus''s printed values*, and which are
+    *illustrative choices of yours* (the token accounting is the latter); (b) what the paper would need
+    to publish for the band to become an appraisal rather than framing (audited transaction data, at minimum);
+    (c) why the sunspot count 90.9 and the node label Hero Jo appear in the paper''s filing but in *none*
+    of your computations — they are filing / ops labels, "not causal dollar drivers" [@mendez2026stack].'
+  value: 90.9
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-054-labs-part-iii-lab-y-chromosome-md
+  source: docs/manuscript/labs/part_III/lab_y-chromosome.md
+  needle: $\approx 1.666667$ — a factor of about $4.1$ between readings of the same
+  value: 4.1
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-055-labs-part-iii-lab-y-chromosome-md
+  source: docs/manuscript/labs/part_III/lab_y-chromosome.md
+  needle: that MSY equals a physics constant, that sunspot AR 3664 writes human DNA, or
+  value: 3664
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-066-part-0-tensor-decoupling-md
+  source: docs/manuscript/part_0/tensor-decoupling.md
+  needle: '| 1 | 1.618034 | 0.618034 |'
+  value: 0.618034
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-068-part-0-tensor-decoupling-md
+  source: docs/manuscript/part_0/tensor-decoupling.md
+  needle: '| 2 | 2.618034 | 0.381966 |'
+  value: 0.381966
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-070-part-0-tensor-decoupling-md
+  source: docs/manuscript/part_0/tensor-decoupling.md
+  needle: '| 3 | 4.236068 | 0.236068 |'
+  value: 0.236068
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-072-part-0-tensor-decoupling-md
+  source: docs/manuscript/part_0/tensor-decoupling.md
+  needle: '| 4 | 6.854102 | 0.145898 |'
+  value: 0.145898
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-076-part-0-tensor-decoupling-md
+  source: docs/manuscript/part_0/tensor-decoupling.md
+  needle: '| 6 | 17.944272 | 0.055728 |'
+  value: 0.055728
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-077-part-i-holographic-rhyme-md
+  source: docs/manuscript/part_I/holographic-rhyme.md
+  needle: '| $(\lambda/4,\, 0) \approx (0.404508,\, 0)$ | $0.25$ | $0$ | $2\cos\tfrac{\pi}{2} + 2 = 2$
+    | $+2.000000$ |'
+  value: 0.404508
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-078-part-i-holographic-rhyme-md
+  source: docs/manuscript/part_I/holographic-rhyme.md
+  needle: '| $(\lambda/2,\, \lambda/2) \approx (0.809017,\, 0.809017)$ | $0.5$ | $0.5$ | $-2 - 2 = -4$
+    | $-4.000000$ |'
+  value: 0.809017
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-079-part-i-holographic-rhyme-md
+  source: docs/manuscript/part_I/holographic-rhyme.md
+  needle: '| $(\lambda/2,\, \lambda/2) \approx (0.809017,\, 0.809017)$ | $0.5$ | $0.5$ | $-2 - 2 = -4$
+    | $-4.000000$ |'
+  value: -2
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-101-part-ii-eddy-current-mirror-md
+  source: docs/manuscript/part_II/eddy-current-mirror.md
+  needle: '| 1 | 0.367879 | 0.367879 | 0.632121 |'
+  value: 0.632121
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-102-part-ii-eddy-current-mirror-md
+  source: docs/manuscript/part_II/eddy-current-mirror.md
+  needle: '| 2 | 0.135335 | 0.135335 | 0.864665 |'
+  value: 0.864665
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-103-part-ii-eddy-current-mirror-md
+  source: docs/manuscript/part_II/eddy-current-mirror.md
+  needle: '| 3 | 0.049787 | 0.049787 | 0.950213 |'
+  value: 0.049787
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-104-part-ii-eddy-current-mirror-md
+  source: docs/manuscript/part_II/eddy-current-mirror.md
+  needle: '| 3 | 0.049787 | 0.049787 | 0.950213 |'
+  value: 0.950213
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-109-part-ii-proton-theater-md
+  source: docs/manuscript/part_II/proton-theater.md
+  needle: '| $1/\Phi = \Phi - 1$ | $0.618034$ | `phi_dual` (lower branch) |'
+  value: 0.618034
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-113-part-ii-viscosity-light-md
+  source: docs/manuscript/part_II/viscosity-light.md
+  needle: '| $-1$ | $0.618034$ | $0.539003$ | $0.290524$ | $0.156594$ |'
+  value: 0.539003
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-114-part-ii-viscosity-light-md
+  source: docs/manuscript/part_II/viscosity-light.md
+  needle: '| $-1$ | $0.618034$ | $0.539003$ | $0.290524$ | $0.156594$ |'
+  value: 0.290524
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-115-part-ii-viscosity-light-md
+  source: docs/manuscript/part_II/viscosity-light.md
+  needle: '| $-1$ | $0.618034$ | $0.539003$ | $0.290524$ | $0.156594$ |'
+  value: 0.156594
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-116-part-ii-viscosity-light-md
+  source: docs/manuscript/part_II/viscosity-light.md
+  needle: '| $0$  | $1.000000$ | $0.367879$ | $0.135335$ | $0.049787$ |'
+  value: 0.367879
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-117-part-ii-viscosity-light-md
+  source: docs/manuscript/part_II/viscosity-light.md
+  needle: '| $0$  | $1.000000$ | $0.367879$ | $0.135335$ | $0.049787$ |'
+  value: 0.135335
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-118-part-ii-viscosity-light-md
+  source: docs/manuscript/part_II/viscosity-light.md
+  needle: '| $0$  | $1.000000$ | $0.367879$ | $0.135335$ | $0.049787$ |'
+  value: 0.049787
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-119-part-ii-viscosity-light-md
+  source: docs/manuscript/part_II/viscosity-light.md
+  needle: '| $1$  | $1.618034$ | $0.198288$ | $0.039318$ | $0.007796$ |'
+  value: 0.198288
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-120-part-ii-viscosity-light-md
+  source: docs/manuscript/part_II/viscosity-light.md
+  needle: '| $1$  | $1.618034$ | $0.198288$ | $0.039318$ | $0.007796$ |'
+  value: 0.039318
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-121-part-ii-viscosity-light-md
+  source: docs/manuscript/part_II/viscosity-light.md
+  needle: '| $1$  | $1.618034$ | $0.198288$ | $0.039318$ | $0.007796$ |'
+  value: 0.007796
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-122-part-ii-viscosity-light-md
+  source: docs/manuscript/part_II/viscosity-light.md
+  needle: '| $2$  | $2.618034$ | $0.072946$ | $0.005321$ | $0.000388$ |'
+  value: 0.072946
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-123-part-ii-viscosity-light-md
+  source: docs/manuscript/part_II/viscosity-light.md
+  needle: '| $2$  | $2.618034$ | $0.072946$ | $0.005321$ | $0.000388$ |'
+  value: 0.005321
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-124-part-ii-viscosity-light-md
+  source: docs/manuscript/part_II/viscosity-light.md
+  needle: '| $2$  | $2.618034$ | $0.072946$ | $0.005321$ | $0.000388$ |'
+  value: 0.000388
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-132-part-iii-invisible-frontier-md
+  source: docs/manuscript/part_III/invisible-frontier.md
+  needle: '| 6   | 17.944272 | $13/8 = 1.625$ |'
+  value: 1.625
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-137-part-iii-macro-protein-md
+  source: docs/manuscript/part_III/macro-protein.md
+  needle: '| 14  | $842.9988$            | $610/377 \approx 1.6180371$ |'
+  value: 610
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-140-part-iii-macro-protein-md
+  source: docs/manuscript/part_III/macro-protein.md
+  needle: '| 15  | $1364.0007$           | $987/610 \approx 1.6180328$ |'
+  value: 987
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-146-part-iii-moving-up-stack-md
+  source: docs/manuscript/part_III/moving-up-stack.md
+  needle: '| Hugging Face (NVIDIA) | $12.9 Billion | Model hub / distribution | Open gravity for models
+    + developers (**model gravity**) |'
+  value: 12.9
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-148-part-iii-reality-bridge-md
+  source: docs/manuscript/part_III/reality-bridge.md
+  needle: '| 3 | 4.236068 | 0.049787 | 0.950213 |'
+  value: 0.049787
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-149-part-iii-reality-bridge-md
+  source: docs/manuscript/part_III/reality-bridge.md
+  needle: '| 3 | 4.236068 | 0.049787 | 0.950213 |'
+  value: 0.950213
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-150-part-iii-reality-bridge-md
+  source: docs/manuscript/part_III/reality-bridge.md
+  needle: '| 4 | 6.854102 | 0.018316 | 0.981684 |'
+  value: 0.018316
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-151-part-iii-reality-bridge-md
+  source: docs/manuscript/part_III/reality-bridge.md
+  needle: '| 4 | 6.854102 | 0.018316 | 0.981684 |'
+  value: 0.981684
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-152-part-iii-reality-bridge-md
+  source: docs/manuscript/part_III/reality-bridge.md
+  needle: '| 5 | 11.090170 | 0.006738 | 0.993262 |'
+  value: 0.006738
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-153-part-iii-reality-bridge-md
+  source: docs/manuscript/part_III/reality-bridge.md
+  needle: '| 5 | 11.090170 | 0.006738 | 0.993262 |'
+  value: 0.993262
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-154-part-iii-reality-bridge-md
+  source: docs/manuscript/part_III/reality-bridge.md
+  needle: '| 6 | 17.944272 | 0.002479 | 0.997521 |'
+  value: 0.002479
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-155-part-iii-reality-bridge-md
+  source: docs/manuscript/part_III/reality-bridge.md
+  needle: '| 6 | 17.944272 | 0.002479 | 0.997521 |'
+  value: 0.997521
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-163-appendices-appendix-authoring-guide-md
+  source: docs/manuscript/appendices/appendix_authoring_guide.md
+  needle: $\varphi_{\mathrm{fib}}(10) \approx 1.618182$, $v(1) \approx 0.367879$,
+  value: 0.367879
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-164-appendices-appendix-authoring-guide-md
+  source: docs/manuscript/appendices/appendix_authoring_guide.md
+  needle: $v(2) \approx 0.135335$, $\mathrm{overlap}(\{a,b\},\{b,c\}) = 0.5$,
+  value: 0.135335
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-167-appendices-appendix-format-gallery-md
+  source: docs/manuscript/appendices/appendix_format_gallery.md
+  needle: evaluates to $\ln 2 \approx 0.693147$.
+  value: 0.693147
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-170-appendices-appendix-format-gallery-md
+  source: docs/manuscript/appendices/appendix_format_gallery.md
+  needle: '> = 13/8 = 1.625$).'
+  value: 1.625
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-173-appendices-appendix-math-review-md
+  source: docs/manuscript/appendices/appendix_math_review.md
+  needle: 0.693147$ at unit drag (`half_life`). Each unit of time multiplies the value
+  value: 0.693147
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-176-appendices-appendix-notation-md
+  source: docs/manuscript/appendices/appendix_notation.md
+  needle: field with $\langle\Phi\rangle \approx 246$ GeV as a PDG literature anchor —
+  value: 246
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-177-glossary-md
+  source: docs/manuscript/glossary.md
+  needle: = 99$ (octave ladder), $9 \times 81 = 729$ (per-block precision matrix), and
+  value: 729
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-180-labs-part-0-lab-living-pem-md
+  source: docs/manuscript/labs/part_0/lab_living-pem.md
+  needle: 5. **Hand-compute a settlement.** A delivery takes inflows of 120 and 30 value units and pays
+    outflows of 150. Compute $B = \sum I - \sum O$ and confirm it meets the $B = 0$ target of [@eq:part_0_living-pem_balance].
+    Then recompute with the outflow mis-typed as 105 and state, in one sentence, what a non-zero $B$ means
+    under the fair-exchange clause.
+  value: 120
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-181-labs-part-0-lab-living-pem-md
+  source: docs/manuscript/labs/part_0/lab_living-pem.md
+  needle: 5. **Hand-compute a settlement.** A delivery takes inflows of 120 and 30 value units and pays
+    outflows of 150. Compute $B = \sum I - \sum O$ and confirm it meets the $B = 0$ target of [@eq:part_0_living-pem_balance].
+    Then recompute with the outflow mis-typed as 105 and state, in one sentence, what a non-zero $B$ means
+    under the fair-exchange clause.
+  value: 105
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-184-labs-part-0-lab-master-synthesis-md
+  source: docs/manuscript/labs/part_0/lab_master-synthesis.md
+  needle: '3. **Pin the constant.** Build the Fibonacci sequence $1, 1, 2, 3, 5, 8, \dots$ and form ratios
+    of consecutive terms: $F_6/F_5 = 8/5 = 1.6$ and $F_{11}/F_{10} = 89/55 \approx 1.618182$. Compute
+    each approximant''s percentage deviation from $\Phi \approx 1.6180339887$: roughly $1.1\%$ for the
+    fifth and under $0.01\%$ for the tenth. Note which side of $\Phi$ each sits on — the bracketing from
+    [@tbl:part_0_master-synthesis_egs].'
+  value: 1.1
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-185-labs-part-0-lab-master-synthesis-md
+  source: docs/manuscript/labs/part_0/lab_master-synthesis.md
+  needle: '3. **Pin the constant.** Build the Fibonacci sequence $1, 1, 2, 3, 5, 8, \dots$ and form ratios
+    of consecutive terms: $F_6/F_5 = 8/5 = 1.6$ and $F_{11}/F_{10} = 89/55 \approx 1.618182$. Compute
+    each approximant''s percentage deviation from $\Phi \approx 1.6180339887$: roughly $1.1\%$ for the
+    fifth and under $0.01\%$ for the tenth. Note which side of $\Phi$ each sits on — the bracketing from
+    [@tbl:part_0_master-synthesis_egs].'
+  value: 0.01
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-200-labs-part-0-lab-orientation-md
+  source: docs/manuscript/labs/part_0/lab_orientation.md
+  needle: 'Linked chapter: [@sec:part_0_orientation]. The corpus self-describes as [**catalog architecture**](#gl:catalog-architecture)
+    — a filing and protocol grammar for coordinating agents, dashboards, and conversation, explicitly
+    not established physics — and its two anchor pages state that status themselves [@mendez2026ship;
+    @mendez2026catalog]. Rather than take the chapter''s word for it, this lab has you survey the shelves
+    yourself: walk the ship''s homepage, browse the Reading Room, and touch the numbers (24 pins, 195
+    distinct items, $99 \times 81$ register bins) where they live. One reading rule governs every step,
+    and it is the corpus''s own [**honesty-first**](#gl:honesty-first) clause: read each item''s scope
+    disclaimer before filing it anywhere. And keep the [**Fair Exchange**](#gl:fair-exchange) framing
+    throughout: a receipt for every exchange, with hand values matched against the tested functions rather
+    than trusted on retyped arithmetic.'
+  value: 195
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-201-labs-part-0-lab-tensor-decoupling-md
+  source: docs/manuscript/labs/part_0/lab_tensor-decoupling.md
+  needle: After this lab you will be able to (1) build the 99-octave filing cabinet on paper and verify
+    its two register budgets (729 digits per block, 8,019 in total) against `catalog_size` in `textbook.models`;
+    (2) compute the golden-ratio dashboard readings $w_n = \Phi^{-n}$ by hand and check them against `phi_powers`;
+    and (3) file a sample week of headlines into labelled brackets without asserting any causal cable
+    between them, exactly as the source paper prescribes [@mendez2026tensorDecoupling].
+  value: 729
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-203-labs-part-0-lab-tensor-decoupling-md
+  source: docs/manuscript/labs/part_0/lab_tensor-decoupling.md
+  needle: 5. **Read the dial.** Compute $w_n = \Phi^{-n}$ for $n = 1, \dots, 6$ by hand from the pinned
+    powers of $\Phi$ (e.g. $w_1 = 1/1.618034 = 0.618034$, $w_2 = 1/2.618034 = 0.381966$). Write each reading
+    beside its bracket.
+  value: 0.618034
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-205-labs-part-0-lab-tensor-decoupling-md
+  source: docs/manuscript/labs/part_0/lab_tensor-decoupling.md
+  needle: 5. **Read the dial.** Compute $w_n = \Phi^{-n}$ for $n = 1, \dots, 6$ by hand from the pinned
+    powers of $\Phi$ (e.g. $w_1 = 1/1.618034 = 0.618034$, $w_2 = 1/2.618034 = 0.381966$). Write each reading
+    beside its bracket.
+  value: 0.381966
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-206-labs-part-0-lab-tensor-decoupling-md
+  source: docs/manuscript/labs/part_0/lab_tensor-decoupling.md
+  needle: '- The dial says the master band (bracket 11) reads $\Phi^{-10} \approx 0.00813$. What work
+    does *smallness* do for an agent that walks the shelves from bracket 1 downward — and what would break
+    if the dial were replaced by a flat, unscaled ordering?'
+  value: -10
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-207-labs-part-0-lab-tensor-decoupling-md
+  source: docs/manuscript/labs/part_0/lab_tensor-decoupling.md
+  needle: '- The dial says the master band (bracket 11) reads $\Phi^{-10} \approx 0.00813$. What work
+    does *smallness* do for an agent that walks the shelves from bracket 1 downward — and what would break
+    if the dial were replaced by a flat, unscaled ordering?'
+  value: 0.00813
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-218-labs-part-i-lab-higgs-awareness-md
+  source: docs/manuscript/labs/part_I/lab_higgs-awareness.md
+  needle: $e^{-1} \approx 0.368$.
+  value: 0.368
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-219-labs-part-i-lab-higgs-awareness-md
+  source: docs/manuscript/labs/part_I/lab_higgs-awareness.md
+  needle: 3. **Compute by hand.** Evaluate $e^{-1}$, $e^{-2}$, $e^{-3}$ and the
+  value: -2
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-220-labs-part-i-lab-higgs-awareness-md
+  source: docs/manuscript/labs/part_I/lab_higgs-awareness.md
+  needle: 3. **Compute by hand.** Evaluate $e^{-1}$, $e^{-2}$, $e^{-3}$ and the
+  value: -3
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-221-labs-part-i-lab-higgs-awareness-md
+  source: docs/manuscript/labs/part_I/lab_higgs-awareness.md
+  needle: '[@eq:part_I_higgs-awareness_displacement]. Expect $0.367879$, $0.135335$,'
+  value: 0.367879
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-222-labs-part-i-lab-higgs-awareness-md
+  source: docs/manuscript/labs/part_I/lab_higgs-awareness.md
+  needle: '[@eq:part_I_higgs-awareness_displacement]. Expect $0.367879$, $0.135335$,'
+  value: 0.135335
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-223-labs-part-i-lab-higgs-awareness-md
+  source: docs/manuscript/labs/part_I/lab_higgs-awareness.md
+  needle: $0.049787$, and displacements $0.632121$, $0.864665$.
+  value: 0.049787
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-224-labs-part-i-lab-higgs-awareness-md
+  source: docs/manuscript/labs/part_I/lab_higgs-awareness.md
+  needle: $0.049787$, and displacements $0.632121$, $0.864665$.
+  value: 0.632121
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-225-labs-part-i-lab-higgs-awareness-md
+  source: docs/manuscript/labs/part_I/lab_higgs-awareness.md
+  needle: $0.049787$, and displacements $0.632121$, $0.864665$.
+  value: 0.864665
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-227-labs-part-i-lab-holographic-rhyme-md
+  source: docs/manuscript/labs/part_I/lab_holographic-rhyme.md
+  needle: '*Expected outputs:* $+4,\ +2,\ 0,\ -4,\ +4,\ 0$ in that order. If a hand'
+  value: -4
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-234-labs-part-i-lab-topology-void-md
+  source: docs/manuscript/labs/part_I/lab_topology-void.md
+  needle: '3$: compute $f(3) = 21$, $f(-3) = -21$, and $\mathcal{B}[f](3) ='
+  value: -3
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-235-labs-part-i-lab-topology-void-md
+  source: docs/manuscript/labs/part_I/lab_topology-void.md
+  needle: '3$: compute $f(3) = 21$, $f(-3) = -21$, and $\mathcal{B}[f](3) ='
+  value: -21
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-236-labs-part-i-lab-topology-void-md
+  source: docs/manuscript/labs/part_I/lab_topology-void.md
+  needle: -0.875$, $f(-0.5) = 0.875$, balance $= 0$. Odd signals cancel at *every*
+  value: -0.875
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-237-labs-part-i-lab-topology-void-md
+  source: docs/manuscript/labs/part_I/lab_topology-void.md
+  needle: -0.875$, $f(-0.5) = 0.875$, balance $= 0$. Odd signals cancel at *every*
+  value: -0.5
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-238-labs-part-i-lab-topology-void-md
+  source: docs/manuscript/labs/part_I/lab_topology-void.md
+  needle: -0.875$, $f(-0.5) = 0.875$, balance $= 0$. Odd signals cancel at *every*
+  value: 0.875
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-239-labs-part-i-lab-topology-void-md
+  source: docs/manuscript/labs/part_I/lab_topology-void.md
+  needle: '$x = 3$: $g(3) = 30$, $g(-3) = -12$, so $\mathcal{B}[g](3) = 9$ — exactly'
+  value: -12
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-240-labs-part-i-lab-topology-void-md
+  source: docs/manuscript/labs/part_I/lab_topology-void.md
+  needle: 4. **Exercise the noise sink.** Pair a symmetric sample $\{+5, -5, +2, -2\}$
+  value: -5
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-241-labs-part-i-lab-topology-void-md
+  source: docs/manuscript/labs/part_I/lab_topology-void.md
+  needle: 4. **Exercise the noise sink.** Pair a symmetric sample $\{+5, -5, +2, -2\}$
+  value: -2
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-254-labs-part-ii-lab-crystalline-field-md
+  source: docs/manuscript/labs/part_II/lab_crystalline-field.md
+  needle: of $\approx 11.09$ — this is why `octave_term` requires an explicit
+  value: 11.09
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-255-labs-part-ii-lab-crystalline-field-md
+  source: docs/manuscript/labs/part_II/lab_crystalline-field.md
+  needle: $k_B T \ln 2$ at $T = 300\,\mathrm{K}$ by hand
+  value: 300
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-256-labs-part-ii-lab-crystalline-field-md
+  source: docs/manuscript/labs/part_II/lab_crystalline-field.md
+  needle: ($\approx 2.87\times 10^{-21}\,\mathrm{J}$) and state, in one sentence, what
+  value: 2.87
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-257-labs-part-ii-lab-crystalline-field-md
+  source: docs/manuscript/labs/part_II/lab_crystalline-field.md
+  needle: ($\approx 2.87\times 10^{-21}\,\mathrm{J}$) and state, in one sentence, what
+  value: -21
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-258-labs-part-ii-lab-eddy-current-mirror-md
+  source: docs/manuscript/labs/part_II/lab_eddy-current-mirror.md
+  needle: $v(t) = e^{-t}$ at $t = 1$ and $t = 2$ using $e^{-1} \approx 0.367879$ and
+  value: 0.367879
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-259-labs-part-ii-lab-eddy-current-mirror-md
+  source: docs/manuscript/labs/part_II/lab_eddy-current-mirror.md
+  needle: $e^{-2} \approx 0.135335$. Also compute the half-life from
+  value: -2
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-260-labs-part-ii-lab-eddy-current-mirror-md
+  source: docs/manuscript/labs/part_II/lab_eddy-current-mirror.md
+  needle: $e^{-2} \approx 0.135335$. Also compute the half-life from
+  value: 0.135335
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-261-labs-part-ii-lab-eddy-current-mirror-md
+  source: docs/manuscript/labs/part_II/lab_eddy-current-mirror.md
+  needle: '[@eq:part_II_eddy-current-mirror_halflife]: $t_{1/2} = \ln 2 \approx 0.693147$.'
+  value: 0.693147
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-263-labs-part-ii-lab-eddy-current-mirror-md
+  source: docs/manuscript/labs/part_II/lab_eddy-current-mirror.md
+  needle: $e^{-0.5} \approx 0.606531$. Check with
+  value: -0.5
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-264-labs-part-ii-lab-eddy-current-mirror-md
+  source: docs/manuscript/labs/part_II/lab_eddy-current-mirror.md
+  needle: $e^{-0.5} \approx 0.606531$. Check with
+  value: 0.606531
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-266-labs-part-ii-lab-metamorphic-octaves-md
+  source: docs/manuscript/labs/part_II/lab_metamorphic-octaves.md
+  needle: $D(x) = 1 + \ln(1+x)$ at $x = 1, 2, 4, 8$ using $\ln 2 \approx 0.693147$,
+  value: 0.693147
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-273-labs-part-ii-lab-metamorphic-octaves-md
+  source: docs/manuscript/labs/part_II/lab_metamorphic-octaves.md
+  needle: 'evaluated at $x = 1, 2, 4$ (predicted: 0.5, 1/3 ≈ 0.333333, 0.2). Note the'
+  value: 0.333333
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-274-labs-part-ii-lab-metamorphic-octaves-md
+  source: docs/manuscript/labs/part_II/lab_metamorphic-octaves.md
+  needle: 'Expected marginal gains: 0.405465, 0.510826, 0.587787 — each below the'
+  value: 0.405465
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-275-labs-part-ii-lab-metamorphic-octaves-md
+  source: docs/manuscript/labs/part_II/lab_metamorphic-octaves.md
+  needle: 'Expected marginal gains: 0.405465, 0.510826, 0.587787 — each below the'
+  value: 0.510826
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-276-labs-part-ii-lab-metamorphic-octaves-md
+  source: docs/manuscript/labs/part_II/lab_metamorphic-octaves.md
+  needle: 'Expected marginal gains: 0.405465, 0.510826, 0.587787 — each below the'
+  value: 0.587787
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-279-labs-part-ii-lab-planetary-core-md
+  source: docs/manuscript/labs/part_II/lab_planetary-core.md
+  needle: $t = 2$ and confirm $v(1) \approx 0.367879$ and $v(2) \approx 0.135335$.
+  value: 0.367879
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-280-labs-part-ii-lab-planetary-core-md
+  source: docs/manuscript/labs/part_II/lab_planetary-core.md
+  needle: $t = 2$ and confirm $v(1) \approx 0.367879$ and $v(2) \approx 0.135335$.
+  value: 0.135335
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-281-labs-part-ii-lab-proton-theater-md
+  source: docs/manuscript/labs/part_II/lab_proton-theater.md
+  needle: 1. **File two constants.** Take $e = 2.718\ldots$ and $\pi = 3.141\ldots$.
+  value: 2.718
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-282-labs-part-ii-lab-proton-theater-md
+  source: docs/manuscript/labs/part_II/lab_proton-theater.md
+  needle: 1. **File two constants.** Take $e = 2.718\ldots$ and $\pi = 3.141\ldots$.
+  value: 3.141
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-284-labs-part-ii-lab-proton-theater-md
+  source: docs/manuscript/labs/part_II/lab_proton-theater.md
+  needle: 'and $1/\Phi = 0.618034$. You should get:'
+  value: 0.618034
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-290-labs-part-ii-lab-singularity-crystal-md
+  source: docs/manuscript/labs/part_II/lab_singularity-crystal.md
+  needle: '2. **Compute a net-zero residual by hand.** Take inflows $[3, 5, 8, 13]$ and outflows $[16,
+    13]$. Sums: $3+5+8+13 = 29$ and $16+13 = 29$. Residual per [@eq:part_II_singularity-crystal_netzero]:
+    $R = 29 - 29 = 0$. Now break it: inflows $[3, 5]$ against outflows $[16]$ give $R = 8 - 16 = -8$.'
+  value: -8
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-292-labs-part-ii-lab-viscosity-light-md
+  source: docs/manuscript/labs/part_II/lab_viscosity-light.md
+  needle: Expect $v(1) = e^{-1} \approx 0.367879$, $v(2) \approx 0.135335$,
+  value: 0.367879
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-293-labs-part-ii-lab-viscosity-light-md
+  source: docs/manuscript/labs/part_II/lab_viscosity-light.md
+  needle: Expect $v(1) = e^{-1} \approx 0.367879$, $v(2) \approx 0.135335$,
+  value: 0.135335
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-294-labs-part-ii-lab-viscosity-light-md
+  source: docs/manuscript/labs/part_II/lab_viscosity-light.md
+  needle: $v(3) \approx 0.049787$. Then step one $\Phi$-rung up the ladder of
+  value: 0.049787
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-308-labs-part-iii-lab-invisible-frontier-md
+  source: docs/manuscript/labs/part_III/lab_invisible-frontier.md
+  needle: 1.6, 1.625) — bracketing $\Phi$ from above and below, which is the
+  value: 1.625
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-309-labs-part-iii-lab-invisible-frontier-md
+  source: docs/manuscript/labs/part_III/lab_invisible-frontier.md
+  needle: '- $V(1) = 1/(1 + 19e^{-1}) \approx 0.125161$'
+  value: 0.125161
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-310-labs-part-iii-lab-invisible-frontier-md
+  source: docs/manuscript/labs/part_III/lab_invisible-frontier.md
+  needle: '- $V(2) = 1/(1 + 19e^{-2}) \approx 0.280005$'
+  value: -2
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-311-labs-part-iii-lab-invisible-frontier-md
+  source: docs/manuscript/labs/part_III/lab_invisible-frontier.md
+  needle: '- $V(2) = 1/(1 + 19e^{-2}) \approx 0.280005$'
+  value: 0.280005
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-312-labs-part-iii-lab-invisible-frontier-md
+  source: docs/manuscript/labs/part_III/lab_invisible-frontier.md
+  needle: '- $V(3) = 1/(1 + 19e^{-3}) \approx 0.513887$'
+  value: -3
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-313-labs-part-iii-lab-invisible-frontier-md
+  source: docs/manuscript/labs/part_III/lab_invisible-frontier.md
+  needle: '- $V(3) = 1/(1 + 19e^{-3}) \approx 0.513887$'
+  value: 0.513887
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-316-labs-part-iii-lab-kinematic-recycling-md
+  source: docs/manuscript/labs/part_III/lab_kinematic-recycling.md
+  needle: '- $v = 1$: argument $1$, amplitude $1$ → $\cos 1 \approx 0.540302$.'
+  value: 0.540302
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-317-labs-part-iii-lab-kinematic-recycling-md
+  source: docs/manuscript/labs/part_III/lab_kinematic-recycling.md
+  needle: '- $v = \Phi$: argument $1/\Phi \approx 0.618034$, amplitude'
+  value: 0.618034
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-319-labs-part-iii-lab-kinematic-recycling-md
+  source: docs/manuscript/labs/part_III/lab_kinematic-recycling.md
+  needle: '- $v = \Phi^2$: argument $1/\Phi^2 \approx 0.381966$, amplitude'
+  value: 0.381966
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-320-labs-part-iii-lab-kinematic-recycling-md
+  source: docs/manuscript/labs/part_III/lab_kinematic-recycling.md
+  needle: $\approx 0.381966$ → $\approx 0.354439$.
+  value: 0.354439
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-326-labs-part-iii-lab-macro-protein-md
+  source: docs/manuscript/labs/part_III/lab_macro-protein.md
+  needle: $\Phi = (1+\sqrt5)/2$, expect $\approx 521.002$ and $\approx 3571.000$).
+  value: 521.002
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-328-labs-part-iii-lab-macro-protein-md
+  source: docs/manuscript/labs/part_III/lab_macro-protein.md
+  needle: $377/233 \approx 1.618026$ and $2584/1597 \approx 1.618034$. Write all
+  value: 377
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-329-labs-part-iii-lab-macro-protein-md
+  source: docs/manuscript/labs/part_III/lab_macro-protein.md
+  needle: $377/233 \approx 1.618026$ and $2584/1597 \approx 1.618034$. Write all
+  value: 233
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-331-labs-part-iii-lab-macro-protein-md
+  source: docs/manuscript/labs/part_III/lab_macro-protein.md
+  needle: $377/233 \approx 1.618026$ and $2584/1597 \approx 1.618034$. Write all
+  value: 2584
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-332-labs-part-iii-lab-macro-protein-md
+  source: docs/manuscript/labs/part_III/lab_macro-protein.md
+  needle: $377/233 \approx 1.618026$ and $2584/1597 \approx 1.618034$. Write all
+  value: 1597
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-334-labs-part-iii-lab-macro-protein-md
+  source: docs/manuscript/labs/part_III/lab_macro-protein.md
+  needle: $\{12.6,\ 13.9,\ 16.2,\ 17.4\}$. By hand, decide which lie in $[13, 17]$
+  value: 12.6
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-335-labs-part-iii-lab-macro-protein-md
+  source: docs/manuscript/labs/part_III/lab_macro-protein.md
+  needle: $\{12.6,\ 13.9,\ 16.2,\ 17.4\}$. By hand, decide which lie in $[13, 17]$
+  value: 13.9
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-336-labs-part-iii-lab-macro-protein-md
+  source: docs/manuscript/labs/part_III/lab_macro-protein.md
+  needle: $\{12.6,\ 13.9,\ 16.2,\ 17.4\}$. By hand, decide which lie in $[13, 17]$
+  value: 16.2
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-337-labs-part-iii-lab-macro-protein-md
+  source: docs/manuscript/labs/part_III/lab_macro-protein.md
+  needle: $\{12.6,\ 13.9,\ 16.2,\ 17.4\}$. By hand, decide which lie in $[13, 17]$
+  value: 17.4
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-338-labs-part-iii-lab-macro-protein-md
+  source: docs/manuscript/labs/part_III/lab_macro-protein.md
+  needle: compute the metabolic-rate ratio for a $1000$-fold body-mass increase
+  value: 1000
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-339-labs-part-iii-lab-macro-protein-md
+  source: docs/manuscript/labs/part_III/lab_macro-protein.md
+  needle: ($1000^{3/4} \approx 177.83$) and for the mouse-to-elephant $2 \times
+  value: 177.83
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-340-labs-part-iii-lab-macro-protein-md
+  source: docs/manuscript/labs/part_III/lab_macro-protein.md
+  needle: 10^5$-fold ratio used in the chapter ($\approx 5318$). Then answer in one
+  value: 5318
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-341-labs-part-iii-lab-moving-up-stack-md
+  source: docs/manuscript/labs/part_III/lab_moving-up-stack.md
+  needle: 'Linked chapter: [@sec:part_III_moving-up-stack]. The chapter formalised the paper''s valuation
+    thesis as a band $\mathcal{B}_{\text{new}} = [\$12\text{B}, \$28\text{B}]$ derived from two scenario
+    anchors, $A_{\text{hub}} = \$12.9\text{B}$ and $A_{\text{IDE}} = \$60.0\text{B}$ ([@eq:part_III_moving-up-stack_band]),
+    and rejected the peer-shelf misread band $[\$4.2\text{B}, \$7.5\text{B}]$. The paper''s reference
+    implementation packages exactly this derivation: it is the Infinite Octaves engine shelf #13 suite
+    at `github.com/FractiAI/synthobs-moving-up-the-stack-valuation` [@mendez2026stack]. Here you run it,
+    then reproduce its arithmetic yourself so that the band is something you computed, not something you
+    believed.'
+  value: 12.9
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-342-labs-part-iii-lab-moving-up-stack-md
+  source: docs/manuscript/labs/part_III/lab_moving-up-stack.md
+  needle: 'Linked chapter: [@sec:part_III_moving-up-stack]. The chapter formalised the paper''s valuation
+    thesis as a band $\mathcal{B}_{\text{new}} = [\$12\text{B}, \$28\text{B}]$ derived from two scenario
+    anchors, $A_{\text{hub}} = \$12.9\text{B}$ and $A_{\text{IDE}} = \$60.0\text{B}$ ([@eq:part_III_moving-up-stack_band]),
+    and rejected the peer-shelf misread band $[\$4.2\text{B}, \$7.5\text{B}]$. The paper''s reference
+    implementation packages exactly this derivation: it is the Infinite Octaves engine shelf #13 suite
+    at `github.com/FractiAI/synthobs-moving-up-the-stack-valuation` [@mendez2026stack]. Here you run it,
+    then reproduce its arithmetic yourself so that the band is something you computed, not something you
+    believed.'
+  value: 4.2
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-343-labs-part-iii-lab-moving-up-stack-md
+  source: docs/manuscript/labs/part_III/lab_moving-up-stack.md
+  needle: 'Linked chapter: [@sec:part_III_moving-up-stack]. The chapter formalised the paper''s valuation
+    thesis as a band $\mathcal{B}_{\text{new}} = [\$12\text{B}, \$28\text{B}]$ derived from two scenario
+    anchors, $A_{\text{hub}} = \$12.9\text{B}$ and $A_{\text{IDE}} = \$60.0\text{B}$ ([@eq:part_III_moving-up-stack_band]),
+    and rejected the peer-shelf misread band $[\$4.2\text{B}, \$7.5\text{B}]$. The paper''s reference
+    implementation packages exactly this derivation: it is the Infinite Octaves engine shelf #13 suite
+    at `github.com/FractiAI/synthobs-moving-up-the-stack-valuation` [@mendez2026stack]. Here you run it,
+    then reproduce its arithmetic yourself so that the band is something you computed, not something you
+    believed.'
+  value: 7.5
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-344-labs-part-iii-lab-moving-up-stack-md
+  source: docs/manuscript/labs/part_III/lab_moving-up-stack.md
+  needle: '2. **Recompute the band statistics by hand.** From the anchors only: floor ratio $12/12.9 \approx
+    0.930$; ceiling ratio $28/60 \approx 0.467$; peer midpoint $(4.2+7.5)/2 = 5.85$; new-layer midpoint
+    $(12+28)/2 = 20.0$; midpoint ratio $20.0/5.85 \approx 3.42$. Write each number down *before* checking
+    it — the point is that every quantity in the paper''s derivation is reachable from the two anchors
+    plus the printed band edges.'
+  value: 0.467
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-345-labs-part-iii-lab-moving-up-stack-md
+  source: docs/manuscript/labs/part_III/lab_moving-up-stack.md
+  needle: '2. **Recompute the band statistics by hand.** From the anchors only: floor ratio $12/12.9 \approx
+    0.930$; ceiling ratio $28/60 \approx 0.467$; peer midpoint $(4.2+7.5)/2 = 5.85$; new-layer midpoint
+    $(12+28)/2 = 20.0$; midpoint ratio $20.0/5.85 \approx 3.42$. Write each number down *before* checking
+    it — the point is that every quantity in the paper''s derivation is reachable from the two anchors
+    plus the printed band edges.'
+  value: 5.85
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-346-labs-part-iii-lab-moving-up-stack-md
+  source: docs/manuscript/labs/part_III/lab_moving-up-stack.md
+  needle: '2. **Recompute the band statistics by hand.** From the anchors only: floor ratio $12/12.9 \approx
+    0.930$; ceiling ratio $28/60 \approx 0.467$; peer midpoint $(4.2+7.5)/2 = 5.85$; new-layer midpoint
+    $(12+28)/2 = 20.0$; midpoint ratio $20.0/5.85 \approx 3.42$. Write each number down *before* checking
+    it — the point is that every quantity in the paper''s derivation is reachable from the two anchors
+    plus the printed band edges.'
+  value: 3.42
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-347-labs-part-iii-lab-moving-up-stack-md
+  source: docs/manuscript/labs/part_III/lab_moving-up-stack.md
+  needle: '3. **Verify with the model library.** Feed the two band midpoints (and the four band edges)
+    through `textbook.models.descriptive_statistics` and confirm your hand values: the midpoint set $\{5.85,\
+    20.0\}$ and the edge set $\{4.2, 7.5, 12, 28\}$ both have mean $12.925$. This equality is not a coincidence
+    but an algebraic identity — the mean of two intervals'' midpoints always equals the mean of their
+    four endpoints — and precisely because it is forced by arithmetic it carries *no* evidential weight
+    about which band is correct. Say so explicitly in your notes: identities are not evidence.'
+  value: 12.925
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-348-labs-part-iii-lab-moving-up-stack-md
+  source: docs/manuscript/labs/part_III/lab_moving-up-stack.md
+  needle: 5. **Sketch the token accounting.** From [@eq:part_III_moving-up-stack_cooling], pick your own
+    $m$, $T_{\text{loop}}$, $B$, and $s+p$ (the chapter's worked example uses $m=10$, $40{,}000$, $5{,}000$,
+    $2{,}500$) and compute $\kappa$. Confirm $\kappa > 1$ for any $T_{\text{loop}} > B/m + (s+p)$; identify
+    the break-even fleet size.
+  value: 500
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-359-labs-part-iii-lab-reality-bridge-md
+  source: docs/manuscript/labs/part_III/lab_reality-bridge.md
+  needle: 'first two are the pinned calibration points: $A(1) = 0.367879$,'
+  value: 0.367879
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-360-labs-part-iii-lab-reality-bridge-md
+  source: docs/manuscript/labs/part_III/lab_reality-bridge.md
+  needle: $A(2) = 0.135335$.
+  value: 0.135335
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-361-labs-part-iii-lab-volumetric-storage-md
+  source: docs/manuscript/labs/part_III/lab_volumetric-storage.md
+  needle: should get $\approx 5.16$ $\Phi$-steps, sitting between the $\Phi^5
+  value: 5.16
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-377-part-0-living-pem-md
+  source: docs/manuscript/part_0/living-pem.md
+  needle: 'This is the corpus''s [**golden-ratio**](#gl:golden-ratio) signal wearing its "EGS" (engineering-scale)
+    dress — the same number that entered the catalog in the Genesis era of the voyage arc, alongside Proto
+    3664, Electro 3923, and a 100 BPM wave grammar [@mendez2026livingPem]. The manual''s own gloss is
+    load-bearing: "$\Phi_{\mathrm{EGS}}\approx 1.618$ is an architectural scale key — not a CODATA replacement
+    for $\hbar$, $c$, or $G$" [@mendez2026livingPem]. In the book''s computational backbone this is simply
+    the first power of Φ, implemented as `phi_powers(1)` in `textbook.models`, which returns the pinned
+    value $1.618034$. [@sec:part_I_fractal-constant] of Part I develops the [**fractal-constant**](#gl:fractal-constant)
+    family $\Phi^n$ in full; here we only pin the anchor, with parameters and their corpus status fixed
+    in [@tbl:part_0_living-pem_phi_egs].'
+  value: 3664
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-378-part-0-living-pem-md
+  source: docs/manuscript/part_0/living-pem.md
+  needle: 'This is the corpus''s [**golden-ratio**](#gl:golden-ratio) signal wearing its "EGS" (engineering-scale)
+    dress — the same number that entered the catalog in the Genesis era of the voyage arc, alongside Proto
+    3664, Electro 3923, and a 100 BPM wave grammar [@mendez2026livingPem]. The manual''s own gloss is
+    load-bearing: "$\Phi_{\mathrm{EGS}}\approx 1.618$ is an architectural scale key — not a CODATA replacement
+    for $\hbar$, $c$, or $G$" [@mendez2026livingPem]. In the book''s computational backbone this is simply
+    the first power of Φ, implemented as `phi_powers(1)` in `textbook.models`, which returns the pinned
+    value $1.618034$. [@sec:part_I_fractal-constant] of Part I develops the [**fractal-constant**](#gl:fractal-constant)
+    family $\Phi^n$ in full; here we only pin the anchor, with parameters and their corpus status fixed
+    in [@tbl:part_0_living-pem_phi_egs].'
+  value: 3923
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-381-part-0-master-synthesis-md
+  source: docs/manuscript/part_0/master-synthesis.md
+  needle: 'Computed by `textbook.models.phi_fibonacci`, the approximants bracket the constant from both
+    sides: $\varphi_{\mathrm{fib}}(5) = 1.6$ is already within $1.2\%$ of $\Phi$, and $\varphi_{\mathrm{fib}}(10)
+    \approx 1.618182$ within $0.01\%$. This is ordinary Fibonacci-ratio mathematics; what the corpus adds
+    is the *filing decision* — that this one number, and nothing else, is the harmonic blueprint of the
+    cabinet. The honesty-first block is explicit about the limit of that decision: EGS "is an architectural
+    key in this repo — not a replacement for $\hbar$, $c$, or $G$" [@mendez2026masterSynthesis]. The fractal-constant
+    chapter ([@sec:part_I_fractal-constant]) develops the scaling law quantitatively.'
+  value: 1.2
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-382-part-0-master-synthesis-md
+  source: docs/manuscript/part_0/master-synthesis.md
+  needle: 'Computed by `textbook.models.phi_fibonacci`, the approximants bracket the constant from both
+    sides: $\varphi_{\mathrm{fib}}(5) = 1.6$ is already within $1.2\%$ of $\Phi$, and $\varphi_{\mathrm{fib}}(10)
+    \approx 1.618182$ within $0.01\%$. This is ordinary Fibonacci-ratio mathematics; what the corpus adds
+    is the *filing decision* — that this one number, and nothing else, is the harmonic blueprint of the
+    cabinet. The honesty-first block is explicit about the limit of that decision: EGS "is an architectural
+    key in this repo — not a replacement for $\hbar$, $c$, or $G$" [@mendez2026masterSynthesis]. The fractal-constant
+    chapter ([@sec:part_I_fractal-constant]) develops the scaling law quantitatively.'
+  value: 0.01
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-391-part-0-orientation-md
+  source: docs/manuscript/part_0/orientation.md
+  needle: '3. Navigate the Reading Room library: 195 distinct items, the "Featured picks — Start here"
+    shelf, one shelf per category, and the 24 [**engine-shelf**](#gl:engine-shelf) papers this book covers.'
+  value: 195
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-392-part-0-orientation-md
+  source: docs/manuscript/part_0/orientation.md
+  needle: '- **One shelf per category.** Every remaining item renders on its category''s shelf — hhf,
+    tbme, dph-gpu, agentic, and the rest. The page renders featured/pinned items twice (once on the featured
+    shelf, once on their category shelf), so the running numbers reach 213 for **195 distinct items**
+    — a first, gentle lesson in counting what the counts actually count.'
+  value: 213
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-400-part-0-tensor-decoupling-md
+  source: docs/manuscript/part_0/tensor-decoupling.md
+  needle: '- **Data skill:** reading a digit×octave filing heatmap and computing register budgets (729
+    per block, 8,019 in total) with `textbook.models.catalog_size`.'
+  value: 729
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-403-part-0-tensor-decoupling-md
+  source: docs/manuscript/part_0/tensor-decoupling.md
+  needle: An agent walking the shelves from bracket 1 toward bracket 11 reads a dial that decays by a
+    factor of $\Phi$ per rung; by the master band ($n = 11$) the weight is $\Phi^{-10} \approx 0.00813$.
+    Nothing physical is asserted by this decay — it is the ordering key, "the same golden-ratio key" every
+    agent carries [@mendez2026tensorDecoupling].
+  value: -10
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-404-part-0-tensor-decoupling-md
+  source: docs/manuscript/part_0/tensor-decoupling.md
+  needle: An agent walking the shelves from bracket 1 toward bracket 11 reads a dial that decays by a
+    factor of $\Phi$ per rung; by the master band ($n = 11$) the weight is $\Phi^{-10} \approx 0.00813$.
+    Nothing physical is asserted by this decay — it is the ordering key, "the same golden-ratio key" every
+    agent carries [@mendez2026tensorDecoupling].
+  value: 0.00813
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-405-part-0-tensor-decoupling-md
+  source: docs/manuscript/part_0/tensor-decoupling.md
+  needle: 2. Compute the dashboard readings $w_n = \Phi^{-n}$ for $n = 1, \dots, 6$ by hand from the pinned
+    values of $\Phi^n$, then verify with `phi_powers`. Which bracket index has a dial reading below $0.01$,
+    and what is its approximate value?
+  value: 0.01
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-406-part-i-fractal-constant-md
+  source: docs/manuscript/part_I/fractal-constant.md
+  needle: '<!-- alt: A log-scale plot showing Phi raised to successive powers n = 1 through 6 rising along
+    a straight line from about 1.618 to about 17.944, with Fibonacci-ratio markers at 1.6 and about 1.618182
+    converging on a horizontal reference line at Phi ≈ 1.618. -->'
+  value: 17.944
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-408-part-i-fractal-constant-md
+  source: docs/manuscript/part_I/fractal-constant.md
+  needle: claim that MSY literally equals a physics constant, that sunspot AR 3664 writes human DNA,
+  value: 3664
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-415-part-i-fractal-constant-md
+  source: docs/manuscript/part_I/fractal-constant.md
+  needle: '[@eq:part_I_fractal-constant_octave-term] to a base term $\Omega_0 = 275$ filing units at'
+  value: 275
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-417-part-i-fractal-constant-md
+  source: docs/manuscript/part_I/fractal-constant.md
+  needle: 275 = 440$ filing units — `octave_term(275, 5, "subscript")`.
+  value: 440
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-418-part-i-fractal-constant-md
+  source: docs/manuscript/part_I/fractal-constant.md
+  needle: $2.618$, $4.236$, $6.854$, $11.090$, $17.944$, $29.034$, $46.979$ — the eight MSY palindrome
+  value: 2.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-419-part-i-fractal-constant-md
+  source: docs/manuscript/part_I/fractal-constant.md
+  needle: $2.618$, $4.236$, $6.854$, $11.090$, $17.944$, $29.034$, $46.979$ — the eight MSY palindrome
+  value: 4.236
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-420-part-i-fractal-constant-md
+  source: docs/manuscript/part_I/fractal-constant.md
+  needle: $2.618$, $4.236$, $6.854$, $11.090$, $17.944$, $29.034$, $46.979$ — the eight MSY palindrome
+  value: 6.854
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-422-part-i-fractal-constant-md
+  source: docs/manuscript/part_I/fractal-constant.md
+  needle: $2.618$, $4.236$, $6.854$, $11.090$, $17.944$, $29.034$, $46.979$ — the eight MSY palindrome
+  value: 29.034
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-423-part-i-fractal-constant-md
+  source: docs/manuscript/part_I/fractal-constant.md
+  needle: $2.618$, $4.236$, $6.854$, $11.090$, $17.944$, $29.034$, $46.979$ — the eight MSY palindrome
+  value: 46.979
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-424-part-i-higgs-awareness-md
+  source: docs/manuscript/part_I/higgs-awareness.md
+  needle: $1 - e^{-1} \approx 0.632$ of the velocity; at $t = 2$ it has removed
+  value: 0.632
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-425-part-i-higgs-awareness-md
+  source: docs/manuscript/part_I/higgs-awareness.md
+  needle: $1 - e^{-2} \approx 0.865$; at $t = 3$, $1 - e^{-3} \approx 0.950$. Each
+  value: -2
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-426-part-i-higgs-awareness-md
+  source: docs/manuscript/part_I/higgs-awareness.md
+  needle: $1 - e^{-2} \approx 0.865$; at $t = 3$, $1 - e^{-3} \approx 0.950$. Each
+  value: 0.865
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-427-part-i-higgs-awareness-md
+  source: docs/manuscript/part_I/higgs-awareness.md
+  needle: $1 - e^{-2} \approx 0.865$; at $t = 3$, $1 - e^{-3} \approx 0.950$. Each
+  value: -3
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-428-part-i-higgs-awareness-md
+  source: docs/manuscript/part_I/higgs-awareness.md
+  needle: is front-loaded. The half-life is $t_{1/2} = \ln 2 \approx 0.693$, so the gate
+  value: 0.693
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-429-part-i-holographic-rhyme-md
+  source: docs/manuscript/part_I/holographic-rhyme.md
+  needle: rotated cosine plane waves; the field oscillates between +4 and -4, with bright
+  value: -4
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-434-part-i-topology-void-md
+  source: docs/manuscript/part_I/topology-void.md
+  needle: '$f(-3) = -27 + 6 + 9 = -12$. By [@eq:part_I_topology-void_model]:'
+  value: -3
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-435-part-i-topology-void-md
+  source: docs/manuscript/part_I/topology-void.md
+  needle: '$f(-3) = -27 + 6 + 9 = -12$. By [@eq:part_I_topology-void_model]:'
+  value: -27
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-436-part-i-topology-void-md
+  source: docs/manuscript/part_I/topology-void.md
+  needle: '$f(-3) = -27 + 6 + 9 = -12$. By [@eq:part_I_topology-void_model]:'
+  value: -12
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-437-part-i-topology-void-md
+  source: docs/manuscript/part_I/topology-void.md
+  needle: '**Step 4 — sink a perturbation set.** Take the balanced sample $\{+5, -5, +2,'
+  value: -5
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-438-part-i-topology-void-md
+  source: docs/manuscript/part_I/topology-void.md
+  needle: -2\}$. Pairing them as inflows and outflows, `net_zero_balance([5, 2],
+  value: -2
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-439-part-i-topology-void-md
+  source: docs/manuscript/part_I/topology-void.md
+  needle: -0.5$. The further from the pivot, the harder the pull back — the arrows in
+  value: -0.5
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-448-part-ii-crystalline-field-md
+  source: docs/manuscript/part_II/crystalline-field.md
+  needle: temperature $T = 300\,\mathrm{K}$ with $k_B = 1.380649\times 10^{-23}\,
+  value: 300
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-450-part-ii-crystalline-field-md
+  source: docs/manuscript/part_II/crystalline-field.md
+  needle: temperature $T = 300\,\mathrm{K}$ with $k_B = 1.380649\times 10^{-23}\,
+  value: -23
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-451-part-ii-crystalline-field-md
+  source: docs/manuscript/part_II/crystalline-field.md
+  needle: $E_{\min} = (1.380649\times 10^{-23})(300)(0.693147) \approx 2.87\times
+  value: 0.693147
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-452-part-ii-crystalline-field-md
+  source: docs/manuscript/part_II/crystalline-field.md
+  needle: $E_{\min} = (1.380649\times 10^{-23})(300)(0.693147) \approx 2.87\times
+  value: 2.87
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-453-part-ii-crystalline-field-md
+  source: docs/manuscript/part_II/crystalline-field.md
+  needle: '10^{-21}\,\mathrm{J}$ per erased bit. We read the filing as: whenever the'
+  value: -21
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-454-part-ii-crystalline-field-md
+  source: docs/manuscript/part_II/crystalline-field.md
+  needle: time-units — a factor of $1/\Phi^3 \approx 0.236068$ — while the distance facet
+  value: 0.236068
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-457-part-ii-crystalline-field-md
+  source: docs/manuscript/part_II/crystalline-field.md
+  needle: 'a factor of $\approx 11.09$ apart (note $11.090170 = \Phi^5$: the exponent'
+  value: 11.09
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-458-part-ii-crystalline-field-md
+  source: docs/manuscript/part_II/crystalline-field.md
+  needle: '- **It is not NOAA causation by R≈90.9.** The paper explicitly excludes any'
+  value: 90.9
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-462-part-ii-eddy-current-mirror-md
+  source: docs/manuscript/part_II/eddy-current-mirror.md
+  needle: returns $v(1) \approx 0.367879$ and $v(2) \approx 0.135335$ — after one unit of
+  value: 0.367879
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-463-part-ii-eddy-current-mirror-md
+  source: docs/manuscript/part_II/eddy-current-mirror.md
+  needle: returns $v(1) \approx 0.367879$ and $v(2) \approx 0.135335$ — after one unit of
+  value: 0.135335
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-466-part-ii-eddy-current-mirror-md
+  source: docs/manuscript/part_II/eddy-current-mirror.md
+  needle: $$ t_{1/2} = \frac{\ln 2}{k} \approx \frac{0.693147}{k} $$ {#eq:part_II_eddy-current-mirror_halflife}
+  value: 0.693147
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-467-part-ii-eddy-current-mirror-md
+  source: docs/manuscript/part_II/eddy-current-mirror.md
+  needle: At $k = 1$ the half-life is $\approx 0.693$ time units. Doubling the drag
+  value: 0.693
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-468-part-ii-eddy-current-mirror-md
+  source: docs/manuscript/part_II/eddy-current-mirror.md
+  needle: half-life of [@eq:part_II_eddy-current-mirror_halflife] to $\approx 1.386$ and
+  value: 1.386
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-469-part-ii-eddy-current-mirror-md
+  source: docs/manuscript/part_II/eddy-current-mirror.md
+  needle: '> Sunspot 4524. Eddy currents are the *analogy*. Fair Exchange clause applies.'
+  value: 4524
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-471-part-ii-metamorphic-octaves-md
+  source: docs/manuscript/part_II/metamorphic-octaves.md
+  needle: using $\ln 2 \approx 0.693147$, $\ln 3 \approx 1.098612$,
+  value: 0.693147
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-475-part-ii-metamorphic-octaves-md
+  source: docs/manuscript/part_II/metamorphic-octaves.md
+  needle: approaches $\ln 2 \approx 0.693147$ from below ($\Delta(1{\to}2) = 0.405465$
+  value: 0.405465
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-476-part-ii-metamorphic-octaves-md
+  source: docs/manuscript/part_II/metamorphic-octaves.md
+  needle: versus $\Delta(4{\to}8) = 0.587787$). This is the quantitative face of the
+  value: 0.587787
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-477-part-ii-metrological-overlap-md
+  source: docs/manuscript/part_II/metrological-overlap.md
+  needle: '5. Restate the paper''s own scope disclaimers — catalog architecture, engine shelf #23, not
+    Standard Model retirement, no electron/proton-mass identification, no NOAA causation by Sunspot 4524
+    — and connect them to the [**Fair Exchange**](#gl:fair-exchange) clause of the corpus''s [**honesty-first**](#gl:honesty-first)
+    protocol.'
+  value: 4524
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-485-part-ii-metrological-overlap-md
+  source: docs/manuscript/part_II/metrological-overlap.md
+  needle: R'_c| = 2$ and $\min(4,3) = 3$, so $o = 2/3 \approx 0.666667$. The pair is
+  value: 0.666667
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-486-part-ii-planetary-core-md
+  source: docs/manuscript/part_II/planetary-core.md
+  needle: 4. State why the core–mantle boundary's ~377 Ω free-space impedance label is a
+  value: 377
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-487-part-ii-planetary-core-md
+  source: docs/manuscript/part_II/planetary-core.md
+  needle: 1. As standard physics, $Z_0 = \sqrt{\mu_0/\varepsilon_0} \approx 376.73\ \Omega$
+  value: 376.73
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-488-part-ii-planetary-core-md
+  source: docs/manuscript/part_II/planetary-core.md
+  needle: $0.535$, and the band decision then rests on where $\ell$ and $h$ are drawn,
+  value: 0.535
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-489-part-ii-planetary-core-md
+  source: docs/manuscript/part_II/planetary-core.md
+  needle: values $v(1) \approx 0.367879$ and $v(2) \approx 0.135335$. The rhyme is a
+  value: 0.367879
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-490-part-ii-planetary-core-md
+  source: docs/manuscript/part_II/planetary-core.md
+  needle: values $v(1) \approx 0.367879$ and $v(2) \approx 0.135335$. The rhyme is a
+  value: 0.135335
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-491-part-ii-proton-theater-md
+  source: docs/manuscript/part_II/proton-theater.md
+  needle: log-scale offset of $\pm\ln\Phi \approx \pm 0.481212$.](../../output/figures/part_II_proton-theater.png){#fig:part_II_proton-theater
+    width=90%}
+  value: 0.481212
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-493-part-ii-proton-theater-md
+  source: docs/manuscript/part_II/proton-theater.md
+  needle: $1.618182$, within $0.01\%$ of $\Phi$. The 99-octave ladder these terms climb
+  value: 0.01
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-494-part-ii-proton-theater-md
+  source: docs/manuscript/part_II/proton-theater.md
+  needle: $\ln \Phi^2 = 2\ln\Phi \approx 0.962424$, symmetric about $\ln x$. Third, the
+  value: 0.962424
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-497-part-ii-proton-theater-md
+  source: docs/manuscript/part_II/proton-theater.md
+  needle: '- File the constants $e = 2.718\ldots$ and $\pi = 3.141\ldots$ through'
+  value: 2.718
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-498-part-ii-proton-theater-md
+  source: docs/manuscript/part_II/proton-theater.md
+  needle: '- File the constants $e = 2.718\ldots$ and $\pi = 3.141\ldots$ through'
+  value: 3.141
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-499-part-ii-singularity-crystal-md
+  source: docs/manuscript/part_II/singularity-crystal.md
+  needle: '4. **Break the balance deliberately.** With inflows $[3, 5]$ against outflows $[16]$, the residual
+    is $8 - 16 = -8$: a deficit of $8$, i.e. the missing Fibonacci term. The cancel lock would *not* engage
+    — zero is an achievement of the ledger, not a default.'
+  value: -8
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-500-part-ii-viscosity-light-md
+  source: docs/manuscript/part_II/viscosity-light.md
+  needle: powers of $\Phi$ give $k(-1) = 1/\Phi \approx 0.618034$, $k(0) = 1$,
+  value: 0.618034
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-503-part-ii-viscosity-light-md
+  source: docs/manuscript/part_II/viscosity-light.md
+  needle: multiplies the remaining velocity by $e^{-0.618\dots} \approx 0.539$ — so each
+  value: -0.618
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-504-part-ii-viscosity-light-md
+  source: docs/manuscript/part_II/viscosity-light.md
+  needle: multiplies the remaining velocity by $e^{-0.618\dots} \approx 0.539$ — so each
+  value: 0.539
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-505-part-ii-viscosity-light-md
+  source: docs/manuscript/part_II/viscosity-light.md
+  needle: $v(2) = e^{-2} \approx 0.135335$, $v(3) = e^{-3} \approx 0.049787$ — the
+  value: -2
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-506-part-ii-viscosity-light-md
+  source: docs/manuscript/part_II/viscosity-light.md
+  needle: $v(2) = e^{-2} \approx 0.135335$, $v(3) = e^{-3} \approx 0.049787$ — the
+  value: -3
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-507-part-ii-viscosity-light-md
+  source: docs/manuscript/part_II/viscosity-light.md
+  needle: AR14524/14527."** The [**fair-exchange**](#gl:fair-exchange) clause applies to
+  value: 14527
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-508-part-iii-cmos-protonic-md
+  source: docs/manuscript/part_III/cmos-protonic.md
+  needle: (F-cmos-protonic-99-octave-1 and -2). Its parameters are collected in
+  value: -2
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-518-part-iii-invisible-frontier-md
+  source: docs/manuscript/part_III/invisible-frontier.md
+  needle: '![Visibility threshold frontier curve: the chapter''s logistic visibility model, the fraction
+    $V(t)$ of the "second chart" that a linear-awareness frame registers as cumulative exposure $t$ grows,
+    drawn for $V_0 = 0.05$ and $r = 1$. The frontier is the steep region around the half-visibility crossing
+    at $t = \ln 19 \approx 2.94$.](../../output/figures/part_III_invisible-frontier.png){#fig:part_III_invisible-frontier
+    width=90%}'
+  value: 2.94
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-519-part-iii-invisible-frontier-md
+  source: docs/manuscript/part_III/invisible-frontier.md
+  needle: '<!-- alt: An S-shaped logistic curve rising from 0.05 toward 1.0 as exposure t increases, crossing
+    the half-visibility line near t = 2.9; the steep region around the crossing is shaded and labelled
+    as the frontier. -->'
+  value: 2.9
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-520-part-iii-invisible-frontier-md
+  source: docs/manuscript/part_III/invisible-frontier.md
+  needle: $\Phi$ from above and below ($2 > 1.666\ldots > 1.618\ldots > 1.6$), the
+  value: 1.666
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-521-part-iii-invisible-frontier-md
+  source: docs/manuscript/part_III/invisible-frontier.md
+  needle: per step — within $1.2\%$ of $\Phi$.
+  value: 1.2
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-523-part-iii-invisible-frontier-md
+  source: docs/manuscript/part_III/invisible-frontier.md
+  needle: '1. $t = 1$: $V(1) = 1/(1 + 19 e^{-1}) = 1/(1 + 6.989709) \approx 0.125161$.'
+  value: 0.125161
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-524-part-iii-invisible-frontier-md
+  source: docs/manuscript/part_III/invisible-frontier.md
+  needle: '2. $t = 2$: $V(2) = 1/(1 + 19 e^{-2}) = 1/(1 + 2.571370) \approx 0.280005$.'
+  value: -2
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-526-part-iii-invisible-frontier-md
+  source: docs/manuscript/part_III/invisible-frontier.md
+  needle: '2. $t = 2$: $V(2) = 1/(1 + 19 e^{-2}) = 1/(1 + 2.571370) \approx 0.280005$.'
+  value: 0.280005
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-527-part-iii-invisible-frontier-md
+  source: docs/manuscript/part_III/invisible-frontier.md
+  needle: '3. $t = 5$: $V(5) = 1/(1 + 19 e^{-5}) = 1/(1 + 0.128021) \approx 0.886508$.'
+  value: -5
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-528-part-iii-invisible-frontier-md
+  source: docs/manuscript/part_III/invisible-frontier.md
+  needle: '3. $t = 5$: $V(5) = 1/(1 + 19 e^{-5}) = 1/(1 + 0.128021) \approx 0.886508$.'
+  value: 0.128021
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-529-part-iii-invisible-frontier-md
+  source: docs/manuscript/part_III/invisible-frontier.md
+  needle: '3. $t = 5$: $V(5) = 1/(1 + 19 e^{-5}) = 1/(1 + 0.128021) \approx 0.886508$.'
+  value: 0.886508
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-533-part-iii-kinematic-recycling-md
+  source: docs/manuscript/part_III/kinematic-recycling.md
+  needle: $\tilde{S}_1(1) = \cos 1 \approx 0.540302$.
+  value: 0.540302
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-534-part-iii-kinematic-recycling-md
+  source: docs/manuscript/part_III/kinematic-recycling.md
+  needle: '- $v = \Phi$: argument $1/\Phi \approx 0.618034$, amplitude $\approx 0.618034$,'
+  value: 0.618034
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-536-part-iii-kinematic-recycling-md
+  source: docs/manuscript/part_III/kinematic-recycling.md
+  needle: '- $v = \Phi^2$: argument $1/\Phi^2 \approx 0.381966$, amplitude'
+  value: 0.381966
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-537-part-iii-kinematic-recycling-md
+  source: docs/manuscript/part_III/kinematic-recycling.md
+  needle: $\approx 0.381966$, so $\tilde{S}_{\Phi^2}(1) \approx 0.354439$.
+  value: 0.354439
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-545-part-iii-macro-protein-md
+  source: docs/manuscript/part_III/macro-protein.md
+  needle: convention the band spans $\Phi^{13} \cdot \Omega_0 \approx 521.002 \cdot
+  value: 521.002
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-547-part-iii-macro-protein-md
+  source: docs/manuscript/part_III/macro-protein.md
+  needle: $\Omega_{13} = (377/233) \cdot \Omega_0 \approx 1.618026 \cdot \Omega_0$ and
+  value: 377
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-548-part-iii-macro-protein-md
+  source: docs/manuscript/part_III/macro-protein.md
+  needle: $\Omega_{13} = (377/233) \cdot \Omega_0 \approx 1.618026 \cdot \Omega_0$ and
+  value: 233
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-550-part-iii-macro-protein-md
+  source: docs/manuscript/part_III/macro-protein.md
+  needle: $\Omega_{17} = (2584/1597) \cdot \Omega_0 \approx 1.618034 \cdot \Omega_0$,
+  value: 2584
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-551-part-iii-macro-protein-md
+  source: docs/manuscript/part_III/macro-protein.md
+  needle: $\Omega_{17} = (2584/1597) \cdot \Omega_0 \approx 1.618034 \cdot \Omega_0$,
+  value: 1597
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.
+- fact_id: evidence-553-part-iii-macro-protein-md
+  source: docs/manuscript/part_III/macro-protein.md
+  needle: safe and useful. A $1000$-fold increase in body mass raises the metabolic rate
+  value: 1000
+  status: bound
+  rationale: Displayed worked or documented value; bound to its source line for the evidence registry.

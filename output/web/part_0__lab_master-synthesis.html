@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>lab_master-synthesis.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:lab_part_0_master-synthesis">Lab — Master Synthesis:
+Everything Is Connected</h1>
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Lab · 60 min · Materials: notebook, calculator (or
+<code>textbook.models</code>)</p>
+</blockquote>
+<h2 id="objectives">Objectives</h2>
+<p>After this lab you will be able to (1) size the master filing cabinet
+by hand as <span class="math inline">\(99 \times 81 = 8{,}019\)</span>
+cells and confirm the figure against <code>catalog_size</code> in
+<code>textbook.models</code>; (2) compute the Fibonacci approximants
+that pin El Gran Sol’s Fractal Constant — <span
+class="math inline">\(\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6\)</span> and
+<span class="math inline">\(\varphi_{\mathrm{fib}}(10) = 89/55 \approx
+1.618182\)</span> — and bracket <span class="math inline">\(\Phi \approx
+1.6180339887\)</span> from both sides; (3) walk the octave scale
+downward from the Pulse under <strong>both</strong> readings of the
+ambiguous law <span class="math inline">\(\Omega_n =
+\Phi^n\,\Omega_0\)</span> with <code>octave_term</code>; and (4) file
+one loud week into the five-tier Cascade with the correct honesty tag on
+every entry, without promoting any label into a forecast
+[mendez2026masterSynthesis].</p>
+<h2 id="background">Background</h2>
+<p>Linked chapter: <span class="citation"
+data-cites="sec:part_0_master-synthesis">[@sec:part_0_master-synthesis]</span>.
+The chapter formalised the master-synthesis paper’s three load-bearing
+constructs: the one-cabinet premise (“reality operates like a giant
+99-step musical scale. What happens at the top directly shapes
+everything below”), the EGS fractal constant as <em>architectural
+key</em> — “not a replacement for <span
+class="math inline">\(\hbar\)</span>, <span
+class="math inline">\(c\)</span>, or <span
+class="math inline">\(G\)</span>” — and the five-tier Cascade from the
+Pulse down to everyday life [mendez2026masterSynthesis]. This lab makes
+you <em>operate</em> the cabinet rather than admire it. Keep the paper’s
+own framing in front of you at every step: the note is “catalog grammar
+for conversation — not a weather forecast, not a seismic warning, and
+not a claim that the sky runs your life” [mendez2026masterSynthesis].
+Where the chapter’s worked example computed, this lab asks you to
+compute the same quantities by hand <em>first</em> and only then check
+the library — the functions are tested, so any disagreement means your
+hand derivation moved, not the code.</p>
+<p>The source paper also names its reference implementation: run
+<code>npm run research:synthobs-master-synthesis-99-octave-omni-lattice</code>
+“for fixture locks when available” [mendez2026masterSynthesis]. If the
+run is unavailable in your environment, the tested
+<code>textbook.models</code> functions are the reference below; the hand
+checks are identical either way.</p>
+<h2 id="procedure">Procedure</h2>
+<ol type="1">
+<li><strong>Run the paper’s reference implementation.</strong> Execute
+<code>npm run research:synthobs-master-synthesis-99-octave-omni-lattice</code>
+and record which fixtures it locks (if any). Write down any printed
+cascade or fixture labels exactly as they appear — you will reuse the
+wording verbatim in step 5.</li>
+<li><strong>Size the cabinet.</strong> By hand, multiply the octave
+count by the register width: <span class="math inline">\(99 \times 81 =
+8{,}019\)</span> cells. This is the whole filing capacity of the model —
+the cabinet’s floor plan from <span class="citation"
+data-cites="eq:part_0_master-synthesis_catalog_size">[@eq:part_0_master-synthesis_catalog_size]</span>.</li>
+<li><strong>Pin the constant.</strong> Build the Fibonacci sequence
+<span class="math inline">\(1, 1, 2, 3, 5, 8, \dots\)</span> and form
+ratios of consecutive terms: <span class="math inline">\(F_6/F_5 = 8/5 =
+1.6\)</span> and <span class="math inline">\(F_{11}/F_{10} = 89/55
+\approx 1.618182\)</span>. Compute each approximant’s percentage
+deviation from <span class="math inline">\(\Phi \approx
+1.6180339887\)</span>: roughly <span
+class="math inline">\(1.1\%\)</span> for the fifth and under <span
+class="math inline">\(0.01\%\)</span> for the tenth. Note which side of
+<span class="math inline">\(\Phi\)</span> each sits on — the bracketing
+from <span class="citation"
+data-cites="tbl:part_0_master-synthesis_egs">[@tbl:part_0_master-synthesis_egs]</span>.</li>
+<li><strong>Walk the scale downward.</strong> With <span
+class="math inline">\(\Omega_0 = 1\)</span>, compute <span
+class="math inline">\(\Omega_n = \Phi^n \Omega_0\)</span> for <span
+class="math inline">\(n = 1, \dots, 6\)</span> using the pinned powers
+of <span class="math inline">\(\Phi\)</span>: expect <span
+class="math inline">\(1.618034,\; 2.618034,\; 4.236068,\; 6.854102,\;
+11.090170,\; 17.944272\)</span>. Then compute the same addresses under
+the subscript reading <span class="math inline">\(\Omega_n =
+\varphi_{\mathrm{fib}}(n)\,\Omega_0\)</span> at <span
+class="math inline">\(n = 5\)</span> and <span class="math inline">\(n =
+10\)</span>: expect <span class="math inline">\(1.6\)</span> and <span
+class="math inline">\(\approx 1.618182\)</span>. Record both ladders
+side by side.</li>
+<li><strong>File the week.</strong> Draw the five Cascade tiers as rows
+on paper — Pulse, Sun transmits, planet adjusts, technology evolves,
+humanity responds — and place one label per tier from the paper:
+<em>Omniversal Convergence Now</em> (discussion label, <strong>not
+prophecy</strong>) at the Pulse; AR3664 “The Colossus” and AR3697 “The
+Resonator” (<strong>fixture/bulletin labels</strong>, antenna
+<em>stories</em>) mid-high; jet streams, storms, and seismic chatter
+filed “in the story” mid; frontier-AI expansion (<strong>operational
+metaphor</strong>) in the information octaves; culture and economies
+(<strong>narrative / operational</strong> tier, not destiny) at the
+everyday band. Add a dashed margin around the whole board labelled
+“catalog talk, not forecast”.</li>
+<li><strong>Check against the library.</strong> Verify steps 2, 3, and 4
+with the workflow below.</li>
+</ol>
+<h2 id="analysis">Analysis</h2>
+<p>Summarise the exponent-reading ladder from step 4 with
+<code>textbook.models.descriptive_statistics</code> over <span
+class="math inline">\([1.618034, 2.618034, 4.236068, 6.854102,
+11.090170, 17.944272]\)</span>, and report the ratio of each consecutive
+pair of values. You should observe that every consecutive ratio is
+exactly <span class="math inline">\(\Phi \approx 1.618034\)</span> —
+under the exponent convention each rung is one golden-ratio factor above
+the last, which is the “scale-free formula” property the corpus files
+EGS under [mendez2026masterSynthesis]. Contrast this with the subscript
+ladder, which is nearly flat: <span class="math inline">\(\Omega_5 =
+1.6\,\Omega_0\)</span> and <span class="math inline">\(\Omega_{10}
+\approx 1.618182\,\Omega_0\)</span> barely differ. In a short paragraph,
+state which honesty tag you attached to each Cascade tier and affirm in
+writing that no tier’s label was promoted into a prediction.</p>
+<h2 id="computational-workflow">Computational Workflow</h2>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textbook.models <span class="im">import</span> catalog_size, phi_fibonacci, octave_term, descriptive_statistics</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2: the cabinet&#39;s floor plan (expected: 8019)</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">99</span> <span class="op">*</span> <span class="dv">81</span>)                                        <span class="co"># 8019 — by hand</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(catalog_size(octaves<span class="op">=</span><span class="dv">99</span>, precision_digits<span class="op">=</span><span class="dv">81</span>))  <span class="co"># 8019 — the library agrees</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: pinning the EGS constant (expected: 1.6 and ~1.618182)</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(phi_fibonacci(<span class="dv">5</span>))    <span class="co"># 1.6        (8/5)</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(phi_fibonacci(<span class="dv">10</span>))   <span class="co"># 1.6181818181818182 (89/55)</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: walking the scale, both conventions, Omega_0 = 1</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([octave_term(<span class="fl">1.0</span>, n, convention<span class="op">=</span><span class="st">&quot;exponent&quot;</span>) <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">7</span>)])</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># [1.618034, 2.618034, 4.236068, 6.854102, 11.090170, 17.944272]</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(octave_term(<span class="fl">1.0</span>, <span class="dv">5</span>, convention<span class="op">=</span><span class="st">&quot;subscript&quot;</span>))    <span class="co"># 1.6</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(octave_term(<span class="fl">1.0</span>, <span class="dv">10</span>, convention<span class="op">=</span><span class="st">&quot;subscript&quot;</span>))   <span class="co"># 1.6181818181818182</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Analysis: ratios of consecutive exponent readings — every one is Phi</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>ladder <span class="op">=</span> [octave_term(<span class="fl">1.0</span>, n, convention<span class="op">=</span><span class="st">&quot;exponent&quot;</span>) <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">7</span>)]</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([b <span class="op">/</span> a <span class="cf">for</span> a, b <span class="kw">in</span> <span class="bu">zip</span>(ladder, ladder[<span class="dv">1</span>:])])    <span class="co"># [1.618034, 1.618034, 1.618034, 1.618034, 1.618034]</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(descriptive_statistics(ladder))</span></code></pre></div>
+<p>Predict before running: the two cabinet figures must both print
+<code>8019</code>; the approximants must bracket <span
+class="math inline">\(\Phi\)</span> from below and above; the exponent
+ladder must grow by a constant factor <span
+class="math inline">\(\Phi\)</span> per rung while the subscript ladder
+saturates; and the two conventions must <em>disagree</em> because the
+corpus prints “<span class="math inline">\(\Omega_n = \Phi^n
+\Omega_0\)</span>” ambiguously [mendez2026masterSynthesis]. If any
+output disagrees with your hand computation, re-derive the step before
+suspecting the library — the functions are tested.</p>
+<h2 id="reflection">Reflection</h2>
+<ul>
+<li>The exponent ladder is unbounded and the subscript ladder is nearly
+flat, yet both are honest readings of the same printed law. What does
+that ambiguity cost an agent that must route a headline to a drawer, and
+why does the chapter insist a convention be declared with every
+address?</li>
+<li>Your step-5 board files solar chatter and economic squeeze on the
+same cabinet as cosmic “convergence”. Write two sentences a new
+QUESTFEST contributor could read that would prevent them from mistaking
+the filing for the weather — the paper’s own takeaway is “use it to
+listen, coordinate, and prune noise — not to panic-buy or predict the
+next quake” [mendez2026masterSynthesis].</li>
+<li>The paper closes with a Fair Exchange Clause — value exchanged is
+fluid and may be partially refunded “based on resonance and overall
+delivery” [mendez2026masterSynthesis]. What work does a reciprocity
+notice do at the <em>end</em> of a filing exercise, and does it change
+any number you computed? Why or why not?</li>
+</ul>
+</main>
+</body>
+</html>

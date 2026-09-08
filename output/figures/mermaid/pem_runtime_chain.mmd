@@ -1,0 +1,13 @@
+sequenceDiagram
+  participant Reader
+  participant LatticeChat
+  participant PEMPin
+  participant Whitepaper
+  participant Implementation
+  participant Fixtures
+  Reader ->> LatticeChat: open lattice chat workstream
+  LatticeChat ->> PEMPin: request engine-shelf pin
+  PEMPin ->> Whitepaper: surface whitepaper
+  Whitepaper ->> Implementation: reference implementation (npm run)
+  Implementation ->> Fixtures: run fixture suite
+  Fixtures -->> Reader: suite locks 9/9

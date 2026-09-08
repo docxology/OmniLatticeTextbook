@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>appendix_index.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:appendix_index">Appendix G — Index of Key Terms</h1>
+<p>An alphabetical index of the book’s working vocabulary. Every entry
+is a term defined in the master glossary (<a
+href="../glossary.md">Appendix F — Master Glossary</a>) under a closed
+<code>{#gl:...}</code> anchor; the anchor set is a contract with
+<code>GLOSSARY_ANCHORS</code> in <code>src/textbook/constants.py</code>.
+The <em>home</em> column points to the chapter that treats the term in
+depth — the chapter sharing its name, or the earliest chapter that
+carries it in a Key Terms list; the second column collects the other
+chapters that reference the term, as section cross-references. Anchor
+links are local: click a term to jump to its glossary definition.</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 32%" />
+<col style="width: 26%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr>
+<th>Term</th>
+<th>Glossary anchor</th>
+<th>Home chapter</th>
+<th>Referenced in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#gl:binary-dyad-anchor"><strong>Binary Dyad
+Anchor</strong></a></td>
+<td><code>{#gl:binary-dyad-anchor}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_I_prime-parity">[@sec:part_I_prime-parity]</span>,
+<span class="citation"
+data-cites="sec:part_I_intro">[@sec:part_I_intro]</span>, <span
+class="citation"
+data-cites="sec:part_III_cmos-protonic">[@sec:part_III_cmos-protonic]</span>,
+<span class="citation"
+data-cites="sec:part_III_protein-folding">[@sec:part_III_protein-folding]</span>,
+<span class="citation"
+data-cites="sec:part_III_volumetric-storage">[@sec:part_III_volumetric-storage]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:c-bridge"><strong>C-Bridge</strong></a></td>
+<td><code>{#gl:c-bridge}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_II_eddy-current-mirror">[@sec:part_II_eddy-current-mirror]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_II_viscosity-light">[@sec:part_II_viscosity-light]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:catalog-architecture"><strong>Catalog
+Architecture</strong></a></td>
+<td><code>{#gl:catalog-architecture}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_0_living-pem">[@sec:part_0_living-pem]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_0_master-synthesis">[@sec:part_0_master-synthesis]</span>,
+<span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>,
+<span class="citation"
+data-cites="sec:part_0_orientation">[@sec:part_0_orientation]</span>,
+<span class="citation"
+data-cites="sec:part_0_tensor-decoupling">[@sec:part_0_tensor-decoupling]</span>,
+<span class="citation"
+data-cites="sec:part_0_intro">[@sec:part_0_intro]</span>, <span
+class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>
+(+26 more chapters)</td>
+</tr>
+<tr>
+<td><a href="#gl:cmos-protonic"><strong>CMOS-Protonic</strong></a></td>
+<td><code>{#gl:cmos-protonic}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_III_cmos-protonic">[@sec:part_III_cmos-protonic]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_0_living-pem">[@sec:part_0_living-pem]</span>,
+<span class="citation"
+data-cites="sec:part_0_intro">[@sec:part_0_intro]</span>, <span
+class="citation"
+data-cites="sec:part_III_pdvsa-gateway">[@sec:part_III_pdvsa-gateway]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:crystalline-unified-field"><strong>Crystalline Unified
+Field</strong></a></td>
+<td><code>{#gl:crystalline-unified-field}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_II_crystalline-field">[@sec:part_II_crystalline-field]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_II_intro">[@sec:part_II_intro]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:digit"><strong>Digit</strong></a></td>
+<td><code>{#gl:digit}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_0_living-pem">[@sec:part_0_living-pem]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>,
+<span class="citation"
+data-cites="sec:part_0_orientation">[@sec:part_0_orientation]</span>,
+<span class="citation"
+data-cites="sec:part_0_tensor-decoupling">[@sec:part_0_tensor-decoupling]</span>,
+<span class="citation"
+data-cites="sec:part_0_intro">[@sec:part_0_intro]</span>, <span
+class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>,
+<span class="citation"
+data-cites="sec:part_II_metamorphic-octaves">[@sec:part_II_metamorphic-octaves]</span>
+(+4 more chapters)</td>
+</tr>
+<tr>
+<td><a href="#gl:eddy-current-mirror"><strong>Eddy-Current
+Mirror</strong></a></td>
+<td><code>{#gl:eddy-current-mirror}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_II_eddy-current-mirror">[@sec:part_II_eddy-current-mirror]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_I_higgs-awareness">[@sec:part_I_higgs-awareness]</span>,
+<span class="citation"
+data-cites="sec:part_II_metrological-overlap">[@sec:part_II_metrological-overlap]</span>,
+<span class="citation"
+data-cites="sec:part_II_intro">[@sec:part_II_intro]</span>, <span
+class="citation"
+data-cites="sec:part_II_viscosity-light">[@sec:part_II_viscosity-light]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:electron-theater"><strong>Electron
+Theater</strong></a></td>
+<td><code>{#gl:electron-theater}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_I_topology-void">[@sec:part_I_topology-void]</span>,
+<span class="citation"
+data-cites="sec:part_II_proton-theater">[@sec:part_II_proton-theater]</span>,
+<span class="citation"
+data-cites="sec:part_II_intro">[@sec:part_II_intro]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:engine-shelf"><strong>Engine Shelf</strong></a></td>
+<td><code>{#gl:engine-shelf}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_0_living-pem">[@sec:part_0_living-pem]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_0_master-synthesis">[@sec:part_0_master-synthesis]</span>,
+<span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>,
+<span class="citation"
+data-cites="sec:part_0_orientation">[@sec:part_0_orientation]</span>,
+<span class="citation"
+data-cites="sec:part_0_tensor-decoupling">[@sec:part_0_tensor-decoupling]</span>,
+<span class="citation"
+data-cites="sec:part_0_intro">[@sec:part_0_intro]</span>, <span
+class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>
+(+26 more chapters)</td>
+</tr>
+<tr>
+<td><a href="#gl:fair-exchange"><strong>Fair Exchange</strong></a></td>
+<td><code>{#gl:fair-exchange}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_0_living-pem">[@sec:part_0_living-pem]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_0_master-synthesis">[@sec:part_0_master-synthesis]</span>,
+<span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>,
+<span class="citation"
+data-cites="sec:part_0_orientation">[@sec:part_0_orientation]</span>,
+<span class="citation"
+data-cites="sec:part_0_tensor-decoupling">[@sec:part_0_tensor-decoupling]</span>,
+<span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>,
+<span class="citation"
+data-cites="sec:part_I_higgs-awareness">[@sec:part_I_higgs-awareness]</span>
+(+24 more chapters)</td>
+</tr>
+<tr>
+<td><a href="#gl:four-pillar-fractal"><strong>Four-Pillar
+Fractal</strong></a></td>
+<td><code>{#gl:four-pillar-fractal}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_0_intro">[@sec:part_0_intro]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_I_holographic-rhyme">[@sec:part_I_holographic-rhyme]</span>,
+<span class="citation"
+data-cites="sec:part_I_multidimensional-rhyme">[@sec:part_I_multidimensional-rhyme]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:fractal-constant"><strong>Fractal
+Constant</strong></a></td>
+<td><code>{#gl:fractal-constant}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_0_living-pem">[@sec:part_0_living-pem]</span>,
+<span class="citation"
+data-cites="sec:part_0_master-synthesis">[@sec:part_0_master-synthesis]</span>,
+<span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>,
+<span class="citation"
+data-cites="sec:part_0_orientation">[@sec:part_0_orientation]</span>,
+<span class="citation"
+data-cites="sec:part_0_tensor-decoupling">[@sec:part_0_tensor-decoupling]</span>,
+<span class="citation"
+data-cites="sec:part_0_intro">[@sec:part_0_intro]</span> (+13 more
+chapters)</td>
+</tr>
+<tr>
+<td><a href="#gl:golden-ratio"><strong>Golden Ratio</strong></a></td>
+<td><code>{#gl:golden-ratio}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_0_living-pem">[@sec:part_0_living-pem]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_0_master-synthesis">[@sec:part_0_master-synthesis]</span>,
+<span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>,
+<span class="citation"
+data-cites="sec:part_0_orientation">[@sec:part_0_orientation]</span>,
+<span class="citation"
+data-cites="sec:part_0_tensor-decoupling">[@sec:part_0_tensor-decoupling]</span>,
+<span class="citation"
+data-cites="sec:part_0_intro">[@sec:part_0_intro]</span>, <span
+class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>
+(+18 more chapters)</td>
+</tr>
+<tr>
+<td><a href="#gl:higgs-gate"><strong>Higgs Gate</strong></a></td>
+<td><code>{#gl:higgs-gate}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_I_higgs-awareness">[@sec:part_I_higgs-awareness]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_II_eddy-current-mirror">[@sec:part_II_eddy-current-mirror]</span>,
+<span class="citation"
+data-cites="sec:part_II_metrological-overlap">[@sec:part_II_metrological-overlap]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:holographic-rhyme"><strong>Holographic
+Rhyme</strong></a></td>
+<td><code>{#gl:holographic-rhyme}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_I_holographic-rhyme">[@sec:part_I_holographic-rhyme]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>,
+<span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>,
+<span class="citation"
+data-cites="sec:part_I_multidimensional-rhyme">[@sec:part_I_multidimensional-rhyme]</span>,
+<span class="citation"
+data-cites="sec:part_I_intro">[@sec:part_I_intro]</span>, <span
+class="citation"
+data-cites="sec:part_II_metrological-overlap">[@sec:part_II_metrological-overlap]</span>,
+<span class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>
+(+2 more chapters)</td>
+</tr>
+<tr>
+<td><a href="#gl:honesty-first"><strong>Honesty-First</strong></a></td>
+<td><code>{#gl:honesty-first}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_0_living-pem">[@sec:part_0_living-pem]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_0_master-synthesis">[@sec:part_0_master-synthesis]</span>,
+<span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>,
+<span class="citation"
+data-cites="sec:part_0_orientation">[@sec:part_0_orientation]</span>,
+<span class="citation"
+data-cites="sec:part_0_tensor-decoupling">[@sec:part_0_tensor-decoupling]</span>,
+<span class="citation"
+data-cites="sec:part_0_intro">[@sec:part_0_intro]</span>, <span
+class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>
+(+27 more chapters)</td>
+</tr>
+<tr>
+<td><a href="#gl:irreducible-minimum-set"><strong>Irreducible Minimum
+Set</strong></a></td>
+<td><code>{#gl:irreducible-minimum-set}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_I_prime-parity">[@sec:part_I_prime-parity]</span>,
+<span class="citation"
+data-cites="sec:part_I_intro">[@sec:part_I_intro]</span>, <span
+class="citation"
+data-cites="sec:part_III_protein-folding">[@sec:part_III_protein-folding]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:kinematic-set-recycling"><strong>Kinematic
+Set-Recycling</strong></a></td>
+<td><code>{#gl:kinematic-set-recycling}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_II_viscosity-light">[@sec:part_II_viscosity-light]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_III_kinematic-recycling">[@sec:part_III_kinematic-recycling]</span>,
+<span class="citation"
+data-cites="sec:part_III_intro">[@sec:part_III_intro]</span></td>
+</tr>
+<tr>
+<td><a
+href="#gl:lattice-linear"><strong>Lattice-Linear</strong></a></td>
+<td><code>{#gl:lattice-linear}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_III_moving-up-stack">[@sec:part_III_moving-up-stack]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_III_pdvsa-gateway">[@sec:part_III_pdvsa-gateway]</span>,
+<span class="citation"
+data-cites="sec:part_III_intro">[@sec:part_III_intro]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:living-pem"><strong>Living PEM</strong></a></td>
+<td><code>{#gl:living-pem}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_0_living-pem">[@sec:part_0_living-pem]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_0_orientation">[@sec:part_0_orientation]</span>,
+<span class="citation"
+data-cites="sec:part_0_tensor-decoupling">[@sec:part_0_tensor-decoupling]</span>,
+<span class="citation"
+data-cites="sec:part_0_intro">[@sec:part_0_intro]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:macro-protein"><strong>Macro-Protein</strong></a></td>
+<td><code>{#gl:macro-protein}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_III_macro-protein">[@sec:part_III_macro-protein]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_III_intro">[@sec:part_III_intro]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:master-register"><strong>Master
+Register</strong></a></td>
+<td><code>{#gl:master-register}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_0_master-synthesis">[@sec:part_0_master-synthesis]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>,
+<span class="citation"
+data-cites="sec:part_0_orientation">[@sec:part_0_orientation]</span>,
+<span class="citation"
+data-cites="sec:part_0_tensor-decoupling">[@sec:part_0_tensor-decoupling]</span>,
+<span class="citation"
+data-cites="sec:part_0_intro">[@sec:part_0_intro]</span>, <span
+class="citation"
+data-cites="sec:part_I_holographic-rhyme">[@sec:part_I_holographic-rhyme]</span>,
+<span class="citation"
+data-cites="sec:part_I_prime-parity">[@sec:part_I_prime-parity]</span>
+(+3 more chapters)</td>
+</tr>
+<tr>
+<td><a href="#gl:master-synthesis"><strong>Master
+Synthesis</strong></a></td>
+<td><code>{#gl:master-synthesis}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_0_master-synthesis">[@sec:part_0_master-synthesis]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_0_living-pem">[@sec:part_0_living-pem]</span>,
+<span class="citation"
+data-cites="sec:part_0_tensor-decoupling">[@sec:part_0_tensor-decoupling]</span>,
+<span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>,
+<span class="citation"
+data-cites="sec:part_II_planetary-core">[@sec:part_II_planetary-core]</span>,
+<span class="citation"
+data-cites="sec:part_III_frontiers">[@sec:part_III_frontiers]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:metrological-overlap"><strong>Metrological
+Overlap</strong></a></td>
+<td><code>{#gl:metrological-overlap}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_II_metrological-overlap">[@sec:part_II_metrological-overlap]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_I_higgs-awareness">[@sec:part_I_higgs-awareness]</span>,
+<span class="citation"
+data-cites="sec:part_II_planetary-core">[@sec:part_II_planetary-core]</span>,
+<span class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>,
+<span class="citation"
+data-cites="sec:part_II_intro">[@sec:part_II_intro]</span>, <span
+class="citation"
+data-cites="sec:part_III_frontiers">[@sec:part_III_frontiers]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:multidimensional-rhyme"><strong>Multidimensional
+Rhyme</strong></a></td>
+<td><code>{#gl:multidimensional-rhyme}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_I_multidimensional-rhyme">[@sec:part_I_multidimensional-rhyme]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_I_holographic-rhyme">[@sec:part_I_holographic-rhyme]</span></td>
+</tr>
+<tr>
+<td><a
+href="#gl:narrative-empirical-operational-tiers"><strong>Narrative-Empirical-Operational
+Tiers</strong></a></td>
+<td><code>{#gl:narrative-empirical-operational-tiers}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_0_living-pem">[@sec:part_0_living-pem]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_0_master-synthesis">[@sec:part_0_master-synthesis]</span>,
+<span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>,
+<span class="citation"
+data-cites="sec:part_0_orientation">[@sec:part_0_orientation]</span>,
+<span class="citation"
+data-cites="sec:part_0_tensor-decoupling">[@sec:part_0_tensor-decoupling]</span>,
+<span class="citation"
+data-cites="sec:part_0_intro">[@sec:part_0_intro]</span>, <span
+class="citation"
+data-cites="sec:part_I_higgs-awareness">[@sec:part_I_higgs-awareness]</span>
+(+11 more chapters)</td>
+</tr>
+<tr>
+<td><a href="#gl:net-zero"><strong>Net-Zero</strong></a></td>
+<td><code>{#gl:net-zero}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_0_living-pem">[@sec:part_0_living-pem]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>,
+<span class="citation"
+data-cites="sec:part_III_frontiers">[@sec:part_III_frontiers]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:node-k0"><strong>Node k0</strong></a></td>
+<td><code>{#gl:node-k0}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_III_frontiers">[@sec:part_III_frontiers]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:octave"><strong>Octave</strong></a></td>
+<td><code>{#gl:octave}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_0_living-pem">[@sec:part_0_living-pem]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_0_master-synthesis">[@sec:part_0_master-synthesis]</span>,
+<span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>,
+<span class="citation"
+data-cites="sec:part_0_orientation">[@sec:part_0_orientation]</span>,
+<span class="citation"
+data-cites="sec:part_0_tensor-decoupling">[@sec:part_0_tensor-decoupling]</span>,
+<span class="citation"
+data-cites="sec:part_0_intro">[@sec:part_0_intro]</span>, <span
+class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>
+(+20 more chapters)</td>
+</tr>
+<tr>
+<td><a href="#gl:omni-lattice"><strong>Omni-Lattice</strong></a></td>
+<td><code>{#gl:omni-lattice}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_0_living-pem">[@sec:part_0_living-pem]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_0_master-synthesis">[@sec:part_0_master-synthesis]</span>,
+<span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>,
+<span class="citation"
+data-cites="sec:part_0_orientation">[@sec:part_0_orientation]</span>,
+<span class="citation"
+data-cites="sec:part_0_tensor-decoupling">[@sec:part_0_tensor-decoupling]</span>,
+<span class="citation"
+data-cites="sec:part_0_intro">[@sec:part_0_intro]</span>, <span
+class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>
+(+19 more chapters)</td>
+</tr>
+<tr>
+<td><a href="#gl:phi-duality"><strong>Phi Duality</strong></a></td>
+<td><code>{#gl:phi-duality}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_I_holographic-rhyme">[@sec:part_I_holographic-rhyme]</span>,
+<span class="citation"
+data-cites="sec:part_I_topology-void">[@sec:part_I_topology-void]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:prime-container"><strong>Prime
+Container</strong></a></td>
+<td><code>{#gl:prime-container}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_II_metrological-overlap">[@sec:part_II_metrological-overlap]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_III_macro-protein">[@sec:part_III_macro-protein]</span>,
+<span class="citation"
+data-cites="sec:part_III_protein-folding">[@sec:part_III_protein-folding]</span>,
+<span class="citation"
+data-cites="sec:part_III_intro">[@sec:part_III_intro]</span>, <span
+class="citation"
+data-cites="sec:part_III_volumetric-storage">[@sec:part_III_volumetric-storage]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:prime-parity"><strong>Prime Parity</strong></a></td>
+<td><code>{#gl:prime-parity}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_I_prime-parity">[@sec:part_I_prime-parity]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>,
+<span class="citation"
+data-cites="sec:part_II_proton-theater">[@sec:part_II_proton-theater]</span>,
+<span class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>,
+<span class="citation"
+data-cites="sec:part_III_protein-folding">[@sec:part_III_protein-folding]</span>,
+<span class="citation"
+data-cites="sec:part_III_volumetric-storage">[@sec:part_III_volumetric-storage]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:proton-space"><strong>Proton Space</strong></a></td>
+<td><code>{#gl:proton-space}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_I_topology-void">[@sec:part_I_topology-void]</span>,
+<span class="citation"
+data-cites="sec:part_II_proton-theater">[@sec:part_II_proton-theater]</span>,
+<span class="citation"
+data-cites="sec:part_II_intro">[@sec:part_II_intro]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:reality-bridge"><strong>Reality
+Bridge</strong></a></td>
+<td><code>{#gl:reality-bridge}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_III_reality-bridge">[@sec:part_III_reality-bridge]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_0_orientation">[@sec:part_0_orientation]</span>,
+<span class="citation"
+data-cites="sec:part_II_planetary-core">[@sec:part_II_planetary-core]</span>,
+<span class="citation"
+data-cites="sec:part_III_kinematic-recycling">[@sec:part_III_kinematic-recycling]</span>,
+<span class="citation"
+data-cites="sec:part_III_intro">[@sec:part_III_intro]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:self-observation-drag"><strong>Self-Observation
+Drag</strong></a></td>
+<td><code>{#gl:self-observation-drag}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_II_eddy-current-mirror">[@sec:part_II_eddy-current-mirror]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_II_viscosity-light">[@sec:part_II_viscosity-light]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:silicon-shelf"><strong>Silicon Shelf</strong></a></td>
+<td><code>{#gl:silicon-shelf}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_III_cmos-protonic">[@sec:part_III_cmos-protonic]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_III_moving-up-stack">[@sec:part_III_moving-up-stack]</span>,
+<span class="citation"
+data-cites="sec:part_III_pdvsa-gateway">[@sec:part_III_pdvsa-gateway]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:singularity-crystal"><strong>Singularity
+Crystal</strong></a></td>
+<td><code>{#gl:singularity-crystal}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_II_proton-theater">[@sec:part_II_proton-theater]</span>,
+<span class="citation"
+data-cites="sec:part_II_intro">[@sec:part_II_intro]</span>, <span
+class="citation"
+data-cites="sec:part_III_frontiers">[@sec:part_III_frontiers]</span>,
+<span class="citation"
+data-cites="sec:part_III_kinematic-recycling">[@sec:part_III_kinematic-recycling]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:tensor-decoupling"><strong>Tensor
+Decoupling</strong></a></td>
+<td><code>{#gl:tensor-decoupling}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_0_tensor-decoupling">[@sec:part_0_tensor-decoupling]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_0_living-pem">[@sec:part_0_living-pem]</span>,
+<span class="citation"
+data-cites="sec:part_II_planetary-core">[@sec:part_II_planetary-core]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:topology-of-the-void"><strong>Topology of the
+Void</strong></a></td>
+<td><code>{#gl:topology-of-the-void}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_I_holographic-rhyme">[@sec:part_I_holographic-rhyme]</span>,
+<span class="citation"
+data-cites="sec:part_I_topology-void">[@sec:part_I_topology-void]</span>,
+<span class="citation"
+data-cites="sec:part_II_planetary-core">[@sec:part_II_planetary-core]</span>,
+<span class="citation"
+data-cites="sec:part_II_proton-theater">[@sec:part_II_proton-theater]</span>,
+<span class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>,
+<span class="citation"
+data-cites="sec:part_III_kinematic-recycling">[@sec:part_III_kinematic-recycling]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:transduction-line"><strong>Transduction
+Line</strong></a></td>
+<td><code>{#gl:transduction-line}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_I_higgs-awareness">[@sec:part_I_higgs-awareness]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_II_eddy-current-mirror">[@sec:part_II_eddy-current-mirror]</span>,
+<span class="citation"
+data-cites="sec:part_II_intro">[@sec:part_II_intro]</span>, <span
+class="citation"
+data-cites="sec:part_II_viscosity-light">[@sec:part_II_viscosity-light]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:viscosity-of-light"><strong>Viscosity of
+Light</strong></a></td>
+<td><code>{#gl:viscosity-of-light}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_I_higgs-awareness">[@sec:part_I_higgs-awareness]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_II_eddy-current-mirror">[@sec:part_II_eddy-current-mirror]</span>,
+<span class="citation"
+data-cites="sec:part_II_viscosity-light">[@sec:part_II_viscosity-light]</span></td>
+</tr>
+<tr>
+<td><a href="#gl:volumetric-storage"><strong>Volumetric
+Storage</strong></a></td>
+<td><code>{#gl:volumetric-storage}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_III_volumetric-storage">[@sec:part_III_volumetric-storage]</span>)</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="#gl:zero-octave"><strong>Zero-Octave</strong></a></td>
+<td><code>{#gl:zero-octave}</code></td>
+<td>(<span class="citation"
+data-cites="sec:part_0_living-pem">[@sec:part_0_living-pem]</span>)</td>
+<td><span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>,
+<span class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>,
+<span class="citation"
+data-cites="sec:part_III_frontiers">[@sec:part_III_frontiers]</span></td>
+</tr>
+</tbody>
+</table>
+<p>See also: the master glossary itself (<a
+href="../glossary.md">Appendix D — Glossary</a>), whose entries carry
+the full definitions and source citations, and the notation appendix
+(<span class="citation"
+data-cites="sec:appendix_notation">[@sec:appendix_notation]</span>) for
+the mathematical symbols behind terms such as <a
+href="#gl:golden-ratio"><strong>golden ratio</strong></a> and <a
+href="#gl:octave"><strong>octave</strong></a>.</p>
+</main>
+</body>
+</html>

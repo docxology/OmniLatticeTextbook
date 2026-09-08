@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>appendix_math_review.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:appendix_math_review">Appendix C — Mathematical Review</h1>
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Reference appendix · Just-enough mathematics for the worked
+models.</p>
+</blockquote>
+<p>A brief refresher on the mathematics the Infinite Octaves
+Omni-Lattice formalisms rely on, with every worked number pinned to the
+tested functions in <a
+href="../../../src/textbook/models.py"><code>src/textbook/models.py</code></a>.
+Nothing here is a physics claim: these are the standard mathematics of
+the golden ratio, primes, exponential damping, and logarithms, which the
+corpus files as catalog grammar (<a
+href="../glossary.md#gl:honesty-first">honesty-first</a>)
+[mendez2026masterSynthesis].</p>
+<h2 id="the-golden-ratio-and-its-algebra">The Golden Ratio and Its
+Algebra</h2>
+<p>The <a href="../glossary.md#gl:golden-ratio">golden ratio</a> is the
+positive root of <span class="math inline">\(x^2 = x + 1\)</span>:</p>
+<p><span class="math display">\[ \Phi = \frac{1 + \sqrt{5}}{2} \approx
+1.6180339887 \]</span> {#eq:appendix_math_review_phi}</p>
+<p>From <span class="math inline">\(\Phi^2 = \Phi + 1\)</span>
+everything else follows by induction. Multiplying any power by <span
+class="math inline">\(\Phi\)</span> steps the exponent up; dividing
+steps it down — the algebra behind the corpus’s <span
+class="math inline">\(\Phi\)</span> duality pair <span
+class="math inline">\(x \cdot \Phi\)</span> and <span
+class="math inline">\(x/\Phi\)</span> (<code>phi_dual</code>,
+[mendez2026protonTheater]) and behind Fibonacci identities: <span
+class="math inline">\(\Phi^n = F_n \Phi + F_{n-1}\)</span> with <span
+class="math inline">\(F_n\)</span> the Fibonacci numbers.</p>
+<p>Pinned powers (<code>phi_powers</code>), used throughout the octave
+chapters:</p>
+<table id="tbl:appendix_math_review_phipowers" style="width:100%;">
+<caption>Golden-ratio powers for <span class="math inline">\(n =
+1..6\)</span>, as returned by <code>phi_powers</code>.</caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th><span class="math inline">\(n\)</span></th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\Phi^n\)</span></td>
+<td>1.618034</td>
+<td>2.618034</td>
+<td>4.236068</td>
+<td>6.854102</td>
+<td>11.090170</td>
+<td>17.944272</td>
+</tr>
+</tbody>
+</table>
+<p>Each ratio of consecutive Fibonacci numbers <span
+class="math inline">\(\varphi_{\mathrm{fib}}(n) =
+F_{n+1}/F_n\)</span> approaches <span
+class="math inline">\(\Phi\)</span> alternately from above and below
+(<code>phi_fibonacci</code>): <span
+class="math inline">\(\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6\)</span>
+(below) and <span class="math inline">\(\varphi_{\mathrm{fib}}(10) =
+89/55 \approx 1.618182\)</span> (above). This is why the <a
+href="../glossary.md#gl:octave">octave term</a> <span
+class="math inline">\(\Omega_n\)</span> has <em>two</em> defensible
+readings — the exponent convention <span class="math inline">\(\Omega_n
+= \Phi^n \Omega_0\)</span> and the subscript convention <span
+class="math inline">\(\Omega_n =
+\varphi_{\mathrm{fib}}(n)\,\Omega_0\)</span> — since the corpus prints
+“Ωn = Φn · Ω0” ambiguously and both are implemented in
+<code>octave_term</code> [mendez2026primeParity].</p>
+<p><strong>Worked check (exponent convention).</strong> With <span
+class="math inline">\(\Omega_0 = 1\)</span>: <span
+class="math inline">\(\Omega_1 =
+1.618034\)</span>, <span class="math inline">\(\Omega_3 =
+4.236068\)</span>, <span class="math inline">\(\Omega_6 =
+17.944272\)</span> — the table row values, to six decimals.</p>
+<h2 id="the-catalog-size-a-product-of-register-widths">The Catalog Size:
+A Product of Register Widths</h2>
+<p>The <a href="../glossary.md#gl:master-register">master register</a>
+is nine digit drawers crossed with ninety-nine octave bands at an
+81-digit precision register [mendez2026digitsMaster]. The size is a
+single multiplication (<code>catalog_size</code>):</p>
+<p><span class="math display">\[ 99 \times 81 = 8{,}019 \]</span>
+{#eq:appendix_math_review_catalogsize}</p>
+<p>The corpus is explicit that 8,019 is “for dashboards and agent
+routing, not for measuring magma” — a filing-capacity number, not a
+physical measurement [mendez2026digitsMaster].</p>
+<h2 id="primes-and-the-parity-partition">Primes and the Parity
+Partition</h2>
+<p>A <strong>prime</strong> is an integer <span
+class="math inline">\(&gt; 1\)</span> divisible only by <span
+class="math inline">\(1\)</span> and itself; the <a
+href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">sieve of
+Eratosthenes</a> generates them by crossing out multiples of each prime
+in turn. The corpus files primes by <em>parity</em> (<a
+href="../glossary.md#gl:prime-parity">prime parity</a>): <span
+class="math inline">\(2\)</span> is the sole even prime — the <a
+href="../glossary.md#gl:binary-dyad-anchor">binary dyad anchor</a> — and
+the odd primes act as <a
+href="../glossary.md#gl:irreducible-minimum-set">irreducible minimum
+sets</a> [mendez2026primeParity].</p>
+<p>The first ten odd primes (<code>prime_parity_partition</code> reports
+the partition):</p>
+<p><span class="math display">\[ \{3,\ 5,\ 7,\ 11,\ 13,\ 17,\ 19,\ 23,\
+29,\ 31\} \]</span> {#eq:appendix_math_review_oddprimes}</p>
+<p><strong>Injective prime encoding.</strong> By unique factorisation,
+the map <span class="math inline">\(\prod_i p_i^{e_i}\)</span> from
+exponent vectors to integers is injective (<code>unique_address</code>).
+Worked example: with prime bases <span class="math inline">\([2,
+3]\)</span> and exponents <span class="math inline">\([2, 1]\)</span>,
+the address is <span class="math inline">\(2^2 \cdot 3^1 = 12\)</span> —
+the value pinned in the volumetric-storage and protein-container
+chapters [mendez2026volumetricStorage; mendez2026proteinFolding].</p>
+<h2 id="exponential-damping">Exponential Damping</h2>
+<p>Exponential decay <span class="math inline">\(v(t) = v_0
+e^{-kt}\)</span> is the standard model of a quantity that loses a fixed
+<em>fraction</em> per unit time (<code>transduction_brake</code>,
+<code>exponential_decay</code>). The corpus files it as the eddy-brake /
+transduction curve: self-observation drag braking non-local intent
+toward localization, with <span class="math inline">\(c\)</span> filed
+as the viscous floor [mendez2026eddyMirror;
+mendez2026viscosityLight].</p>
+<p><strong>Worked numbers</strong> (<code>transduction_brake</code>,
+<span class="math inline">\(v_0 = 1\)</span>, <span
+class="math inline">\(k = 1\)</span>):</p>
+<table id="tbl:appendix_math_review_brake">
+<caption>Transduction-brake values at unit drag, as returned by
+<code>transduction_brake</code>.</caption>
+<thead>
+<tr>
+<th><span class="math inline">\(t\)</span></th>
+<th><span class="math inline">\(v(t) = e^{-t}\)</span></th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><span class="math inline">\(e^{-1}\)</span></td>
+<td><span class="math inline">\(\approx 0.367879\)</span></td>
+</tr>
+<tr>
+<td>2</td>
+<td><span class="math inline">\(e^{-2}\)</span></td>
+<td><span class="math inline">\(\approx 0.135335\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The half-life — time to fall to <span
+class="math inline">\(v_0/2\)</span> — is <span
+class="math inline">\(t_{1/2} = \ln 2 / k \approx
+0.693147\)</span> at unit drag (<code>half_life</code>). Each unit of
+time multiplies the value by <span
+class="math inline">\(e^{-k}\)</span>, so equal time steps give equal
+<em>ratios</em>, a signature worth checking whenever a corpus curve is
+read.</p>
+<h2 id="logarithms-and-densification">Logarithms and Densification</h2>
+<p>Logarithms invert exponentials: <span class="math inline">\(\ln(ab) =
+\ln a + \ln b\)</span>, <span class="math inline">\(\ln(a^r) = r \ln
+a\)</span>, and <span class="math inline">\(\ln 1 = 0\)</span>. Two
+values recur in the worked examples: <span class="math inline">\(\ln 2
+\approx
+0.693147\)</span> and <span class="math inline">\(\ln 5 \approx
+1.609438\)</span>.</p>
+<p>The metamorphic-octaves densification curve
+(<code>densification</code>) grows like the logarithm of exposure,</p>
+<p><span class="math display">\[ D(x) \;=\; D_0 + r\,\ln(1 + x)
+\]</span> {#eq:appendix_math_review_densification}</p>
+<p>so early exposure helps a lot and later exposure helps progressively
+less — the mathematical form of “you come out denser, with diminishing
+returns.” <strong>Worked number:</strong> <span
+class="math inline">\(D_0 = 1\)</span>, <span class="math inline">\(r =
+1\)</span>, exposure <span class="math inline">\(x = 4\)</span> gives
+<span class="math inline">\(D = 1 + \ln 5
+\approx 2.609438\)</span> [mendez2026metamorphic].</p>
+<h2 id="overlaps-balances-and-linear-profiles">Overlaps, Balances, and
+Linear Profiles</h2>
+<p><strong>Metrological overlap.</strong> For two label sets <span
+class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span>, the overlap is the min-normalized
+intersection <span class="math inline">\(|A \cap B| \,/\, \min(|A|,
+|B|)\)</span> (<code>metrological_overlap</code>): the fraction of the
+smaller set that the two share. Worked example: <span
+class="math inline">\(\mathrm{overlap}(\{a,b\}, \{b,c\}) = |\{b\}| /
+\min(2, 2) = 1/2 = 0.5\)</span> — the pinned value. The grand-unified
+paper scales this intuition up to its five-constant map <span
+class="math inline">\(h, \Phi, p_n, \nu_{\mathrm{HI}},
+c\)</span>, filed so that rest mass reads as an interference pattern,
+not a brick [mendez2026metrologicalOverlap].</p>
+<p><strong>Lattice-linear profile.</strong> A linear ramp over <span
+class="math inline">\(N\)</span> steps at rate <span
+class="math inline">\(r\)</span> (<code>lattice_linear_profile</code>)
+is the filing shape of the EGS Lattice-Linear gateway: value after <span
+class="math inline">\(n\)</span> steps is <span class="math inline">\(r
+\cdot n\)</span>, the straight-line coordinate walk contrasted with
+tab-hop silos [mendez2026pdvsaGateway].</p>
+<p><strong>Round-robin recycling.</strong> Dealing <span
+class="math inline">\(N\)</span> items round-robin into <span
+class="math inline">\(S\)</span> sets (<code>round_robin</code>) assigns
+item <span class="math inline">\(i\)</span> to set <span
+class="math inline">\(i \bmod S\)</span> — the kinematic set-recycling
+pattern of one physical set yielding many experiential octaves
+[mendez2026setRecycling].</p>
+<h2 id="basic-statistics-and-legacy-models">Basic Statistics and Legacy
+Models</h2>
+<p>The template backbone retains the general-purpose models:
+<code>linear_fit</code> (least-squares slope <span
+class="math inline">\(m\)</span> and intercept <span
+class="math inline">\(b\)</span>), <code>descriptive_statistics</code>
+(mean <span class="math inline">\(\mu\)</span> and standard deviation
+<span class="math inline">\(\sigma\)</span>),
+<code>saturating_response</code> (climb toward <span
+class="math inline">\(V_{\max}\)</span> with half-maximum at <span
+class="math inline">\(K_m\)</span>), and
+<code>normalize_unit_interval</code> (rescaling to <span
+class="math inline">\([0,1]\)</span>). They appear in the <a
+href="appendix_format_gallery.md">format gallery</a> examples and give
+the first descriptors of any filing before richer structure is
+claimed.</p>
+<p>See also: <a href="appendix_notation.md">Appendix B — Notation</a>
+and <a href="appendix_authoring_guide.md">Appendix A — How This Book Was
+Built</a>.</p>
+</main>
+</body>
+</html>

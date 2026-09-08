@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>protein-folding.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:part_III_protein-folding">Protein Folding as Prime-Container
+Architecture</h1>
+<figure id="fig:part_III_protein-folding">
+<a class="figure-full-size-link" href="../figures/part_III_protein-folding.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/part_III_protein-folding.png" style="width:90.0%"
+alt="Prime-container capacity grows through unique prime-indexed addresses." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
+<figcaption>Prime-container capacity: the growth
+sequence of <code>textbook.models.unique_address</code> as vault primes
+are added one at a time — each additional odd prime vault multiplies the
+number of distinct residue-index addresses the container can
+file.</figcaption>
+</figure>
+<!-- alt: A step-curve of addressing capacity rising multiplicatively as vault primes 3, 5, 7, 11, ... are added, illustrating how odd-prime containers compound the address space of the prime-container grammar. -->
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Level 1/3 · 30 min read · 45 min lecture · Prerequisites:
+Prime-Parity (<span class="citation"
+data-cites="sec:part_I_prime-parity">[@sec:part_I_prime-parity]</span>)</p>
+</blockquote>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol type="1">
+<li>State the prime-container grammar of [mendez2026proteinFolding]:
+Prime 2 as the <a
+href="#gl:binary-dyad-anchor"><strong>binary-dyad-anchor</strong></a>
+and odd primes as <a
+href="#gl:irreducible-minimum-set"><strong>irreducible-minimum-set</strong></a>
+containment vaults for residue indices, all filed under the <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a> constant <span
+class="math inline">\(\Phi \approx 1.618\)</span>.</li>
+<li>Compute an injective prime-encoded address with
+<code>textbook.models.unique_address</code>, and explain why the
+encoding is reversible.</li>
+<li>Derive and evaluate the addressing-capacity product of a vault
+registry, and read the growth sequence plotted in <span class="citation"
+data-cites="fig:part_III_protein-folding">[@fig:part_III_protein-folding]</span>.</li>
+<li>Distinguish the two <span class="math inline">\(\Omega_n\)</span>
+conventions that the corpus prints ambiguously as “<span
+class="math inline">\(\Omega_n = \Phi^n \cdot \Omega_0\)</span>”, and
+name the <code>textbook.models.octave_term</code> function that
+implements both.</li>
+<li>Restate, near-verbatim, the paper’s own scope disclaimers — what the
+prime-container architecture is filed AS, and what it explicitly is
+not.</li>
+<li>Locate the paper on the <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a> and name its
+companion papers, reference implementation, and test status.</li>
+</ol>
+<!-- curriculum-scaffold-start -->
+<h3 id="study-blueprint">Study Blueprint</h3>
+<ul>
+<li><strong>Big idea:</strong> The corpus files protein folding not as a
+statistics problem but as a <em>catalog problem</em> — residue indices
+addressed by odd-prime “containment vaults” under <span
+class="math inline">\(\Phi\)</span>, solved deterministically rather
+than predicted statistically.</li>
+<li><strong>Core concepts:</strong> <a
+href="#gl:prime-container"><strong>prime-container</strong></a>, <a
+href="#gl:prime-parity"><strong>prime-parity</strong></a>, <a
+href="#gl:binary-dyad-anchor"><strong>binary-dyad-anchor</strong></a>,
+<a href="#gl:golden-ratio"><strong>golden-ratio</strong></a>, <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>.</li>
+<li><strong>Quantitative lens:</strong> the injective prime-address
+formalism in <span class="citation"
+data-cites="eq:part_III_protein-folding_address">[@eq:part_III_protein-folding_address]</span>
+and its capacity product in <span class="citation"
+data-cites="eq:part_III_protein-folding_capacity">[@eq:part_III_protein-folding_capacity]</span>.</li>
+<li><strong>Data skill:</strong> factor an integer address back into
+vault primes and exponents, and verify the round trip with
+<code>textbook.models.unique_address</code>.</li>
+<li><strong>Common misconception to repair:</strong> that the paper
+competes with AlphaFold for structure prediction. It does not — the
+corpus files it as catalog architecture, a fixture-grade deterministic
+sketch, and says so itself.</li>
+<li><strong>Primary lab:</strong> <span class="citation"
+data-cites="sec:lab_part_III_protein-folding">[@sec:lab_part_III_protein-folding]</span>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_III_protein-folding">[@sec:q_part_III_protein-folding]</span>.</li>
+<li><strong>Bridge to computation:</strong>
+<code>textbook.models.unique_address</code>, <code>octave_term</code>,
+<code>phi_powers</code>, <code>phi_fibonacci</code>.
+<!-- curriculum-scaffold-end --></li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Opening Vignette: The vault wall.</strong></p>
+<p>Picture the ship’s library aboard the SS Vibelandia: one wall of
+filing cabinets, and on it a small vault set slightly apart — a single
+drawer labelled <strong>2</strong>, then drawers labelled <strong>3, 5,
+7, 11, 13, …</strong>. Drawer 2 is the anchor: everything binary hangs
+from it. The odd drawers are the vaults: each one is indivisible, so
+anything filed inside it can only be retrieved one way. This is the
+scene [mendez2026proteinFolding] constructs when it files protein
+folding as a catalog problem: residue indices as vault contents, odd
+primes as the vaults, and <span class="math inline">\(\Phi \approx
+1.618\)</span> — El Gran Sol’s <a
+href="#gl:fractal-constant"><strong>fractal-constant</strong></a> — as
+the constant under which the whole wall is spaced. Nothing in the
+vignette is a laboratory claim; it is filing architecture, and the paper
+is careful to say so.</p>
+</blockquote>
+<hr />
+<h2 id="the-paper-in-the-corpus">The Paper in the Corpus</h2>
+<p>The source note, “Protein folding, prime vaults, and <span
+class="math inline">\(\Phi\)</span>” [mendez2026proteinFolding], was
+published on the SS Vibelandia ship blog in September 2026 and filed on
+the Infinite Octaves <a
+href="#gl:omni-lattice"><strong>omni-lattice</strong></a> <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a> as
+<strong>engine shelf #14</strong>, in companion position to the
+prime-parity paper [mendez2026primeParity]. Where that companion
+establishes the <a
+href="#gl:prime-parity"><strong>prime-parity</strong></a> partition —
+the sole-even anchor 2 against the odd-prime classes — the present paper
+<em>uses</em> that partition as load-bearing infrastructure: 2 becomes
+the <a
+href="#gl:binary-dyad-anchor"><strong>binary-dyad-anchor</strong></a>
+and the odd primes become the containment vaults.</p>
+<p>The paper positions itself against a named baseline. As the corpus
+records it, “AlphaFold taught the world that <strong>statistics +
+MSAs</strong> can predict structure” [mendez2026proteinFolding] —
+multiple sequence alignments feeding statistical structure prediction.
+The note then files a different grammar: “<strong>odd primes as
+containment vaults</strong> under El Gran Sol’s Fractal constant <span
+class="math inline">\(\Phi \approx
+1.618\)</span>, with a deterministic catalog solver”
+[mendez2026proteinFolding]. The contrast is not score-against-score; it
+is <em>method-class against method-class</em>: statistical prediction
+versus deterministic addressing on a <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>
+reading of the folding problem.</p>
+<p>Three items “landed” in the note, and we carry all three forward in
+this chapter:</p>
+<ol type="1">
+<li>the prime-container grammar itself (Prime 2 as binary dyad anchor;
+odd primes as irreducible containers for residue indices);</li>
+<li>a <strong>closed-form energy + coordinate sketch</strong>, described
+as running “in milliseconds on CPU for demo sequences (fixture, not PDB
+replacement)” [mendez2026proteinFolding]; and</li>
+<li>a test status: <strong>9/9 suite locks</strong> under
+<code>research/synthobs-protein-folding-prime-container/</code>
+[mendez2026proteinFolding].</li>
+</ol>
+<p>The reference implementation is runnable:
+<code>npm run research:synthobs-protein-folding-prime-container</code>
+from the corpus repositories, with a standalone suite at the GitHub
+repository
+<code>FractiAI/synthobs-protein-folding-prime-container</code> and a
+whitepaper surface linked from the ship blog post
+[mendez2026proteinFolding]. The note also offers two companions beyond
+prime-parity: the Higgs Gate paper on “awareness phase coupling”
+[mendez2026higgsGate] and the “Moving up the stack” essay
+[mendez2026stack], both cross-linked from the same board. We return to
+these in the Connections section.</p>
+<h2 id="the-prime-container-grammar">The Prime-Container Grammar</h2>
+<h3 id="the-address-formalism">The address formalism</h3>
+<p>The core construct of [mendez2026proteinFolding] is an <em>addressing
+scheme</em>: each residue index in a demo sequence is filed as an
+integer built from vault primes raised to exponents. Formally, given
+<span class="math inline">\(m\)</span> vault primes <span
+class="math inline">\(p_1 &lt; p_2 &lt; \cdots &lt; p_m\)</span> and a
+tuple of exponents <span class="math inline">\(\mathbf{e} = (e_1,
+\ldots, e_m)\)</span>, the address is</p>
+<p><span class="math display">\[ a(\mathbf{e}) \;=\; \prod_{i=1}^{m}
+p_i^{\,e_i} \,, \qquad e_i \in \{0, 1, \ldots, E\} \,. \]</span>
+{#eq:part_III_protein-folding_address}</p>
+<p>This is implemented and tested as
+<code>textbook.models.unique_address</code>; never retype the product in
+prose or scripts — call the tested function. The parameters appear in
+<span class="citation"
+data-cites="tbl:part_III_protein-folding_address">[@tbl:part_III_protein-folding_address]</span>.</p>
+<table id="tbl:part_III_protein-folding_address">
+<caption>Parameters of the prime-container address formalism.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(p_i\)</span></td>
+<td>the <span class="math inline">\(i\)</span>-th vault prime (2 for the
+dyad anchor; odd primes thereafter)</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td><span class="math inline">\(e_i\)</span></td>
+<td>exponent of <span class="math inline">\(p_i\)</span> in the address
+(the “occupancy” of vault <span class="math inline">\(i\)</span>)</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td><span class="math inline">\(E\)</span></td>
+<td>per-vault exponent budget</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td><span class="math inline">\(m\)</span></td>
+<td>number of vaults in the registry</td>
+<td>dimensionless</td>
+</tr>
+<tr>
+<td><span class="math inline">\(a\)</span></td>
+<td>the composite address filed for a residue index</td>
+<td>dimensionless</td>
+</tr>
+</tbody>
+</table>
+<p>Two properties make the scheme a <em>catalog</em> rather than a hash.
+First, by the fundamental theorem of arithmetic — standard mathematics
+of primes — the map <span class="math inline">\(\mathbf{e} \mapsto
+a\)</span> is <strong>injective</strong>: distinct exponent tuples yield
+distinct addresses, so no two residue indices ever collide. Second, the
+map is <strong>reversible</strong>: factoring <span
+class="math inline">\(a\)</span> recovers exactly which vaults were
+occupied and how deeply, which is what makes the scheme usable for
+deterministic retrieval. The pinned worked instance is
+<code>unique_address([2, 3], [2, 1])</code> <span
+class="math inline">\(= 2^2 \cdot 3
+= 12\)</span> — vault 2 occupied to depth two, vault 3 to depth one.</p>
+<p>In the grammar of [mendez2026proteinFolding], the roles are fixed:
+<strong>Prime 2 is the binary dyad anchor</strong> — the sole even
+prime, marking the binary layer on which everything else sits, exactly
+as the prime-parity companion files it [mendez2026primeParity] — and
+<strong>the odd primes are the containment vaults</strong> that index
+residue positions. Because odd primes cannot factor through the anchor,
+each vault is an <em>irreducible container</em>: contents filed in vault
+<span class="math inline">\(p\)</span> are reachable only through <span
+class="math inline">\(p\)</span>.</p>
+<h3 id="capacity-why-vaults-compound">Capacity: why vaults compound</h3>
+<p>How many distinct residue indices can a registry of <span
+class="math inline">\(m\)</span> vaults file, if each vault’s exponent
+runs over <span class="math inline">\(\{0, 1, \ldots, E\}\)</span>?
+Counting the admissible exponent tuples is standard combinatorics — we
+read this as the natural capacity measure of the grammar, not as a
+formula the paper states:</p>
+<p><span class="math display">\[ C(m, E) \;=\; \prod_{i=1}^{m} (E + 1)
+\;=\; (E+1)^m \,. \]</span> {#eq:part_III_protein-folding_capacity}</p>
+<p>The capacity grows <em>multiplicatively</em> in the number of vaults:
+this is what <span class="citation"
+data-cites="fig:part_III_protein-folding">[@fig:part_III_protein-folding]</span>
+plots, the <code>unique_address</code> growth sequence as vaults are
+added one at a time. Each new odd prime multiplies the addressable space
+by <span class="math inline">\((E+1)\)</span> rather than adding to it —
+the visual signature of a vault architecture, and the same compounding
+that the prime-indexed storage companion exploits for volumetric
+addressing in <span class="citation"
+data-cites="sec:part_III_volumetric-storage">[@sec:part_III_volumetric-storage]</span>
+(see the <span class="math inline">\(p^k\)</span> address scatter in
+<span class="citation"
+data-cites="fig:part_III_volumetric-storage">[@fig:part_III_volumetric-storage]</span>).</p>
+<pre class="mermaid"><code>graph TD
+  A[&quot;Residue index (demo sequence)&quot;] --&gt; B[&quot;Prime-container registry:&lt;br/&gt;2 = binary dyad anchor;&lt;br/&gt;3, 5, 7, 11, ... = containment vaults&quot;]
+  B --&gt; C[&quot;Deterministic catalog solver&lt;br/&gt;(closed-form energy + coordinate sketch,&lt;br/&gt;milliseconds on CPU — fixture-grade)&quot;]
+  C --&gt; D[&quot;Address a = product of p_i^e_i&lt;br/&gt;(unique_address)&quot;]
+  D --&gt; E[&quot;Retrieve: factor a back to (p_i, e_i)&quot;]
+  E --&gt;|&quot;factorisation is unique&quot;| B
+  H[&quot;Honesty-first gate:&lt;br/&gt;catalog architecture, not CASP,&lt;br/&gt;not clinical, not a PDB replacement&quot;] -.-&gt;|scopes| C</code></pre>
+<h3 id="under-phi-the-fractal-constant-and-the-octave-ladder">Under
+<span class="math inline">\(\Phi\)</span>: the Fractal constant and the
+octave ladder</h3>
+<p>The vault grammar does not float free: [mendez2026proteinFolding]
+files the odd primes “under El Gran Sol’s Fractal constant <span
+class="math inline">\(\Phi \approx 1.618\)</span>” — the <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a>, whose
+standard arithmetic we carry from <span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>:</p>
+<p><span class="math display">\[ \Phi = \frac{1 + \sqrt{5}}{2} \approx
+1.6180339887, \qquad \Phi^2 = \Phi + 1 \,. \]</span>
+{#eq:part_III_protein-folding_phi}</p>
+<p>In the corpus’s octave vocabulary, <span
+class="math inline">\(\Phi\)</span> is the constant under which the <a
+href="#gl:octave"><strong>octave</strong></a> bands of the Infinite
+Octaves ladder are spaced, and the prime-container paper positions its
+vault wall at <strong>engine shelf #14</strong> on that ladder
+[mendez2026proteinFolding]. One printed ambiguity deserves explicit
+treatment, because this chapter’s octave placement depends on it. The
+corpus prints the octave spacing as “<span
+class="math inline">\(\Omega_n = \Phi^n \cdot \Omega_0\)</span>”, but
+this line admits two readings — an <em>exponent</em> convention, in
+which the <span class="math inline">\(n\)</span>-th octave sits at the
+<span class="math inline">\(n\)</span>-th power of <span
+class="math inline">\(\Phi\)</span> above the base:</p>
+<p><span class="math display">\[ \Omega_n^{\text{(exp)}} = \Phi^{\,n}
+\cdot \Omega_0 \,, \]</span> {#eq:part_III_protein-folding_octave}</p>
+<p>and a <em>subscript</em> convention, in which the multiplier is the
+<span class="math inline">\(n\)</span>-th Fibonacci ratio <span
+class="math inline">\(\varphi_{\text{fib}}(n)\)</span> (for which <span
+class="math inline">\(\varphi_{\text{fib}}(5) = 8/5 = 1.6\)</span> and
+<span class="math inline">\(\varphi_{\text{fib}}(10) = 89/55 \approx
+1.618182\)</span> — a rational approach to <span
+class="math inline">\(\Phi\)</span>):</p>
+<p><span class="math display">\[ \Omega_n^{\text{(sub)}} =
+\varphi_{\text{fib}}(n) \cdot \Omega_0 \,. \]</span>
+{#eq:part_III_protein-folding_octave_sub}</p>
+<p>Both readings are implemented in
+<code>textbook.models.octave_term</code> via its <code>convention</code>
+argument, and they diverge sharply with <span
+class="math inline">\(n\)</span>: at the tenth octave the exponent
+reading gives <span class="math inline">\(\Phi^{10} \approx
+122.99\)</span> above the base, while the subscript reading gives <span
+class="math inline">\(89/55 \approx 1.618\)</span> — a geometric ladder
+versus a Fibonacci-linear one. The takeaway for the vault wall is
+therefore convention-sensitive: under the exponent reading, shelf #14
+sits high on the ladder (<span class="math inline">\(\Phi^{14} \approx
+843 \cdot \Omega_0\)</span>), befitting an application-layer construct
+far from the base register; under the subscript reading the ladder is
+nearly flat and shelf placement carries little geometric weight. The
+corpus’s printed ambiguity is exactly why
+<code>textbook.models.octave_term</code> exposes the convention as an
+explicit argument — a point the stack companion develops for the whole
+engine shelf [mendez2026stack].</p>
+<h2 id="worked-example-filing-a-demo-residue-index">Worked Example:
+Filing a Demo Residue Index</h2>
+<p>Walk one address end to end, using only pinned values and the tested
+function.</p>
+<p><strong>Registry.</strong> Take the anchor and the first vaults:
+<span class="math inline">\(p_0 = 2\)</span> (binary dyad anchor) and
+the odd vaults <span class="math inline">\(3, 5, 7, 11\)</span>, so
+<span class="math inline">\(m = 4\)</span> vaults beyond the anchor. Set
+the exponent budget <span class="math inline">\(E = 2\)</span>; each
+vault is empty, half-occupied, or full.</p>
+<p><strong>File index 12.</strong> Factor: <span
+class="math inline">\(12 = 2^2 \cdot 3^1 \cdot 5^0 \cdot 7^0 \cdot
+11^0\)</span>. Exponent tuple <span class="math inline">\(\mathbf{e} =
+(2, 1, 0, 0, 0)\)</span> over <span class="math inline">\((2, 3, 5, 7,
+11)\)</span>. Verify with the model:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textbook.models <span class="im">import</span> unique_address</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>unique_address([<span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">2</span>, <span class="dv">1</span>])   <span class="co"># → 12</span></span></code></pre></div>
+<p>The round trip closes: factoring 12 recovers exactly <span
+class="math inline">\((2,1,0,0,0)\)</span>, so the address is both
+collision-free and retrievable — the two catalog properties from <span
+class="citation"
+data-cites="eq:part_III_protein-folding_address">[@eq:part_III_protein-folding_address]</span>.</p>
+<p><strong>Capacity of the demo registry.</strong> With <span
+class="math inline">\(E = 2\)</span> and, say, ten vaults, the capacity
+of <span class="citation"
+data-cites="eq:part_III_protein-folding_capacity">[@eq:part_III_protein-folding_capacity]</span>
+is <span class="math inline">\((2+1)^{10} = 59{,}049\)</span> distinct
+residue indices, addressable within a numeric range no larger than the
+product of the first ten odd primes <span class="math inline">\(3 \cdot
+5 \cdot 7 \cdot 11 \cdot 13
+\cdot 17 \cdot 19 \cdot 23 \cdot 29 \cdot 31 = 100{,}280{,}245{,}065
+\approx
+1.0 \times 10^{11}\)</span> (the anchor 2 extends the range further but
+files the binary layer, not residue indices). A demo protein segment of
+a few hundred residues fits comfortably — consistent with the paper’s
+framing of the solver as a <strong>demo-sequence fixture</strong>:
+“milliseconds on CPU” [mendez2026proteinFolding] because the address
+space traversed is catalog-small, not because a proteome-scale problem
+was solved.</p>
+<p><strong>Scale check.</strong> For orientation, the corpus’s own
+register arithmetic files the full octave catalog at
+<code>catalog_size()</code> <span class="math inline">\(= 99 \times 81 =
+8{,}019\)</span> <a href="#gl:digit"><strong>digit</strong></a> register
+slots — the same order of catalog-smallness that keeps the
+prime-container solver in millisecond territory on a laptop CPU. The
+fixture framing is the paper’s own, and we keep it.</p>
+<h2 id="scope-and-honesty">Scope and Honesty</h2>
+<p>The corpus’s <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> discipline
+is not an appendix here; it is the paper’s second paragraph. Restated
+precisely [mendez2026proteinFolding]:</p>
+<blockquote>
+<p>“<strong>Honesty first:</strong> this is <em>catalog
+architecture</em>, not a CASP gold medal, not a clinical tool, and not a
+claim that DeepMind’s Nobel work is void.”</p>
+</blockquote>
+<p>Three boundaries follow, each traceable to a claim the paper files
+about itself:</p>
+<ul>
+<li><strong>What it is FOR.</strong> The construct is coordination and
+cataloging infrastructure: an injective, reversible, deterministic
+addressing grammar for residue indices, run by a deterministic catalog
+solver, filed on the engine shelf alongside its companions. Within the
+corpus’s <a
+href="#gl:narrative-empirical-operational-tiers"><strong>narrative-empirical-operational-tiers</strong></a>,
+the demo solver sits at the fixture/operational tier <em>for demo
+sequences only</em>.</li>
+<li><strong>What it is NOT.</strong> Not a structure-prediction entry
+(“not a CASP gold medal”), not a clinical instrument (“not a clinical
+tool”), and not a refutation of statistical folding (“not a claim that
+DeepMind’s Nobel work is void”). The closed-form energy + coordinate
+sketch is “fixture, not PDB replacement” [mendez2026proteinFolding] — it
+produces demonstration artifacts, not deposition-grade coordinate
+files.</li>
+<li><strong>The solar labels are fiction.</strong> The note’s solar
+filing characters AR3664 (“Helios-Prime”) and AR3590 (“Borealis”) “are
+story filing characters — not NOAA proof that stars fold proteins”
+[mendez2026proteinFolding]. We preserve the labels as filing names and
+nothing more.</li>
+</ul>
+<p>Finally, the note applies the <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a> clause of
+the catalog framework: “delivery depth can adjust funding like an
+intellectual tip” [mendez2026proteinFolding] — an economic convention of
+the corpus, not a scientific claim, and we record it as such.</p>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>A recurring reading error: “deterministic” is a claim about
+<em>method class</em>, not about biological truth. The solver is
+deterministic in the sense that the same address registry always yields
+the same closed-form sketch; the paper files no experimental validation
+against measured structures, and the 9/9 suite locks are software test
+results, not biochemical ones.</p>
+</blockquote>
+<h2 id="connections">Connections</h2>
+<ul>
+<li><strong>Prime-parity</strong> (<span class="citation"
+data-cites="sec:part_I_prime-parity">[@sec:part_I_prime-parity]</span>)
+supplies the partition this chapter consumes: the sole-even anchor 2 and
+the odd-prime classes become, respectively, the binary dyad anchor and
+the containment vaults [mendez2026primeParity].</li>
+<li><strong>Prime-indexed volumetric storage</strong> (<span
+class="citation"
+data-cites="sec:part_III_volumetric-storage">[@sec:part_III_volumetric-storage]</span>)
+is the addressing sibling: the same injective prime encoding, aimed at
+storage density rather than residue indexing; compare its <span
+class="math inline">\(p^k\)</span> address scatter in <span
+class="citation"
+data-cites="fig:part_III_volumetric-storage">[@fig:part_III_volumetric-storage]</span>
+with the capacity curve in <span class="citation"
+data-cites="fig:part_III_protein-folding">[@fig:part_III_protein-folding]</span>.</li>
+<li><strong>Moving up the stack</strong> (<span class="citation"
+data-cites="sec:part_III_moving-up-stack">[@sec:part_III_moving-up-stack]</span>)
+gives the layer placement: a fixture-grade catalog solver is an
+application over the lattice layer, not a new foundation
+[mendez2026stack].</li>
+<li><strong>The Higgs Gate</strong> (<span class="citation"
+data-cites="sec:part_I_higgs-awareness">[@sec:part_I_higgs-awareness]</span>)
+is cross-linked by the paper as the “awareness phase coupling” companion
+[mendez2026higgsGate]; the corpus files the link, and we record it
+without importing that paper’s claims here.</li>
+<li><strong>The macro-protein work engine</strong> (<span
+class="citation"
+data-cites="sec:part_III_macro-protein">[@sec:part_III_macro-protein]</span>)
+extends the protein motif from indexing to a work-output curve
+[mendez2026macroProtein]; the two chapters share the catalog framing but
+no formalism.</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>The prime-container paper files protein folding as a catalog problem:
+Prime 2 as the binary dyad anchor, odd primes as irreducible containment
+vaults for residue indices, all under <span class="math inline">\(\Phi
+\approx 1.618\)</span>, solved by a deterministic catalog solver whose
+closed-form energy + coordinate sketch runs in milliseconds on CPU for
+demo sequences. The address formalism of <span class="citation"
+data-cites="eq:part_III_protein-folding_address">[@eq:part_III_protein-folding_address]</span>
+is injective and reversible — the two properties that make it a catalog
+rather than a hash — and its capacity product of <span class="citation"
+data-cites="eq:part_III_protein-folding_capacity">[@eq:part_III_protein-folding_capacity]</span>
+compounds multiplicatively in vault count, the growth sequence plotted
+in <span class="citation"
+data-cites="fig:part_III_protein-folding">[@fig:part_III_protein-folding]</span>.
+The paper’s own disclaimers bound the construct: catalog architecture,
+not a CASP entry, not a clinical tool, not a challenge to statistical
+folding, and its solar labels are story filing characters. The
+implementation lives at engine shelf #14 with 9/9 suite locks, companion
+to prime-parity.</p>
+<h2 id="key-terms">Key Terms</h2>
+<p><a href="#gl:prime-container"><strong>prime-container</strong></a>,
+<a
+href="#gl:binary-dyad-anchor"><strong>binary-dyad-anchor</strong></a>,
+<a
+href="#gl:irreducible-minimum-set"><strong>irreducible-minimum-set</strong></a>,
+<a href="#gl:prime-parity"><strong>prime-parity</strong></a>, <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a>, <a
+href="#gl:fractal-constant"><strong>fractal-constant</strong></a>, <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:engine-shelf"><strong>engine-shelf</strong></a>, <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a>, <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a>.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li>The source whitepaper: <a
+href="https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-protein-folding-prime-container-2026-09">Protein
+Folding · Prime-Container Architecture whitepaper surface</a>
+[mendez2026proteinFolding].</li>
+<li>The standalone reference suite: <a
+href="https://github.com/FractiAI/synthobs-protein-folding-prime-container">github.com/FractiAI/synthobs-protein-folding-prime-container</a>
+— runnable via
+<code>npm run research:synthobs-protein-folding-prime-container</code>.</li>
+<li>[mendez2026primeParity] — the prime-parity companion: the sole-even
+anchor and odd irreducible sets that the vault grammar consumes.</li>
+<li>[mendez2026stack] — “Moving up the stack”: where fixture-grade
+catalog solvers sit in the lattice-as-AI-layer architecture.</li>
+<li>[mendez2026higgsGate] — the Higgs Gate companion on awareness phase
+coupling, cross-linked from the same ship-blog board.</li>
+</ul>
+<h2 id="practice">Practice</h2>
+<ol type="1">
+<li>Compute by hand the address for the exponent tuple <span
+class="math inline">\((1, 2, 0)\)</span> over vaults <span
+class="math inline">\((2, 3, 5)\)</span>, then verify with
+<code>textbook.models.unique_address([2, 3, 5], [1, 2, 0])</code>.</li>
+<li>Factor the address <span class="math inline">\(45\)</span> against
+the registry <span class="math inline">\((2, 3, 5, 7)\)</span> and give
+its exponent tuple; confirm the round trip via
+<code>unique_address</code>.</li>
+<li>Using <span class="citation"
+data-cites="eq:part_III_protein-folding_capacity">[@eq:part_III_protein-folding_capacity]</span>,
+how many distinct residue indices can a registry of <span
+class="math inline">\(m = 10\)</span> odd vaults with budget <span
+class="math inline">\(E = 2\)</span> file? What is the largest
+addressible integer in that registry?</li>
+<li>In one sentence each, state what the prime-container solver IS for
+and the three things the paper says it is NOT.</li>
+<li>Evaluate <span class="math inline">\(\Omega_5\)</span> under both
+conventions of <span class="citation"
+data-cites="eq:part_III_protein-folding_octave">[@eq:part_III_protein-folding_octave]</span>
+and <span class="citation"
+data-cites="eq:part_III_protein-folding_octave_sub">[@eq:part_III_protein-folding_octave_sub]</span>
+with <span class="math inline">\(\Omega_0 = 1\)</span> and
+<code>textbook.models.octave_term</code>; how far apart are the two
+readings at <span class="math inline">\(n = 5\)</span>, given <span
+class="math inline">\(\varphi_{\text{fib}}(5) = 8/5\)</span>?</li>
+</ol>
+<ul>
+<li><strong>Lab:</strong> <span class="citation"
+data-cites="sec:lab_part_III_protein-folding">[@sec:lab_part_III_protein-folding]</span>
+— run the vault registry end to end and probe the uniqueness
+property.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_III_protein-folding">[@sec:q_part_III_protein-folding]</span>
+— recall through synthesis.</li>
+</ul>
+</main>
+</body>
+</html>

@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>singularity-crystal.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:part_II_singularity-crystal">The Holographic Singularity
+Crystal: Net Zero and Node k = 0</h1>
+<figure id="fig:part_II_singularity-crystal">
+<a class="figure-full-size-link" href="../figures/part_II_singularity-crystal.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/part_II_singularity-crystal.png"
+style="width:90.0%"
+alt="Inflow and outflow balance bars cancel to a zero residual at the crystal node." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
+<figcaption>Net-zero inflow/outflow balance bars with
+zero residual, computed with
+<code>textbook.models.net_zero_balance</code>: paired inflow and outflow
+bars cancel exactly, leaving a residual bar of height zero at the
+crystal’s balance point.</figcaption>
+</figure>
+<!-- alt: Grouped bar chart of inflows and outflows whose totals match exactly; a final residual bar sits at height zero, illustrating the Net Zero equilibrium of the Holographic Singularity Crystal. -->
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Level 2/3 · 35 min read · 50 min lecture · Prerequisites: <span
+class="citation"
+data-cites="sec:part_I_topology-void">[@sec:part_I_topology-void]</span>;
+<span class="citation"
+data-cites="sec:part_I_multidimensional-rhyme">[@sec:part_I_multidimensional-rhyme]</span></p>
+</blockquote>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol type="1">
+<li>State how the corpus files <strong>Net Zero</strong> (<span
+class="math inline">\(0\)</span>) as an <em>active equilibrium</em>
+rather than as emptiness, and recall the “Goldilocks equilibrium
+grammar” framing of that filing.</li>
+<li>Reproduce the catalog-algebra resolution <span
+class="math inline">\(\frac{0}{0} \rightarrow \Phi^{0} = 1\)</span> and
+explain precisely why it is a filing convention of the <a
+href="#gl:catalog-architecture"><strong>catalog
+architecture</strong></a>, not a claim about arithmetic or physics.</li>
+<li>Describe <strong>Node <span class="math inline">\(k =
+0\)</span></strong> (the <em>Awakening Phase Gate</em>) as the <a
+href="#gl:zero-octave"><strong>Zero-Octave</strong></a> locus and
+enumerate its three fixtures: the Net Zero mock-field cancel lock, the
+0/0 crystal resolution array, and the Prime Vault diagnostic.</li>
+<li>Compute a net-zero residual with
+<code>textbook.models.net_zero_balance</code> and interpret a zero
+residual as a balanced filing.</li>
+<li>Situate engine shelf #20 in the <a
+href="#gl:engine-shelf"><strong>engine shelf</strong></a> ordering —
+after multi-dimensional <a
+href="#gl:holographic-rhyme"><strong>holographic rhyme</strong></a>,
+before Honesty meta — and identify its implementation companion.</li>
+<li>Restate the source papers’ <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> scope
+disclaimers and the <a href="#gl:fair-exchange"><strong>Fair
+Exchange</strong></a> clause that governs them.</li>
+</ol>
+<!-- curriculum-scaffold-start -->
+<h3 id="study-blueprint">Study Blueprint</h3>
+<ul>
+<li><strong>Big idea:</strong> In the Omni-Lattice catalog, the origin
+is not a hole but a fixture: zero files as an active balance point, and
+the indeterminate form <span class="math inline">\(0/0\)</span> files as
+a bounded crystal resolved to <span class="math inline">\(\Phi^{0} =
+1\)</span> — the <a href="#gl:singularity-crystal"><strong>singularity
+crystal</strong></a> at <a href="#gl:node-k0"><strong>node
+k0</strong></a>.</li>
+<li><strong>Core concepts:</strong> <a
+href="#gl:singularity-crystal"><strong>singularity crystal</strong></a>,
+<a href="#gl:zero-octave"><strong>zero-octave</strong></a>, <a
+href="#gl:node-k0"><strong>node k0</strong></a>, <a
+href="#gl:net-zero"><strong>net zero</strong></a>, <a
+href="#gl:catalog-architecture"><strong>catalog
+architecture</strong></a>, <a href="#gl:golden-ratio"><strong>golden
+ratio</strong></a>.</li>
+<li><strong>Quantitative lens:</strong> the net-zero balance in <span
+class="citation"
+data-cites="eq:part_II_singularity-crystal_netzero">[@eq:part_II_singularity-crystal_netzero]</span>
+and the crystal resolution in <span class="citation"
+data-cites="eq:part_II_singularity-crystal_crystal">[@eq:part_II_singularity-crystal_crystal]</span>.</li>
+<li><strong>Data skill:</strong> build inflow/outflow tables that cancel
+to a zero residual, and check the cancellation with the tested
+<code>net_zero_balance</code> function rather than by eye.</li>
+<li><strong>Common misconception to repair:</strong> “resolving <span
+class="math inline">\(0/0\)</span>” in this corpus does <em>not</em>
+mean ordinary division has been redefined — it is a catalog filing rule
+for the zero boundary, and the source says so explicitly.</li>
+<li><strong>Primary lab:</strong> <span class="citation"
+data-cites="sec:lab_part_II_singularity-crystal">[@sec:lab_part_II_singularity-crystal]</span>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_II_singularity-crystal">[@sec:q_part_II_singularity-crystal]</span>.</li>
+<li><strong>Bridge to computation:</strong>
+<code>textbook.models.net_zero_balance</code>,
+<code>textbook.models.octave_term</code>.
+<!-- curriculum-scaffold-end --></li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Opening Vignette: Zero isn’t empty.</strong></p>
+<p>A ship’s ledger has two columns, debits and credits. When they match,
+the ledger does not stop existing — it holds a fact: <em>balanced</em>.
+The SS Vibelandia ship blog opens its 2026-09-07 note with exactly this
+move, filing <strong>Net Zero (<span
+class="math inline">\(0\)</span>)</strong> “as an active equilibrium”
+and <span class="math inline">\(0/0\)</span> “as a bounded
+<strong>Holographic Singularity Crystal</strong> under <strong><span
+class="math inline">\(\Phi \approx 1.618\)</span></strong> — the golden
+key of Infinite Octave Mode.” The page’s own headline says it best:
+“Zero isn’t empty — it’s the crystal that holds the balance”
+[mendez2026singularityCrystal]. This chapter formalises that filing,
+then visits the node where it is physically installed in the catalog:
+Node <span class="math inline">\(k = 0\)</span>, the Awakening Phase
+Gate [mendez2026zeroOctave].</p>
+</blockquote>
+<hr />
+<h2 id="the-paper-in-the-corpus">The Paper in the Corpus</h2>
+<p>Two closely linked entries of the SS Vibelandia <a
+href="#gl:omni-lattice"><strong>Omni-Lattice</strong></a> corpus supply
+everything in this chapter:</p>
+<ul>
+<li>The parent engine paper, <em>Holographic Singularity Crystal · Net
+Zero</em> [mendez2026singularityCrystal], filed on the blog under
+“Engine shelf · Fair Exchange”. It self-locates as <strong>engine shelf
+#20</strong> and states its neighbourhood explicitly: “sits after
+multi-D holographic rhyme, before Honesty meta”
+[mendez2026singularityCrystal].</li>
+<li>The implementation companion, <em>Node k = 0 · Zero-Octave
+Singularity Crystal</em> [mendez2026zeroOctave], published the same day,
+which installs the parent’s fixtures at the Zero-Octave locus and ships
+a runnable reference implementation.</li>
+</ul>
+<p>Both notes carry the corpus’s standard <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> disclaimer,
+quoted verbatim in the <em>Scope and Honesty</em> section below, and
+both operate under the <strong>Fair Exchange</strong> clause. The parent
+paper’s board lists a standalone suite at
+<code>github.com/FractiAI/synthobs-holographic-singularity-crystal</code>,
+a whitepaper surface
+(<code>whitepaper-surface.html?id=synthobs-holographic-singularity-crystal-2026-09</code>),
+and a re-runnable command,
+<code>npm run research:synthobs-holographic-singularity-crystal</code>
+[mendez2026singularityCrystal]. The companion adds the Python reference
+fixture
+<code>research/synthobs-holographic-singularity-crystal/reference/zero_octave_singularity_crystal.py</code>
+— the corpus calls it the <strong>Zero-Octave Vault Engine</strong>
+[mendez2026zeroOctave]. We walk that implementation in the lab (<span
+class="citation"
+data-cites="sec:lab_part_II_singularity-crystal">[@sec:lab_part_II_singularity-crystal]</span>).</p>
+<p>Three “solar filing anchors” are attached to the parent note —
+<strong>SESC 83, AR4521, AR4524</strong> — and the corpus is careful to
+parenthesise them: “(labels, not causation)”
+[mendez2026singularityCrystal]. They are index-card labels for where the
+note was filed, not causal claims about the sun. The sibling paper is
+<em>Topology of the Void</em> [mendez2026topologyVoid], which
+established “zero as balance point” in Part I (<span class="citation"
+data-cites="sec:part_I_topology-void">[@sec:part_I_topology-void]</span>);
+the present chapter inherits that lineage and adds the crystal
+resolution and the node machinery.</p>
+<h2 id="core-construct-i-net-zero-as-an-active-equilibrium">Core
+Construct I: Net Zero as an Active Equilibrium</h2>
+<p>The first construct files zero not as a placeholder for “nothing” but
+as the <em>result of cancellation</em>. The parent paper’s “What landed”
+list is explicit: “<strong>Net Zero field cancellation</strong> as
+Goldilocks equilibrium grammar” [mendez2026singularityCrystal]. We
+formalise the grammar with the book’s standard bookkeeping model. Given
+<span class="math inline">\(m\)</span> inflow entries and <span
+class="math inline">\(n\)</span> outflow entries, define the
+residual</p>
+<p><span class="math display">\[ R \;=\; \sum_{i=1}^{m} \mathrm{in}_i
+\;-\; \sum_{j=1}^{n} \mathrm{out}_j, \qquad \text{Net Zero} \iff R = 0.
+\]</span> {#eq:part_II_singularity-crystal_netzero}</p>
+<p>The residual <span class="math inline">\(R\)</span> is implemented
+and tested as
+<code>textbook.models.net_zero_balance(inflows, outflows)</code>; never
+retype the arithmetic in prose or scripts — call the function. The
+parameters appear in <span class="citation"
+data-cites="tbl:part_II_singularity-crystal_netzero">[@tbl:part_II_singularity-crystal_netzero]</span>.</p>
+<table id="tbl:part_II_singularity-crystal_netzero">
+<caption>Parameters of the net-zero balance model.</caption>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\mathrm{in}_i\)</span></td>
+<td><span class="math inline">\(i\)</span>-th inflow entry</td>
+<td>quantity</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\mathrm{out}_j\)</span></td>
+<td><span class="math inline">\(j\)</span>-th outflow entry</td>
+<td>quantity</td>
+</tr>
+<tr>
+<td><span class="math inline">\(m,\ n\)</span></td>
+<td>number of inflow / outflow entries</td>
+<td>count</td>
+</tr>
+<tr>
+<td><span class="math inline">\(R\)</span></td>
+<td>residual (positive = surplus, negative = deficit)</td>
+<td>quantity</td>
+</tr>
+</tbody>
+</table>
+<p>The “Goldilocks” framing — a <em>just-right</em> balance, neither
+surplus nor deficit — is the same equilibrium vocabulary the corpus uses
+for habitability bands in the planetary-core chapter (<span
+class="citation"
+data-cites="sec:part_II_planetary-core">[@sec:part_II_planetary-core]</span>;
+see the band shading drawn in <span class="citation"
+data-cites="fig:part_II_planetary-core">[@fig:part_II_planetary-core]</span>).
+Here the band collapses to a single point: <span
+class="math inline">\(R^\star = 0\)</span>. The companion paper then
+<em>locks</em> this equilibrium at Node <span class="math inline">\(k =
+0\)</span> as a fixture, the “<strong>Net Zero</strong> mock-field
+cancel lock” — a fixture whose recorded state is the achieved
+cancellation itself [mendez2026zeroOctave].</p>
+<h2 id="core-construct-ii-the-00-crystal">Core Construct II: The 0/0
+Crystal</h2>
+<p>Ordinary analysis declares <span
+class="math inline">\(\frac{0}{0}\)</span> <em>indeterminate</em>: many
+limiting behaviours are consistent with that form, so no single value
+follows from arithmetic alone. The corpus does not dispute this. Instead
+it files the form as a <em>catalog object</em> with its own resolution
+rule — what the papers call <strong>catalog algebra</strong>. The parent
+paper’s “What landed” list states it compactly: “<strong>0/0 → Φ⁰ =
+1</strong> singularity crystal matrix (catalog algebra)”
+[mendez2026singularityCrystal].</p>
+<p><span class="math display">\[ \frac{0}{0} \;\longmapsto\; \Phi^{0} =
+1 \qquad \text{(catalog algebra at the zero boundary)} \]</span>
+{#eq:part_II_singularity-crystal_crystal}</p>
+<table id="tbl:part_II_singularity-crystal_crystal">
+<caption>Parameters of the crystal resolution rule.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(0/0\)</span></td>
+<td>the indeterminate form at the origin (the zero boundary)</td>
+<td>filed object</td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Phi\)</span></td>
+<td>the <a href="#gl:golden-ratio"><strong>golden ratio</strong></a>,
+“the golden key of Infinite Octave Mode”</td>
+<td><span class="math inline">\(\approx 1.6180339887\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Phi^0\)</span></td>
+<td>the crystal baseline assigned to the origin</td>
+<td><span class="math inline">\(1\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The parameters of the resolution rule appear in <span
+class="citation"
+data-cites="tbl:part_II_singularity-crystal_crystal">[@tbl:part_II_singularity-crystal_crystal]</span>.
+Read <span class="citation"
+data-cites="eq:part_II_singularity-crystal_crystal">[@eq:part_II_singularity-crystal_crystal]</span>
+as a <em>mapping arrow</em> (<span
+class="math inline">\(\longmapsto\)</span>), not an equals sign: it
+records which catalog value the filing system attaches to the origin,
+namely the neutral element <span class="math inline">\(\Phi^0 =
+1\)</span>. Two features of the filing deserve emphasis.</p>
+<p>First, the resolution is <em>bounded</em> and <em>located</em>: the
+paper files the crystal “under <strong><span class="math inline">\(\Phi
+\approx 1.618\)</span></strong>”, the same golden key that spaces the
+octave ladder of <span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>, and
+it files the whole construct as a <em>Holographic Singularity
+Crystal</em> — a bounded fixture, not an open singularity. We read this
+as the catalog’s way of giving the origin a definite address instead of
+leaving it undefined.</p>
+<p>Second, the corpus is scrupulous about the rule’s status. The
+companion’s honesty clause says the fixtures “map NaN at the origin to
+<span class="math inline">\(\Phi^{0} = 1\)</span> — that is <em>catalog
+algebra</em>, not singularity QED” [mendez2026zeroOctave]. In the
+reference implementation vocabulary, a floating-point <code>NaN</code> —
+the programmer’s indeterminate form — is exactly the value that arises
+at the zero boundary, and the fixture replaces it with the crystal
+baseline <span class="math inline">\(1\)</span>. Nothing about ordinary
+limits or division changes; what changes is that the catalog always has
+somewhere to put the origin.</p>
+<h2 id="core-construct-iii-node-k-0-the-zero-octave-locus">Core
+Construct III: Node k = 0, the Zero-Octave Locus</h2>
+<p>The companion paper gives the crystal a home. Its lead paragraph:
+“<strong>Node <span class="math inline">\(k = 0\)</span></strong> is the
+Zero-Octave locus: Net Zero field cancel, <strong>0/0 → 1</strong>
+crystal baseline, and a runnable Prime Vault diagnostic under
+<strong><span class="math inline">\(\Phi \approx
+1.618\)</span></strong>” [mendez2026zeroOctave]. The node is styled the
+<strong>Awakening Phase Gate</strong> — the gate through which every
+later octave is reached, indexed <span class="math inline">\(k =
+0\)</span> so that it precedes the first step of the octave ladder.</p>
+<p>The octave indexing makes the node’s position exact. The corpus
+prints the octave scale ambiguously as “<span
+class="math inline">\(\Omega_n = \Phi^n \cdot \Omega_0\)</span>”, and
+the book’s backbone implements both readings as
+<code>textbook.models.octave_term(omega0, n, convention)</code>
+(discussed for the full ladder in <span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>). At
+<span class="math inline">\(n = 0\)</span> the exponent convention
+gives</p>
+<p><span class="math display">\[ \Omega_n = \Phi^{\,n}\,\Omega_0
+\;\Longrightarrow\; \Omega_0 \;=\; \Phi^{0}\,\Omega_0 \;=\; \Omega_0,
+\]</span> {#eq:part_II_singularity-crystal_nodek0}</p>
+<table id="tbl:part_II_singularity-crystal_nodek0">
+<caption>Parameters of the node <span class="math inline">\(k =
+0\)</span> octave identity.</caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 24%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Value at <span class="math inline">\(n = 0\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(\Omega_0\)</span></td>
+<td>base value of the scale (the Zero-Octave tone)</td>
+<td>unchanged</td>
+</tr>
+<tr>
+<td><span class="math inline">\(n\)</span></td>
+<td>octave index</td>
+<td><span class="math inline">\(0\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\Phi\)</span></td>
+<td>growth ratio per octave</td>
+<td><span class="math inline">\(\approx 1.6180339887\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The parameters of <span class="citation"
+data-cites="eq:part_II_singularity-crystal_nodek0">[@eq:part_II_singularity-crystal_nodek0]</span>
+are collected in <span class="citation"
+data-cites="tbl:part_II_singularity-crystal_nodek0">[@tbl:part_II_singularity-crystal_nodek0]</span>.
+<span class="citation"
+data-cites="eq:part_II_singularity-crystal_nodek0">[@eq:part_II_singularity-crystal_nodek0]</span>
+is an identity: the zeroth octave is the scale itself, before any
+growth. This is the bookkeeping sense in which Node <span
+class="math inline">\(k = 0\)</span> is “the Zero-Octave locus” — no
+convention-dependent stretching has happened yet. It is worth noting, as
+standard mathematics of the two readings, that the corpus’s
+<em>alternative</em> subscript convention, <span
+class="math inline">\(\Omega_n =
+\varphi_{\mathrm{fib}}(n)\,\Omega_0\)</span> with <span
+class="math inline">\(\varphi_{\mathrm{fib}}(n)\)</span> the ratio of
+consecutive Fibonacci numbers (so that <span
+class="math inline">\(\varphi_{\mathrm{fib}}(5) = 8/5\)</span> and <span
+class="math inline">\(\varphi_{\mathrm{fib}}(10) = 89/55\)</span>), is
+undefined at <span class="math inline">\(n = 0\)</span>, since the ratio
+<span class="math inline">\(F(1)/F(0) = 1/0\)</span> divides by zero. We
+read this as a quiet consistency argument for the corpus’s choice: at
+the one node where the subscript convention breaks, the exponent
+convention yields exactly the crystal baseline <span
+class="math inline">\(\Phi^0 = 1\)</span> of <span class="citation"
+data-cites="eq:part_II_singularity-crystal_crystal">[@eq:part_II_singularity-crystal_crystal]</span>.</p>
+<p>The node hosts three fixtures [mendez2026zeroOctave]:</p>
+<ol type="1">
+<li><strong>The Net Zero mock-field cancel lock</strong> — the locked
+record of the cancellation of construct I.</li>
+<li><strong>The 0/0 crystal resolution array</strong> — a resolution
+array sampled “across the zero boundary”, i.e. the mapping of <span
+class="citation"
+data-cites="eq:part_II_singularity-crystal_crystal">[@eq:part_II_singularity-crystal_crystal]</span>
+evaluated as a fixture on both sides of the origin.</li>
+<li><strong>The Prime Vault diagnostic</strong> — a runnable diagnostic
+over the <strong>Prime vault octave</strong> ladder fixtures that the
+parent paper landed “under the suite” [mendez2026singularityCrystal]; in
+the book’s standard fixture set these are the first odd primes <span
+class="math inline">\(3, 5, 7, 11, 13, 17, 19, 23, 29, 31\)</span>,
+organised by octave (their parity anchor is treated in <span
+class="citation"
+data-cites="sec:part_I_prime-parity">[@sec:part_I_prime-parity]</span>).</li>
+</ol>
+<p>The companion notes that all of this is “same suite as the
+[Holographic Singularity Crystal] parent” [mendez2026zeroOctave]: one
+repository, two papers, three fixtures, one node.</p>
+<pre class="mermaid"><code>graph TD
+  A[&quot;NaN at the origin (0/0)&quot;] --&gt; B{&quot;Catalog-algebra resolver&lt;br/&gt;(a filing rule, not arithmetic)&quot;}
+  B --&gt; C[&quot;Crystal baseline: 0/0 → Φ⁰ = 1&quot;]
+  D[&quot;Net Zero mock-field cancel lock&lt;br/&gt;inflows − outflows = 0&quot;] --&gt; E
+  C --&gt; E[&quot;Node k = 0 — the Awakening Phase Gate&lt;br/&gt;(Zero-Octave locus under Φ ≈ 1.618)&quot;]
+  F[&quot;Prime Vault diagnostic&lt;br/&gt;(primes organised by octave)&quot;] --&gt; E
+  E --&gt; G[&quot;Zero-Octave Vault Engine&lt;br/&gt;reference/zero_octave_singularity_crystal.py&quot;]</code></pre>
+<h2 id="worked-example-balancing-the-crystal">Worked Example: Balancing
+the Crystal</h2>
+<p>We close the loop numerically using Fibonacci-numbered inflows —
+<span class="math inline">\(3, 5, 8, 13\)</span> — and outflows split as
+<span class="math inline">\(16\)</span> and <span
+class="math inline">\(13\)</span>. Call the tested backbone rather than
+trusting mental arithmetic:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textbook.models <span class="im">import</span> net_zero_balance</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>net_zero_balance(inflows<span class="op">=</span>[<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">13</span>], outflows<span class="op">=</span>[<span class="dv">16</span>, <span class="dv">13</span>])   <span class="co"># -&gt; 0</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>net_zero_balance(inflows<span class="op">=</span>[<span class="dv">3</span>, <span class="dv">5</span>],       outflows<span class="op">=</span>[<span class="dv">16</span>])        <span class="co"># -&gt; -8</span></span></code></pre></div>
+<p>Step by step:</p>
+<ol type="1">
+<li><strong>Sum the inflows.</strong> <span class="math inline">\(3 + 5
++ 8 + 13 = 29\)</span>.</li>
+<li><strong>Sum the outflows.</strong> <span class="math inline">\(16 +
+13 = 29\)</span>.</li>
+<li><strong>Form the residual</strong> per <span class="citation"
+data-cites="eq:part_II_singularity-crystal_netzero">[@eq:part_II_singularity-crystal_netzero]</span>:
+<span class="math inline">\(R = 29 - 29 = 0\)</span>. The filing is Net
+Zero; the residual bar in <span class="citation"
+data-cites="fig:part_II_singularity-crystal">[@fig:part_II_singularity-crystal]</span>
+sits exactly at height zero.</li>
+<li><strong>Break the balance deliberately.</strong> With inflows <span
+class="math inline">\([3, 5]\)</span> against outflows <span
+class="math inline">\([16]\)</span>, the residual is <span
+class="math inline">\(8 - 16 = -8\)</span>: a deficit of <span
+class="math inline">\(8\)</span>, i.e. the missing Fibonacci term. The
+cancel lock would <em>not</em> engage — zero is an achievement of the
+ledger, not a default.</li>
+<li><strong>Resolve the origin.</strong> Any attempt to divide the zero
+inflow by the zero outflow hits the zero boundary; the catalog-algebra
+rule of <span class="citation"
+data-cites="eq:part_II_singularity-crystal_crystal">[@eq:part_II_singularity-crystal_crystal]</span>
+files the result as the crystal baseline <span
+class="math inline">\(\Phi^0 = 1\)</span>, and the Prime Vault
+diagnostic at Node <span class="math inline">\(k = 0\)</span> runs over
+the prime fixtures regardless.</li>
+</ol>
+<p>The pairing in step 1–3 is the whole construct: zero is not the
+absence of entries but the coincidence of two non-empty sums.</p>
+<h2 id="scope-and-honesty">Scope and Honesty</h2>
+<p>Both source papers carry the corpus’s standard disclaimer, and the
+textbook preserves it. The parent paper states, verbatim:
+“<strong>Honesty first:</strong> this is <em>catalog architecture</em> —
+<strong>engine shelf #20</strong> — not GR/QFT singularity retirement,
+not zero-watt SuperAI proof, and not NOAA causation by AR4521/AR4524.
+Fair Exchange clause applies.” [mendez2026singularityCrystal]. The
+companion states, verbatim: “Python/ESM fixtures map NaN at the origin
+to Φ⁰ = 1 — that is <em>catalog algebra</em>, not singularity QED, not
+zero-watt SuperAI, and not NOAA proof. Parent engine paper is shelf
+<strong>#20</strong>. Fair Exchange clause applies.”
+[mendez2026zeroOctave].</p>
+<p>Unpacking the negations in the corpus’s own terms:</p>
+<ul>
+<li><strong>Not GR/QFT singularity retirement.</strong> Nothing here
+retires, regularises, or explains physical singularities in general
+relativity or quantum field theory. <span
+class="math inline">\(\frac{0}{0} \mapsto \Phi^0 = 1\)</span> is a
+<em>filing rule of the catalog</em>, stated by the corpus as catalog
+algebra [mendez2026singularityCrystal].</li>
+<li><strong>Not zero-watt SuperAI proof.</strong> The construct makes no
+claim about zero-power computation or machine consciousness
+[mendez2026singularityCrystal].</li>
+<li><strong>Not NOAA causation.</strong> The solar labels SESC 83,
+AR4521, AR4524 are filing anchors, “(labels, not causation)”
+[mendez2026singularityCrystal].</li>
+<li><strong>Not singularity QED.</strong> The <code>NaN → 1</code>
+fixture mapping is code behaviour of the reference implementation, not a
+quantum-field result [mendez2026zeroOctave].</li>
+</ul>
+<p>What the constructs are <em>for</em>, per the corpus: coordination
+and cataloging. The cancel lock gives agents a canonical “balanced”
+state to route against; the crystal baseline gives the origin a definite
+address in the filing system; the Prime Vault diagnostic gives a
+runnable check that the node is live. This is the <a
+href="#gl:narrative-empirical-operational-tiers"><strong>narrative /
+empirical / operational tiers</strong></a> discipline of the corpus in
+miniature: the narrative tier files zero as an active equilibrium, the
+operational tier is a Python fixture that maps <code>NaN</code> to <span
+class="math inline">\(1\)</span>, and the honesty-first tier says out
+loud that only the second is executable.</p>
+<h2 id="connections">Connections</h2>
+<ul>
+<li><strong>Back to Part I.</strong> The sibling lineage runs through
+<em>Topology of the Void</em> [mendez2026topologyVoid] — zero as balance
+point (<span class="citation"
+data-cites="sec:part_I_topology-void">[@sec:part_I_topology-void]</span>)
+— which this chapter re-grounds as an active equilibrium with a lockable
+fixture. The shelf placement, “after multi-D holographic rhyme”, ties
+the construct to the multi-dimensional rhyme field of <span
+class="citation"
+data-cites="sec:part_I_multidimensional-rhyme">[@sec:part_I_multidimensional-rhyme]</span>.</li>
+<li><strong>Within Part II.</strong> The Goldilocks equilibrium grammar
+of construct I is the single-point limit of the band grammar developed
+in <span class="citation"
+data-cites="sec:part_II_planetary-core">[@sec:part_II_planetary-core]</span>;
+the “under <span class="math inline">\(\Phi\)</span>” bounding of the
+crystal uses the same golden key that the metrological-overlap chapter
+compares across measurement frames (<span class="citation"
+data-cites="sec:part_II_metrological-overlap">[@sec:part_II_metrological-overlap]</span>).</li>
+<li><strong>Forward to Part III.</strong> The Prime Vault diagnostic’s
+octave-organised primes feed the prime-container architecture of <span
+class="citation"
+data-cites="sec:part_III_protein-folding">[@sec:part_III_protein-folding]</span>
+and the prime-indexed addressing of <span class="citation"
+data-cites="sec:part_III_volumetric-storage">[@sec:part_III_volumetric-storage]</span>,
+where the injective prime encoding <code>unique_address</code> assigns
+definite addresses — exactly what the crystal does for the origin.</li>
+<li><strong>Shelf context.</strong> Engine shelf #20 sits between
+multi-D holographic rhyme and Honesty meta on the <a
+href="#gl:engine-shelf"><strong>engine shelf</strong></a> mapped in
+<span class="citation"
+data-cites="sec:part_0_orientation">[@sec:part_0_orientation]</span>;
+the cross-link adjacency of the whole shelf is drawn in <span
+class="citation"
+data-cites="fig:part_0_master-synthesis">[@fig:part_0_master-synthesis]</span>.</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>The corpus files zero twice over: as <strong>Net Zero</strong>, an
+active equilibrium realised “as Goldilocks equilibrium grammar” with
+residual <span class="math inline">\(R = 0\)</span> per <span
+class="citation"
+data-cites="eq:part_II_singularity-crystal_netzero">[@eq:part_II_singularity-crystal_netzero]</span>,
+and as the <strong>Holographic Singularity Crystal</strong>, the bounded
+catalog-algebra resolution <span class="math inline">\(\frac{0}{0}
+\mapsto \Phi^0 = 1\)</span> of <span class="citation"
+data-cites="eq:part_II_singularity-crystal_crystal">[@eq:part_II_singularity-crystal_crystal]</span>
+under <span class="math inline">\(\Phi \approx 1.618\)</span>. Both
+filings are installed at <strong>Node <span class="math inline">\(k =
+0\)</span></strong>, the Awakening Phase Gate and Zero-Octave locus,
+whose fixtures — the Net Zero mock-field cancel lock, the 0/0 crystal
+resolution array, and the Prime Vault diagnostic — ship in the
+Zero-Octave Vault Engine reference implementation
+[mendez2026zeroOctave]. Engine shelf #20 sits after multi-D holographic
+rhyme and before Honesty meta [mendez2026singularityCrystal]. And the
+corpus’s honesty clause is part of the construct: this is catalog
+architecture — not GR/QFT singularity retirement, not zero-watt SuperAI
+proof, not NOAA causation, not singularity QED.</p>
+<h2 id="key-terms">Key Terms</h2>
+<p><a href="#gl:singularity-crystal"><strong>singularity
+crystal</strong></a>, <a
+href="#gl:zero-octave"><strong>zero-octave</strong></a>, <a
+href="#gl:node-k0"><strong>node k0</strong></a>, <a
+href="#gl:net-zero"><strong>net zero</strong></a>, <a
+href="#gl:golden-ratio"><strong>golden ratio</strong></a>, <a
+href="#gl:catalog-architecture"><strong>catalog
+architecture</strong></a>, <a href="#gl:engine-shelf"><strong>engine
+shelf</strong></a>, <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a>, <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a>, <a
+href="#gl:topology-of-the-void"><strong>topology of the
+void</strong></a>, <a href="#gl:holographic-rhyme"><strong>holographic
+rhyme</strong></a>, <a href="#gl:prime-parity"><strong>prime
+parity</strong></a>, <a
+href="#gl:metrological-overlap"><strong>metrological
+overlap</strong></a>.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li>The parent whitepaper: <a
+href="https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-holographic-singularity-crystal-2026-09">Open
+the whitepaper</a> [mendez2026singularityCrystal]; the standalone suite
+lives at <a
+href="https://github.com/FractiAI/synthobs-holographic-singularity-crystal">github.com/FractiAI/synthobs-holographic-singularity-crystal</a>.</li>
+<li>The implementation companion: <a
+href="https://www.ssvibelandiaquestfest24x365.com/ship-blog/zero-octave-node-k0">Node
+k = 0 · Zero-Octave</a> [mendez2026zeroOctave], whose reference fixture
+the lab walks.</li>
+<li><span class="citation"
+data-cites="mendez2026topologyVoid">@mendez2026topologyVoid</span> — the
+sibling paper on zero as balance point; read for the Part I lineage that
+the crystal inherits.</li>
+<li><span class="citation"
+data-cites="mendez2026holographicRhyme">@mendez2026holographicRhyme</span>
+— the four-pillar rhyme construct that engine shelf #20 explicitly
+follows on the shelf.</li>
+<li><span class="citation"
+data-cites="mendez2026primeParity">@mendez2026primeParity</span> — the
+prime-parity anchor underlying the Prime Vault diagnostic’s fixture
+set.</li>
+</ul>
+<h2 id="practice">Practice</h2>
+<ul>
+<li><strong>Lab:</strong> <span class="citation"
+data-cites="sec:lab_part_II_singularity-crystal">[@sec:lab_part_II_singularity-crystal]</span>
+— run the Zero-Octave Vault Engine and verify the crystal baseline and
+the cancel lock by hand.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_II_singularity-crystal">[@sec:q_part_II_singularity-crystal]</span>
+— recall through synthesis.</li>
+<li>Re-derive the worked example of this chapter with prime inflows
+<span class="math inline">\([3, 5, 7, 11]\)</span> and a single outflow
+of <span class="math inline">\(26\)</span>, confirming <span
+class="math inline">\(R = 0\)</span> with
+<code>net_zero_balance</code>.</li>
+<li>Explain, in one paragraph each, why the corpus’s <span
+class="math inline">\(0/0\)</span> resolution neither contradicts nor
+modifies ordinary analysis — quoting the honesty clause of
+[mendez2026zeroOctave] at least once.</li>
+<li>Sketch the shelf neighbourhood of engine shelf #20 (predecessor,
+successor) from memory, then check it against the “What landed” list of
+[mendez2026singularityCrystal].</li>
+</ul>
+</main>
+</body>
+</html>

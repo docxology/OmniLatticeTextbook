@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>lab_proton-theater.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:lab_part_II_proton-theater">Lab — Proton Space, Electron
+Theater, and Φ Duality</h1>
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Lab · 60 min · Materials: notebook, calculator (or
+<code>textbook.models</code>)</p>
+</blockquote>
+<h2 id="objectives">Objectives</h2>
+<p>After this lab you will be able to: (1) file a decimal constant
+through the digit-filing map of <span class="citation"
+data-cites="eq:part_II_proton-theater_filing">[@eq:part_II_proton-theater_filing]</span>
+by inspecting its leading and structural digits; (2) compute the
+Φ-duality pair <span class="math inline">\((x\Phi,\; x/\Phi)\)</span> of
+<span class="citation"
+data-cites="eq:part_II_proton-theater_duality">[@eq:part_II_proton-theater_duality]</span>
+by hand for several values; (3) verify the mirror identities of <span
+class="citation"
+data-cites="eq:part_II_proton-theater_mirror">[@eq:part_II_proton-theater_mirror]</span>
+against the tested <code>textbook.models.phi_dual</code>; and (4) run
+the paper’s reference suite and interpret its reported 9/9 suite locks
+[mendez2026protonTheater].</p>
+<h2 id="background">Background</h2>
+<p>Linked chapter: <span class="citation"
+data-cites="sec:part_II_proton-theater">[@sec:part_II_proton-theater]</span>.
+The chapter’s filing map routes constants with leading digit 1 into <a
+href="#gl:proton-space"><strong>Proton Space</strong></a> and constants
+with structural digit 2 into <a
+href="#gl:electron-theater"><strong>Electron Theater</strong></a>, all
+under the filing constant <span class="math inline">\(\Phi \approx
+1.618\)</span> [mendez2026protonTheater]. The book’s quantitative
+backbone for the duality is the mirror pair <span
+class="math inline">\(\Phi_{+}(x) = x\Phi\)</span>, <span
+class="math inline">\(\Phi_{-}(x) = x/\Phi\)</span>, whose product
+identity <span class="math inline">\(\Phi_{+}(x)\Phi_{-}(x) =
+x^{2}\)</span>, ratio identity <span
+class="math inline">\(\Phi_{+}(x)/\Phi_{-}(x) = \Phi^{2}\)</span>, and
+involution <span class="math inline">\(\Phi_{-}(\Phi_{+}(x)) =
+x\)</span> are stated in <span class="citation"
+data-cites="eq:part_II_proton-theater_mirror">[@eq:part_II_proton-theater_mirror]</span>
+and plotted in <span class="citation"
+data-cites="fig:part_II_proton-theater">[@fig:part_II_proton-theater]</span>.
+In this lab you check every one of those claims with your own hands
+first, and with the tested function second — the catalog’s <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> discipline
+applied to arithmetic.</p>
+<h2 id="procedure">Procedure</h2>
+<ol type="1">
+<li><strong>File two constants.</strong> Take <span
+class="math inline">\(e = 2.718\ldots\)</span> and <span
+class="math inline">\(\pi = 3.141\ldots\)</span>. The Proton Space
+trigger fires on leading digit 1 — neither constant has it. The Electron
+Theater trigger fires on <em>structural</em> 2, which the corpus
+identifies with the sole-even prime and <span
+class="math inline">\(2\pi\)</span> — not on “any value whose leading
+digit happens to be 2”. We read the map as: <span
+class="math inline">\(e\)</span> (leading digit 2) does not file on the
+structural trigger, and <span class="math inline">\(\pi\)</span> files
+in neither drawer. Then confirm the positive cases: <span
+class="math inline">\(\Phi = 1.618\ldots\)</span> (leading digit 1 →
+Proton Space) and <span class="math inline">\(2\pi\)</span> (the
+structural-2 symbol itself → Electron Theater). Write down, for each of
+the four constants, which drawer it enters or why it enters none — and
+mark which judgements are the corpus’s and which are your interpretive
+read.</li>
+<li><strong>Compute duality pairs by hand.</strong> For <span
+class="math inline">\(x = 1, 2, 3\)</span>, compute <span
+class="math inline">\(\Phi_{+}(x) = x\Phi\)</span> and <span
+class="math inline">\(\Phi_{-}(x) = x/\Phi\)</span> using <span
+class="math inline">\(\Phi = 1.618034\)</span> and <span
+class="math inline">\(1/\Phi = 0.618034\)</span>. You should get:
+<ul>
+<li><span class="math inline">\(x = 1\)</span>: <span
+class="math inline">\((1.618034,\; 0.618034)\)</span></li>
+<li><span class="math inline">\(x = 2\)</span>: <span
+class="math inline">\((3.236068,\; 1.236068)\)</span></li>
+<li><span class="math inline">\(x = 3\)</span>: <span
+class="math inline">\((4.854102,\; 1.854102)\)</span></li>
+</ul></li>
+<li><strong>Verify the mirror identities.</strong> For each <span
+class="math inline">\(x\)</span>: check the product <span
+class="math inline">\(\Phi_{+}(x)\,\Phi_{-}(x) = x^{2}\)</span> (for
+<span class="math inline">\(x = 3\)</span>: <span
+class="math inline">\(4.854102 \times
+1.854102 = 9.000\ldots\)</span>); check the ratio <span
+class="math inline">\(\Phi_{+}(x)/\Phi_{-}(x) = \Phi^{2} =
+2.618034\)</span>; and check the involution <span
+class="math inline">\(\Phi_{-}(\Phi_{+}(x)) = x\)</span> by dividing
+your upper filing by <span class="math inline">\(\Phi\)</span>.</li>
+<li><strong>Verify the step identity.</strong> Confirm that <span
+class="math inline">\(\Phi_{-}(x) = \Phi_{+}(x) - x\)</span> (<span
+class="citation"
+data-cites="eq:part_II_proton-theater_step">[@eq:part_II_proton-theater_step]</span>)
+holds for all three values — for <span class="math inline">\(x =
+3\)</span>: <span class="math inline">\(4.854102 - 3 =
+1.854102\)</span>. ✓</li>
+<li><strong>Run the reference implementation.</strong> From the paper’s
+standalone wiring
+(<code>FractiAI/synthobs-proton-space-electron-theater</code>), re-run
+the filing suite with
+<code>npm run research:synthobs-proton-space-electron-theater</code> and
+record the suite result — the paper reports <strong>9/9 suite
+locks</strong> [mendez2026protonTheater]. State what a “lock” checks:
+that the digit filing routes as the paper claims, not that any physical
+constant is derived.</li>
+</ol>
+<h2 id="analysis">Analysis</h2>
+<p>Summarise your three hand-computed pairs in a table with columns
+<span class="math inline">\(x\)</span>, <span
+class="math inline">\(\Phi_{+}(x)\)</span>, <span
+class="math inline">\(\Phi_{-}(x)\)</span>, <span
+class="math inline">\(\Phi_{+}\Phi_{-}\)</span>, and <span
+class="math inline">\(\Phi_{-}(\Phi_{+}(x))\)</span>, then compute the
+mean and spread of the ratio <span
+class="math inline">\(\Phi_{+}(x)/\Phi_{-}(x)\)</span> across the three
+rows with <code>textbook.models.descriptive_statistics</code>. The ratio
+column should be constant at <span class="math inline">\(\Phi^{2}
+\approx 2.618034\)</span> to display precision — a <em>constant
+ratio</em> is exactly what makes the two branches of <span
+class="citation"
+data-cites="fig:part_II_proton-theater">[@fig:part_II_proton-theater]</span>
+straight lines on a log axis, offset by <span
+class="math inline">\(\pm\ln\Phi \approx \pm 0.481212\)</span> about the
+identity. If any row deviates, re-derive it before touching the code:
+the tested function is never wrong about arithmetic, only your
+transcriptions can be.</p>
+<h2 id="computational-workflow">Computational Workflow</h2>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textbook.models <span class="im">import</span> phi_dual, PHI</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>PHI  <span class="co"># 1.618033988749895</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2-3: hand values vs tested function</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>):</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    upper, lower <span class="op">=</span> phi_dual(x)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(x, upper, lower,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>          upper <span class="op">*</span> lower,        <span class="co"># expect x**2</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>          upper <span class="op">/</span> lower,        <span class="co"># expect PHI**2 ≈ 2.618034</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>          phi_dual(upper)[<span class="dv">1</span>])   <span class="co"># expect x — involution closes</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: step identity Phi_-(x) = Phi_+(x) - x</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>upper, lower <span class="op">=</span> phi_dual(<span class="dv">3</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(upper <span class="op">-</span> <span class="dv">3</span> <span class="op">==</span> lower)      <span class="co"># True</span></span></code></pre></div>
+<p>Predict before running: the printed products should be <span
+class="math inline">\(1, 4, 9\)</span>, the ratios all <span
+class="math inline">\(2.618034\)</span>, and the involutions <span
+class="math inline">\(1, 2, 3\)</span>.</p>
+<h2 id="reflection">Reflection</h2>
+<ol type="1">
+<li>The duality pair is an involution — filing the upper image back down
+returns the original value. Why is information preservation a sensible
+design requirement for a catalog that advertises <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a>
+bookkeeping?</li>
+<li>The paper disclaims any CODATA/SI derivation from <span
+class="math inline">\(\Phi\)</span>, any ħ leading-digit causation, any
+QED dyad proof, and any zero-crosstalk quantum hardware
+[mendez2026protonTheater]. Which of your lab activities touched physics,
+and which only touched filing?</li>
+<li>You found constants (<span class="math inline">\(e\)</span>, <span
+class="math inline">\(\pi\)</span>) that enter no drawer. What does the
+existence of unfiled values tell you about the coverage claim of a
+two-drawer map — and where in the corpus might digit 3 and beyond be
+filed? (Hint: the prime-parity companion [mendez2026primeParity] and
+<span class="citation"
+data-cites="sec:part_I_prime-parity">[@sec:part_I_prime-parity]</span>.)</li>
+</ol>
+</main>
+</body>
+</html>

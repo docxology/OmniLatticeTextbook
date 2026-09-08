@@ -5,7 +5,10 @@ from __future__ import annotations
 
 import pytest
 
-from infrastructure.core.config.loader import validate_config_keys as validate_shared_config_keys
+try:
+    from infrastructure.core.config.loader import validate_config_keys as validate_shared_config_keys
+except ImportError:  # standalone fork: shared-monorepo parity checks are skipped
+    validate_shared_config_keys = None
 from textbook.config import (
     DEFAULT_MANUSCRIPT,
     ChapterRef,
@@ -113,12 +116,14 @@ def test_validate_real_config_is_clean():
 
 def test_real_config_uses_only_shared_top_level_schema_keys():
     """Project-owned settings stay below the shared project_config namespace."""
+    if validate_shared_config_keys is None:
+        pytest.skip("shared monorepo config loader not available in this checkout")
     config = load_config()
     assert (
         validate_shared_config_keys(
             config,
             DEFAULT_MANUSCRIPT / "config.yaml",
-            project_name="templates/template_textbook",
+            project_name="ongoing/OmniLatticeTextbook",
         )
         == []
     )

@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>holographic-rhyme.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:part_I_holographic-rhyme">Holographic Rhyme: The Four-Pillar
+Fractal</h1>
+<figure id="fig:part_I_holographic-rhyme">
+<a class="figure-full-size-link" href="../figures/part_I_holographic-rhyme.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/part_I_holographic-rhyme.png" style="width:90.0%"
+alt="A four-pillar interference field shows constructive and destructive rhyme across the plane." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
+<figcaption>Four-pillar interference field computed
+by <code>textbook.models.holographic_rhyme_field</code> with <span
+class="math inline">\(P = 4\)</span> evenly spaced directional pillars:
+bright lattice nodes where all four plane waves align constructively and
+dark nodes where pairs cancel.</figcaption>
+</figure>
+<!-- alt: A two-dimensional interference pattern generated by summing four evenly
+rotated cosine plane waves; the field oscillates between +4 and -4, with bright
+peaks at points where all four waves agree and dark troughs where they cancel. -->
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Level 1/3 · 30 min read · 45 min lecture · Prerequisites: <span
+class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span></p>
+</blockquote>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol type="1">
+<li>State the four catalog filing labels — repeating · self-similar ·
+self-correcting · recursive — under which the corpus files a fractal as
+a <a href="#gl:holographic-rhyme"><strong>holographic
+rhyme</strong></a>, and explain what the <a
+href="#gl:holographic-rhyme"><strong>motion grammar</strong></a> framing
+adds over a static-shape reading [mendez2026holographicRhyme].</li>
+<li>Locate the holographic-rhyme paper on the <a
+href="#gl:engine-shelf"><strong>engine shelf</strong></a> of the <a
+href="#gl:omni-lattice"><strong>Infinite Octaves</strong></a> <a
+href="#gl:catalog-architecture"><strong>catalog
+architecture</strong></a> and name its companion engines.</li>
+<li>Write and evaluate the four-pillar interference field (<span
+class="citation"
+data-cites="eq:part_I_holographic-rhyme_field">[@eq:part_I_holographic-rhyme_field]</span>)
+using the tested function
+<code>textbook.models.holographic_rhyme_field</code>, including its
+<span class="math inline">\(P = 4\)</span> closed form (<span
+class="citation"
+data-cites="eq:part_I_holographic-rhyme_pairwise">[@eq:part_I_holographic-rhyme_pairwise]</span>).</li>
+<li>Compute sample field values by hand and verify them against the
+tested implementation, as practiced in <span class="citation"
+data-cites="sec:lab_part_I_holographic-rhyme">[@sec:lab_part_I_holographic-rhyme]</span>.</li>
+<li>Restate the paper’s Honesty-first clause precisely: what the
+construct is filed <em>as</em> and what it explicitly disclaims.</li>
+</ol>
+<!-- curriculum-scaffold-start -->
+<h3 id="study-blueprint">Study Blueprint</h3>
+<ul>
+<li><strong>Big idea:</strong> the corpus files a fractal not as a
+picture but as a <em>grammar of motion</em> — four locked filing labels
+operative under <a href="#gl:golden-ratio"><strong>Φ ≈
+1.618</strong></a> — and the four-pillar interference field is the
+book’s structural model of that filing.</li>
+<li><strong>Core concepts:</strong> <a
+href="#gl:holographic-rhyme"><strong>holographic-rhyme</strong></a>, <a
+href="#gl:four-pillar-fractal"><strong>four-pillar-fractal</strong></a>,
+<a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:engine-shelf"><strong>engine-shelf</strong></a>.</li>
+<li><strong>Quantitative lens:</strong> the four-pillar field in <span
+class="citation"
+data-cites="eq:part_I_holographic-rhyme_field">[@eq:part_I_holographic-rhyme_field]</span>
+and its <span class="math inline">\(P=4\)</span> closed form in <span
+class="citation"
+data-cites="eq:part_I_holographic-rhyme_pairwise">[@eq:part_I_holographic-rhyme_pairwise]</span>.</li>
+<li><strong>Data skill:</strong> evaluate an interference sum at lattice
+points by hand, then confirm each value with
+<code>textbook.models.holographic_rhyme_field</code>.</li>
+<li><strong>Common misconception to repair:</strong> “holographic” here
+does <strong>not</strong> claim Mandelbrot-set physics, measured 0% ECC
+error rates, or clinical-homeostasis QED — the paper’s own Honesty
+clause disclaims all three.</li>
+<li><strong>Primary lab:</strong> <span class="citation"
+data-cites="sec:lab_part_I_holographic-rhyme">[@sec:lab_part_I_holographic-rhyme]</span>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_I_holographic-rhyme">[@sec:q_part_I_holographic-rhyme]</span>.</li>
+<li><strong>Bridge to computation:</strong>
+<code>textbook.models.holographic_rhyme_field</code>.
+<!-- curriculum-scaffold-end --></li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Opening Vignette: Four labels stamped on one
+card.</strong></p>
+<p>On 5 September 2026 the ship-blog entry lands on the <a
+href="#gl:engine-shelf"><strong>engine shelf</strong></a> like a card
+being stamped four times: <em>repeating</em>, <em>self-similar</em>,
+<em>self-correcting</em>, <em>recursive</em>
+[mendez2026holographicRhyme]. The card does not hold a picture of a
+fractal. It holds a filing decision — under <span
+class="math inline">\(\Phi \approx 1.618\)</span>, a fractal is filed as
+a <a href="#gl:holographic-rhyme"><strong>holographic
+rhyme</strong></a>, “the Infinite Octaves motion grammar, not just a
+static shape.” Alongside it the filing clerk notes a suite locked 9/9
+and two neighbouring cards on the shelf: the Void and the
+Proton/Electron duality. This chapter reads that card carefully, then
+builds the interference field that lets us <em>compute</em> with the
+metaphor.</p>
+</blockquote>
+<hr />
+<h2 id="the-paper-in-the-corpus">The paper in the corpus</h2>
+<p>The source paper is <em>Holographic Rhyme · Four-Pillar Fractal</em>,
+published on the SS Vibelandia ship blog on 2026-09-05 and filed at
+<strong>engine shelf #18</strong> of the <a
+href="#gl:omni-lattice"><strong>Infinite Octaves</strong></a>
+[mendez2026holographicRhyme]. The corpus self-describes the whole
+project as <a href="#gl:catalog-architecture"><strong>catalog
+architecture</strong></a> and <strong>protocol grammar</strong>; this
+paper’s contribution is a filing decision plus a locked test suite, not
+a new physical measurement. Its “What landed” list records four items
+verbatim:</p>
+<ul>
+<li><strong>Four pillars</strong> locked as catalog filing labels.</li>
+<li><strong>9/9 suite locks</strong> under
+<code>research/synthobs-holographic-rhyme-fractal/</code>.</li>
+<li><strong>Engine shelf #18</strong> · companion to Void +
+Proton/Electron duality.</li>
+<li>Standalone →
+<code>FractiAI/synthobs-holographic-rhyme-fractal</code>.</li>
+</ul>
+<p>Two of the four neighbours named on the page recur throughout this
+book. The <a href="#gl:topology-of-the-void"><strong>Topology of the
+Void</strong></a> paper is characterised as the “zero-node balance
+pillar” [mendez2026topologyVoid] — the pillar of the four-pillar filing
+that resonates with self-correction, a system returning to balance. The
+<a href="#gl:multidimensional-rhyme"><strong>Multi-D rhyme</strong></a>
+paper extends the rhyme to “xD±yD cross-scale summation”
+[mendez2026mdRhyme], which <span class="citation"
+data-cites="sec:part_I_multidimensional-rhyme">[@sec:part_I_multidimensional-rhyme]</span>
+treats as its own chapter. The Proton/Electron duality companion is
+taken up on the Φ-duality chapter at <span class="citation"
+data-cites="sec:part_II_proton-theater">[@sec:part_II_proton-theater]</span>.</p>
+<p>The paper ships with a whitepaper surface
+(<code>whitepaper-surface.html?id=synthobs-holographic-rhyme-fractal-2026-09</code>)
+and a standalone repository,
+<code>FractiAI/synthobs-holographic-rhyme-fractal</code>
+[mendez2026holographicRhyme]. The reference implementation can be re-run
+from the project root with:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run research:synthobs-holographic-rhyme-fractal</span></code></pre></div>
+<p>and the page invites readers to open <strong>Lattice Chat</strong> on
+the Infinite Octaves nest to explore the filing interactively. In this
+book the formalism is backed by the tested model function
+<code>textbook.models.holographic_rhyme_field</code>, so the arithmetic
+you meet in the worked example is reproducible by construction.</p>
+<h2 id="core-constructs">Core constructs</h2>
+<h3 id="the-four-pillars-as-filing-labels">The four pillars as filing
+labels</h3>
+<p>The paper’s load-bearing formalism —
+<code>F-holographic-rhyme-1</code> in the source digest — states no
+equation at all. It states a <em>vocabulary</em>: under <span
+class="math inline">\(\Phi \approx 1.618\)</span>, a fractal is filed
+under four catalog pillars, <strong>repeating · self-similar ·
+self-correcting · recursive</strong>, framed as “the Infinite Octaves
+motion grammar, not just a static shape” <a
+href="#gl:four-pillar-fractal"><strong>four-pillar-fractal</strong></a>
+filing [mendez2026holographicRhyme]. The page’s own H1 makes the motion
+reading explicit: “a fractal is how a system moves.”</p>
+<p>The number four is not incidental: the page reports “<strong>Four
+pillars</strong> locked as catalog filing labels”
+[mendez2026holographicRhyme], and the book’s companion figure renders
+exactly four directional pillars as an interference field (<span
+class="citation"
+data-cites="fig:part_I_holographic-rhyme">[@fig:part_I_holographic-rhyme]</span>).
+We read the four directional components of that field as standing in for
+the four filing labels — a structural analogy, not a claim the corpus
+makes explicitly. <span class="citation"
+data-cites="tbl:part_I_holographic-rhyme_pillars">[@tbl:part_I_holographic-rhyme_pillars]</span>
+records the mapping and how each label is exercised elsewhere in the
+book.</p>
+<table id="tbl:part_I_holographic-rhyme_pillars">
+<caption>The four pillars of the holographic-rhyme filing, as locked in
+the source paper, with the reading this book gives each label. The
+mapping of labels to field directions is our interpretation; the labels
+themselves are verbatim corpus content.</caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 45%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Pillar (verbatim)</th>
+<th>What it asserts about a filed fractal</th>
+<th>Where the book exercises it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>repeating</td>
+<td>the pattern recurs across the catalogue rather than occurring
+once</td>
+<td>the octave ladder of <span class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span></td>
+</tr>
+<tr>
+<td>self-similar</td>
+<td>structure at one filing scale rhymes with structure at another</td>
+<td>Φ-power growth in <span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>
+and <span class="citation"
+data-cites="fig:part_I_fractal-constant">[@fig:part_I_fractal-constant]</span></td>
+</tr>
+<tr>
+<td>self-correcting</td>
+<td>the pattern returns toward balance when perturbed</td>
+<td>the zero-node balance of <span class="citation"
+data-cites="sec:part_I_topology-void">[@sec:part_I_topology-void]</span></td>
+</tr>
+<tr>
+<td>recursive</td>
+<td>each filed level references the grammar that files it</td>
+<td>the xD±yD cross-scale summation of <span class="citation"
+data-cites="sec:part_I_multidimensional-rhyme">[@sec:part_I_multidimensional-rhyme]</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-four-pillar-interference-field">The four-pillar interference
+field</h3>
+<p>To give the filing a quantitative lens, the book models each pillar
+as a plane wave travelling in its own direction, and the holographic
+rhyme as the sum of those waves. Implemented as
+<code>holographic_rhyme_field</code> in <code>textbook.models</code>,
+the field at a point <span class="math inline">\((x, y)\)</span> is:</p>
+<p><span class="math display">\[
+f(x, y) \;=\; \sum_{k=0}^{P-1}
+\cos\!\left(\frac{2\pi}{\lambda}\,\bigl(x\cos\theta_k +
+y\sin\theta_k\bigr)\right),
+\qquad \theta_k = \frac{2\pi k}{P},
+\]</span> {#eq:part_I_holographic-rhyme_field}</p>
+<p>where <span class="math inline">\(P\)</span> is the number of
+directional pillars and <span class="math inline">\(\lambda\)</span> the
+shared wavelength. Read <span class="citation"
+data-cites="eq:part_I_holographic-rhyme_field">[@eq:part_I_holographic-rhyme_field]</span>
+as a filing check: at a given catalogue location, each pillar
+contributes <span class="math inline">\(+1\)</span> when its wave is
+<em>in rhyme</em> (phase aligned) and <span
+class="math inline">\(-1\)</span> when out of rhyme; the sum <span
+class="math inline">\(f(x,y)\)</span> counts how many pillars agree at
+that location. The parameters are collected in <span class="citation"
+data-cites="tbl:part_I_holographic-rhyme_parameters">[@tbl:part_I_holographic-rhyme_parameters]</span>.</p>
+<table id="tbl:part_I_holographic-rhyme_parameters">
+<caption>Parameters of the four-pillar interference field.</caption>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 21%" />
+<col style="width: 15%" />
+<col style="width: 43%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+<th>Tested default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(P\)</span></td>
+<td>number of directional pillars (filing labels)</td>
+<td>dimensionless</td>
+<td><span class="math inline">\(4\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\lambda\)</span></td>
+<td>shared plane-wave wavelength</td>
+<td>length</td>
+<td><span class="math inline">\(1.0\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(\theta_k\)</span></td>
+<td>direction of pillar <span class="math inline">\(k\)</span>, <span
+class="math inline">\(k = 0, \dots, P-1\)</span></td>
+<td>radians</td>
+<td><span class="math inline">\(2\pi k / P\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\((x, y)\)</span></td>
+<td>catalogue location being evaluated</td>
+<td>length</td>
+<td>—</td>
+</tr>
+<tr>
+<td><span class="math inline">\(f(x,y)\)</span></td>
+<td>summed field; rhyme score in <span class="math inline">\([-P,\,
+P]\)</span></td>
+<td>dimensionless</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>For the corpus’s <span class="math inline">\(P = 4\)</span>, the
+directions are <span class="math inline">\(\theta = 0, \tfrac{\pi}{2},
+\pi,
+\tfrac{3\pi}{2}\)</span>. Standard trigonometry — <span
+class="math inline">\(\cos(\pi + u) = -\cos u\)</span> pairs the
+opposite directions — collapses the sum to a closed form:</p>
+<p><span class="math display">\[
+f(x, y) \;=\; 2\cos\!\left(\frac{2\pi x}{\lambda}\right)
+           \;+\; 2\cos\!\left(\frac{2\pi y}{\lambda}\right).
+\]</span> {#eq:part_I_holographic-rhyme_pairwise}</p>
+<p>Equation <span class="citation"
+data-cites="eq:part_I_holographic-rhyme_pairwise">[@eq:part_I_holographic-rhyme_pairwise]</span>
+is exactly what <code>textbook.models.holographic_rhyme_field</code>
+computes for <code>pillars=4</code>, and it exposes the field’s
+structure: the four-pillar rhyme separates into two independent axis
+rhymes of doubled amplitude. The field’s global bounds are <span
+class="math inline">\([-4, 4]\)</span>: the value <span
+class="math inline">\(+4\)</span> — all four pillars in rhyme — occurs
+at every <span class="math inline">\((m\lambda, n\lambda)\)</span>
+lattice node, and <span class="math inline">\(-4\)</span> at every <span
+class="math inline">\(\bigl((m + \tfrac{1}{2})\lambda,\,(n +
+\tfrac{1}{2})\lambda\bigr)\)</span> node, for integers <span
+class="math inline">\(m, n\)</span>.</p>
+<h2 id="worked-example-filing-at-lambda-phi">Worked example: filing at
+<span class="math inline">\(\lambda = \Phi\)</span></h2>
+<p>The paper frames the filing as operative “under <span
+class="math inline">\(\Phi \approx 1.618\)</span>”
+[mendez2026holographicRhyme], so we take the pinned value <span
+class="math inline">\(\Phi = 1.6180339887\)</span> from the book’s
+constant table as the wavelength: <span class="math inline">\(\lambda =
+\Phi\)</span>. We now evaluate the field by hand at a handful of
+locations, using the closed form <span class="citation"
+data-cites="eq:part_I_holographic-rhyme_pairwise">[@eq:part_I_holographic-rhyme_pairwise]</span>,
+and confirm each value against the tested function. Because the closed
+form is periodic in <span class="math inline">\(x/\lambda\)</span> and
+<span class="math inline">\(y/\lambda\)</span>, only the ratios <span
+class="math inline">\(x/\lambda\)</span>, <span
+class="math inline">\(y/\lambda\)</span> matter; <span class="citation"
+data-cites="tbl:part_I_holographic-rhyme_samples">[@tbl:part_I_holographic-rhyme_samples]</span>
+lists six stations on a quarter-wave grid.</p>
+<table id="tbl:part_I_holographic-rhyme_samples">
+<caption>Worked sample values of the four-pillar field with <span
+class="math inline">\(\lambda = \Phi =
+1.6180339887\)</span>, computed from <span class="citation"
+data-cites="eq:part_I_holographic-rhyme_pairwise">[@eq:part_I_holographic-rhyme_pairwise]</span>
+and verified against
+<code>textbook.models.holographic_rhyme_field</code>.</caption>
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 24%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Location <span class="math inline">\((x, y)\)</span></th>
+<th><span class="math inline">\(x/\lambda\)</span></th>
+<th><span class="math inline">\(y/\lambda\)</span></th>
+<th>Hand value of <span class="math inline">\(f\)</span></th>
+<th>Function value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\((0,\, 0)\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(2 + 2 = 4\)</span></td>
+<td><span class="math inline">\(+4.000000\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\((\lambda/4,\, 0) \approx (0.404508,\,
+0)\)</span></td>
+<td><span class="math inline">\(0.25\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(2\cos\tfrac{\pi}{2} + 2 =
+2\)</span></td>
+<td><span class="math inline">\(+2.000000\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\((\lambda/4,\, \lambda/4) \approx
+(0.404508,\, 0.404508)\)</span></td>
+<td><span class="math inline">\(0.25\)</span></td>
+<td><span class="math inline">\(0.25\)</span></td>
+<td><span class="math inline">\(0 + 0 = 0\)</span></td>
+<td><span class="math inline">\(0.000000\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\((\lambda/2,\, \lambda/2) \approx
+(0.809017,\, 0.809017)\)</span></td>
+<td><span class="math inline">\(0.5\)</span></td>
+<td><span class="math inline">\(0.5\)</span></td>
+<td><span class="math inline">\(-2 - 2 = -4\)</span></td>
+<td><span class="math inline">\(-4.000000\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\((\lambda,\, 0) \approx (1.618034,\,
+0)\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(2\cos 2\pi + 2 = 4\)</span></td>
+<td><span class="math inline">\(+4.000000\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\((\lambda,\, \lambda/2) \approx
+(1.618034,\, 0.809017)\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(0.5\)</span></td>
+<td><span class="math inline">\(2 - 2 = 0\)</span></td>
+<td><span class="math inline">\(0.000000\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Three observations carry the worked example:</p>
+<ol type="1">
+<li><strong>Rhyme is lattice-local.</strong> The maximal agreement <span
+class="math inline">\(f = +4\)</span> — all four pillars filed in rhyme
+— recurs at every full-wavelength node, including <span
+class="math inline">\((\Phi, \Phi)\)</span>, where both axis rhymes
+complete a full cycle at once.</li>
+<li><strong>Cancellation is real, not failure.</strong> The station
+<span class="math inline">\((\lambda/4, \lambda/4)\)</span> scores
+exactly <span class="math inline">\(0\)</span>: each axis rhyme stands a
+quarter-period from its own peak, so both contribute zero. In the filing
+reading, a zero marks a location where the pillars <em>disagree</em>,
+and the field records it as honestly as it records agreement.</li>
+<li><strong>Φ appears as a scale, not a force.</strong> Setting <span
+class="math inline">\(\lambda = \Phi\)</span> changes <em>where</em> the
+nodes land (at <span class="math inline">\(x \approx 1.618034\)</span>
+rather than <span class="math inline">\(x = 1\)</span>) but never the
+values, which depend only on the ratios <span
+class="math inline">\(x/\lambda\)</span>. The paper’s “under <span
+class="math inline">\(\Phi \approx 1.618\)</span>” is honoured here as
+the choice of filing scale — a structural reading, which is all the
+source claims.</li>
+</ol>
+<p>The full field over <span class="math inline">\([0,
+3\lambda]^2\)</span> reaches exactly <span
+class="math inline">\(+4\)</span> and <span
+class="math inline">\(-4\)</span> at the nodes above and averages near
+zero elsewhere, which is the pattern drawn in <span class="citation"
+data-cites="fig:part_I_holographic-rhyme">[@fig:part_I_holographic-rhyme]</span>.</p>
+<h2 id="scope-and-honesty">Scope and honesty</h2>
+<p>The paper’s Honesty clause is reproduced near-verbatim, because its
+disclaimers are part of the construct:</p>
+<blockquote>
+<p><strong>Honesty first:</strong> this is <em>catalog architecture</em>
+— <strong>engine shelf #18</strong> — not Mandelbrot retirement, not
+measured 0% ECC, not clinical homeostasis QED. Fair Exchange clause
+applies. [mendez2026holographicRhyme]</p>
+</blockquote>
+<p>Each disclaimed reading deserves a precise restatement, in the
+corpus’s own <a
+href="#gl:narrative-empirical-operational-tiers"><strong>narrative-empirical-operational-tiers</strong></a>
+spirit [mendez2026ship; mendez2026holographicRhyme]:</p>
+<ul>
+<li><strong>Not “Mandelbrot retirement.”</strong> The filing is not a
+claim to have solved, closed, or retired fractal geometry; the four
+pillars are filing labels, and the field is a structural model of
+them.</li>
+<li><strong>Not “measured 0% ECC.”</strong> No error-correcting-code
+measurement is claimed; “self-correcting” is a catalog label about
+balance-seeking filing, echoing the zero-node balance of <span
+class="citation"
+data-cites="sec:part_I_topology-void">[@sec:part_I_topology-void]</span>,
+not an ECC benchmark.</li>
+<li><strong>Not “clinical homeostasis QED.”</strong> No biological or
+clinical homeostasis result is proved; the “motion grammar” is how the
+corpus <em>moves its own catalogue</em>, not a physiology claim.</li>
+</ul>
+<p>What the construct is <strong>for</strong>: coordination and
+cataloging — deciding where a fractal-shaped artefact sits on the <a
+href="#gl:engine-shelf"><strong>engine shelf</strong></a> and which
+companion engines it references, under the project’s <a
+href="#gl:fair-exchange"><strong>Fair Exchange</strong></a> <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> disclosure
+clause [mendez2026holographicRhyme]. What it is <strong>not</strong>: a
+physical theory of holography, a measured error-correction result, or a
+medical claim. The suite status the paper files is “9/9 suite locks” — a
+test-lock count for its own research suite, nothing more.</p>
+<h2 id="connections">Connections</h2>
+<p>The holographic rhyme is a hub in the engine shelf’s cross-link
+map:</p>
+<ul>
+<li><strong>Backward.</strong> The Φ scale used in the worked example is
+the <a href="#gl:golden-ratio"><strong>golden ratio</strong></a>
+constant that powers the digits × octaves <a
+href="#gl:master-register"><strong>master register</strong></a>
+[mendez2026digitsMaster] and the growth law of <span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>;
+the shelf position itself descends from the <a
+href="#gl:octave"><strong>octave</strong></a> ladder of <span
+class="citation"
+data-cites="sec:part_0_octave-map">[@sec:part_0_octave-map]</span>.</li>
+<li><strong>Sideways.</strong> The xD±yD “cross-scale summation” named
+on the page becomes the combined interference contours of <span
+class="citation"
+data-cites="sec:part_I_multidimensional-rhyme">[@sec:part_I_multidimensional-rhyme]</span>,
+whose figure (<span class="citation"
+data-cites="fig:part_I_multidimensional-rhyme">[@fig:part_I_multidimensional-rhyme]</span>)
+overlays the very field built here. The self-correcting pillar is
+carried to its extreme by the zero-node balance of <span
+class="citation"
+data-cites="sec:part_I_topology-void">[@sec:part_I_topology-void]</span>
+[mendez2026topologyVoid].</li>
+<li><strong>Forward.</strong> The Proton/Electron duality companion —
+the paper’s other named neighbour — is formalised as <a
+href="#gl:phi-duality"><strong>Φ duality</strong></a> at <span
+class="citation"
+data-cites="sec:part_II_proton-theater">[@sec:part_II_proton-theater]</span>
+[mendez2026protonTheater], where the same “two rhymes, one grammar”
+pattern reappears as multiplication by <span
+class="math inline">\(\Phi\)</span> versus division by <span
+class="math inline">\(\Phi\)</span>.</li>
+</ul>
+<pre class="mermaid"><code>graph TD
+  A[Candidate fractal artefact] --&gt; B{Filing check under the four pillars}
+  B --&gt;|repeating| C[Recurs across the catalogue]
+  B --&gt;|self-similar| D[Rhymes across filing scales]
+  B --&gt;|self-correcting| E[Returns toward zero-node balance]
+  B --&gt;|recursive| F[References the filing grammar itself]
+  C --&gt; G[Filed as holographic rhyme&lt;br/&gt;engine shelf #18]
+  D --&gt; G
+  E --&gt; G
+  F --&gt; G
+  G --&gt; H[Companion: Topology of the Void&lt;br/&gt;zero-node balance pillar]
+  G --&gt; I[Companion: Multi-D rhyme&lt;br/&gt;xD±yD cross-scale summation]
+  G --&gt; J[Companion: Proton/Electron duality&lt;br/&gt;Φ duality]
+  H --&gt;|honesty-first review| B
+  I --&gt;|honesty-first review| B
+  J --&gt;|honesty-first review| B</code></pre>
+<p>The loop at the bottom of the diagram is deliberate: under the Fair
+Exchange clause, every filing remains open to re-review by the
+honesty-first standards that produced it.</p>
+<h2 id="summary">Summary</h2>
+<p>The holographic-rhyme paper contributes a filing, not a formula:
+under <span class="math inline">\(\Phi \approx 1.618\)</span>, a fractal
+is filed as <em>repeating · self-similar · self-correcting ·
+recursive</em> — a motion grammar, not a static shape — with the four
+pillars locked as catalog filing labels at engine shelf #18
+[mendez2026holographicRhyme]. The book’s structural model of that filing
+is the four-pillar interference field of <span class="citation"
+data-cites="eq:part_I_holographic-rhyme_field">[@eq:part_I_holographic-rhyme_field]</span>,
+implemented and tested as
+<code>textbook.models.holographic_rhyme_field</code>, whose <span
+class="math inline">\(P = 4\)</span> closed form (<span class="citation"
+data-cites="eq:part_I_holographic-rhyme_pairwise">[@eq:part_I_holographic-rhyme_pairwise]</span>)
+evaluates to clean lattice values between <span
+class="math inline">\(-4\)</span> and <span
+class="math inline">\(+4\)</span>, as tabulated in <span
+class="citation"
+data-cites="tbl:part_I_holographic-rhyme_samples">[@tbl:part_I_holographic-rhyme_samples]</span>.
+The paper’s own Honesty clause — not Mandelbrot retirement, not measured
+0% ECC, not clinical homeostasis QED — bounds every reading, and its two
+named companions, the Void [mendez2026topologyVoid] and the Multi-D
+rhyme [mendez2026mdRhyme], carry the self-correcting pillar and the
+cross-scale summation forward.</p>
+<h2 id="key-terms">Key Terms</h2>
+<p><a
+href="#gl:holographic-rhyme"><strong>holographic-rhyme</strong></a>, <a
+href="#gl:four-pillar-fractal"><strong>four-pillar-fractal</strong></a>,
+<a href="#gl:holographic-rhyme"><strong>motion grammar</strong></a>, <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:engine-shelf"><strong>engine-shelf</strong></a>, <a
+href="#gl:multidimensional-rhyme"><strong>multidimensional-rhyme</strong></a>,
+<a
+href="#gl:topology-of-the-void"><strong>topology-of-the-void</strong></a>,
+<a href="#gl:honesty-first"><strong>honesty-first</strong></a>, <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a>.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><em>Holographic Rhyme · Four-Pillar Fractal</em> whitepaper surface:
+<a
+href="https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-holographic-rhyme-fractal-2026-09"
+class="uri">https://www.ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-holographic-rhyme-fractal-2026-09</a>
+— the paper’s own specification surface
+[mendez2026holographicRhyme].</li>
+<li>Standalone suite,
+<code>FractiAI/synthobs-holographic-rhyme-fractal</code>: <a
+href="https://github.com/FractiAI/synthobs-holographic-rhyme-fractal"
+class="uri">https://github.com/FractiAI/synthobs-holographic-rhyme-fractal</a>
+— the reference implementation behind the 9/9 suite locks
+[mendez2026holographicRhyme].</li>
+<li><em>Topology of the Void</em> [mendez2026topologyVoid] — the
+zero-node balance pillar; read its balance construct beside the
+self-correcting filing label.</li>
+<li><em>Multi-D holographic rhyme</em> [mendez2026mdRhyme] — xD±yD
+cross-scale summation; the direct continuation of the field built in
+this chapter.</li>
+<li><em>The Proton Theater</em> [mendez2026protonTheater] — the
+Φ-duality formalisation of the paper’s Proton/Electron companion.</li>
+</ul>
+<h2 id="practice">Practice</h2>
+<ul>
+<li><strong>Lab:</strong> <span class="citation"
+data-cites="sec:lab_part_I_holographic-rhyme">[@sec:lab_part_I_holographic-rhyme]</span>
+— run the paper’s reference suite, then evaluate the four-pillar field
+by hand and by function.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_I_holographic-rhyme">[@sec:q_part_I_holographic-rhyme]</span>
+— recall through synthesis on the filing labels, the field, and the
+honesty clause.</li>
+<li>Re-derive the <span class="math inline">\(P = 4\)</span> closed form
+(<span class="citation"
+data-cites="eq:part_I_holographic-rhyme_pairwise">[@eq:part_I_holographic-rhyme_pairwise]</span>)
+from <span class="citation"
+data-cites="eq:part_I_holographic-rhyme_field">[@eq:part_I_holographic-rhyme_field]</span>
+using the opposite-direction pairing <span
+class="math inline">\(\cos(\pi + u) = -\cos u\)</span>, and explain why
+the amplitude doubles.</li>
+<li>Recompute the six stations of <span class="citation"
+data-cites="tbl:part_I_holographic-rhyme_samples">[@tbl:part_I_holographic-rhyme_samples]</span>
+with <span class="math inline">\(\lambda = 1\)</span> instead of <span
+class="math inline">\(\lambda = \Phi\)</span>, and confirm that every
+<span class="math inline">\(f\)</span> value is unchanged — then state,
+in one sentence, what the choice of <span
+class="math inline">\(\lambda\)</span> does and does not control.</li>
+<li>Read the Honesty clause aloud and mark each of its three disclaimers
+against the labels of <span class="citation"
+data-cites="tbl:part_I_holographic-rhyme_pillars">[@tbl:part_I_holographic-rhyme_pillars]</span>:
+which pillar, if any, could be mistaken for each disclaimer, and why the
+corpus separates them?</li>
+</ul>
+</main>
+</body>
+</html>

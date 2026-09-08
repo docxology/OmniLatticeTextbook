@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>pdvsa-gateway.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:part_III_pdvsa-gateway">PDVSA Gateway Ops: The EGS
+Lattice-Linear Companion</h1>
+<figure id="fig:part_III_pdvsa-gateway">
+<a class="figure-full-size-link" href="../figures/part_III_pdvsa-gateway.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/part_III_pdvsa-gateway.png" style="width:90.0%"
+alt="A lattice-linear flow ramps linearly through the gateway stages." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
+<figcaption>The lattice-linear flow ramp of the EGS
+Lattice-Linear Gateway: cumulative flow <span class="math inline">\(L_n
+= n\,r\)</span> rises in equal increments across the ops decision cycle
+(Gather → Decide → Act), generated from
+<code>textbook.models.lattice_linear_profile</code>.</figcaption>
+</figure>
+<!-- alt: A rising staircase of six equal-width steps on a linear axis, each step one routing-grammar unit taller than the last, annotated with the repeating Gather, Decide, Act cycle of the gateway console; the cumulative ramp stays linear rather than exponential. -->
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Level 1/3 · 30 min read · 45 min lecture · Prerequisites: <span
+class="citation"
+data-cites="sec:part_III_cmos-protonic">[@sec:part_III_cmos-protonic]</span></p>
+</blockquote>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol type="1">
+<li>Describe the gateway simulator’s three-zone data topology — plant
+systems, integration bridge, partners and export — and state what each
+zone is allowed to release.</li>
+<li>Formalise the lattice-linear flow ramp <span
+class="math inline">\(L_n = n\,r\)</span> of <span class="citation"
+data-cites="eq:part_III_pdvsa-gateway_model">[@eq:part_III_pdvsa-gateway_model]</span>,
+compute a worked ramp at the routing-grammar step <span
+class="math inline">\(r = \Phi\)</span> using
+<code>textbook.models.lattice_linear_profile</code>, and explain why the
+profile is linear rather than exponential.</li>
+<li>Read the simulator’s nine executive takeaways and trace each to its
+backing paper and empirics, including the token-cost bound of <span
+class="citation"
+data-cites="eq:part_III_pdvsa-gateway_tokens">[@eq:part_III_pdvsa-gateway_tokens]</span>.</li>
+<li>State precisely what the gateway artefact is and is not — a
+simulator and catalog map, not live telemetry or a measured SLA — using
+the source’s own honesty-first disclaimer.</li>
+<li>Place the enterprise gateway companion on the engine shelf relative
+to its neighbours, the CMOS protonic pin and the model → lattice → agent
+stack.</li>
+</ol>
+<!-- curriculum-scaffold-start -->
+<h3 id="study-blueprint">Study Blueprint</h3>
+<ul>
+<li><strong>Big idea:</strong> the EGS Lattice-Linear Gateway is a <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>
+construct — one shared incident brief replacing N silo windows — whose
+honest scope is a simulator, not telemetry.</li>
+<li><strong>Quantitative lens:</strong> the worked formalism in <span
+class="citation"
+data-cites="eq:part_III_pdvsa-gateway_model">[@eq:part_III_pdvsa-gateway_model]</span>.</li>
+<li><strong>Data skill:</strong> compute and plot a lattice-linear ramp
+with <code>textbook.models.lattice_linear_profile</code>, and read a
+labeled-simulator token-cost bound from companion empirics.</li>
+<li><strong>Common misconception to repair:</strong> that the PDVSA
+Gateway Ops simulator measures a real oilfield. It files a routing
+grammar and says so — “labeled simulator gains, not measured oilfield
+SLAs” [mendez2026pdvsaGateway].</li>
+<li><strong>Primary lab:</strong> <span class="citation"
+data-cites="sec:lab_part_III_pdvsa-gateway">[@sec:lab_part_III_pdvsa-gateway]</span>.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_III_pdvsa-gateway">[@sec:q_part_III_pdvsa-gateway]</span>.</li>
+<li><strong>Bridge to computation:</strong>
+<code>textbook.models</code>. <!-- curriculum-scaffold-end --></li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Opening Vignette: One incident, two gravities.</strong></p>
+<p>It is morning on an operations floor, and something has gone wrong at
+a plant. On one screen the duty engineer tabs between an ERP window, a
+SCADA console, a legal-risk register, and an export-logistics queue —
+four systems, four partial views of the same event. On the screen beside
+it, the <strong>EGS Lattice-Linear Gateway</strong> simulator holds the
+identical incident on <em>one shared brief</em>: Production, Field,
+Compliance, and Export sit as domain cards on a single console, and
+clicking a card pulls that domain into the brief while the others stay
+lit — “no tab reset” [mendez2026pdvsaGateway]. “Same incident, two
+gravities,” the page captions the pair. The simulator is not live
+telemetry; it is a catalog artefact filed on the <a
+href="#gl:engine-shelf"><strong>engine-shelf</strong></a> as the
+enterprise gateway companion, built so a reader can <em>feel the
+bridge</em> before reading its grammar [mendez2026pdvsaMockup].</p>
+</blockquote>
+<hr />
+<h2 id="orientation">Orientation</h2>
+<p>Two linked artefacts from September 2026 anchor this chapter: the
+<em>PDVSA Gateway Ops</em> special-project simulator
+[mendez2026pdvsaGateway] and its ship-blog mockup note
+[mendez2026pdvsaMockup]. Both stage the same contrast quoted above:
+“today’s fragmented industry management UI — ERP · SCADA · Legal ·
+Logistics” on one side, and on the other the EGS Lattice-Linear Gateway,
+on which Production · Field · Compliance · Export are “joined on one
+incident object” [mendez2026pdvsaGateway]. The simulator’s meta
+description is explicit about its own status: “IBM SNA↔︎TCP/IP is the
+historical rhyme — not live PDVSA telemetry.”</p>
+<p>This chapter treats the gateway the way this book treats every shelf
+entry: as <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>
+to be formalised, not as a device to be believed. The core-constructs
+section gives the console’s three-zone data topology, its lattice-linear
+flow profile, and its nine-takeaway index; a worked example walks the
+“Scenario 1 · Morning brief” scenario numerically; the scope section
+reproduces the source’s <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a> disclaimers
+verbatim. The quantitative lens is deliberately thin — the corpus prints
+no symbolic equation on the simulator page itself — so the worked
+formalism below is a structural model of the console profile,
+implemented as <code>lattice_linear_profile</code> in
+<code>textbook.models</code>.</p>
+<h2 id="the-paper-in-the-corpus">The Paper in the Corpus</h2>
+<p>The gateway papers sit at the enterprise edge of the Infinite Octaves
+engine shelf. The mockup note files the simulator “on the
+<strong>Infinite Octaves engine shelf</strong> as the enterprise gateway
+companion,” and is equally explicit that this filing “does not displace
+the CMOS pin” — the substrate-layer companion treated in <span
+class="citation"
+data-cites="sec:part_III_cmos-protonic">[@sec:part_III_cmos-protonic]</span>
+[mendez2026pdvsaMockup]. The note’s engine-inclusion line reads:
+“AGENT_SYNC sync-stack · Lattice Chat workstream · Infinite Octaves
+dual-lock companion.” The post is billed “<strong>SS Vibelandia</strong>
+— 2026-09-04 — CEO demo · Fair Exchange” [mendez2026pdvsaMockup], a demo
+artefact in the corpus’s <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a> sense:
+takeaways that open their backing papers rather than trading on
+attention.</p>
+<p>Concretely, the artefact ships as [mendez2026pdvsaGateway;
+mendez2026pdvsaMockup]:</p>
+<ul>
+<li><strong>Simulator page</strong> at
+<code>/special-projects/pdvsa-gateway-ops</code>, with mode switches
+Split / Today only / Gateway only and a scenario stepper whose first
+stop is “Scenario 1 · Morning brief.”</li>
+<li><strong>Whitepaper</strong>
+<code>synthobs-pdvsa-gateway-ops-mockup-2026-09</code> on the corpus
+whitepaper surface — the “fleshed paper” the mockup summarises.</li>
+<li><strong>Reference implementation</strong>: re-run with
+<code>npm run research:synthobs-pdvsa-gateway-ops-mockup</code>;
+standalone nest <code>research/synthobs-pdvsa-gateway-ops-mockup/</code>
+holding “empirics E1–E6.”</li>
+<li><strong>GitHub repository</strong>:
+<code>FractiAI/synthobs-pdvsa-gateway-ops-mockup</code>.</li>
+<li><strong>Historical rhyme</strong>: the IBM SNA ↔︎ TCP/IP gateway case
+study, whose designated status is “the <em>historical rhyme</em>, not
+the product name” [mendez2026pdvsaMockup].</li>
+</ul>
+<h2 id="core-constructs-the-gateway-formalised">Core Constructs: The
+Gateway Formalised</h2>
+<h3 id="the-lattice-linear-flow-ramp">The lattice-linear flow ramp</h3>
+<p>The mockup note pins the console’s routing grammar to a single
+constant: “<strong>Honesty first:</strong> … <span
+class="math inline">\(\Phi \approx 1.618\)</span> is Lattice-Linear
+routing grammar” [mendez2026pdvsaMockup]. The constant is the golden
+ratio, <span class="math inline">\(\Phi = (1+\sqrt{5})/2 \approx
+1.6180339887\)</span>, the same fractal constant this book develops in
+<span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>.
+What the gateway does with it is the chapter’s first structural claim,
+and the name is load-bearing: the console profile is
+<em>lattice-linear</em> — linear in the decision step — with <span
+class="math inline">\(\Phi\)</span> entering as the unit of
+accumulation, not as an exponent. Where the corpus’s <a
+href="#gl:octave"><strong>octave</strong></a> growth is exponential
+(<span class="math inline">\(\Omega_n = \Phi^n \Omega_0\)</span> in one
+convention), the gateway’s flow accumulates one domain-join per
+step:</p>
+<p><span class="math display">\[ L_n = n\,r, \qquad n = 1, 2, \ldots, N,
+\]</span> {#eq:part_III_pdvsa-gateway_model}</p>
+<p>implemented as <code>lattice_linear_profile(n_steps, rate)</code> in
+<code>textbook.models</code>, which returns the array <span
+class="math inline">\([r,\, 2r,\, \ldots,\, Nr]\)</span>
+[mendez2026pdvsaGateway]. The parameters appear in <span
+class="citation"
+data-cites="tbl:part_III_pdvsa-gateway_parameters">[@tbl:part_III_pdvsa-gateway_parameters]</span>.</p>
+<table id="tbl:part_III_pdvsa-gateway_parameters">
+<caption>Parameters of the lattice-linear flow ramp.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(n\)</span></td>
+<td>decision-step index — one Gather → Decide → Act cycle</td>
+<td>—</td>
+</tr>
+<tr>
+<td><span class="math inline">\(N\)</span></td>
+<td>ramp length: number of decision steps simulated
+(<code>n_steps</code>)</td>
+<td>count</td>
+</tr>
+<tr>
+<td><span class="math inline">\(r\)</span></td>
+<td>per-step increment (<code>rate</code>); the routing-grammar
+step</td>
+<td>flow units per step</td>
+</tr>
+<tr>
+<td><span class="math inline">\(L_n\)</span></td>
+<td>cumulative gateway flow after step <span
+class="math inline">\(n\)</span>, per <span class="citation"
+data-cites="eq:part_III_pdvsa-gateway_model">[@eq:part_III_pdvsa-gateway_model]</span></td>
+<td>flow units</td>
+</tr>
+</tbody>
+</table>
+<p>We read this as the formal footprint of the console’s interaction
+model: “Click a domain to pull it into the shared brief — the other
+domains stay lit. No tab reset” [mendez2026pdvsaGateway]. Each click is
+one step <span class="math inline">\(n\)</span>; the shared brief
+accumulates joins without ever resetting, which is exactly what a linear
+ramp encodes.</p>
+<h3 id="the-three-zone-data-topology">The three-zone data topology</h3>
+<p>The simulator’s “Where the data lives” panel defines where
+information may sit and what may leave [mendez2026pdvsaGateway]:</p>
+<table id="tbl:part_III_pdvsa-gateway_zones">
+<caption>The three-zone data topology of the EGS Lattice-Linear
+Gateway.</caption>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 40%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr>
+<th>Zone</th>
+<th>Content as printed</th>
+<th>Release rule as printed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Plant systems</td>
+<td>“Secure internal · ERP / SCADA enclosure”</td>
+<td>core state stays inside the enclosure</td>
+</tr>
+<tr>
+<td>Integration bridge</td>
+<td>“Lattice joins domains here”</td>
+<td>the single join point for all domains</td>
+</tr>
+<tr>
+<td>Partners &amp; export</td>
+<td>“Safe summary out · no core dump”</td>
+<td>summaries only, never core state</td>
+</tr>
+</tbody>
+</table>
+<p>The diagram below maps the three zones onto the ops decision cycle
+that the console prints as its strip: “Gather — <em>signals in</em>,”
+“Decide — <em>one next action</em>,” “Act — <em>execute &amp;
+notify</em>” [mendez2026pdvsaGateway].</p>
+<pre class="mermaid"><code>graph LR
+  subgraph Data zones
+    P[Plant systems&lt;br&gt;ERP / SCADA enclosure] --&gt; B[Integration bridge&lt;br&gt;Lattice joins domains here]
+    B --&gt; X[Partners &amp; export&lt;br&gt;safe summary out · no core dump]
+  end
+  subgraph Ops decision cycle
+    G[Gather&lt;br&gt;signals in] --&gt; D[Decide&lt;br&gt;one next action] --&gt; A[Act&lt;br&gt;execute &amp; notify]
+  end
+  P -.-&gt;|signals| G
+  D --&gt;|join on one incident object| B
+  A -.-&gt;|safe summary| X
+  A -.-&gt;|next cycle| G</code></pre>
+<p>The topology is the mechanism behind the simulator’s uptime claim:
+“Enclosure stays protected while the Horizon stays open: SNA Core does
+not dump into every Edge handoff; the gateway mediates continuity”
+[mendez2026pdvsaGateway]. Continuity is mediated at the bridge — the
+middle zone — so neither the enclosure nor the partner boundary has to
+be relaxed for an executive to see one coherent brief.</p>
+<h3 id="the-nine-takeaways-and-the-token-bound">The nine takeaways and
+the token bound</h3>
+<p>The mockup organises the console as “Nine clickable takeaways:
+efficiency · immediacy · harmony · savings · uptime · accuracy ·
+predictions · exploration · new R&amp;D — each → full paper + empirics”
+[mendez2026pdvsaMockup]. <span class="citation"
+data-cites="tbl:part_III_pdvsa-gateway_takeaways">[@tbl:part_III_pdvsa-gateway_takeaways]</span>
+lists all nine with the claims as printed and the whitepaper each card
+opens.</p>
+<table id="tbl:part_III_pdvsa-gateway_takeaways">
+<caption>The nine executive takeaways of the gateway simulator, with
+claims and backing papers as printed on the page.</caption>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 30%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr>
+<th>Takeaway</th>
+<th>Claim as printed</th>
+<th>Backing paper (whitepaper id)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Efficiency</td>
+<td>“One gravity well replaces silo-hopping. Multi-octave routing keeps
+N domains in a single executive thread instead of N ticket queues.”</td>
+<td><code>lattice-token-reduction-proof-2026-07</code></td>
+</tr>
+<tr>
+<td>Immediacy</td>
+<td>“Pointer-first briefs refresh in place — no waiting on batch sync …
+for a 90-second decision.”</td>
+<td><code>synthobs-infinite-octaves-omniversal-lattice-2026-08</code></td>
+</tr>
+<tr>
+<td>Harmony</td>
+<td>“Nested agents under peer-firewall keep … voices coherent after
+domain switches — fixture rhyme: high coherence at K=12.”</td>
+<td><code>synthobs-ibm-sna-tcpip-gateway-omni-lattice-2026-09</code></td>
+</tr>
+<tr>
+<td>Savings</td>
+<td>“Lattice context cost stays under 15% of flat token dumps at N≥6 in
+companion empirics.”</td>
+<td><code>synthobs-lattice-vs-vibe-coding-2026-09</code></td>
+</tr>
+<tr>
+<td>Uptime</td>
+<td>“Enclosure stays protected while the Horizon stays open.”</td>
+<td><code>synthobs-ibm-sna-tcpip-gateway-omni-lattice-2026-09</code></td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td>“Seed·RAG cites pointers to domain sources instead of vibe-window
+paraphrase.”</td>
+<td><code>synthobs-infinite-octaves-omniversal-lattice-2026-08</code></td>
+</tr>
+<tr>
+<td>Predictions</td>
+<td>“MCA (Metabolize → Crystallize → Animate) turns incident noise into
+a next-action band — forecasting as operational rehearsal, not
+prophecy.”</td>
+<td><code>omniversal-nested-agent-lattice-2026-07</code></td>
+</tr>
+<tr>
+<td>Exploration</td>
+<td>“Cross-domain what-ifs stay on one console.”</td>
+<td><code>omniversal-nested-agent-lattice-2026-07</code></td>
+</tr>
+<tr>
+<td>New R&amp;D</td>
+<td>“Caracas template: industrial urgency + local integrator mastery
+(Protokol Sistemas pattern) ships frontier stacks early.”</td>
+<td><code>synthobs-ibm-sna-tcpip-gateway-omni-lattice-2026-09</code></td>
+</tr>
+</tbody>
+</table>
+<p>The savings card carries the chapter’s second quantitative lens. In
+the vocabulary of <span class="citation"
+data-cites="tbl:part_III_pdvsa-gateway_takeaways">[@tbl:part_III_pdvsa-gateway_takeaways]</span>,
+the companion empirics commit the gateway grammar to a context-cost
+bound per domain count <span class="math inline">\(N\)</span>:</p>
+<p><span class="math display">\[
+\frac{C_{\mathrm{lattice}}(N)}{C_{\mathrm{flat}}(N)} &lt; 0.15 \qquad
+\text{for } N \ge 6, \]</span> {#eq:part_III_pdvsa-gateway_tokens}</p>
+<p>with the parameters of <span class="citation"
+data-cites="eq:part_III_pdvsa-gateway_tokens">[@eq:part_III_pdvsa-gateway_tokens]</span>
+given in <span class="citation"
+data-cites="tbl:part_III_pdvsa-gateway_tokens">[@tbl:part_III_pdvsa-gateway_tokens]</span>.</p>
+<table id="tbl:part_III_pdvsa-gateway_tokens">
+<caption>Parameters of the token-cost bound.</caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 38%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(C_{\mathrm{lattice}}(N)\)</span></td>
+<td>gateway context cost with <span class="math inline">\(N\)</span>
+domains joined on the incident object</td>
+<td>tokens</td>
+</tr>
+<tr>
+<td><span class="math inline">\(C_{\mathrm{flat}}(N)\)</span></td>
+<td>context cost of the corresponding flat token dump at <span
+class="math inline">\(N\)</span> domains</td>
+<td>tokens</td>
+</tr>
+<tr>
+<td><span class="math inline">\(N\)</span></td>
+<td>number of domains in the executive thread</td>
+<td>count</td>
+</tr>
+</tbody>
+</table>
+<p>Two readings of <span class="citation"
+data-cites="eq:part_III_pdvsa-gateway_tokens">[@eq:part_III_pdvsa-gateway_tokens]</span>
+are honest and one is not. Honest: it is a labeled-simulator empiric —
+“in companion empirics,” not a theorem, and its numerics live in the
+standalone nest’s E1–E6 rather than on the console page. Also honest: it
+is a design rule of thumb — “invest in gateway grammar, not only more
+tokens” [mendez2026pdvsaGateway]. Not honest: treating it as a measured
+oilfield SLA. The MCA card belongs to the same register: Metabolize →
+Crystallize → Animate is the backing-paper cycle that the console
+renders as Gather → Decide → Act [mendez2026pdvsaMockup], and its
+forecasting posture is “operational rehearsal, not prophecy.”</p>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>The corpus prints no symbolic equations on either gateway page. Both
+<span class="citation"
+data-cites="eq:part_III_pdvsa-gateway_model">[@eq:part_III_pdvsa-gateway_model]</span>
+and <span class="citation"
+data-cites="eq:part_III_pdvsa-gateway_tokens">[@eq:part_III_pdvsa-gateway_tokens]</span>
+are this book’s structural formalisation of statements the sources make
+in prose, chosen so that every number in them traces to a quoted claim.
+When the prose and the equation disagree, the prose wins.</p>
+</blockquote>
+<h2 id="worked-example-the-morning-brief-ramp">Worked Example: The
+Morning-Brief Ramp</h2>
+<p>Scenario 1 of the simulator is “Morning brief”
+[mendez2026pdvsaGateway]. We walk it numerically with the ramp of <span
+class="citation"
+data-cites="eq:part_III_pdvsa-gateway_model">[@eq:part_III_pdvsa-gateway_model]</span>
+at the routing-grammar step: <span class="math inline">\(r = \Phi =
+1.6180339887\)</span> flow units per step, and <span
+class="math inline">\(N = 6\)</span> decision steps — four joins (one
+per domain card) plus two rehearsal steps in which the MCA cycle replays
+the brief as “operational rehearsal, not prophecy”
+[mendez2026pdvsaGateway; mendez2026pdvsaMockup]. The four-domain
+ordering Production → Field → Compliance → Export follows the
+simulator’s card layout; the two-step extension is our interpretation of
+the exploration claim (“Cross-domain what-ifs stay on one console”), not
+a printed number.</p>
+<p>Calling <code>lattice_linear_profile(6, 1.6180339887)</code> in
+<code>textbook.models</code> yields:</p>
+<p><span class="math display">\[ L = [\,1.618034,\; 3.236068,\;
+4.854102,\; 6.472136,\; 8.090170,\; 9.708204\,]. \]</span></p>
+<table>
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 30%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Step <span class="math inline">\(n\)</span></th>
+<th>Console event</th>
+<th style="text-align: right;">Cumulative flow <span
+class="math inline">\(L_n\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Production card pulled into the shared brief</td>
+<td style="text-align: right;">1.618034</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Field card pulled in; Production stays lit</td>
+<td style="text-align: right;">3.236068</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Compliance card pulled in; no tab reset</td>
+<td style="text-align: right;">4.854102</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Export card pulled in — four domains, one incident object</td>
+<td style="text-align: right;">6.472136</td>
+</tr>
+<tr>
+<td>5</td>
+<td>MCA rehearsal: metabolize and crystallize the brief</td>
+<td style="text-align: right;">8.090170</td>
+</tr>
+<tr>
+<td>6</td>
+<td>MCA animate: one next action band issued</td>
+<td style="text-align: right;">9.708204</td>
+</tr>
+</tbody>
+</table>
+<p>Each increment is exactly <span class="math inline">\(\Phi\)</span>;
+the brief never resets, so the flow is the linear ramp of <span
+class="citation"
+data-cites="fig:part_III_pdvsa-gateway">[@fig:part_III_pdvsa-gateway]</span>,
+not an exponential. That linearity is the difference between this
+chapter’s profile and the octave ladders elsewhere in the corpus: adding
+a seventh domain adds <span class="math inline">\(r\)</span> flow units,
+not <span class="math inline">\(r\)</span> multiplied by a growing
+base.</p>
+<p>The same <span class="math inline">\(N = 6\)</span> is the threshold
+at which the token bound of <span class="citation"
+data-cites="eq:part_III_pdvsa-gateway_tokens">[@eq:part_III_pdvsa-gateway_tokens]</span>
+engages: at six domains, the savings card commits the gateway grammar to
+a context cost below <span
+class="math inline">\(0.15\,C_{\mathrm{flat}}(6)\)</span> — if the
+corresponding flat dump would cost 100 token units, the bound allows the
+gateway fewer than 15. And the harmony card’s fixture — “high coherence
+at K=12” nested agents under peer-firewall [mendez2026pdvsaGateway] —
+sits at twice the ramp we just walked: the console’s own numeric
+furniture (N ≥ 6, K = 12, a 90-second decision window) is what a re-run
+of <code>npm run research:synthobs-pdvsa-gateway-ops-mockup</code> and
+its E1–E6 empirics are there to exercise [mendez2026pdvsaMockup].</p>
+<h2 id="scope-and-honesty">Scope and Honesty</h2>
+<p>The gateway papers are unusually explicit about their own epistemic
+status, and this chapter preserves that framing verbatim. The mockup
+note’s disclaimer, in full [mendez2026pdvsaMockup]:</p>
+<blockquote>
+<p><strong>Honesty first:</strong> this is a <em>simulator</em> and
+catalog map — not live PDVSA telemetry or a Protokol Sistemas contract
+audit. <span class="math inline">\(\Phi \approx 1.618\)</span> is
+Lattice-Linear routing grammar. Each takeaway card opens the backing
+paper (math + empirics), not a measured oilfield SLA.</p>
+</blockquote>
+<p>The simulator page echoes it twice: “Labeled simulator gains, not
+measured oilfield SLAs,” and the meta description’s “IBM SNA↔︎TCP/IP is
+the historical rhyme — not live PDVSA telemetry”
+[mendez2026pdvsaGateway]. The rhyme framing matters for how the artefact
+should be cited: “The IBM SNA ↔︎ TCP/IP gateway case study is the
+<em>historical rhyme</em>, not the product name”
+[mendez2026pdvsaMockup].</p>
+<p>Within that scope, the construct is FOR coordination and cataloging:
+one executive thread across <span class="math inline">\(N\)</span>
+domains, pointer-citing retrieval (Seed·RAG) so that “executives see
+what is grounded vs what still needs human confirmation,” and a
+next-action band rather than a forecast [mendez2026pdvsaGateway]. It is
+explicitly NOT: live telemetry, a Protokol Sistemas contract audit, a
+measured SLA, or prophecy. The takeaways’ numerics belong to the
+standalone nest’s E1–E6 empirics, and this book’s <span class="citation"
+data-cites="eq:part_III_pdvsa-gateway_model">[@eq:part_III_pdvsa-gateway_model]</span>
+and <span class="citation"
+data-cites="eq:part_III_pdvsa-gateway_tokens">[@eq:part_III_pdvsa-gateway_tokens]</span>
+inherit exactly that status: structural models of printed prose, not
+measurements.</p>
+<h2 id="connections">Connections</h2>
+<p><strong>Beside on the shelf: the CMOS pin.</strong> The mockup is
+careful that the gateway’s engine-shelf filing “does not displace the
+CMOS pin” [mendez2026pdvsaMockup]. The substrate-layer companion — the
+octaves-per-substrate tiers of <span class="citation"
+data-cites="sec:part_III_cmos-protonic">[@sec:part_III_cmos-protonic]</span>,
+visualised in <span class="citation"
+data-cites="fig:part_III_cmos-protonic">[@fig:part_III_cmos-protonic]</span>
+— is the <a href="#gl:cmos-protonic"><strong>cmos-protonic</strong></a>
+entry the gateway sits next to on the <a
+href="#gl:silicon-shelf"><strong>silicon-shelf</strong></a>, not one it
+replaces [mendez2026cmosProtonic]. The two filings are dual-lock
+companions: gateway grammar above, substrate pin below.</p>
+<p><strong>Up the stack.</strong> The gateway is an agent-layer artefact
+whose routing grammar is fixed at the lattice layer — precisely the
+model → lattice → agent ascent developed in <span class="citation"
+data-cites="sec:part_III_moving-up-stack">[@sec:part_III_moving-up-stack]</span>
+and its step plot <span class="citation"
+data-cites="fig:part_III_moving-up-stack">[@fig:part_III_moving-up-stack]</span>
+[mendez2026stack]. Read in that vocabulary, the console joins domains at
+the lattice layer (the integration bridge) while the desks on the call —
+Sources desk, Field &amp; Production, Compliance, Partner / Export
+[mendez2026pdvsaGateway] — are agent-layer roles.</p>
+<p><strong>Across the corpus.</strong> The nine-takeaway index and the
+“each → full paper + empirics” wiring exemplify the <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>
+grammar of [mendez2026catalog] applied to an executive console; the
+peer-firewall and Seed·RAG mechanisms point forward to the nested-agent
+material assembled in the part’s synthesis chapters. For the ramp
+itself, the natural continuations are the lab and question bank attached
+to this chapter, which re-derive <span class="citation"
+data-cites="eq:part_III_pdvsa-gateway_model">[@eq:part_III_pdvsa-gateway_model]</span>
+by hand.</p>
+<h2 id="summary">Summary</h2>
+<p>The EGS Lattice-Linear Gateway replaces N siloed management windows
+with one shared incident brief: four domain cards joined on a single
+console, where clicking a domain pulls it in “while the others stay lit
+— no tab reset” [mendez2026pdvsaGateway]. Its data lives in three zones
+— plant enclosure, integration bridge, partner boundary — with
+summaries, never core state, crossing outward, and its executive surface
+is nine clickable takeaways, each opening its backing paper and
+empirics. The book formalises the console’s profile as the linear ramp
+<span class="math inline">\(L_n = n\,r\)</span> of <span
+class="citation"
+data-cites="eq:part_III_pdvsa-gateway_model">[@eq:part_III_pdvsa-gateway_model]</span>
+with <span class="math inline">\(r = \Phi \approx 1.618\)</span> as
+routing grammar, implemented as <code>lattice_linear_profile</code> in
+<code>textbook.models</code>, and reads the savings card as the
+token-cost bound of <span class="citation"
+data-cites="eq:part_III_pdvsa-gateway_tokens">[@eq:part_III_pdvsa-gateway_tokens]</span>
+at <span class="math inline">\(N \ge 6\)</span>. Every one of these
+numbers is labeled-simulator furniture: “this is a <em>simulator</em>
+and catalog map — not live PDVSA telemetry or a Protokol Sistemas
+contract audit” [mendez2026pdvsaMockup]. The artefact files on the
+engine shelf as the enterprise gateway companion, beside — not instead
+of — the CMOS pin of <span class="citation"
+data-cites="sec:part_III_cmos-protonic">[@sec:part_III_cmos-protonic]</span>.</p>
+<h2 id="key-terms">Key Terms</h2>
+<p><a href="#gl:lattice-linear"><strong>lattice-linear</strong></a>, <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>,
+<a href="#gl:engine-shelf"><strong>engine-shelf</strong></a>, <a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a>, <a
+href="#gl:honesty-first"><strong>honesty-first</strong></a>, <a
+href="#gl:cmos-protonic"><strong>cmos-protonic</strong></a>, <a
+href="#gl:silicon-shelf"><strong>silicon-shelf</strong></a>, <a
+href="#gl:octave"><strong>octave</strong></a>.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><strong>Simulator page</strong> — <a
+href="https://www.ssvibelandiaquestfest24x365.com/special-projects/pdvsa-gateway-ops"
+class="uri">https://www.ssvibelandiaquestfest24x365.com/special-projects/pdvsa-gateway-ops</a>
+[mendez2026pdvsaGateway]: the interactive console this chapter
+formalises; the meta description itself carries the honesty-first
+framing.</li>
+<li><strong>Ship-blog mockup note</strong> — <a
+href="https://www.ssvibelandiaquestfest24x365.com/ship-blog/pdvsa-gateway-ops-mockup"
+class="uri">https://www.ssvibelandiaquestfest24x365.com/ship-blog/pdvsa-gateway-ops-mockup</a>
+[mendez2026pdvsaMockup]: the filing note with the standalone nest
+(<code>research/synthobs-pdvsa-gateway-ops-mockup/</code>, empirics
+E1–E6) and GitHub repository <a
+href="https://github.com/FractiAI/synthobs-pdvsa-gateway-ops-mockup"
+class="uri">https://github.com/FractiAI/synthobs-pdvsa-gateway-ops-mockup</a>.</li>
+<li><span class="citation"
+data-cites="mendez2026catalog">@mendez2026catalog</span> — the
+catalog-architecture grammar that the gateway’s nine-takeaway,
+each-card-opens-its-paper wiring instantiates.</li>
+<li><span class="citation"
+data-cites="mendez2026cmosProtonic">@mendez2026cmosProtonic</span> — the
+substrate-layer pin that the gateway’s dual-lock companion filing
+explicitly does not displace; see <span class="citation"
+data-cites="sec:part_III_cmos-protonic">[@sec:part_III_cmos-protonic]</span>.</li>
+<li><span class="citation"
+data-cites="mendez2026stack">@mendez2026stack</span> — the model →
+lattice → agent ascent along which the gateway’s grammar (lattice layer)
+and desks (agent layer) separate; see <span class="citation"
+data-cites="sec:part_III_moving-up-stack">[@sec:part_III_moving-up-stack]</span>.</li>
+</ul>
+<h2 id="practice">Practice</h2>
+<ul>
+<li><strong>Lab:</strong> <span class="citation"
+data-cites="sec:lab_part_III_pdvsa-gateway">[@sec:lab_part_III_pdvsa-gateway]</span>
+— re-run
+<code>npm run research:synthobs-pdvsa-gateway-ops-mockup</code>, then
+compute <code>lattice_linear_profile</code> values by hand and check
+them against the tested function.</li>
+<li><strong>Question bank:</strong> <span class="citation"
+data-cites="sec:q_part_III_pdvsa-gateway">[@sec:q_part_III_pdvsa-gateway]</span>
+— recall through synthesis on the three-zone topology, the ramp, and the
+honesty-first scope.</li>
+<li>Re-plot the morning-brief ramp for a fifth domain join and state, in
+one sentence each, which printed claims the extension touches
+(exploration) and which it must not touch (measured SLAs).</li>
+<li>Given <span class="math inline">\(C_{\mathrm{flat}}(8) =
+240\)</span> token units, use <span class="citation"
+data-cites="eq:part_III_pdvsa-gateway_tokens">[@eq:part_III_pdvsa-gateway_tokens]</span>
+to state the largest context cost the gateway grammar may claim at eight
+domains, and identify the E1–E6 empirics that would have to back such a
+claim.</li>
+<li>Draw the three-zone topology of <span class="citation"
+data-cites="tbl:part_III_pdvsa-gateway_zones">[@tbl:part_III_pdvsa-gateway_zones]</span>
+from memory, label each zone’s release rule, and mark where the “no core
+dump” guarantee binds.</li>
+</ul>
+</main>
+</body>
+</html>

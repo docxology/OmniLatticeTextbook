@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>unit_intro.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:part_I_intro">Part I: Foundations: Constants, Primes, and
+Rhyme</h1>
+<p>Part I lays the foundation of the whole book: a single filing
+constant, a single integer scaffold, and a single motion grammar, all
+drawn from the Infinite Octaves engine papers of the SS Vibelandia ship
+blog [mendez2026catalog]. The constant is El Gran Sol’s Fractal constant
+— <span class="math inline">\(\Phi \approx 1.618\)</span>, the <a
+href="#gl:golden-ratio"><strong>golden-ratio</strong></a> — which the
+corpus stamps on its octave ladder, its prime scaffold, its digit
+duality, and its biological-geometry filings alike. The scaffold is the
+prime partition: sole-even prime 2 as the <a
+href="#gl:binary-dyad-anchor"><strong>binary-dyad-anchor</strong></a>,
+odd primes as <a
+href="#gl:irreducible-minimum-set"><strong>irreducible-minimum-set</strong></a>s
+[mendez2026primeParity]. The motion grammar is the <a
+href="#gl:holographic-rhyme"><strong>holographic-rhyme</strong></a>
+family of filings, in which recursion under <span
+class="math inline">\(\Phi\)</span> becomes a repeating, self-similar,
+self-correcting, recursive “rhyme” rather than a static shape
+[mendez2026holographicRhyme].</p>
+<p>One framing rule governs every page of this part. The corpus
+self-describes as <a
+href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>
+under a <a href="#gl:honesty-first"><strong>honesty-first</strong></a>
+scope disclaimer: these are filing labels, protocol grammar, and catalog
+math — not established physics, not derivations of physical constants
+from <span class="math inline">\(\Phi\)</span>, and not clinical or
+genetic claims. Each chapter therefore pairs every corpus claim with its
+source citation and restates the source’s own disclaimers (<a
+href="#gl:fair-exchange"><strong>fair-exchange</strong></a> clause
+included). Read this part the way its sources ask to be read: as the
+rigorous study of a self-consistent filing system.</p>
+<h2 id="roadmap">Roadmap</h2>
+<p>The part contains the following chapters:</p>
+<ul>
+<li><em>El Gran Sol’s Fractal Constant</em> — <span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>.
+The synthesis spine: the constant <span class="math inline">\(\Phi
+\approx 1.618\)</span> as it keys the octave recursion sketch <span
+class="math inline">\(\Omega_n = \Phi_n \cdot \Omega_0\)</span> (both
+printed conventions filed), the digit-filing duality of Proton Space
+(leading 1) and Electron Theater (structural 2), and the
+palindrome-scaling law <span class="math inline">\(P_n = P_0 \cdot
+\Phi^n\)</span> from the Y-chromosome manifestation paper
+[mendez2026primeParity; mendez2026protonTheater; mendez2026yChromosome].
+Start here.</li>
+<li><em>Prime-Parity: The Sole-Even Anchor</em> — <span class="citation"
+data-cites="sec:part_I_prime-parity">[@sec:part_I_prime-parity]</span>.
+The integer scaffold in depth: why 2 is the odd one out, how odd primes
+serve as irreducible minimum sets, and how the parity partition feeds
+the stack — including the cross-links to the Prime Hourglass, the SI
+Irreducible Minimum, and the CMOS/protonic binary shelf
+[mendez2026primeParity].</li>
+<li><em>Holographic Rhyme: The Four-Pillar Fractal</em> — <span
+class="citation"
+data-cites="sec:part_I_holographic-rhyme">[@sec:part_I_holographic-rhyme]</span>.
+The motion grammar: under <span class="math inline">\(\Phi \approx
+1.618\)</span>, a fractal files as a holographic rhyme — repeating ·
+self-similar · self-correcting · recursive — locked as four catalog
+pillars, with explicit disclaimers of Mandelbrot-retirement and
+measured-ECC readings [mendez2026holographicRhyme].</li>
+<li><em>Multi-Dimensional Holographic Rhyme</em> — <span
+class="citation"
+data-cites="sec:part_I_multidimensional-rhyme">[@sec:part_I_multidimensional-rhyme]</span>.
+The cross-scale extension: xD±yD summation files holography as
+bidirectional Infinite Octave encoding — a catalog contrast to static
+boundary-only screens — expanding the four-pillar grammar across scales
+[mendez2026mdRhyme].</li>
+<li><em>Topology of the Void: Zero as Equilibrium</em> — <span
+class="citation"
+data-cites="sec:part_I_topology-void">[@sec:part_I_topology-void]</span>.
+The balance node: zero (<span class="math inline">\(0\)</span>) files as
+the dynamic equilibrium between Proton Space (1) and Electron Theater
+(2) — the null-space pivot, developed through odd-function phase
+cancellation and a null-space capacity fixture
+[mendez2026topologyVoid].</li>
+<li><em>The Higgs Gate: Mass and the Shared Now</em> — <span
+class="citation"
+data-cites="sec:part_I_higgs-awareness">[@sec:part_I_higgs-awareness]</span>.
+The gate at the end of the foundation: cosmic velocity, particle mass,
+and the feeling of being here filed through one “squeeze” story — the
+magnet falling through a copper pipe as guest metaphor — with the
+Standard Model explicitly left standing [mendez2026higgsGate].</li>
+</ul>
+<h2 id="how-to-use-this-part">How to use this part</h2>
+<blockquote>
+<p><strong>How to use this part.</strong> Read the chapters in order the
+first time: the constant (<span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>)
+defines the notation, the prime scaffold (<span class="citation"
+data-cites="sec:part_I_prime-parity">[@sec:part_I_prime-parity]</span>)
+defines the integers, and the rhyme chapters (<span class="citation"
+data-cites="sec:part_I_holographic-rhyme">[@sec:part_I_holographic-rhyme]</span>,
+<span class="citation"
+data-cites="sec:part_I_multidimensional-rhyme">[@sec:part_I_multidimensional-rhyme]</span>)
+reuse both before the void (<span class="citation"
+data-cites="sec:part_I_topology-void">[@sec:part_I_topology-void]</span>)
+and the gate (<span class="citation"
+data-cites="sec:part_I_higgs-awareness">[@sec:part_I_higgs-awareness]</span>)
+complete the foundation. Prerequisites are minimal — comfort with
+exponents, ratios, and basic prime arithmetic; the book computes every
+formalism with tested functions in <code>textbook.models</code>
+(<code>phi_powers</code>, <code>phi_fibonacci</code>,
+<code>octave_term</code>, <code>prime_parity_partition</code>,
+<code>holographic_rhyme_field</code>, <code>xd_yd_combine</code>, and
+<code>transduction_brake</code>), so no corpus arithmetic is ever
+retyped by hand. Each chapter has a matching lab and question bank; the
+worked exemplar (<span class="citation"
+data-cites="sec:part_I_fractal-constant">[@sec:part_I_fractal-constant]</span>)
+shows the expected depth of engagement. If you read only one chapter,
+read the spine — and keep its honesty-first framing with you throughout
+the rest of the book.</p>
+</blockquote>
+</main>
+</body>
+</html>

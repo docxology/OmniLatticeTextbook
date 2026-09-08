@@ -1,0 +1,7 @@
+graph TD
+  A["Printed sketch: Ωn = Φn · Ω0 (ambiguous)"] --> B{"Φ carries an<br/>exponent or a subscript?"}
+  B -->|"exponent: Φ^n"| C["Ω_n = Φ^n · Ω_0<br/>octave_term(omega0, n, 'exponent')"]
+  B -->|"subscript: φ_fib(n)"| D["Ω_n = φ_fib(n) · Ω_0<br/>octave_term(omega0, n, 'subscript')"]
+  C --> E["Both filed under Φ ≈ 1.618 —<br/>no corpus adjudication"]
+  D --> E
+  E --> F["Feeds: digit filing, prime ladder,<br/>palindrome scaling"]

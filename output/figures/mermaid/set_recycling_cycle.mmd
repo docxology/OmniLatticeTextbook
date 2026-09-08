@@ -1,0 +1,5 @@
+stateDiagram-v2
+  [*] --> Active: allocate
+  Active --> Parked: idle
+  Parked --> Recycled: collect
+  Recycled --> Active: reuse

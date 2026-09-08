@@ -46,7 +46,7 @@ def _write_contract_satisfying_chapter(path: Path) -> None:
 
 
 def test_run_manuscript_audit_flags_orphan_part_markdown(tmp_path):
-    manuscript = tmp_path / "manuscript"
+    manuscript = tmp_path / "docs" / "manuscript"
     part = manuscript / "part_I"
     part.mkdir(parents=True)
     _write_contract_satisfying_chapter(part / "a.md")
@@ -56,7 +56,7 @@ def test_run_manuscript_audit_flags_orphan_part_markdown(tmp_path):
 
 
 def test_run_manuscript_audit_skips_non_directory_part_glob(tmp_path):
-    manuscript = tmp_path / "manuscript"
+    manuscript = tmp_path / "docs" / "manuscript"
     part = manuscript / "part_I"
     part.mkdir(parents=True)
     (manuscript / "labs" / "part_I").mkdir(parents=True)
@@ -73,7 +73,7 @@ def test_run_manuscript_audit_skips_non_directory_part_glob(tmp_path):
 def test_run_manuscript_audit_flags_missing_reference_appendix(tmp_path):
     from textbook.audit import run_manuscript_audit
 
-    manuscript = tmp_path / "manuscript"
+    manuscript = tmp_path / "docs" / "manuscript"
     part = manuscript / "part_I"
     part.mkdir(parents=True)
     appendices = manuscript / "appendices"
@@ -99,7 +99,7 @@ def test_run_manuscript_audit_flags_missing_reference_appendix(tmp_path):
 
 def test_run_manuscript_audit_reports_missing_companion_stubs_when_complete(tmp_path):
     """With require_complete, an incomplete lab/question is reported."""
-    manuscript = tmp_path / "manuscript"
+    manuscript = tmp_path / "docs" / "manuscript"
     part = manuscript / "part_I"
     part.mkdir(parents=True)
     labs = manuscript / "labs" / "part_I"

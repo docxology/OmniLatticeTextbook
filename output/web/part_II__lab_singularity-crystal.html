@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>lab_singularity-crystal.md.web</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <script data-template-mathjax-config>
+window.MathJax = window.MathJax || {};
+window.MathJax.chtml = Object.assign({}, window.MathJax.chtml, {
+  fontURL: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/woff2",
+  dynamicPrefix: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-newcm-font@4.0.0/chtml/dynamic"
+});
+window.normalizeTemplateMathJaxAria = function () {
+  document.querySelectorAll("mjx-speech[aria-roledescription]").forEach(function (node) {
+    var roleDescription = node.getAttribute("aria-roledescription") || "";
+    if (/[-]/.test(roleDescription)) {
+      node.setAttribute("aria-roledescription", "mathematical expression");
+    }
+  });
+};
+window.MathJax.startup = Object.assign({}, window.MathJax.startup, {
+  ready: function () {
+    window.MathJax.startup.defaultReady();
+    window.MathJax.startup.promise.then(window.normalizeTemplateMathJaxAria);
+  }
+});
+</script>
+<script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js"
+  type="text/javascript" integrity="sha384-2BWc4dVaHADUocwKrUrK9u3iDwHxVMKXWEcoRmUkXYSFKhAsgVAYClu9ydNuo5Oz" crossorigin="anonymous"></script>
+
+<link data-template-favicon rel="icon" href="favicon.ico">
+
+<style>
+:root {
+  --brand-1: #5b6ee0;
+  --web-bg: #f8f8f8;
+  --web-surface: #ffffff;
+  --web-text: #2c3e50;
+  --web-border: #bdc3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-1: #7e8ce8;
+    --web-bg: #0f1420;
+    --web-surface: #161c2b;
+    --web-text: #e6eaf2;
+    --web-border: #2a3447;
+  }
+}
+.theorem-box {
+  border-left: 4px solid var(--brand-1);
+  background: var(--web-surface);
+  padding: 0.6em 1em;
+  margin: 1.1em 0;
+  border-radius: 0 4px 4px 0;
+}
+.theorem-box.definition { border-left-style: dashed; }
+.theorem-box > p:first-child { margin-top: 0; }
+.theorem-box > p:last-child { margin-bottom: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Liberation Serif', 'Times New Roman', serif;
+  line-height: 1.6;
+  width: min(100%, 800px);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: visible;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  transform: translateY(-120%);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.skip-link:visited {
+  color: #ffffff;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  figure img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background-color: #ecf0f1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Liberation Mono', 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+figure {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+th, td {
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #b91c1c;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+  overflow-wrap: anywhere;
+}
+
+a:visited {
+  color: #8f1d1d;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 3px;
+}
+
+.toc {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.toc a,
+#TOC a {
+  color: #b91c1c;
+  display: inline-block;
+  min-height: 28px;
+  line-height: 1.5;
+  padding-block: 2px;
+}
+
+.toc li,
+#TOC li {
+  margin-block: 1px;
+}
+
+.math {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem;
+}
+
+.figure {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* A reading column keeps prose comfortable, but dense scientific figures need
+   a larger inspection surface.  The rendered image remains responsive and the
+   explicit link opens its source-resolution asset without changing the PDF. */
+.figure-full-size-link {
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.figure-full-size-link img {
+  cursor: zoom-in;
+  margin-bottom: 0.45rem;
+}
+
+.figure-full-size-label {
+  color: #1f6f8b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.figure-full-size-link:focus-visible {
+  outline: 3px solid #1f6f8b;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1000px) {
+  .figure-full-size-link {
+    left: 50%;
+    max-width: none;
+    position: relative;
+    transform: translateX(-50%);
+    width: min(1080px, calc(100vw - 3rem));
+  }
+}
+
+.figure-caption {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<main id="main-content" tabindex="-1">
+<h1 id="sec:lab_part_II_singularity-crystal">Lab — The Holographic
+Singularity Crystal: Net Zero and Node k = 0</h1>
+<!-- chapter-metadata-badge -->
+<blockquote>
+<p>Lab · 60 min · Materials: notebook, calculator (or
+<code>textbook.models</code>), Python 3 and npm for the corpus reference
+suite</p>
+</blockquote>
+<h2 id="objectives">Objectives</h2>
+<p>After this lab you will be able to (1) run the corpus’s own reference
+implementation of the Zero-Octave Vault Engine and interpret its
+fixtures, (2) compute a net-zero residual by hand and confirm it against
+the tested <code>textbook.models.net_zero_balance</code> function, and
+(3) verify the catalog-algebra crystal baseline <span
+class="math inline">\(0/0 \mapsto \Phi^{0} = 1\)</span> at Node <span
+class="math inline">\(k = 0\)</span> using the octave identity of <span
+class="citation"
+data-cites="eq:part_II_singularity-crystal_nodek0">[@eq:part_II_singularity-crystal_nodek0]</span>
+in <span class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>.</p>
+<h2 id="background">Background</h2>
+<p>Linked chapter: <span class="citation"
+data-cites="sec:part_II_singularity-crystal">[@sec:part_II_singularity-crystal]</span>.
+The chapter established three constructs: Net Zero as an active
+equilibrium with residual <span class="math inline">\(R = 0\)</span>
+(<span class="citation"
+data-cites="eq:part_II_singularity-crystal_netzero">[@eq:part_II_singularity-crystal_netzero]</span>),
+the crystal resolution <span class="math inline">\(\frac{0}{0} \mapsto
+\Phi^0 = 1\)</span> as <em>catalog algebra</em> (<span class="citation"
+data-cites="eq:part_II_singularity-crystal_crystal">[@eq:part_II_singularity-crystal_crystal]</span>),
+and Node <span class="math inline">\(k = 0\)</span> — the Awakening
+Phase Gate — as the Zero-Octave locus hosting the Net Zero mock-field
+cancel lock, the 0/0 crystal resolution array, and the Prime Vault
+diagnostic [mendez2026zeroOctave]. The corpus ships a runnable reference
+for exactly these fixtures: the Zero-Octave Vault Engine at
+<code>research/synthobs-holographic-singularity-crystal/reference/zero_octave_singularity_crystal.py</code>,
+part of the standalone suite
+<code>FractiAI/synthobs-holographic-singularity-crystal</code>
+[mendez2026zeroOctave]. Remember the corpus’s own scope note before you
+run anything: the fixtures “map NaN at the origin to Φ⁰ = 1 — that is
+<em>catalog algebra</em>, not singularity QED” [mendez2026zeroOctave].
+You are inspecting a filing system, not redefining division.</p>
+<h2 id="procedure">Procedure</h2>
+<ol type="1">
+<li><strong>Run the corpus suite.</strong> From the repository root of
+the standalone suite, execute
+<code>npm run research:synthobs-holographic-singularity-crystal</code>
+and then the Python reference fixture directly:
+<code>python3 research/synthobs-holographic-singularity-crystal/reference/zero_octave_singularity_crystal.py</code>
+[mendez2026zeroOctave]. Before running, <em>predict</em> what each
+fixture will report: the cancel lock should assert a zero residual; the
+resolution array should map the origin (<code>NaN</code>) to <span
+class="math inline">\(1\)</span>; the Prime Vault diagnostic should
+report its prime fixtures (the book’s standard set: <span
+class="math inline">\(3, 5, 7, 11, 13, 17, 19, 23, 29, 31\)</span>).
+Record your predictions first — the point of the lab is prediction, then
+observation.</li>
+<li><strong>Compute a net-zero residual by hand.</strong> Take inflows
+<span class="math inline">\([3, 5, 8, 13]\)</span> and outflows <span
+class="math inline">\([16, 13]\)</span>. Sums: <span
+class="math inline">\(3+5+8+13 = 29\)</span> and <span
+class="math inline">\(16+13 = 29\)</span>. Residual per <span
+class="citation"
+data-cites="eq:part_II_singularity-crystal_netzero">[@eq:part_II_singularity-crystal_netzero]</span>:
+<span class="math inline">\(R = 29 - 29 = 0\)</span>. Now break it:
+inflows <span class="math inline">\([3, 5]\)</span> against outflows
+<span class="math inline">\([16]\)</span> give <span
+class="math inline">\(R = 8 - 16 = -8\)</span>.</li>
+<li><strong>Verify against the backbone.</strong> Check both hand
+results with the tested function:
+<code>net_zero_balance(inflows=[3, 5, 8, 13], outflows=[16, 13])</code>
+→ <code>0</code>
+<code>net_zero_balance(inflows=[3, 5], outflows=[16])</code> →
+<code>-8</code></li>
+<li><strong>Check the crystal baseline at the node.</strong> By <span
+class="citation"
+data-cites="eq:part_II_singularity-crystal_nodek0">[@eq:part_II_singularity-crystal_nodek0]</span>,
+the zeroth octave is the identity: call
+<code>octave_term(omega0, 0, "exponent")</code> for any positive
+<code>omega0</code> you like (say <span
+class="math inline">\(2.0\)</span>) and confirm it returns
+<code>omega0</code> unchanged — because <span
+class="math inline">\(\Omega_0 = \Phi^0 \Omega_0 = \Omega_0\)</span>.
+Then confirm by hand that <span class="math inline">\(\Phi^0 =
+1\)</span> for <span class="math inline">\(\Phi \approx
+1.6180339887\)</span>: any nonzero base to the power zero is <span
+class="math inline">\(1\)</span>, which is precisely the value the
+fixtures assign to the zero boundary [mendez2026zeroOctave].</li>
+</ol>
+<h2 id="analysis">Analysis</h2>
+<p>Summarise your findings as a three-row fixture table of your own:
+fixture name (cancel lock / resolution array / Prime Vault diagnostic),
+predicted behaviour, observed behaviour, and match/mismatch. Compute the
+mean and spread of your two residuals with
+<code>textbook.models.descriptive_statistics</code> — you should see
+values centred to straddle <span class="math inline">\(0\)</span> (<span
+class="math inline">\(+0\)</span> and <span
+class="math inline">\(-8\)</span>), which is the quantitative signature
+of an <em>unlocked</em> versus <em>locked</em> ledger: zero is achieved
+by cancellation, not granted by default. If any fixture disagrees with
+your prediction, re-read the honesty clause of [mendez2026zeroOctave]
+before concluding anything: the fixtures implement catalog algebra, and
+their outputs are filing behaviour, not physical measurements.</p>
+<h2 id="computational-workflow">Computational Workflow</h2>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textbook.models <span class="im">import</span> net_zero_balance, octave_term</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Fixture 1: the cancel lock (Net Zero equilibrium)</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>locked <span class="op">=</span> net_zero_balance(inflows<span class="op">=</span>[<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">13</span>], outflows<span class="op">=</span>[<span class="dv">16</span>, <span class="dv">13</span>])   <span class="co"># -&gt; 0</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>broken <span class="op">=</span> net_zero_balance(inflows<span class="op">=</span>[<span class="dv">3</span>, <span class="dv">5</span>], outflows<span class="op">=</span>[<span class="dv">16</span>])              <span class="co"># -&gt; -8</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;locked residual:&quot;</span>, locked, <span class="st">&quot;| broken residual:&quot;</span>, broken)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Fixture 2: the crystal baseline at Node k = 0</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Omega_0 = Phi^0 * Omega_0 = Omega_0  (identity octave)</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(octave_term(<span class="fl">2.0</span>, <span class="dv">0</span>, <span class="st">&quot;exponent&quot;</span>))                                <span class="co"># -&gt; 2.0</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Catalog-algebra resolution at the zero boundary: 0/0 -&gt; Phi^0 = 1</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="fl">1.6180339887</span> <span class="op">**</span> <span class="dv">0</span>)                                              <span class="co"># -&gt; 1.0</span></span></code></pre></div>
+<h2 id="reflection">Reflection</h2>
+<ul>
+<li>The corpus resolves <span class="math inline">\(0/0\)</span> to
+<span class="math inline">\(\Phi^0 = 1\)</span> <em>as a filing
+rule</em> while ordinary analysis calls the form indeterminate. Write
+two sentences on why these positions are compatible rather than
+contradictory.</li>
+<li>Which of the three Node <span class="math inline">\(k = 0\)</span>
+fixtures would you rely on to confirm the node is live before routing
+work through it, and why does a zero residual alone not suffice?</li>
+<li>The parent paper calls <span class="math inline">\(\Phi \approx
+1.618\)</span> “the golden key of Infinite Octave Mode”
+[mendez2026singularityCrystal]. In what sense does the identity <span
+class="math inline">\(\Omega_0 = \Phi^0 \Omega_0\)</span> justify
+calling Node <span class="math inline">\(k = 0\)</span> the
+<em>Zero-Octave</em> locus?</li>
+</ul>
+</main>
+</body>
+</html>
