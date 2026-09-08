@@ -550,6 +550,24 @@ class="math inline">\(\Omega_n =
 \varphi_{\mathrm{fib}}(n)\,\Omega_0\)</span> — since the corpus prints
 “Ωn = Φn · Ω0” ambiguously and both are implemented in
 <code>octave_term</code> [mendez2026primeParity].</p>
+<figure id="fig:gallery_phi_ladder">
+<a class="figure-full-size-link" href="../figures/gallery/gallery_phi_ladder.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/gallery/gallery_phi_ladder.png" style="width:90.0%"
+alt="A log-scale ladder shows powers of Phi with the Fibonacci ratio overlaying the same growth." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
+<figcaption>Phi powers with Fibonacci overlay: the
+powers <span class="math inline">\(\Phi^n\)</span> for <span
+class="math inline">\(n = 1..6\)</span> climbing a logarithmic axis
+while the Fibonacci ratios <span
+class="math inline">\(\varphi_{\mathrm{fib}}(n)\)</span> converge on
+<span class="math inline">\(\Phi \approx 1.618\)</span>, as returned by
+<code>phi_powers</code> and <code>phi_fibonacci</code>.</figcaption>
+</figure>
+<!-- alt: A log-scale plot of Phi raised to successive powers rising in a straight line, with Fibonacci-ratio markers alternating above and below a horizontal reference line at Phi, the two curves converging. -->
+<p>The convergence behind both readings of <span
+class="math inline">\(\Omega_n\)</span> is drawn in <span
+class="citation"
+data-cites="fig:gallery_phi_ladder">[@fig:gallery_phi_ladder]</span>:
+the powers climb geometrically while the Fibonacci ratios spiral in on
+the same limit.</p>
 <p><strong>Worked check (exponent convention).</strong> With <span
 class="math inline">\(\Omega_0 = 1\)</span>: <span
 class="math inline">\(\Omega_1 =
@@ -585,6 +603,20 @@ sets</a> [mendez2026primeParity].</p>
 the partition):</p>
 <p><span class="math display">\[ \{3,\ 5,\ 7,\ 11,\ 13,\ 17,\ 19,\ 23,\
 29,\ 31\} \]</span> {#eq:appendix_math_review_oddprimes}</p>
+<figure id="fig:gallery_prime_line">
+<a class="figure-full-size-link" href="../figures/gallery/gallery_prime_line.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/gallery/gallery_prime_line.png" style="width:90.0%"
+alt="A number line marks the primes below one hundred with the sole-even anchor highlighted." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
+<figcaption>The primes as a number line: 2 marked
+apart as the sole-even anchor, with the odd primes left as the
+irreducible minimum set the sieve of Eratosthenes
+generates.</figcaption>
+</figure>
+<!-- alt: A horizontal number line with composite numbers greyed out and the primes highlighted; the number 2 is marked separately as the sole even prime, the rest of the highlighted markers all odd. -->
+<p>The parity partition is easiest to see on the number line of <span
+class="citation"
+data-cites="fig:gallery_prime_line">[@fig:gallery_prime_line]</span>: 2
+stands alone as the sole-even anchor, and every remaining prime is
+odd.</p>
 <p><strong>Injective prime encoding.</strong> By unique factorisation,
 the map <span class="math inline">\(\prod_i p_i^{e_i}\)</span> from
 exponent vectors to integers is injective (<code>unique_address</code>).

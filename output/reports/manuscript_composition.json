@@ -1,9 +1,9 @@
 {
   "algorithm": "shared-combined-markdown-v1",
-  "binding_sha256": "03923b5aad0092b3e31eea6c4ab8b6b2398af4cb0c8dbdf0091e4a2266113ded",
+  "binding_sha256": "2e9a016a0c525525c4fde839dbadb1b8cc0a55a5156d5880a2fe701c45517b8a",
   "combined_path": "output/web/_combined_manuscript.md",
-  "combined_sha256": "873646ca137cac293ee1e0e3d3b725e3f9ded3a931942163b705fd517a4bc928",
-  "combined_size_bytes": 1123491,
+  "combined_sha256": "52fbdd87119b276e83b185c5a7253db6a971925bb247fc8dfad4b5d25d7fc992",
+  "combined_size_bytes": 1128582,
   "input_root_kind": "hydrated",
   "ordered_inputs": [
     {
@@ -21,8 +21,8 @@
     {
       "ordinal": 3,
       "path": "output/manuscript/part_0/unit_intro.md",
-      "sha256": "8ae84d8275a434cc420b5ee99ba05ed5ea116f05c2171a3601b0867ca7975f44",
-      "size_bytes": 4039
+      "sha256": "28afac83030d5a43a5731142fed6c680846615345f774603d0ba58f6902f6261",
+      "size_bytes": 4787
     },
     {
       "ordinal": 4,
@@ -57,8 +57,8 @@
     {
       "ordinal": 9,
       "path": "output/manuscript/part_I/unit_intro.md",
-      "sha256": "6092b2371173a8f8cd3edd42f2f0ea59cb69a0d554111a5170b825fa760dbd5f",
-      "size_bytes": 5135
+      "sha256": "9cca9fe0b53d73ddc206f653257b883aa87f959355d0a5ea342b496ce9c11967",
+      "size_bytes": 6019
     },
     {
       "ordinal": 10,
@@ -99,8 +99,8 @@
     {
       "ordinal": 16,
       "path": "output/manuscript/part_II/unit_intro.md",
-      "sha256": "9b5b9987aeb7192f809be41521462c4694d86d95eb894e70f56b8823b79437be",
-      "size_bytes": 4028
+      "sha256": "fb9863ab1398f9b5afa7c194e2d21b8b26570943521f3719aeb62fb8cc882639",
+      "size_bytes": 4840
     },
     {
       "ordinal": 17,
@@ -153,8 +153,8 @@
     {
       "ordinal": 25,
       "path": "output/manuscript/part_III/unit_intro.md",
-      "sha256": "4658f4047428b4245950026035649cb7a9a721d754d509bfd89dfd8b967e7d66",
-      "size_bytes": 4600
+      "sha256": "0b3620180b9c2861acb13f3a23da79efd85d3dd7ccdd94f8c1008205a6f12610",
+      "size_bytes": 5313
     },
     {
       "ordinal": 26,
@@ -591,14 +591,14 @@
     {
       "ordinal": 98,
       "path": "output/manuscript/appendices/appendix_notation.md",
-      "sha256": "53c20dedbde8267cf5283fd5fe7aa57a14bba7a675e04f299acc6afe3d75815f",
-      "size_bytes": 7878
+      "sha256": "9d93359ecbcee9f643b90fabeb1403510474f1daa4a968aed1efa1fe4b1ab319",
+      "size_bytes": 8540
     },
     {
       "ordinal": 99,
       "path": "output/manuscript/appendices/appendix_math_review.md",
-      "sha256": "fee1000adc25d9e03077b0901b54cca91ed7a507bc13c6751d361e24b3499a5c",
-      "size_bytes": 7430
+      "sha256": "0d2e0b9a75dda19f76443cabab805011e76e490ee0f3746fdf5f6f343fec1051",
+      "size_bytes": 8772
     },
     {
       "ordinal": 100,
@@ -625,7 +625,7 @@
       "size_bytes": 10850
     }
   ],
-  "ordered_inputs_sha256": "525e6ce629564d2e7ceae6c12d28003774f754ab8198ff89b1cc78c53bbadc09",
+  "ordered_inputs_sha256": "d254d7c6e494dc018a97254ed2dac3f1037def50c1fb029ade6366de79c58b2e",
   "project": "working/OmniLatticeTextbook",
   "schema_version": "template-manuscript-composition-v1"
 }

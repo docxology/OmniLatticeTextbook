@@ -8,6 +8,8 @@
   plan (``research/AUTHORING_BRIEF.md`` §6) has a shared, parametrized builder
   below; unknown chapters fall back to a neutral placeholder so the filename
   contract keeps cross-references valid.
+* **Unit-intro maps** — one deterministic part-overview figure per unit
+  opening, named ``<part_id>_unit-intro.png`` (see :func:`generate_intro_figures`).
 * **Cover art** — the deterministic book cover referenced by ``book.cover``
   in ``docs/manuscript/config.yaml``.
 """
@@ -890,6 +892,224 @@ def plot_frontiers_quadrant_map(output_dir: Path) -> Path:
     ax.set_title("Frontiers: open-problems quadrant map")
     return save_figure(fig, output_dir, "part_III_frontiers")
 
+# ---------------------------------------------------------------------------
+# Unit-intro part-overview maps
+#
+# One deterministic overview figure per part, named ``<part_id>_unit-intro.png``
+# (the manuscript embeds these at each unit opening). Like the chapter
+# builders they consume no randomness, so every rendered PNG is byte-stable
+# for a fixed matplotlib version.
+# ---------------------------------------------------------------------------
+
+
+def plot_part_0_unit_intro(output_dir: Path) -> Path:
+    """part_0 unit-intro — reading map: ship/catalog → methods → five-chapter tour."""
+    stations = (
+        (0.0, "ship &\ncatalog", PURPLE),
+        (1.0, "methods", PURPLE),
+        (2.0, "orientation", BLUE),
+        (3.0, "living-pem", BLUE),
+        (4.0, "tensor-\ndecoupling", BLUE),
+        (5.0, "master-\nsynthesis", BLUE),
+        (6.0, "octave-map", BLUE),
+    )
+    fig, ax = new_figure(width=7.2, height=2.8)
+    ax.axhline(0.0, color=GRAY, linewidth=1.0, zorder=1)
+    for x, label, color in stations:
+        above = x < 2.0
+        ax.scatter((x,), (0.0,), s=110, color=color, zorder=3)
+        ax.annotate(
+            label,
+            (x, 0.0),
+            textcoords="offset points",
+            xytext=(0, 12 if above else -12),
+            ha="center",
+            va="bottom" if above else "top",
+            fontsize=8,
+        )
+    for x0 in np.arange(0.35, 6.0, 1.0):
+        ax.annotate(
+            "",
+            (x0 + 0.3, 0.0),
+            xytext=(x0, 0.0),
+            arrowprops=dict(arrowstyle="->", color=GRAY, linewidth=1.0),
+        )
+    ax.set_xlim(-0.5, 6.5)
+    ax.set_ylim(-1.0, 1.0)
+    ax.set_yticks([])
+    ax.set_xticks([s[0] for s in stations], labels=[str(i + 1) for i in range(len(stations))])
+    ax.set_xlabel("reading order")
+    ax.set_title("Part 0 — reading map: ship & catalog → methods → five-chapter tour")
+    _corner_note(ax, "purple: how to read · blue: the five-chapter tour", loc="lower left")
+    return save_figure(fig, output_dir, "part_0_unit-intro")
+
+
+def plot_part_I_unit_intro(output_dir: Path) -> Path:
+    """part_I unit-intro — foundations map: five stations along the Φ spine."""
+    count = 10
+    ks = np.arange(1, count + 1)
+    spine = models.phi_powers(count)
+    stages = (
+        (1, "fractal constant\nΦ"),
+        (3, "prime-parity\nscaffold"),
+        (5, "rhyme\nfields"),
+        (7, "void\ntopology"),
+        (9, "Higgs\ngate"),
+    )
+    fig, ax = new_figure()
+    ax.semilogy(ks, spine, color=BLUE, linewidth=1.8, label=r"$\Phi^n$ spine")
+    for k, label in stages:
+        x = float(k)
+        y = float(spine[k - 1])
+        ax.scatter((x,), (y,), color=VERMILLION, s=45, zorder=3)
+        ax.annotate(label, (x, y), textcoords="offset points", xytext=(0, 9), ha="center", fontsize=8)
+    ax.set_xticks(ks)
+    ax.set_xlabel("reading order n")
+    ax.set_ylabel(r"$\Phi^n$ (log scale)")
+    ax.set_title("Part I — foundations map: five stations on the Φ spine")
+    ax.legend(loc="lower right", fontsize=8)
+    _corner_note(ax, "each chapter builds on the spine before it", loc="upper left")
+    return save_figure(fig, output_dir, "part_I_unit-intro")
+
+
+def plot_part_II_unit_intro(output_dir: Path) -> Path:
+    """part_II unit-intro — eight subsystem chapters orbiting their shared constants."""
+    chapters = (
+        "proton-theater",
+        "viscosity-light",
+        "eddy-current-mirror",
+        "crystalline-field",
+        "metrological-overlap",
+        "metamorphic-octaves",
+        "planetary-core",
+        "singularity-crystal",
+    )
+    angles = np.linspace(0.0, 2.0 * np.pi, len(chapters), endpoint=False)
+    radius = 1.0
+    fig, ax = new_figure(width=6.4, height=5.4)
+    ax.axhline(0.0, color=GRAY, linewidth=0.8, zorder=1)
+    for i, (angle, name) in enumerate(zip(angles, chapters)):
+        x = radius * float(np.cos(angle))
+        y = radius * float(np.sin(angle))
+        ax.plot((0.38 * x, x), (0.38 * y, y), color=GRAY, linewidth=0.7, zorder=1)
+        ax.scatter((x,), (y,), s=70, color=SERIES[i % len(SERIES)], zorder=3)
+        above = float(np.sin(angle)) >= 0.0
+        ax.annotate(
+            name,
+            (x, y),
+            textcoords="offset points",
+            xytext=(0, 10 if above else -14),
+            ha="center",
+            va="bottom" if above else "top",
+            fontsize=8,
+        )
+    ax.scatter((0.0,), (0.0,), s=200, color=GREEN, zorder=4)
+    ax.annotate(
+        (
+            "shared constants\n"
+            f"Φ ≈ {models.PHI:.3f}\n"
+            "c = 299 792 458 m/s\n"
+            f"register: 9 × 99 = {models.catalog_size(99, 9)} bins"
+        ),
+        (0.0, 0.0),
+        textcoords="offset points",
+        xytext=(0, -20),
+        ha="center",
+        va="top",
+        fontsize=8,
+    )
+    ax.set_xlim(-1.5, 1.5)
+    ax.set_ylim(-1.5, 1.5)
+    ax.set_aspect("equal")
+    ax.grid(False)
+    ax.set_xticks([])
+    ax.set_yticks([])
+    ax.set_frame_on(False)
+    ax.set_title("Part II — engine-shelf systems map: eight chapters, shared constants")
+    return save_figure(fig, output_dir, "part_II_unit-intro")
+
+
+def plot_part_III_unit_intro(output_dir: Path) -> Path:
+    """part_III unit-intro — implementations → companions → the open-problem quadrant program."""
+    fig, (ax, side) = _two_figure(width=7.6, height=3.6, width_ratios=(1.7, 1.0))
+    stages = (
+        (0.0, "implementations\n8 chapter builds"),
+        (1.0, "companions\nbridge & recycling notes"),
+        (2.0, "open-problem\nquadrant program"),
+    )
+    ax.axhline(0.5, color=GRAY, linewidth=1.0, zorder=1)
+    for x, label in stages:
+        ax.scatter((x,), (0.5,), s=130, color=PURPLE, zorder=3)
+        ax.annotate(
+            label,
+            (x, 0.5),
+            textcoords="offset points",
+            xytext=(0, 14),
+            ha="center",
+            fontsize=8,
+        )
+    for x0 in (0.18, 1.18):
+        ax.annotate(
+            "",
+            (x0 + 0.64, 0.5),
+            xytext=(x0, 0.5),
+            arrowprops=dict(arrowstyle="->", color=GRAY, linewidth=1.2),
+        )
+    ax.set_xlim(-0.5, 2.5)
+    ax.set_ylim(0.0, 1.0)
+    ax.set_yticks([])
+    ax.set_xticks((0.0, 1.0, 2.0), labels=("builds", "companions", "program"))
+    ax.set_title("Part III pipeline", fontsize=10)
+    # Secondary panel: the open-problem quadrant the unit converges on.
+    problems = np.array(
+        (
+            (0.18, 0.82),
+            (0.34, 0.60),
+            (0.62, 0.86),
+            (0.80, 0.66),
+            (0.86, 0.16),
+        )
+    )
+    side.axvline(0.5, color=GRAY, linewidth=0.8)
+    side.axhline(0.5, color=GRAY, linewidth=0.8)
+    side.axvspan(0.0, 0.5, ymin=0.5, ymax=1.0, color=GREEN, alpha=0.12)
+    side.scatter(problems[:, 0], problems[:, 1], color=PURPLE, s=26, zorder=3)
+    for x, y, label in (
+        (0.25, 0.75, "do first"),
+        (0.75, 0.75, "high value,\nhigh effort"),
+        (0.25, 0.25, "low value,\nlow effort"),
+        (0.75, 0.25, "low value,\nhigh effort"),
+    ):
+        side.text(x, y, label, ha="center", va="center", fontsize=7, color=GRAY)
+    side.set_xlim(0, 1)
+    side.set_ylim(0, 1)
+    side.set_xlabel("effort")
+    side.set_ylabel("value")
+    side.set_title("Open-problem quadrant program", fontsize=10)
+    return save_figure(fig, output_dir, "part_III_unit-intro")
+
+
+UNIT_INTRO_BUILDERS: dict[str, Any] = {
+    "part_0": plot_part_0_unit_intro,
+    "part_I": plot_part_I_unit_intro,
+    "part_II": plot_part_II_unit_intro,
+    "part_III": plot_part_III_unit_intro,
+}
+
+
+def generate_intro_figures(output_dir: Path, config: dict[str, Any] | None = None) -> list[Path]:
+    """Generate the four unit-intro part-overview maps.
+
+    Filenames are fixed by the manuscript's unit-opening embeds
+    (``<part_id>_unit-intro.png``), so builders dispatch directly by part id;
+    ``config`` is accepted for signature symmetry with
+    :func:`generate_chapter_figures` and intentionally unused.
+    """
+    del config
+    paths = [builder(output_dir) for builder in UNIT_INTRO_BUILDERS.values()]
+    logger.info("generated %d unit-intro figures in %s", len(paths), output_dir)
+    return paths
+
 
 CHAPTER_BUILDERS: dict[tuple[str, str], Any] = {
     ("part_0", "orientation"): plot_engine_shelf_timeline,
@@ -1115,8 +1335,9 @@ def generate_chapter_placeholders(output_dir: Path, config: dict[str, Any] | Non
 
 
 def generate_all_figures(output_dir: Path, config: dict[str, Any] | None = None) -> list[Path]:
-    """Generate every figure the manuscript references."""
+    """Generate every figure the manuscript references — worked models, unit-intro maps, and chapter figures."""
     paths = generate_worked_figures(output_dir)
+    paths.extend(generate_intro_figures(output_dir, config))
     paths.extend(generate_chapter_figures(output_dir, config))
     logger.info("generated %d figures in %s", len(paths), output_dir)
     return paths
@@ -1124,10 +1345,12 @@ def generate_all_figures(output_dir: Path, config: dict[str, Any] | None = None)
 
 __all__ = [
     "CHAPTER_BUILDERS",
+    "UNIT_INTRO_BUILDERS",
     "cover_art",
     "generate_all_figures",
     "generate_chapter_figures",
     "generate_chapter_placeholders",
+    "generate_intro_figures",
     "generate_worked_figures",
     "omnilattice_cover",
     "placeholder_overview",
@@ -1149,6 +1372,10 @@ __all__ = [
     "plot_metrological_overlap_heatmap",
     "plot_net_zero_balance_bars",
     "plot_octave_ladder",
+    "plot_part_0_unit_intro",
+    "plot_part_I_unit_intro",
+    "plot_part_II_unit_intro",
+    "plot_part_III_unit_intro",
     "plot_phi_duality_mirror",
     "plot_phi_growth_fibonacci",
     "plot_prime_container_growth",

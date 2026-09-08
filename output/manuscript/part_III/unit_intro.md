@@ -1,5 +1,11 @@
 # Part III: Implementations, Companions, and Frontiers {#sec:part_III_intro}
 
+![Part III map: the implementation, companion, and frontier chapters, from the silicon shelf and prime-indexed storage through the stack, bridge, and operations chapters to the closing research program.](../../output/figures/part_III_unit-intro.png){#fig:part_III_unit-intro width=90%}
+
+<!-- alt: Flow diagram of Part III moving from the implementation and storage chapters through the companion and operations chapters to the closing frontiers chapter. -->
+
+The route through the part, sketched in [@fig:part_III_unit-intro], runs from the silicon shelf ([@sec:part_III_cmos-protonic]) through the storage, stack, bridge, and operations chapters to the closing value-by-effort map of [@sec:part_III_frontiers].
+
 Parts 0–II built the Omni-Lattice as a catalogue: an
 [**engine-shelf**](#gl:engine-shelf) of papers, a Φ-spaced octave ladder, and a
 physical shelf of filed constructs. Part III asks the implementation-facing

@@ -57,6 +57,16 @@ FIGURE_ALT_TEXT: dict[str, str] = {
     "fig:part_III_macro-protein": "The macro-protein work engine's output curve rises with each work cycle.",
     "fig:part_III_invisible-frontier": "A visibility threshold curve separates the visible frontier from the invisible one.",
     "fig:part_III_frontiers": "A quadrant map places open problems by value and effort for the research program.",
+    "fig:part_0_unit-intro": "A reading map walks from the ship and catalog through methods into the five-chapter tour.",
+    "fig:part_I_unit-intro": "A foundations map places five chapters as stations along the rising Phi spine.",
+    "fig:part_II_unit-intro": "A systems map arranges eight engine-shelf chapters around their shared constants Phi, c, and the register.",
+    "fig:part_III_unit-intro": "A map flows from implementations through companion notes into the open-problem quadrant program.",
+    "fig:gallery_octave_register": "A nine-by-ninety-nine heatmap shows filing residues for each digit drawer across the octaves.",
+    "fig:gallery_phi_ladder": "A log-scale ladder shows powers of Phi with the Fibonacci ratio overlaying the same growth.",
+    "fig:gallery_prime_line": "A number line marks the primes below one hundred with the sole-even anchor highlighted.",
+    "fig:gallery_damping_family": "A family of braking curves decays at several drag coefficients toward zero velocity.",
+    "fig:gallery_net_zero_bars": "Balanced inflow and outflow bars cancel so the ledger residual is zero.",
+    "fig:gallery_overlap_matrix": "A pairwise heatmap scores metrological overlap between octave-band registers.",
 }
 
 

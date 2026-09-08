@@ -1,0 +1,18 @@
+{
+  "project_name": "working/OmniLatticeTextbook",
+  "total_events": 1,
+  "errors": 0,
+  "warnings": 1,
+  "events": [
+    {
+      "severity": "WARNING",
+      "category": "MARKDOWN_LINK",
+      "message": "Non-informative link text for https://github.com/docxology/template_textbook",
+      "code": "MARKDOWN.LINK_BAD_TEXT",
+      "file_path": "/Volumes/external_drive/Git/projects/ongoing/docxology/OmniLatticeTextbook/docs/manuscript/MANUSCRIPT_STATUS.md",
+      "line_number": null,
+      "fix_suggestion": "Replace 'docxology/template_textbook' with descriptive text about the link destination.",
+      "context": {}
+    }
+  ]
+}

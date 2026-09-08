@@ -288,6 +288,107 @@ def multi_panel(output_dir: Path) -> Path:
     return save_figure(fig, output_dir, "gallery_multipanel")
 
 
+def octave_register_plot(output_dir: Path) -> Path:
+    """Digit-by-octave filing heatmap of the 9 × 99 master register."""
+    digits = np.arange(1, 10)
+    octaves = np.arange(1, 100)
+    bins = (digits[:, None] * octaves[None, :]) % 9
+    fig, ax = new_figure()
+    im = ax.imshow(bins, origin="lower", cmap="Blues", aspect="auto")
+    fig.colorbar(im, ax=ax, label="filing residue")
+    ax.set_xticks((0, 24, 49, 74, 98), labels=("1", "25", "50", "75", "99"))
+    ax.set_yticks(np.arange(9), labels=[str(d) for d in digits])
+    ax.set_xlabel("octave index (1–99)")
+    ax.set_ylabel("digit drawer (1–9)")
+    ax.set_title("Octave register — digit × octave filing (9 × 99 bins)")
+    return save_figure(fig, output_dir, "gallery_octave_register")
+
+
+def phi_ladder_plot(output_dir: Path) -> Path:
+    """Log-scale Φ powers with a Fibonacci-ratio overlay (uses models.phi_powers)."""
+    count = 15
+    ks = np.arange(1, count + 1)
+    fib = np.array([models.phi_fibonacci(int(k)) for k in ks])
+    fig, ax = new_figure()
+    ax.semilogy(ks, models.phi_powers(count), "o-", color=BLUE, label=r"$\Phi^n$")
+    ax.semilogy(ks, fib, "s--", color=ORANGE, label="$F(n+1)/F(n)$")
+    ax.axhline(models.PHI, color=GRAY, linestyle=":", linewidth=0.8)
+    ax.set_xlabel("n")
+    ax.set_ylabel("value (log scale)")
+    ax.set_title("Φ ladder — powers of Φ with Fibonacci-ratio overlay")
+    ax.legend()
+    return save_figure(fig, output_dir, "gallery_phi_ladder")
+
+
+def prime_line_plot(output_dir: Path) -> Path:
+    """Prime number line: sole-even anchor vs odd classes (uses models.prime_parity_partition)."""
+    partition = models.prime_parity_partition(100)
+    odd = np.asarray(partition["odd"], dtype=float)
+    fig, ax = new_figure()
+    ax.axhline(0.0, color=GRAY, linewidth=0.8)
+    ax.scatter(odd, np.zeros(odd.shape), color=BLUE, s=28, zorder=3, label="odd primes")
+    ax.scatter((2.0,), (0.0,), color=VERMILLION, marker="D", s=70, zorder=4, label="sole-even anchor (2)")
+    ax.set_xlim(0, 100)
+    ax.set_ylim(-0.6, 0.6)
+    ax.set_yticks([])
+    ax.set_xlabel("number line")
+    ax.set_title("Prime line — sole-even anchor vs odd prime classes")
+    ax.legend(loc="center right", fontsize=8)
+    return save_figure(fig, output_dir, "gallery_prime_line")
+
+
+def damping_family_plot(output_dir: Path) -> Path:
+    """Transduction-brake damping curves over several drag coefficients (uses models.transduction_brake)."""
+    t = np.linspace(0.0, 6.0, 240)
+    fig, ax = new_figure()
+    for color, k in zip(SERIES, (0.3, 0.6, 1.0, 1.6)):
+        ax.plot(t, models.transduction_brake(t, v0=1.0, k=k), color=color, label=f"drag k = {k}")
+    ax.axhline(np.exp(-1.0), color=GRAY, linestyle=":", linewidth=0.8)
+    ax.set_xlabel("t")
+    ax.set_ylabel(r"velocity $v(t)$")
+    ax.set_title("Damping family — transduction brake over drag coefficients")
+    ax.legend()
+    return save_figure(fig, output_dir, "gallery_damping_family")
+
+
+def net_zero_bars_plot(output_dir: Path) -> Path:
+    """Inflow/outflow bars whose ledger nets to zero (uses models.net_zero_balance)."""
+    from matplotlib.patches import Patch
+
+    inflows = {"source a": 4.0, "source b": 2.5, "source c": 3.5}
+    outflows = {"sink a": 5.0, "sink b": 5.0}
+    residual = models.net_zero_balance(inflows, outflows)
+    names = tuple(inflows) + tuple(outflows)
+    values = tuple(inflows.values()) + tuple(outflows.values())
+    colors = (BLUE,) * len(inflows) + (ORANGE,) * len(outflows)
+    fig, ax = new_figure()
+    ax.bar(names, values, color=colors, width=0.6)
+    ax.axhline(0.0, color=GRAY, linewidth=0.8)
+    ax.legend(
+        handles=(Patch(color=BLUE, label="inflow"), Patch(color=ORANGE, label="outflow")),
+        loc="upper right",
+        fontsize=8,
+    )
+    ax.set_ylabel("flow")
+    ax.set_title(f"Net-zero bars — inflow/outflow balance (residual = {residual:.1f})")
+    return save_figure(fig, output_dir, "gallery_net_zero_bars")
+
+
+def overlap_matrix_plot(output_dir: Path) -> Path:
+    """Pairwise metrological-overlap heatmap (uses models.metrological_overlap)."""
+    bands = [frozenset({i + 1, i + 2, i + 3}) for i in range(8)]
+    matrix = np.array([[models.metrological_overlap(a, b) for b in bands] for a in bands])
+    fig, ax = new_figure()
+    im = ax.imshow(matrix, origin="lower", cmap="Blues", vmin=0.0, vmax=1.0)
+    fig.colorbar(im, ax=ax, label="min-normalized overlap")
+    ax.set_xticks(np.arange(8), labels=[str(i + 1) for i in range(8)])
+    ax.set_yticks(np.arange(8), labels=[str(i + 1) for i in range(8)])
+    ax.set_xlabel("band register j")
+    ax.set_ylabel("band register i")
+    ax.set_title("Overlap matrix — pairwise metrological overlap")
+    return save_figure(fig, output_dir, "gallery_overlap_matrix")
+
+
 def load_specs(path: Path | None = None) -> list[dict[str, Any]]:
     """Load gallery plot specifications from YAML."""
     specs_path = Path(path) if path is not None else SPECS_PATH
@@ -317,6 +418,12 @@ _PLOT_RENDERERS: dict[str, Callable[[Path], Path]] = {
     "pie": pie_chart,
     "annotated": annotated_plot,
     "multipanel": multi_panel,
+    "octave_register": octave_register_plot,
+    "phi_ladder": phi_ladder_plot,
+    "prime_line": prime_line_plot,
+    "damping_family": damping_family_plot,
+    "net_zero_bars": net_zero_bars_plot,
+    "overlap_matrix": overlap_matrix_plot,
 }
 
 
@@ -353,6 +460,7 @@ __all__ = [
     "box_plot",
     "build_gallery_registry",
     "contour_plot",
+    "damping_family_plot",
     "errorbar_plot",
     "generate_gallery_figures",
     "grouped_bar",
@@ -363,7 +471,12 @@ __all__ = [
     "load_specs",
     "log_log_plot",
     "multi_panel",
+    "net_zero_bars_plot",
+    "octave_register_plot",
+    "overlap_matrix_plot",
+    "phi_ladder_plot",
     "pie_chart",
+    "prime_line_plot",
     "quiver_field",
     "render_gallery_entry",
     "scatter_with_fit",

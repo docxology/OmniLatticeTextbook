@@ -262,6 +262,12 @@ Downtown Reno · 2026*
 
 # Part 0: Orientation and Methods {#sec:part_0_intro}
 
+![Part 0 reading map: the corpus flows from the SS Vibelandia ship and catalog through the methods layer into the five-chapter tour.](../figures/part_0_unit-intro.png){#fig:part_0_unit-intro width=90%}
+
+<!-- alt: Flow diagram of Part 0 moving from the SS Vibelandia ship and catalog through the methods layer into the five chapter stops. -->
+
+The route is a short one, and [@fig:part_0_unit-intro] sketches it: the corpus map ([@sec:part_0_orientation]) and the living PEM ([@sec:part_0_living-pem]) orient you, tensor decoupling ([@sec:part_0_tensor-decoupling]) and the master synthesis ([@sec:part_0_master-synthesis]) file the shelf, and the octave map ([@sec:part_0_octave-map]) fixes the numbers every later part computes against.
+
 This book is a rigorous systems-engineering monograph about a self-consistent
 catalog formalism: the **Infinite Octaves [**Omni-Lattice**](#gl:omni-lattice)**,
 the framework documented across the engine papers of the SS Vibelandia ship
@@ -1346,6 +1352,12 @@ The grammar fixed here is used by every later chapter in this part. The filing c
 
 
 # Part I: Foundations: Constants, Primes, and Rhyme {#sec:part_I_intro}
+
+![Part I foundations map: the filing constant Phi, the prime-partition integer scaffold, and the holographic rhyme motion grammar that the part's six chapters build from.](../figures/part_I_unit-intro.png){#fig:part_I_unit-intro width=90%}
+
+<!-- alt: Flow diagram of Part I laying its three foundations in order: the golden-ratio filing constant, the prime partition, and the holographic rhyme family feeding the six chapters. -->
+
+The foundations stack in a fixed order, and [@fig:part_I_unit-intro] draws it: the fractal constant ([@sec:part_I_fractal-constant]) defines the notation, the prime scaffold ([@sec:part_I_prime-parity]) defines the integers, and the rhyme chapters ([@sec:part_I_holographic-rhyme], [@sec:part_I_multidimensional-rhyme]) reuse both before the void ([@sec:part_I_topology-void]) and the gate ([@sec:part_I_higgs-awareness]) complete the part.
 
 
 Part I lays the foundation of the whole book: a single filing constant, a single integer
@@ -3610,6 +3622,12 @@ coordination grammar, not physics.
 
 
 # Part II: Core Systems: The Physical Engine Shelf {#sec:part_II_intro}
+
+![Part II engine-shelf systems map: eight physical filings of the Infinite Octaves engine, from the two-drawer Phi duality through the transduction brake and crystalline field to the net-zero singularity crystal.](../figures/part_II_unit-intro.png){#fig:part_II_unit-intro width=90%}
+
+<!-- alt: Flow diagram of Part II ordering its eight engine-shelf chapters from the digit duality through the dynamical and field filings to the net-zero singularity crystal. -->
+
+The shelf order in [@fig:part_II_unit-intro] is the reading order: the Phi duality of [@sec:part_II_proton-theater] opens the shelf, the transduction drag of [@sec:part_II_eddy-current-mirror] and the field filings that follow supply its dynamics, and the balances close at the singularity crystal ([@sec:part_II_singularity-crystal]).
 
 The corpus divides its Infinite Octaves engine into parts, and **Part II** is
 where the [**catalog architecture**](#gl:catalog-architecture) touches the
@@ -6765,6 +6783,12 @@ The corpus files zero twice over: as **Net Zero**, an active equilibrium realise
 
 
 # Part III: Implementations, Companions, and Frontiers {#sec:part_III_intro}
+
+![Part III map: the implementation, companion, and frontier chapters, from the silicon shelf and prime-indexed storage through the stack, bridge, and operations chapters to the closing research program.](../figures/part_III_unit-intro.png){#fig:part_III_unit-intro width=90%}
+
+<!-- alt: Flow diagram of Part III moving from the implementation and storage chapters through the companion and operations chapters to the closing frontiers chapter. -->
+
+The route through the part, sketched in [@fig:part_III_unit-intro], runs from the silicon shelf ([@sec:part_III_cmos-protonic]) through the storage, stack, bridge, and operations chapters to the closing value-by-effort map of [@sec:part_III_frontiers].
 
 Parts 0–II built the Omni-Lattice as a catalogue: an
 [**engine-shelf**](#gl:engine-shelf) of papers, a Φ-spaced octave ladder, and a
@@ -16304,6 +16328,12 @@ architecture](../glossary.md#gl:catalog-architecture) vocabulary
 | $x_i, y_j$ | spatial coordinates | `holographic_rhyme_field`, `xd_yd_combine` | dimensionless | four-pillar interference field; $\mathrm{xD} \pm \mathrm{yD}$ cross-scale summation |
 | $x$ | duality argument | `phi_dual` | dimensionless | $\Phi$ duality pair $x \cdot \Phi$ and $x / \Phi$ [@mendez2026protonTheater] |
 
+![The octave register: ninety-nine octave bands crossed with the nine digit drawers at the 81-digit precision register, keyed by Phi — the filing grid the register symbols above index.](../figures/gallery/gallery_octave_register.png){#fig:gallery_octave_register width=90%}
+
+<!-- alt: A grid diagram of the octave register showing 99 narrow octave bands grouped into nine digit drawers, with the 81-digit precision register noted alongside and the golden-ratio key marking the band boundaries. -->
+
+The register grid these symbols index — 99 octave bands by nine digit drawers at 81-digit precision — is drawn in [@fig:gallery_octave_register].
+
 ## Template-Legacy Symbols
 
 The backbone also retains the template's general model functions; their
@@ -16391,6 +16421,12 @@ subscript convention $\Omega_n = \varphi_{\mathrm{fib}}(n)\,\Omega_0$ — since
 the corpus prints "Ωn = Φn · Ω0" ambiguously and both are implemented in
 `octave_term` [@mendez2026primeParity].
 
+![Phi powers with Fibonacci overlay: the powers $\Phi^n$ for $n = 1..6$ climbing a logarithmic axis while the Fibonacci ratios $\varphi_{\mathrm{fib}}(n)$ converge on $\Phi \approx 1.618$, as returned by `phi_powers` and `phi_fibonacci`.](../figures/gallery/gallery_phi_ladder.png){#fig:gallery_phi_ladder width=90%}
+
+<!-- alt: A log-scale plot of Phi raised to successive powers rising in a straight line, with Fibonacci-ratio markers alternating above and below a horizontal reference line at Phi, the two curves converging. -->
+
+The convergence behind both readings of $\Omega_n$ is drawn in [@fig:gallery_phi_ladder]: the powers climb geometrically while the Fibonacci ratios spiral in on the same limit.
+
 **Worked check (exponent convention).** With $\Omega_0 = 1$: $\Omega_1 =
 1.618034$, $\Omega_3 = 4.236068$, $\Omega_6 = 17.944272$ — the table row
 values, to six decimals.
@@ -16422,6 +16458,12 @@ anchor](../glossary.md#gl:binary-dyad-anchor) — and the odd primes act as
 The first ten odd primes (`prime_parity_partition` reports the partition):
 
 $$ \{3,\ 5,\ 7,\ 11,\ 13,\ 17,\ 19,\ 23,\ 29,\ 31\} $$ {#eq:appendix_math_review_oddprimes}
+
+![The primes as a number line: 2 marked apart as the sole-even anchor, with the odd primes left as the irreducible minimum set the sieve of Eratosthenes generates.](../figures/gallery/gallery_prime_line.png){#fig:gallery_prime_line width=90%}
+
+<!-- alt: A horizontal number line with composite numbers greyed out and the primes highlighted; the number 2 is marked separately as the sole even prime, the rest of the highlighted markers all odd. -->
+
+The parity partition is easiest to see on the number line of [@fig:gallery_prime_line]: 2 stands alone as the sole-even anchor, and every remaining prime is odd.
 
 **Injective prime encoding.** By unique factorisation, the map
 $\prod_i p_i^{e_i}$ from exponent vectors to integers is injective

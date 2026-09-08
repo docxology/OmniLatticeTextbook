@@ -42,6 +42,12 @@ subscript convention $\Omega_n = \varphi_{\mathrm{fib}}(n)\,\Omega_0$ — since
 the corpus prints "Ωn = Φn · Ω0" ambiguously and both are implemented in
 `octave_term` [@mendez2026primeParity].
 
+![Phi powers with Fibonacci overlay: the powers $\Phi^n$ for $n = 1..6$ climbing a logarithmic axis while the Fibonacci ratios $\varphi_{\mathrm{fib}}(n)$ converge on $\Phi \approx 1.618$, as returned by `phi_powers` and `phi_fibonacci`.](../../output/figures/gallery/gallery_phi_ladder.png){#fig:gallery_phi_ladder width=90%}
+
+<!-- alt: A log-scale plot of Phi raised to successive powers rising in a straight line, with Fibonacci-ratio markers alternating above and below a horizontal reference line at Phi, the two curves converging. -->
+
+The convergence behind both readings of $\Omega_n$ is drawn in [@fig:gallery_phi_ladder]: the powers climb geometrically while the Fibonacci ratios spiral in on the same limit.
+
 **Worked check (exponent convention).** With $\Omega_0 = 1$: $\Omega_1 =
 1.618034$, $\Omega_3 = 4.236068$, $\Omega_6 = 17.944272$ — the table row
 values, to six decimals.
@@ -73,6 +79,12 @@ anchor](../glossary.md#gl:binary-dyad-anchor) — and the odd primes act as
 The first ten odd primes (`prime_parity_partition` reports the partition):
 
 $$ \{3,\ 5,\ 7,\ 11,\ 13,\ 17,\ 19,\ 23,\ 29,\ 31\} $$ {#eq:appendix_math_review_oddprimes}
+
+![The primes as a number line: 2 marked apart as the sole-even anchor, with the odd primes left as the irreducible minimum set the sieve of Eratosthenes generates.](../../output/figures/gallery/gallery_prime_line.png){#fig:gallery_prime_line width=90%}
+
+<!-- alt: A horizontal number line with composite numbers greyed out and the primes highlighted; the number 2 is marked separately as the sole even prime, the rest of the highlighted markers all odd. -->
+
+The parity partition is easiest to see on the number line of [@fig:gallery_prime_line]: 2 stands alone as the sole-even anchor, and every remaining prime is odd.
 
 **Injective prime encoding.** By unique factorisation, the map
 $\prod_i p_i^{e_i}$ from exponent vectors to integers is injective

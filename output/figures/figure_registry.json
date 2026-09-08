@@ -41,12 +41,36 @@
       "source_markdown": "appendices/appendix_format_gallery.md"
     },
     {
+      "alt": "A nine-by-ninety-nine heatmap shows filing residues for each digit drawer across the octaves.",
+      "caption": "The octave register: ninety-nine octave bands crossed with the nine digit drawers at the 81-digit precision register, keyed by Phi \u2014 the filing grid the register symbols above index.",
+      "filename": "gallery/gallery_octave_register.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:gallery_octave_register",
+      "source_markdown": "appendices/appendix_notation.md"
+    },
+    {
+      "alt": "A log-scale ladder shows powers of Phi with the Fibonacci ratio overlaying the same growth.",
+      "caption": "Phi powers with Fibonacci overlay: the powers $\\Phi^n$ for $n = 1..6$ climbing a logarithmic axis while the Fibonacci ratios $\\varphi_{\\mathrm{fib}}(n)$ converge on $\\Phi \\approx 1.618$, as returned by `phi_powers` and `phi_fibonacci`.",
+      "filename": "gallery/gallery_phi_ladder.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:gallery_phi_ladder",
+      "source_markdown": "appendices/appendix_math_review.md"
+    },
+    {
       "alt": "A circular chart is divided into labeled slices whose angles encode category proportions.",
       "caption": "Pie chart.",
       "filename": "gallery/gallery_pie.png",
       "generated_by": "scripts/generate_figures.py",
       "label": "fig:gallery_pie",
       "source_markdown": "appendices/appendix_format_gallery.md"
+    },
+    {
+      "alt": "A number line marks the primes below one hundred with the sole-even anchor highlighted.",
+      "caption": "The primes as a number line: 2 marked apart as the sole-even anchor, with the odd primes left as the irreducible minimum set the sieve of Eratosthenes generates.",
+      "filename": "gallery/gallery_prime_line.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:gallery_prime_line",
+      "source_markdown": "appendices/appendix_math_review.md"
     },
     {
       "alt": "A staged ladder plot walks the Living PEM engineering lifecycle from filing to pinning.",
@@ -87,6 +111,14 @@
       "generated_by": "scripts/generate_figures.py",
       "label": "fig:part_0_tensor-decoupling",
       "source_markdown": "part_0/tensor-decoupling.md"
+    },
+    {
+      "alt": "A reading map walks from the ship and catalog through methods into the five-chapter tour.",
+      "caption": "Part 0 reading map: the corpus flows from the SS Vibelandia ship and catalog through the methods layer into the five-chapter tour.",
+      "filename": "part_0_unit-intro.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_0_unit-intro",
+      "source_markdown": "part_0/unit_intro.md"
     },
     {
       "alt": "Stacked bars allocate octave bands across silicon shelf tiers.",
@@ -161,6 +193,14 @@
       "source_markdown": "part_III/reality-bridge.md"
     },
     {
+      "alt": "A map flows from implementations through companion notes into the open-problem quadrant program.",
+      "caption": "Part III map: the implementation, companion, and frontier chapters, from the silicon shelf and prime-indexed storage through the stack, bridge, and operations chapters to the closing research program.",
+      "filename": "part_III_unit-intro.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_III_unit-intro",
+      "source_markdown": "part_III/unit_intro.md"
+    },
+    {
       "alt": "A scatter lattice shows prime-indexed addresses filling volumetric space.",
       "caption": "Prime-indexed address scatter: each point is a vault address $\\prod p_i^{k_i}$ formed from a choice of odd-prime vaults (3, 5, 7, \u2026) and exponents $k$, computed over the $p^k$ lattice from `textbook.models.unique_address`, with the binary base channel (Prime 2) shown as the substrate.",
       "filename": "part_III_volumetric-storage.png",
@@ -233,6 +273,14 @@
       "source_markdown": "part_II/singularity-crystal.md"
     },
     {
+      "alt": "A systems map arranges eight engine-shelf chapters around their shared constants Phi, c, and the register.",
+      "caption": "Part II engine-shelf systems map: eight physical filings of the Infinite Octaves engine, from the two-drawer Phi duality through the transduction brake and crystalline field to the net-zero singularity crystal.",
+      "filename": "part_II_unit-intro.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_II_unit-intro",
+      "source_markdown": "part_II/unit_intro.md"
+    },
+    {
       "alt": "A family of viscous damping curves decays at different drag coefficients.",
       "caption": "Viscous damping curve family over drag coefficients: the tested model $v(t) = v_0\\,e^{-kt}$ (`textbook.models.transduction_brake`) plotted for $v_0 = 1$ with drag coefficients drawn from the $\\Phi$-power ladder \u2014 $k = 1/\\Phi$, $1$, $\\Phi$, and $\\Phi^2$. Every curve starts at $v_0$ and decays toward a zero floor that is approached but never reached.",
       "filename": "part_II_viscosity-light.png",
@@ -287,6 +335,14 @@
       "generated_by": "scripts/generate_figures.py",
       "label": "fig:part_I_topology-void",
       "source_markdown": "part_I/topology-void.md"
+    },
+    {
+      "alt": "A foundations map places five chapters as stations along the rising Phi spine.",
+      "caption": "Part I foundations map: the filing constant Phi, the prime-partition integer scaffold, and the holographic rhyme motion grammar that the part's six chapters build from.",
+      "filename": "part_I_unit-intro.png",
+      "generated_by": "scripts/generate_figures.py",
+      "label": "fig:part_I_unit-intro",
+      "source_markdown": "part_I/unit_intro.md"
     }
   ],
   "schema_version": "template-textbook-figure-registry-v1"

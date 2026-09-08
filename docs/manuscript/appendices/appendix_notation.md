@@ -52,6 +52,12 @@ architecture](../glossary.md#gl:catalog-architecture) vocabulary
 | $x_i, y_j$ | spatial coordinates | `holographic_rhyme_field`, `xd_yd_combine` | dimensionless | four-pillar interference field; $\mathrm{xD} \pm \mathrm{yD}$ cross-scale summation |
 | $x$ | duality argument | `phi_dual` | dimensionless | $\Phi$ duality pair $x \cdot \Phi$ and $x / \Phi$ [@mendez2026protonTheater] |
 
+![The octave register: ninety-nine octave bands crossed with the nine digit drawers at the 81-digit precision register, keyed by Phi — the filing grid the register symbols above index.](../../output/figures/gallery/gallery_octave_register.png){#fig:gallery_octave_register width=90%}
+
+<!-- alt: A grid diagram of the octave register showing 99 narrow octave bands grouped into nine digit drawers, with the 81-digit precision register noted alongside and the golden-ratio key marking the band boundaries. -->
+
+The register grid these symbols index — 99 octave bands by nine digit drawers at 81-digit precision — is drawn in [@fig:gallery_octave_register].
+
 ## Template-Legacy Symbols
 
 The backbone also retains the template's general model functions; their

@@ -1,77 +1,41 @@
-# template_textbook TODO
+# OmniLatticeTextbook TODO
 
-This backlog is future-only. Completed validation and dated review evidence are preserved in
-[`docs/maintenance/exemplar-backlog-history.md`](../../../docs/maintenance/exemplar-backlog-history.md)
-or in source-owned generated receipts. Each active row must retain a stable ID, size, dependency,
-next action, proving artifact, acceptance command, and negative control; absence of an owner or external receipt
-keeps a capability blocked rather than silently promoting it.
+This backlog is future-only. The book itself is complete (30 chapters, 30
+labs, 30 question banks, 4 unit intros, 7 appendices, zero stubs; all gates
+green). Each row below needs an owner, a proving artifact, an acceptance
+command, and a negative control before it is scoped.
 
-## Backlog operating rules
+## Integrity and structure invariants (standing)
 
-- Keep deterministic and offline defaults unchanged unless an upcoming row explicitly scopes an opt-in.
-- Do not close a row until its producer, artifact, consumer, gate, and failing negative control are present.
-- Treat unavailable network, LLM, container, formal-tool, and publication paths as explicit skips
-  or blockers.
-- Re-derive counts and receipts from live source data; never copy measurements into this planning file.
-
-## Integrity and template-status gaps
-
-- Keep `docs/manuscript/config.yaml` as the only source of truth for parts, chapters,
-  appendices, labs, and question banks.
-- Keep finished chapters clearly separated from fillable stubs.
+- Keep `docs/manuscript/config.yaml` as the only source of truth for parts,
+  chapters, appendices, labs, and question banks.
+- Keep the closed 31-key / 44-anchor namespaces (`CITATION_KEYS`,
+  `GLOSSARY_ANCHORS`) in lockstep with `references.bib` / `glossary.md`.
 - Keep the structured scaffold audit (`textbook.audit.run_manuscript_audit`)
   covering orphan part markdown, unit intros, and strict-CLI failures.
+- Keep the evidence-registry chunking convention (`data/*_evidence_*.yaml`,
+  ≤ 256 items per list) so every bulk fact/claim stays machine-verifiable.
 
-## Configurable-surface gaps
-
-- `docs/manuscript/config.yaml.example` is checked against the live shape by
-  `tests/test_contracts.py::test_live_and_example_config_shapes_are_lockstep`;
-  extend that contract when `units:` or appendix keys change.
-
-## Documentation and signposting gaps
-
-- Keep README, AGENTS, and manuscript docs clear about worked exemplars versus
-  stubs.
-- Link any new structural config keys from the README, AGENTS, and the
-  visualization guide.
-
-## Current test and validator contract
-
-- Negative controls for orphan chapter files, missing labs or questions, and
-  stale Mermaid diagrams are covered by the library and real CLI paths through
-  `--require-complete`.
-- Generated cover art and diagrams have deterministic checks; extend those
-  checks with any future visual-style change.
-- Textbook worked-example numbers, percentages, and appendix-gallery constants
-  are either configured facts or explicitly documentation-only examples before
-  Stage 04 is treated as warning-free.
-- Use `infrastructure.core.pipeline.artifacts.snapshot_current_artifact_manifest`
-  for single-stage analysis, render, and copy checks. It writes a
-  `current-output-snapshot` manifest without requiring a full
-  `PipelineExecutor` run.
-- Keep the optional external Mermaid `mmdc` boundary bounded by timeout,
-  isolated process group, descendant cleanup, and deterministic `.mmd` fallback;
-  synchronize its policy with infrastructure Mermaid renderers.
-
-## Minor upcoming
+## Upcoming
 
 | ID | Status | Size | Dependency | Next action / unblock condition | Proving artifact | Acceptance command | Negative control |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-No active rows are currently scoped at this size.
+| DEPOSIT-1 | open | M | GitHub repo access | First deposit: push to `docxology/OmniLatticeTextbook`, create the Zenodo deposit from `.zenodo.json`, record the minted concept/version DOIs in `config.yaml` (`publication.*`, `published_artifacts`) and the blank DOI fields of `CITATION.cff` / `.zenodo.json` / `codemeta.json`; then regenerate the README publishing status honestly | Zenodo DOI + updated config | `uv run python scripts/audit_textbook_quality.py --require-complete` | No DOI in `config.yaml` ⇒ README keeps "not yet deposited" |
+| CI-1 | open | M | DEPOSIT-1 | Add a GitHub Actions workflow running the standalone gates on push/PR: pytest with coverage (`--cov=src --cov-fail-under=90`) and `audit_textbook_quality.py --require-complete` | `.github/workflows/ci.yml` with green run | `uv run --extra dev python -m pytest tests/ --cov=src --cov-fail-under=90` locally mirrored in CI | PR touching a chapter contract without tests ⇒ CI red |
+| LABTEST-1 | open | L | none | Translate the labs' `npm run …` reference-implementation suites from the corpus papers into repo-level tests (or explicitly pinned, documented skips), so lab procedures have executable counterparts alongside the `textbook.models` reference values | New test modules under `tests/` | `uv run --extra dev python -m pytest tests/ --cov=src --cov-fail-under=90` | A lab whose hand-check numbers drift from `models.py` fails |
+| UPSTREAM-1 | open | S | monorepo review | Upstream the evidence-registry chunking pattern (256-item list cap ⇒ `*_evidence_*.yaml` sibling chunks) into `template_textbook` docs/scaffold so future forks inherit it; sync `docs/manuscript/AGENTS.md`/`SYNTAX.md` naming accordingly | Upstream PR to docxology/template_textbook | Upstream CI green | Fresh fork from template without chunking docs ⇒ large ledgers silently exceed the cap |
 
-## Medium upcoming
+## Documentation and signposting gaps (standing)
 
-| ID | Status | Size | Dependency | Next action / unblock condition | Proving artifact | Acceptance command | Negative control |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-No active rows are currently scoped at this size.
-
-## Major upcoming
-
-| ID | Status | Size | Dependency | Next action / unblock condition | Proving artifact | Acceptance command | Negative control |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-No active rows are currently scoped at this size.
+- Keep README, AGENTS, and the docs/ guides accurate to the live structure:
+  if chapter/part counts, namespaces, or gate commands change, update them in
+  the same change.
+- The bundled agent skill (`.agents/skills/template-textbook/SKILL.md`) still
+  carries template-era commands; refresh it (or re-scope it to the fork) when
+  next touched.
 
 ## Backlog status
 
-Rows remain active until the acceptance command and negative control pass in the same source revision.
-A blocked row is a deliberate boundary, not a skipped success.
+Rows remain open until the acceptance command and negative control pass in the
+same source revision. A blocked row is a deliberate boundary, not a skipped
+success.

@@ -116,11 +116,12 @@ def test_generate_all_figures(tmp_path):
     worked = plots.generate_worked_figures(tmp_path)
     paths = plots.generate_all_figures(tmp_path)
     # all figures = worked figures + one unique figure per enabled chapter.
-    assert len(paths) == len(worked) + len(iter_chapters(load_config()))
+    assert len(paths) == len(worked) + len(plots.UNIT_INTRO_BUILDERS) + len(iter_chapters(load_config()))
     names = {p.name for p in paths}
     assert "logistic_growth.png" in names  # a worked figure
     assert "part_0_orientation.png" in names  # a bespoke engine-shelf timeline
     assert "part_II_singularity-crystal.png" in names  # a bespoke lattice figure
+    assert "part_0_unit-intro.png" in names  # a unit-intro part-overview map
 
 
 def test_figure_registry_entries_match_manuscript_labels(tmp_path):
@@ -276,3 +277,80 @@ def test_upgraded_composites_are_byte_deterministic(tmp_path, builder):
     second = builder(tmp_path / "b")
     _png_is_nonempty(first)
     assert first.read_bytes() == second.read_bytes()
+
+
+# ---------------------------------------------------------------------------
+# Unit-intro part-overview figures and the extended gallery (shared contract).
+# ---------------------------------------------------------------------------
+
+from visualization import gallery as gallery_module  # noqa: E402
+
+_INTRO_ITEMS = sorted(plots.UNIT_INTRO_BUILDERS.items())
+_NEW_GALLERY_NAMES = (
+    "octave_register",
+    "phi_ladder",
+    "prime_line",
+    "damping_family",
+    "net_zero_bars",
+    "overlap_matrix",
+)
+
+
+@pytest.mark.parametrize("part,builder", _INTRO_ITEMS, ids=[part for part, _ in _INTRO_ITEMS])
+def test_unit_intro_figures_write_contract_png(tmp_path, part, builder):
+    path = builder(tmp_path)
+    _png_is_nonempty(path)
+    assert path.name == f"{part}_unit-intro.png"
+
+
+def test_generate_intro_figures_emits_four_contract_names(tmp_path):
+    paths = plots.generate_intro_figures(tmp_path)
+    assert [p.name for p in paths] == [
+        "part_0_unit-intro.png",
+        "part_I_unit-intro.png",
+        "part_II_unit-intro.png",
+        "part_III_unit-intro.png",
+    ]
+    for path in paths:
+        _png_is_nonempty(path)
+
+
+@pytest.mark.parametrize(
+    "builder",
+    [plots.plot_part_I_unit_intro, plots.plot_part_III_unit_intro],
+    ids=["part-I-intro", "part-III-intro"],
+)
+def test_unit_intro_figures_are_byte_deterministic(tmp_path, builder):
+    first = builder(tmp_path / "a")
+    second = builder(tmp_path / "b")
+    _png_is_nonempty(first)
+    assert first.read_bytes() == second.read_bytes()
+
+
+@pytest.mark.parametrize("name", _NEW_GALLERY_NAMES)
+def test_new_gallery_renderers_write_contract_png(tmp_path, name):
+    path = gallery_module.render_gallery_entry({"name": name, "title": name}, tmp_path)
+    _png_is_nonempty(path)
+    assert path.name == f"gallery_{name}.png"
+
+
+def test_gallery_specs_carry_six_new_entries():
+    names = [spec["name"] for spec in gallery_module.load_specs()]
+    assert len(names) == 18 + 6
+    for name in _NEW_GALLERY_NAMES:
+        assert name in names
+
+
+def test_gallery_phi_ladder_is_byte_deterministic(tmp_path):
+    first = gallery_module.phi_ladder_plot(tmp_path / "a")
+    second = gallery_module.phi_ladder_plot(tmp_path / "b")
+    _png_is_nonempty(first)
+    assert first.read_bytes() == second.read_bytes()
+
+
+def test_new_figure_labels_have_alt_text():
+    expected = {f"fig:{part}_unit-intro" for part in plots.UNIT_INTRO_BUILDERS} | {
+        f"fig:gallery_{name}" for name in _NEW_GALLERY_NAMES
+    }
+    assert expected <= set(FIGURE_ALT_TEXT)
+    assert all(FIGURE_ALT_TEXT[label].strip() for label in expected)

@@ -39,3 +39,15 @@ plots:
     title: "Annotated plot"
   - name: multipanel
     title: "Multi-panel composite figure"
+  - name: octave_register
+    title: "Octave register heatmap (digit × octave filing)"
+  - name: phi_ladder
+    title: "Φ ladder (log-scale powers with Fibonacci-ratio overlay)"
+  - name: prime_line
+    title: "Prime number line (sole-even anchor vs odd classes)"
+  - name: damping_family
+    title: "Damping curve family (transduction brake)"
+  - name: net_zero_bars
+    title: "Net-zero inflow/outflow balance bars"
+  - name: overlap_matrix
+    title: "Pairwise metrological overlap heatmap"

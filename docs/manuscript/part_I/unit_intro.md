@@ -1,5 +1,11 @@
 # Part I: Foundations: Constants, Primes, and Rhyme {#sec:part_I_intro}
 
+![Part I foundations map: the filing constant Phi, the prime-partition integer scaffold, and the holographic rhyme motion grammar that the part's six chapters build from.](../../output/figures/part_I_unit-intro.png){#fig:part_I_unit-intro width=90%}
+
+<!-- alt: Flow diagram of Part I laying its three foundations in order: the golden-ratio filing constant, the prime partition, and the holographic rhyme family feeding the six chapters. -->
+
+The foundations stack in a fixed order, and [@fig:part_I_unit-intro] draws it: the fractal constant ([@sec:part_I_fractal-constant]) defines the notation, the prime scaffold ([@sec:part_I_prime-parity]) defines the integers, and the rhyme chapters ([@sec:part_I_holographic-rhyme], [@sec:part_I_multidimensional-rhyme]) reuse both before the void ([@sec:part_I_topology-void]) and the gate ([@sec:part_I_higgs-awareness]) complete the part.
+
 
 Part I lays the foundation of the whole book: a single filing constant, a single integer
 scaffold, and a single motion grammar, all drawn from the Infinite Octaves engine papers of

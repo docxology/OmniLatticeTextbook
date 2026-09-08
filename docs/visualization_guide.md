@@ -1,23 +1,24 @@
 # Visualization Guide
 
 All figures and diagrams are generated **deterministically** from `src/` — never
-edited by hand and never committed. Re-running the generators reproduces
+edited by hand. Re-running the generators reproduces
 byte-stable artifacts, which keeps renders reproducible and tests honest.
 
 ## Figures: `src/visualization`
 
-[`src/visualization/plots.py`](../src/visualization/plots.py) produces two kinds
-of matplotlib figure:
+[`src/visualization/plots.py`](../src/visualization/plots.py) produces these
+kinds of matplotlib figure:
 
-1. **Worked figures** — four figures driven by the tested formalisms in
+1. **Worked figures** — four generic figures driven by the tested formalisms in
    [`src/textbook/models.py`](../src/textbook/models.py):
    - `plot_logistic_growth`
    - `plot_saturating_response`
    - `plot_exponential_decay`
    - `plot_linear_fit`
-2. **Chapter figures** — `generate_chapter_figures()` emits one uniquely named
-   figure per chapter. Filled chapters can own source-bound plots; unfinished
-   chapters receive a neutral `<part_id>_<stem>.png` placeholder.
+2. **Canonical chapter figures** — `generate_chapter_figures()` emits one
+   uniquely named figure per chapter: all **30** chapters of this book have
+   source-bound, deterministic figures under their
+   `<part_id>_<stem>.png` filenames (see `output/figures/`).
 
 `generate_all_figures(output_dir, config=None)` produces all of them. The shared
 helpers [`src/visualization/_scaffold.py`](../src/visualization/_scaffold.py)
@@ -25,19 +26,21 @@ helpers [`src/visualization/_scaffold.py`](../src/visualization/_scaffold.py)
 deterministic.
 
 The committed cover image
-[`manuscript/assets/cover/template_textbook_cover.png`](../docs/manuscript/assets/cover/template_textbook_cover.png)
-is itself a deterministic, tested artifact: regenerate it by calling
-`cover_art(output_dir)` from [`src/visualization/plots.py`](../src/visualization/plots.py)
+[`manuscript/assets/cover/omnilattice_cover.png`](../docs/manuscript/assets/cover/omnilattice_cover.png)
+is itself a deterministic, tested artifact: a lattice of ninety-nine octave
+bands keyed by the golden-ratio constant, with nine digit drawers and the
+zero-octave node at the origin. Regenerate it by calling `cover_art(output_dir)`
+from [`src/visualization/plots.py`](../src/visualization/plots.py)
 (byte-stable nested modular blocks), then copy the result over the tracked asset.
 
 ### The filename contract
 
 Each chapter figure is named **`<part_id>_<stem>.png`** — for example
-`part_0_orientation.png`, `part_I_first_principles.png`. This exactly matches the
-image path the scaffolded chapter already references:
+`part_0_octave-map.png`, `part_I_fractal-constant.png`. This exactly matches the
+image path the chapter references:
 
 ```markdown
-![Overview schematic …](../../output/figures/part_0_orientation.png){#fig:part_0_orientation width=90%}
+![Overview schematic …](../../output/figures/part_0_octave-map.png){#fig:part_0_octave-map width=90%}
 ```
 
 Because the filename is derived from the same `ChapterRef` the manuscript uses,
@@ -64,7 +67,9 @@ format gallery the same way `diagram_specs.yaml` drives Mermaid diagrams.
 ## Diagrams: `src/mermaid`
 
 [`src/mermaid/`](../src/mermaid) renders Mermaid diagrams from
-[`diagram_specs.yaml`](../src/mermaid/diagram_specs.yaml):
+[`diagram_specs.yaml`](../src/mermaid/diagram_specs.yaml), which holds **31**
+specs (`concept_map`, the book's chapter-specific diagrams, and the generic
+kind-examples):
 
 - `load_specs()` reads the spec list.
 - `build_flowchart()` / `build_source()` turn a spec into Mermaid source.
@@ -78,12 +83,57 @@ uv run python scripts/generate_diagrams.py
 ```
 
 Note: these are the *standalone* diagram assets. The **inline** `` ```mermaid ``
-block required inside every chapter is rendered by the document renderer at PDF
-build time, not by this generator.
+blocks required inside every chapter (31 of them across the 30 chapters —
+`living-pem.md` carries two — plus five in `appendix_format_gallery.md`) are
+rendered by the document renderer at build time, not by this generator.
+
+## Render-time hydration
+
+Before the monorepo render stage consumes the manuscript, run the hydration
+script:
+
+```bash
+uv run python scripts/z_generate_manuscript_variables.py
+```
+
+It copies `docs/manuscript/` → `output/manuscript/` byte-for-byte (deterministic;
+this book carries no `{{variable}}` placeholders; existing files are
+overwritten, extraneous files left so partial renders stay inspectable). The
+pipeline prefers the injected `output/manuscript/` tree — see
+`infrastructure.rendering._manuscript_source.resolve_manuscript_dir` — which
+keeps the inline-Mermaid artifact directory at
+`output/figures/mermaid_inline/`, exactly like first-class pipeline projects.
+Never edit `output/manuscript/` directly; it is regenerated.
+
+## Rendering Mermaid diagrams to images (PDF/HTML)
+
+Inline ```` ```mermaid ```` blocks are rendered to images at build time by the
+monorepo render pipeline using the Mermaid CLI (`mmdc`), which needs a
+Chrome/Chromium binary. Two ways to point it at one:
+
+1. Set `PUPPETEER_EXECUTABLE_PATH` (or `CHROME_EXECUTABLE_PATH`) to your browser
+   binary before rendering, or
+2. Drop a local `.puppeteer.json` at the project root — this repository ships
+   one (git-ignored, since it holds a machine-specific path):
+
+   ```json
+   {
+     "executablePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+     "args": ["--no-sandbox", "--disable-setuid-sandbox"]
+   }
+   ```
+
+   Adjust `executablePath` to this machine's Chrome/Chromium; the
+   `--no-sandbox` args matter in CI and root containers.
+
+Without a reachable browser, diagrams degrade gracefully to fenced code blocks in
+the output and `src/mermaid` writes `.mmd` source instead of PNG — the build
+never hard-fails. With it, the combined PDF embeds the rendered inline diagrams.
 
 ## Adding a real figure for a chapter
 
-To replace a chapter's generated placeholder with a real, data-driven figure:
+All 30 chapter figures are already real and source-bound. When you add a
+chapter (see the [authoring guide](authoring_guide.md)):
 
 1. **Put the math in `src/`.** Add the computation to
    [`src/textbook/models.py`](../src/textbook/models.py) (or a new tested module)
@@ -102,28 +152,3 @@ To replace a chapter's generated placeholder with a real, data-driven figure:
 Keep figures deterministic: fixed seeds, fixed sizes via `new_figure`, no
 timestamps or randomised colours. The same input must always produce the same
 PNG.
-
-## Rendering Mermaid diagrams to images (PDF/HTML)
-
-Inline ```` ```mermaid ```` blocks in chapters are rendered to images at build
-time by the repository's render pipeline using the Mermaid CLI (`mmdc`), which
-needs a Chrome/Chromium binary. Two ways to point it at one:
-
-1. Set `PUPPETEER_EXECUTABLE_PATH` (or `CHROME_EXECUTABLE_PATH`) to your browser
-   binary before rendering, or
-2. Drop a local `.puppeteer.json` at the project root (git-ignored — it holds a
-   machine-specific path), for example:
-
-   ```json
-   {
-     "executablePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-     "args": ["--no-sandbox", "--disable-setuid-sandbox"]
-   }
-   ```
-
-Without a reachable browser, diagrams degrade gracefully to fenced code blocks in
-the output and `src/mermaid` writes `.mmd` source instead of PNG — the build
-never hard-fails. With it, the combined PDF embeds the rendered diagrams (verified:
-18 inline diagrams render into the book — one per chapter across the 12
-chapters in `manuscript/part_0/` through `manuscript/part_III/`, one in
-`appendix_authoring_guide.md`, and five in `appendix_format_gallery.md`).

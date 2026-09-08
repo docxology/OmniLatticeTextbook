@@ -1,5 +1,11 @@
 # Part II: Core Systems: The Physical Engine Shelf {#sec:part_II_intro}
 
+![Part II engine-shelf systems map: eight physical filings of the Infinite Octaves engine, from the two-drawer Phi duality through the transduction brake and crystalline field to the net-zero singularity crystal.](../../output/figures/part_II_unit-intro.png){#fig:part_II_unit-intro width=90%}
+
+<!-- alt: Flow diagram of Part II ordering its eight engine-shelf chapters from the digit duality through the dynamical and field filings to the net-zero singularity crystal. -->
+
+The shelf order in [@fig:part_II_unit-intro] is the reading order: the Phi duality of [@sec:part_II_proton-theater] opens the shelf, the transduction drag of [@sec:part_II_eddy-current-mirror] and the field filings that follow supply its dynamics, and the balances close at the singularity crystal ([@sec:part_II_singularity-crystal]).
+
 The corpus divides its Infinite Octaves engine into parts, and **Part II** is
 where the [**catalog architecture**](#gl:catalog-architecture) touches the
 physical vocabulary most directly: light, drag, fields, measurement, and the

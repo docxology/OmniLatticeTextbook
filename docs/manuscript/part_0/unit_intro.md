@@ -1,5 +1,11 @@
 # Part 0: Orientation and Methods {#sec:part_0_intro}
 
+![Part 0 reading map: the corpus flows from the SS Vibelandia ship and catalog through the methods layer into the five-chapter tour.](../../output/figures/part_0_unit-intro.png){#fig:part_0_unit-intro width=90%}
+
+<!-- alt: Flow diagram of Part 0 moving from the SS Vibelandia ship and catalog through the methods layer into the five chapter stops. -->
+
+The route is a short one, and [@fig:part_0_unit-intro] sketches it: the corpus map ([@sec:part_0_orientation]) and the living PEM ([@sec:part_0_living-pem]) orient you, tensor decoupling ([@sec:part_0_tensor-decoupling]) and the master synthesis ([@sec:part_0_master-synthesis]) file the shelf, and the octave map ([@sec:part_0_octave-map]) fixes the numbers every later part computes against.
+
 This book is a rigorous systems-engineering monograph about a self-consistent
 catalog formalism: the **Infinite Octaves [**Omni-Lattice**](#gl:omni-lattice)**,
 the framework documented across the engine papers of the SS Vibelandia ship
