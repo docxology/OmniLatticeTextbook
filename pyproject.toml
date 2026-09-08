@@ -1,0 +1,63 @@
+# template_textbook — exemplar book-length manuscript scaffold
+# Inherits workspace settings from the root pyproject.toml.
+#
+# This template demonstrates the *modular textbook* shape: a data-driven
+# manuscript (parts -> chapters -> sections), a tested computational backbone
+# under src/, deterministic figure + diagram generators, and a content
+# scaffolding/validation engine that lets authors fill marked stubs out to
+# hundreds or thousands of pages without drifting from the structural contract.
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omnilattice-textbook"
+version = "0.1.2"
+license = {text = "CC-BY-4.0"}
+description = "The Infinite Octaves Omni-Lattice Textbook — modular synthesis of the SynthOBS engine papers."
+authors = [{name = "Daniel Ari Friedman", email = "daniel@activeinference.institute"}]
+requires-python = ">=3.10"
+dependencies = [
+    "defusedxml>=0.7.1",
+    "pyyaml>=6.0",
+    "matplotlib>=3.7",
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+]
+visuals = [
+    "pillow>=12.3.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short --strict-markers"
+markers = [
+    "slow: renderer and full-manuscript integration checks kept for release profiles",
+]
+
+[tool.coverage.run]
+source = ["src"]
+branch = true
+omit = ["tests/*", "*/__init__.py", "*/test_*.py"]
+
+[tool.coverage.report]
+fail_under = 90
+show_missing = true
+precision = 2
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+    "raise NotImplementedError",
+]
+
+[tool.uv]
+# Inherits workspace settings from root pyproject.toml

@@ -1,0 +1,204 @@
+"""Tests for deterministic figure generation (real PNG files, no mocks)."""
+
+from __future__ import annotations
+
+from pathlib import Path
+
+import pytest
+from infrastructure.validation.content.figure_validator import validate_figure_registry
+
+from textbook.config import iter_chapters, load_config
+from visualization import _scaffold, plots
+from visualization.registry import FIGURE_ALT_TEXT, collect_figure_registry_entries, write_figure_registry
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+
+def _png_is_nonempty(path):
+    assert path.exists()
+    assert path.suffix == ".png"
+    assert path.stat().st_size > 0
+    # PNG magic number.
+    assert path.read_bytes()[:8] == b"\x89PNG\r\n\x1a\n"
+
+
+@pytest.mark.parametrize(
+    "fn",
+    [
+        plots.plot_logistic_growth,
+        plots.plot_saturating_response,
+        plots.plot_exponential_decay,
+        plots.plot_linear_fit,
+    ],
+)
+def test_worked_figures_write_png(tmp_path, fn):
+    _png_is_nonempty(fn(tmp_path))
+
+
+def test_placeholder_overview(tmp_path):
+    path = plots.placeholder_overview("A Chapter", tmp_path, "demo")
+    _png_is_nonempty(path)
+    assert path.name == "demo.png"
+
+
+def test_generate_chapter_placeholders_matches_config(tmp_path):
+    config = load_config()
+    paths = plots.generate_chapter_placeholders(tmp_path, config)
+    # The legacy name retains one-file-per-chapter behavior while dispatching
+    # filled chapters to their bespoke renderers.
+    assert len(paths) == len(iter_chapters(config))
+    assert "part_III_case_studies.png" in {path.name for path in paths}
+    for path in paths:
+        _png_is_nonempty(path)
+
+
+def test_generate_chapter_figures_uses_source_bound_case_study_plot(tmp_path):
+    paths = plots.generate_chapter_figures(tmp_path, load_config())
+
+    assert len(paths) == len(iter_chapters(load_config()))
+    case_study = next(path for path in paths if path.name == "part_III_case_studies.png")
+    _png_is_nonempty(case_study)
+    placeholder = plots.placeholder_overview("Case Studies", tmp_path / "control", "part_III_case_studies")
+    assert case_study.read_bytes() != placeholder.read_bytes()
+
+
+def test_case_study_figure_changes_when_source_measurement_changes(tmp_path):
+    source = PROJECT_ROOT / "manuscript" / "assets" / "data" / "sample_dataset.csv"
+    alternate = tmp_path / "alternate.csv"
+    alternate.write_text(source.read_text(encoding="utf-8").replace("5.10,0.30", "7.10,0.30"), encoding="utf-8")
+
+    canonical_plot = plots.plot_case_study_errorbars(tmp_path / "canonical", dataset_path=source)
+    alternate_plot = plots.plot_case_study_errorbars(tmp_path / "alternate", dataset_path=alternate)
+
+    assert canonical_plot.read_bytes() != alternate_plot.read_bytes()
+
+
+@pytest.mark.slow
+def test_generate_all_figures(tmp_path):
+    worked = plots.generate_worked_figures(tmp_path)
+    paths = plots.generate_all_figures(tmp_path)
+    # all figures = worked figures + one unique figure per enabled chapter.
+    assert len(paths) == len(worked) + len(iter_chapters(load_config()))
+    names = {p.name for p in paths}
+    assert "logistic_growth.png" in names  # a worked figure
+    assert "part_0_orientation.png" in names  # a chapter placeholder that is displayed
+    assert "part_III_case_studies.png" in names  # a bespoke, data-derived chapter figure
+
+
+def test_figure_registry_entries_match_manuscript_labels(tmp_path):
+    plots.generate_all_figures(tmp_path)
+    entries = collect_figure_registry_entries(PROJECT_ROOT / "manuscript", tmp_path)
+    labels = {entry.label for entry in entries}
+    assert "fig:part_0_orientation" in labels
+    assert "fig:gallery_line" in labels
+    assert "fig:part_III_case_studies" in labels
+    assert labels <= set(FIGURE_ALT_TEXT)
+    assert all(entry.alt.strip() for entry in entries)
+
+
+def test_figure_registry_rejects_missing_explicit_alt_text(tmp_path):
+    manuscript = tmp_path / "manuscript"
+    figures = tmp_path / "figures"
+    manuscript.mkdir()
+    figures.mkdir()
+    (manuscript / "chapter.md").write_text(
+        "![A caption is not an alt-text substitute.](../figures/unknown.png){#fig:unknown}\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="Missing explicit alt-text specification.*fig:unknown"):
+        collect_figure_registry_entries(manuscript, figures)
+
+
+@pytest.mark.slow
+def test_figure_registry_validates_manuscript_references(tmp_path):
+    paths = plots.generate_all_figures(tmp_path)
+    from visualization.gallery import generate_gallery_figures
+
+    paths.extend(generate_gallery_figures(tmp_path / "gallery"))
+    registry = write_figure_registry(PROJECT_ROOT / "manuscript", tmp_path)
+
+    ok, issues = validate_figure_registry(
+        registry,
+        PROJECT_ROOT / "manuscript",
+        require_accessibility=True,
+    )
+
+    assert registry.exists()
+    assert paths
+    assert ok, issues
+
+
+def test_figure_registry_rejects_two_labels_claiming_one_filename(tmp_path):
+    manuscript = tmp_path / "manuscript"
+    figures = tmp_path / "figures"
+    manuscript.mkdir()
+    figures.mkdir()
+    (manuscript / "chapter.md").write_text(
+        "\n".join(
+            (
+                "![Bar.](../figures/shared.png){#fig:gallery_bar}",
+                "![Line.](../figures/shared.png){#fig:gallery_line}",
+            )
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="claimed by multiple labels"):
+        collect_figure_registry_entries(manuscript, figures)
+
+
+def test_scaffold_new_figure_and_save(tmp_path):
+    fig, ax = _scaffold.new_figure(width=4, height=3)
+    ax.plot([0, 1], [0, 1])
+    path = _scaffold.save_figure(fig, tmp_path, "noext")
+    _png_is_nonempty(path)
+    assert path.name == "noext.png"
+
+
+def test_cover_art(tmp_path):
+    path = plots.cover_art(tmp_path, subtitle="A scaffold")
+    _png_is_nonempty(path)
+    assert path.name == "template_textbook_cover.png"
+
+
+def test_cover_art_no_subtitle(tmp_path):
+    """cover_art with no subtitle must still produce a valid PNG."""
+    path = plots.cover_art(tmp_path)  # subtitle="" by default
+    _png_is_nonempty(path)
+    assert path.name == "template_textbook_cover.png"
+
+
+def test_figures_are_deterministic(tmp_path):
+    first = tmp_path / "a"
+    second = tmp_path / "b"
+    p1 = plots.plot_logistic_growth(first)
+    p2 = plots.plot_logistic_growth(second)
+    assert p1.read_bytes() == p2.read_bytes()
+
+
+def test_figure_registry_fallback_filename(tmp_path):
+    """_figure_filename falls back to basename when path doesn't contain output/figures/."""
+    from visualization.registry import _figure_filename
+
+    # A path that doesn't contain 'output/figures' at all — the last-resort fallback.
+    image_path = "/some/completely/different/path/my_figure.png"
+    resolved = Path(image_path)
+    figures_root = tmp_path / "output" / "figures"
+    result = _figure_filename(image_path, resolved, figures_root)
+    # Fallback: just the filename.
+    assert result == "my_figure.png"
+
+
+def test_figure_registry_extracts_from_output_figures_path(tmp_path):
+    """_figure_filename extracts relative path from 'output/figures' segment."""
+    from visualization.registry import _figure_filename
+
+    # A path that has 'output/figures' in the middle.
+    image_path = "../../output/figures/gallery/gallery_bar.png"
+    resolved = (tmp_path / image_path).resolve()  # won't be under figures_root
+    figures_root = tmp_path / "nowhere"  # resolved won't be relative to this
+    result = _figure_filename(image_path, resolved, figures_root)
+    # Should extract "gallery/gallery_bar.png"
+    assert result == "gallery/gallery_bar.png"

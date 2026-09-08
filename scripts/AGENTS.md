@@ -1,0 +1,40 @@
+# `scripts/` — agent notes
+
+These are **thin orchestrators only**. The hard rule: import tested functions
+from [`../src/`](../src/), do I/O and orchestration, print output paths. **Never
+implement algorithms, validation, or rendering in a script.** If logic is needed,
+add it to a `src/` module with a test, then import it.
+
+Each script begins by importing `from _bootstrap import PROJECT, ensure_project_paths`
+and calling `ensure_project_paths()` so the `src/` packages resolve. Follow that
+pattern for any new script.
+
+## What each script delegates to
+
+| Script | Delegates to | Output |
+| --- | --- | --- |
+| `generate_figures.py` | `visualization.plots.generate_all_figures`, optional `visualization.gallery.generate_gallery_figures`, `visualization.registry.write_figure_registry` | `output/figures/` |
+| `generate_diagrams.py` | `mermaid.diagrams.generate_all_diagrams` | `output/figures/mermaid/` |
+| `analysis.py` | `textbook.analysis` | `output/data/` (JSON with both parameters and results) |
+| `scaffold_chapter.py` | `textbook.content`, `textbook.config.iter_chapters` / `iter_unit_intros`, `textbook_io.write_text_atomic` | stub `.md` files under `docs/manuscript/` |
+| `audit_textbook_quality.py` | `textbook.audit.run_manuscript_audit` | stdout gate (structural by default; intentional stubs allowed; `--require-complete` for filled forks; `--lenient` optional) |
+
+The remaining module files are `_bootstrap.py` (shared `PROJECT` /
+`ensure_project_paths` bootstrap every script imports) and `__init__.py`
+(package marker).
+
+## Conventions
+
+- Print every produced path to stdout so the pipeline can collect a manifest.
+- Keep figures/data deterministic — fixed seeds, headless matplotlib (`MPLBACKEND=Agg`).
+- `audit_textbook_quality.py` is a real gate: the default mode requires declared
+  files and rejects orphan part markdown while allowing the exemplar's
+  intentional stub markers. Pass `--require-complete` for a filled-manuscript
+  gate; pass `--lenient` only when intentionally auditing partial trees.
+- `scaffold_chapter.py` must not overwrite authored files unless `--force`.
+
+## Do not touch
+
+`docs/manuscript/config.yaml`, `references.bib`, `glossary.md`, and any chapter / lab /
+question markdown are authored content. Scripts read them; agents editing scripts
+must not modify them.

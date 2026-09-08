@@ -1,0 +1,22 @@
+{
+  "creators": [
+    {
+      "affiliation": "Active Inference Institute",
+      "name": "Friedman, Daniel Ari",
+      "orcid": "0000-0001-6232-9096"
+    }
+  ],
+  "description": "Source code for The Infinite Octaves Omni-Lattice Textbook.",
+  "keywords": [],
+  "license": "CC-BY-4.0",
+  "related_identifiers": [
+    {
+      "identifier": "",
+      "relation": "isVersionOf",
+      "scheme": "doi"
+    }
+  ],
+  "title": "The Infinite Octaves Omni-Lattice Textbook",
+  "upload_type": "software",
+  "version": "0.1.2"
+}

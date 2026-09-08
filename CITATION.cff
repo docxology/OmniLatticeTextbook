@@ -1,0 +1,15 @@
+authors:
+- affiliation: Active Inference Institute
+  family-names: Friedman
+  given-names: Daniel Ari
+  orcid: 0000-0001-6232-9096
+cff-version: 1.2.0
+date-released: '2026-07-12'
+doi: ''
+keywords: []
+license: CC-BY-4.0
+message: If you use this software, please cite it using the metadata from this file.
+repository-code: https://github.com/docxology/OmniLatticeTextbook
+title: The Infinite Octaves Omni-Lattice Textbook
+type: software
+version: 0.1.2
