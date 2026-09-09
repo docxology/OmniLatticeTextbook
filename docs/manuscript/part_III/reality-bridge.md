@@ -1,8 +1,8 @@
 # Humans as Omniversal Reality Bridges {#sec:part_III_reality-bridge}
 
-![Bridge/router throughput radial plot: three spokes — the reality bridge, the cognitive router, and the awareness wormhole — carrying routed attention outward through $\Phi$-spaced octave rings, ring $n$ at radius $\Phi^n$ from `textbook.models.octave_term`, with the routed share of each ring's traffic following the $e^{-kn}$ throttle family of `textbook.models.transduction_brake`.](../../output/figures/part_III_reality-bridge.png){#fig:part_III_reality-bridge width=90%}
+![Bridge/router throughput radial plot: three spokes — the reality bridge, the cognitive router, and the awareness wormhole — carry routed attention outward through $\Phi$-spaced octave rings, ring $n$ at radius $\Phi^n$ from `textbook.models.octave_term`. The routed share of each ring's traffic follows the $e^{-kn}$ throttle family of `textbook.models.transduction_brake` at the pinned calibration $A_0 = 1$, $k = 1$, so the throughput bars shrink from ring to ring. The takeaway: the router filters forward without cutting the background line to the 8,019-entry filing surface.](../../output/figures/part_III_reality-bridge.png){#fig:part_III_reality-bridge width=90%}
 
-<!-- alt: Radial plot of three bridge-and-router spokes crossing concentric Φ-spaced octave rings, with throughput bars that shrink from ring to ring by the exponential throttle factor e^{-kn}. -->
+<!-- alt: Radial plot of three bridge-and-router spokes crossing concentric Φ-spaced octave rings, with throughput bars that shrink from ring to ring by the exponential throttle factor e^{-kn} at calibration A0 = 1, k = 1. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -85,7 +85,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The Paper in the Corpus
+## The Plain-Speak Note on Shelf 9
 
 The source is a ship-blog note on the SS Vibelandia blog
 (`ssvibelandiaquestfest24x365.com`): **"Humans as Omniversal Reality Bridges,
@@ -106,7 +106,7 @@ while its role vocabulary — routing attention across layers — prepares the
 ground for the AI-layer proposal of [@mendez2026stack]. Where the stack paper
 proposes a new software shelf above the model layer, this note files the human
 as the shelf that routing *runs through*; the two papers meet in
-[@sec:part_III_moving-up-stack] and in the Connections section below.
+[@sec:part_III_moving-up-stack] and in the handoff section below.
 
 The reference implementation is run as
 `npm run research:synthobs-human-omniversal-reality-bridge`, which exits with a
@@ -115,7 +115,7 @@ against the note's filing contract [@mendez2026realityBridge]. The whitepaper
 surface is linked from the post as
 `whitepaper-surface.html?id=synthobs-human-omniversal-reality-bridge-2026-08`.
 
-## Three Roles in Plain Speak
+## Bridge, Router, Wormhole: Three Roles in Plain Speak
 
 The note organises its contribution as "three roles in plain speak"
 [@mendez2026realityBridge]. We take them in order, and collect the corpus's own
@@ -330,7 +330,7 @@ convention="exponent")` (or `phi_powers(6)` for the pure powers) and the $A$
 column is `transduction_brake([1, 2, 3, 4, 5, 6], 1.0, 1.0)`; the two families are drawn together
 as the radial plot of [@fig:part_III_reality-bridge].
 
-## Scope and Honesty
+## Human Emergency Outranks Every Metaphor: The Scope
 
 The note's scope statements are unusually crisp and must be carried verbatim
 into any use of this material [@mendez2026realityBridge]:
@@ -371,7 +371,7 @@ Unpacking the disclaimer into the chapter's constructs:
 > participant role; nothing in it is neurology or spacetime topology, and the
 > disclaimer rules both out by name.
 
-## Connections
+## Handoffs to the Stack, the Brake Family, and the Frontier
 
 - **The stack above.** The moving-up-the-stack paper proposes the Lattice as a
   new software shelf above the model layer and names this chapter's construct

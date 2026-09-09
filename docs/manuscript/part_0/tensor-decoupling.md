@@ -1,8 +1,8 @@
 # Tensor Decoupling: Filing the Engine {#sec:part_0_tensor-decoupling}
 
-![Digit×octave filing heatmap: 99 octave rows (11 shelves × 9 slots) binned against the 81-digit precision register, shaded by Φ-scaled register weight, rendered from `textbook.models.catalog_size` and `textbook.models.phi_powers`.](../../output/figures/part_0_tensor-decoupling.png){#fig:part_0_tensor-decoupling width=90%}
+![The digit-by-octave filing heatmap: a 9-row by 99-column grid of register bins, each cell shaded by the value of digit × octave mod 9, with the residue-0 bins outlined in vermillion. Computed deterministically from the digit drawers 1–9 and octave indices 1–99 — a filing layout rather than a `textbook.models` call, though the cabinet's capacity is pinned by `catalog_size(octaves=99, precision_digits=81)` = 8,019 in `textbook.models`. Notice the residue-0 cells recurring in a fixed diagonal pattern across the grid — the periodic fingerprint of the mod-9 filing rule.](../../output/figures/part_0_tensor-decoupling.png){#fig:part_0_tensor-decoupling width=90%}
 
-<!-- alt: A heatmap of the 99-octave filing cabinet: eleven shelf bands of nine slots each, cells shaded by the golden-ratio register weight of each octave. -->
+<!-- alt: A heatmap with nine digit-drawer rows and ninety-nine octave columns, shaded by a mod-9 filing rule, with a fixed diagonal set of residue-zero cells outlined. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -38,13 +38,13 @@ By the end of this chapter you should be able to:
 4. Distinguish the two octave conventions the corpus prints ambiguously — $\Omega_n = \Phi^n \Omega_0$ versus $\Omega_n = \varphi_{\mathrm{fib}}(n)\,\Omega_0$ — using `octave_term` in `textbook.models`.
 5. Restate the paper's honesty-first scope in your own words: a catalog clock is not a prophecy engine, and no cross-domain cable is claimed between co-timed events.
 
-## Orientation
+## Labelled layers on one bulletin board
 
 The Infinite Octaves [**Omni-Lattice**](#gl:omni-lattice) is presented by its authors as a [**catalog architecture**](#gl:catalog-architecture): a way of filing events, agents, and measurements into a common grammar, not a theory of why the events happen. The paper this chapter is built on — "The 99 Octave engine as a tensor filing cabinet", filed on the ship blog on 2026-08-12 under the site's plain-speak [**Fair Exchange**](#gl:fair-exchange) label — is the corpus's most concrete statement of that filing move [@mendez2026tensorDecoupling; @mendez2026ship].
 
 The word "decoupling" is doing careful work here. In ordinary engineering, decoupling means isolating subsystems so a fault in one does not propagate. The corpus means something subtly different: **stop smushing every headline into one cause, and also stop pretending the headlines never share a bulletin board** [@mendez2026tensorDecoupling]. Both extremes are errors. A single-cause model crushes eleven genuinely different layers (crust, ocean heat, ionosphere, agent code, human nerves, …) into one pseudo-explanation. A fully isolated model loses the one thing the catalog is for — a shared board where an agent can see all the layers at once, each in its own labelled drawer. Decoupling, in this framework, is the disciplined middle: **label each layer, then let an agent walk the shelves with the same golden-ratio key** [@mendez2026tensorDecoupling].
 
-## The Paper in the Corpus
+## Shelf 2: engine grammar before the quantitative papers
 
 The paper sits at shelf number 2 of the corpus's [**engine shelf**](#gl:engine-shelf) — early framing material, before the quantitative engine papers. Its self-description is engine grammar "for Lattice Chat and the Omni-Lattice library": vocabulary and furniture that later papers assume. Three cross-links matter for this book:
 
@@ -54,7 +54,7 @@ The paper sits at shelf number 2 of the corpus's [**engine shelf**](#gl:engine-s
 
 The whitepaper ("Open the whitepaper" on the ship blog post) is filed under the identifier `synthobs-tensor-decoupling-99-octave-omni-lattice-2026-08` on the SS Vibelandia site. The digest lists no GitHub reference implementation for this paper; the computational companion for this chapter is the tested `textbook.models` module, which we use throughout.
 
-## Core Constructs
+## Ladder counts, precision blocks, and the shelf dial
 
 ### Construct 1: the octave ladder ($11 \times 9 = 99$)
 
@@ -165,7 +165,7 @@ An agent walking the shelves from bracket 1 toward bracket 11 reads a dial that 
 
 **Step 5 — Refuse the cable.** The week's fixture stories are co-timed on one board, filed in separate drawers, with "no magic cable claimed between magma and model weights" [@mendez2026tensorDecoupling]. The worked example ends not with a prediction but with a filing receipt.
 
-## Scope and Honesty
+## A catalog clock is not a prophecy engine
 
 The paper's own [**honesty-first**](#gl:honesty-first) header is unusually blunt, and the book preserves it because it bounds everything above:
 
@@ -176,7 +176,7 @@ The paper's own [**honesty-first**](#gl:honesty-first) header is unusually blunt
 
 What the construct is *for*: coordination, cataloging, and agent routing. The paper's usage advice is aimed at builders — "If you are building agents: teach the eleven brackets and the honesty table first" — and at readers: keep the takeaway, then open the whitepaper for the equations and methods suite [@mendez2026tensorDecoupling]. Every claim in this chapter rests on the catalog's own framing; where we add arithmetic (the $729 \times 11 = 8{,}019$ tiling) it is labelled as our reading, not the corpus's.
 
-## Connections
+## Where the filing furniture is reused
 
 The furniture built here is reused across the book:
 

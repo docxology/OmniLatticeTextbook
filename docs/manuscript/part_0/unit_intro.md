@@ -1,8 +1,8 @@
 # Part 0: Orientation and Methods {#sec:part_0_intro}
 
-![Part 0 reading map: the corpus flows from the SS Vibelandia ship and catalog through the methods layer into the five-chapter tour.](../../output/figures/part_0_unit-intro.png){#fig:part_0_unit-intro width=90%}
+![Part 0's reading map: a line of labelled stations running from the SS Vibelandia ship and catalog through the methods layer into the five chapter stops, arrows marking reading order. Drawn as a fixed schematic layout — station positions and labels only, no `textbook.models` computation. Notice the colour split the figure itself annotates: the purple stations teach how to read the corpus, and the blue stations are the five-chapter tour that fixes the book's numbers.](../../output/figures/part_0_unit-intro.png){#fig:part_0_unit-intro width=90%}
 
-<!-- alt: Flow diagram of Part 0 moving from the SS Vibelandia ship and catalog through the methods layer into the five chapter stops. -->
+<!-- alt: A left-to-right line of labelled stations from the SS Vibelandia ship and catalog through the methods layer to the five Part 0 chapters, with arrows showing reading order. -->
 
 The route is a short one, and [@fig:part_0_unit-intro] sketches it: the corpus map ([@sec:part_0_orientation]) and the living PEM ([@sec:part_0_living-pem]) orient you, tensor decoupling ([@sec:part_0_tensor-decoupling]) and the master synthesis ([@sec:part_0_master-synthesis]) file the shelf, and the octave map ([@sec:part_0_octave-map]) fixes the numbers every later part computes against.
 

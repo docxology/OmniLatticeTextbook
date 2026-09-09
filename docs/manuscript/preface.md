@@ -109,8 +109,8 @@ the audit gates, and the contract tests fit together.
 
 ---
 
-*— Prudencio Mendez · SS Vibelandia · SynthOBS Autonomous Agent Program ·
-Downtown Reno · 2026*
+*— Daniel Ari Friedman · FractiAI · on the corpus of Prudencio Mendez's
+SynthOBS engine papers*
 
 *"Welcome aboard. Intentions matter. Human emergency comes first."*
 [@mendez2026ship]

@@ -1,8 +1,8 @@
 # Metamorphic Octaves: Densification {#sec:part_II_metamorphic-octaves}
 
-![The densification curve $D(x) = D_0\,(1 + k\ln(1+x))$ for $D_0 = 1$, $k = 1$: a logarithmic rise that climbs steeply at first and then flattens as exposure $x$ grows, matching the corpus's mud → shale → schist reading of accumulated "cooking" — early transformation is fast, later transformation is slower but still real. Produced by the companion visualization agent from `textbook.models.densification`.](../../output/figures/part_II_metamorphic-octaves.png){#fig:part_II_metamorphic-octaves width=90%}
+![The densification curve $D(x) = D_0\,(1 + k\ln(1+x))$ for the pinned parameters $D_0 = 1$ and $k = 1$. Plotted from `textbook.models.densification`, with the chapter's worked checkpoints marked on the curve — the pinned one reads $D(4) = 1 + \ln 5 \approx 2.609438$. The takeaway mirrors the mud → shale → schist story: transformation is fast at first and slows with every further exposure, yet the accumulation never stops.](../../output/figures/part_II_metamorphic-octaves.png){#fig:part_II_metamorphic-octaves width=90%}
 
-<!-- alt: A single rising curve of densification against exposure, steep near the origin and flattening logarithmically, with the worked points at exposures 1, 2, 4 and 8 marked on the curve. -->
+<!-- alt: A single rising curve of densification against exposure, steep near the origin and flattening logarithmically. The worked checkpoints at exposures 1, 2, 4 and 8 are marked on the curve, and the marginal gain 1/(1+x) shrinks as exposure grows. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none — the [**octave**](#gl:octave) ladder of [@sec:part_0_octave-map] helps but is not required
@@ -67,7 +67,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## Orientation
+## Shelf placement and the three honesty markers
 
 This chapter sits on shelf 5 of the [**engine-shelf**](#gl:engine-shelf), as
 Part XIII of the SS Vibelandia ship blog — a plain-speak note filed under the
@@ -92,7 +92,7 @@ Our job as textbook authors is the corpus's own job: formalise the filing rule,
 map its vocabulary, and run its reference implementation — while preserving
 those disclaimers exactly.
 
-## The paper in the corpus
+## The metamorphic-octaves note and its corpus placement
 
 The metamorphic-octaves note loads into Lattice Chat on nest **Infinite
 Octaves** through the engine map **Digits × 01–99** [@mendez2026metamorphic]:
@@ -275,7 +275,7 @@ vanishing marginal return, and the paper claims no asymptote of invulnerability
 > per `catalog_size()`. The schist label is therefore a *trajectory* filing,
 > not a snapshot filing.
 
-## Scope and honesty
+## What the densification filing does not claim
 
 The metamorphic-octaves paper is unusually explicit about its own edges, and we
 restate each disclaimer precisely [@mendez2026metamorphic]:
@@ -304,7 +304,7 @@ on Synthio as companion grammar, keeping MRI sandbox honesty
 [@mendez2026metamorphic]. What it is *not*: a physical model of rock, a
 clinical instrument, or a promise about people.
 
-## Connections
+## Neighbouring filings: bands, balances, and overlap measures
 
 The Goldilocks lock is one instance of the corpus's too-much / just-right
 gating; the planetary-core chapter draws the same idea as a goldilocks band

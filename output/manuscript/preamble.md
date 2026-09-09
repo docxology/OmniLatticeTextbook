@@ -48,9 +48,9 @@ are not already setting them in config.yaml. -->
 \usepackage{hyperref}
 \hypersetup{
   colorlinks=true,
-  linkcolor={[HTML]{1A5276}},
-  citecolor={[HTML]{1A5276}},
-  urlcolor={[HTML]{1A5276}},
+  linkcolor={[HTML]{B22222}},
+  citecolor={[HTML]{B22222}},
+  urlcolor={[HTML]{B22222}},
   breaklinks=true
 }
 \usepackage[capitalise,nameinlink]{cleveref}

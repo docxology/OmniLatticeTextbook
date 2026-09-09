@@ -39,7 +39,7 @@ def plot_logistic_growth(output_dir: Path) -> Path:
         y = models.logistic_growth(t, r=r, carrying_capacity=100.0, initial=5.0)
         ax.plot(t, y, color=color, label=f"r = {r}")
     ax.axhline(100.0, color=GRAY, linestyle="--", linewidth=0.8, label="K = 100")
-    ax.set_xlabel("time")
+    ax.set_xlabel("time (model units)")
     ax.set_ylabel("quantity N(t)")
     ax.set_title("Logistic growth")
     ax.legend()
@@ -86,8 +86,8 @@ def plot_linear_fit(output_dir: Path) -> Path:
     fig, ax = new_figure()
     ax.scatter(x, y, color=GREEN, s=18, label="data")
     ax.plot(x, fit.predict(x), color=BLUE, label=f"fit: y={fit.slope:.2f}x+{fit.intercept:.2f}")
-    ax.set_xlabel("x")
-    ax.set_ylabel("y")
+    ax.set_xlabel("x (predictor)")
+    ax.set_ylabel("y (response)")
     ax.set_title(f"Linear fit (R² = {fit.r_squared:.3f})")
     ax.legend()
     return save_figure(fig, output_dir, "linear_fit")
@@ -247,8 +247,8 @@ def plot_living_pem_ladder(output_dir: Path) -> Path:
     """part_0_living-pem — PEM engineering lifecycle as a staged ladder plot."""
     stages = np.arange(1, 6)
     fig, (ax, side) = _two_figure()
-    ax.step(stages, stages, where="post", color=BLUE, linewidth=2.0)
-    ax.scatter(stages, stages, color=ORANGE, s=30, zorder=3)
+    ax.step(stages, stages, where="post", color=BLUE, linewidth=2.0, label="lifecycle path")
+    ax.scatter(stages, stages, color=ORANGE, s=30, zorder=3, label="stage node")
     for stage in stages:
         ax.annotate(f"stage {stage}", (stage, stage), textcoords="offset points", xytext=(4, 6), fontsize=8)
     ax.set_xticks(stages)
@@ -256,6 +256,7 @@ def plot_living_pem_ladder(output_dir: Path) -> Path:
     ax.set_xlabel("lifecycle step")
     ax.set_ylabel("stage")
     ax.set_title("Living PEM engineering lifecycle as a staged ladder")
+    ax.legend(loc="lower right", fontsize=8)
     _corner_note(ax, "each rung is reviewed before the next opens")
     # Secondary panel: schematic per-stage review effort (deterministic, illustrative only).
     effort = 0.5 * stages + 0.5
@@ -282,6 +283,7 @@ def plot_register_bins_heatmap(output_dir: Path) -> Path:
     ax.set_yticks(np.arange(9), labels=[str(d) for d in digits])
     rows, cols = np.nonzero(bins == 0)
     ax.scatter(cols, rows, marker="s", s=9, facecolors="none", edgecolors=VERMILLION, linewidths=0.7)
+    _corner_note(ax, f"9 × 99 bins filed → catalog_size(99, 81) = {models.catalog_size():,}", loc="upper right")
     return save_figure(fig, output_dir, "part_0_tensor-decoupling")
 
 
@@ -301,6 +303,7 @@ def plot_crosslink_adjacency_heatmap(output_dir: Path) -> Path:
     ax.grid(False)
     ax.set_xticks((0, 5, 11, 17, 23), labels=("1", "6", "12", "18", "24"))
     ax.set_yticks((0, 5, 11, 17, 23), labels=("1", "6", "12", "18", "24"))
+    _corner_note(ax, "cross-link when ring distance ≤ 2 (diagonal = self-link)", loc="upper right")
     # Secondary panel: cross-link degree per paper (±2 ring neighbours, self excluded).
     degree = adjacency.sum(axis=1) - 1.0
     side.bar(index, degree, color=BLUE, width=0.8)
@@ -327,7 +330,7 @@ def plot_octave_ladder(output_dir: Path) -> Path:
     _corner_note(ax, "exponent convention grows geometrically; subscript follows Fibonacci")
     # Fibonacci-ratio overlay panel: F(n+1)/F(n) converging to Φ.
     side.plot(indices, fib, color=GREEN, linewidth=1.6, label=r"$\varphi_{fib}(n) = F(n+1)/F(n)$")
-    side.axhline(models.PHI, color=VERMILLION, linestyle="--", linewidth=1.0, label=r"$\Phi$")
+    side.axhline(models.PHI, color=VERMILLION, linestyle="--", linewidth=1.0, label=f"Φ = {models.PHI:.6f}")
     side.set_ylim(0.9, 2.2)
     side.set_xlabel("octave index n")
     side.set_ylabel("Fibonacci ratio")
@@ -355,6 +358,7 @@ def plot_phi_growth_fibonacci(output_dir: Path) -> Path:
     side.set_xlabel("n")
     side.set_ylabel(r"relative error $|\varphi_{fib}(n) - \Phi| / \Phi$")
     side.set_title("Fibonacci-ratio convergence error", fontsize=10)
+    _corner_note(side, f"target Φ = {models.PHI:.6f}")
     return save_figure(fig, output_dir, "part_I_fractal-constant")
 
 
@@ -367,7 +371,7 @@ def plot_prime_parity_numberline(output_dir: Path) -> Path:
     ax.scatter(odd, np.zeros(odd.shape), color=BLUE, s=28, zorder=3, label="odd primes")
     ax.scatter((2.0,), (0.0,), color=VERMILLION, marker="D", s=70, zorder=4, label="sole-even anchor (2)")
     ax.annotate(
-        "sole-even anchor",
+        "sole-even anchor p = 2",
         (2.0, 0.0),
         textcoords="offset points",
         xytext=(6, 10),
@@ -410,8 +414,8 @@ def plot_holographic_rhyme_contours(output_dir: Path) -> Path:
         zorder=4,
         label="constructive peak",
     )
-    ax.set_xlabel("x")
-    ax.set_ylabel("y")
+    ax.set_xlabel("pillar-field x-coordinate")
+    ax.set_ylabel("pillar-field y-coordinate")
     ax.set_title("Four-pillar holographic rhyme interference field")
     ax.legend(loc="upper right", fontsize=8)
     _corner_note(ax, "pillars = 4 · wavelength = 1", loc="lower left")
@@ -429,10 +433,19 @@ def plot_xd_yd_interference(output_dir: Path) -> Path:
     fig.colorbar(image, ax=ax, label="combined amplitude")
     ax.contour(grid_x, grid_y, summed, levels=7, colors=(ORANGE,), linewidths=0.8)
     ax.contour(grid_x, grid_y, differenced, levels=7, colors=(VERMILLION,), linewidths=0.8, linestyles="dashed")
-    ax.set_xlabel("x")
-    ax.set_ylabel("y")
+    ax.set_xlabel("xD coordinate")
+    ax.set_ylabel("yD coordinate")
     ax.set_title("xD±yD combined interference contours (solid: x+y, dashed: x−y)")
-    _corner_note(ax, "solid: x+y · dashed: x−y", loc="lower left")
+    from matplotlib.lines import Line2D
+
+    ax.legend(
+        handles=(
+            Line2D((0,), (0,), color=ORANGE, label="sum branch: cos 2π(x + y)"),
+            Line2D((0,), (0,), color=VERMILLION, linestyle="--", label="difference branch: cos 2π(x − y)"),
+        ),
+        loc="upper right",
+        fontsize=8,
+    )
     return save_figure(fig, output_dir, "part_I_multidimensional-rhyme")
 
 
@@ -456,7 +469,7 @@ def plot_void_potential_well(output_dir: Path) -> Path:
     )
     ax.axhline(0.0, color=GRAY, linewidth=0.6)
     ax.scatter((0.0,), (0.0,), color=VERMILLION, s=45, zorder=5, label="equilibrium (zero)")
-    ax.set_xlabel("x")
+    ax.set_xlabel("displacement x from zero")
     ax.set_ylabel("potential V(x)")
     ax.set_title("Topology of the void: zero as equilibrium")
     ax.legend()
@@ -471,7 +484,7 @@ def plot_higgs_gate_curves(output_dir: Path) -> Path:
     for color, k in zip(SERIES, (0.5, 1.0, 2.0)):
         ax.plot(t, models.transduction_brake(t, v0=1.0, k=k), color=color, label=f"k = {k}")
         ax.scatter((models.half_life(k),), (0.5,), color=color, marker="|", s=70, zorder=3)
-    ax.set_xlabel("t")
+    ax.set_xlabel("elapsed time t")
     ax.set_ylabel(r"velocity $v(t)$")
     ax.set_title("Mass-slowing gate: transduction-brake curve family")
     ax.legend()
@@ -492,7 +505,7 @@ def plot_phi_duality_mirror(output_dir: Path) -> Path:
     ax.set_ylabel("dual branch")
     ax.set_title("Φ duality: symmetric x·Φ and x/Φ mirror branches")
     ax.legend()
-    _corner_note(ax, "the mirror multiplies back: xΦ · x/Φ = x²", loc="lower right")
+    _corner_note(ax, f"Φ = {models.PHI:.6f} · the mirror multiplies back: xΦ · x/Φ = x²", loc="lower right")
     return save_figure(fig, output_dir, "part_II_proton-theater")
 
 
@@ -504,7 +517,7 @@ def plot_viscous_damping_family(output_dir: Path) -> Path:
         ax.plot(t, models.transduction_brake(t, v0=1.0, k=k), color=color, label=f"drag k = {k}")
         ax.scatter((1.0 / k,), (np.exp(-1.0),), color=color, s=22, zorder=3)
     ax.axhline(np.exp(-1.0), color=GRAY, linestyle=":", linewidth=0.8)
-    ax.set_xlabel("t")
+    ax.set_xlabel("elapsed time t")
     ax.set_ylabel(r"velocity $v(t)$")
     ax.set_title("Viscosity of light: damping curves over drag coefficients")
     ax.legend()
@@ -521,7 +534,7 @@ def plot_eddy_brake_inset(output_dir: Path) -> Path:
     stop = float(t[int(np.argmax(velocity < 0.05))])
     ax.axvline(stop, color=GRAY, linestyle=":", linewidth=0.9)
     ax.annotate(f"v < 0.05 at t ≈ {stop:.2f}", (stop, 0.05), textcoords="offset points", xytext=(6, 8), fontsize=8, color=GRAY)
-    ax.set_xlabel("t")
+    ax.set_xlabel("elapsed time t")
     ax.set_ylabel("velocity v(t)")
     ax.set_title("Eddy-current mirror: transduction drag with drag-force inset")
     ax.legend(loc="center left")
@@ -571,6 +584,7 @@ def plot_metrological_overlap_heatmap(output_dir: Path) -> Path:
     ax.set_yticks(np.arange(8), labels=[str(i + 1) for i in range(8)])
     diag = np.arange(8)
     ax.scatter(diag, diag, marker="s", s=14, facecolors="none", edgecolors=VERMILLION, linewidths=0.7)
+    _corner_note(ax, "self-overlap = 1 · pairs sharing a neighbour = 0.5 · disjoint = 0", loc="lower right")
     return save_figure(fig, output_dir, "part_II_metrological-overlap")
 
 
@@ -619,6 +633,7 @@ def plot_goldilocks_band_trace(output_dir: Path) -> Path:
 
 def plot_net_zero_balance_bars(output_dir: Path) -> Path:
     """part_II_singularity-crystal — net-zero inflow/outflow balance bars, zero residual."""
+    from matplotlib.lines import Line2D
     from matplotlib.patches import Patch
 
     inflows = {"source a": 4.0, "source b": 2.5, "source c": 3.5}
@@ -629,12 +644,18 @@ def plot_net_zero_balance_bars(output_dir: Path) -> Path:
     colors = (BLUE,) * len(inflows) + (ORANGE,) * len(outflows)
     fig, ax = new_figure()
     ax.bar(names, values, color=colors, width=0.6)
-    ax.axhline(0.0, color=GRAY, linewidth=0.8)
+    ax.set_ylim(-0.8, 6.0)  # headroom below zero so the residual line is a visible reference
+    ax.axhline(0.0, color=GRAY, linewidth=1.0, linestyle="--", label="zero residual line")
     ax.legend(
-        handles=(Patch(color=BLUE, label="inflow"), Patch(color=ORANGE, label="outflow")),
+        handles=(
+            Patch(color=BLUE, label="inflow"),
+            Patch(color=ORANGE, label="outflow"),
+            Line2D((0,), (0,), color=GRAY, linestyle="--", label="zero residual line"),
+        ),
         loc="upper right",
         fontsize=8,
     )
+    ax.set_xlabel("ledger entry")
     _corner_note(ax, f"residual = {residual:.1f} — the ledger closes")
     ax.set_ylabel("flow")
     ax.set_title("Singularity crystal: net-zero inflow/outflow balance")
@@ -666,7 +687,7 @@ def plot_prime_container_growth(output_dir: Path) -> Path:
     ks = np.arange(1, len(primes) + 1)
     addresses = [models.unique_address(primes[: int(k)], [1] * int(k)) for k in ks]
     fig, (ax, side) = _two_figure()
-    ax.semilogy(ks, addresses, "o-", color=BLUE)
+    ax.semilogy(ks, addresses, "o-", color=BLUE, label="unique_address(primes, 1)")
     ax.annotate(
         f"{addresses[-1]:,}",
         (ks[-1], addresses[-1]),
@@ -678,6 +699,7 @@ def plot_prime_container_growth(output_dir: Path) -> Path:
     ax.set_xlabel("prime channels folded")
     ax.set_ylabel("container address (log scale)")
     ax.set_title("Prime-container capacity: unique_address growth sequence")
+    ax.legend(loc="lower right", fontsize=8)
     _corner_note(ax, "each new prime channel multiplies the address space", loc="upper left")
     # Secondary panel: the decimal digit span of the container address.
     side.plot(ks, np.log10(np.asarray(addresses, dtype=float)), "o-", color=ORANGE)
@@ -765,6 +787,7 @@ def plot_bridge_throughput_radial(output_dir: Path) -> Path:
     ax.set_rlabel_position(90)
     ax.grid(True, linestyle=":", linewidth=0.6, color=GRAY, alpha=0.6)
     ax.set_title("Reality bridge: radial throughput profile", va="bottom", pad=16)
+    _corner_note(ax, "throughput = 1 + 0.5·cos 2θ · peaks at θ = 0, π", loc="lower left")
     return save_figure(fig, output_dir, "part_III_reality-bridge")
 
 
@@ -789,6 +812,16 @@ def plot_digit_drawer_bands(output_dir: Path) -> Path:
     ax.set_ylabel("octave bands per drawer")
     ax.set_ylim(0, 13)
     ax.set_title("Digit-4 drawer manifestation: 9 drawers × 11 sub-bands = 99")
+    from matplotlib.patches import Patch
+
+    ax.legend(
+        handles=(
+            Patch(color=BLUE, label="drawers 1–3, 5–9"),
+            Patch(color=VERMILLION, label="digit 4"),
+        ),
+        loc="upper right",
+        fontsize=8,
+    )
     _corner_note(ax, "every drawer carries exactly 11 bands — 99 in total", loc="upper left")
     return save_figure(fig, output_dir, "part_III_y-chromosome")
 
@@ -818,6 +851,7 @@ def plot_work_engine_curve(output_dir: Path) -> Path:
         load,
         models.saturating_response(load, maximum=1.0, half_saturation=half_saturation, hill=2.0),
         color=BLUE,
+        label="work output (hill n = 2)",
     )
     ax.axvline(half_saturation, color=ORANGE, linestyle="--", linewidth=0.9, label="half saturation = 3.0")
     ax.scatter((half_saturation,), (0.5,), color=ORANGE, s=36, zorder=3)
@@ -885,6 +919,14 @@ def plot_frontiers_quadrant_map(output_dir: Path) -> Path:
             color=GREEN if do_first else GRAY,
             weight="bold" if do_first else "normal",
         )
+    from matplotlib.patches import Patch
+
+    ax.legend(
+        handles=(Patch(facecolor=GREEN, alpha=0.15, edgecolor=GREEN, label="do-first quadrant"),),
+        loc="center",
+        fontsize=8,
+        framealpha=0.9,
+    )
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.set_xlabel("effort")
@@ -968,7 +1010,7 @@ def plot_part_I_unit_intro(output_dir: Path) -> Path:
     ax.set_ylabel(r"$\Phi^n$ (log scale)")
     ax.set_title("Part I — foundations map: five stations on the Φ spine")
     ax.legend(loc="lower right", fontsize=8)
-    _corner_note(ax, "each chapter builds on the spine before it", loc="upper left")
+    _corner_note(ax, f"spine value Φⁿ · Φ = {models.PHI:.6f}", loc="upper left")
     return save_figure(fig, output_dir, "part_I_unit-intro")
 
 

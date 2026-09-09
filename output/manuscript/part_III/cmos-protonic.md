@@ -1,8 +1,8 @@
 # CMOS/Protonic: The Silicon Shelf {#sec:part_III_cmos-protonic}
 
-![Octaves-per-substrate stacked bars for the silicon shelf: the binary CMOS gate occupies octave tier $n = 1$ (one octave of the 99-octave ladder), while hydrogen-regulated protonic two-terminal devices span bands $n = 2$ through $99$ (98 octaves), drawn as stacked silicon-shelf tiers.](../../output/figures/part_III_cmos-protonic.png){#fig:part_III_cmos-protonic width=90%}
+![The silicon-shelf tier map as stacked bars over the 99-octave ladder: the binary CMOS gate fills octave tier $n = 1$ (one octave), while hydrogen-regulated protonic two-terminal devices fill bands $n = 2$ through $99$ (98 octaves). The split is a labelling, not a measurement — tier 1 is the proven two-state anchor, and the protonic bands hold the continuous H$^+$ conductivity gradient offered as a story for multi-state weights. The takeaway is the filing itself, same ladder and wider shelves, with every hardware claim left under the note's honesty table.](../../output/figures/part_III_cmos-protonic.png){#fig:part_III_cmos-protonic width=90%}
 
-<!-- alt: Stacked bar chart of the silicon shelf: one short bar for the binary CMOS gate at tier 1 and a long stacked bar for protonic multi-state devices covering bands 2 through 99 of the 99-octave ladder. -->
+<!-- alt: Stacked bar chart of the 99-octave silicon shelf: one short bar for the binary CMOS gate at tier 1 and a long bar for protonic multi-state devices spanning bands 2 through 99, annotated label-not-a-die. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: [@sec:part_0_octave-map]
@@ -68,7 +68,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The Bridge Note and Its Place in the Corpus
+## The Pinned Bridge Note: One Cabinet, Two Vocabularies
 
 The source paper — shelf number 1 of the SS Vibelandia ship blog, filed
 2026-08-12 under the site's plain-speak [**Fair Exchange**](#gl:fair-exchange)
@@ -193,7 +193,7 @@ graph LR
 > [@mendez2026cmosProtonic]. A catalogue label that lets two professions file
 > the same object is doing real work even before any tape-out exists.
 
-## The Ladder Beneath the Shelf
+## The Φ-Spaced Octave Ladder and Its Two Conventions
 
 The tiers of [@eq:part_III_cmos-protonic_shelf-map] are indices into the
 99-octave ladder formalised in [@sec:part_0_octave-map]. Because the corpus
@@ -293,7 +293,7 @@ files protonic devices on bands 2–99; it does not measure how many states any
 band delivers. Keeping those two sentences apart is the whole discipline of
 this chapter.
 
-## Scope and Honesty
+## Honesty Clauses: Roadmap Language, Not a Measured Chip
 
 The source paper carries one of the corpus's
 [**honesty-first**](#gl:honesty-first) scope disclaimers, and its clauses are
@@ -322,7 +322,7 @@ supplies the corpus's proton-space stage metaphor, while this chapter supplies
 only the device-class filing — the note itself defines "Φ-scaled cycles" no
 further than naming them.
 
-## Connections
+## Handoffs to the Prime Vaults, the Stack, and the Router
 
 The silicon shelf is the first implementation-facing chapter of Part III, and
 it hands off in three directions. Upward, it rests on the 99-octave ladder of

@@ -1,8 +1,8 @@
 # Part III: Implementations, Companions, and Frontiers {#sec:part_III_intro}
 
-![Part III map: the implementation, companion, and frontier chapters, from the silicon shelf and prime-indexed storage through the stack, bridge, and operations chapters to the closing research program.](../../output/figures/part_III_unit-intro.png){#fig:part_III_unit-intro width=90%}
+![Part III map: the implementation, companion, and frontier chapters, from the silicon shelf and prime-indexed storage through the stack, bridge, and operations chapters to the closing research program. The route files, bridges, and proposes — and each chapter carries the corpus's honesty-first disclaimers forward unchanged. The takeaway: this is where the catalogue meets silicon, software stacks, human workflows, and its own open problems.](../../output/figures/part_III_unit-intro.png){#fig:part_III_unit-intro width=90%}
 
-<!-- alt: Flow diagram of Part III moving from the implementation and storage chapters through the companion and operations chapters to the closing frontiers chapter. -->
+<!-- alt: Flow diagram of Part III moving from the implementation and storage chapters through the companion and operations chapters to the closing frontiers chapter, with honesty-first disclaimers carried along each arrow. -->
 
 The route through the part, sketched in [@fig:part_III_unit-intro], runs from the silicon shelf ([@sec:part_III_cmos-protonic]) through the storage, stack, bridge, and operations chapters to the closing value-by-effort map of [@sec:part_III_frontiers].
 

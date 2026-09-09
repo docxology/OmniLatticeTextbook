@@ -475,9 +475,15 @@ alt="A lattice-linear flow ramps linearly through the gateway stages." /><span c
 Lattice-Linear Gateway: cumulative flow <span class="math inline">\(L_n
 = n\,r\)</span> rises in equal increments across the ops decision cycle
 (Gather → Decide → Act), generated from
-<code>textbook.models.lattice_linear_profile</code>.</figcaption>
+<code>textbook.models.lattice_linear_profile</code> at the
+routing-grammar step <span class="math inline">\(r = \Phi \approx
+1.618\)</span>. Each domain join adds exactly one increment of flow, so
+the shared brief accumulates without a tab reset and the ramp stays
+linear rather than exponential. The takeaway: routing grammar, not more
+tokens — the signature difference between a gateway profile and the
+corpus’s octave ladders.</figcaption>
 </figure>
-<!-- alt: A rising staircase of six equal-width steps on a linear axis, each step one routing-grammar unit taller than the last, annotated with the repeating Gather, Decide, Act cycle of the gateway console; the cumulative ramp stays linear rather than exponential. -->
+<!-- alt: Rising staircase of six equal-width steps on a linear axis, each step one routing-grammar unit taller than the last, annotated with the repeating Gather, Decide, Act cycle of the gateway console; the cumulative ramp stays linear rather than exponential. -->
 <!-- chapter-metadata-badge -->
 <blockquote>
 <p>Level 1/3 · 30 min read · 45 min lecture · Prerequisites: <span
@@ -551,7 +557,8 @@ enterprise gateway companion, built so a reader can <em>feel the
 bridge</em> before reading its grammar [mendez2026pdvsaMockup].</p>
 </blockquote>
 <hr />
-<h2 id="orientation">Orientation</h2>
+<h2 id="two-artefacts-one-gateway-simulator-and-mockup-note">Two
+Artefacts, One Gateway: Simulator and Mockup Note</h2>
 <p>Two linked artefacts from September 2026 anchor this chapter: the
 <em>PDVSA Gateway Ops</em> special-project simulator
 [mendez2026pdvsaGateway] and its ship-blog mockup note
@@ -565,10 +572,10 @@ historical rhyme — not live PDVSA telemetry.”</p>
 <p>This chapter treats the gateway the way this book treats every shelf
 entry: as <a
 href="#gl:catalog-architecture"><strong>catalog-architecture</strong></a>
-to be formalised, not as a device to be believed. The core-constructs
-section gives the console’s three-zone data topology, its lattice-linear
-flow profile, and its nine-takeaway index; a worked example walks the
-“Scenario 1 · Morning brief” scenario numerically; the scope section
+to be formalised, not as a device to be believed. The constructs section
+gives the console’s three-zone data topology, its lattice-linear flow
+profile, and its nine-takeaway index; a worked example walks the
+“Scenario 1 · Morning brief” scenario numerically; the honesty section
 reproduces the source’s <a
 href="#gl:honesty-first"><strong>honesty-first</strong></a> disclaimers
 verbatim. The quantitative lens is deliberately thin — the corpus prints
@@ -576,7 +583,8 @@ no symbolic equation on the simulator page itself — so the worked
 formalism below is a structural model of the console profile,
 implemented as <code>lattice_linear_profile</code> in
 <code>textbook.models</code>.</p>
-<h2 id="the-paper-in-the-corpus">The Paper in the Corpus</h2>
+<h2 id="the-enterprise-companion-beside-the-cmos-pin">The Enterprise
+Companion Beside the CMOS Pin</h2>
 <p>The gateway papers sit at the enterprise edge of the Infinite Octaves
 engine shelf. The mockup note files the simulator “on the
 <strong>Infinite Octaves engine shelf</strong> as the enterprise gateway
@@ -982,7 +990,8 @@ sits at twice the ramp we just walked: the console’s own numeric
 furniture (N ≥ 6, K = 12, a 90-second decision window) is what a re-run
 of <code>npm run research:synthobs-pdvsa-gateway-ops-mockup</code> and
 its E1–E6 empirics are there to exercise [mendez2026pdvsaMockup].</p>
-<h2 id="scope-and-honesty">Scope and Honesty</h2>
+<h2 id="simulator-not-telemetry-the-honesty-first-scope">Simulator, Not
+Telemetry: The Honesty-First Scope</h2>
 <p>The gateway papers are unusually explicit about their own epistemic
 status, and this chapter preserves that framing verbatim. The mockup
 note’s disclaimer, in full [mendez2026pdvsaMockup]:</p>
@@ -1013,7 +1022,8 @@ and <span class="citation"
 data-cites="eq:part_III_pdvsa-gateway_tokens">[@eq:part_III_pdvsa-gateway_tokens]</span>
 inherit exactly that status: structural models of printed prose, not
 measurements.</p>
-<h2 id="connections">Connections</h2>
+<h2 id="handoffs-to-the-cmos-pin-the-stack-and-the-catalog">Handoffs to
+the CMOS Pin, the Stack, and the Catalog</h2>
 <p><strong>Beside on the shelf: the CMOS pin.</strong> The mockup is
 careful that the gateway’s engine-shelf filing “does not displace the
 CMOS pin” [mendez2026pdvsaMockup]. The substrate-layer companion — the

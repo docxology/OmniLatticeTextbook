@@ -1,8 +1,8 @@
 # Prime-Indexed Volumetric Storage {#sec:part_III_volumetric-storage}
 
-![Prime-indexed address scatter: each point is a vault address $\prod p_i^{k_i}$ formed from a choice of odd-prime vaults (3, 5, 7, …) and exponents $k$, computed over the $p^k$ lattice from `textbook.models.unique_address`, with the binary base channel (Prime 2) shown as the substrate.](../../output/figures/part_III_volumetric-storage.png){#fig:part_III_volumetric-storage width=90%}
+![Prime-indexed address scatter: each point is a vault address $\prod p_i^{k_i}$ formed from a choice of odd-prime vaults (3, 5, 7, …) and exponents $k$, computed over the $p^k$ lattice from `textbook.models.unique_address`. Prime 2 sits at the substrate as the binary base channel — the sole-even anchor — while the odd-prime vaults differentiate the stored content. The takeaway: an address is its own factorisation, injective by the uniqueness of prime factorisation, so no separate lookup structure is filed to recover it.](../../output/figures/part_III_volumetric-storage.png){#fig:part_III_volumetric-storage width=90%}
 
-<!-- alt: Scatter plot of prime-indexed vault addresses on the p^k lattice, with odd primes 3, 5, 7 and small exponents as axes and the binary base channel labelled at the origin. -->
+<!-- alt: Scatter plot of prime-indexed vault addresses on the p^k lattice, with odd primes 3, 5, 7 and small exponents as axes and the binary base channel labelled at the origin; each plotted address equals its own prime factorisation. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -73,7 +73,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The Paper in the Corpus
+## The Vault Filing on Engine Shelf #15
 
 The note "Prime-Indexed Volumetric Storage" is a ship-blog paper of the
 Infinite Octaves [**Omni-Lattice**](#gl:omni-lattice) series, authored by
@@ -82,7 +82,7 @@ Vibelandia blog [@mendez2026volumetricStorage]. Like every paper in the
 series, it self-describes as [**catalog architecture**](#gl:catalog-architecture)
 and protocol grammar rather than established physics, and it carries the
 series' standard honesty-first scope disclaimer, restated precisely in the
-Scope and Honesty section below.
+honesty section below.
 
 The paper files itself on **engine shelf #15** of the Infinite Octaves
 [**engine shelf**](#gl:engine-shelf), as a companion to two neighbouring
@@ -267,7 +267,7 @@ with $K = 2$ already fills $27$ addresses inside that cabinet — the worked
 grid above is a toy drawer, and the cabinet grammar it lives in is the
 99-octave filing of the engine shelf.
 
-## Scope and Honesty
+## Four Disclaimers: No JEDEC Drop-In, No ECC Claim
 
 The paper's own "Honesty first" disclaimer governs everything above, and we
 restate it verbatim in substance [@mendez2026volumetricStorage]:
@@ -298,7 +298,7 @@ refund-adjustment terms. The whole construct lives on the corpus's
 cataloging, and agent routing — a grammar for filing and addressing — and its
 NOT is any claim of tested storage hardware.
 
-## Connections
+## Handoffs to Prime-Parity, the Protein Vaults, and the Stack
 
 The prime-vault grammar is a load-bearing spoke of part III:
 

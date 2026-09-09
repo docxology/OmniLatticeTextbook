@@ -279,6 +279,30 @@ def test_upgraded_composites_are_byte_deterministic(tmp_path, builder):
     assert first.read_bytes() == second.read_bytes()
 
 
+_POLISHED_BUILDERS = (
+    plots.plot_register_bins_heatmap,
+    plots.plot_octave_ladder,
+    plots.plot_net_zero_balance_bars,
+    plots.plot_prime_parity_numberline,
+    plots.plot_xd_yd_interference,
+    plots.plot_digit_drawer_bands,
+)
+
+
+@pytest.mark.parametrize(
+    "builder",
+    _POLISHED_BUILDERS,
+    ids=["register-bins", "octave-ladder", "net-zero-bars", "prime-parity", "xd-yd-interference", "digit-drawers"],
+)
+def test_polished_builders_nonempty_and_byte_deterministic(tmp_path, builder):
+    """Polished annotation-heavy builders stay valid PNGs and byte-stable across runs/dirs."""
+    first = builder(tmp_path / "a")
+    _png_is_nonempty(first)
+    second = builder(tmp_path / "b")
+    _png_is_nonempty(second)
+    assert first.read_bytes() == second.read_bytes()
+
+
 # ---------------------------------------------------------------------------
 # Unit-intro part-overview figures and the extended gallery (shared contract).
 # ---------------------------------------------------------------------------

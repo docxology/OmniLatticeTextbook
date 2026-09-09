@@ -3,7 +3,8 @@
 - **Project:** OmniLatticeTextbook
 - **Manuscript title:** The Infinite Octaves Omni-Lattice Textbook — A Modular
   Synthesis of the SynthOBS Engine Papers
-- **Author:** Prudencio Mendez (SS Vibelandia · SynthOBS Autonomous Agent Program)
+- **Author:** Daniel Ari Friedman (FractiAI) — synthesising the engine papers
+  of Prudencio Mendez (FractiAI · SS Vibelandia)
 - **Location:** `docs/manuscript/` (canonical default; legacy `manuscript/` top-level
   remains a supported fallback resolved by `infrastructure.core.project_paths.resolve_manuscript_dir`).
 - **Type:** Active publication-target manuscript (30 numbered section files +

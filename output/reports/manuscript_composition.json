@@ -1,226 +1,226 @@
 {
   "algorithm": "shared-combined-markdown-v1",
-  "binding_sha256": "2e9a016a0c525525c4fde839dbadb1b8cc0a55a5156d5880a2fe701c45517b8a",
+  "binding_sha256": "1a6da918d5cd366a03ff4c4ac7ddb274c4fe3d7db9d011bd65e73e11830832fa",
   "combined_path": "output/web/_combined_manuscript.md",
-  "combined_sha256": "52fbdd87119b276e83b185c5a7253db6a971925bb247fc8dfad4b5d25d7fc992",
-  "combined_size_bytes": 1128582,
+  "combined_sha256": "30bcab02e615ec9b4bea98c964d69d54db387790868e751db195aa50c341494f",
+  "combined_size_bytes": 1140806,
   "input_root_kind": "hydrated",
   "ordered_inputs": [
     {
       "ordinal": 1,
       "path": "output/manuscript/front_matter.md",
-      "sha256": "2ef98d9dc917b4c067ae18c1b0d99e57f743f6aff6f1dc327c466ae5baddef6a",
-      "size_bytes": 6423
+      "sha256": "f3b3786ac8469ec62b9d3aec39793cff7e83b27a09dbc77087859b17c1453328",
+      "size_bytes": 6575
     },
     {
       "ordinal": 2,
       "path": "output/manuscript/preface.md",
-      "sha256": "aaf765b9417e88ca89be282cdcb0e8e57d69a032ebddc3204326ef1b1e45b877",
-      "size_bytes": 6082
+      "sha256": "21fd5691ebca3116fd40c30dea53ee0a228e40561854bb72292dc2df06bfd1f0",
+      "size_bytes": 6080
     },
     {
       "ordinal": 3,
       "path": "output/manuscript/part_0/unit_intro.md",
-      "sha256": "28afac83030d5a43a5731142fed6c680846615345f774603d0ba58f6902f6261",
-      "size_bytes": 4787
+      "sha256": "54916d3e8a051a5fd9f523768a3439cb20bba859406e542bf366ed883cf8c390",
+      "size_bytes": 5175
     },
     {
       "ordinal": 4,
       "path": "output/manuscript/part_0/orientation.md",
-      "sha256": "3485b74d9bd08a9998bf9eabf7a8b6231f2dba0d0e138c15fc529976b330e2be",
-      "size_bytes": 26949
+      "sha256": "5e36f582d7021f90b7ae63fa141ba40f41520492da23d66ba20affb653a659cc",
+      "size_bytes": 27146
     },
     {
       "ordinal": 5,
       "path": "output/manuscript/part_0/living-pem.md",
-      "sha256": "a47cf6833dd86ade3b3e40058160da8db7e1fb997870b80b046f83122b475d96",
-      "size_bytes": 27445
+      "sha256": "d484cf130d3cef22962475bab163f8ac9b2277b1ae4db501c05436bc80db3651",
+      "size_bytes": 27855
     },
     {
       "ordinal": 6,
       "path": "output/manuscript/part_0/tensor-decoupling.md",
-      "sha256": "5fb51b1543eea3f507064c8b94479b7aec3a3a95a791283a3f7ece3715f16f4c",
-      "size_bytes": 21090
+      "sha256": "65451498a1d06a555c4cd4115ed7dde6b026b8a0bce03fcc2f1a9b410978f472",
+      "size_bytes": 21591
     },
     {
       "ordinal": 7,
       "path": "output/manuscript/part_0/master-synthesis.md",
-      "sha256": "be01ad16cb3fa67387e96388bc0b416b6f225757b6732fc852cb070ddb28284f",
-      "size_bytes": 23627
+      "sha256": "35990089dc013b16eff2bab6ecca84b222db4ee0d7d9fe980c345bc15203517a",
+      "size_bytes": 23823
     },
     {
       "ordinal": 8,
       "path": "output/manuscript/part_0/octave-map.md",
-      "sha256": "b01964d87281b0b73839adf6236bb67b0f6616e36af27b0387a8b216577fbc61",
-      "size_bytes": 21076
+      "sha256": "b6435ea186aa9939a440e529fc3d0e55ca1cd331dbcdb4f6fbd7c0eefea50a0d",
+      "size_bytes": 21539
     },
     {
       "ordinal": 9,
       "path": "output/manuscript/part_I/unit_intro.md",
-      "sha256": "9cca9fe0b53d73ddc206f653257b883aa87f959355d0a5ea342b496ce9c11967",
-      "size_bytes": 6019
+      "sha256": "b090e6e86430907dfba70325cf85f77f111959721378896cae1ee5592cd56505",
+      "size_bytes": 6451
     },
     {
       "ordinal": 10,
       "path": "output/manuscript/part_I/fractal-constant.md",
-      "sha256": "6fdee773dfad591a0af6a071ef9e87b1d4655b6c246ff445b73fdeb4f2313439",
-      "size_bytes": 25614
+      "sha256": "591c8010900e772f8530899846254e527f1eeaa3a4fc0f7f7b46afc81d5423ff",
+      "size_bytes": 25999
     },
     {
       "ordinal": 11,
       "path": "output/manuscript/part_I/prime-parity.md",
-      "sha256": "60c8c086146708dd518891eb809465ac5091be7216ff48c3bcfc7272cb6d9511",
-      "size_bytes": 20403
+      "sha256": "08923a91618082eeeef2fb593f91cdf3cdef676f7794a16a397101d9c384d3f2",
+      "size_bytes": 20717
     },
     {
       "ordinal": 12,
       "path": "output/manuscript/part_I/holographic-rhyme.md",
-      "sha256": "1836c14bd322934021e5b0d07fa54a67bb72ca276fd3b9fd67ba1001da08c811",
-      "size_bytes": 20788
+      "sha256": "a1d3325124dfb177c2ba4d5f17b670ea4f6fd9b62f240b0e7aca43f4f6669ba0",
+      "size_bytes": 21219
     },
     {
       "ordinal": 13,
       "path": "output/manuscript/part_I/multidimensional-rhyme.md",
-      "sha256": "c4341dd28480c3cdc14c7bd8b6177e1665dd80f67f777dfc9eac06364d35d146",
-      "size_bytes": 22129
+      "sha256": "d4a9188b12dbc9558f04050e00f529b89c58f2765bb8c07e4df1c5efff9d5e7c",
+      "size_bytes": 22595
     },
     {
       "ordinal": 14,
       "path": "output/manuscript/part_I/topology-void.md",
-      "sha256": "9c93c37d15d960c2694a17efb06ea8f4262d15c72bb566a84aafb7ee0dab0e52",
-      "size_bytes": 23227
+      "sha256": "61a7e2e51d46e0a5e18c8e01f0549dd2e0dc3c31bee9c0594d04df338224b5f0",
+      "size_bytes": 23732
     },
     {
       "ordinal": 15,
       "path": "output/manuscript/part_I/higgs-awareness.md",
-      "sha256": "ee7c8e196059aec144c29cef095c6e9b38352df9679c27e571d9c7e1eb104d97",
-      "size_bytes": 19981
+      "sha256": "c2c2598e28579af275bd9082e71608af2289eeff357926f7175dc2cf0f3b5f34",
+      "size_bytes": 20307
     },
     {
       "ordinal": 16,
       "path": "output/manuscript/part_II/unit_intro.md",
-      "sha256": "fb9863ab1398f9b5afa7c194e2d21b8b26570943521f3719aeb62fb8cc882639",
-      "size_bytes": 4840
+      "sha256": "1a6ba7e4e91e7d208ae5d80e88cc1eb3e0f1191293a044455c7b9f683e46c563",
+      "size_bytes": 5118
     },
     {
       "ordinal": 17,
       "path": "output/manuscript/part_II/proton-theater.md",
-      "sha256": "8bf154bd94a59452ccfe3c02bb43040b6fa52a8315fb92b7a7568f77b7fffa97",
-      "size_bytes": 22736
+      "sha256": "a6644896f8fac03264dec2dbd800c6af91d740dc87967b016b4582df33258cf3",
+      "size_bytes": 23079
     },
     {
       "ordinal": 18,
       "path": "output/manuscript/part_II/viscosity-light.md",
-      "sha256": "4da68e392d239a19d038ee8269f6c0943c0b0ac35c62177fb6956af312e5b610",
-      "size_bytes": 22813
+      "sha256": "19434ef546c77404988e0ae08308bd1b0c09fb93ae1c1084a00bb413a41e03ac",
+      "size_bytes": 23097
     },
     {
       "ordinal": 19,
       "path": "output/manuscript/part_II/eddy-current-mirror.md",
-      "sha256": "54f93b436444774aa4d3c39c0b156d87950d49698d079c8adfd603dffb65face",
-      "size_bytes": 20546
+      "sha256": "cd9fc54a40517a8f2eb1037b8185af349e90979cf8db17ff7c50cd95e9c14b99",
+      "size_bytes": 20901
     },
     {
       "ordinal": 20,
       "path": "output/manuscript/part_II/crystalline-field.md",
-      "sha256": "97ceb7354d17e81d613153db7b0683f595697a166589d6bdd31c9aa36b8bc64f",
-      "size_bytes": 20844
+      "sha256": "2b0ae706c48bfc75116dca6513a8fd8e492bbf8ecbdc291afc7d625d7c97d7ac",
+      "size_bytes": 21235
     },
     {
       "ordinal": 21,
       "path": "output/manuscript/part_II/metrological-overlap.md",
-      "sha256": "b7cc04671428898a91a9eb664c1cd17d50a2c7dcd1ed47086aeb2ca78a95aa07",
-      "size_bytes": 26221
+      "sha256": "44e88965dca9bfd8ad568f7db875f53e7e18be3ad22aa52afae9f3a887ee91aa",
+      "size_bytes": 26494
     },
     {
       "ordinal": 22,
       "path": "output/manuscript/part_II/metamorphic-octaves.md",
-      "sha256": "254161f3f3c7a62267a2bac821fc3f84c49bc7b36b9a04f764df384fe27372aa",
-      "size_bytes": 21680
+      "sha256": "aa3b14a521c2292958188cd10828ffb1eda138a178ae2f0383110e3a4a0b3f1c",
+      "size_bytes": 21899
     },
     {
       "ordinal": 23,
       "path": "output/manuscript/part_II/planetary-core.md",
-      "sha256": "1beefd51d3863817aa976e79aa7ac72a94701e64c25158be8cbc08d605d71f70",
-      "size_bytes": 21852
+      "sha256": "f4ef3bdabdc12ae4b887e9cd1a3df473e080201f2aa1f91c511702d684a2416b",
+      "size_bytes": 22083
     },
     {
       "ordinal": 24,
       "path": "output/manuscript/part_II/singularity-crystal.md",
-      "sha256": "370485e8f8d9f55e3b276f568382e93ac6901b5a17f371b2ddd7f826bffbe226",
-      "size_bytes": 22590
+      "sha256": "4603794e802823500435deaf1b5316fe01f0c2e03847e5f53b2bcf55113e02f0",
+      "size_bytes": 22803
     },
     {
       "ordinal": 25,
       "path": "output/manuscript/part_III/unit_intro.md",
-      "sha256": "0b3620180b9c2861acb13f3a23da79efd85d3dd7ccdd94f8c1008205a6f12610",
-      "size_bytes": 5313
+      "sha256": "7df4ddcf7b768eae77774346c8558b486304af926db2a4f20ac56ad5812b7ce7",
+      "size_bytes": 5614
     },
     {
       "ordinal": 26,
       "path": "output/manuscript/part_III/cmos-protonic.md",
-      "sha256": "bddbfd9f329ab87526a5243e213472e1ebf97474ea89ef303f17e7a3c3215aa6",
-      "size_bytes": 21217
+      "sha256": "a32a1c8a2ebd2e7885bdaf57aef14088d713780dcd9b71e1228d500176be44d1",
+      "size_bytes": 21614
     },
     {
       "ordinal": 27,
       "path": "output/manuscript/part_III/protein-folding.md",
-      "sha256": "bd8ec272ea81149ef883e56f9b118d215fe53b707d6e08aad0e0ad58366554dc",
-      "size_bytes": 22143
+      "sha256": "8d060af73cebaa6d86ac96696adb375075cd579eb08369dc7774d50dd1fbd72b",
+      "size_bytes": 22597
     },
     {
       "ordinal": 28,
       "path": "output/manuscript/part_III/volumetric-storage.md",
-      "sha256": "716787cff5e17298f7a29477114769ae47c183673fd2572b5a0cdae6d2e32762",
-      "size_bytes": 20655
+      "sha256": "8088a4638db974d66813db191df24d35c5b7b367c095891999007e9f398672a6",
+      "size_bytes": 21037
     },
     {
       "ordinal": 29,
       "path": "output/manuscript/part_III/kinematic-recycling.md",
-      "sha256": "b595dbaa3b85abb68d185eb07abc682d1f949068216750d63344df3046eb2dfd",
-      "size_bytes": 22730
+      "sha256": "4477920a5f59617dab49fb46bded222d32e130bb93988d28942352a7a62ee494",
+      "size_bytes": 23177
     },
     {
       "ordinal": 30,
       "path": "output/manuscript/part_III/moving-up-stack.md",
-      "sha256": "b0a159b67734ccccae77cb119b8fc3a628743650befcf6fa7fcbae9934bcdfcf",
-      "size_bytes": 22870
+      "sha256": "d4eab6a1aaab747341b590365f69884e87f6fdb27ced170c2e0c519ea9591498",
+      "size_bytes": 23246
     },
     {
       "ordinal": 31,
       "path": "output/manuscript/part_III/reality-bridge.md",
-      "sha256": "0199637e742facd2eb2955a34fd9acafcd42a28f845ec5987e17c7f353ee102c",
-      "size_bytes": 27911
+      "sha256": "e702095958240d240ebe3c6d09b1b282d59fc7bb98f392ca3b1a6ab8f5f5b741",
+      "size_bytes": 28245
     },
     {
       "ordinal": 32,
       "path": "output/manuscript/part_III/y-chromosome.md",
-      "sha256": "ba1144dbcde6a5a375455c0b2da4151e1479109cb053c060cdd6f613634b1dbc",
-      "size_bytes": 21094
+      "sha256": "c4de885e9120f4d64b2b2d258a164bf0c20be8c7ab2c48222b6562e91b321e2a",
+      "size_bytes": 21446
     },
     {
       "ordinal": 33,
       "path": "output/manuscript/part_III/pdvsa-gateway.md",
-      "sha256": "a7c6fd3474c8be6a9f837db4ed7f6ec36abdc22f9849ac5ad1dde613e2ff2704",
-      "size_bytes": 23831
+      "sha256": "63e56e8a1b46a9afbeb41b5195fc38ee5955206bb6bc24c0fa74462bb2124a8d",
+      "size_bytes": 24306
     },
     {
       "ordinal": 34,
       "path": "output/manuscript/part_III/macro-protein.md",
-      "sha256": "3ddffac7cf3a0b1adfae6967489faf43aba86911a0162bde365a35fa84d009ff",
-      "size_bytes": 24612
+      "sha256": "4499ffe3c97151d6cac2d1ac4c39f5c14ef95d14bb449f188407559cda64ec3e",
+      "size_bytes": 24951
     },
     {
       "ordinal": 35,
       "path": "output/manuscript/part_III/invisible-frontier.md",
-      "sha256": "f5edba92bd72820df044a06d48db8ec3055de259b2ca21b06bb8d90996aa6106",
-      "size_bytes": 23289
+      "sha256": "d1d5f574fc67b85f5506fcc7f82e701590808df42175a4afef715315b96fa4c7",
+      "size_bytes": 23675
     },
     {
       "ordinal": 36,
       "path": "output/manuscript/part_III/frontiers.md",
-      "sha256": "0baea3f8f76fd4574d3fb878a16a2adbf6e508b46e5d0193933e0b3fc8d5bc95",
-      "size_bytes": 25252
+      "sha256": "35b278bacb56bd26276db78225a2f7522abf4aef2a99893ba1b5cd85c3ba0021",
+      "size_bytes": 25482
     },
     {
       "ordinal": 37,
@@ -625,7 +625,7 @@
       "size_bytes": 10850
     }
   ],
-  "ordered_inputs_sha256": "d254d7c6e494dc018a97254ed2dac3f1037def50c1fb029ade6366de79c58b2e",
+  "ordered_inputs_sha256": "6f1eaabb80fefc7544c0ac9bece194f7afc0574df4d13cd83c64e8391c00e5b3",
   "project": "working/OmniLatticeTextbook",
   "schema_version": "template-manuscript-composition-v1"
 }

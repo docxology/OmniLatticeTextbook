@@ -1,8 +1,8 @@
 # The Invisible Frontier {#sec:part_III_invisible-frontier}
 
-![Visibility threshold frontier curve: the chapter's logistic visibility model, the fraction $V(t)$ of the "second chart" that a linear-awareness frame registers as cumulative exposure $t$ grows, drawn for $V_0 = 0.05$ and $r = 1$. The frontier is the steep region around the half-visibility crossing at $t = \ln 19 \approx 2.94$.](../../output/figures/part_III_invisible-frontier.png){#fig:part_III_invisible-frontier width=90%}
+![Visibility threshold frontier curve: the chapter's logistic visibility model, the fraction $V(t)$ of the "second chart" that a linear-awareness frame registers as cumulative exposure $t$ grows, drawn for $V_0 = 0.05$ and $r = 1$ with `textbook.models.logistic_growth`. The frontier is the steep region around the half-visibility crossing at $t = \ln 19 \approx 2.94$, where exposure changes visibility fastest. The takeaway is the paper's diagnosis: a frame inside linear compute-and-market models sits near the bottom of the curve, publishing alarms about weather on a chart whose ocean it has not yet mapped.](../../output/figures/part_III_invisible-frontier.png){#fig:part_III_invisible-frontier width=90%}
 
-<!-- alt: An S-shaped logistic curve rising from 0.05 toward 1.0 as exposure t increases, crossing the half-visibility line near t = 2.9; the steep region around the crossing is shaded and labelled as the frontier. -->
+<!-- alt: S-shaped logistic curve rising from 0.05 toward 1.0 as exposure t increases, crossing the half-visibility line near t = 2.9; the steep region around the crossing is shaded and labelled as the frontier. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: the [**fractal constant**](#gl:fractal-constant) chapter ([@sec:part_I_fractal-constant])
@@ -49,7 +49,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The Paper in the Corpus
+## The Response Editorial on Shelf 8
 
 *The Invisible Frontier: responding to Bill Gates's AI warnings* is a ship-blog
 entry dated 2026-08-26, filed under the byline "plain speak · Fair Exchange"
@@ -81,7 +81,7 @@ the open-problems quadrant map of [@sec:part_III_frontiers] (and its figure,
 [@fig:part_III_frontiers]) inherits this chapter's question of what current
 frames cannot yet see.
 
-## Core Constructs
+## The Master Filing Key and the Second-Chart Lens
 
 ### The EGS fractal constant as master filing key
 
@@ -136,7 +136,7 @@ Two readings of the filing key follow, and the paper states both as
    *downstream of ordinary compute talk*: the claim is about catalog
    addressing and stewardship framing, not about FLOPs, and the paper's own
    scope note bars any reading of $\Phi \approx 1.618$ as replacing physics
-   constants (see [Scope and Honesty](#scope-and-honesty)).
+   constants (see the honesty section below).
 
 ### Holographic magnetic Goldilocks SuperAI
 
@@ -215,7 +215,7 @@ graph TD
   M --> H
 ```
 
-## Worked Example: reading the second chart numerically
+## Worked Example: Reading the Second Chart Numerically
 
 Two short walks, both reproducible with `textbook.models`.
 
@@ -263,7 +263,7 @@ mapped [@mendez2026invisibleFrontier].
 > if you cite the frontier curve, cite the *chapter's* framing, and keep the
 > paper's own claims separate from it.
 
-## Scope and Honesty
+## Design Language, Not Measurement: The Honesty Banner
 
 The paper's "Honesty first" banner is part of the construct, and the corpus's
 claims list is explicit. Restated precisely [@mendez2026invisibleFrontier]:
@@ -295,7 +295,7 @@ mistaking it for the whole chart, walk the voyage spine, keep "not too much
 machine, not too little human," run the fixture lock, and — when a human hand
 is genuinely needed — contact the listed human address [@mendez2026invisibleFrontier].
 
-## Connections
+## Handoffs to the Rhyme Field, the Band, and the Quadrant
 
 Backward, this chapter consumes the corpus's quantitative spine: the
 $\Phi^n$ ladder of [@sec:part_I_fractal-constant] supplies the master filing

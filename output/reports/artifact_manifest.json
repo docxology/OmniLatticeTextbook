@@ -3,8 +3,8 @@
     {
       "contract_match": true,
       "path": "output/docx/OmniLatticeTextbook_combined.docx",
-      "sha256": "99cf8f73668762f435d6fcb2f309867552018bb1e372cf7b5b88eac3c950dc30",
-      "size_bytes": 4030465,
+      "sha256": "963a387dd126e452d7eddc4b42b9483b77becc8885ee4e5711f7c4685f6e96b0",
+      "size_bytes": 4106671,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -12,8 +12,8 @@
     {
       "contract_match": true,
       "path": "output/docx/_docx_metadata.yaml",
-      "sha256": "01e48f09817644c00f74c9341adbb34fde5a1b3f3698f4396574c0ad13c18af8",
-      "size_bytes": 27,
+      "sha256": "6f9adf26a8bf9c47879db25d586e5b1d1ac294fe40662060e43568600ecdd1dd",
+      "size_bytes": 30,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -21,8 +21,8 @@
     {
       "contract_match": true,
       "path": "output/epub/OmniLatticeTextbook_combined.epub",
-      "sha256": "b72ba8e8e0643415412dd374bbb9d51024adbd3dcb5496e3a05b327950d10b61",
-      "size_bytes": 4175137,
+      "sha256": "449bc7ddbb252fa93b29370d9a5483e00847e32fa52016b80fd78c6224f52243",
+      "size_bytes": 4255659,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -39,8 +39,8 @@
     {
       "contract_match": true,
       "path": "output/figures/figure_registry.json",
-      "sha256": "87b7af548b81efbd1bf0723ddbb7d950800fcd42f632a098b6c9d754d36be422",
-      "size_bytes": 25333,
+      "sha256": "d2195696c9837c4f2c55909ae0609dd4ecdd06b6922fa933887a4279900e19ea",
+      "size_bytes": 33123,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -264,8 +264,8 @@
     {
       "contract_match": true,
       "path": "output/figures/linear_fit.png",
-      "sha256": "d94a67969fbdead3fd99fa18ab7d8129c9bf80cec40586e413af4a9d705d305f",
-      "size_bytes": 51423,
+      "sha256": "ee1a7edd71f325bb16a0e9030ac4fcb5cf8381f642f5ead6c451bd5ed02a910c",
+      "size_bytes": 55853,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -273,8 +273,8 @@
     {
       "contract_match": true,
       "path": "output/figures/logistic_growth.png",
-      "sha256": "d32faf5378002d9df93fafa78516821e4a2b6d95c34bc4e63656a538ace3de0f",
-      "size_bytes": 64855,
+      "sha256": "110a56a97fbbc70b2eae824dbe9583a3e3f781422af0569418c1c6406c8baa5f",
+      "size_bytes": 66749,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -1488,8 +1488,8 @@
     {
       "contract_match": true,
       "path": "output/figures/part_0_living-pem.png",
-      "sha256": "4f5c1cba032795ebd9dcc4ed2252a096a22545218f2b91605b9d93c696cad230",
-      "size_bytes": 68017,
+      "sha256": "ff3bc562ef5d7e49762df7297a4d167d239320ecaf5a821e7de3df4b094f2dd7",
+      "size_bytes": 72216,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -1497,8 +1497,8 @@
     {
       "contract_match": true,
       "path": "output/figures/part_0_master-synthesis.png",
-      "sha256": "e2f11a68ddf605d55cee6e148ef7bfe59e5ec60e77092c62717b3bf24ca60b56",
-      "size_bytes": 57572,
+      "sha256": "370580570d352ac55d9fc7a5d7355110ecf26f91fd341178c9a8c7936f15df9c",
+      "size_bytes": 63502,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -1506,8 +1506,8 @@
     {
       "contract_match": true,
       "path": "output/figures/part_0_octave-map.png",
-      "sha256": "d09082404235fb445d091fad9afce4ae831ee1280eb31c169d053c3fe98f3d16",
-      "size_bytes": 90351,
+      "sha256": "c9f608a76c67c60219ffa512cf0846c074ea8686576b6a1ce0c60631ca4b6984",
+      "size_bytes": 91492,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -1524,8 +1524,8 @@
     {
       "contract_match": true,
       "path": "output/figures/part_0_tensor-decoupling.png",
-      "sha256": "f86a6765ed471ceba8669a241304caa534eb9b065b16715f4e0191b755c68330",
-      "size_bytes": 37891,
+      "sha256": "67547d428e6022d3bd22e440e9c0a26e5d97cfce34b998d5c8da9fe6890bbcb8",
+      "size_bytes": 45504,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -1551,8 +1551,8 @@
     {
       "contract_match": true,
       "path": "output/figures/part_III_frontiers.png",
-      "sha256": "52787efa6630fc61cb36871be843c1d2a51131a512110b22460c11fd46ea646e",
-      "size_bytes": 48889,
+      "sha256": "cdd175d21c76bac8e67de1c5d3ec3440561cf59e3f066386bf597b7543073ec5",
+      "size_bytes": 51815,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -1578,8 +1578,8 @@
     {
       "contract_match": true,
       "path": "output/figures/part_III_macro-protein.png",
-      "sha256": "eced9b0fbc25d132a6e53304c7c28905714783b6d26f042c357a166f80865f21",
-      "size_bytes": 51384,
+      "sha256": "00d5c41e0fb01cbad51e1129731cc2e6e39ad8e8af725efb4b7b1b339c97685b",
+      "size_bytes": 53755,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -1605,8 +1605,8 @@
     {
       "contract_match": true,
       "path": "output/figures/part_III_protein-folding.png",
-      "sha256": "8461b5563c89bb589a109e894ebec6707e38bf7976b9de728c8f6cd016174563",
-      "size_bytes": 86795,
+      "sha256": "1fdc33c28d3541dd92776cfdd8107a643df60420b2c431f42321462fc353b10f",
+      "size_bytes": 90654,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -1614,8 +1614,8 @@
     {
       "contract_match": true,
       "path": "output/figures/part_III_reality-bridge.png",
-      "sha256": "3d75f0d1c71ce3bf9200e17c5ac6d34bbc44a5abdbaa45062f4987c9438d5b65",
-      "size_bytes": 129339,
+      "sha256": "ec656908fe2bc63131f805a267a9607f33176898d3e8170fab116ec8de971b0f",
+      "size_bytes": 132720,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -1641,8 +1641,8 @@
     {
       "contract_match": true,
       "path": "output/figures/part_III_y-chromosome.png",
-      "sha256": "e144d5fa97e504ba2c36cc4633fa8fd303968f5ee085723219458ca64367efe5",
-      "size_bytes": 56060,
+      "sha256": "91a54d7777054b76d588e60a6622e4e7a484d951bd307f01fe4c6ce78f8f0a86",
+      "size_bytes": 59752,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -1659,8 +1659,8 @@
     {
       "contract_match": true,
       "path": "output/figures/part_II_eddy-current-mirror.png",
-      "sha256": "923e77839237405982bb551bbc95b1384edf649774dd381394e6ceb92bac9fa4",
-      "size_bytes": 69202,
+      "sha256": "2821c8792068a1c205bef906bd677cf8da16423056e4f4770fceeabcd269f5a0",
+      "size_bytes": 71049,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -1677,8 +1677,8 @@
     {
       "contract_match": true,
       "path": "output/figures/part_II_metrological-overlap.png",
-      "sha256": "503f90b2d38028b23cb81f513594517b1b3b954fda61408df54064ccb493fd92",
-      "size_bytes": 38381,
+      "sha256": "f65fac28ff7a468b107fb342c0b9912aa72aeaead4f6a999fbbafc874878a95f",
+      "size_bytes": 45220,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -1695,8 +1695,8 @@
     {
       "contract_match": true,
       "path": "output/figures/part_II_proton-theater.png",
-      "sha256": "cf78b6c3ad07ffeba10009a953d9839fab5319c58f56b34920fe2468638a963c",
-      "size_bytes": 65484,
+      "sha256": "9c9de3d75f1daa67f60abb05f2658b20a4a3c1bbe17ed62f6715dabe177701eb",
+      "size_bytes": 66822,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -1704,8 +1704,8 @@
     {
       "contract_match": true,
       "path": "output/figures/part_II_singularity-crystal.png",
-      "sha256": "5f7e4305f5c7301695f8fa42245e21cb1692596925b435dd8afe2222ec218506",
-      "size_bytes": 42451,
+      "sha256": "0bee39cc981a80643aea88ac5c9da62ff7146fb87eafd44ae3310f176c7f5c42",
+      "size_bytes": 48028,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -1722,8 +1722,8 @@
     {
       "contract_match": true,
       "path": "output/figures/part_II_viscosity-light.png",
-      "sha256": "397b8a44cb309f87bff508ab7691e6e99cdd704a95934fd3c90c0ce2e995dcd1",
-      "size_bytes": 85305,
+      "sha256": "51490c7a53da8bb84982a7f38846bc362b98a15eb034de941f6083377b4ebcba",
+      "size_bytes": 87151,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -1731,8 +1731,8 @@
     {
       "contract_match": true,
       "path": "output/figures/part_I_fractal-constant.png",
-      "sha256": "19697c7d255406fb4576c1600756e7e9c3f719d9755864fc4c6af27e88886b9f",
-      "size_bytes": 81102,
+      "sha256": "cfb09be0a79201236c4bebf1075b708da48b652b40458bdaa5a7656165844df6",
+      "size_bytes": 83182,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -1740,8 +1740,8 @@
     {
       "contract_match": true,
       "path": "output/figures/part_I_higgs-awareness.png",
-      "sha256": "496f8230e20cfb2c278ba96783c7fb0b4c3642b29dbb2bbe6fd4787eaddc4c9b",
-      "size_bytes": 70456,
+      "sha256": "129e764912402f76c6833fd17067954b2d4d4877467aa5a29688136a2e4cbea7",
+      "size_bytes": 72346,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -1749,8 +1749,8 @@
     {
       "contract_match": true,
       "path": "output/figures/part_I_holographic-rhyme.png",
-      "sha256": "165aa99406820576de3f43997e1a4583507732e41de34c898074cf9ab2304bbe",
-      "size_bytes": 302795,
+      "sha256": "9fc32916d1b1f135e9891047aa68b20c2c635c7bf31310e1f9e9dbf405fb63b0",
+      "size_bytes": 309966,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -1758,8 +1758,8 @@
     {
       "contract_match": true,
       "path": "output/figures/part_I_multidimensional-rhyme.png",
-      "sha256": "bb14d65451469c5a1b2a660ccb7ed5a19b45406096b388be7afaaa185394e54a",
-      "size_bytes": 802335,
+      "sha256": "be3bfe4b5bec76e36c23ba0d7e27b1e1807a1e3f5bbc932c29431b00971c781c",
+      "size_bytes": 799650,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -1767,8 +1767,8 @@
     {
       "contract_match": true,
       "path": "output/figures/part_I_prime-parity.png",
-      "sha256": "875c7b77c347b234b2208d353dd54153dff58aa03f6b9a795f5e87185e8e6b06",
-      "size_bytes": 54509,
+      "sha256": "31ad7c4cad1b7d8b21a50f0629b46d41cd527db57a38ffeff125b0255222fdfd",
+      "size_bytes": 55058,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -1776,8 +1776,8 @@
     {
       "contract_match": true,
       "path": "output/figures/part_I_topology-void.png",
-      "sha256": "34f7624f8abd0110929528c841c201d756215bf88610dd3af8e8dd47a14171a9",
-      "size_bytes": 62921,
+      "sha256": "56494d7d3b97ba95b09d1e842bd361a763945acf16cf449235cb20c45a9c8706",
+      "size_bytes": 66307,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -1785,8 +1785,8 @@
     {
       "contract_match": true,
       "path": "output/figures/part_I_unit-intro.png",
-      "sha256": "a3f10e466f738b518c4e479faf3d393dbe4d76bc6c29c743eaa44792504d887a",
-      "size_bytes": 62092,
+      "sha256": "d7b59802052cb1f2f604c166d2a75843cc981e2d332e5310f28028da1f409b40",
+      "size_bytes": 61761,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -1812,8 +1812,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/MANUSCRIPT_STATUS.md",
-      "sha256": "6bc0f9a513838cf9aadbe8dfd4ba1b4c2a800ec91a541b3285e166afe3bb09ba",
-      "size_bytes": 3150,
+      "sha256": "3ba44e4c312df6142434f1987be4d1cdd7f4c20b70b7dc63b7c70930b0d57d96",
+      "size_bytes": 3196,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2001,8 +2001,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/config.yaml",
-      "sha256": "04ad541f72cd5e72c30d65a50c6bcb43a612e69effb2defd749453d27774ffea",
-      "size_bytes": 14704,
+      "sha256": "643646eb5c5be7346f7d6d74ecda3f30056d55de8f96629a0b05a9b7545fd7e6",
+      "size_bytes": 14786,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2019,8 +2019,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/front_matter.md",
-      "sha256": "2ef98d9dc917b4c067ae18c1b0d99e57f743f6aff6f1dc327c466ae5baddef6a",
-      "size_bytes": 6423,
+      "sha256": "f3b3786ac8469ec62b9d3aec39793cff7e83b27a09dbc77087859b17c1453328",
+      "size_bytes": 6575,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2325,8 +2325,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_0/living-pem.md",
-      "sha256": "a47cf6833dd86ade3b3e40058160da8db7e1fb997870b80b046f83122b475d96",
-      "size_bytes": 27445,
+      "sha256": "d484cf130d3cef22962475bab163f8ac9b2277b1ae4db501c05436bc80db3651",
+      "size_bytes": 27855,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2334,8 +2334,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_0/master-synthesis.md",
-      "sha256": "be01ad16cb3fa67387e96388bc0b416b6f225757b6732fc852cb070ddb28284f",
-      "size_bytes": 23627,
+      "sha256": "35990089dc013b16eff2bab6ecca84b222db4ee0d7d9fe980c345bc15203517a",
+      "size_bytes": 23823,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2343,8 +2343,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_0/octave-map.md",
-      "sha256": "b01964d87281b0b73839adf6236bb67b0f6616e36af27b0387a8b216577fbc61",
-      "size_bytes": 21076,
+      "sha256": "b6435ea186aa9939a440e529fc3d0e55ca1cd331dbcdb4f6fbd7c0eefea50a0d",
+      "size_bytes": 21539,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2352,8 +2352,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_0/orientation.md",
-      "sha256": "3485b74d9bd08a9998bf9eabf7a8b6231f2dba0d0e138c15fc529976b330e2be",
-      "size_bytes": 26949,
+      "sha256": "5e36f582d7021f90b7ae63fa141ba40f41520492da23d66ba20affb653a659cc",
+      "size_bytes": 27146,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2361,8 +2361,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_0/tensor-decoupling.md",
-      "sha256": "5fb51b1543eea3f507064c8b94479b7aec3a3a95a791283a3f7ece3715f16f4c",
-      "size_bytes": 21090,
+      "sha256": "65451498a1d06a555c4cd4115ed7dde6b026b8a0bce03fcc2f1a9b410978f472",
+      "size_bytes": 21591,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2370,8 +2370,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_0/unit_intro.md",
-      "sha256": "28afac83030d5a43a5731142fed6c680846615345f774603d0ba58f6902f6261",
-      "size_bytes": 4787,
+      "sha256": "54916d3e8a051a5fd9f523768a3439cb20bba859406e542bf366ed883cf8c390",
+      "size_bytes": 5175,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2379,8 +2379,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_I/fractal-constant.md",
-      "sha256": "6fdee773dfad591a0af6a071ef9e87b1d4655b6c246ff445b73fdeb4f2313439",
-      "size_bytes": 25614,
+      "sha256": "591c8010900e772f8530899846254e527f1eeaa3a4fc0f7f7b46afc81d5423ff",
+      "size_bytes": 25999,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2388,8 +2388,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_I/higgs-awareness.md",
-      "sha256": "ee7c8e196059aec144c29cef095c6e9b38352df9679c27e571d9c7e1eb104d97",
-      "size_bytes": 19981,
+      "sha256": "c2c2598e28579af275bd9082e71608af2289eeff357926f7175dc2cf0f3b5f34",
+      "size_bytes": 20307,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2397,8 +2397,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_I/holographic-rhyme.md",
-      "sha256": "1836c14bd322934021e5b0d07fa54a67bb72ca276fd3b9fd67ba1001da08c811",
-      "size_bytes": 20788,
+      "sha256": "a1d3325124dfb177c2ba4d5f17b670ea4f6fd9b62f240b0e7aca43f4f6669ba0",
+      "size_bytes": 21219,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2406,8 +2406,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_I/multidimensional-rhyme.md",
-      "sha256": "c4341dd28480c3cdc14c7bd8b6177e1665dd80f67f777dfc9eac06364d35d146",
-      "size_bytes": 22129,
+      "sha256": "d4a9188b12dbc9558f04050e00f529b89c58f2765bb8c07e4df1c5efff9d5e7c",
+      "size_bytes": 22595,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2415,8 +2415,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_I/prime-parity.md",
-      "sha256": "60c8c086146708dd518891eb809465ac5091be7216ff48c3bcfc7272cb6d9511",
-      "size_bytes": 20403,
+      "sha256": "08923a91618082eeeef2fb593f91cdf3cdef676f7794a16a397101d9c384d3f2",
+      "size_bytes": 20717,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2424,8 +2424,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_I/topology-void.md",
-      "sha256": "9c93c37d15d960c2694a17efb06ea8f4262d15c72bb566a84aafb7ee0dab0e52",
-      "size_bytes": 23227,
+      "sha256": "61a7e2e51d46e0a5e18c8e01f0549dd2e0dc3c31bee9c0594d04df338224b5f0",
+      "size_bytes": 23732,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2433,8 +2433,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_I/unit_intro.md",
-      "sha256": "9cca9fe0b53d73ddc206f653257b883aa87f959355d0a5ea342b496ce9c11967",
-      "size_bytes": 6019,
+      "sha256": "b090e6e86430907dfba70325cf85f77f111959721378896cae1ee5592cd56505",
+      "size_bytes": 6451,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2442,8 +2442,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_II/crystalline-field.md",
-      "sha256": "97ceb7354d17e81d613153db7b0683f595697a166589d6bdd31c9aa36b8bc64f",
-      "size_bytes": 20844,
+      "sha256": "2b0ae706c48bfc75116dca6513a8fd8e492bbf8ecbdc291afc7d625d7c97d7ac",
+      "size_bytes": 21235,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2451,8 +2451,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_II/eddy-current-mirror.md",
-      "sha256": "54f93b436444774aa4d3c39c0b156d87950d49698d079c8adfd603dffb65face",
-      "size_bytes": 20546,
+      "sha256": "cd9fc54a40517a8f2eb1037b8185af349e90979cf8db17ff7c50cd95e9c14b99",
+      "size_bytes": 20901,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2460,8 +2460,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_II/metamorphic-octaves.md",
-      "sha256": "254161f3f3c7a62267a2bac821fc3f84c49bc7b36b9a04f764df384fe27372aa",
-      "size_bytes": 21680,
+      "sha256": "aa3b14a521c2292958188cd10828ffb1eda138a178ae2f0383110e3a4a0b3f1c",
+      "size_bytes": 21899,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2469,8 +2469,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_II/metrological-overlap.md",
-      "sha256": "b7cc04671428898a91a9eb664c1cd17d50a2c7dcd1ed47086aeb2ca78a95aa07",
-      "size_bytes": 26221,
+      "sha256": "44e88965dca9bfd8ad568f7db875f53e7e18be3ad22aa52afae9f3a887ee91aa",
+      "size_bytes": 26494,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2478,8 +2478,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_II/planetary-core.md",
-      "sha256": "1beefd51d3863817aa976e79aa7ac72a94701e64c25158be8cbc08d605d71f70",
-      "size_bytes": 21852,
+      "sha256": "f4ef3bdabdc12ae4b887e9cd1a3df473e080201f2aa1f91c511702d684a2416b",
+      "size_bytes": 22083,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2487,8 +2487,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_II/proton-theater.md",
-      "sha256": "8bf154bd94a59452ccfe3c02bb43040b6fa52a8315fb92b7a7568f77b7fffa97",
-      "size_bytes": 22736,
+      "sha256": "a6644896f8fac03264dec2dbd800c6af91d740dc87967b016b4582df33258cf3",
+      "size_bytes": 23079,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2496,8 +2496,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_II/singularity-crystal.md",
-      "sha256": "370485e8f8d9f55e3b276f568382e93ac6901b5a17f371b2ddd7f826bffbe226",
-      "size_bytes": 22590,
+      "sha256": "4603794e802823500435deaf1b5316fe01f0c2e03847e5f53b2bcf55113e02f0",
+      "size_bytes": 22803,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2505,8 +2505,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_II/unit_intro.md",
-      "sha256": "fb9863ab1398f9b5afa7c194e2d21b8b26570943521f3719aeb62fb8cc882639",
-      "size_bytes": 4840,
+      "sha256": "1a6ba7e4e91e7d208ae5d80e88cc1eb3e0f1191293a044455c7b9f683e46c563",
+      "size_bytes": 5118,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2514,8 +2514,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_II/viscosity-light.md",
-      "sha256": "4da68e392d239a19d038ee8269f6c0943c0b0ac35c62177fb6956af312e5b610",
-      "size_bytes": 22813,
+      "sha256": "19434ef546c77404988e0ae08308bd1b0c09fb93ae1c1084a00bb413a41e03ac",
+      "size_bytes": 23097,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2523,8 +2523,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_III/cmos-protonic.md",
-      "sha256": "bddbfd9f329ab87526a5243e213472e1ebf97474ea89ef303f17e7a3c3215aa6",
-      "size_bytes": 21217,
+      "sha256": "a32a1c8a2ebd2e7885bdaf57aef14088d713780dcd9b71e1228d500176be44d1",
+      "size_bytes": 21614,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2532,8 +2532,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_III/frontiers.md",
-      "sha256": "0baea3f8f76fd4574d3fb878a16a2adbf6e508b46e5d0193933e0b3fc8d5bc95",
-      "size_bytes": 25252,
+      "sha256": "35b278bacb56bd26276db78225a2f7522abf4aef2a99893ba1b5cd85c3ba0021",
+      "size_bytes": 25482,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2541,8 +2541,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_III/invisible-frontier.md",
-      "sha256": "f5edba92bd72820df044a06d48db8ec3055de259b2ca21b06bb8d90996aa6106",
-      "size_bytes": 23289,
+      "sha256": "d1d5f574fc67b85f5506fcc7f82e701590808df42175a4afef715315b96fa4c7",
+      "size_bytes": 23675,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2550,8 +2550,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_III/kinematic-recycling.md",
-      "sha256": "b595dbaa3b85abb68d185eb07abc682d1f949068216750d63344df3046eb2dfd",
-      "size_bytes": 22730,
+      "sha256": "4477920a5f59617dab49fb46bded222d32e130bb93988d28942352a7a62ee494",
+      "size_bytes": 23177,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2559,8 +2559,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_III/macro-protein.md",
-      "sha256": "3ddffac7cf3a0b1adfae6967489faf43aba86911a0162bde365a35fa84d009ff",
-      "size_bytes": 24612,
+      "sha256": "4499ffe3c97151d6cac2d1ac4c39f5c14ef95d14bb449f188407559cda64ec3e",
+      "size_bytes": 24951,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2568,8 +2568,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_III/moving-up-stack.md",
-      "sha256": "b0a159b67734ccccae77cb119b8fc3a628743650befcf6fa7fcbae9934bcdfcf",
-      "size_bytes": 22870,
+      "sha256": "d4eab6a1aaab747341b590365f69884e87f6fdb27ced170c2e0c519ea9591498",
+      "size_bytes": 23246,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2577,8 +2577,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_III/pdvsa-gateway.md",
-      "sha256": "a7c6fd3474c8be6a9f837db4ed7f6ec36abdc22f9849ac5ad1dde613e2ff2704",
-      "size_bytes": 23831,
+      "sha256": "63e56e8a1b46a9afbeb41b5195fc38ee5955206bb6bc24c0fa74462bb2124a8d",
+      "size_bytes": 24306,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2586,8 +2586,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_III/protein-folding.md",
-      "sha256": "bd8ec272ea81149ef883e56f9b118d215fe53b707d6e08aad0e0ad58366554dc",
-      "size_bytes": 22143,
+      "sha256": "8d060af73cebaa6d86ac96696adb375075cd579eb08369dc7774d50dd1fbd72b",
+      "size_bytes": 22597,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2595,8 +2595,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_III/reality-bridge.md",
-      "sha256": "0199637e742facd2eb2955a34fd9acafcd42a28f845ec5987e17c7f353ee102c",
-      "size_bytes": 27911,
+      "sha256": "e702095958240d240ebe3c6d09b1b282d59fc7bb98f392ca3b1a6ab8f5f5b741",
+      "size_bytes": 28245,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2604,8 +2604,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_III/unit_intro.md",
-      "sha256": "0b3620180b9c2861acb13f3a23da79efd85d3dd7ccdd94f8c1008205a6f12610",
-      "size_bytes": 5313,
+      "sha256": "7df4ddcf7b768eae77774346c8558b486304af926db2a4f20ac56ad5812b7ce7",
+      "size_bytes": 5614,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2613,8 +2613,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_III/volumetric-storage.md",
-      "sha256": "716787cff5e17298f7a29477114769ae47c183673fd2572b5a0cdae6d2e32762",
-      "size_bytes": 20655,
+      "sha256": "8088a4638db974d66813db191df24d35c5b7b367c095891999007e9f398672a6",
+      "size_bytes": 21037,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2622,8 +2622,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/part_III/y-chromosome.md",
-      "sha256": "ba1144dbcde6a5a375455c0b2da4151e1479109cb053c060cdd6f613634b1dbc",
-      "size_bytes": 21094,
+      "sha256": "c4de885e9120f4d64b2b2d258a164bf0c20be8c7ab2c48222b6562e91b321e2a",
+      "size_bytes": 21446,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2631,7 +2631,7 @@
     {
       "contract_match": true,
       "path": "output/manuscript/preamble.md",
-      "sha256": "d389d2776dc0818b90f4eb2260d46728956f28ea0857b4491c8b87398553b1ae",
+      "sha256": "5fc3481c1113b0a408fc7a899b5fe2db5b3cbb6784e63e2bb5dc21e413a7fc40",
       "size_bytes": 2320,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
@@ -2640,8 +2640,8 @@
     {
       "contract_match": true,
       "path": "output/manuscript/preface.md",
-      "sha256": "aaf765b9417e88ca89be282cdcb0e8e57d69a032ebddc3204326ef1b1e45b877",
-      "size_bytes": 6082,
+      "sha256": "21fd5691ebca3116fd40c30dea53ee0a228e40561854bb72292dc2df06bfd1f0",
+      "size_bytes": 6080,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2946,8 +2946,8 @@
     {
       "contract_match": true,
       "path": "output/pdf/OmniLatticeTextbook_combined.pdf",
-      "sha256": "77172380822a5393a0b8abd579332ad8b74b526f7adea5b9a6747dc10100fa6d",
-      "size_bytes": 7126937,
+      "sha256": "510fa1f399ea7209ce6c015a1b21454266e26ce964f211716ab042fd889ab739",
+      "size_bytes": 7218086,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -2955,7 +2955,7 @@
     {
       "contract_match": true,
       "path": "output/reports/manuscript_composition.json",
-      "sha256": "eddbb7456f20044612c18d5818eab6d3edb7e63ba32bce37f86eb9903601581d",
+      "sha256": "db3f82e861dcf10e5deadb5d0ddc2d164cc7cdb74ab395fb4f32254b3a0a8411",
       "size_bytes": 22344,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
@@ -2964,8 +2964,8 @@
     {
       "contract_match": true,
       "path": "output/web/_combined_manuscript.md",
-      "sha256": "52fbdd87119b276e83b185c5a7253db6a971925bb247fc8dfad4b5d25d7fc992",
-      "size_bytes": 1128582,
+      "sha256": "30bcab02e615ec9b4bea98c964d69d54db387790868e751db195aa50c341494f",
+      "size_bytes": 1140806,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3036,8 +3036,8 @@
     {
       "contract_match": true,
       "path": "output/web/index.html",
-      "sha256": "a9aba83b10ac43fcd6f97a9a998eea489604751591969c112c14189a8c7f3622",
-      "size_bytes": 1985378,
+      "sha256": "9868dec16f99bd453106081d7d48dc3c8d1e4dc6124826168521ce03b4bfe2b8",
+      "size_bytes": 2012881,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3045,8 +3045,8 @@
     {
       "contract_match": true,
       "path": "output/web/manuscript__front_matter.html",
-      "sha256": "6d55e6d670b9b7aa9d0916f432e6a5ca1378c78b3cff19152622255bb01f2b09",
-      "size_bytes": 16994,
+      "sha256": "3cd0d5bd3e42b8ffead01bd9fd843ecb8b981dc301db74bc0dc04801b37ad25a",
+      "size_bytes": 17146,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3063,7 +3063,7 @@
     {
       "contract_match": true,
       "path": "output/web/manuscript__preface.html",
-      "sha256": "4fdac7df2129a7c4c80f382708f9ce9aa6ee34bc3e9e349fe709e05d05dbf422",
+      "sha256": "0d7f0977297f3cad7b355623c741f2f9597200cc829cb4f676f6094b2eeb20c4",
       "size_bytes": 16329,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
@@ -3117,8 +3117,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_0__living-pem.html",
-      "sha256": "7a5150a515a9eccdf9cc87fb006be268768f2c7ebe925ea2cd8ff99cacac4800",
-      "size_bytes": 46505,
+      "sha256": "a2635383604e23541cbb02cc44d838a5c49e16ff341d35e04ca5e6b4f3f93d16",
+      "size_bytes": 47101,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3126,8 +3126,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_0__master-synthesis.html",
-      "sha256": "f01fe412be927b0b7894a0b0815b835d8adcf52907737ef72dd373b9921f0af1",
-      "size_bytes": 47219,
+      "sha256": "2090620c2f927c72a670c985431bfb6df89782bf1a92ad1dd39283de893bc575",
+      "size_bytes": 47531,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3135,8 +3135,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_0__octave-map.html",
-      "sha256": "b03e1814421f0acbf3cce2ce4d904242dde4920472f4f6c6dadd1b203892f5c0",
-      "size_bytes": 43220,
+      "sha256": "ba58422c6fcd51d67626d6a3a5d15333c36e88ceb084b35f6808ce0934928c67",
+      "size_bytes": 43826,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3144,8 +3144,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_0__orientation.html",
-      "sha256": "b9c15577108507cfc3c93610fc3793df8ced4ce0608d027556c7fcb39efd8a02",
-      "size_bytes": 44724,
+      "sha256": "f03a94e2187fa87d49d65b14af4643af0f0f5989349c9c052ed5ee0a76b040c2",
+      "size_bytes": 45068,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3198,8 +3198,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_0__tensor-decoupling.html",
-      "sha256": "123fb2aa020c23d8db99eeb9435cd7783af5d7323144280a5012983db9bf2708",
-      "size_bytes": 39594,
+      "sha256": "cf0cfbccc69a1636c37c9de2b8ff18a71432e30d49c7103f177b78769dfedb7e",
+      "size_bytes": 40246,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3207,8 +3207,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_0__unit_intro.html",
-      "sha256": "1cf2e024919c37cc645fb9639f29dc7737ac02c0e4ea40c127ca90eb4d79e4ab",
-      "size_bytes": 14766,
+      "sha256": "1ed31bba4add5f010a9c2eb943ad6f5f683e425260cc056f81897057855c051e",
+      "size_bytes": 15169,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3216,8 +3216,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_III__cmos-protonic.html",
-      "sha256": "83bd40c1ef33884ab68a0d74b66deb0f480c76fbbbcc88a2f3a1e48caf864dbe",
-      "size_bytes": 40870,
+      "sha256": "168335374fc60aed1ac16ec7ec86a47ba48b28b8b0cfce2d1b67e92daf8f86fd",
+      "size_bytes": 41412,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3225,8 +3225,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_III__frontiers.html",
-      "sha256": "c8f2d17bdd323e64729f490a531d81acdca47921274510adf0777eb379ea7896",
-      "size_bytes": 44908,
+      "sha256": "b75d853023232e0406731c834f350169e785964fc48a1cad0e1aada8bb4c4ec3",
+      "size_bytes": 45307,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3234,8 +3234,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_III__invisible-frontier.html",
-      "sha256": "0e653c0a2a44eff758fb28a34ee885d8ff3c9566e0b3b386fa56367345c93975",
-      "size_bytes": 43600,
+      "sha256": "b35cadc3e4d6321d9cd203ffdf81d179960ae202c3546e9c0cd7346edda71000",
+      "size_bytes": 44105,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3243,8 +3243,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_III__kinematic-recycling.html",
-      "sha256": "23a7f3885084d46124016db8bed5feb7cb372cb3e9bfd41e968a1c0b8fb4c4ca",
-      "size_bytes": 43402,
+      "sha256": "bdf739ce464b868ccd09aa665091103938210e4abeaaafe6d896f669441e3dcc",
+      "size_bytes": 44030,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3351,8 +3351,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_III__macro-protein.html",
-      "sha256": "c35d79dd102e73210680358f88e3df221ceb4d2fe29432ffa5123c2caf090766",
-      "size_bytes": 48125,
+      "sha256": "6b352e2f9816c73bdf33e73590d6304635153a0b8b01ca45fa6f640e77a0efc3",
+      "size_bytes": 48692,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3360,8 +3360,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_III__moving-up-stack.html",
-      "sha256": "07edb7a4d4ceb7dddc315ac2dfba291e7cd33097369e53b39f01acd603cb87b2",
-      "size_bytes": 40975,
+      "sha256": "f2f9a10c08196196c0bf3062c6d71133a8c54403bee9cc28574ab7e2fe051160",
+      "size_bytes": 41492,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3369,8 +3369,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_III__pdvsa-gateway.html",
-      "sha256": "381c51c7191235503310b554ae4d1057efe2ace70d82766efb0b3e52d6cfdd9a",
-      "size_bytes": 42523,
+      "sha256": "a134aacebdc99512dfe1728419da25542310139fc8f29ffafd09398571c6d2bc",
+      "size_bytes": 43165,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3378,8 +3378,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_III__protein-folding.html",
-      "sha256": "59b6f3401779bc31849fe2f336fa5d25c54ff5e8d4d4dfea95964e8ffe403388",
-      "size_bytes": 43589,
+      "sha256": "36fe62cb5896dca79ff0e6478924909756b9cb9398b70c79c6a0239a1fa0a8a2",
+      "size_bytes": 44166,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3486,8 +3486,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_III__reality-bridge.html",
-      "sha256": "ede44a23ff52373bee6b0d96709d8e5843c60d307799fd79bab62dda4da0ee4f",
-      "size_bytes": 50444,
+      "sha256": "11fdeeb3d4ecaaa497716d504b15a8947f10068ced430e0956b8fa9d610415b0",
+      "size_bytes": 50955,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3495,8 +3495,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_III__unit_intro.html",
-      "sha256": "f4ba5d8de34495395029611a2d2805f6b94b9b8d870af88f6df6f227514a7dd6",
-      "size_bytes": 17619,
+      "sha256": "9b6feb259752647166e6bff770f9bee8589852181bc281ced58a663b597b6322",
+      "size_bytes": 17922,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3504,8 +3504,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_III__volumetric-storage.html",
-      "sha256": "a6ea9b3283dca31e8f5d40176b260f260b058f7d55fc2ec1c3f59ffaee54daf8",
-      "size_bytes": 39202,
+      "sha256": "f2d210cb4079bd9fc78db5c8175040bc3c1a73de16f91919cbc29549918bc1ab",
+      "size_bytes": 39671,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3513,8 +3513,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_III__y-chromosome.html",
-      "sha256": "c780d80c8e55c14878bccebc797a715e16c98ac27156ac35901bd661d1628c38",
-      "size_bytes": 40827,
+      "sha256": "bee55bad28f4fdb03cc71975a24013424fa98ae2d50c8c222d0004f90b6090e7",
+      "size_bytes": 41370,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3522,8 +3522,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_II__crystalline-field.html",
-      "sha256": "9059aab5e76e2d1054b58c84c1a4784fda32260a1c43fc32442ba3a1c7bf6ec9",
-      "size_bytes": 45700,
+      "sha256": "1c44772732fd7e4d1b7a0bb51d45d30403d15fe8db90405e5fa10703625c5a54",
+      "size_bytes": 46244,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3531,8 +3531,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_II__eddy-current-mirror.html",
-      "sha256": "fe90997369c4a586be7c63da51e35b0a2ac8f45aa60be5a4475edfb52d7a030d",
-      "size_bytes": 43464,
+      "sha256": "3c1fa004fc66afa789e36a9469fe90e06fc4345624f81da71b88fcce166aad13",
+      "size_bytes": 43910,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3612,8 +3612,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_II__metamorphic-octaves.html",
-      "sha256": "e5407267e84353d9e8a60c08977b63b76f8b464526c30871ae433b125db85e0f",
-      "size_bytes": 44425,
+      "sha256": "c3349cd0737b763217aeee445a8b5f0b07046a57bdac4b0882e94a03ffe079b7",
+      "size_bytes": 44776,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3621,8 +3621,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_II__metrological-overlap.html",
-      "sha256": "f9481527832adc53dedb247ad8567b3fa4a337f71961a439808c93088ec9aecb",
-      "size_bytes": 53531,
+      "sha256": "50dad778f4cfb966917cbd2183b5ae003a8d57beaaa6b89e393f454bb936560f",
+      "size_bytes": 53895,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3630,8 +3630,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_II__planetary-core.html",
-      "sha256": "5275cdb71b22f50992eef5444e1d3d2f4fd342bd4d545b53fe6c552b1a9919e4",
-      "size_bytes": 45149,
+      "sha256": "595caad30f17883a41963f09c8556ce90cc5b35ad5e561b20e2f26679850734e",
+      "size_bytes": 45513,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3639,8 +3639,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_II__proton-theater.html",
-      "sha256": "bc7fd156ab212557a527e6bdeed514d3b57447c988d5d4ab309ce7bb51888392",
-      "size_bytes": 47601,
+      "sha256": "c8226c6b65829698b937b5a7d827a5cfc82008e54ece09cb280ca4318fa51f92",
+      "size_bytes": 48031,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3720,8 +3720,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_II__singularity-crystal.html",
-      "sha256": "1802e033b8fb19619d40e118cc4a6377957816ef8ad756901cb11796dc1883e3",
-      "size_bytes": 46359,
+      "sha256": "0da6064d945e43c5a24ab3e6e685c389364bcee02093fdd3d233b75d1b153b45",
+      "size_bytes": 46643,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3729,8 +3729,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_II__unit_intro.html",
-      "sha256": "8002ea9597bf85b12ab43151305302682f8667ac245a231d9e40a17dd8b5ed89",
-      "size_bytes": 16862,
+      "sha256": "00d2675004bd27d8665739224bfdd01475d4a349298ea1b9d2626663fdbc786e",
+      "size_bytes": 17146,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3738,8 +3738,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_II__viscosity-light.html",
-      "sha256": "d586735f01140000d7d7dc835c18511384304a6602ff474719e1406af9758ee0",
-      "size_bytes": 48314,
+      "sha256": "235e420445e3dd0c4696a391272dd8416e230f2ba0e99cf68f2d80cd7c438d17",
+      "size_bytes": 48722,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3747,8 +3747,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_I__fractal-constant.html",
-      "sha256": "3317b42ea38887953c3b1b4f61cd7df0e667ac4fff93585c900f38b39e7fcce5",
-      "size_bytes": 46345,
+      "sha256": "304ace7cb21434b32f378486169f6d7af341a0c4893372a9abc3f2575f1c419b",
+      "size_bytes": 47051,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3756,8 +3756,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_I__higgs-awareness.html",
-      "sha256": "9aafcab22a449d044a531393eff4bb73963c61cf2a2506af0c74fc3bc96ba303",
-      "size_bytes": 41131,
+      "sha256": "f1d73cb8f7682c7fe38461296a49b3e4307ab4225821018822e223c17a14d218",
+      "size_bytes": 41736,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3765,8 +3765,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_I__holographic-rhyme.html",
-      "sha256": "ede9565dc531e44287d1d4f1a7a5133f04511f33a675c09bb7f0dd46f90208eb",
-      "size_bytes": 44661,
+      "sha256": "c16b88db35670cea9d66560ee5098b81a442a1ce0730c3a2c1ca298e672491d5",
+      "size_bytes": 45337,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3828,8 +3828,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_I__multidimensional-rhyme.html",
-      "sha256": "1d90e3a04ce60928d373a708ce5a3b3a252ab335fd1c922e224bc849a72a8f1b",
-      "size_bytes": 47118,
+      "sha256": "ac97a333d508c91ee7d400a627912a04374af623b635d1bb7ecb6f4dab3db0ef",
+      "size_bytes": 47821,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3837,8 +3837,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_I__prime-parity.html",
-      "sha256": "1ac2d07af4d74b546e8b1d5d6f53d42b96a3d7cbf25e4a8c8a201c9508ecb55c",
-      "size_bytes": 42718,
+      "sha256": "acd49bca1225cf7198f4329cee9506bbb437ebe5ace0cfa194e1efc5f0bef20a",
+      "size_bytes": 43186,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3900,8 +3900,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_I__topology-void.html",
-      "sha256": "a9fc6dcf355d34c408f877d26ddc7a6c2daebd794d6ee713e433888e1401859f",
-      "size_bytes": 47695,
+      "sha256": "1f824e5b4464854cadaa0c8cb55416543dd38fc4e66b862226421365db843ee1",
+      "size_bytes": 48279,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""
@@ -3909,8 +3909,8 @@
     {
       "contract_match": true,
       "path": "output/web/part_I__unit_intro.html",
-      "sha256": "e7a600988243c5aebcb0e912662b2de4e0ee150d2944f9fa61ed28f674b2a5fb",
-      "size_bytes": 18073,
+      "sha256": "003f24d32303c145140cd8523ddd1392faa7aebcc6093bbdbdf68bbdc3a92f56",
+      "size_bytes": 18645,
       "stage_name": "standalone-output-scan",
       "stage_num": 0,
       "timestamp": ""

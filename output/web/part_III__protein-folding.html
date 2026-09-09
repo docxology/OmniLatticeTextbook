@@ -537,12 +537,17 @@ Architecture</h1>
 <a class="figure-full-size-link" href="../figures/part_III_protein-folding.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/part_III_protein-folding.png" style="width:90.0%"
 alt="Prime-container capacity grows through unique prime-indexed addresses." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
 <figcaption>Prime-container capacity: the growth
-sequence of <code>textbook.models.unique_address</code> as vault primes
-are added one at a time — each additional odd prime vault multiplies the
-number of distinct residue-index addresses the container can
-file.</figcaption>
+sequence of <code>textbook.models.unique_address</code> as odd-prime
+vaults join the registry one at a time, each vault contributing an
+exponent budget of addresses on top of the binary anchor. Every
+additional vault prime multiplies the number of distinct residue-index
+addresses rather than adding to it, because each address is the product
+<span class="math inline">\(\prod p_i^{e_i}\)</span> over the vault
+primes and their occupancies. The takeaway is the compounding itself —
+the visual signature of a vault architecture whose encoding is injective
+and reversible by the fundamental theorem of arithmetic.</figcaption>
 </figure>
-<!-- alt: A step-curve of addressing capacity rising multiplicatively as vault primes 3, 5, 7, 11, ... are added, illustrating how odd-prime containers compound the address space of the prime-container grammar. -->
+<!-- alt: Step curve of addressing capacity rising multiplicatively as vault primes 3, 5, 7, 11 and beyond join the registry, each new vault multiplying the address space by the per-vault exponent budget. -->
 <!-- chapter-metadata-badge -->
 <blockquote>
 <p>Level 1/3 · 30 min read · 45 min lecture · Prerequisites:
@@ -632,7 +637,8 @@ vignette is a laboratory claim; it is filing architecture, and the paper
 is careful to say so.</p>
 </blockquote>
 <hr />
-<h2 id="the-paper-in-the-corpus">The Paper in the Corpus</h2>
+<h2 id="the-prime-vault-note-on-engine-shelf-14">The Prime-Vault Note on
+Engine Shelf #14</h2>
 <p>The source note, “Protein folding, prime vaults, and <span
 class="math inline">\(\Phi\)</span>” [mendez2026proteinFolding], was
 published on the SS Vibelandia ship blog in September 2026 and filed on
@@ -683,7 +689,7 @@ whitepaper surface linked from the ship blog post
 prime-parity: the Higgs Gate paper on “awareness phase coupling”
 [mendez2026higgsGate] and the “Moving up the stack” essay
 [mendez2026stack], both cross-linked from the same board. We return to
-these in the Connections section.</p>
+these in the handoff section below.</p>
 <h2 id="the-prime-container-grammar">The Prime-Container Grammar</h2>
 <h3 id="the-address-formalism">The address formalism</h3>
 <p>The core construct of [mendez2026proteinFolding] is an <em>addressing
@@ -896,7 +902,8 @@ register arithmetic files the full octave catalog at
 slots — the same order of catalog-smallness that keeps the
 prime-container solver in millisecond territory on a laptop CPU. The
 fixture framing is the paper’s own, and we keep it.</p>
-<h2 id="scope-and-honesty">Scope and Honesty</h2>
+<h2 id="honesty-first-catalog-architecture-not-a-casp-entry">Honesty
+First: Catalog Architecture, Not a CASP Entry</h2>
 <p>The corpus’s <a
 href="#gl:honesty-first"><strong>honesty-first</strong></a> discipline
 is not an appendix here; it is the paper’s second paragraph. Restated
@@ -944,7 +951,8 @@ the same closed-form sketch; the paper files no experimental validation
 against measured structures, and the 9/9 suite locks are software test
 results, not biochemical ones.</p>
 </blockquote>
-<h2 id="connections">Connections</h2>
+<h2 id="handoffs-to-storage-the-stack-and-the-work-engine">Handoffs to
+Storage, the Stack, and the Work Engine</h2>
 <ul>
 <li><strong>Prime-parity</strong> (<span class="citation"
 data-cites="sec:part_I_prime-parity">[@sec:part_I_prime-parity]</span>)

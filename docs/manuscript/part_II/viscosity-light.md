@@ -1,8 +1,8 @@
 # The Viscosity of Light {#sec:part_II_viscosity-light}
 
-![Viscous damping curve family over drag coefficients: the tested model $v(t) = v_0\,e^{-kt}$ (`textbook.models.transduction_brake`) plotted for $v_0 = 1$ with drag coefficients drawn from the $\Phi$-power ladder — $k = 1/\Phi$, $1$, $\Phi$, and $\Phi^2$. Every curve starts at $v_0$ and decays toward a zero floor that is approached but never reached.](../../output/figures/part_II_viscosity-light.png){#fig:part_II_viscosity-light width=90%}
+![A family of viscous damping curves $v(t) = v_0\,e^{-kt}$ for $v_0 = 1$, plotted from the tested model `textbook.models.transduction_brake` with drag coefficients drawn from the Φ-power ladder: $k = 1/\Phi$, $1$, $\Phi$, and $\Phi^2$. Every curve starts at $v_0$ and decays toward a zero floor that is approached but never reached. The larger the drag coefficient, the faster the render velocity bleeds away — the filing's picture of non-local intent meeting the viscous floor at $c$.](../../output/figures/part_II_viscosity-light.png){#fig:part_II_viscosity-light width=90%}
 
-<!-- alt: Four exponentially decaying curves, all starting at velocity 1 and falling toward zero. The curve for the smallest drag coefficient 1/Φ decays slowest; the curve for Φ² drops fastest. Horizontal axis is time, vertical axis is remaining velocity; the zero line is a floor the curves approach without touching. -->
+<!-- alt: Four exponentially decaying curves, all starting at velocity 1 and falling toward a zero floor they approach without touching. The curve for the smallest drag coefficient 1/Φ decays slowest and the curve for Φ² drops fastest; horizontal axis is time, vertical axis is remaining velocity. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none (the sibling chapter [@sec:part_II_eddy-current-mirror] is helpful but not required)
@@ -77,7 +77,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The Paper in the Corpus
+## The source: Viscosity of Light, engine shelf #24
 
 The Viscosity of Light is a ship-blog paper of the Infinite Octaves
 [**omni-lattice**](#gl:omni-lattice) collection, authored by Prudencio Mendez
@@ -112,9 +112,9 @@ The page footer credits "Author: Prudencio Mendez · Operator: SynthOBS
 Autonomous Agent · Syntheverse Sandbox · NSPFRNP · → ∞^∞"
 [@mendez2026viscosityLight], and the whole filing sits under the
 [**fair-exchange**](#gl:fair-exchange) clause — the corpus's honesty disclaimer
-mechanism, which we restate in [Scope and Honesty](#scope-and-honesty).
+mechanism, which we restate in [what the viscous floor does not claim](#what-the-viscous-floor-does-not-claim).
 
-## Core Constructs
+## The viscous floor, drag family, render, and non-locality Soft Story
 
 ### Construct 1: $c$ as a viscous floor
 
@@ -277,7 +277,7 @@ with prediction blanks filled in.
    — one worked number per rung of the ladder in
    [@tbl:part_II_viscosity-light_family].
 
-## Scope and Honesty
+## What the viscous floor does not claim
 
 The paper's own scope disclaimer, restated precisely
 [@mendez2026viscosityLight]: **"this is *catalog architecture* — engine shelf
@@ -304,7 +304,7 @@ The chapter's formalisms inherit this fence line. [@eq:part_II_viscosity-light_v
 is tested arithmetic about a model; the claim that $c$ *is* the floor is a
 catalog filing, and the two are never conflated in this book.
 
-## Connections
+## Where the floor leads: eddy, overlap, lattice
 
 - **Backward: the Eddy-Current Mirror.** The paper names the
   [**eddy-current-mirror**](#gl:eddy-current-mirror) as a sibling

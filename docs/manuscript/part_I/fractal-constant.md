@@ -1,8 +1,8 @@
 # El Gran Sol's Fractal Constant {#sec:part_I_fractal-constant}
 
-![El Gran Sol's Fractal constant at work: the powers $\Phi^n$ grow geometrically and read as a straight line on a logarithmic axis, while the Fibonacci ratios $\varphi_{\text{fib}}(n)$ are overlaid on the same panel and converge on $\Phi \approx 1.618$. Produced deterministically from `textbook.models.phi_powers` and `textbook.models.phi_fibonacci`.](../../output/figures/part_I_fractal-constant.png){#fig:part_I_fractal-constant width=90%}
+![El Gran Sol's Fractal constant at work: the octave ladder $\Phi^n$ for $n = 1,\dots,6$ rises geometrically from $1.618034$ to $17.944272$ and reads as a straight line on a logarithmic axis. The Fibonacci ratios $\varphi_{\text{fib}}(5) = 1.6$ and $\varphi_{\text{fib}}(10) \approx 1.618182$ are overlaid on the same panel and close in on $\Phi \approx 1.618$ from below. Both series are produced deterministically by `textbook.models.phi_powers(6)` and `textbook.models.phi_fibonacci`, so the exponent and subscript readings of the octave recursion share one plot.](../../output/figures/part_I_fractal-constant.png){#fig:part_I_fractal-constant width=90%}
 
-<!-- alt: A log-scale plot showing Phi raised to successive powers n = 1 through 6 rising along a straight line from about 1.618 to about 17.944, with Fibonacci-ratio markers at 1.6 and about 1.618182 converging on a horizontal reference line at Phi ≈ 1.618. -->
+<!-- alt: Log-scale plot of Phi raised to successive powers n = 1 through 6, rising along a straight line from 1.618034 to 17.944272, with Fibonacci-ratio markers at 1.6 and about 1.618182 converging on a horizontal reference line at Phi ≈ 1.618. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -71,7 +71,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## Orientation
+## Catalog architecture and the constant that keys it
 
 The Infinite Octaves Omni-Lattice is a [**catalog-architecture**](#gl:catalog-architecture):
 a protocol grammar and filing system for the SS Vibelandia ship blog's research papers, run
@@ -96,7 +96,7 @@ carries an exponent or a subscript is ambiguous as printed [@mendez2026primePari
 formalise both readings in [@eq:part_I_fractal-constant_octave-term], and the book's tested
 backbone exposes the choice as a `convention` argument.
 
-## The Papers in the Corpus
+## Three engine papers that share one filing key
 
 All three source papers ship as parts of the Infinite Octaves series with whitepaper
 surfaces and replayable fixture suites [@mendez2026catalog]:
@@ -122,7 +122,7 @@ surfaces and replayable fixture suites [@mendez2026catalog]:
 Each paper names the same filing constant; that shared key is why this chapter can braid
 them into one spine rather than three parallel reviews.
 
-## A Worked Formalism: Octave Recursion Under Φ
+## The octave recursion sketch and its two readings
 
 The recursion constant is not an arbitrary decimal. $\Phi$ satisfies the identity
 
@@ -178,7 +178,7 @@ graph TD
 > and computing them with the tested function instead of retyping the maths — is exactly the
 > honesty-first posture the series asks of its readers.
 
-## The Prime-Parity Scaffold
+## The prime-parity scaffold: sole-even anchor and irreducible sets
 
 The prime-parity paper supplies the integer scaffold on which the constant paces recursion.
 Its theorem sketches assert that "Prime 2 is the only even prime. In Infinite Octaves
@@ -200,7 +200,7 @@ primes enumerate; the constant paces the recursion between them
 [@sec:part_I_prime-parity], including the number-line reading of the sole-even anchor
 against the odd-prime classes plotted in [@fig:part_I_prime-parity].
 
-## Digit Filing: Proton Space and Electron Theater
+## Digit filing: Proton Space versus Electron Theater
 
 The proton-space · electron-theater paper translates the same dyad into *digit* language.
 Its filing rule: the "Leading digit **1** (Φ, ℏ mantissa talk) files as **Proton Space**;
@@ -232,7 +232,7 @@ digit-row mapping.
 | sole-even prime 2 | binary dyad anchor | [@mendez2026primeParity] |
 | odd primes 3, 5, 7, … | irreducible minimum sets | [@mendez2026primeParity] |
 
-## A Biological Manifestation: Palindrome Scaling
+## Palindrome scaling: MSY arms paced by Φ
 
 The Y-chromosome manifestation paper extends the constant to biological-filing geometry.
 Under "Infinite Octave Mode," the male-specific region of the Y chromosome (MSY) — its
@@ -267,7 +267,7 @@ claim that MSY literally equals a physics constant, that sunspot AR 3664 writes 
 or that fractal dimension has been measured to Φ in this repository" — and, verbatim,
 "Clinical genetics and human dignity outrank every metaphor" [@mendez2026yChromosome].
 
-## Worked Example: Walking the Φ Ladder
+## Worked example: Φ powers, Fibonacci ratios, both conventions
 
 Take the pinned values of the book's computational backbone. The powers of $\Phi$ for
 $n = 1,\dots,6$ (what `textbook.models.phi_powers(6)` returns, and what
@@ -301,7 +301,7 @@ arms P1–P8 indexed on the same powers of $\Phi$ that pace the octave ladder
 (`textbook.models.catalog_size()`), each addressable without a second constant
 [@mendez2026digitsMaster].
 
-## Scope and Honesty
+## What the corpus's three disclaimers rule out
 
 Each source paper carries its own disclaimer, and this textbook restates them
 near-verbatim, because the spine is only as honest as its weakest claim:
@@ -325,7 +325,7 @@ physical constants from $\Phi$, or clinical/genetic claims. The book's posture t
 is the corpus's own [**honesty-first**](#gl:honesty-first) one: file the metaphor, cite the
 paper, keep the disclaimer attached.
 
-## Connections
+## Where the spine hands off to later chapters
 
 The spine feeds every later Part I chapter. The [**topology-of-the-void**](#gl:topology-of-the-void)
 paper takes the zero-balance node filed here and makes it a dynamic equilibrium between

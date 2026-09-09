@@ -1,8 +1,8 @@
 # The Macro-Protein Work Engine {#sec:part_III_macro-protein}
 
-![The macro-protein work-engine output curve: the filed work output $W(n) = w_0 \cdot \Omega_n$ of an organism-as-work-engine evaluated across the biological tier band from $\theta_{\mathrm{bio}} = 13$ to $17$ under both readings of the corpus's octave term (`textbook.models.octave_term`) — a steep exponential ramp under the exponent convention, an essentially flat ladder under the Fibonacci-subscript convention.](../../output/figures/part_III_macro-protein.png){#fig:part_III_macro-protein width=90%}
+![The macro-protein work-engine output curve: the filed work output $W(n) = w_0 \cdot \Omega_n$ of an organism-as-work-engine evaluated across the biological tier band from $\theta_{\mathrm{bio}} = 13$ to $17$ under both readings of the corpus's octave term (`textbook.models.octave_term`). Under the exponent convention the band ramps steeply from the $\Phi^{13}$ rung to the $\Phi^{17}$ rung; under the Fibonacci-subscript convention it is essentially flat at $\approx 1.618 \cdot \Omega_0$. The takeaway: where biology sits on the ladder is convention-sensitive, so the band placement is only load-bearing under one reading.](../../output/figures/part_III_macro-protein.png){#fig:part_III_macro-protein width=90%}
 
-<!-- alt: Two curves of metabolic work output versus octave tier n from 13 to 17, one rising exponentially under the exponent convention of the octave term and one nearly flat under the Fibonacci-subscript convention, with the biological band [13, 17] marked. -->
+<!-- alt: Two curves of metabolic work output versus octave tier n from 13 to 17, one rising exponentially under the exponent convention of the octave term and one nearly flat under the Fibonacci-subscript convention, with the biological band 13 to 17 marked. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: Protein Folding as Prime-Container Architecture ([@sec:part_III_protein-folding])
@@ -80,7 +80,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## Orientation
+## An Application Companion, Not an Engine-Shelf Pin
 
 <!-- This section introduces the chapter's position in the corpus. -->
 
@@ -121,7 +121,7 @@ two companions directly: the protein prime-container paper — "micro vault
 grammar this paper scales up" [@mendez2026macroProtein] — and the prime-parity
 paper; a third board link, prime-indexed volumetric storage, shares "the same
 $\Phi$ vault habit in memory media" [@mendez2026macroProtein]. We return to
-all three in the Connections section.
+all three in the handoff section below.
 
 ## The Work Tensor W(n)
 
@@ -296,7 +296,7 @@ mathematics, not corpus output. If a filing exercise were to pretend the
 octave ladder *predicts* such a ratio, it would exceed the note's own scope;
 the note files compatibility, not derivation.
 
-## Scope and Honesty
+## Not Life Solved, Not One Protein: The Honesty Boundaries
 
 The corpus's [**honesty-first**](#gl:honesty-first) discipline opens this
 note in its second paragraph, and it must be restated precisely
@@ -343,7 +343,7 @@ biochemical one.
 > 9/9 suite locks test the filing code, and the Fair Exchange clause governs
 > the corpus's own delivery economics — neither touches metabolism.
 
-## Connections
+## Handoffs to the Prime Vault, the Stack, and the Band Predicate
 
 - **Protein folding as prime-container architecture**
   ([@sec:part_III_protein-folding]) is the paper this note scales up: the

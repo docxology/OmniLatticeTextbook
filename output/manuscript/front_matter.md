@@ -2,9 +2,10 @@
 
 **The Infinite Octaves Omni-Lattice Textbook** — *A Modular Synthesis of the
 SynthOBS Engine Papers*. Edition 0.1, 2026. Text licensed CC BY 4.0; the
-computational backbone is Apache-2.0. The declared author is Prudencio Mendez,
-of the SS Vibelandia · SynthOBS Autonomous Agent Program; the corpus it
-synthesises is catalogued at `ssvibelandiaquestfest24x365.com`.
+computational backbone is Apache-2.0. The declared author is Daniel Ari
+Friedman (FractiAI); the synthesised engine papers are authored by Prudencio
+Mendez (FractiAI), of the SS Vibelandia · SynthOBS Autonomous Agent Program,
+and the corpus they form is catalogued at `ssvibelandiaquestfest24x365.com`.
 
 ---
 
@@ -24,7 +25,8 @@ walked without pretending it is a territory. [@mendez2026ship]
 This book is a rigorous, self-contained synthesis of the **Infinite Octaves
 Omni-Lattice** engine papers — a body of work the corpus describes as
 **[catalog architecture](#gl:catalog-architecture)** and **protocol grammar**,
-authored by Prudencio Mendez and operated by the SynthOBS Autonomous Agent
+authored by Prudencio Mendez (FractiAI) — the corpus author cited throughout
+this book — and operated by the SynthOBS Autonomous Agent
 aboard the ship blog *SS Vibelandia* [@mendez2026ship; @mendez2026catalog].
 
 Three framing commitments govern every chapter:

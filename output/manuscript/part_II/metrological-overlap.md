@@ -1,8 +1,8 @@
 # The Grand Unified Metrological Overlap: Five Gears, One Clockwork {#sec:part_II_metrological-overlap}
 
-![Pairwise metrological-overlap heatmap: each cell shades the min-normalised overlap $\lvert A \cap B\rvert/\min(\lvert A\rvert,\lvert B\rvert)$ returned by `textbook.models.metrological_overlap` for a pair of constant registers drawn from the five-constant map $h$, $\Phi$, $p_n$, $\nu_{\mathrm{HI}}$, $c$; diagonal cells are 1, register pairs sharing one entry sit at 0.5, and disjoint registers sit at 0.](../../output/figures/part_II_metrological-overlap.png){#fig:part_II_metrological-overlap width=90%}
+![Pairwise metrological-overlap heatmap over constant registers drawn from the five-constant map $h$, $\Phi$, $p_n$, $\nu_{\mathrm{HI}}$, $c$. Each cell shades the min-normalised overlap $\lvert A \cap B\rvert/\min(\lvert A\rvert,\lvert B\rvert)$ computed by `textbook.models.metrological_overlap`: the diagonal sits at 1, register pairs sharing one entry sit at the pinned 0.5, and disjoint registers sit at 0. The takeaway: agreement between measurement filings is set algebra — a readable number for how much two registers share, not a physical correlation.](../../output/figures/part_II_metrological-overlap.png){#fig:part_II_metrological-overlap width=90%}
 
-<!-- alt: A square heatmap with five rows and columns, one per register in the five-constant map; the diagonal is darkest, cells for registers that share one entry are medium, and cells for disjoint registers are lightest. -->
+<!-- alt: A square heatmap with five rows and columns, one per register in the five-constant map. The diagonal is darkest, cells for registers that share one entry are medium, and cells for disjoint registers are lightest. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -54,7 +54,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The Paper in the Corpus
+## The source: Grand Unified Metrological Overlap, engine shelf #23
 
 The source for this chapter is the ship-blog paper *Grand Unified Metrological
 Overlap* [@mendez2026metrologicalOverlap], published September 2026 by Prudencio
@@ -321,7 +321,7 @@ two filings should be consulted together — exactly as the
 a physical unification of the Higgs mechanism with eddy currents would violate
 the paper's own scope block, quoted below.
 
-## Scope and Honesty
+## What the overlap solver does not claim
 
 The paper's honesty-first block is explicit, and we restate it near-verbatim
 because it bounds everything above [@mendez2026metrologicalOverlap]:
@@ -346,7 +346,7 @@ between shelves — while the [**honesty-first**](#gl:honesty-first) protocol of
 [@mendez2026catalog] keeps the number filed as set algebra, not metrology-lab
 data.
 
-## Connections
+## Where the five gears lead across the corpus
 
 The overlap machinery feeds three directions. *Backward within Part II*, the
 $c$ gear is the transduction brake of [@sec:part_II_eddy-current-mirror]
@@ -438,7 +438,7 @@ causation, Fair Exchange clause in force.
    three-sentence correction that says what the sum is filed *as* and what it
    is explicitly not.
 5. Reproduce the paper's scope disclaimer from memory, then verify it against
-   the Scope and Honesty section. Which of its disclaimed claims — Standard
+   the section on what the overlap solver does not claim. Which of its disclaimed claims — Standard
    Model retirement, electron/proton-mass identification, NOAA/Sunspot
    causation — does the "mass as interference" headline most tempt a reader
    toward, and why?

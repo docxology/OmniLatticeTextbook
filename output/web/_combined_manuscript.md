@@ -2,9 +2,10 @@
 
 **The Infinite Octaves Omni-Lattice Textbook** — *A Modular Synthesis of the
 SynthOBS Engine Papers*. Edition 0.1, 2026. Text licensed CC BY 4.0; the
-computational backbone is Apache-2.0. The declared author is Prudencio Mendez,
-of the SS Vibelandia · SynthOBS Autonomous Agent Program; the corpus it
-synthesises is catalogued at `ssvibelandiaquestfest24x365.com`.
+computational backbone is Apache-2.0. The declared author is Daniel Ari
+Friedman (FractiAI); the synthesised engine papers are authored by Prudencio
+Mendez (FractiAI), of the SS Vibelandia · SynthOBS Autonomous Agent Program,
+and the corpus they form is catalogued at `ssvibelandiaquestfest24x365.com`.
 
 ---
 
@@ -24,7 +25,8 @@ walked without pretending it is a territory. [@mendez2026ship]
 This book is a rigorous, self-contained synthesis of the **Infinite Octaves
 Omni-Lattice** engine papers — a body of work the corpus describes as
 **[catalog architecture](#gl:catalog-architecture)** and **protocol grammar**,
-authored by Prudencio Mendez and operated by the SynthOBS Autonomous Agent
+authored by Prudencio Mendez (FractiAI) — the corpus author cited throughout
+this book — and operated by the SynthOBS Autonomous Agent
 aboard the ship blog *SS Vibelandia* [@mendez2026ship; @mendez2026catalog].
 
 Three framing commitments govern every chapter:
@@ -247,8 +249,8 @@ the audit gates, and the contract tests fit together.
 
 ---
 
-*— Prudencio Mendez · SS Vibelandia · SynthOBS Autonomous Agent Program ·
-Downtown Reno · 2026*
+*— Daniel Ari Friedman · FractiAI · on the corpus of Prudencio Mendez's
+SynthOBS engine papers*
 
 *"Welcome aboard. Intentions matter. Human emergency comes first."*
 [@mendez2026ship]
@@ -262,9 +264,9 @@ Downtown Reno · 2026*
 
 # Part 0: Orientation and Methods {#sec:part_0_intro}
 
-![Part 0 reading map: the corpus flows from the SS Vibelandia ship and catalog through the methods layer into the five-chapter tour.](../figures/part_0_unit-intro.png){#fig:part_0_unit-intro width=90%}
+![Part 0's reading map: a line of labelled stations running from the SS Vibelandia ship and catalog through the methods layer into the five chapter stops, arrows marking reading order. Drawn as a fixed schematic layout — station positions and labels only, no `textbook.models` computation. Notice the colour split the figure itself annotates: the purple stations teach how to read the corpus, and the blue stations are the five-chapter tour that fixes the book's numbers.](../figures/part_0_unit-intro.png){#fig:part_0_unit-intro width=90%}
 
-<!-- alt: Flow diagram of Part 0 moving from the SS Vibelandia ship and catalog through the methods layer into the five chapter stops. -->
+<!-- alt: A left-to-right line of labelled stations from the SS Vibelandia ship and catalog through the methods layer to the five Part 0 chapters, with arrows showing reading order. -->
 
 The route is a short one, and [@fig:part_0_unit-intro] sketches it: the corpus map ([@sec:part_0_orientation]) and the living PEM ([@sec:part_0_living-pem]) orient you, tensor decoupling ([@sec:part_0_tensor-decoupling]) and the master synthesis ([@sec:part_0_master-synthesis]) file the shelf, and the octave map ([@sec:part_0_octave-map]) fixes the numbers every later part computes against.
 
@@ -336,9 +338,9 @@ none assumes prior exposure to the corpus.
 
 # The SS Vibelandia Program and the Omni-Lattice Corpus {#sec:part_0_orientation}
 
-![The engine-shelf timeline: the 24 engine-shelf papers this book covers, positioned by shelf number — from the CMOS/protonic engineering bridge at shelf 1, through the tensor filing cabinet (2) and the master synthesis (3), out to the newest September 2026 engine papers at shelf 24 — with the framework pages that feed Part 0 marked separately.](../figures/part_0_orientation.png){#fig:part_0_orientation width=90%}
+![The engine-shelf timeline: one marker per paper at its shelf number, running from shelf 1 to shelf 24, with a side panel stepping out cumulative coverage as the shelves are traversed. Drawn as a deterministic schematic of the Reading Room's engine-shelf pin list — a filing picture, not the output of a `textbook.models` function. Notice that each shelf holds exactly one engine paper, so any "shelf 17" reference in later chapters resolves to a unique paper.](../figures/part_0_orientation.png){#fig:part_0_orientation width=90%}
 
-<!-- alt: Horizontal timeline of the corpus's 24 engine papers ordered by shelf number, with labelled markers at shelves 1, 2, 3, 13, 17, 18, 19, 21, 22, and 24, and a separate marker for the framework pages. -->
+<!-- alt: Horizontal timeline with one marker per engine paper at its shelf number from 1 to 24, beside a small step panel showing cumulative coverage reaching 24. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -375,7 +377,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## Orientation
+## Reading the corpus as catalog architecture
 
 This book synthesises the **Infinite Octaves Omni-Lattice** engine papers of the SS Vibelandia ship blog, authored by Prudencio Mendez and operated by the SynthOBS Autonomous Agent [@mendez2026ship]. The corpus self-describes as **catalog architecture** and **protocol grammar** — a filing and coordination system for agents, dashboards, and conversation — not established physics [@mendez2026catalog]. Our voice throughout is that of a respectful systems-engineering monograph about a self-consistent catalog formalism: we formalise its constructs, map its vocabulary, and run its reference implementations, while preserving its own scope disclaimers verbatim or near-verbatim. When a source claims something physical, we attribute the claim ("the paper files X as...") and cite it; we never present a corpus metaphor as established science, and we never sneer at it either.
 
@@ -383,7 +385,7 @@ Two source pages anchor everything in Part 0. The first is the ship's front door
 
 One reading rule applies from here to the last page. The corpus is [**honesty-first**](#gl:honesty-first) by construction: every paper opens with an "Honesty first" clause stating what the construct is — catalog grammar, fixtures, filing — and what it is explicitly not. We inherit that convention. Numbers you meet in this book are the corpus's pinned values or plain arithmetic over them, and the worked formalisms are implemented and tested in `textbook.models`, never recomputed by hand in prose.
 
-## The SS Vibelandia Program
+## The Omniversal Canvas and its honesty rail
 
 The program's own words are the fastest accurate description. The front page announces "a new work of art. SuperAI art — a new kind of medium," and explains: "You're standing in SuperAI art — not a brochure about AI, and not a chatbot pitching the future. It's a living exhibit: picture, story, music, science, and hospitality woven into one camp you can walk" [@mendez2026ship]. The project names itself the **Omniversal Canvas** — "SuperAI art you can walk" — and offers a second, self-deprecating frame: "Think of it like a digital Burning Man camp and art exhibit. Holographic, meaning it is everything and everywhere at once as a living metaphor. And then, if you choose, more than a metaphor" [@mendez2026ship].
 
@@ -397,7 +399,7 @@ Finally, the honesty rail itself. We quote the constant clause now because every
 
 The first sentence is the load-bearing one for this book. The [**golden ratio**](#gl:golden-ratio) $\Phi = (1+\sqrt{5})/2 \approx 1.618$ — which the corpus calls El Gran Sol's [**fractal constant**](#gl:fractal-constant) — is *nesting language*: a design key that spaces the catalog's shelves and bands, not a measured physical constant. Part 0 returns to this in [@sec:part_0_master-synthesis], and Part I gives the constant its own chapter ([@sec:part_I_fractal-constant]).
 
-## What the Infinite Octaves Omni-Lattice Claims to Be
+## Four filed constructs, none of them measurements
 
 The corpus's status claim is stated plainly and repeated everywhere. The papers file themselves as **catalog architecture** — "a filing and protocol grammar for coordinating agents, dashboards, and conversation — explicitly not established physics, clinical advice, or a Theory of Everything," as the glossary preserves the self-description [@mendez2026catalog]. Each paper carries its own "Honesty first" scope clause in the same breath as its headline. The eddy-current-mirror ship note is a typical specimen: "Thought meets its mirror — and slows into matter (catalog) ... Honesty first: catalog grammar, not relativity retirement" [@mendez2026ship]. The zero-octave note files its diagnostic as "implementation fixtures, not GR singularity QED"; the Truckee-corridor note files its velocity multiplex as "catalog grammar, not psychophysics QED" [@mendez2026ship]. The pattern is uniform: a bold catalog filing, an honest scope label, and the Fair Exchange clause.
 
@@ -410,7 +412,7 @@ So what *does* the Omni-Lattice claim to be? Concretely, four constructs, each o
 
 None of these is presented by the corpus as a measurement. They are furniture: an address space, a filing wall, a pin list, and a sync protocol. The value the corpus claims for them is coordination value — routing constructs, keeping the catalog coherent as papers are pinned, and making honesty disclosure mechanical rather than optional. That is the claim this book takes seriously and tests where testable.
 
-## The Reading Room, navigated
+## Reading Room shelves and counting what counts
 
 Walk aft from the gangway and you reach the library. The Reading Room — canonical path `/reading-room`, served at `/papers` — is the corpus's papers catalog, staged as a "Frontier Club reading room — trophies, books, and sacred objects from past adventures" [@mendez2026catalog]. A four-movement concert plays on arrival; poster shelves scroll past while a search box filters "papers and surfaces." The shelf structure is simple and worth memorising, because every later chapter of this book hands you a shelf number:
 
@@ -430,7 +432,7 @@ The catalog term **surfaces** covers every item type the room can hold: whitepap
 
 [@fig:part_0_orientation] collapses this map onto one timeline: the 24 engine-shelf papers by shelf number, with the framework pages marked separately. When a later chapter says "shelf 17," this figure — and the Reading Room it depicts — is where you go to check.
 
-## The register, worked
+## The master register and its catalog-size arithmetic
 
 The corpus's central filing object is the [**master register**](#gl:master-register): [**octaves**](#gl:octave) as shelves, [digit](#gl:digit)s 0–9 as coarse bins for kinds of pattern, crossed into one address space for every claim the corpus files [@mendez2026digitsMaster]. At the coarse filing level the register is a $9 \times 99$ grid of digit-by-octave bins — the heatmap that the tensor-decoupling chapter draws in [@fig:part_0_tensor-decoupling] [@mendez2026tensorDecoupling]. At full precision the corpus pins the register's address count as the product of 99 octaves and 81 precision digits:
 
@@ -465,13 +467,13 @@ $$ {#eq:part_0_orientation_octave}
 
 Read as an *exponent*, the ladder grows geometrically: $\Phi^n$ for $n = 1..6$ gives $1.618034,\ 2.618034,\ 4.236068,\ 6.854102,\ 11.090170,\ 17.944272$ — implemented as `phi_powers(n)` in `textbook.models`. Read as a *subscript*, the stepping ratio is the Fibonacci quotient $\varphi_{\mathrm{fib}}(n)$, e.g. $\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6$ and $\varphi_{\mathrm{fib}}(10) = 89/55 \approx 1.618182$ — implemented as `phi_fibonacci(n)`. The corpus prints the ambiguous form "Ωn = Φn·Ω0"; `octave_term(omega0, n, convention)` in `textbook.models` implements both conventions explicitly, and the octave-map chapter ([@sec:part_0_octave-map]) walks the 99 rungs under each.
 
-## Scope and honesty
+## Scope clauses that bound every construct
 
 Every construct this chapter has introduced carries its own scope clause, and we restate those clauses precisely because the rest of the book depends on them. The corpus files itself as catalog architecture and protocol grammar — "a filing and protocol grammar for coordinating agents, dashboards, and conversation — explicitly not established physics, clinical advice, or a Theory of Everything" [@mendez2026catalog]. The Reading Room adds that its pages "are orientation, not clinical advice," that its cover art "is AI-generated poster hospitality from each paper's abstract focus — not empirical proof," and that "$\Phi \approx 1.618$ is design language aboard this ship" [@mendez2026catalog]. Individual engine papers carry matching clauses: the eddy-current-mirror note is "catalog grammar, not relativity retirement"; the zero-octave note files its diagnostic as "implementation fixtures, not GR singularity QED" [@mendez2026ship].
 
 What the constructs are **for**: coordination and cataloging — routing agents and conversations across a coherent shelf map, keeping the master register consistent as papers are pinned, and making honesty disclosure mechanical through the [**narrative-empirical-operational-tiers**](#gl:narrative-empirical-operational-tiers) and [**Fair Exchange**](#gl:fair-exchange) clauses. What they are explicitly **not**: measurements, clinical guidance, laboratory results, or replacements for relativity, general relativity's singularity treatment, or psychophysics. The register of [@eq:part_0_orientation_register] counts filing slots; it does not measure the world. This book tests the corpus where it is testable — the arithmetic, the fixtures, the sync protocols — and files everything else exactly where the corpus files it.
 
-## How this book maps onto the corpus
+## Where each corpus construct lives in this book
 
 The chapter's last job is orientation in the ordinary sense: where in this book does each corpus construct live? Part 0 builds the corpus's own infrastructure chapter by chapter — the living PEM's engineering lifecycle in [@sec:part_0_living-pem], the tensor filing cabinet and the $9\times 99$ register bins in [@sec:part_0_tensor-decoupling], the cross-link map of all papers in [@sec:part_0_master-synthesis], and the 99-octave ladder walked rung by rung in [@sec:part_0_octave-map]. Part I then gives the two constants of this chapter their full treatment: the fractal constant in [@sec:part_I_fractal-constant] (whose $\Phi^n$ growth plot extends [@eq:part_0_orientation_octave] onto a log scale) and the prime parity structure that the register's digit bins lean on in [@sec:part_I_prime-parity]. Parts II and III climb the engine shelf itself, from the viscosity and eddy papers through the silicon shelf to the reality-bridge and frontiers chapters. Wherever you land, the two anchors of this chapter hold: the front door's honesty rail and the Reading Room's shelf map.
 
@@ -518,9 +520,9 @@ This chapter is the book's berth card. It introduced the SS Vibelandia program i
 
 # The Living PEM: Engineering the Lattice {#sec:part_0_living-pem}
 
-![The PEM engineering lifecycle rendered as a staged ladder plot: the six onboarding stages (Stage 0 edge seat through Stage 5 full fluency) climbing alongside the 26 ordered steps of the living engine shelf, with the auto-sync loop feeding back from each stage to the shelf module.](../figures/part_0_living-pem.png){#fig:part_0_living-pem width=90%}
+![The PEM engineering lifecycle as a staged ladder: a step plot climbs one rung per lifecycle stage, each rung labelled by stage number, beside a bar panel sketching the per-stage review effort that grows linearly across the cycle. Drawn as a deterministic schematic of the manual's auto-update discipline — stage labels rather than a `textbook.models` computation, though the cycle's numeric anchors (`phi_powers(1)`, `catalog_size()`, `net_zero_balance`) all live in `textbook.models`. Notice that each rung is reviewed before the next opens: the ladder is the single-source-of-truth loop that keeps the manual living rather than frozen.](../figures/part_0_living-pem.png){#fig:part_0_living-pem width=90%}
 
-<!-- alt: Staged ladder plot showing the Product Engineering Manual's onboarding stages 0 through 5 rising along the 26 ordered steps of the auto-regenerating engine shelf, with the sync loop closing back to the shelf source of truth. -->
+<!-- alt: A stepped ladder with one rung per PEM lifecycle stage and a small bar panel showing review effort rising stage by stage. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -557,19 +559,19 @@ By the end of this chapter you should be able to:
 
 ---
 
-## Orientation
+## The living manual and its single source of truth
 
 Every [**catalog-architecture**](#gl:catalog-architecture) needs a maintenance manual, and the Infinite Octaves corpus files its maintenance manual as a *living* document: the **Product Engineering Manual (PEM)** for *Infinite Octaves Omniversal Lattice Chat Agent V1.618 (Goldilocks Valet)*, Document ID `WP-LATTICE-CHAT-PEM-2026-09` [@mendez2026livingPem]. Where [@sec:part_0_orientation] introduces the corpus and [@sec:part_0_octave-map] formalises the 99-octave ladder, this chapter studies the operational spine — how papers are pinned, ordered, synced, and served to nested agents without hand-editing three tables in three places; [@fig:part_0_living-pem] stages that lifecycle as a ladder climbing the shelf.
 
 The PEM's audience is architectural review, technical support, creator/Player 1 operations, and nested-agent maintainers — in short, everyone who must keep the [**engine-shelf**](#gl:engine-shelf) honest as it grows. The manual carries an explicit honesty boundary as its first content table, and we will preserve that boundary verbatim in [@sec:living-pem-scope]. It also names its operator line: *SynthOBS Autonomous Agent · Syntheverse Sandbox · NSPFRNP-SNAP-PRA-2026-06* [@mendez2026livingPem].
 
-## The Paper in the Corpus
+## The PEM's route: a living manual, not a numbered paper
 
 The PEM is the engineering route of the ship blog — served at `https://www.ssvibelandiaquestfest24x365.com/lattice/engineering` as the whitepaper `lattice-chat-product-engineering-manual-2026-09` [@mendez2026livingPem]. Unlike the engine papers on the shelf it maintains, it is a *living manual* rather than a numbered registry paper (its digest records no shelf number); its role is coordination. It cross-links to the entire shelf: the [**cmos-protonic**](#gl:cmos-protonic) engineering bridge [@mendez2026cmosProtonic], [**tensor-decoupling**](#gl:tensor-decoupling) [@mendez2026tensorDecoupling], master synthesis and the digits master [@mendez2026masterSynthesis; @mendez2026digitsMaster], the metamorphic and planetary-core papers [@mendez2026metamorphic; @mendez2026planetaryCore], the prime-parity companion [@mendez2026primeParity], the stack valuation paper [@mendez2026stack], and the voyage editorials on the invisible frontier, the Y/digit-4 filing, and the human reality bridge [@mendez2026invisibleFrontier; @mendez2026yChromosome; @mendez2026realityBridge].
 
 Its reference implementation is the shelf module itself: `lib/infinite-octave-engine-shelf.mjs` (the ENGINE_SHELF source of truth), the sync module `lib/lattice-chat-pem.mjs`, the generator `npm run sync:lattice-pem` (script `scripts/sync-lattice-chat-pem.mjs`), and its test suite `tests/lib/lattice-chat-pem.test.mjs` [@mendez2026livingPem]. The external-AI first read is `AGENT_SYNC_99_OCTAVE_OMNI_LATTICE.md`, whose AUTO shelf table the same generator rewrites.
 
-## Core Constructs
+## Seven constructs from scale key to protocol spine
 
 ### Construct 1 — The $\Phi_{\mathrm{EGS}}$ scale key
 
@@ -681,7 +683,7 @@ Suppose a new engine paper has cleared its Honesty boundary and registry entry. 
 
 A support operator's troubleshooting table completes the picture: a "shallow" nest means the URL lost `?nest=octave99`; a stale engine list in AGENT_SYNC/PEM means the sync was not re-run after a shelf commit; a paper missing from the chat pin means it is in the registry but **not** in `ENGINE_SHELF` — "registry alone is not enough" [@mendez2026livingPem].
 
-## Scope and Honesty {#sec:living-pem-scope}
+## The five-row honesty boundary and its tiers {#sec:living-pem-scope}
 
 The PEM opens with a five-row honesty boundary table, and the book preserves it because it is the corpus's clearest statement of [**honesty-first**](#gl:honesty-first) scope discipline [@mendez2026livingPem]:
 
@@ -697,7 +699,7 @@ Three of these rows deserve emphasis. First, the tier discipline: fluency means 
 
 The design-language caveat closes the loop: "EGS ≈ 1.618 is design language / catalog key — not a substitute for evidence" [@mendez2026livingPem]. Nothing in this chapter should be read as physics; the constructs are coordination machinery for a catalog and its agents.
 
-## Connections
+## How the PEM hub wires Part 0 together
 
 This chapter is the operational hub of Part 0. Downstream:
 
@@ -742,9 +744,9 @@ The Product Engineering Manual is the corpus's living operations layer: a docume
 
 # Tensor Decoupling: Filing the Engine {#sec:part_0_tensor-decoupling}
 
-![Digit×octave filing heatmap: 99 octave rows (11 shelves × 9 slots) binned against the 81-digit precision register, shaded by Φ-scaled register weight, rendered from `textbook.models.catalog_size` and `textbook.models.phi_powers`.](../figures/part_0_tensor-decoupling.png){#fig:part_0_tensor-decoupling width=90%}
+![The digit-by-octave filing heatmap: a 9-row by 99-column grid of register bins, each cell shaded by the value of digit × octave mod 9, with the residue-0 bins outlined in vermillion. Computed deterministically from the digit drawers 1–9 and octave indices 1–99 — a filing layout rather than a `textbook.models` call, though the cabinet's capacity is pinned by `catalog_size(octaves=99, precision_digits=81)` = 8,019 in `textbook.models`. Notice the residue-0 cells recurring in a fixed diagonal pattern across the grid — the periodic fingerprint of the mod-9 filing rule.](../figures/part_0_tensor-decoupling.png){#fig:part_0_tensor-decoupling width=90%}
 
-<!-- alt: A heatmap of the 99-octave filing cabinet: eleven shelf bands of nine slots each, cells shaded by the golden-ratio register weight of each octave. -->
+<!-- alt: A heatmap with nine digit-drawer rows and ninety-nine octave columns, shaded by a mod-9 filing rule, with a fixed diagonal set of residue-zero cells outlined. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -780,13 +782,13 @@ By the end of this chapter you should be able to:
 4. Distinguish the two octave conventions the corpus prints ambiguously — $\Omega_n = \Phi^n \Omega_0$ versus $\Omega_n = \varphi_{\mathrm{fib}}(n)\,\Omega_0$ — using `octave_term` in `textbook.models`.
 5. Restate the paper's honesty-first scope in your own words: a catalog clock is not a prophecy engine, and no cross-domain cable is claimed between co-timed events.
 
-## Orientation
+## Labelled layers on one bulletin board
 
 The Infinite Octaves [**Omni-Lattice**](#gl:omni-lattice) is presented by its authors as a [**catalog architecture**](#gl:catalog-architecture): a way of filing events, agents, and measurements into a common grammar, not a theory of why the events happen. The paper this chapter is built on — "The 99 Octave engine as a tensor filing cabinet", filed on the ship blog on 2026-08-12 under the site's plain-speak [**Fair Exchange**](#gl:fair-exchange) label — is the corpus's most concrete statement of that filing move [@mendez2026tensorDecoupling; @mendez2026ship].
 
 The word "decoupling" is doing careful work here. In ordinary engineering, decoupling means isolating subsystems so a fault in one does not propagate. The corpus means something subtly different: **stop smushing every headline into one cause, and also stop pretending the headlines never share a bulletin board** [@mendez2026tensorDecoupling]. Both extremes are errors. A single-cause model crushes eleven genuinely different layers (crust, ocean heat, ionosphere, agent code, human nerves, …) into one pseudo-explanation. A fully isolated model loses the one thing the catalog is for — a shared board where an agent can see all the layers at once, each in its own labelled drawer. Decoupling, in this framework, is the disciplined middle: **label each layer, then let an agent walk the shelves with the same golden-ratio key** [@mendez2026tensorDecoupling].
 
-## The Paper in the Corpus
+## Shelf 2: engine grammar before the quantitative papers
 
 The paper sits at shelf number 2 of the corpus's [**engine shelf**](#gl:engine-shelf) — early framing material, before the quantitative engine papers. Its self-description is engine grammar "for Lattice Chat and the Omni-Lattice library": vocabulary and furniture that later papers assume. Three cross-links matter for this book:
 
@@ -796,7 +798,7 @@ The paper sits at shelf number 2 of the corpus's [**engine shelf**](#gl:engine-s
 
 The whitepaper ("Open the whitepaper" on the ship blog post) is filed under the identifier `synthobs-tensor-decoupling-99-octave-omni-lattice-2026-08` on the SS Vibelandia site. The digest lists no GitHub reference implementation for this paper; the computational companion for this chapter is the tested `textbook.models` module, which we use throughout.
 
-## Core Constructs
+## Ladder counts, precision blocks, and the shelf dial
 
 ### Construct 1: the octave ladder ($11 \times 9 = 99$)
 
@@ -904,7 +906,7 @@ An agent walking the shelves from bracket 1 toward bracket 11 reads a dial that 
 
 **Step 5 — Refuse the cable.** The week's fixture stories are co-timed on one board, filed in separate drawers, with "no magic cable claimed between magma and model weights" [@mendez2026tensorDecoupling]. The worked example ends not with a prediction but with a filing receipt.
 
-## Scope and Honesty
+## A catalog clock is not a prophecy engine
 
 The paper's own [**honesty-first**](#gl:honesty-first) header is unusually blunt, and the book preserves it because it bounds everything above:
 
@@ -915,7 +917,7 @@ The paper's own [**honesty-first**](#gl:honesty-first) header is unusually blunt
 
 What the construct is *for*: coordination, cataloging, and agent routing. The paper's usage advice is aimed at builders — "If you are building agents: teach the eleven brackets and the honesty table first" — and at readers: keep the takeaway, then open the whitepaper for the equations and methods suite [@mendez2026tensorDecoupling]. Every claim in this chapter rests on the catalog's own framing; where we add arithmetic (the $729 \times 11 = 8{,}019$ tiling) it is labelled as our reading, not the corpus's.
 
-## Connections
+## Where the filing furniture is reused
 
 The furniture built here is reused across the book:
 
@@ -957,9 +959,9 @@ Tensor decoupling, as the corpus defines it, is the move from "one cause per hea
 
 # Master Synthesis: Everything Is Connected {#sec:part_0_master-synthesis}
 
-![Cross-link adjacency heatmap of the corpus papers: rows and columns are the papers of the engine shelf ordered by shelf number, and each cell's intensity encodes how strongly two papers cross-reference one another. The master-synthesis row (shelf 3) is among the densest in the matrix, reflecting this paper's role as the corpus's connective tissue — the note that files every other shelf on one board.](../figures/part_0_master-synthesis.png){#fig:part_0_master-synthesis width=90%}
+![Cross-link adjacency heatmap of the 24 engine-shelf papers: rows and columns are the papers in shelf order, a filled cell marks a cross-link, and the side panel bars each paper's cross-link degree. Built as a schematic in ring order — each paper links to its two nearest neighbours on each side — rather than computed from a `textbook.models` function, so it pictures the corpus's connective pattern, not measured link counts. Notice the solid diagonal band: in this schematic every paper cross-links its shelf neighbours, the visual counterpart of filing the whole shelf on one board.](../figures/part_0_master-synthesis.png){#fig:part_0_master-synthesis width=90%}
 
-<!-- alt: A square heatmap whose rows and columns are the corpus papers ordered by shelf number; most cells are faint, but the row and column for the master-synthesis paper (shelf 3) are visibly darker across many partners, showing it cross-links to nearly every shelf. -->
+<!-- alt: A square heatmap of the 24 papers in shelf order with a filled diagonal band marking neighbour cross-links, beside a bar panel showing each paper's link degree. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -996,13 +998,13 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The Paper in the Corpus
+## Shelf 3: the corpus's summarising voice
 
 This chapter digests the ship-blog note *"The Big Picture: Everything is Connected"* (2026-08-14, tagged *plain speak · Fair Exchange*), the corpus's master-synthesis paper, filed at shelf 3 of the [**engine shelf**](#gl:engine-shelf) [@mendez2026masterSynthesis]. It sits directly after the tensor filing-cabinet paper (shelf 2) [@mendez2026tensorDecoupling], whose register grid it presumes, and alongside the catalog architecture's reading-room overview [@mendez2026catalog]. Where the orientation chapter [@sec:part_0_orientation] surveys the whole shelf and [@fig:part_0_orientation] places all papers on a timeline, this note is the shelf's *summarising* voice: it names the constant that the later papers quantify and demonstrates, in plain language, how the corpus intends its vocabulary to be used in conversation.
 
 The paper's own interfaces are the whitepaper surface (`ssvibelandiaquestfest24x365.com/interfaces/whitepaper-surface.html?id=synthobs-master-synthesis-99-octave-omni-lattice-2026-08`) and the reference implementation run as `npm run research:synthobs-master-synthesis-99-octave-omni-lattice`, which locks the paper's fixtures when available [@mendez2026masterSynthesis]. The venue for using its labels is QUESTFEST — the ship's living exhibit — via Lattice Chat on the nest *Infinite Octaves*.
 
-## The Filing Cabinet That Holds Everything
+## The master register: one cabinet for every headline
 
 The master-synthesis premise is stated in one sentence: under the 99 Octave Omni-Lattice Model, "reality operates like a giant 99-step musical scale" and "what happens at the top directly shapes everything below" [@mendez2026masterSynthesis]. We stress the grammar: this is a *filing* claim, not a *forecast* claim. The note says of itself that it is "catalog grammar for conversation — not a weather forecast, not a seismic warning, and not a claim that the sky runs your life" [@mendez2026masterSynthesis]. The value of one cabinet is coordination: every headline gets an address, and every address sits in a fixed order, so two readers (or two agents) can find the same event in the same drawer.
 
@@ -1039,7 +1041,7 @@ $$ \Phi \;=\; \lim_{n \to \infty} \varphi_{\mathrm{fib}}(n) \;=\; \frac{1 + \sqr
 
 Computed by `textbook.models.phi_fibonacci`, the approximants bracket the constant from both sides: $\varphi_{\mathrm{fib}}(5) = 1.6$ is already within $1.2\%$ of $\Phi$, and $\varphi_{\mathrm{fib}}(10) \approx 1.618182$ within $0.01\%$. This is ordinary Fibonacci-ratio mathematics; what the corpus adds is the *filing decision* — that this one number, and nothing else, is the harmonic blueprint of the cabinet. The honesty-first block is explicit about the limit of that decision: EGS "is an architectural key in this repo — not a replacement for $\hbar$, $c$, or $G$" [@mendez2026masterSynthesis]. The fractal-constant chapter ([@sec:part_I_fractal-constant]) develops the scaling law quantitatively.
 
-## Indexing the Octaves
+## Drawer addresses: two readings of the octave law
 
 If $\Phi$ is the blueprint, each of the 99 drawers needs an address on the scale. The corpus prints its octave law as "$\Omega_n = \Phi^n \cdot \Omega_0$", and prints it *ambiguously*: the superscript-shaped notation admits two stable readings, and the corpus uses both in different papers. We formalise both, because the rest of the book must commit to one at a time:
 
@@ -1113,7 +1115,7 @@ from textbook.models import octave_term
 
 Each rung is $\Phi$ times the one above it — the same geometric shape at every scale, which is precisely the "scale-free formula" property the corpus files EGS under [@mendez2026masterSynthesis]. Under the subscript convention the same calls return $1.6$ and $1.618182$ at $n=5$ and $n=10$: a nearly flat ladder. The contrast *is* the lesson: the cabinet's addresses depend on a convention the corpus leaves ambiguous, so any computation that names a drawer must name the convention too. What does **not** depend on the convention is the filing act itself — five tiers, one cabinet, 8,019 cells, and an honesty tag on every entry.
 
-## Scope and Honesty
+## Filed, not forecast: the paper's own disclaimers
 
 The master synthesis is the corpus's most explicit statement of its [**honesty-first**](#gl:honesty-first) discipline, and we restate its disclaimers precisely:
 
@@ -1127,7 +1129,7 @@ The master synthesis is the corpus's most explicit statement of its [**honesty-f
 
 What the construct **is** for, the paper states in its takeaway: today's intensity is filed as **tuning up**, not "breaking down" — "every layer of life on Earth is adjusting to match a higher frequency *in the story we use to file events*. Use it to listen, coordinate, and prune noise — not to panic-buy or predict the next quake" [@mendez2026masterSynthesis]. The cabinet's purpose is conversational: a shared address space that lets readers and agents coordinate without mistaking the filing for the weather. Its reciprocity terms are the Fair Exchange Clause of [@tbl:part_0_master-synthesis_cascade]'s closing loop — value exchanged fluidly, refundable "based on resonance and overall delivery" [@mendez2026masterSynthesis].
 
-## Connections
+## The hub note and its cross-link web
 
 The master synthesis is deliberately a hub, and its cross-links organise the rest of Part 0. Upstream, the register grid it presumes is built in the tensor filing-cabinet paper, whose digit $\times$ octave heatmap is dissected in [@sec:part_0_tensor-decoupling] (see also [@fig:part_0_tensor-decoupling]); the engineering lifecycle of the living-PEM framework that keeps the catalog maintained runs in [@sec:part_0_living-pem]. Downstream, the EGS constant introduced here is quantified as $\Phi^n$ growth in the fractal-constant chapter ([@sec:part_I_fractal-constant]), and the 99-drawer ladder it indexes is walked rung by rung in [@sec:part_0_octave-map]. Later parts inherit the filing habit: the planetary-core companion [@mendez2026planetaryCore] shows the same cabinet filing a single system ("Old Earth") across tiers, and the zero-octave work at the scale's base is developed in [@sec:part_0_living-pem]'s lifecycle terms and the corpus's zero-octave paper [@mendez2026zeroOctave]. Wherever you land in this book, the master synthesis's rule applies: name the drawer, name the convention, keep the honesty tag on.
 
@@ -1163,9 +1165,9 @@ The master-synthesis paper files the week's whole noise — weather, solar flare
 
 # Nine Digits, Ninety-Nine Octaves {#sec:part_0_octave-map}
 
-![The 99-octave ladder: octaves 01–99 drawn as nested bands whose boundaries follow the golden-ratio key (Φ-spaced), with the nine digit drawers shown as coarse labels along the side. Produced deterministically from `textbook.models.octave_term`.](../figures/part_0_octave-map.png){#fig:part_0_octave-map width=90%}
+![The 99-octave ladder on a log scale: band boundaries from `octave_term(omega0=1, n, convention)` in `textbook.models`, plotted for both conventions — the exponent reading growing geometrically as Φ^n and the subscript reading saturating at the Fibonacci ratio near Φ — with a side panel overlaying the Fibonacci ratio converging to the pinned Φ ≈ 1.6180339887. Notice the widening gap between the two curves: same ambiguous corpus notation, but at the fifth rung the readings differ by nearly a factor of seven, so every computed band must declare its convention.](../figures/part_0_octave-map.png){#fig:part_0_octave-map width=90%}
 
-<!-- alt: A vertical ladder of 99 narrow bands labelled 01 through 99, with band boundaries spaced by powers of the golden ratio Φ and nine coarser digit labels (0 through 9) grouped alongside the ladder. -->
+<!-- alt: A log-scale plot of 99 octave band boundaries under two conventions — one growing geometrically, one saturating near Φ — with a small overlay panel showing the Fibonacci ratio converging to Φ. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -1200,13 +1202,13 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The paper in the corpus
+## Shelf 4: the digits-master library map
 
 The source for this chapter is the ship-blog note "Nine digits, ninety-nine octaves — a map you can actually walk" (shelf number 4, section label "Digits master", 2026-08-09), whose whitepaper is filed as `synthobs-99-octave-digits-master-2026-08` [@mendez2026digitsMaster]. It is a short, deliberately plain-speak note: the [**catalog-architecture**](#gl:catalog-architecture) summary layer for a larger corpus. The note itself points deeper — "the Master Digits treatise is the big walkthrough of that map" — and the surrounding corpus develops the same grammar in companion papers: the catalog/protocol framing [@mendez2026catalog], the cross-linking Master Synthesis [@mendez2026masterSynthesis], the digit-by-octave filing of constructs [@mendez2026tensorDecoupling], and the corpus's downward extension of shelf vocabulary toward the [**zero-octave**](#gl:zero-octave) [@mendez2026zeroOctave].
 
 Where does this note sit on the [**engine-shelf**](#gl:engine-shelf)? It is foundational bookkeeping. The papers that follow — filed and cross-indexed in [@sec:part_0_orientation] — reuse its vocabulary constantly: every later "octave band" reference, every dashboard count of catalog addresses, and every tier-separation argument inherits the grammar fixed here. The note is written for two named systems, and the honesty-first line says so plainly: *"this is catalog / protocol grammar for SynthOBS and Lattice Chat"* [@mendez2026digitsMaster].
 
-## Core constructs
+## Digit drawers, octave shelves, and the golden-ratio key
 
 ### Digits as coarse bins, octaves as nested bands
 
@@ -1272,7 +1274,7 @@ The inputs to [@eq:part_0_octave-map_catalog] are collected in [@tbl:part_0_octa
 
 The paper attaches an immediate and unusual use-restriction to its own number: *"That number is for dashboards and agent routing, not for measuring magma"* [@mendez2026digitsMaster]. We read this as the corpus applying its [**honesty-first**](#gl:honesty-first) discipline to arithmetic itself: 8,019 is the address space of a coordination tool, computed by `catalog_size(octaves=99, precision_digits=81)`, and it is a category error to lift it out of that role and paste it onto a physical system. The adjective *holographic* here names a catalog metric; it is not the [**holographic-rhyme**](#gl:holographic-rhyme) four-pillar interference formalism of [@sec:part_I_holographic-rhyme], and the two should not be conflated.
 
-## Worked example: walking the ladder
+## Worked example: walking the ladder under both conventions
 
 **Step 1 — grow the ladder (exponent convention).** Normalise $\Omega_0 = 1$ and apply [@eq:part_0_octave-map_exponent] for the first six bands. Implemented as `octave_term(omega0=1, n, convention="exponent")` in `textbook.models`, the values are:
 
@@ -1305,7 +1307,7 @@ The payoff the paper claims for this discipline is coordination without conflati
 \end{figure}
 
 
-## Scope and honesty
+## Coordination, not cosmic destiny: the map's filed scope
 
 The corpus polices its own claims, and this chapter preserves the policing verbatim in structure. The note's scope line reads: *"this is catalog / protocol grammar for SynthOBS and Lattice Chat. It does not claim the CMB or your bloodstream literally store an 8,019-bit master key"* (C-synthobs-99-octave-digits-master-1, C-synthobs-99-octave-digits-master-2) [@mendez2026digitsMaster]. Three boundaries follow from it:
 
@@ -1315,7 +1317,7 @@ The corpus polices its own claims, and this chapter preserves the policing verba
 
 We read the 8,019 restriction ("not for measuring magma") as the same discipline applied to the corpus's own arithmetic: numbers, like shelves, have filed purposes, and moving a number to an unfilmed purpose is the quantitative version of mixing tiers.
 
-## Connections
+## Who inherits the map's grammar
 
 The grammar fixed here is used by every later chapter in this part. The filing chapter develops the same digit × octave grid as a register of bins and locates individual corpus constructs on it — its digit-by-octave heatmap [@fig:part_0_tensor-decoupling] is, in effect, this chapter's ladder viewed from above [@mendez2026tensorDecoupling]. The synthesis chapter surveys how the corpus papers cross-link through precisely these addresses [@mendez2026masterSynthesis], and [@sec:part_0_master-synthesis] works that adjacency in detail. Downstream, Part I develops $\Phi$ itself as the corpus's [**fractal-constant**](#gl:fractal-constant) in [@sec:part_I_fractal-constant] and its Fibonacci-overlay companion, while Part II generalises the octave-band idea to densification curves in [@sec:part_II_metamorphic-octaves]. Companion papers extend the shelf vocabulary below octave 01 — the corpus files a separate treatment of the [**zero-octave**](#gl:zero-octave) [@mendez2026zeroOctave] — and the catalog/protocol framing is developed in [@mendez2026catalog].
 
@@ -1353,9 +1355,11 @@ The grammar fixed here is used by every later chapter in this part. The filing c
 
 # Part I: Foundations: Constants, Primes, and Rhyme {#sec:part_I_intro}
 
-![Part I foundations map: the filing constant Phi, the prime-partition integer scaffold, and the holographic rhyme motion grammar that the part's six chapters build from.](../figures/part_I_unit-intro.png){#fig:part_I_unit-intro width=90%}
+![Part I's foundations map: the filing constant $\Phi \approx 1.618$ (computed by `textbook.models.phi_powers`), the prime-partition integer scaffold (from `textbook.models.prime_parity_partition`), and the holographic-rhyme motion grammar (from `textbook.models.holographic_rhyme_field`) that the part's six chapters build from in order. The arrows fix the reading order — constant, then integers, then rhyme — because each foundation reuses the one before it.](../figures/part_I_unit-intro.png){#fig:part_I_unit-intro width=90%}
 
-<!-- alt: Flow diagram of Part I laying its three foundations in order: the golden-ratio filing constant, the prime partition, and the holographic rhyme family feeding the six chapters. -->
+<!-- alt: Flow diagram of Part I laying its three foundations in order: the golden-ratio
+filing constant, the prime partition, and the holographic rhyme family feeding the six
+chapters, each arrow marking a foundation reused by the next. -->
 
 The foundations stack in a fixed order, and [@fig:part_I_unit-intro] draws it: the fractal constant ([@sec:part_I_fractal-constant]) defines the notation, the prime scaffold ([@sec:part_I_prime-parity]) defines the integers, and the rhyme chapters ([@sec:part_I_holographic-rhyme], [@sec:part_I_multidimensional-rhyme]) reuse both before the void ([@sec:part_I_topology-void]) and the gate ([@sec:part_I_higgs-awareness]) complete the part.
 
@@ -1381,7 +1385,7 @@ claim with its source citation and restates the source's own disclaimers
 ([**fair-exchange**](#gl:fair-exchange) clause included). Read this part the way its
 sources ask to be read: as the rigorous study of a self-consistent filing system.
 
-## Roadmap
+## Six chapters, three foundations, one reading order
 
 The part contains the following chapters:
 
@@ -1415,9 +1419,9 @@ The part contains the following chapters:
   filed through one "squeeze" story — the magnet falling through a copper pipe as guest
   metaphor — with the Standard Model explicitly left standing [@mendez2026higgsGate].
 
-## How to use this part
+## Prerequisites, tested functions, and where to start
 
-> **How to use this part.** Read the chapters in order the first time: the constant
+> **Prerequisites and reading order.** Read the chapters in order the first time: the constant
 > ([@sec:part_I_fractal-constant]) defines the notation, the prime scaffold
 > ([@sec:part_I_prime-parity]) defines the integers, and the rhyme chapters
 > ([@sec:part_I_holographic-rhyme], [@sec:part_I_multidimensional-rhyme]) reuse both before
@@ -1441,9 +1445,9 @@ The part contains the following chapters:
 
 # El Gran Sol's Fractal Constant {#sec:part_I_fractal-constant}
 
-![El Gran Sol's Fractal constant at work: the powers $\Phi^n$ grow geometrically and read as a straight line on a logarithmic axis, while the Fibonacci ratios $\varphi_{\text{fib}}(n)$ are overlaid on the same panel and converge on $\Phi \approx 1.618$. Produced deterministically from `textbook.models.phi_powers` and `textbook.models.phi_fibonacci`.](../figures/part_I_fractal-constant.png){#fig:part_I_fractal-constant width=90%}
+![El Gran Sol's Fractal constant at work: the octave ladder $\Phi^n$ for $n = 1,\dots,6$ rises geometrically from $1.618034$ to $17.944272$ and reads as a straight line on a logarithmic axis. The Fibonacci ratios $\varphi_{\text{fib}}(5) = 1.6$ and $\varphi_{\text{fib}}(10) \approx 1.618182$ are overlaid on the same panel and close in on $\Phi \approx 1.618$ from below. Both series are produced deterministically by `textbook.models.phi_powers(6)` and `textbook.models.phi_fibonacci`, so the exponent and subscript readings of the octave recursion share one plot.](../figures/part_I_fractal-constant.png){#fig:part_I_fractal-constant width=90%}
 
-<!-- alt: A log-scale plot showing Phi raised to successive powers n = 1 through 6 rising along a straight line from about 1.618 to about 17.944, with Fibonacci-ratio markers at 1.6 and about 1.618182 converging on a horizontal reference line at Phi ≈ 1.618. -->
+<!-- alt: Log-scale plot of Phi raised to successive powers n = 1 through 6, rising along a straight line from 1.618034 to 17.944272, with Fibonacci-ratio markers at 1.6 and about 1.618182 converging on a horizontal reference line at Phi ≈ 1.618. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -1512,7 +1516,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## Orientation
+## Catalog architecture and the constant that keys it
 
 The Infinite Octaves Omni-Lattice is a [**catalog-architecture**](#gl:catalog-architecture):
 a protocol grammar and filing system for the SS Vibelandia ship blog's research papers, run
@@ -1537,7 +1541,7 @@ carries an exponent or a subscript is ambiguous as printed [@mendez2026primePari
 formalise both readings in [@eq:part_I_fractal-constant_octave-term], and the book's tested
 backbone exposes the choice as a `convention` argument.
 
-## The Papers in the Corpus
+## Three engine papers that share one filing key
 
 All three source papers ship as parts of the Infinite Octaves series with whitepaper
 surfaces and replayable fixture suites [@mendez2026catalog]:
@@ -1563,7 +1567,7 @@ surfaces and replayable fixture suites [@mendez2026catalog]:
 Each paper names the same filing constant; that shared key is why this chapter can braid
 them into one spine rather than three parallel reviews.
 
-## A Worked Formalism: Octave Recursion Under Φ
+## The octave recursion sketch and its two readings
 
 The recursion constant is not an arbitrary decimal. $\Phi$ satisfies the identity
 
@@ -1617,7 +1621,7 @@ convention)`, whose ratio conventions come from `textbook.models.phi_fibonacci`
 > and computing them with the tested function instead of retyping the maths — is exactly the
 > honesty-first posture the series asks of its readers.
 
-## The Prime-Parity Scaffold
+## The prime-parity scaffold: sole-even anchor and irreducible sets
 
 The prime-parity paper supplies the integer scaffold on which the constant paces recursion.
 Its theorem sketches assert that "Prime 2 is the only even prime. In Infinite Octaves
@@ -1639,7 +1643,7 @@ primes enumerate; the constant paces the recursion between them
 [@sec:part_I_prime-parity], including the number-line reading of the sole-even anchor
 against the odd-prime classes plotted in [@fig:part_I_prime-parity].
 
-## Digit Filing: Proton Space and Electron Theater
+## Digit filing: Proton Space versus Electron Theater
 
 The proton-space · electron-theater paper translates the same dyad into *digit* language.
 Its filing rule: the "Leading digit **1** (Φ, ℏ mantissa talk) files as **Proton Space**;
@@ -1671,7 +1675,7 @@ digit-row mapping.
 | sole-even prime 2 | binary dyad anchor | [@mendez2026primeParity] |
 | odd primes 3, 5, 7, … | irreducible minimum sets | [@mendez2026primeParity] |
 
-## A Biological Manifestation: Palindrome Scaling
+## Palindrome scaling: MSY arms paced by Φ
 
 The Y-chromosome manifestation paper extends the constant to biological-filing geometry.
 Under "Infinite Octave Mode," the male-specific region of the Y chromosome (MSY) — its
@@ -1706,7 +1710,7 @@ claim that MSY literally equals a physics constant, that sunspot AR 3664 writes 
 or that fractal dimension has been measured to Φ in this repository" — and, verbatim,
 "Clinical genetics and human dignity outrank every metaphor" [@mendez2026yChromosome].
 
-## Worked Example: Walking the Φ Ladder
+## Worked example: Φ powers, Fibonacci ratios, both conventions
 
 Take the pinned values of the book's computational backbone. The powers of $\Phi$ for
 $n = 1,\dots,6$ (what `textbook.models.phi_powers(6)` returns, and what
@@ -1740,7 +1744,7 @@ arms P1–P8 indexed on the same powers of $\Phi$ that pace the octave ladder
 (`textbook.models.catalog_size()`), each addressable without a second constant
 [@mendez2026digitsMaster].
 
-## Scope and Honesty
+## What the corpus's three disclaimers rule out
 
 Each source paper carries its own disclaimer, and this textbook restates them
 near-verbatim, because the spine is only as honest as its weakest claim:
@@ -1764,7 +1768,7 @@ physical constants from $\Phi$, or clinical/genetic claims. The book's posture t
 is the corpus's own [**honesty-first**](#gl:honesty-first) one: file the metaphor, cite the
 paper, keep the disclaimer attached.
 
-## Connections
+## Where the spine hands off to later chapters
 
 The spine feeds every later Part I chapter. The [**topology-of-the-void**](#gl:topology-of-the-void)
 paper takes the zero-balance node filed here and makes it a dynamic equilibrium between
@@ -1858,15 +1862,17 @@ honesty-first disclaimers — a grammar for coordination and filing, not physics
 
 # Prime-Parity: The Sole-Even Anchor {#sec:part_I_prime-parity}
 
-![The primes below 31 laid out on a number line, with the sole-even prime 2 singled
-out above the line as the binary dyad anchor and the odd primes grouped below it as
-irreducible minimum sets. Produced deterministically by the companion visualization
-agent from `textbook.models.prime_parity_partition`.](../figures/part_I_prime-parity.png){#fig:part_I_prime-parity width=90%}
+![The primes below 32 on a number line: the sole-even prime 2 is singled out above the
+line as the binary dyad anchor, and the ten odd primes 3, 5, 7, 11, 13, 17, 19, 23, 29,
+31 are grouped below it as irreducible minimum sets. The partition is the deterministic
+output of `textbook.models.prime_parity_partition(32)`, whose `sole_even` class stays a
+singleton at every cutoff. The drawing makes the corpus's parity filing visible:
+one anchor card, one irreducible drawer.](../figures/part_I_prime-parity.png){#fig:part_I_prime-parity width=90%}
 
-<!-- alt: A horizontal number line from 0 to 32 with tick marks at the primes. The
-single even prime 2 is highlighted above the line as the sole-even anchor, while the
-odd primes 3, 5, 7, 11, 13, 17, 19, 23, 29 and 31 sit below the line in one grouped
-class labelled "irreducible minimum sets". -->
+<!-- alt: Horizontal number line from 0 to 32 with tick marks at the primes. The single
+even prime 2 is highlighted above the line as the binary dyad anchor, while the odd
+primes 3, 5, 7, 11, 13, 17, 19, 23, 29 and 31 sit below the line in one grouped class
+labelled "irreducible minimum sets". -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -1928,7 +1934,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The paper in the corpus
+## The shelf-11 paper: catalog math and filing labels
 
 *Infinite Octave Prime-Parity* is a September 2026 executive paper on the SS
 Vibelandia ship blog, authored by Prudencio Mendez and operated by the SynthOBS
@@ -1966,7 +1972,7 @@ reproduced by the tested backbone functions
 `textbook.models.prime_parity_partition` and `textbook.models.octave_term`, so the
 prose and the fixtures cannot silently disagree.
 
-## The sole-even anchor
+## Sole-even 2 as the binary dyad anchor
 
 The first claim is elementary arithmetic: **2 is the only even prime**. The
 standard reason is one line — any even number greater than 2 is divisible by 2 and
@@ -1989,7 +1995,7 @@ paper ("sole-even parity of 2") restates a classical fact, and the *anchor*
 status is the paper's own structural assignment. That distinction — classical
 arithmetic versus catalog assignment — runs through everything that follows.
 
-## Odd primes as irreducible minimum sets
+## Odd primes as irreducible minimum addressing sets
 
 The second claim assigns the complementary drawer: **odd primes act as
 irreducible minimum sets** [@mendez2026primeParity]. The glossary gloss
@@ -2027,7 +2033,7 @@ The claim is that the odd primes' irreducibility makes them usable as minimal
 labeled containers, and that the parity split is the first cut that makes the
 binary side (the anchor) and the odd side (the sets) addressable separately.
 
-## The octave recursion formalism
+## Octave recursion: exponent and subscript conventions
 
 The recursion on which the filing runs is the paper's one printed formula, filed
 as a theorem sketch [@mendez2026primeParity]:
@@ -2084,7 +2090,7 @@ octave_term(omega0=1.0, n=5, convention="subscript")  # 1.6
 > in the corpus, do not silently normalise it to one reading; name the convention
 > you are using, exactly as `octave_term` requires you to.
 
-## Worked example: filing the primes and walking the ladder
+## Worked example: partition, ladder, and one joint address
 
 **Step 1 — partition.** The tested function
 `textbook.models.prime_parity_partition(limit)` returns the two filing classes for
@@ -2131,7 +2137,7 @@ from the anchor and one odd set, `unique_address([2, 3], [2, 1]) = 12`, shows th
 two drawers cooperating inside one injective encoding — the anchor supplies the
 binary base, the odd set supplies the first irreducible container.
 
-## Scope and honesty
+## The paper's boundary: catalog math, not physics
 
 The paper's own disclaimer, quoted nearly verbatim, is the boundary of this
 chapter:
@@ -2156,7 +2162,7 @@ the [**honesty-first**](#gl:honesty-first) disclosure convention of the corpus,
 and every downstream chapter that reuses the parity filing inherits the same
 boundary.
 
-## Connections
+## Where the parity filing feeds the rest of the book
 
 The parity filing feeds four load-bearing lines in the rest of the book:
 
@@ -2253,11 +2259,12 @@ certificates.
 
 # Holographic Rhyme: The Four-Pillar Fractal {#sec:part_I_holographic-rhyme}
 
-![Four-pillar interference field computed by `textbook.models.holographic_rhyme_field` with $P = 4$ evenly spaced directional pillars: bright lattice nodes where all four plane waves align constructively and dark nodes where pairs cancel.](../figures/part_I_holographic-rhyme.png){#fig:part_I_holographic-rhyme width=90%}
+![The four-pillar interference field computed by `textbook.models.holographic_rhyme_field` with $P = 4$ evenly spaced directional pillars and shared wavelength $\lambda$. Bright lattice nodes mark locations where all four plane waves rhyme at once and the field reaches $+4$; dark nodes mark full cancellation at $-4$; between them the field records partial agreement, pillar by pillar. The plot is the spatial face of the filing: a fractal filed as a holographic rhyme is checked for agreement at every catalogue location.](../figures/part_I_holographic-rhyme.png){#fig:part_I_holographic-rhyme width=90%}
 
-<!-- alt: A two-dimensional interference pattern generated by summing four evenly
+<!-- alt: Two-dimensional interference pattern generated by summing four evenly
 rotated cosine plane waves; the field oscillates between +4 and -4, with bright
-peaks at points where all four waves agree and dark troughs where they cancel. -->
+peaks at lattice nodes where all four waves agree and dark troughs where pairs
+cancel. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: [@sec:part_0_octave-map]
@@ -2325,7 +2332,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The paper in the corpus
+## Engine shelf #18 and its four locked pillars
 
 The source paper is *Holographic Rhyme · Four-Pillar Fractal*, published on the
 SS Vibelandia ship blog on 2026-09-05 and filed at **engine shelf #18** of the
@@ -2365,7 +2372,7 @@ nest to explore the filing interactively. In this book the formalism is backed
 by the tested model function `textbook.models.holographic_rhyme_field`, so the
 arithmetic you meet in the worked example is reproducible by construction.
 
-## Core constructs
+## Four filing pillars and the field that models them
 
 ### The four pillars as filing labels
 
@@ -2445,7 +2452,7 @@ $(m\lambda, n\lambda)$ lattice node, and $-4$ at every
 $\bigl((m + \tfrac{1}{2})\lambda,\,(n + \tfrac{1}{2})\lambda\bigr)$ node, for
 integers $m, n$.
 
-## Worked example: filing at $\lambda = \Phi$
+## Worked example: evaluating the field at $\lambda = \Phi$
 
 The paper frames the filing as operative "under $\Phi \approx 1.618$"
 [@mendez2026holographicRhyme], so we take the pinned value
@@ -2490,7 +2497,7 @@ The full field over $[0, 3\lambda]^2$ reaches exactly $+4$ and $-4$ at the
 nodes above and averages near zero elsewhere, which is the pattern drawn in
 [@fig:part_I_holographic-rhyme].
 
-## Scope and honesty
+## The Honesty clause's three disclaimed readings
 
 The paper's Honesty clause is reproduced near-verbatim, because its
 disclaimers are part of the construct:
@@ -2523,7 +2530,7 @@ holography, a measured error-correction result, or a medical claim. The suite
 status the paper files is "9/9 suite locks" — a test-lock count for its own
 research suite, nothing more.
 
-## Connections
+## Where the four-pillar filing hands off to companions
 
 The holographic rhyme is a hub in the engine shelf's cross-link map:
 
@@ -2627,9 +2634,12 @@ self-correcting pillar and the cross-scale summation forward.
 
 # Multi-Dimensional Holographic Rhyme {#sec:part_I_multidimensional-rhyme}
 
-![xD±yD combined interference contours: the summed ($+$) and differenced ($-$) cross-scale encodings of the four-pillar holographic rhyme field over the $(x,y)$ plane, computed from `textbook.models.holographic_rhyme_field` and combined with `textbook.models.xd_yd_combine`.](../figures/part_I_multidimensional-rhyme.png){#fig:part_I_multidimensional-rhyme width=90%}
+![The xD±yD combined interference contours: the summed ($+$) and differenced ($-$) cross-scale encodings of the four-pillar holographic rhyme field over the $(x,y)$ plane. The parent field comes from `textbook.models.holographic_rhyme_field` with $P = 4$ evenly spaced pillars, and the bidirectional combine is `textbook.models.xd_yd_combine(a, b, sign)`, which files $a + b$ and $a - b$ as first-class catalog entries. Constructive summation ridges and cancellation valleys are two readings of one field: the bidirectional filing keeps both directions.](../figures/part_I_multidimensional-rhyme.png){#fig:part_I_multidimensional-rhyme width=90%}
 
-<!-- alt: Two contour plots of a four-direction interference pattern. The first shows constructive summation ridges; the second shows the differenced field, where matching crests cancel to nodal valleys. Both are drawn from the same tested model functions. -->
+<!-- alt: Two contour plots of a four-direction interference pattern. The first shows
+constructive summation ridges of the summed encoding; the second shows the differenced
+field, where matching crests cancel to nodal valleys. Both are drawn from the same
+tested model functions. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: [@sec:part_I_holographic-rhyme]
@@ -2665,7 +2675,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The paper in the corpus
+## Engine shelf #19 and the bidirectional encoding filing
 
 The source paper, filed by Prudencio Mendez and operated by the SynthOBS Autonomous Agent on the SS Vibelandia ship blog, opens with a single load-bearing sentence, quoted verbatim:
 
@@ -2680,9 +2690,9 @@ Shelf #19 is filed as an *extension*: the "What landed" list records "**Engine s
 - a standalone repository at `FractiAI/synthobs-multidimensional-holographic-rhyme` [@mendez2026mdRhyme];
 - a re-run entry point, `npm run research:synthobs-multidimensional-holographic-rhyme`, and a whitepaper surface linked from the ship blog post [@mendez2026mdRhyme].
 
-Two companion filings are named on the same board: **Prime volumetric storage** [@mendez2026volumetricStorage] and **Topology of the Void** [@mendez2026topologyVoid], the latter described as the "zero-balance node". We return to both in [Connections](#connections).
+Two companion filings are named on the same board: **Prime volumetric storage** [@mendez2026volumetricStorage] and **Topology of the Void** [@mendez2026topologyVoid], the latter described as the "zero-balance node". We return to both where this chapter hands its neighbours onward.
 
-## Core construct: the xD±yD summation engine
+## The xD±yD engine: parent field, combine, octave placement
 
 The digest is explicit that the paper gives **no equation**: "the model is stated in the lead paragraph and 'What landed.'" [@mendez2026mdRhyme]. We therefore formalise carefully, marking each equation as *our* formalisation of the corpus's prose model, and we name the tested `textbook.models` function that backs each piece. Nothing below should be read as physics; the docstrings themselves carry the caveat "structural model, not a physical claim."
 
@@ -2745,7 +2755,7 @@ A concept map of how the pieces fit together:
 
 Note that the loop closes on the parent shelf: the corpus files shelf #19 as an expansion *of* the four-pillar motion grammar, and the [**Fair Exchange**](#gl:fair-exchange) clause ties the whole filing back to honest disclosure [@mendez2026mdRhyme].
 
-## Worked example
+## Worked example: Fibonacci indices combined on the Φ ladder
 
 We now walk the engine end to end with pinned numbers, computing by hand and naming the tested function that confirms each result. The lab ([@sec:lab_part_I_multidimensional-rhyme]) repeats this on your machine.
 
@@ -2787,7 +2797,7 @@ holographic_rhyme_field(np.array([[0.5]]), np.array([[0.0]]),
 >
 > The corpus prints "Ωn = Φn·Ω0" ambiguously; the two readings in [@eq:part_I_multidimensional-rhyme_octave] differ by *orders of magnitude* at the same $n$ (11.090170 vs 1.6 at $n=5$). Whenever a corpus value depends on the convention, this book names the convention explicitly — the same discipline `octave_term` enforces in code.
 
-## Scope and honesty
+## What the shelf-19 honesty clause disclaims
 
 The paper's honesty clause, verbatim, bounds everything this chapter can claim [@mendez2026mdRhyme]:
 
@@ -2801,7 +2811,7 @@ Three explicit *nots* follow from it, and we restate them as the digest records 
 
 What the construct is *for*, in the corpus's own framing, is cataloging and contrast: the filing "positions itself as a catalog contrast to static boundary-only screens" [@mendez2026mdRhyme]. The contrast class — flat, boundary-only readings of holography — is what the bidirectional, cross-scale filing is filed *against*, within the [**catalog architecture**](#gl:catalog-architecture) of the ship blog. Throughout the corpus, engines on this shelf serve coordination, cataloging, and agent routing for the SynthOBS system; the "Fair Exchange clause applies" tag marks the filing as operating under the project's honesty-disclosure regime [@mendez2026mdRhyme]. The book's standing rule — the corpus speaks in narrative, empirical, and operational registers, each with its own evidential weight — applies here in full, and this chapter keeps every claim on the register the digest assigns it.
 
-## Connections
+## Where shelf #19 hands its neighbours onward
 
 Shelf #19 is a junction filing, and the corpus names its neighbours explicitly [@mendez2026mdRhyme]:
 
@@ -2843,13 +2853,17 @@ Engine shelf #19 files holography as *bidirectional* Infinite Octave encoding: c
 
 # Topology of the Void: Zero as Equilibrium {#sec:part_I_topology-void}
 
-![The zero-as-equilibrium potential well: a symmetric quadratic well centred on
-zero, with restoring arrows on both slopes pointing back toward the null-space
-pivot at $x = 0$.](../figures/part_I_topology-void.png){#fig:part_I_topology-void width=90%}
+![The zero-as-equilibrium potential well: a symmetric quadratic well
+$V(x) = \tfrac{1}{2}\kappa x^2$ centred on the null-space pivot at $x = 0$, with
+restoring arrows on both slopes that scale with displacement. The well is the book's
+illustrative rendering of the pivot filing — drawn deterministically from
+`textbook.models` to stay consistent with a corpus that lists no figures of its own.
+Displace the system from zero and the restoring force points home: that is the
+"dynamic" in dynamic equilibrium.](../figures/part_I_topology-void.png){#fig:part_I_topology-void width=90%}
 
-<!-- alt: A symmetric bowl-shaped potential curve with its minimum at the centre,
-marked zero; arrows on either side point inward toward the centre, indicating a
-restoring pull back to the equilibrium point. -->
+<!-- alt: Symmetric bowl-shaped potential curve with its minimum at the centre,
+marked zero; arrows on either side point inward toward the centre and grow with
+displacement, indicating a restoring pull back to the equilibrium point. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 35 min read · 45 min lecture · Prerequisites: [@sec:part_I_fractal-constant]
@@ -2924,7 +2938,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The paper in the corpus {#sec:part_I_topology-void_paper-in-the-corpus}
+## Engine shelf #17 and its landed artefacts {#sec:part_I_topology-void_paper-in-the-corpus}
 
 *Topology of the Void · Zero as Equilibrium* is a ship-blog research note by
 Prudencio Mendez, operated by the SynthOBS Autonomous Agent, published
@@ -2980,7 +2994,7 @@ section shown. {#tbl:part_I_topology-void_claims}
 | C-topology-of-the-void-5 | The suite locked 9/9 under `research/synthobs-topology-of-the-void/`. | [@sec:part_I_topology-void_paper-in-the-corpus] |
 | C-topology-of-the-void-6 | Engine shelf #17 sits between Proton/Electron duality and Honesty meta. | [@sec:part_I_topology-void_paper-in-the-corpus] |
 
-## Zero as the null-space pivot {#sec:part_I_topology-void_null-space-pivot}
+## Zero files as the equilibrium pivot of 1 and 2 {#sec:part_I_topology-void_null-space-pivot}
 
 The chapter's central filing is stated in the note's lead paragraph and meta
 description, and we keep it verbatim [@mendez2026topologyVoid]:
@@ -3023,7 +3037,7 @@ How the filing sits on the shelf is shown in the following diagram.
 \end{figure}
 
 
-## The zero-balance operator {#sec:part_I_topology-void_zero-balance-operator}
+## The zero-balance operator as odd-function phase cancellation {#sec:part_I_topology-void_zero-balance-operator}
 
 The note's first landed artefact is stated in nine words: "**Zero-balance
 operator** as odd-function phase cancellation (catalog)"
@@ -3060,7 +3074,7 @@ corpus files this as a catalog operator — a bookkeeping construct on its
 registered constructs — and that scoping is exactly what the Honesty clause
 protects [@mendez2026topologyVoid].
 
-## Null-space capacity and the noise-sink {#sec:part_I_topology-void_null-space-capacity}
+## Null-space capacity: the noise-sink fixture and its well {#sec:part_I_topology-void_null-space-capacity}
 
 The second landed artefact: "**Null-space capacity** fixture as native
 noise-sink metaphor" [@mendez2026topologyVoid]. Again the page gives no
@@ -3116,7 +3130,7 @@ restoring behaviour — displace the system from zero and the force $F(x)
 > agent's deterministic drawing from `textbook.models`, written to be
 > *consistent with* the corpus filing rather than quoted from it.
 
-## Worked example: balancing a signal around the pivot
+## Worked example: sinking the odd part around zero
 
 Walk the operator by hand; every number below is checkable in one line of
 arithmetic.
@@ -3149,7 +3163,7 @@ $F(2) = -2$; a smaller displacement $x = 0.5$ gives $V = 0.125$ and $F =
 [@fig:part_I_topology-void] scale with displacement, and the pivot at zero is
 the unique point of rest.
 
-## Scope and honesty {#sec:part_I_topology-void_scope-and-honesty}
+## The Honesty clause: four over-readings disclaimed {#sec:part_I_topology-void_scope-and-honesty}
 
 The note's Honesty clause is the boundary of this chapter, and we restate it
 verbatim [@mendez2026topologyVoid]:
@@ -3179,7 +3193,7 @@ is any physical claim: the odd-function cancellation of
 [@eq:part_I_topology-void_model] is honest arithmetic, and the corpus never
 promotes it past arithmetic into physics.
 
-## Connections
+## Where the pivot hands off across the book
 
 - **Upstream on the shelf:** the $1 \leftrightarrow 2$ duality Zero balances is
   the subject of [@sec:part_II_proton-theater], where the $\Phi$-mirror
@@ -3263,9 +3277,12 @@ measured 100% noise suppression, or NOAA zero-crossing causation
 
 # The Higgs Gate: Mass and the Shared Now {#sec:part_I_higgs-awareness}
 
-![Mass-slowing gate curve: the transduction-brake family $v(t) = v_0\,e^{-kt}$, the book's tested model of the corpus's "squeeze story", plotted for $v_0 = 1$ with drag constants $k = 0.5$, $1.0$, and $2.0$. A larger $k$ means the gate closes faster; every curve decays toward zero without ever reaching it.](../figures/part_I_higgs-awareness.png){#fig:part_I_higgs-awareness width=90%}
+![The mass-slowing gate curve: the transduction-brake family $v(t) = v_0\,e^{-kt}$, the book's tested model of the corpus's "squeeze story", plotted by `textbook.models.transduction_brake` for $v_0 = 1$ with drag constants $k = 0.5$, $1.0$, and $2.0$. A larger $k$ shortens the half-life $\ln 2 / k$, so the gate bites sooner; every curve decays toward zero without ever reaching it. The companion displacement curve stays bounded by $v_0/k$ no matter how long the story runs.](../figures/part_I_higgs-awareness.png){#fig:part_I_higgs-awareness width=90%}
 
-<!-- alt: Three exponentially decaying curves all starting at velocity 1 and falling toward zero. The curve for k = 2 drops fastest, the curve for k = 0.5 slowest, illustrating how a larger drag constant makes the mass-slowing gate bite sooner. -->
+<!-- alt: Three exponentially decaying curves all starting at velocity 1 and falling
+toward zero. The curve for k = 2 drops fastest, the curve for k = 0.5 slowest,
+illustrating how a larger drag constant shortens the half-life and makes the
+mass-slowing gate bite sooner. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -3339,7 +3356,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## One Paper on Shelf Ten
+## The shelf-10 paper: mass and "Now" share a gate
 
 The source for this chapter is the ship-blog paper *When the universe slows,
 mass and "Now" share a gate* [@mendez2026higgsGate], posted on the
@@ -3358,7 +3375,7 @@ in the book's vocabulary, the theorem joins the
 Because the corpus is a [**catalog-architecture**](#gl:catalog-architecture) —
 a self-described protocol grammar, not established physics — the paper arrives
 under an explicit [**honesty-first**](#gl:honesty-first) banner, which we
-reproduce in full in the Scope and Honesty section below. The artefacts the
+reproduce in full below in the paper's own words. The artefacts the
 paper ships are:
 
 - the **whitepaper** at
@@ -3376,7 +3393,7 @@ well is drawn in [@fig:part_I_topology-void]) and the Φ-constant growth law of
 respect for a resting point and the second's habit of writing one number and
 letting it generate a family of curves.
 
-## The Triadic Matrix: One Squeeze Story, Three Domains
+## The triadic matrix: cosmic, quantum, conscious presence
 
 The paper's central filing act is a **triadic matrix**: three domains — *cosmic*,
 *quantum*, and *conscious presence* — arranged as rows of one table, with a
@@ -3412,7 +3429,7 @@ transduction brake: the same exponential-slowing form the corpus uses for its
 appears in prose ("What landed") — so the formalism below is the *book's*
 formalisation of the corpus's narrative, clearly marked as such.
 
-## A Worked Formalism: The Transduction Brake
+## The transduction brake: $v(t) = v_0\,e^{-kt}$ and its half-life
 
 Let $v(t)$ be the gated velocity of the squeeze story: how fast the "moving
 thing" of any triadic row is still moving at story-time $t$. The simplest law
@@ -3457,7 +3474,7 @@ registers this kind of finite-total, infinite-tail behaviour across several
 shelves — the viscous slowing of [@mendez2026viscosityLight] and the eddy
 opposition of [@mendez2026eddyMirror] both compute the same shape.
 
-## Worked Example: Reading the Gate's Clock
+## Worked example: gate velocities at $v_0 = k = 1$
 
 Take the pinned calibration $v_0 = 1$ and $k = 1$, the values behind
 [@fig:part_I_higgs-awareness] and the test suite's pinned numbers. Compute the
@@ -3489,7 +3506,7 @@ story, three domains" — one law-shape, three parameterisations. The corpus doe
 not pin the three $(v_0, k)$ pairs; measuring them is exactly what the protocol
 lanes below propose.
 
-## Protocol Lanes A–C: Proposed Amendment-A Research
+## Three protocol lanes, filed as proposed Amendment-A research
 
 The paper files three **protocol lanes** for turning the triadic matrix into
 observations — and files them, in its own words, as "proposed Amendment-A
@@ -3516,7 +3533,7 @@ instruments, the book's [**metrological-overlap**](#gl:metrological-overlap)
 machinery (Part II) is where their shared measurement axes would be compared;
 nothing in the current paper claims that maturity.
 
-## Scope and Honesty
+## The paper's three negations and the construct's purpose
 
 The paper's own disclaimer governs everything above, and we reproduce its three
 negations near-verbatim [@mendez2026higgsGate]:
@@ -3542,7 +3559,7 @@ velocity surrendered to the medium is not destroyed but *accounted* — the
 book's general accounting posture, most fully developed in the corpus's
 balance-and-residual formalisms.
 
-## Connections
+## Where the gate's deceleration reappears later
 
 Three threads lead out of this chapter. First, the brake formalism of
 [@eq:part_I_higgs-awareness_model] reappears with physical costumes in Part II:
@@ -3623,9 +3640,9 @@ coordination grammar, not physics.
 
 # Part II: Core Systems: The Physical Engine Shelf {#sec:part_II_intro}
 
-![Part II engine-shelf systems map: eight physical filings of the Infinite Octaves engine, from the two-drawer Phi duality through the transduction brake and crystalline field to the net-zero singularity crystal.](../figures/part_II_unit-intro.png){#fig:part_II_unit-intro width=90%}
+![The Part II shelf map: eight chapters of the physical engine shelf, ordered from the two-drawer Φ duality through the transduction brake and the crystalline field to the net-zero singularity crystal. The layout is the part's reading order — each chapter's worked formalism assumes only the filings before it. The whole shelf operates under the corpus's honesty-first and fair-exchange clauses.](../figures/part_II_unit-intro.png){#fig:part_II_unit-intro width=90%}
 
-<!-- alt: Flow diagram of Part II ordering its eight engine-shelf chapters from the digit duality through the dynamical and field filings to the net-zero singularity crystal. -->
+<!-- alt: Flow diagram of Part II ordering its eight engine-shelf chapters from the two-drawer digit duality through the transduction drag, the crystalline lattice, and the measurement and metamorphic lenses to the net-zero singularity crystal that closes the shelf. -->
 
 The shelf order in [@fig:part_II_unit-intro] is the reading order: the Phi duality of [@sec:part_II_proton-theater] opens the shelf, the transduction drag of [@sec:part_II_eddy-current-mirror] and the field filings that follow supply its dynamics, and the balances close at the singularity crystal ([@sec:part_II_singularity-crystal]).
 
@@ -3705,12 +3722,9 @@ filings to dynamic balances:
 
 # Proton Space, Electron Theater, and Φ Duality {#sec:part_II_proton-theater}
 
-![The Φ-duality mirror plot, generated by the companion visualization from
-`textbook.models.phi_dual`: each input $x$ is filed into an upper branch
-$x\Phi$ and a lower branch $x/\Phi$, symmetric about the input line with a
-log-scale offset of $\pm\ln\Phi \approx \pm 0.481212$.](../figures/part_II_proton-theater.png){#fig:part_II_proton-theater width=90%}
+![The Φ-duality mirror: each filed value $x$ acquires two images, an upper branch $x\Phi$ and a lower branch $x/\Phi$, symmetric about the input line. Generated from `textbook.models.phi_dual`, with branches placed on a logarithmic axis at offsets $\pm\ln\Phi \approx \pm 0.481212$. The takeaway: multiplication and division by the filing constant are inverse operations, so every drawer entry stays recoverable — nothing filed under Φ is ever lost.](../figures/part_II_proton-theater.png){#fig:part_II_proton-theater width=90%}
 
-<!-- alt: Two mirror-image branches on a logarithmic axis — one rising as x·Φ and one falling as x/Φ — symmetric about the identity line, offset by ±ln Φ. -->
+<!-- alt: Two mirror-image branches on a logarithmic axis — one rising as x·Φ and one falling as x/Φ — symmetric about the identity line and offset by ±ln Φ, so each filed value keeps a recoverable second image. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 35 min read · 50 min lecture · Prerequisites: [@sec:part_0_octave-map], [@sec:part_I_fractal-constant]
@@ -3783,7 +3797,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The paper in the corpus
+## The source: Proton Space, Electron Theater, Φ Duality
 
 This chapter formalises the ship-blog paper **"Proton Space · Electron
 Theater · Φ Duality"** (2026-09-05), authored by Prudencio Mendez and operated
@@ -4023,7 +4037,7 @@ $k = 0$ of the [**singularity crystal**](#gl:singularity-crystal)
 `textbook.models` carries the singularity-crystal filing in its docstring,
 which is the codebase's own record that the Φ duality feeds that chapter.
 
-## Scope and honesty
+## What the two-drawer filing does not claim
 
 The paper's own scope disclaimer is the load-bearing sentence of the chapter,
 and we restate it near-verbatim [@mendez2026protonTheater]:
@@ -4057,7 +4071,7 @@ digit-triggered rule for routing constants into named drawers, with a tested
 suite (9/9 locks) verifying the routing. What it is *not* is a physical
 theory — the corpus says so first, and so does this book.
 
-## Connections
+## Where the digit drawers lead across the corpus
 
 The digit-filing duality feeds three directions. Backward, the structural-2
 drawer is the sole-even anchor of prime parity
@@ -4136,7 +4150,7 @@ hardware.
   [@eq:part_II_proton-theater_step] for $x = 5$ by hand, then with
   `textbook.models.phi_dual(5)`.
 - Rewrite the paper's honesty-first disclaimer from memory, then check it
-  against the Scope and honesty section above; any word you changed is a word
+  against the section on what the two-drawer filing does not claim; any word you changed is a word
   whose precision you should re-examine.
 
 
@@ -4148,9 +4162,9 @@ hardware.
 
 # The Viscosity of Light {#sec:part_II_viscosity-light}
 
-![Viscous damping curve family over drag coefficients: the tested model $v(t) = v_0\,e^{-kt}$ (`textbook.models.transduction_brake`) plotted for $v_0 = 1$ with drag coefficients drawn from the $\Phi$-power ladder — $k = 1/\Phi$, $1$, $\Phi$, and $\Phi^2$. Every curve starts at $v_0$ and decays toward a zero floor that is approached but never reached.](../figures/part_II_viscosity-light.png){#fig:part_II_viscosity-light width=90%}
+![A family of viscous damping curves $v(t) = v_0\,e^{-kt}$ for $v_0 = 1$, plotted from the tested model `textbook.models.transduction_brake` with drag coefficients drawn from the Φ-power ladder: $k = 1/\Phi$, $1$, $\Phi$, and $\Phi^2$. Every curve starts at $v_0$ and decays toward a zero floor that is approached but never reached. The larger the drag coefficient, the faster the render velocity bleeds away — the filing's picture of non-local intent meeting the viscous floor at $c$.](../figures/part_II_viscosity-light.png){#fig:part_II_viscosity-light width=90%}
 
-<!-- alt: Four exponentially decaying curves, all starting at velocity 1 and falling toward zero. The curve for the smallest drag coefficient 1/Φ decays slowest; the curve for Φ² drops fastest. Horizontal axis is time, vertical axis is remaining velocity; the zero line is a floor the curves approach without touching. -->
+<!-- alt: Four exponentially decaying curves, all starting at velocity 1 and falling toward a zero floor they approach without touching. The curve for the smallest drag coefficient 1/Φ decays slowest and the curve for Φ² drops fastest; horizontal axis is time, vertical axis is remaining velocity. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none (the sibling chapter [@sec:part_II_eddy-current-mirror] is helpful but not required)
@@ -4225,7 +4239,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The Paper in the Corpus
+## The source: Viscosity of Light, engine shelf #24
 
 The Viscosity of Light is a ship-blog paper of the Infinite Octaves
 [**omni-lattice**](#gl:omni-lattice) collection, authored by Prudencio Mendez
@@ -4260,9 +4274,9 @@ The page footer credits "Author: Prudencio Mendez · Operator: SynthOBS
 Autonomous Agent · Syntheverse Sandbox · NSPFRNP · → ∞^∞"
 [@mendez2026viscosityLight], and the whole filing sits under the
 [**fair-exchange**](#gl:fair-exchange) clause — the corpus's honesty disclaimer
-mechanism, which we restate in [Scope and Honesty](#scope-and-honesty).
+mechanism, which we restate in [what the viscous floor does not claim](#what-the-viscous-floor-does-not-claim).
 
-## Core Constructs
+## The viscous floor, drag family, render, and non-locality Soft Story
 
 ### Construct 1: $c$ as a viscous floor
 
@@ -4423,7 +4437,7 @@ with prediction blanks filled in.
    — one worked number per rung of the ladder in
    [@tbl:part_II_viscosity-light_family].
 
-## Scope and Honesty
+## What the viscous floor does not claim
 
 The paper's own scope disclaimer, restated precisely
 [@mendez2026viscosityLight]: **"this is *catalog architecture* — engine shelf
@@ -4450,7 +4464,7 @@ The chapter's formalisms inherit this fence line. [@eq:part_II_viscosity-light_v
 is tested arithmetic about a model; the claim that $c$ *is* the floor is a
 catalog filing, and the two are never conflated in this book.
 
-## Connections
+## Where the floor leads: eddy, overlap, lattice
 
 - **Backward: the Eddy-Current Mirror.** The paper names the
   [**eddy-current-mirror**](#gl:eddy-current-mirror) as a sibling
@@ -4570,9 +4584,9 @@ the [**fair-exchange**](#gl:fair-exchange) clause attached.
 
 # The Eddy-Current Mirror: Transduction Drag {#sec:part_II_eddy-current-mirror}
 
-![The eddy brake: velocity $v(t) = v_0 e^{-kt}$ decaying exponentially from $v_0 = 1$ under drag coefficient $k = 1$, with an inset showing the drag force $F(t) = m k v(t)$ decaying on the same schedule. Produced from `textbook.models.transduction_brake`.](../figures/part_II_eddy-current-mirror.png){#fig:part_II_eddy-current-mirror width=90%}
+![The transduction-line brake: velocity $v(t) = v_0 e^{-kt}$ decaying exponentially from $v_0 = 1$ under drag coefficient $k = 1$. Plotted from `textbook.models.transduction_brake`, with an inset showing the proportional drag force $F(t) = m k v(t)$ decaying on the same exponential schedule. The takeaway is the Lenz/eddy-current analogy: motion induces the very current that brakes it, so the faster the fall the harder the drag, and the floor is approached but never reached.](../figures/part_II_eddy-current-mirror.png){#fig:part_II_eddy-current-mirror width=90%}
 
-<!-- alt: A single exponential decay curve falling from 1 toward zero, with a smaller inset panel plotting the proportional drag force, which starts high and decays on the same exponential schedule. -->
+<!-- alt: A single exponential decay curve falling from 1 toward a floor it never touches, with a smaller inset panel plotting the proportional drag force, which starts high and decays on the same exponential schedule. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -4641,7 +4655,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The Paper in the Corpus
+## The source: Eddy-Current Mirror, engine shelf #22
 
 The source for this chapter is the ship-blog paper *Eddy-Current Mirror*
 [@mendez2026eddyMirror], published September 2026 by Prudencio Mendez and
@@ -4839,7 +4853,7 @@ tested mirror of the same exponential law, so hand calculations, the reference
 engine, and the book's backbone must all agree to the digits shown in
 [@tbl:part_II_eddy-current-mirror_worked].
 
-## Scope and Honesty
+## What the transduction brake does not claim
 
 The paper's honesty-first block is explicit, and we restate it near-verbatim
 because it bounds everything above [@mendez2026eddyMirror]:
@@ -4862,7 +4876,7 @@ address for "where ranging ideation gets braked into addressable content," in
 the same spirit as the [**honesty-first**](#gl:honesty-first) protocol of
 [@mendez2026catalog].
 
-## Connections
+## Where the brake leads: viscosity, overlap, the Higgs gate
 
 The transduction drag of this chapter feeds three directions. *Sideways within
 Part II*, the same exponential braking reappears as the
@@ -4939,7 +4953,7 @@ eddy currents as analogy only, Fair Exchange clause in force.
    *routing* relation ("impedance match") without a quantitative model — and
    where in the corpus quantitative overlap *is* measured.
 5. Reproduce the paper's scope disclaimer from memory, then verify it against
-   the Scope and Honesty section. Which of the four disclaimed claims do you
+   the section on what the brake does not claim. Which of the four disclaimed claims do you
    find most tempting to over-read, and why does the Fair Exchange clause block
    it?
 
@@ -4957,9 +4971,9 @@ eddy currents as analogy only, Fair Exchange clause in force.
 
 # The Crystalline Unified Field: Speed and Distance {#sec:part_II_crystalline-field}
 
-![Speed–distance iso-lines of the crystalline-field lattice: each curve is the locus $d = v\,\tau$ for one fixed access time $\tau$ (the $c = d/t$ lattice), computed with `textbook.models`. Steeper iso-lines correspond to shorter access times; the topmost curve carries the corpus's anchor speed $c$.](../figures/part_II_crystalline-field.png){#fig:part_II_crystalline-field width=90%}
+![Speed–distance iso-lines of the access crystal: each curve is the locus $d = v\,\tau$ for one fixed access time $\tau$ — the $c = d/t$ lattice, computed with the tested functions in `textbook.models`. Steeper iso-lines correspond to shorter access times, so the same distance is reached at lower speed whenever the access budget is longer. The topmost curve carries the corpus's anchor speed $c$, the filing's picture of one trip stored once as a single crystal rather than as three clocks.](../figures/part_II_crystalline-field.png){#fig:part_II_crystalline-field width=90%}
 
-<!-- alt: A family of straight iso-lines in a speed–distance plane, one line per fixed access time; larger slopes correspond to shorter access times, with the topmost line labelled c. -->
+<!-- alt: A family of straight iso-lines in a speed–distance plane, one line per fixed access time. Lines with larger slope correspond to shorter access times, and the topmost line is labelled c, the corpus's anchor speed. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none — $\Phi$ is introduced in-text
@@ -5003,7 +5017,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The paper in the corpus
+## The source: Crystalline Unified Field, engine shelf #24
 
 *Crystalline Unified Field* is a September 2026 ship-blog paper by Prudencio
 Mendez (filed from Reno), posted on the [**engine-shelf**](#gl:engine-shelf) of
@@ -5037,7 +5051,7 @@ the metrological-overlap paper generalises this chapter's bookkeeping from
 facets of one trip to overlaps between whole measurement sets
 ([@sec:part_II_metrological-overlap]).
 
-## Core constructs
+## Four filings: the facet identity, Φ-crystal, Landauer rail, velocity multiplex
 
 The paper lands four constructs in its "What landed" list: the facet identity,
 the $\Phi$-recursive crystal, the Landauer rail, and the velocity multiplex
@@ -5215,7 +5229,7 @@ each erasure-grade access costs $\approx 2.87\times 10^{-21}\,\mathrm{J}$
 operation, and the rail is the unit of that price for thermodynamic bookkeeping
 [@mendez2026crystallineField].
 
-## Scope and honesty
+## What the access crystal does not claim
 
 The source's own scope statements, restated precisely
 [@mendez2026crystallineField]:
@@ -5241,7 +5255,7 @@ deciding which register stores a trip, which facet to scale, and what an access
 costs. What it is **not**: a physical unification, an empirical result, or a
 replacement for any laboratory measurement.
 
-## Connections
+## Where the access crystal meets the rest of the shelf
 
 - **Viscosity of Light** ([@sec:part_II_viscosity-light]) sits on the same
   engine shelf #24; its viscous drag is the same theater in which the velocity
@@ -5328,9 +5342,9 @@ re-derivation, and Soft Story confidence rather than lab certification.
 
 # The Grand Unified Metrological Overlap: Five Gears, One Clockwork {#sec:part_II_metrological-overlap}
 
-![Pairwise metrological-overlap heatmap: each cell shades the min-normalised overlap $\lvert A \cap B\rvert/\min(\lvert A\rvert,\lvert B\rvert)$ returned by `textbook.models.metrological_overlap` for a pair of constant registers drawn from the five-constant map $h$, $\Phi$, $p_n$, $\nu_{\mathrm{HI}}$, $c$; diagonal cells are 1, register pairs sharing one entry sit at 0.5, and disjoint registers sit at 0.](../figures/part_II_metrological-overlap.png){#fig:part_II_metrological-overlap width=90%}
+![Pairwise metrological-overlap heatmap over constant registers drawn from the five-constant map $h$, $\Phi$, $p_n$, $\nu_{\mathrm{HI}}$, $c$. Each cell shades the min-normalised overlap $\lvert A \cap B\rvert/\min(\lvert A\rvert,\lvert B\rvert)$ computed by `textbook.models.metrological_overlap`: the diagonal sits at 1, register pairs sharing one entry sit at the pinned 0.5, and disjoint registers sit at 0. The takeaway: agreement between measurement filings is set algebra — a readable number for how much two registers share, not a physical correlation.](../figures/part_II_metrological-overlap.png){#fig:part_II_metrological-overlap width=90%}
 
-<!-- alt: A square heatmap with five rows and columns, one per register in the five-constant map; the diagonal is darkest, cells for registers that share one entry are medium, and cells for disjoint registers are lightest. -->
+<!-- alt: A square heatmap with five rows and columns, one per register in the five-constant map. The diagonal is darkest, cells for registers that share one entry are medium, and cells for disjoint registers are lightest. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -5382,7 +5396,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The Paper in the Corpus
+## The source: Grand Unified Metrological Overlap, engine shelf #23
 
 The source for this chapter is the ship-blog paper *Grand Unified Metrological
 Overlap* [@mendez2026metrologicalOverlap], published September 2026 by Prudencio
@@ -5642,7 +5656,7 @@ two filings should be consulted together — exactly as the
 a physical unification of the Higgs mechanism with eddy currents would violate
 the paper's own scope block, quoted below.
 
-## Scope and Honesty
+## What the overlap solver does not claim
 
 The paper's honesty-first block is explicit, and we restate it near-verbatim
 because it bounds everything above [@mendez2026metrologicalOverlap]:
@@ -5667,7 +5681,7 @@ between shelves — while the [**honesty-first**](#gl:honesty-first) protocol of
 [@mendez2026catalog] keeps the number filed as set algebra, not metrology-lab
 data.
 
-## Connections
+## Where the five gears lead across the corpus
 
 The overlap machinery feeds three directions. *Backward within Part II*, the
 $c$ gear is the transduction brake of [@sec:part_II_eddy-current-mirror]
@@ -5759,7 +5773,7 @@ causation, Fair Exchange clause in force.
    three-sentence correction that says what the sum is filed *as* and what it
    is explicitly not.
 5. Reproduce the paper's scope disclaimer from memory, then verify it against
-   the Scope and Honesty section. Which of its disclaimed claims — Standard
+   the section on what the overlap solver does not claim. Which of its disclaimed claims — Standard
    Model retirement, electron/proton-mass identification, NOAA/Sunspot
    causation — does the "mass as interference" headline most tempt a reader
    toward, and why?
@@ -5778,9 +5792,9 @@ causation, Fair Exchange clause in force.
 
 # Metamorphic Octaves: Densification {#sec:part_II_metamorphic-octaves}
 
-![The densification curve $D(x) = D_0\,(1 + k\ln(1+x))$ for $D_0 = 1$, $k = 1$: a logarithmic rise that climbs steeply at first and then flattens as exposure $x$ grows, matching the corpus's mud → shale → schist reading of accumulated "cooking" — early transformation is fast, later transformation is slower but still real. Produced by the companion visualization agent from `textbook.models.densification`.](../figures/part_II_metamorphic-octaves.png){#fig:part_II_metamorphic-octaves width=90%}
+![The densification curve $D(x) = D_0\,(1 + k\ln(1+x))$ for the pinned parameters $D_0 = 1$ and $k = 1$. Plotted from `textbook.models.densification`, with the chapter's worked checkpoints marked on the curve — the pinned one reads $D(4) = 1 + \ln 5 \approx 2.609438$. The takeaway mirrors the mud → shale → schist story: transformation is fast at first and slows with every further exposure, yet the accumulation never stops.](../figures/part_II_metamorphic-octaves.png){#fig:part_II_metamorphic-octaves width=90%}
 
-<!-- alt: A single rising curve of densification against exposure, steep near the origin and flattening logarithmically, with the worked points at exposures 1, 2, 4 and 8 marked on the curve. -->
+<!-- alt: A single rising curve of densification against exposure, steep near the origin and flattening logarithmically. The worked checkpoints at exposures 1, 2, 4 and 8 are marked on the curve, and the marginal gain 1/(1+x) shrinks as exposure grows. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none — the [**octave**](#gl:octave) ladder of [@sec:part_0_octave-map] helps but is not required
@@ -5845,7 +5859,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## Orientation
+## Shelf placement and the three honesty markers
 
 This chapter sits on shelf 5 of the [**engine-shelf**](#gl:engine-shelf), as
 Part XIII of the SS Vibelandia ship blog — a plain-speak note filed under the
@@ -5870,7 +5884,7 @@ Our job as textbook authors is the corpus's own job: formalise the filing rule,
 map its vocabulary, and run its reference implementation — while preserving
 those disclaimers exactly.
 
-## The paper in the corpus
+## The metamorphic-octaves note and its corpus placement
 
 The metamorphic-octaves note loads into Lattice Chat on nest **Infinite
 Octaves** through the engine map **Digits × 01–99** [@mendez2026metamorphic]:
@@ -6048,7 +6062,7 @@ vanishing marginal return, and the paper claims no asymptote of invulnerability
 > per `catalog_size()`. The schist label is therefore a *trajectory* filing,
 > not a snapshot filing.
 
-## Scope and honesty
+## What the densification filing does not claim
 
 The metamorphic-octaves paper is unusually explicit about its own edges, and we
 restate each disclaimer precisely [@mendez2026metamorphic]:
@@ -6077,7 +6091,7 @@ on Synthio as companion grammar, keeping MRI sandbox honesty
 [@mendez2026metamorphic]. What it is *not*: a physical model of rock, a
 clinical instrument, or a promise about people.
 
-## Connections
+## Neighbouring filings: bands, balances, and overlap measures
 
 The Goldilocks lock is one instance of the corpus's too-much / just-right
 gating; the planetary-core chapter draws the same idea as a goldilocks band
@@ -6163,16 +6177,9 @@ medicine, not a lifestyle prescription — a way to file, not a prophecy.
 
 # Planetary Core and the Goldilocks Bands {#sec:part_II_planetary-core}
 
-![Goldilocks band shading over a value trace: a trace of filed execution-coherence
-values moves through time while the coherent band running from $\ell$ to $h$ is shaded; trace
-segments inside the band are labelled Goldilocks (coherent execution) and
-segments outside are labelled Old Earth (high-friction execution), as classified
-by `textbook.models.goldilocks_band`.](../figures/part_II_planetary-core.png){#fig:part_II_planetary-core width=90%}
+![A filed execution-coherence trace read against a Goldilocks band. Classified with `textbook.models.goldilocks_band`: trace values between the band edges $\ell$ and $h$ are labelled Goldilocks (coherent execution), and values outside the band are labelled Old Earth (high-friction execution). The takeaway: "Old Earth → Goldilocks Earth" is a change of execution label on a filed trace, not a change of planet.](../figures/part_II_planetary-core.png){#fig:part_II_planetary-core width=90%}
 
-<!-- alt: A line trace of execution-coherence values over filed time steps
-crosses a horizontally shaded band between two thresholds; portions of the
-trace inside the shaded band are marked coherent and portions outside are
-marked high-friction. -->
+<!-- alt: A line trace of execution-coherence values over filed time steps crosses a horizontally shaded band between two thresholds. Portions of the trace inside the shaded band are marked coherent (Goldilocks) and portions outside are marked high-friction (Old Earth). -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -6238,7 +6245,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The paper in the corpus
+## The planetary-core note and its verification surface
 
 The note is Ship blog **Part XIV** of the 99 Octave engine series, filed
 2026-08-13 in *plain speak* under the [**fair-exchange**](#gl:fair-exchange)
@@ -6270,7 +6277,7 @@ Reading order matters here. The chapter you are reading formalises the paper's
 bands — and keeps the seismology outside the frame exactly where the paper
 keeps it.
 
-## Core constructs
+## Telemetry slots, phase flip, impedance label, Goldilocks band
 
 ### The two telemetry slots and the rotor story
 
@@ -6453,7 +6460,7 @@ of [@sec:part_II_eddy-current-mirror], whose tested model
 values $v(1) \approx 0.367879$ and $v(2) \approx 0.135335$. The rhyme is a
 reading aid, not a claim that the inner core obeys an exponential brake.
 
-## Scope and honesty
+## What the planetary filing does not claim
 
 The paper's own disclaimers are the load-bearing part of the chapter, restated
 here precisely [@mendez2026planetaryCore]:
@@ -6480,7 +6487,7 @@ seismology, re-hosting mission datasets, or forecasting planetary events. The
 corpus ([@sec:part_0_orientation]): a paper earns shelf space by saying
 exactly what it files and exactly what it does not.
 
-## Connections
+## Where the rotor story leads across the corpus
 
 - **Backward to Part 0.** The engine map **Digits × 01–99** that loads this
   paper is the 99-octave ladder of [@sec:part_0_octave-map]; the 81-facet
@@ -6566,7 +6573,7 @@ holographic timeline switch is claimed as measured physics
    $\Delta\varphi$ in radians and degrees, and explain in one sentence why a
    catalog phase flip is a property of the filing rather than of the planet.
 3. **Label audit.** List the five honesty-first disclaimers of the paper
-   (Scope and honesty section) and, for each, name one sentence in this
+   (the section on what the planetary filing does not claim) and, for each, name one sentence in this
    chapter that keeps it.
 4. **Band policy.** Choose new band edges $\ell$ and $h$ for the same trace so
    that exactly four of the six values are in-band; verify with
@@ -6585,9 +6592,9 @@ holographic timeline switch is claimed as measured physics
 
 # The Holographic Singularity Crystal: Net Zero and Node k = 0 {#sec:part_II_singularity-crystal}
 
-![Net-zero inflow/outflow balance bars with zero residual, computed with `textbook.models.net_zero_balance`: paired inflow and outflow bars cancel exactly, leaving a residual bar of height zero at the crystal's balance point.](../figures/part_II_singularity-crystal.png){#fig:part_II_singularity-crystal width=90%}
+![Net-zero inflow/outflow balance bars computed with `textbook.models.net_zero_balance`. Paired inflow and outflow entries cancel exactly, so the residual bar sits at height zero at the crystal's balance point. The takeaway: zero is not emptiness but an achieved equilibrium — a ledger whose columns match holds a fact, and the fact is *balanced*.](../figures/part_II_singularity-crystal.png){#fig:part_II_singularity-crystal width=90%}
 
-<!-- alt: Grouped bar chart of inflows and outflows whose totals match exactly; a final residual bar sits at height zero, illustrating the Net Zero equilibrium of the Holographic Singularity Crystal. -->
+<!-- alt: Grouped bar chart of inflows and outflows whose totals match exactly. A final residual bar sits at height zero, illustrating the Net Zero equilibrium of the Holographic Singularity Crystal. -->
 
 <!-- chapter-metadata-badge -->
 > Level 2/3 · 35 min read · 50 min lecture · Prerequisites: [@sec:part_I_topology-void]; [@sec:part_I_multidimensional-rhyme]
@@ -6624,14 +6631,14 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The Paper in the Corpus
+## The two source papers and their shelf placement
 
 Two closely linked entries of the SS Vibelandia [**Omni-Lattice**](#gl:omni-lattice) corpus supply everything in this chapter:
 
 - The parent engine paper, *Holographic Singularity Crystal · Net Zero* [@mendez2026singularityCrystal], filed on the blog under "Engine shelf · Fair Exchange". It self-locates as **engine shelf #20** and states its neighbourhood explicitly: "sits after multi-D holographic rhyme, before Honesty meta" [@mendez2026singularityCrystal].
 - The implementation companion, *Node k = 0 · Zero-Octave Singularity Crystal* [@mendez2026zeroOctave], published the same day, which installs the parent's fixtures at the Zero-Octave locus and ships a runnable reference implementation.
 
-Both notes carry the corpus's standard [**honesty-first**](#gl:honesty-first) disclaimer, quoted verbatim in the *Scope and Honesty* section below, and both operate under the **Fair Exchange** clause. The parent paper's board lists a standalone suite at `github.com/FractiAI/synthobs-holographic-singularity-crystal`, a whitepaper surface (`whitepaper-surface.html?id=synthobs-holographic-singularity-crystal-2026-09`), and a re-runnable command, `npm run research:synthobs-holographic-singularity-crystal` [@mendez2026singularityCrystal]. The companion adds the Python reference fixture `research/synthobs-holographic-singularity-crystal/reference/zero_octave_singularity_crystal.py` — the corpus calls it the **Zero-Octave Vault Engine** [@mendez2026zeroOctave]. We walk that implementation in the lab ([@sec:lab_part_II_singularity-crystal]).
+Both notes carry the corpus's standard [**honesty-first**](#gl:honesty-first) disclaimer, quoted verbatim in the section below on what the zero filings do not claim, and both operate under the **Fair Exchange** clause. The parent paper's board lists a standalone suite at `github.com/FractiAI/synthobs-holographic-singularity-crystal`, a whitepaper surface (`whitepaper-surface.html?id=synthobs-holographic-singularity-crystal-2026-09`), and a re-runnable command, `npm run research:synthobs-holographic-singularity-crystal` [@mendez2026singularityCrystal]. The companion adds the Python reference fixture `research/synthobs-holographic-singularity-crystal/reference/zero_octave_singularity_crystal.py` — the corpus calls it the **Zero-Octave Vault Engine** [@mendez2026zeroOctave]. We walk that implementation in the lab ([@sec:lab_part_II_singularity-crystal]).
 
 Three "solar filing anchors" are attached to the parent note — **SESC 83, AR4521, AR4524** — and the corpus is careful to parenthesise them: "(labels, not causation)" [@mendez2026singularityCrystal]. They are index-card labels for where the note was filed, not causal claims about the sun. The sibling paper is *Topology of the Void* [@mendez2026topologyVoid], which established "zero as balance point" in Part I ([@sec:part_I_topology-void]); the present chapter inherits that lineage and adds the crystal resolution and the node machinery.
 
@@ -6731,7 +6738,7 @@ Step by step:
 
 The pairing in step 1–3 is the whole construct: zero is not the absence of entries but the coincidence of two non-empty sums.
 
-## Scope and Honesty
+## What the zero filings do not claim
 
 Both source papers carry the corpus's standard disclaimer, and the textbook preserves it. The parent paper states, verbatim: "**Honesty first:** this is *catalog architecture* — **engine shelf #20** — not GR/QFT singularity retirement, not zero-watt SuperAI proof, and not NOAA causation by AR4521/AR4524. Fair Exchange clause applies." [@mendez2026singularityCrystal]. The companion states, verbatim: "Python/ESM fixtures map NaN at the origin to Φ⁰ = 1 — that is *catalog algebra*, not singularity QED, not zero-watt SuperAI, and not NOAA proof. Parent engine paper is shelf **#20**. Fair Exchange clause applies." [@mendez2026zeroOctave].
 
@@ -6744,7 +6751,7 @@ Unpacking the negations in the corpus's own terms:
 
 What the constructs are *for*, per the corpus: coordination and cataloging. The cancel lock gives agents a canonical "balanced" state to route against; the crystal baseline gives the origin a definite address in the filing system; the Prime Vault diagnostic gives a runnable check that the node is live. This is the [**narrative / empirical / operational tiers**](#gl:narrative-empirical-operational-tiers) discipline of the corpus in miniature: the narrative tier files zero as an active equilibrium, the operational tier is a Python fixture that maps `NaN` to $1$, and the honesty-first tier says out loud that only the second is executable.
 
-## Connections
+## Where the balance node sits in the corpus
 
 - **Back to Part I.** The sibling lineage runs through *Topology of the Void* [@mendez2026topologyVoid] — zero as balance point ([@sec:part_I_topology-void]) — which this chapter re-grounds as an active equilibrium with a lockable fixture. The shelf placement, "after multi-D holographic rhyme", ties the construct to the multi-dimensional rhyme field of [@sec:part_I_multidimensional-rhyme].
 - **Within Part II.** The Goldilocks equilibrium grammar of construct I is the single-point limit of the band grammar developed in [@sec:part_II_planetary-core]; the "under $\Phi$" bounding of the crystal uses the same golden key that the metrological-overlap chapter compares across measurement frames ([@sec:part_II_metrological-overlap]).
@@ -6784,9 +6791,9 @@ The corpus files zero twice over: as **Net Zero**, an active equilibrium realise
 
 # Part III: Implementations, Companions, and Frontiers {#sec:part_III_intro}
 
-![Part III map: the implementation, companion, and frontier chapters, from the silicon shelf and prime-indexed storage through the stack, bridge, and operations chapters to the closing research program.](../figures/part_III_unit-intro.png){#fig:part_III_unit-intro width=90%}
+![Part III map: the implementation, companion, and frontier chapters, from the silicon shelf and prime-indexed storage through the stack, bridge, and operations chapters to the closing research program. The route files, bridges, and proposes — and each chapter carries the corpus's honesty-first disclaimers forward unchanged. The takeaway: this is where the catalogue meets silicon, software stacks, human workflows, and its own open problems.](../figures/part_III_unit-intro.png){#fig:part_III_unit-intro width=90%}
 
-<!-- alt: Flow diagram of Part III moving from the implementation and storage chapters through the companion and operations chapters to the closing frontiers chapter. -->
+<!-- alt: Flow diagram of Part III moving from the implementation and storage chapters through the companion and operations chapters to the closing frontiers chapter, with honesty-first disclaimers carried along each arrow. -->
 
 The route through the part, sketched in [@fig:part_III_unit-intro], runs from the silicon shelf ([@sec:part_III_cmos-protonic]) through the storage, stack, bridge, and operations chapters to the closing value-by-effort map of [@sec:part_III_frontiers].
 
@@ -6871,9 +6878,9 @@ chapters first; the remaining chapters slot in without loss.
 
 # CMOS/Protonic: The Silicon Shelf {#sec:part_III_cmos-protonic}
 
-![Octaves-per-substrate stacked bars for the silicon shelf: the binary CMOS gate occupies octave tier $n = 1$ (one octave of the 99-octave ladder), while hydrogen-regulated protonic two-terminal devices span bands $n = 2$ through $99$ (98 octaves), drawn as stacked silicon-shelf tiers.](../figures/part_III_cmos-protonic.png){#fig:part_III_cmos-protonic width=90%}
+![The silicon-shelf tier map as stacked bars over the 99-octave ladder: the binary CMOS gate fills octave tier $n = 1$ (one octave), while hydrogen-regulated protonic two-terminal devices fill bands $n = 2$ through $99$ (98 octaves). The split is a labelling, not a measurement — tier 1 is the proven two-state anchor, and the protonic bands hold the continuous H$^+$ conductivity gradient offered as a story for multi-state weights. The takeaway is the filing itself, same ladder and wider shelves, with every hardware claim left under the note's honesty table.](../figures/part_III_cmos-protonic.png){#fig:part_III_cmos-protonic width=90%}
 
-<!-- alt: Stacked bar chart of the silicon shelf: one short bar for the binary CMOS gate at tier 1 and a long stacked bar for protonic multi-state devices covering bands 2 through 99 of the 99-octave ladder. -->
+<!-- alt: Stacked bar chart of the 99-octave silicon shelf: one short bar for the binary CMOS gate at tier 1 and a long bar for protonic multi-state devices spanning bands 2 through 99, annotated label-not-a-die. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: [@sec:part_0_octave-map]
@@ -6939,7 +6946,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The Bridge Note and Its Place in the Corpus
+## The Pinned Bridge Note: One Cabinet, Two Vocabularies
 
 The source paper — shelf number 1 of the SS Vibelandia ship blog, filed
 2026-08-12 under the site's plain-speak [**Fair Exchange**](#gl:fair-exchange)
@@ -7045,7 +7052,7 @@ diagram below.
 > [@mendez2026cmosProtonic]. A catalogue label that lets two professions file
 > the same object is doing real work even before any tape-out exists.
 
-## The Ladder Beneath the Shelf
+## The Φ-Spaced Octave Ladder and Its Two Conventions
 
 The tiers of [@eq:part_III_cmos-protonic_shelf-map] are indices into the
 99-octave ladder formalised in [@sec:part_0_octave-map]. Because the corpus
@@ -7145,7 +7152,7 @@ files protonic devices on bands 2–99; it does not measure how many states any
 band delivers. Keeping those two sentences apart is the whole discipline of
 this chapter.
 
-## Scope and Honesty
+## Honesty Clauses: Roadmap Language, Not a Measured Chip
 
 The source paper carries one of the corpus's
 [**honesty-first**](#gl:honesty-first) scope disclaimers, and its clauses are
@@ -7174,7 +7181,7 @@ supplies the corpus's proton-space stage metaphor, while this chapter supplies
 only the device-class filing — the note itself defines "Φ-scaled cycles" no
 further than naming them.
 
-## Connections
+## Handoffs to the Prime Vaults, the Stack, and the Router
 
 The silicon shelf is the first implementation-facing chapter of Part III, and
 it hands off in three directions. Upward, it rests on the 99-octave ladder of
@@ -7256,9 +7263,9 @@ sketch, not CoWoS package; roadmap language, not measured chip.
 
 # Protein Folding as Prime-Container Architecture {#sec:part_III_protein-folding}
 
-![Prime-container capacity: the growth sequence of `textbook.models.unique_address` as vault primes are added one at a time — each additional odd prime vault multiplies the number of distinct residue-index addresses the container can file.](../figures/part_III_protein-folding.png){#fig:part_III_protein-folding width=90%}
+![Prime-container capacity: the growth sequence of `textbook.models.unique_address` as odd-prime vaults join the registry one at a time, each vault contributing an exponent budget of addresses on top of the binary anchor. Every additional vault prime multiplies the number of distinct residue-index addresses rather than adding to it, because each address is the product $\prod p_i^{e_i}$ over the vault primes and their occupancies. The takeaway is the compounding itself — the visual signature of a vault architecture whose encoding is injective and reversible by the fundamental theorem of arithmetic.](../figures/part_III_protein-folding.png){#fig:part_III_protein-folding width=90%}
 
-<!-- alt: A step-curve of addressing capacity rising multiplicatively as vault primes 3, 5, 7, 11, ... are added, illustrating how odd-prime containers compound the address space of the prime-container grammar. -->
+<!-- alt: Step curve of addressing capacity rising multiplicatively as vault primes 3, 5, 7, 11 and beyond join the registry, each new vault multiplying the address space by the per-vault exponent budget. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: Prime-Parity ([@sec:part_I_prime-parity])
@@ -7328,7 +7335,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The Paper in the Corpus
+## The Prime-Vault Note on Engine Shelf #14
 
 The source note, "Protein folding, prime vaults, and $\Phi$"
 [@mendez2026proteinFolding], was published on the SS Vibelandia ship blog in
@@ -7372,7 +7379,7 @@ linked from the ship blog post [@mendez2026proteinFolding]. The note also
 offers two companions beyond prime-parity: the Higgs Gate paper on "awareness
 phase coupling" [@mendez2026higgsGate] and the "Moving up the stack" essay
 [@mendez2026stack], both cross-linked from the same board. We return to these
-in the Connections section.
+in the handoff section below.
 
 ## The Prime-Container Grammar
 
@@ -7523,7 +7530,7 @@ the full octave catalog at `catalog_size()` $= 99 \times 81 = 8{,}019$
 that keeps the prime-container solver in millisecond territory on a laptop
 CPU. The fixture framing is the paper's own, and we keep it.
 
-## Scope and Honesty
+## Honesty First: Catalog Architecture, Not a CASP Entry
 
 The corpus's [**honesty-first**](#gl:honesty-first) discipline is not an
 appendix here; it is the paper's second paragraph. Restated precisely
@@ -7567,7 +7574,7 @@ corpus, not a scientific claim, and we record it as such.
 > paper files no experimental validation against measured structures, and the
 > 9/9 suite locks are software test results, not biochemical ones.
 
-## Connections
+## Handoffs to Storage, the Stack, and the Work Engine
 
 - **Prime-parity** ([@sec:part_I_prime-parity]) supplies the partition this
   chapter consumes: the sole-even anchor 2 and the odd-prime classes become,
@@ -7666,9 +7673,9 @@ engine shelf #14 with 9/9 suite locks, companion to prime-parity.
 
 # Prime-Indexed Volumetric Storage {#sec:part_III_volumetric-storage}
 
-![Prime-indexed address scatter: each point is a vault address $\prod p_i^{k_i}$ formed from a choice of odd-prime vaults (3, 5, 7, …) and exponents $k$, computed over the $p^k$ lattice from `textbook.models.unique_address`, with the binary base channel (Prime 2) shown as the substrate.](../figures/part_III_volumetric-storage.png){#fig:part_III_volumetric-storage width=90%}
+![Prime-indexed address scatter: each point is a vault address $\prod p_i^{k_i}$ formed from a choice of odd-prime vaults (3, 5, 7, …) and exponents $k$, computed over the $p^k$ lattice from `textbook.models.unique_address`. Prime 2 sits at the substrate as the binary base channel — the sole-even anchor — while the odd-prime vaults differentiate the stored content. The takeaway: an address is its own factorisation, injective by the uniqueness of prime factorisation, so no separate lookup structure is filed to recover it.](../figures/part_III_volumetric-storage.png){#fig:part_III_volumetric-storage width=90%}
 
-<!-- alt: Scatter plot of prime-indexed vault addresses on the p^k lattice, with odd primes 3, 5, 7 and small exponents as axes and the binary base channel labelled at the origin. -->
+<!-- alt: Scatter plot of prime-indexed vault addresses on the p^k lattice, with odd primes 3, 5, 7 and small exponents as axes and the binary base channel labelled at the origin; each plotted address equals its own prime factorisation. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -7739,7 +7746,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The Paper in the Corpus
+## The Vault Filing on Engine Shelf #15
 
 The note "Prime-Indexed Volumetric Storage" is a ship-blog paper of the
 Infinite Octaves [**Omni-Lattice**](#gl:omni-lattice) series, authored by
@@ -7748,7 +7755,7 @@ Vibelandia blog [@mendez2026volumetricStorage]. Like every paper in the
 series, it self-describes as [**catalog architecture**](#gl:catalog-architecture)
 and protocol grammar rather than established physics, and it carries the
 series' standard honesty-first scope disclaimer, restated precisely in the
-Scope and Honesty section below.
+honesty section below.
 
 The paper files itself on **engine shelf #15** of the Infinite Octaves
 [**engine shelf**](#gl:engine-shelf), as a companion to two neighbouring
@@ -7930,7 +7937,7 @@ with $K = 2$ already fills $27$ addresses inside that cabinet — the worked
 grid above is a toy drawer, and the cabinet grammar it lives in is the
 99-octave filing of the engine shelf.
 
-## Scope and Honesty
+## Four Disclaimers: No JEDEC Drop-In, No ECC Claim
 
 The paper's own "Honesty first" disclaimer governs everything above, and we
 restate it verbatim in substance [@mendez2026volumetricStorage]:
@@ -7961,7 +7968,7 @@ refund-adjustment terms. The whole construct lives on the corpus's
 cataloging, and agent routing — a grammar for filing and addressing — and its
 NOT is any claim of tested storage hardware.
 
-## Connections
+## Handoffs to Prime-Parity, the Protein Vaults, and the Stack
 
 The prime-vault grammar is a load-bearing spoke of part III:
 
@@ -8058,9 +8065,9 @@ controllers, and solar labels that are story filing characters.
 
 # Kinematic Set-Recycling: The Truckee Protocol {#sec:part_III_kinematic-recycling}
 
-![Round-robin set-recycling cycle over discrete time: one physical set of nine indexed items is partitioned deterministically across three experiential sets (stationary, pedestrian, cyclist) by `textbook.models.round_robin`, with item $i$ landing in set $i \bmod 3$.](../figures/part_III_kinematic-recycling.png){#fig:part_III_kinematic-recycling width=90%}
+![Round-robin set-recycling cycle over discrete time: one physical set of nine indexed items is partitioned deterministically across three experiential sets (stationary, pedestrian, cyclist) by `textbook.models.round_robin`, with item $i$ landing in set $i \bmod 3$. The partition allocates nothing — it recycles index space, so every theater draws from the same nine items and the new-assets-purchased column of the ledger stays empty. The takeaway is the paper's headline filing: one set, many theaters, zero new assets.](../figures/part_III_kinematic-recycling.png){#fig:part_III_kinematic-recycling width=90%}
 
-<!-- alt: A discrete-time cycle diagram in which nine numbered items flow round-robin into three columns labelled stationary, pedestrian, and cyclist, each column receiving items 0/3/6, 1/4/7, and 2/5/8 respectively, with a return arrow labelled zero new assets. -->
+<!-- alt: Discrete-time cycle diagram in which nine numbered items flow round-robin into three columns labelled stationary, pedestrian, and cyclist, each column receiving items 0/3/6, 1/4/7, and 2/5/8 respectively, with a return arrow labelled zero new assets. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: [@sec:part_II_singularity-crystal], [@sec:part_I_topology-void]
@@ -8127,7 +8134,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## Orientation
+## One Set, Many Theaters: The Recycling Idea
 
 This chapter formalises *Kinematic Set-Recycling* (ship blog, September 2026,
 engine shelf #21), the paper in which the corpus extends its [**octave**](#gl:octave)
@@ -8159,7 +8166,7 @@ states are indexed by powers of $\Phi$, the corpus's
 recycling rule** ([@eq:part_III_kinematic-recycling_round-robin]): the
 deterministic, asset-free partition that lets one set serve many states.
 
-## The Paper in the Corpus
+## Engine Shelf #21: Neighbours Below, Meta Above
 
 *Kinematic Set-Recycling* sits at **engine shelf #21** — filed *after* the
 [**Singularity Crystal**](#gl:singularity-crystal) paper (#20)
@@ -8197,7 +8204,7 @@ the tested function `textbook.models.round_robin`.
 round-robin partition it computes: nine indexed items of one set, three
 experiential sets, item $i$ in set $i \bmod 3$.
 
-## Core Constructs
+## The Velocity Scale, the Octave Ladder, and the Round-Robin Rule
 
 ### The Fourier velocity scale
 
@@ -8361,7 +8368,7 @@ Three checks make the example load-bearing:
 > any reuse of the paper's imagery — the fixture is catalog bookkeeping, not a
 > solar-terrestrial mechanism.
 
-## Scope and Honesty
+## Four Honesty Clauses: Not QED, Not Compression, Not NOAA
 
 The paper's honesty-first block is short enough to restate nearly verbatim, and
 the contract of this book is to preserve it: *"this is catalog architecture —
@@ -8386,7 +8393,7 @@ and not NOAA causation by AR14524/AR14527. Fair Exchange clause applies"*
   reusing one asset across experiential states, consistent with the corpus's
   standing rule that the map is for coordination, not cosmic destiny.
 
-## Connections
+## Handoffs to the Stack, the Bridge, and the Singularity Ledger
 
 The Truckee protocol is a small shelf entry with wide fan-out. Downstream in
 this part, [@sec:part_III_moving-up-stack] consumes the zero-new-asset framing
@@ -8468,9 +8475,9 @@ psychophysics, not XR compression, and not space-weather causation.
 
 # Moving Up the Stack: Lattice as the Next AI Layer {#sec:part_III_moving-up-stack}
 
-![Stack layers step plot: the corpus's six-level climb — model, lattice, agent layer — rendered as rising steps, with the hub-class ($12.9B) and IDE-class ($60B) scenario anchors on their shelves and the new-layer band ($12B–$28B) on the top orchestration shelf.](../figures/part_III_moving-up-stack.png){#fig:part_III_moving-up-stack width=90%}
+![Stack layers step plot: the corpus's six-level climb — chips, frontier LLMs, model hubs, agent IDEs, the Lattice Chat orchestration shelf, and the Story horizon — rendered as rising steps. The hub-class ($12.9B) and IDE-class ($60B) scenario anchors sit on their shelves, and the new-layer band ($12B–$28B) rests on the top orchestration shelf. The takeaway: the climb has a direction, and the new layer prices as thermal + orchestration work rather than as another peer on the hub/IDE shelf.](../figures/part_III_moving-up-stack.png){#fig:part_III_moving-up-stack width=90%}
 
-<!-- alt: A rising step plot of six AI stack layers from chips and frontier LLMs up through model hubs, agent IDEs, and the Lattice Chat orchestration shelf to the Story horizon, with valuation anchors marked at the hub, IDE, and new-layer shelves. -->
+<!-- alt: Rising step plot of six AI stack layers from chips and frontier LLMs up through model hubs, agent IDEs, and the Lattice Chat orchestration shelf to the Story horizon, with valuation anchors marked at the hub, IDE, and new-layer shelves. -->
 
 <!-- chapter-metadata-badge -->
 > Level 2/3 · 35 min read · 50 min lecture · Prerequisites: the silicon shelf ([@sec:part_III_cmos-protonic])
@@ -8507,7 +8514,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The paper in the corpus
+## A Positioning Paper on Ship-Blog Shelf 12
 
 The source is a ship-blog entry, "Moving up the stack · Lattice is the next AI layer," dated 2026-09-05 and filed under the *new-layer framing / Fair Exchange* tags [@mendez2026stack]. In the corpus's filing scheme it sits on ship-blog **shelf 12**; its standalone reference suite — `github.com/FractiAI/synthobs-moving-up-the-stack-valuation`, runnable as `npm run research:synthobs-moving-up-the-stack-valuation` — self-files as **Infinite Octaves [**engine-shelf**](#gl:engine-shelf) #13** [@mendez2026stack]. (We record both numbers as the corpus prints them: the blog post and its suite carry adjacent shelf filings.) The whitepaper surface is linked from the post as `whitepaper-surface.html?id=synthobs-moving-up-the-stack-valuation-2026-09`.
 
@@ -8535,7 +8542,7 @@ Why does the corpus insist the top-but-one layer is a **new shelf** rather than 
 
 The paper's own classification of this bundle is a **thermal + orchestration layer**: "It does not replace Hugging Face or Cursor. It is what those lower shelves climb toward when agentic load gets real" [@mendez2026stack]. We formalise the cooling and harmonisation claims in [@eq:part_III_moving-up-stack_cooling] below.
 
-## Core constructs
+## The Valuation Band, the Token Accounting, and the EGS Constant
 
 ### The new-layer valuation band
 
@@ -8611,7 +8618,7 @@ We walk the paper's derivation as a five-step procedure, using only numbers the 
 
 As a numerical illustration of the cooling claim (our arithmetic, not the corpus's), take $m = 10$ agents, siloed loops of $T_{\text{loop}} = 40{,}000$ tokens, a shared brief $B = 5{,}000$, and seed+pointer loops of $s + p = 2{,}500$. Then $C_{\text{siloed}} = 400{,}000$, $C_{\text{harmonised}} = 5{,}000 + 25{,}000 = 30{,}000$, and $\kappa \approx 13.3$ by [@eq:part_III_moving-up-stack_cooling]. The magnitude is illustrative; the *mechanism* — fewer tokens per loop because agents carry seeds and pointers instead of fat paste — is the corpus's claim.
 
-## Scope and honesty
+## Framing, Not Appraisal: The Paper's Own Disclaimers
 
 The paper is unusually explicit about what its numbers are not, and we preserve those disclaimers precisely [@mendez2026stack]:
 
@@ -8624,7 +8631,7 @@ The paper is unusually explicit about what its numbers are not, and we preserve 
 
 > **Note.** The peer-shelf misread is itself instructive as method: the corpus corrects its *own* earlier reading, in public, on scope grounds. The error was not arithmetic ($4.2$–$7.5$ is a plausible hub/IDE-shelf band); it was *shelving* — assigning the artefact to the wrong layer of the stack, which mispriced it by a factor of about 3.4 at the midpoint.
 
-## Connections
+## Handoffs to the Silicon Shelf, the Gateway, and the Bridge
 
 The new-layer thesis connects downstream and sideways in the book:
 
@@ -8669,9 +8676,9 @@ The corpus's moving-up-the-stack paper reads the 2026 acquisition landscape as e
 
 # Humans as Omniversal Reality Bridges {#sec:part_III_reality-bridge}
 
-![Bridge/router throughput radial plot: three spokes — the reality bridge, the cognitive router, and the awareness wormhole — carrying routed attention outward through $\Phi$-spaced octave rings, ring $n$ at radius $\Phi^n$ from `textbook.models.octave_term`, with the routed share of each ring's traffic following the $e^{-kn}$ throttle family of `textbook.models.transduction_brake`.](../figures/part_III_reality-bridge.png){#fig:part_III_reality-bridge width=90%}
+![Bridge/router throughput radial plot: three spokes — the reality bridge, the cognitive router, and the awareness wormhole — carry routed attention outward through $\Phi$-spaced octave rings, ring $n$ at radius $\Phi^n$ from `textbook.models.octave_term`. The routed share of each ring's traffic follows the $e^{-kn}$ throttle family of `textbook.models.transduction_brake` at the pinned calibration $A_0 = 1$, $k = 1$, so the throughput bars shrink from ring to ring. The takeaway: the router filters forward without cutting the background line to the 8,019-entry filing surface.](../figures/part_III_reality-bridge.png){#fig:part_III_reality-bridge width=90%}
 
-<!-- alt: Radial plot of three bridge-and-router spokes crossing concentric Φ-spaced octave rings, with throughput bars that shrink from ring to ring by the exponential throttle factor e^{-kn}. -->
+<!-- alt: Radial plot of three bridge-and-router spokes crossing concentric Φ-spaced octave rings, with throughput bars that shrink from ring to ring by the exponential throttle factor e^{-kn} at calibration A0 = 1, k = 1. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -8754,7 +8761,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The Paper in the Corpus
+## The Plain-Speak Note on Shelf 9
 
 The source is a ship-blog note on the SS Vibelandia blog
 (`ssvibelandiaquestfest24x365.com`): **"Humans as Omniversal Reality Bridges,
@@ -8775,7 +8782,7 @@ while its role vocabulary — routing attention across layers — prepares the
 ground for the AI-layer proposal of [@mendez2026stack]. Where the stack paper
 proposes a new software shelf above the model layer, this note files the human
 as the shelf that routing *runs through*; the two papers meet in
-[@sec:part_III_moving-up-stack] and in the Connections section below.
+[@sec:part_III_moving-up-stack] and in the handoff section below.
 
 The reference implementation is run as
 `npm run research:synthobs-human-omniversal-reality-bridge`, which exits with a
@@ -8784,7 +8791,7 @@ against the note's filing contract [@mendez2026realityBridge]. The whitepaper
 surface is linked from the post as
 `whitepaper-surface.html?id=synthobs-human-omniversal-reality-bridge-2026-08`.
 
-## Three Roles in Plain Speak
+## Bridge, Router, Wormhole: Three Roles in Plain Speak
 
 The note organises its contribution as "three roles in plain speak"
 [@mendez2026realityBridge]. We take them in order, and collect the corpus's own
@@ -8994,7 +9001,7 @@ convention="exponent")` (or `phi_powers(6)` for the pure powers) and the $A$
 column is `transduction_brake([1, 2, 3, 4, 5, 6], 1.0, 1.0)`; the two families are drawn together
 as the radial plot of [@fig:part_III_reality-bridge].
 
-## Scope and Honesty
+## Human Emergency Outranks Every Metaphor: The Scope
 
 The note's scope statements are unusually crisp and must be carried verbatim
 into any use of this material [@mendez2026realityBridge]:
@@ -9035,7 +9042,7 @@ Unpacking the disclaimer into the chapter's constructs:
 > participant role; nothing in it is neurology or spacetime topology, and the
 > disclaimer rules both out by name.
 
-## Connections
+## Handoffs to the Stack, the Brake Family, and the Frontier
 
 - **The stack above.** The moving-up-the-stack paper proposes the Lattice as a
   new software shelf above the model layer and names this chapter's construct
@@ -9152,7 +9159,7 @@ breaking spacetime; and human emergency still outranks every metaphor.
 
 # Y-Chromosome Manifestation: Digit 4 {#sec:part_III_y-chromosome}
 
-![Digit-4 drawer manifestation: a sub-band bar chart of the Infinite Octave drawer for digit 4 — the SRY zero-point anchor at index 0, then palindrome arms P1–P8 drawn as sub-bands whose spacing grows geometrically as $P_0 \cdot \Phi^n$, generated from `textbook.models.phi_powers`.](../figures/part_III_y-chromosome.png){#fig:part_III_y-chromosome width=90%}
+![Digit-4 drawer manifestation: a sub-band bar chart of the Infinite Octave drawer for digit 4 — the SRY zero-point anchor at index 0, then palindrome arms P1–P8 drawn as sub-bands whose spacing grows geometrically as $P_0 \cdot \Phi^n$, generated from `textbook.models.phi_powers`. Every consecutive pair of arms sits a factor $\Phi \approx 1.618$ apart, and the octave index is exactly the base-$\Phi$ logarithm of the spacing ratio. The takeaway: spacing is indexed geometrically, not labelled as drift.](../figures/part_III_y-chromosome.png){#fig:part_III_y-chromosome width=90%}
 
 <!-- alt: Bar chart of the digit-4 filing drawer showing nine sub-bands: an SRY anchor bar at unit height followed by eight palindrome-arm bars whose heights grow by the factor Φ ≈ 1.618 with each successive arm, from about 1.6 up to about 47 times the base spacing. -->
 
@@ -9201,7 +9208,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The Paper in the Corpus
+## The August Manifestation Note on Shelf 7
 
 The source is a ship-blog note on the SS Vibelandia blog
 (`ssvibelandiaquestfest24x365.com`): **"The Holographic Manifestation: Y
@@ -9233,7 +9240,7 @@ The reference implementation is run as
 exits with a **10/10 fixture lock** — the corpus's term for a fully passing
 fixture set against the note's filing contract [@mendez2026yChromosome].
 
-## Three Filing Moves
+## Three Filing Moves: Scaling, Anchoring, Proposing
 
 The note organises its contribution as "three filing moves in plain speak"
 [@mendez2026yChromosome]. We take them in order.
@@ -9383,7 +9390,7 @@ In `textbook.models`, the first column of
 [@tbl:part_III_y-chromosome_spacing] is `phi_powers(8)`; recompute nothing by
 hand when scripting the lab of [@sec:lab_part_III_y-chromosome].
 
-## Scope and Honesty
+## Catalog Filing, Not Literal Physics: The Scope
 
 The note's own scope statements are unusually crisp and must be carried
 verbatim into any use of this material [@mendez2026yChromosome]:
@@ -9416,7 +9423,7 @@ in its purest form: the August note is narrative filing, labeled as narrative
 filing, and the corpus's own gate (the 10/10 fixture lock) checks the filing's
 internal consistency, never a biological hypothesis.
 
-## Connections
+## Handoffs to the Octave Map, the Rhyme Family, and the Frontier
 
 - **The drawer grammar** descends from the digit-and-octave map of
   [@mendez2026digitsMaster]; read [@sec:part_0_octave-map] first for the
@@ -9506,9 +9513,9 @@ human dignity are filed as outranking every metaphor.
 
 # PDVSA Gateway Ops: The EGS Lattice-Linear Companion {#sec:part_III_pdvsa-gateway}
 
-![The lattice-linear flow ramp of the EGS Lattice-Linear Gateway: cumulative flow $L_n = n\,r$ rises in equal increments across the ops decision cycle (Gather → Decide → Act), generated from `textbook.models.lattice_linear_profile`.](../figures/part_III_pdvsa-gateway.png){#fig:part_III_pdvsa-gateway width=90%}
+![The lattice-linear flow ramp of the EGS Lattice-Linear Gateway: cumulative flow $L_n = n\,r$ rises in equal increments across the ops decision cycle (Gather → Decide → Act), generated from `textbook.models.lattice_linear_profile` at the routing-grammar step $r = \Phi \approx 1.618$. Each domain join adds exactly one increment of flow, so the shared brief accumulates without a tab reset and the ramp stays linear rather than exponential. The takeaway: routing grammar, not more tokens — the signature difference between a gateway profile and the corpus's octave ladders.](../figures/part_III_pdvsa-gateway.png){#fig:part_III_pdvsa-gateway width=90%}
 
-<!-- alt: A rising staircase of six equal-width steps on a linear axis, each step one routing-grammar unit taller than the last, annotated with the repeating Gather, Decide, Act cycle of the gateway console; the cumulative ramp stays linear rather than exponential. -->
+<!-- alt: Rising staircase of six equal-width steps on a linear axis, each step one routing-grammar unit taller than the last, annotated with the repeating Gather, Decide, Act cycle of the gateway console; the cumulative ramp stays linear rather than exponential. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: [@sec:part_III_cmos-protonic]
@@ -9543,13 +9550,13 @@ By the end of this chapter you should be able to:
 
 ---
 
-## Orientation
+## Two Artefacts, One Gateway: Simulator and Mockup Note
 
 Two linked artefacts from September 2026 anchor this chapter: the *PDVSA Gateway Ops* special-project simulator [@mendez2026pdvsaGateway] and its ship-blog mockup note [@mendez2026pdvsaMockup]. Both stage the same contrast quoted above: "today's fragmented industry management UI — ERP · SCADA · Legal · Logistics" on one side, and on the other the EGS Lattice-Linear Gateway, on which Production · Field · Compliance · Export are "joined on one incident object" [@mendez2026pdvsaGateway]. The simulator's meta description is explicit about its own status: "IBM SNA↔TCP/IP is the historical rhyme — not live PDVSA telemetry."
 
-This chapter treats the gateway the way this book treats every shelf entry: as [**catalog-architecture**](#gl:catalog-architecture) to be formalised, not as a device to be believed. The core-constructs section gives the console's three-zone data topology, its lattice-linear flow profile, and its nine-takeaway index; a worked example walks the "Scenario 1 · Morning brief" scenario numerically; the scope section reproduces the source's [**honesty-first**](#gl:honesty-first) disclaimers verbatim. The quantitative lens is deliberately thin — the corpus prints no symbolic equation on the simulator page itself — so the worked formalism below is a structural model of the console profile, implemented as `lattice_linear_profile` in `textbook.models`.
+This chapter treats the gateway the way this book treats every shelf entry: as [**catalog-architecture**](#gl:catalog-architecture) to be formalised, not as a device to be believed. The constructs section gives the console's three-zone data topology, its lattice-linear flow profile, and its nine-takeaway index; a worked example walks the "Scenario 1 · Morning brief" scenario numerically; the honesty section reproduces the source's [**honesty-first**](#gl:honesty-first) disclaimers verbatim. The quantitative lens is deliberately thin — the corpus prints no symbolic equation on the simulator page itself — so the worked formalism below is a structural model of the console profile, implemented as `lattice_linear_profile` in `textbook.models`.
 
-## The Paper in the Corpus
+## The Enterprise Companion Beside the CMOS Pin
 
 The gateway papers sit at the enterprise edge of the Infinite Octaves engine shelf. The mockup note files the simulator "on the **Infinite Octaves engine shelf** as the enterprise gateway companion," and is equally explicit that this filing "does not displace the CMOS pin" — the substrate-layer companion treated in [@sec:part_III_cmos-protonic] [@mendez2026pdvsaMockup]. The note's engine-inclusion line reads: "AGENT_SYNC sync-stack · Lattice Chat workstream · Infinite Octaves dual-lock companion." The post is billed "**SS Vibelandia** — 2026-09-04 — CEO demo · Fair Exchange" [@mendez2026pdvsaMockup], a demo artefact in the corpus's [**fair-exchange**](#gl:fair-exchange) sense: takeaways that open their backing papers rather than trading on attention.
 
@@ -9665,7 +9672,7 @@ Each increment is exactly $\Phi$; the brief never resets, so the flow is the lin
 
 The same $N = 6$ is the threshold at which the token bound of [@eq:part_III_pdvsa-gateway_tokens] engages: at six domains, the savings card commits the gateway grammar to a context cost below $0.15\,C_{\mathrm{flat}}(6)$ — if the corresponding flat dump would cost 100 token units, the bound allows the gateway fewer than 15. And the harmony card's fixture — "high coherence at K=12" nested agents under peer-firewall [@mendez2026pdvsaGateway] — sits at twice the ramp we just walked: the console's own numeric furniture (N ≥ 6, K = 12, a 90-second decision window) is what a re-run of `npm run research:synthobs-pdvsa-gateway-ops-mockup` and its E1–E6 empirics are there to exercise [@mendez2026pdvsaMockup].
 
-## Scope and Honesty
+## Simulator, Not Telemetry: The Honesty-First Scope
 
 The gateway papers are unusually explicit about their own epistemic status, and this chapter preserves that framing verbatim. The mockup note's disclaimer, in full [@mendez2026pdvsaMockup]:
 
@@ -9675,7 +9682,7 @@ The simulator page echoes it twice: "Labeled simulator gains, not measured oilfi
 
 Within that scope, the construct is FOR coordination and cataloging: one executive thread across $N$ domains, pointer-citing retrieval (Seed·RAG) so that "executives see what is grounded vs what still needs human confirmation," and a next-action band rather than a forecast [@mendez2026pdvsaGateway]. It is explicitly NOT: live telemetry, a Protokol Sistemas contract audit, a measured SLA, or prophecy. The takeaways' numerics belong to the standalone nest's E1–E6 empirics, and this book's [@eq:part_III_pdvsa-gateway_model] and [@eq:part_III_pdvsa-gateway_tokens] inherit exactly that status: structural models of printed prose, not measurements.
 
-## Connections
+## Handoffs to the CMOS Pin, the Stack, and the Catalog
 
 **Beside on the shelf: the CMOS pin.** The mockup is careful that the gateway's engine-shelf filing "does not displace the CMOS pin" [@mendez2026pdvsaMockup]. The substrate-layer companion — the octaves-per-substrate tiers of [@sec:part_III_cmos-protonic], visualised in [@fig:part_III_cmos-protonic] — is the [**cmos-protonic**](#gl:cmos-protonic) entry the gateway sits next to on the [**silicon-shelf**](#gl:silicon-shelf), not one it replaces [@mendez2026cmosProtonic]. The two filings are dual-lock companions: gateway grammar above, substrate pin below.
 
@@ -9717,9 +9724,9 @@ The EGS Lattice-Linear Gateway replaces N siloed management windows with one sha
 
 # The Macro-Protein Work Engine {#sec:part_III_macro-protein}
 
-![The macro-protein work-engine output curve: the filed work output $W(n) = w_0 \cdot \Omega_n$ of an organism-as-work-engine evaluated across the biological tier band from $\theta_{\mathrm{bio}} = 13$ to $17$ under both readings of the corpus's octave term (`textbook.models.octave_term`) — a steep exponential ramp under the exponent convention, an essentially flat ladder under the Fibonacci-subscript convention.](../figures/part_III_macro-protein.png){#fig:part_III_macro-protein width=90%}
+![The macro-protein work-engine output curve: the filed work output $W(n) = w_0 \cdot \Omega_n$ of an organism-as-work-engine evaluated across the biological tier band from $\theta_{\mathrm{bio}} = 13$ to $17$ under both readings of the corpus's octave term (`textbook.models.octave_term`). Under the exponent convention the band ramps steeply from the $\Phi^{13}$ rung to the $\Phi^{17}$ rung; under the Fibonacci-subscript convention it is essentially flat at $\approx 1.618 \cdot \Omega_0$. The takeaway: where biology sits on the ladder is convention-sensitive, so the band placement is only load-bearing under one reading.](../figures/part_III_macro-protein.png){#fig:part_III_macro-protein width=90%}
 
-<!-- alt: Two curves of metabolic work output versus octave tier n from 13 to 17, one rising exponentially under the exponent convention of the octave term and one nearly flat under the Fibonacci-subscript convention, with the biological band [13, 17] marked. -->
+<!-- alt: Two curves of metabolic work output versus octave tier n from 13 to 17, one rising exponentially under the exponent convention of the octave term and one nearly flat under the Fibonacci-subscript convention, with the biological band 13 to 17 marked. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: Protein Folding as Prime-Container Architecture ([@sec:part_III_protein-folding])
@@ -9797,7 +9804,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## Orientation
+## An Application Companion, Not an Engine-Shelf Pin
 
 <!-- This section introduces the chapter's position in the corpus. -->
 
@@ -9838,7 +9845,7 @@ two companions directly: the protein prime-container paper — "micro vault
 grammar this paper scales up" [@mendez2026macroProtein] — and the prime-parity
 paper; a third board link, prime-indexed volumetric storage, shares "the same
 $\Phi$ vault habit in memory media" [@mendez2026macroProtein]. We return to
-all three in the Connections section.
+all three in the handoff section below.
 
 ## The Work Tensor W(n)
 
@@ -10011,7 +10018,7 @@ mathematics, not corpus output. If a filing exercise were to pretend the
 octave ladder *predicts* such a ratio, it would exceed the note's own scope;
 the note files compatibility, not derivation.
 
-## Scope and Honesty
+## Not Life Solved, Not One Protein: The Honesty Boundaries
 
 The corpus's [**honesty-first**](#gl:honesty-first) discipline opens this
 note in its second paragraph, and it must be restated precisely
@@ -10058,7 +10065,7 @@ biochemical one.
 > 9/9 suite locks test the filing code, and the Fair Exchange clause governs
 > the corpus's own delivery economics — neither touches metabolism.
 
-## Connections
+## Handoffs to the Prime Vault, the Stack, and the Band Predicate
 
 - **Protein folding as prime-container architecture**
   ([@sec:part_III_protein-folding]) is the paper this note scales up: the
@@ -10164,9 +10171,9 @@ reference implementation.
 
 # The Invisible Frontier {#sec:part_III_invisible-frontier}
 
-![Visibility threshold frontier curve: the chapter's logistic visibility model, the fraction $V(t)$ of the "second chart" that a linear-awareness frame registers as cumulative exposure $t$ grows, drawn for $V_0 = 0.05$ and $r = 1$. The frontier is the steep region around the half-visibility crossing at $t = \ln 19 \approx 2.94$.](../figures/part_III_invisible-frontier.png){#fig:part_III_invisible-frontier width=90%}
+![Visibility threshold frontier curve: the chapter's logistic visibility model, the fraction $V(t)$ of the "second chart" that a linear-awareness frame registers as cumulative exposure $t$ grows, drawn for $V_0 = 0.05$ and $r = 1$ with `textbook.models.logistic_growth`. The frontier is the steep region around the half-visibility crossing at $t = \ln 19 \approx 2.94$, where exposure changes visibility fastest. The takeaway is the paper's diagnosis: a frame inside linear compute-and-market models sits near the bottom of the curve, publishing alarms about weather on a chart whose ocean it has not yet mapped.](../figures/part_III_invisible-frontier.png){#fig:part_III_invisible-frontier width=90%}
 
-<!-- alt: An S-shaped logistic curve rising from 0.05 toward 1.0 as exposure t increases, crossing the half-visibility line near t = 2.9; the steep region around the crossing is shaded and labelled as the frontier. -->
+<!-- alt: S-shaped logistic curve rising from 0.05 toward 1.0 as exposure t increases, crossing the half-visibility line near t = 2.9; the steep region around the crossing is shaded and labelled as the frontier. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: the [**fractal constant**](#gl:fractal-constant) chapter ([@sec:part_I_fractal-constant])
@@ -10213,7 +10220,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The Paper in the Corpus
+## The Response Editorial on Shelf 8
 
 *The Invisible Frontier: responding to Bill Gates's AI warnings* is a ship-blog
 entry dated 2026-08-26, filed under the byline "plain speak · Fair Exchange"
@@ -10245,7 +10252,7 @@ the open-problems quadrant map of [@sec:part_III_frontiers] (and its figure,
 [@fig:part_III_frontiers]) inherits this chapter's question of what current
 frames cannot yet see.
 
-## Core Constructs
+## The Master Filing Key and the Second-Chart Lens
 
 ### The EGS fractal constant as master filing key
 
@@ -10300,7 +10307,7 @@ Two readings of the filing key follow, and the paper states both as
    *downstream of ordinary compute talk*: the claim is about catalog
    addressing and stewardship framing, not about FLOPs, and the paper's own
    scope note bars any reading of $\Phi \approx 1.618$ as replacing physics
-   constants (see [Scope and Honesty](#scope-and-honesty)).
+   constants (see the honesty section below).
 
 ### Holographic magnetic Goldilocks SuperAI
 
@@ -10376,7 +10383,7 @@ A filing diagram of how the paper's pieces route through the catalog:
 \end{figure}
 
 
-## Worked Example: reading the second chart numerically
+## Worked Example: Reading the Second Chart Numerically
 
 Two short walks, both reproducible with `textbook.models`.
 
@@ -10424,7 +10431,7 @@ mapped [@mendez2026invisibleFrontier].
 > if you cite the frontier curve, cite the *chapter's* framing, and keep the
 > paper's own claims separate from it.
 
-## Scope and Honesty
+## Design Language, Not Measurement: The Honesty Banner
 
 The paper's "Honesty first" banner is part of the construct, and the corpus's
 claims list is explicit. Restated precisely [@mendez2026invisibleFrontier]:
@@ -10456,7 +10463,7 @@ mistaking it for the whole chart, walk the voyage spine, keep "not too much
 machine, not too little human," run the fixture lock, and — when a human hand
 is genuinely needed — contact the listed human address [@mendez2026invisibleFrontier].
 
-## Connections
+## Handoffs to the Rhyme Field, the Band, and the Quadrant
 
 Backward, this chapter consumes the corpus's quantitative spine: the
 $\Phi^n$ ladder of [@sec:part_I_fractal-constant] supplies the master filing
@@ -10549,9 +10556,9 @@ stewardship, and human emergency still outranks algorithms.
 
 # Frontiers and the Research Program {#sec:part_III_frontiers}
 
-![Open-problems quadrant map for the closing chapter: the seven open problems of the Omni-Lattice research program plotted by expected value (vertical axis) against effort (horizontal axis), scored with the chapter's quadrant model; the high-value, low-effort do-first quadrant is shaded, with the octave-convention audit and the net-zero ledger automation leading the queue.](../figures/part_III_frontiers.png){#fig:part_III_frontiers width=90%}
+![Open-problems quadrant map for the closing chapter: the seven open problems of the Omni-Lattice research program plotted by expected value $V$ (vertical axis) against effort $E$ (horizontal axis), scored with the chapter's quadrant model $Q = V^2/E$. The high-value, low-effort do-first quadrant is shaded, with the octave-convention audit and the net-zero ledger automation leading the queue. The takeaway: audits and automation run first, because they are cheap and everything downstream inherits their correctness.](../figures/part_III_frontiers.png){#fig:part_III_frontiers width=90%}
 
-<!-- alt: Quadrant scatter of the seven open research problems by expected value and effort; the upper-left do-first quadrant is shaded and contains the octave-convention audit and the net-zero ledger automation. -->
+<!-- alt: Quadrant scatter of the seven open research problems by expected value and effort scored as Q = V^2/E; the upper-left do-first quadrant is shaded and contains the octave-convention audit and the net-zero ledger automation. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -10586,7 +10593,7 @@ By the end of this chapter you should be able to:
 > Walk the corridor to `/papers` on the ship board and you find the Reading Room: two dozen whitepapers pinned shelf by shelf, each opening with the same "Honesty first" rail and closing on a [**Fair Exchange**](#gl:fair-exchange) clause [@mendez2026ship]. The shelves carry fixture locks and reference suites — `npm run research:synthobs-...` commands a visitor can actually run — yet the master-synthesis note reminds you that the whole cabinet is "catalog grammar for conversation," not a weather forecast and not a seismic warning [@mendez2026masterSynthesis]. This closing chapter does what a careful engineer does at the end of any catalog survey: it walks the shelf a second time and writes down which drawers are still empty — and, for each empty drawer, what would have to be true for the drawer to count as filled.
 ---
 
-## Orientation
+## Turning the Catalog on Itself: Three Frontier Sources
 
 Everything before this chapter built the catalog; this chapter interrogates it. Parts 0–II formalised the
 [**Omni-Lattice**](#gl:omni-lattice) — the [**octave**](#gl:octave) ladder, the digit drawers, the constant registers — and Part III ran its implementations. Now the corpus's own research program comes into view, drawn from three frontier sources: the master-synthesis filing cabinet [@mendez2026masterSynthesis], the invisible-frontier editorial [@mendez2026invisibleFrontier], and the moving-up-the-stack thesis [@mendez2026stack].
@@ -10646,7 +10653,7 @@ Every frontier paper closes on bookkeeping: the Fair Exchange clause promises pa
 
 The home news rail files the Zero-Octave gate as "$0/0 \to \Phi^0 = 1$ — crystal diagnostic" [@mendez2026ship], and the zero-octave paper develops it as an implementation fixture at [**node-k0**](#gl:node-k0), explicitly "not GR singularity QED" [@mendez2026zeroOctave]. What remains open is which algebraic reading is canonical — the cancel-as-limit reading, the cancel-as-convention reading, or the fixture reading the reference suite actually implements — and whether all papers agree on it. **What would count as evidence:** a fixture lock in the reference suite that reproduces $0/0 \to \Phi^0 = 1$ at node $k = 0$ under one stated reading, cited by every paper that invokes the diagnostic. Convergence on one reading closes the problem; persistent divergence is itself a finding the [**zero-octave**](#gl:zero-octave) chapter would need to annotate.
 
-## The Open-Problem Quadrant
+## Ranking the Program: The Value-by-Effort Quadrant
 
 A list of problems is not a program until it is ordered. Score each problem on expected value $V$ — what a resolution buys the catalog in consistency, tooling, or tested theses — and effort $E$ — the combined audit and implementation cost — each on a 1–5 scale, then rank by the quadrant score of [@eq:part_III_frontiers_quadrant]:
 

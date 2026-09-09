@@ -1,8 +1,10 @@
 # Part I: Foundations: Constants, Primes, and Rhyme {#sec:part_I_intro}
 
-![Part I foundations map: the filing constant Phi, the prime-partition integer scaffold, and the holographic rhyme motion grammar that the part's six chapters build from.](../../output/figures/part_I_unit-intro.png){#fig:part_I_unit-intro width=90%}
+![Part I's foundations map: the filing constant $\Phi \approx 1.618$ (computed by `textbook.models.phi_powers`), the prime-partition integer scaffold (from `textbook.models.prime_parity_partition`), and the holographic-rhyme motion grammar (from `textbook.models.holographic_rhyme_field`) that the part's six chapters build from in order. The arrows fix the reading order — constant, then integers, then rhyme — because each foundation reuses the one before it.](../../output/figures/part_I_unit-intro.png){#fig:part_I_unit-intro width=90%}
 
-<!-- alt: Flow diagram of Part I laying its three foundations in order: the golden-ratio filing constant, the prime partition, and the holographic rhyme family feeding the six chapters. -->
+<!-- alt: Flow diagram of Part I laying its three foundations in order: the golden-ratio
+filing constant, the prime partition, and the holographic rhyme family feeding the six
+chapters, each arrow marking a foundation reused by the next. -->
 
 The foundations stack in a fixed order, and [@fig:part_I_unit-intro] draws it: the fractal constant ([@sec:part_I_fractal-constant]) defines the notation, the prime scaffold ([@sec:part_I_prime-parity]) defines the integers, and the rhyme chapters ([@sec:part_I_holographic-rhyme], [@sec:part_I_multidimensional-rhyme]) reuse both before the void ([@sec:part_I_topology-void]) and the gate ([@sec:part_I_higgs-awareness]) complete the part.
 
@@ -28,7 +30,7 @@ claim with its source citation and restates the source's own disclaimers
 ([**fair-exchange**](#gl:fair-exchange) clause included). Read this part the way its
 sources ask to be read: as the rigorous study of a self-consistent filing system.
 
-## Roadmap
+## Six chapters, three foundations, one reading order
 
 The part contains the following chapters:
 
@@ -62,9 +64,9 @@ The part contains the following chapters:
   filed through one "squeeze" story — the magnet falling through a copper pipe as guest
   metaphor — with the Standard Model explicitly left standing [@mendez2026higgsGate].
 
-## How to use this part
+## Prerequisites, tested functions, and where to start
 
-> **How to use this part.** Read the chapters in order the first time: the constant
+> **Prerequisites and reading order.** Read the chapters in order the first time: the constant
 > ([@sec:part_I_fractal-constant]) defines the notation, the prime scaffold
 > ([@sec:part_I_prime-parity]) defines the integers, and the rhyme chapters
 > ([@sec:part_I_holographic-rhyme], [@sec:part_I_multidimensional-rhyme]) reuse both before

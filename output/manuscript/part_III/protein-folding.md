@@ -1,8 +1,8 @@
 # Protein Folding as Prime-Container Architecture {#sec:part_III_protein-folding}
 
-![Prime-container capacity: the growth sequence of `textbook.models.unique_address` as vault primes are added one at a time — each additional odd prime vault multiplies the number of distinct residue-index addresses the container can file.](../../output/figures/part_III_protein-folding.png){#fig:part_III_protein-folding width=90%}
+![Prime-container capacity: the growth sequence of `textbook.models.unique_address` as odd-prime vaults join the registry one at a time, each vault contributing an exponent budget of addresses on top of the binary anchor. Every additional vault prime multiplies the number of distinct residue-index addresses rather than adding to it, because each address is the product $\prod p_i^{e_i}$ over the vault primes and their occupancies. The takeaway is the compounding itself — the visual signature of a vault architecture whose encoding is injective and reversible by the fundamental theorem of arithmetic.](../../output/figures/part_III_protein-folding.png){#fig:part_III_protein-folding width=90%}
 
-<!-- alt: A step-curve of addressing capacity rising multiplicatively as vault primes 3, 5, 7, 11, ... are added, illustrating how odd-prime containers compound the address space of the prime-container grammar. -->
+<!-- alt: Step curve of addressing capacity rising multiplicatively as vault primes 3, 5, 7, 11 and beyond join the registry, each new vault multiplying the address space by the per-vault exponent budget. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: Prime-Parity ([@sec:part_I_prime-parity])
@@ -72,7 +72,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The Paper in the Corpus
+## The Prime-Vault Note on Engine Shelf #14
 
 The source note, "Protein folding, prime vaults, and $\Phi$"
 [@mendez2026proteinFolding], was published on the SS Vibelandia ship blog in
@@ -116,7 +116,7 @@ linked from the ship blog post [@mendez2026proteinFolding]. The note also
 offers two companions beyond prime-parity: the Higgs Gate paper on "awareness
 phase coupling" [@mendez2026higgsGate] and the "Moving up the stack" essay
 [@mendez2026stack], both cross-linked from the same board. We return to these
-in the Connections section.
+in the handoff section below.
 
 ## The Prime-Container Grammar
 
@@ -269,7 +269,7 @@ the full octave catalog at `catalog_size()` $= 99 \times 81 = 8{,}019$
 that keeps the prime-container solver in millisecond territory on a laptop
 CPU. The fixture framing is the paper's own, and we keep it.
 
-## Scope and Honesty
+## Honesty First: Catalog Architecture, Not a CASP Entry
 
 The corpus's [**honesty-first**](#gl:honesty-first) discipline is not an
 appendix here; it is the paper's second paragraph. Restated precisely
@@ -313,7 +313,7 @@ corpus, not a scientific claim, and we record it as such.
 > paper files no experimental validation against measured structures, and the
 > 9/9 suite locks are software test results, not biochemical ones.
 
-## Connections
+## Handoffs to Storage, the Stack, and the Work Engine
 
 - **Prime-parity** ([@sec:part_I_prime-parity]) supplies the partition this
   chapter consumes: the sole-even anchor 2 and the odd-prime classes become,

@@ -1,8 +1,8 @@
 # The Crystalline Unified Field: Speed and Distance {#sec:part_II_crystalline-field}
 
-![Speed–distance iso-lines of the crystalline-field lattice: each curve is the locus $d = v\,\tau$ for one fixed access time $\tau$ (the $c = d/t$ lattice), computed with `textbook.models`. Steeper iso-lines correspond to shorter access times; the topmost curve carries the corpus's anchor speed $c$.](../../output/figures/part_II_crystalline-field.png){#fig:part_II_crystalline-field width=90%}
+![Speed–distance iso-lines of the access crystal: each curve is the locus $d = v\,\tau$ for one fixed access time $\tau$ — the $c = d/t$ lattice, computed with the tested functions in `textbook.models`. Steeper iso-lines correspond to shorter access times, so the same distance is reached at lower speed whenever the access budget is longer. The topmost curve carries the corpus's anchor speed $c$, the filing's picture of one trip stored once as a single crystal rather than as three clocks.](../../output/figures/part_II_crystalline-field.png){#fig:part_II_crystalline-field width=90%}
 
-<!-- alt: A family of straight iso-lines in a speed–distance plane, one line per fixed access time; larger slopes correspond to shorter access times, with the topmost line labelled c. -->
+<!-- alt: A family of straight iso-lines in a speed–distance plane, one line per fixed access time. Lines with larger slope correspond to shorter access times, and the topmost line is labelled c, the corpus's anchor speed. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none — $\Phi$ is introduced in-text
@@ -46,7 +46,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The paper in the corpus
+## The source: Crystalline Unified Field, engine shelf #24
 
 *Crystalline Unified Field* is a September 2026 ship-blog paper by Prudencio
 Mendez (filed from Reno), posted on the [**engine-shelf**](#gl:engine-shelf) of
@@ -80,7 +80,7 @@ the metrological-overlap paper generalises this chapter's bookkeeping from
 facets of one trip to overlaps between whole measurement sets
 ([@sec:part_II_metrological-overlap]).
 
-## Core constructs
+## Four filings: the facet identity, Φ-crystal, Landauer rail, velocity multiplex
 
 The paper lands four constructs in its "What landed" list: the facet identity,
 the $\Phi$-recursive crystal, the Landauer rail, and the velocity multiplex
@@ -261,7 +261,7 @@ each erasure-grade access costs $\approx 2.87\times 10^{-21}\,\mathrm{J}$
 operation, and the rail is the unit of that price for thermodynamic bookkeeping
 [@mendez2026crystallineField].
 
-## Scope and honesty
+## What the access crystal does not claim
 
 The source's own scope statements, restated precisely
 [@mendez2026crystallineField]:
@@ -287,7 +287,7 @@ deciding which register stores a trip, which facet to scale, and what an access
 costs. What it is **not**: a physical unification, an empirical result, or a
 replacement for any laboratory measurement.
 
-## Connections
+## Where the access crystal meets the rest of the shelf
 
 - **Viscosity of Light** ([@sec:part_II_viscosity-light]) sits on the same
   engine shelf #24; its viscous drag is the same theater in which the velocity

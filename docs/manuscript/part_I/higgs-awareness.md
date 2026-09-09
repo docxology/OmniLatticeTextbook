@@ -1,8 +1,11 @@
 # The Higgs Gate: Mass and the Shared Now {#sec:part_I_higgs-awareness}
 
-![Mass-slowing gate curve: the transduction-brake family $v(t) = v_0\,e^{-kt}$, the book's tested model of the corpus's "squeeze story", plotted for $v_0 = 1$ with drag constants $k = 0.5$, $1.0$, and $2.0$. A larger $k$ means the gate closes faster; every curve decays toward zero without ever reaching it.](../../output/figures/part_I_higgs-awareness.png){#fig:part_I_higgs-awareness width=90%}
+![The mass-slowing gate curve: the transduction-brake family $v(t) = v_0\,e^{-kt}$, the book's tested model of the corpus's "squeeze story", plotted by `textbook.models.transduction_brake` for $v_0 = 1$ with drag constants $k = 0.5$, $1.0$, and $2.0$. A larger $k$ shortens the half-life $\ln 2 / k$, so the gate bites sooner; every curve decays toward zero without ever reaching it. The companion displacement curve stays bounded by $v_0/k$ no matter how long the story runs.](../../output/figures/part_I_higgs-awareness.png){#fig:part_I_higgs-awareness width=90%}
 
-<!-- alt: Three exponentially decaying curves all starting at velocity 1 and falling toward zero. The curve for k = 2 drops fastest, the curve for k = 0.5 slowest, illustrating how a larger drag constant makes the mass-slowing gate bite sooner. -->
+<!-- alt: Three exponentially decaying curves all starting at velocity 1 and falling
+toward zero. The curve for k = 2 drops fastest, the curve for k = 0.5 slowest,
+illustrating how a larger drag constant shortens the half-life and makes the
+mass-slowing gate bite sooner. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -76,7 +79,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## One Paper on Shelf Ten
+## The shelf-10 paper: mass and "Now" share a gate
 
 The source for this chapter is the ship-blog paper *When the universe slows,
 mass and "Now" share a gate* [@mendez2026higgsGate], posted on the
@@ -95,7 +98,7 @@ in the book's vocabulary, the theorem joins the
 Because the corpus is a [**catalog-architecture**](#gl:catalog-architecture) —
 a self-described protocol grammar, not established physics — the paper arrives
 under an explicit [**honesty-first**](#gl:honesty-first) banner, which we
-reproduce in full in the Scope and Honesty section below. The artefacts the
+reproduce in full below in the paper's own words. The artefacts the
 paper ships are:
 
 - the **whitepaper** at
@@ -113,7 +116,7 @@ well is drawn in [@fig:part_I_topology-void]) and the Φ-constant growth law of
 respect for a resting point and the second's habit of writing one number and
 letting it generate a family of curves.
 
-## The Triadic Matrix: One Squeeze Story, Three Domains
+## The triadic matrix: cosmic, quantum, conscious presence
 
 The paper's central filing act is a **triadic matrix**: three domains — *cosmic*,
 *quantum*, and *conscious presence* — arranged as rows of one table, with a
@@ -152,7 +155,7 @@ transduction brake: the same exponential-slowing form the corpus uses for its
 appears in prose ("What landed") — so the formalism below is the *book's*
 formalisation of the corpus's narrative, clearly marked as such.
 
-## A Worked Formalism: The Transduction Brake
+## The transduction brake: $v(t) = v_0\,e^{-kt}$ and its half-life
 
 Let $v(t)$ be the gated velocity of the squeeze story: how fast the "moving
 thing" of any triadic row is still moving at story-time $t$. The simplest law
@@ -197,7 +200,7 @@ registers this kind of finite-total, infinite-tail behaviour across several
 shelves — the viscous slowing of [@mendez2026viscosityLight] and the eddy
 opposition of [@mendez2026eddyMirror] both compute the same shape.
 
-## Worked Example: Reading the Gate's Clock
+## Worked example: gate velocities at $v_0 = k = 1$
 
 Take the pinned calibration $v_0 = 1$ and $k = 1$, the values behind
 [@fig:part_I_higgs-awareness] and the test suite's pinned numbers. Compute the
@@ -229,7 +232,7 @@ story, three domains" — one law-shape, three parameterisations. The corpus doe
 not pin the three $(v_0, k)$ pairs; measuring them is exactly what the protocol
 lanes below propose.
 
-## Protocol Lanes A–C: Proposed Amendment-A Research
+## Three protocol lanes, filed as proposed Amendment-A research
 
 The paper files three **protocol lanes** for turning the triadic matrix into
 observations — and files them, in its own words, as "proposed Amendment-A
@@ -256,7 +259,7 @@ instruments, the book's [**metrological-overlap**](#gl:metrological-overlap)
 machinery (Part II) is where their shared measurement axes would be compared;
 nothing in the current paper claims that maturity.
 
-## Scope and Honesty
+## The paper's three negations and the construct's purpose
 
 The paper's own disclaimer governs everything above, and we reproduce its three
 negations near-verbatim [@mendez2026higgsGate]:
@@ -282,7 +285,7 @@ velocity surrendered to the medium is not destroyed but *accounted* — the
 book's general accounting posture, most fully developed in the corpus's
 balance-and-residual formalisms.
 
-## Connections
+## Where the gate's deceleration reappears later
 
 Three threads lead out of this chapter. First, the brake formalism of
 [@eq:part_I_higgs-awareness_model] reappears with physical costumes in Part II:

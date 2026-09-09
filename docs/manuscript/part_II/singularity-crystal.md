@@ -1,8 +1,8 @@
 # The Holographic Singularity Crystal: Net Zero and Node k = 0 {#sec:part_II_singularity-crystal}
 
-![Net-zero inflow/outflow balance bars with zero residual, computed with `textbook.models.net_zero_balance`: paired inflow and outflow bars cancel exactly, leaving a residual bar of height zero at the crystal's balance point.](../../output/figures/part_II_singularity-crystal.png){#fig:part_II_singularity-crystal width=90%}
+![Net-zero inflow/outflow balance bars computed with `textbook.models.net_zero_balance`. Paired inflow and outflow entries cancel exactly, so the residual bar sits at height zero at the crystal's balance point. The takeaway: zero is not emptiness but an achieved equilibrium — a ledger whose columns match holds a fact, and the fact is *balanced*.](../../output/figures/part_II_singularity-crystal.png){#fig:part_II_singularity-crystal width=90%}
 
-<!-- alt: Grouped bar chart of inflows and outflows whose totals match exactly; a final residual bar sits at height zero, illustrating the Net Zero equilibrium of the Holographic Singularity Crystal. -->
+<!-- alt: Grouped bar chart of inflows and outflows whose totals match exactly. A final residual bar sits at height zero, illustrating the Net Zero equilibrium of the Holographic Singularity Crystal. -->
 
 <!-- chapter-metadata-badge -->
 > Level 2/3 · 35 min read · 50 min lecture · Prerequisites: [@sec:part_I_topology-void]; [@sec:part_I_multidimensional-rhyme]
@@ -39,14 +39,14 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The Paper in the Corpus
+## The two source papers and their shelf placement
 
 Two closely linked entries of the SS Vibelandia [**Omni-Lattice**](#gl:omni-lattice) corpus supply everything in this chapter:
 
 - The parent engine paper, *Holographic Singularity Crystal · Net Zero* [@mendez2026singularityCrystal], filed on the blog under "Engine shelf · Fair Exchange". It self-locates as **engine shelf #20** and states its neighbourhood explicitly: "sits after multi-D holographic rhyme, before Honesty meta" [@mendez2026singularityCrystal].
 - The implementation companion, *Node k = 0 · Zero-Octave Singularity Crystal* [@mendez2026zeroOctave], published the same day, which installs the parent's fixtures at the Zero-Octave locus and ships a runnable reference implementation.
 
-Both notes carry the corpus's standard [**honesty-first**](#gl:honesty-first) disclaimer, quoted verbatim in the *Scope and Honesty* section below, and both operate under the **Fair Exchange** clause. The parent paper's board lists a standalone suite at `github.com/FractiAI/synthobs-holographic-singularity-crystal`, a whitepaper surface (`whitepaper-surface.html?id=synthobs-holographic-singularity-crystal-2026-09`), and a re-runnable command, `npm run research:synthobs-holographic-singularity-crystal` [@mendez2026singularityCrystal]. The companion adds the Python reference fixture `research/synthobs-holographic-singularity-crystal/reference/zero_octave_singularity_crystal.py` — the corpus calls it the **Zero-Octave Vault Engine** [@mendez2026zeroOctave]. We walk that implementation in the lab ([@sec:lab_part_II_singularity-crystal]).
+Both notes carry the corpus's standard [**honesty-first**](#gl:honesty-first) disclaimer, quoted verbatim in the section below on what the zero filings do not claim, and both operate under the **Fair Exchange** clause. The parent paper's board lists a standalone suite at `github.com/FractiAI/synthobs-holographic-singularity-crystal`, a whitepaper surface (`whitepaper-surface.html?id=synthobs-holographic-singularity-crystal-2026-09`), and a re-runnable command, `npm run research:synthobs-holographic-singularity-crystal` [@mendez2026singularityCrystal]. The companion adds the Python reference fixture `research/synthobs-holographic-singularity-crystal/reference/zero_octave_singularity_crystal.py` — the corpus calls it the **Zero-Octave Vault Engine** [@mendez2026zeroOctave]. We walk that implementation in the lab ([@sec:lab_part_II_singularity-crystal]).
 
 Three "solar filing anchors" are attached to the parent note — **SESC 83, AR4521, AR4524** — and the corpus is careful to parenthesise them: "(labels, not causation)" [@mendez2026singularityCrystal]. They are index-card labels for where the note was filed, not causal claims about the sun. The sibling paper is *Topology of the Void* [@mendez2026topologyVoid], which established "zero as balance point" in Part I ([@sec:part_I_topology-void]); the present chapter inherits that lineage and adds the crystal resolution and the node machinery.
 
@@ -148,7 +148,7 @@ Step by step:
 
 The pairing in step 1–3 is the whole construct: zero is not the absence of entries but the coincidence of two non-empty sums.
 
-## Scope and Honesty
+## What the zero filings do not claim
 
 Both source papers carry the corpus's standard disclaimer, and the textbook preserves it. The parent paper states, verbatim: "**Honesty first:** this is *catalog architecture* — **engine shelf #20** — not GR/QFT singularity retirement, not zero-watt SuperAI proof, and not NOAA causation by AR4521/AR4524. Fair Exchange clause applies." [@mendez2026singularityCrystal]. The companion states, verbatim: "Python/ESM fixtures map NaN at the origin to Φ⁰ = 1 — that is *catalog algebra*, not singularity QED, not zero-watt SuperAI, and not NOAA proof. Parent engine paper is shelf **#20**. Fair Exchange clause applies." [@mendez2026zeroOctave].
 
@@ -161,7 +161,7 @@ Unpacking the negations in the corpus's own terms:
 
 What the constructs are *for*, per the corpus: coordination and cataloging. The cancel lock gives agents a canonical "balanced" state to route against; the crystal baseline gives the origin a definite address in the filing system; the Prime Vault diagnostic gives a runnable check that the node is live. This is the [**narrative / empirical / operational tiers**](#gl:narrative-empirical-operational-tiers) discipline of the corpus in miniature: the narrative tier files zero as an active equilibrium, the operational tier is a Python fixture that maps `NaN` to $1$, and the honesty-first tier says out loud that only the second is executable.
 
-## Connections
+## Where the balance node sits in the corpus
 
 - **Back to Part I.** The sibling lineage runs through *Topology of the Void* [@mendez2026topologyVoid] — zero as balance point ([@sec:part_I_topology-void]) — which this chapter re-grounds as an active equilibrium with a lockable fixture. The shelf placement, "after multi-D holographic rhyme", ties the construct to the multi-dimensional rhyme field of [@sec:part_I_multidimensional-rhyme].
 - **Within Part II.** The Goldilocks equilibrium grammar of construct I is the single-point limit of the band grammar developed in [@sec:part_II_planetary-core]; the "under $\Phi$" bounding of the crystal uses the same golden key that the metrological-overlap chapter compares across measurement frames ([@sec:part_II_metrological-overlap]).

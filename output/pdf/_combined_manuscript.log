@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.22)  8 SEP 2026 15:21
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.22)  8 SEP 2026 18:15
 entering extended mode
  %&-line parsing enabled.
 **_combined_manuscript.tex
@@ -1357,24 +1357,24 @@ File: ../manuscript/assets/cover/omnilattice_cover.png Graphic file (type bmp)
 <../manuscript/assets/cover/omnilattice_cover.png>
  [1
 
-]
+] [2]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 279.
+(Font)              scaled to size 7.0pt on input line 281.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 279.
+(Font)              scaled to size 5.0pt on input line 281.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00092pt on input line 279.
+(Font)              scaled to size 10.00092pt on input line 281.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00064pt on input line 279.
+(Font)              scaled to size 7.00064pt on input line 281.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00046pt on input line 279.
+(Font)              scaled to size 5.00046pt on input line 281.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 279.
+(Font)              scaled to size 9.99893pt on input line 281.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 279.
+(Font)              scaled to size 6.99925pt on input line 281.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 279.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 279
+(Font)              scaled to size 4.99947pt on input line 281.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 281
 .
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1383,7 +1383,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 279
+LaTeX Font Info:    Trying to load font information for U+msb on input line 281
 .
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1397,15 +1397,15 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 1325) in paragraph at lines 291--292
-\TU/lmr/m/n/10 Suggested citation: Prudencio Mendez (2026). \TU/lmr/m/it/10 The
- Infinite Octaves Omni-Lattice Textbook: A
+Underfull \hbox (badness 1983) in paragraph at lines 293--294
+\TU/lmr/m/n/10 Suggested citation: Daniel Ari Friedman (2026). \TU/lmr/m/it/10
+The Infinite Octaves Omni-Lattice Textbook:
  []
 
 
-Underfull \hbox (badness 2744) in paragraph at lines 291--292
-\TU/lmr/m/it/10 Modular Synthesis of the SynthOBS Engine Papers \TU/lmr/m/n/10
-(Edition 0.1). Active Inference Institute.
+Underfull \hbox (badness 1297) in paragraph at lines 293--294
+\TU/lmr/m/it/10 A Modular Synthesis of the SynthOBS Engine Papers \TU/lmr/m/n/1
+0 (Edition 0.1). Active Inference Institute.
  []
 
 [1
@@ -1640,20 +1640,20 @@ File: ../figures/mermaid_inline/inline_mermaid_0001_0efab01bfa22.png Graphic fi
 le (type bmp)
 <../figures/mermaid_inline/inline_mermaid_0001_0efab01bfa22.png>
  [32] [33]
-Underfull \hbox (badness 10000) in paragraph at lines 1175--1188
+Underfull \hbox (badness 10000) in paragraph at lines 1189--1202
 []\TU/lmr/m/n/10 Read as an \TU/lmr/m/it/10 exponent\TU/lmr/m/n/10 , the ladder
  grows geometrically: $[][]$ for $[] [] [][][][]$ gives
  []
 
 
-Underfull \hbox (badness 1558) in paragraph at lines 1175--1188
+Underfull \hbox (badness 1558) in paragraph at lines 1189--1202
 [][][][][][][][][]  [][][][][][][][][]  [][][][][][][][][]  [][][][][][][][][]
  [][][][][][][][][][]  [][][][][][][][][]$ \TU/lmr/m/n/10 — implemented as \TU/
 lmtt/m/n/10 phi_powers(n)
  []
 
 
-Underfull \hbox (badness 1087) in paragraph at lines 1175--1188
+Underfull \hbox (badness 1087) in paragraph at lines 1189--1202
 \TU/lmr/m/n/10 in \TU/lmtt/m/n/10 textbook.models\TU/lmr/m/n/10 . Read as a \TU
 /lmr/m/it/10 subscript\TU/lmr/m/n/10 , the stepping ratio is the Fibonacci quot
 ient $[][][][][]$,
@@ -1664,17 +1664,17 @@ File: ../figures/part_0_living-pem.png Graphic file (type bmp)
 <../figures/part_0_living-pem.png>
  [37] [38]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 1577.
+(Font)              scaled to size 9.0pt on input line 1602.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 1577.
+(Font)              scaled to size 6.0pt on input line 1602.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 9.00082pt on input line 1577.
+(Font)              scaled to size 9.00082pt on input line 1602.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00055pt on input line 1577.
+(Font)              scaled to size 6.00055pt on input line 1602.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 8.99904pt on input line 1577.
+(Font)              scaled to size 8.99904pt on input line 1602.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 1577.
+(Font)              scaled to size 5.99936pt on input line 1602.
  [39]
 File: ../figures/mermaid_inline/inline_mermaid_0002_be594eb5838d.png Graphic fi
 le (type bmp)
@@ -1683,7 +1683,7 @@ File: ../figures/mermaid_inline/inline_mermaid_0003_106c3c99f16e.png Graphic fi
 le (type bmp)
 <../figures/mermaid_inline/inline_mermaid_0003_106c3c99f16e.png>
  [40] [41] [42] [43] [44]
-Underfull \hbox (badness 3657) in paragraph at lines 2033--2049
+Underfull \hbox (badness 3657) in paragraph at lines 2060--2076
 [][]\TU/lmr/bx/n/10 living-pem[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 catalog-
 architecture[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 engine-shelf[][]\TU/lmr/m/
 n/10 , [][]\TU/lmr/bx/n/10 omni-lattice[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10
@@ -1692,7 +1692,7 @@ TU/lmr/bx/n/10 honesty-first[][]\TU/lmr/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 4254) in paragraph at lines 2033--2049
+Underfull \hbox (badness 4254) in paragraph at lines 2060--2076
 [][]\TU/lmr/bx/n/10 narrative-empirical-operational-tiers[][]\TU/lmr/m/n/10 , [
 ][]\TU/lmr/bx/n/10 fair-exchange[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 golden
 -ratio[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 fractal-constant[][]\TU/lmr/m/n/
@@ -1703,7 +1703,7 @@ Underfull \hbox (badness 4254) in paragraph at lines 2033--2049
 File: ../figures/part_0_tensor-decoupling.png Graphic file (type bmp)
 <../figures/part_0_tensor-decoupling.png>
 
-Underfull \hbox (badness 1622) in paragraph at lines 2147--2155
+Underfull \hbox (badness 1622) in paragraph at lines 2180--2188
 []\TU/lmr/bx/n/10 Core concepts: [][]tensor-decoupling[][]\TU/lmr/m/n/10 , [][]
 \TU/lmr/bx/n/10 octave[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 digit[][]\TU/lmr
 /m/n/10 , [][]\TU/lmr/bx/n/10 catalog-architecture[][]\TU/lmr/m/n/10 , [][]\TU/
@@ -1718,81 +1718,79 @@ le (type bmp)
 File: ../figures/part_0_master-synthesis.png Graphic file (type bmp)
 <../figures/part_0_master-synthesis.png>
  [54]
-Underfull \hbox (badness 2229) in paragraph at lines 2801--2803
+Underfull \hbox (badness 2229) in paragraph at lines 2842--2844
 []\TU/lmr/bx/n/10 Bridge to computation: \TU/lmtt/m/n/10 t e x t b o o k . m o
 d e l s . o c t a v e _ t e r m\TU/lmr/m/n/10 , \TU/lmtt/m/n/10 phi_fibonacci\T
 U/lmr/m/n/10 , \TU/lmtt/m/n/10 phi_powers\TU/lmr/m/n/10 ,
  []
 
 [55] [56]
-Overfull \hbox (17.71498pt too wide) in paragraph at lines 3012--3012
+Overfull \hbox (17.71498pt too wide) in paragraph at lines 3055--3055
 []|\TU/lmr/m/n/10 dimensionless|
  []
 
-
-Overfull \hbox (1.8028pt too wide) in paragraph at lines 3074--3074
+[57]
+Overfull \hbox (1.8028pt too wide) in paragraph at lines 3117--3117
 \TU/lmr/m/n/10 planet
  []
 
 
-Overfull \hbox (23.6428pt too wide) in paragraph at lines 3076--3076
+Overfull \hbox (23.6428pt too wide) in paragraph at lines 3119--3119
 []|\TU/lmr/m/n/10 Technology
  []
 
 
-Overfull \hbox (5.44281pt too wide) in paragraph at lines 3076--3076
+Overfull \hbox (5.44281pt too wide) in paragraph at lines 3119--3119
 \TU/lmr/m/n/10 evolves|
  []
 
 
-Overfull \hbox (18.0928pt too wide) in paragraph at lines 3078--3078
+Overfull \hbox (18.0928pt too wide) in paragraph at lines 3121--3121
 []|\TU/lmr/m/n/10 Humanity
  []
 
 
-Overfull \hbox (4.6828pt too wide) in paragraph at lines 3078--3078
+Overfull \hbox (4.6828pt too wide) in paragraph at lines 3121--3121
 \TU/lmr/m/n/10 sponds|
  []
 
-[57]
 File: ../figures/mermaid_inline/inline_mermaid_0005_a1945ca7ec26.png Graphic fi
 le (type bmp)
 <../figures/mermaid_inline/inline_mermaid_0005_a1945ca7ec26.png>
 
-
 LaTeX Warning: Reference `tbl:part_0_master-synthesis_cascade' on page 58 undef
-ined on input line 3089.
+ined on input line 3132.
 
-[58]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 3118.
-
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 3161.
+[58]
 
 LaTeX Warning: Reference `tbl:part_0_master-synthesis_egs' on page 59 undefined
- on input line 3139.
+ on input line 3182.
 
 [59]
 
 LaTeX Warning: Reference `tbl:part_0_master-synthesis_cascade' on page 60 undef
-ined on input line 3211.
+ined on input line 3255.
 
 
 LaTeX Warning: Reference `tbl:part_0_master-synthesis_cascade' on page 60 undef
-ined on input line 3243.
+ined on input line 3288.
 
 [60]
 
 LaTeX Warning: Reference `tbl:part_0_master-synthesis_egs' on page 61 undefined
- on input line 3315.
+ on input line 3360.
 
 
 LaTeX Warning: Reference `tbl:part_0_master-synthesis_cascade' on page 61 undef
-ined on input line 3318.
+ined on input line 3363.
 
 [61]
 File: ../figures/part_0_octave-map.png Graphic file (type bmp)
 <../figures/part_0_octave-map.png>
- [62] [63] [64] [65]
+ [62] [63]
+ignored: Infinite glue shrinkage found in box being split [64] [65]
 File: ../figures/mermaid_inline/inline_mermaid_0006_3691fb6f05db.png Graphic fi
 le (type bmp)
 <../figures/mermaid_inline/inline_mermaid_0006_3691fb6f05db.png>
@@ -1802,7 +1800,7 @@ File: ../figures/part_I_unit-intro.png Graphic file (type bmp)
  [69]
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 70 undefined
-on input line 4003.
+on input line 4064.
 
 [70]
 File: ../figures/part_I_fractal-constant.png Graphic file (type bmp)
@@ -1810,28 +1808,16 @@ File: ../figures/part_I_fractal-constant.png Graphic file (type bmp)
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 71 undefined
-on input line 4094.
+on input line 4161.
 
 [71] [72]
 
 Package natbib Warning: Citation `mendez2026volumetricStorage' on page 73 undef
-ined on input line 4218.
+ined on input line 4287.
 
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 4237.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 4237.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.0011pt on input line 4237.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00073pt on input line 4237.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 4237.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 4237.
 
 LaTeX Warning: Reference `tbl:part_I_fractal-constant_octave-term' on page 73 u
-ndefined on input line 4271.
+ndefined on input line 4340.
 
 File: ../figures/mermaid_inline/inline_mermaid_0007_6ac568748639.png Graphic fi
 le (type bmp)
@@ -1842,39 +1828,51 @@ ex-text;!
 [74]
 
 LaTeX Warning: Reference `tbl:part_I_fractal-constant_filings' on page 75 undef
-ined on input line 4382.
+ined on input line 4452.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 75 undefined
-on input line 4410.
+on input line 4480.
 
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 4489.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 4489.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 12.0011pt on input line 4489.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 8.00073pt on input line 4489.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 11.99872pt on input line 4489.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 7.99915pt on input line 4489.
 
 LaTeX Warning: Reference `tbl:part_I_fractal-constant_palindrome' on page 75 un
-defined on input line 4440.
+defined on input line 4510.
 
 [75] [76]
 
 LaTeX Warning: Reference `tbl:part_I_fractal-constant_filings' on page 77 undef
-ined on input line 4604.
+ined on input line 4676.
 
 [77]
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 78 undefined
-on input line 4650.
+on input line 4722.
 
 
 Package natbib Warning: Citation `mendez2026volumetricStorage' on page 78 undef
-ined on input line 4654.
+ined on input line 4726.
 
 
 LaTeX Warning: Reference `tbl:part_I_fractal-constant_filings' on page 78 undef
-ined on input line 4682.
+ined on input line 4754.
 
 [78]
 File: ../figures/part_I_prime-parity.png Graphic file (type bmp)
 <../figures/part_I_prime-parity.png>
 
-Underfull \hbox (badness 1371) in paragraph at lines 4764--4770
+Underfull \hbox (badness 1371) in paragraph at lines 4839--4845
 []\TU/lmr/bx/n/10 Core concepts: [][]prime-parity[][]\TU/lmr/m/n/10 , [][]\TU/l
 mr/bx/n/10 binary-dyad-anchor[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 irreducib
 le-minimum-set[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 fractal-
@@ -1887,47 +1885,47 @@ le (type bmp)
  [80]
 
 LaTeX Warning: Reference `tbl:part_I_prime-parity_oddsets' on page 81 undefined
- on input line 4890.
+ on input line 4967.
 
 
 ignored: Infinite glue shrinkage found in box being split [81]
 
 Package natbib Warning: Citation `mendez2026volumetricStorage' on page 82 undef
-ined on input line 4923.
+ined on input line 5000.
 
 
-Underfull \hbox (badness 1043) in paragraph at lines 4912--4924
+Underfull \hbox (badness 1043) in paragraph at lines 4989--5001
 \TU/lmr/m/n/10 cannot be decomposed into smaller integer factors, so a product
 of prime powers names exactly
  []
 
 
 LaTeX Warning: Reference `tbl:part_I_prime-parity_parameters' on page 82 undefi
-ned on input line 4962.
+ned on input line 5039.
 
 [82]
 
 LaTeX Warning: Reference `tbl:part_I_prime-parity_oddsets' on page 83 undefined
- on input line 5041.
+ on input line 5118.
 
 [83]
 
 Package natbib Warning: Citation `mendez2026volumetricStorage' on page 84 undef
-ined on input line 5135.
+ined on input line 5214.
 
 
-Underfull \hbox (badness 2903) in paragraph at lines 5131--5137
+Underfull \hbox (badness 2903) in paragraph at lines 5210--5216
 []\TU/lmr/bx/n/10 Prime-indexed addressing. \TU/lmr/m/n/10 The odd irreducible
 sets, composed with the anchor via
  []
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 84 undefined
-on input line 5143.
+on input line 5222.
 
 
 LaTeX Warning: Reference `tbl:part_I_prime-parity_parameters' on page 84 undefi
-ned on input line 5164.
+ned on input line 5243.
 
 [84] [85]
 File: ../figures/part_I_holographic-rhyme.png Graphic file (type bmp)
@@ -1935,12 +1933,12 @@ File: ../figures/part_I_holographic-rhyme.png Graphic file (type bmp)
  [86]
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 87 undefined
-on input line 5389.
+on input line 5473.
 
 [87] [88] [89]
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 90 undefined
-on input line 5736.
+on input line 5823.
 
 [90]
 File: ../figures/mermaid_inline/inline_mermaid_0009_944730969968.png Graphic fi
@@ -1949,11 +1947,11 @@ le (type bmp)
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 91 undefined
-on input line 5771.
+on input line 5858.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 91 undefined
-on input line 5803.
+on input line 5890.
 
 [91] [92]
 File: ../figures/part_I_multidimensional-rhyme.png Graphic file (type bmp)
@@ -1961,11 +1959,11 @@ File: ../figures/part_I_multidimensional-rhyme.png Graphic file (type bmp)
  [93] [94]
 
 Package natbib Warning: Citation `mendez2026volumetricStorage' on page 95 undef
-ined on input line 6020.
+ined on input line 6112.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 95 undefined
-on input line 6021.
+on input line 6113.
 
 [95]
 File: ../figures/mermaid_inline/inline_mermaid_0010_bd86fb5449f7.png Graphic fi
@@ -1974,15 +1972,15 @@ le (type bmp)
  [96] [97] [98]
 
 Package natbib Warning: Citation `mendez2026volumetricStorage' on page 99 undef
-ined on input line 6357.
+ined on input line 6452.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 99 undefined
-on input line 6414.
+on input line 6509.
 
 
 Package natbib Warning: Citation `mendez2026volumetricStorage' on page 99 undef
-ined on input line 6418.
+ined on input line 6513.
 
 [99] [100]
 File: ../figures/part_I_topology-void.png Graphic file (type bmp)
@@ -1990,161 +1988,163 @@ File: ../figures/part_I_topology-void.png Graphic file (type bmp)
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 101 undefined
- on input line 6484.
+ on input line 6584.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 101 undefined
- on input line 6501.
+ on input line 6601.
 
 [101]
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 102 undefined
- on input line 6537.
+ on input line 6637.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 102 undefined
- on input line 6563.
+ on input line 6663.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 102 undefined
- on input line 6565.
+ on input line 6665.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 102 undefined
- on input line 6577.
+ on input line 6677.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 102 undefined
- on input line 6581.
+ on input line 6681.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 102 undefined
- on input line 6585.
+ on input line 6685.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 102 undefined
- on input line 6592.
+ on input line 6692.
 
 
 Package natbib Warning: Citation `mendez2026volumetricStorage' on page 102 unde
-fined on input line 6594.
+fined on input line 6694.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 102 undefined
- on input line 6597.
+ on input line 6697.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 102 undefined
- on input line 6602.
+ on input line 6702.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 102 undefined
- on input line 6623.
+ on input line 6723.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 102 undefined
- on input line 6625.
+ on input line 6725.
 
 [102]
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 103 undefined
- on input line 6686.
+ on input line 6786.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 103 undefined
- on input line 6701.
+ on input line 6801.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 103 undefined
- on input line 6704.
+ on input line 6804.
 
+[103]
 File: ../figures/mermaid_inline/inline_mermaid_0011_a5a44c35bfee.png Graphic fi
 le (type bmp)
 <../figures/mermaid_inline/inline_mermaid_0011_a5a44c35bfee.png>
 
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 103 undefined
- on input line 6736.
 
-[103]
-ignored: Infinite glue shrinkage found in box being split [104]
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 104 undefined
+ on input line 6836.
 
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 105 undefined
- on input line 6798.
-
+[104]
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 105 undefined
- on input line 6804.
-
-
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 105 undefined
- on input line 6829.
-
-
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 105 undefined
- on input line 6834.
-
-
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 105 undefined
- on input line 6871.
-
-[105]
-
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 106 undefined
  on input line 6898.
 
 
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 105 undefined
+ on input line 6904.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 105 undefined
+ on input line 6929.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 105 undefined
+ on input line 6934.
+
+
+ignored: Infinite glue shrinkage found in box being split [105]
+
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 106 undefined
- on input line 6920.
+ on input line 6971.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 106 undefined
- on input line 6935.
+ on input line 6998.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 106 undefined
- on input line 6940.
+ on input line 7020.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 106 undefined
- on input line 6947.
+ on input line 7035.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 106 undefined
+ on input line 7040.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 106 undefined
+ on input line 7047.
 
 [106]
 
 Package natbib Warning: Citation `mendez2026volumetricStorage' on page 107 unde
-fined on input line 6964.
+fined on input line 7065.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 107 undefined
- on input line 6984.
+ on input line 7085.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 107 undefined
- on input line 6993.
+ on input line 7094.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 107 undefined
- on input line 6998.
+ on input line 7099.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 107 undefined
- on input line 7020.
+ on input line 7121.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 107 undefined
- on input line 7026.
+ on input line 7127.
 
 
 Package natbib Warning: Citation `mendez2026volumetricStorage' on page 107 unde
-fined on input line 7032.
+fined on input line 7133.
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 107 undefined
- on input line 7039.
+ on input line 7140.
 
 [107]
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 108 undefined
- on input line 7068.
+ on input line 7169.
 
 [108]
 File: ../figures/part_I_higgs-awareness.png Graphic file (type bmp)
@@ -2154,11 +2154,24 @@ File: ../figures/mermaid_inline/inline_mermaid_0012_55cb68972bb7.png Graphic fi
 le (type bmp)
 <../figures/mermaid_inline/inline_mermaid_0012_55cb68972bb7.png>
  [111]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 7384.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 7384.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 7447.
+
 Missing character: There is no ≈ (U+2248) in font [lmmono10-italic]:!
 Missing character: There is no ≈ (U+2248) in font [lmmono10-italic]:!
+[112]
 Missing character: There is no ≈ (U+2248) in font [lmmono10-italic]:!
-[112] [113]
-Underfull \hbox (badness 3158) in paragraph at lines 7515--7522
+[113]
+Underfull \hbox (badness 3158) in paragraph at lines 7623--7630
 [][]\TU/lmr/bx/n/10 higgs-gate[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 transduc
 tion-line[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 eddy-current-mirror[][]\TU/lm
 r/m/n/10 , [][]\TU/lmr/bx/n/10 viscosity-of-light[][]\TU/lmr/m/n/10 , [][]\TU/l
@@ -2167,28 +2180,28 @@ mr/bx/n/10 narrative-empirical-
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 114 undefined
- on input line 7541.
+ on input line 7649.
 
 [114] [115]
 File: ../figures/part_II_unit-intro.png Graphic file (type bmp)
 <../figures/part_II_unit-intro.png>
  [116] [117]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 7684.
+(Font)              scaled to size 14.4pt on input line 7795.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 14.4013pt on input line 7684.
+(Font)              scaled to size 14.4013pt on input line 7795.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 14.39845pt on input line 7684.
+(Font)              scaled to size 14.39845pt on input line 7795.
 File: ../figures/part_II_proton-theater.png Graphic file (type bmp)
 <../figures/part_II_proton-theater.png>
  [118]
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 119 undefined
- on input line 7814.
+ on input line 7929.
 
 
 Package natbib Warning: Citation `mendez2026volumetricStorage' on page 119 unde
-fined on input line 7818.
+fined on input line 7933.
 
 File: ../figures/mermaid_inline/inline_mermaid_0013_708ce55060a8.png Graphic fi
 le (type bmp)
@@ -2206,23 +2219,23 @@ text;!
 Missing character: There is no ≈ (U+2248) in font [lmmono10-italic]:!
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 123 undefined
- on input line 8119.
+ on input line 8234.
 
 Missing character: There is no ℏ (U+210F) in font [lmroman10-regular]:mapping=t
 ex-text;!
 
 Package natbib Warning: Citation `mendez2026volumetricStorage' on page 123 unde
-fined on input line 8196.
+fined on input line 8313.
 
 [123]
 Missing character: There is no ℏ (U+210F) in font [lmroman10-regular]:mapping=t
 ex-text;!
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 124 undefined
- on input line 8221.
+ on input line 8338.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8228--8239
+Underfull \hbox (badness 10000) in paragraph at lines 8345--8356
 [][]\TU/lmr/bx/n/10 proton-space[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 electr
 on-theater[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 fractal-constant[][]\TU/lmr/
 m/n/10 , [][]\TU/lmr/bx/n/10 golden-ratio[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/
@@ -2230,7 +2243,7 @@ m/n/10 , [][]\TU/lmr/bx/n/10 golden-ratio[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/
  []
 
 
-Underfull \hbox (badness 2012) in paragraph at lines 8228--8239
+Underfull \hbox (badness 2012) in paragraph at lines 8345--8356
 \TU/lmr/bx/n/10 architecture[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 honesty-fi
 rst[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 fair-exchange[][]\TU/lmr/m/n/10 , [
 ][]\TU/lmr/bx/n/10 prime-parity[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 topolog
@@ -2239,11 +2252,11 @@ y-of-the-void[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 singularity-
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 124 undefined
- on input line 8255.
+ on input line 8372.
 
 
 Package natbib Warning: Citation `mendez2026volumetricStorage' on page 124 unde
-fined on input line 8262.
+fined on input line 8379.
 
 [124] [125]
 File: ../figures/part_II_viscosity-light.png Graphic file (type bmp)
@@ -2251,16 +2264,16 @@ File: ../figures/part_II_viscosity-light.png Graphic file (type bmp)
  [126] [127]
 
 LaTeX Warning: Reference `tbl:part_II_viscosity-light_parameters' on page 128 u
-ndefined on input line 8495.
+ndefined on input line 8618.
 
 
 LaTeX Warning: Reference `tbl:part_II_viscosity-light_family' on page 128 undef
-ined on input line 8540.
+ined on input line 8663.
 
 [128]
 
 LaTeX Warning: Reference `tbl:part_II_viscosity-light_family' on page 129 undef
-ined on input line 8564.
+ined on input line 8687.
 
 File: ../figures/mermaid_inline/inline_mermaid_0014_c1a35e50a964.png Graphic fi
 le (type bmp)
@@ -2268,10 +2281,10 @@ le (type bmp)
 [129] [130]
 
 LaTeX Warning: Reference `tbl:part_II_viscosity-light_family' on page 131 undef
-ined on input line 8671.
+ined on input line 8794.
 
 [131]
-Underfull \hbox (badness 4819) in paragraph at lines 8776--8787
+Underfull \hbox (badness 4819) in paragraph at lines 8901--8912
 [][]\TU/lmr/bx/n/10 viscosity-of-light[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10
 eddy-current-mirror[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 transduction-line[]
 []\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 c-bridge[][]\TU/lmr/m/n/10 , [][]\TU/lmr
@@ -2280,7 +2293,7 @@ eddy-current-mirror[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 transduction-line[]
 
 
 LaTeX Warning: Reference `tbl:part_II_viscosity-light_family' on page 132 undef
-ined on input line 8830.
+ined on input line 8955.
 
 [132]
 File: ../figures/part_II_eddy-current-mirror.png Graphic file (type bmp)
@@ -2303,21 +2316,21 @@ File: ../figures/part_II_metrological-overlap.png Graphic file (type bmp)
  [147]
 
 LaTeX Warning: Reference `tbl:part_II_metrological-overlap_parameters' on page
-148 undefined on input line 10060.
+148 undefined on input line 10202.
 
 [148]
 
 LaTeX Warning: Reference `tbl:part_II_metrological-overlap_gears' on page 149 u
-ndefined on input line 10170.
+ndefined on input line 10313.
 
 
 LaTeX Warning: Reference `tbl:part_II_metrological-overlap_parameters' on page
-149 undefined on input line 10242.
+149 undefined on input line 10385.
 
 [149]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 10282.
+(hyperref)                removing `subscript' on input line 10425.
 
 [150]
 File: ../figures/mermaid_inline/inline_mermaid_0017_4f87a8f095a8.png Graphic fi
@@ -2326,7 +2339,7 @@ le (type bmp)
  [151] [152]
 
 LaTeX Warning: Reference `tbl:part_II_metrological-overlap_gears' on page 153 u
-ndefined on input line 10609.
+ndefined on input line 10754.
 
 [153] [154]
 File: ../figures/part_II_metamorphic-octaves.png Graphic file (type bmp)
@@ -2338,11 +2351,11 @@ le (type bmp)
  [157]
 
 LaTeX Warning: Reference `tbl:part_II_metamorphic-octaves_filing' on page 158 u
-ndefined on input line 10871.
+ndefined on input line 11020.
 
 
 LaTeX Warning: Reference `tbl:part_II_metamorphic-octaves_densification' on pag
-e 158 undefined on input line 10936.
+e 158 undefined on input line 11085.
 
 [158] [159] [160] [161] [162]
 File: ../figures/part_II_planetary-core.png Graphic file (type bmp)
@@ -2352,7 +2365,7 @@ File: ../figures/mermaid_inline/inline_mermaid_0019_4738c5a20287.png Graphic fi
 le (type bmp)
 <../figures/mermaid_inline/inline_mermaid_0019_4738c5a20287.png>
  [166] [167] [168]
-Underfull \hbox (badness 3312) in paragraph at lines 11796--11810
+Underfull \hbox (badness 3312) in paragraph at lines 11952--11966
 [][]\TU/lmr/bx/n/10 catalog-architecture[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/1
 0 engine-shelf[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 octave[][]\TU/lmr/m/n/10
  , [][]\TU/lmr/bx/n/10 digit[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 honesty-fi
@@ -2361,7 +2374,7 @@ rst[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 fair-exchange[][]\TU/lmr/m/n/10 , [
  []
 
 
-Underfull \hbox (badness 6641) in paragraph at lines 11796--11810
+Underfull \hbox (badness 6641) in paragraph at lines 11952--11966
 \TU/lmr/bx/n/10 empirical-operational-tiers[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/
 n/10 tensor-decoupling[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 metrological-ove
 rlap[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 topology-of-the-void[][]\TU/lmr/m/
@@ -2370,7 +2383,7 @@ n/10 ,
 
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 169 undefined
- on input line 11829.
+ on input line 11985.
 
 [169]
 File: ../figures/part_II_singularity-crystal.png Graphic file (type bmp)
@@ -2378,7 +2391,7 @@ File: ../figures/part_II_singularity-crystal.png Graphic file (type bmp)
  [170]
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 171 undefined
- on input line 12039.
+ on input line 12197.
 
 [171]
 ignored: Infinite glue shrinkage found in box being split [172] [173]
@@ -2388,12 +2401,12 @@ le (type bmp)
  [174]
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 175 undefined
- on input line 12374.
+ on input line 12534.
 
 [175]
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 176 undefined
- on input line 12454.
+ on input line 12614.
 
 [176] [177]
 File: ../figures/part_III_unit-intro.png Graphic file (type bmp)
@@ -2406,16 +2419,17 @@ File: ../figures/mermaid_inline/inline_mermaid_0021_949451162c6f.png Graphic fi
 le (type bmp)
 <../figures/mermaid_inline/inline_mermaid_0021_949451162c6f.png>
  [182]
-Underfull \hbox (badness 10000) in paragraph at lines 12917--12929
+Underfull \hbox (badness 10000) in paragraph at lines 13084--13096
 []\TU/lmr/m/n/10 With $[][] [] []$, the first six exponent-convention rungs are
  $[][] []
  []
 
-[183] [184] [185] [186]
+[183]
+ignored: Infinite glue shrinkage found in box being split [184] [185] [186]
 File: ../figures/part_III_protein-folding.png Graphic file (type bmp)
 <../figures/part_III_protein-folding.png>
  [187]
-Underfull \hbox (badness 1400) in paragraph at lines 13292--13295
+Underfull \hbox (badness 1400) in paragraph at lines 13466--13469
 []\TU/lmr/bx/n/10 Bridge to computation: \TU/lmtt/m/n/10 t e x t b o o k . m o
 d e l s . u n i q u e _ a d d r e s s\TU/lmr/m/n/10 , \TU/lmtt/m/n/10 octave_te
 rm\TU/lmr/m/n/10 , \TU/lmtt/m/n/10 phi_powers\TU/lmr/m/n/10 ,
@@ -2426,7 +2440,7 @@ File: ../figures/mermaid_inline/inline_mermaid_0022_3e689861ecb1.png Graphic fi
 le (type bmp)
 <../figures/mermaid_inline/inline_mermaid_0022_3e689861ecb1.png>
  [190] [191] [192]
-Underfull \hbox (badness 1325) in paragraph at lines 13689--13699
+Underfull \hbox (badness 1325) in paragraph at lines 13866--13876
 [][]\TU/lmr/bx/n/10 prime-container[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 bin
 ary-dyad-anchor[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 irreducible-minimum-set
 [][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 prime-parity[][]\TU/lmr/m/n/10 , [][]\
@@ -2439,49 +2453,49 @@ File: ../figures/part_III_volumetric-storage.png Graphic file (type bmp)
 
 
 Package natbib Warning: Citation `mendez2026volumetricStorage' on page 194 unde
-fined on input line 13797.
+fined on input line 13977.
 
 [194]
 
 Package natbib Warning: Citation `mendez2026volumetricStorage' on page 195 unde
-fined on input line 13878.
+fined on input line 14058.
 
 
 Package natbib Warning: Citation `mendez2026volumetricStorage' on page 195 unde
-fined on input line 13890.
+fined on input line 14071.
 
 
 Package natbib Warning: Citation `mendez2026volumetricStorage' on page 195 unde
-fined on input line 13913.
+fined on input line 14094.
 
 File: ../figures/mermaid_inline/inline_mermaid_0023_b3bab4d4ffcc.png Graphic fi
 le (type bmp)
 <../figures/mermaid_inline/inline_mermaid_0023_b3bab4d4ffcc.png>
 
 Package natbib Warning: Citation `mendez2026volumetricStorage' on page 195 unde
-fined on input line 13927.
+fined on input line 14108.
 
 [195]
 
 Package natbib Warning: Citation `mendez2026volumetricStorage' on page 196 unde
-fined on input line 13948.
+fined on input line 14129.
 
 
 Package natbib Warning: Citation `mendez2026volumetricStorage' on page 196 unde
-fined on input line 13961.
+fined on input line 14142.
 
 [196]
 ignored: Infinite glue shrinkage found in box being split [197]
 
 Package natbib Warning: Citation `mendez2026volumetricStorage' on page 198 unde
-fined on input line 14097.
+fined on input line 14278.
 
 
 Package natbib Warning: Citation `mendez2026volumetricStorage' on page 198 unde
-fined on input line 14174.
+fined on input line 14356.
 
 [198]
-Underfull \hbox (badness 5460) in paragraph at lines 14262--14274
+Underfull \hbox (badness 5460) in paragraph at lines 14445--14457
 [][]\TU/lmr/bx/n/10 volumetric-storage[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10
 binary-dyad-anchor[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 prime-parity[][]\TU/
 lmr/m/n/10 , [][]\TU/lmr/bx/n/10 prime-container[][]\TU/lmr/m/n/10 , [][]\TU/lm
@@ -2491,7 +2505,7 @@ r/bx/n/10 fractal-constant[][]\TU/lmr/m/n/10 ,
 [199]
 
 Package natbib Warning: Citation `mendez2026volumetricStorage' on page 200 unde
-fined on input line 14285.
+fined on input line 14468.
 
 [200]
 File: ../figures/part_III_kinematic-recycling.png Graphic file (type bmp)
@@ -2499,7 +2513,7 @@ File: ../figures/part_III_kinematic-recycling.png Graphic file (type bmp)
  [201]
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 202 undefined
- on input line 14499.
+ on input line 14688.
 
 [202]
 File: ../figures/mermaid_inline/inline_mermaid_0024_a7b7ac5303f1.png Graphic fi
@@ -2509,12 +2523,12 @@ le (type bmp)
 ignored: Infinite glue shrinkage found in box being split [204] [205]
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 206 undefined
- on input line 14867.
+ on input line 15059.
 
 [206]
 
 Package natbib Warning: Citation `mendez2026topologyVoid' on page 207 undefined
- on input line 14921.
+ on input line 15113.
 
 [207] [208]
 File: ../figures/part_III_moving-up-stack.png Graphic file (type bmp)
@@ -2531,16 +2545,16 @@ File: ../figures/part_III_reality-bridge.png Graphic file (type bmp)
  [217]
 
 LaTeX Warning: Reference `tbl:part_III_reality-bridge_routing' on page 218 unde
-fined on input line 15704.
+fined on input line 15907.
 
 [218]
 
 LaTeX Warning: Reference `tbl:part_III_reality-bridge_roles' on page 219 undefi
-ned on input line 15787.
+ned on input line 15991.
 
 
 LaTeX Warning: Reference `tbl:part_III_reality-bridge_roles' on page 219 undefi
-ned on input line 15862.
+ned on input line 16066.
 
 [219]
 File: ../figures/mermaid_inline/inline_mermaid_0026_118e61e56401.png Graphic fi
@@ -2549,12 +2563,12 @@ le (type bmp)
 
 
 LaTeX Warning: Reference `tbl:part_III_reality-bridge_octave' on page 220 undef
-ined on input line 15886.
+ined on input line 16090.
 
 [220]
 
 LaTeX Warning: Reference `tbl:part_III_reality-bridge_throttle' on page 221 und
-efined on input line 15968.
+efined on input line 16172.
 
 [221] [222] [223] [224] [225]
 File: ../figures/part_III_y-chromosome.png Graphic file (type bmp)
@@ -2565,7 +2579,7 @@ le (type bmp)
 <../figures/mermaid_inline/inline_mermaid_0027_5d734f208234.png>
 
 ignored: Infinite glue shrinkage found in box being split [229] [230]
-Underfull \hbox (badness 5161) in paragraph at lines 16782--16788
+Underfull \hbox (badness 5161) in paragraph at lines 16996--17002
 []\TU/lmr/bx/n/10 The holographic grammar \TU/lmr/m/n/10 is the four-pillar rhy
 me family of [[][]Mendez[][], [][]2026g[][]]; the
  []
@@ -2573,88 +2587,86 @@ me family of [[][]Mendez[][], [][]2026g[][]]; the
 [231] [232]
 File: ../figures/part_III_pdvsa-gateway.png Graphic file (type bmp)
 <../figures/part_III_pdvsa-gateway.png>
- [233] [234]
-Overfull \hbox (8.74341pt too wide) in paragraph at lines 17180--17180
+ [233] [234] [235]
+Overfull \hbox (8.74341pt too wide) in paragraph at lines 17401--17401
 []|\TU/lmr/m/n/10 Integration
  []
 
-[235]
 File: ../figures/mermaid_inline/inline_mermaid_0028_50f89c1e9338.png Graphic fi
 le (type bmp)
 <../figures/mermaid_inline/inline_mermaid_0028_50f89c1e9338.png>
-
-ignored: Infinite glue shrinkage found in box being split [236]
-ignored: Infinite glue shrinkage f
-ound in box being split [237] [238] [239] [240]
+[236] [237]
+ignored: Infinite glue shrinkage found in box being split [238] [239] [240] [
+241]
 File: ../figures/part_III_macro-protein.png Graphic file (type bmp)
 <../figures/part_III_macro-protein.png>
- [241] [242]
-Overfull \hbox (9.30788pt too wide) detected at line 17765
+ [242] [243]
+Overfull \hbox (9.30788pt too wide) detected at line 17992
 [][][][][][][]
  []
 
 
-LaTeX Warning: Reference `tbl:part_III_macro-protein_parameters' on page 243 un
-defined on input line 17774.
+LaTeX Warning: Reference `tbl:part_III_macro-protein_parameters' on page 244 un
+defined on input line 18001.
 
-[243]
+[244]
 File: ../figures/mermaid_inline/inline_mermaid_0029_34cef6cea7ff.png Graphic fi
 le (type bmp)
 <../figures/mermaid_inline/inline_mermaid_0029_34cef6cea7ff.png>
- [244] [245] [246]
+ [245] [246] [247]
 
-Package natbib Warning: Citation `mendez2026volumetricStorage' on page 247 unde
-fined on input line 18121.
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 248 unde
+fined on input line 18350.
 
-[247] [248]
+[248] [249]
 File: ../figures/part_III_invisible-frontier.png Graphic file (type bmp)
 <../figures/part_III_invisible-frontier.png>
- [249] [250] [251]
+ [250] [251] [252] [253]
 File: ../figures/mermaid_inline/inline_mermaid_0030_bd2cdac98c48.png Graphic fi
 le (type bmp)
 <../figures/mermaid_inline/inline_mermaid_0030_bd2cdac98c48.png>
- [252] [253] [254] [255]
+ [254] [255] [256] [257]
 File: ../figures/part_III_frontiers.png Graphic file (type bmp)
 <../figures/part_III_frontiers.png>
 
 
-LaTeX Warning: Reference `tbl:part_III_frontiers_quadrant' on page 256 undefine
-d on input line 18815.
+LaTeX Warning: Reference `tbl:part_III_frontiers_quadrant' on page 258 undefine
+d on input line 19054.
 
-[256]
+[258]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 18879.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 19118.
 
- [257]
+ [259]
 
-Package natbib Warning: Multiple citation on page 258: same authors and year
+Package natbib Warning: Multiple citation on page 260: same authors and year
 (natbib)                without distinguishing extra letter,
 (natbib)                appears as question mark.
 
 
-LaTeX Warning: Reference `tbl:part_III_frontiers_netzero' on page 258 undefined
- on input line 18941.
+LaTeX Warning: Reference `tbl:part_III_frontiers_netzero' on page 260 undefined
+ on input line 19181.
 
-[258] [259]
+[260] [261]
 
-LaTeX Warning: Reference `tbl:part_III_frontiers_quadrantparams' on page 260 un
-defined on input line 19148.
+LaTeX Warning: Reference `tbl:part_III_frontiers_quadrantparams' on page 262 un
+defined on input line 19389.
 
-[260]
+[262]
 
-LaTeX Warning: Reference `tbl:part_III_frontiers_quadrant' on page 261 undefine
-d on input line 19182.
+LaTeX Warning: Reference `tbl:part_III_frontiers_quadrant' on page 263 undefine
+d on input line 19423.
 
 File: ../figures/mermaid_inline/inline_mermaid_0031_2fd02c44cac8.png Graphic fi
 le (type bmp)
 <../figures/mermaid_inline/inline_mermaid_0031_2fd02c44cac8.png>
-[261]
+[263]
 
-LaTeX Warning: Reference `tbl:part_III_frontiers_quadrant' on page 262 undefine
-d on input line 19293.
+LaTeX Warning: Reference `tbl:part_III_frontiers_quadrant' on page 264 undefine
+d on input line 19534.
 
 
-Underfull \hbox (badness 3492) in paragraph at lines 19301--19316
+Underfull \hbox (badness 3492) in paragraph at lines 19542--19557
 [][]\TU/lmr/bx/n/10 Omni-Lattice[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 octave
 [][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 engine-shelf[][]\TU/lmr/m/n/10 , [][]\
 TU/lmr/bx/n/10 catalog-architecture[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 hon
@@ -2662,43 +2674,43 @@ esty-first[][]\TU/lmr/m/n/10 , [][]\TU/lmr/bx/n/10 master-synthesis[][]\TU/lmr/
 m/n/10 ,
  []
 
-[262] [263] [264] [265] [266] [267] [268] [269]
+[264] [265] [266] [267] [268] [269] [270] [271]
 
-LaTeX Warning: Reference `tbl:part_0_master-synthesis_egs' on page 270 undefine
-d on input line 19902.
+LaTeX Warning: Reference `tbl:part_0_master-synthesis_egs' on page 272 undefine
+d on input line 20143.
 
-[270] [271] [272] [273] [274] [275]
+[272] [273] [274] [275] [276] [277]
 Missing character: There is no ≈ (U+2248) in font [lmmono10-italic]:!
 Missing character: There is no ≈ (U+2248) in font [lmmono10-italic]:!
-[276] [277] [278] [279] [280] [281] [282]
+[278] [279] [280] [281] [282] [283] [284]
 
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 283 undefined
- on input line 20836.
-
-
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 283 undefined
- on input line 20853.
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 285 undefined
+ on input line 21077.
 
 
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 283 undefined
- on input line 20879.
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 285 undefined
+ on input line 21094.
 
 
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 283 undefined
- on input line 20915.
-
-[283]
-
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 284 undefined
- on input line 20959.
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 285 undefined
+ on input line 21120.
 
 
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 284 undefined
- on input line 20967.
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 285 undefined
+ on input line 21156.
 
-[284] [285] [286] [287]
+[285]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 286 undefined
+ on input line 21200.
+
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 286 undefined
+ on input line 21208.
+
+[286] [287] [288] [289]
 Missing character: There is no ≈ (U+2248) in font [lmmono10-italic]:!
-[288] [289] [290] [291] [292] [293] [294]
+[290] [291] [292] [293] [294] [295] [296]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                Make it at least 22.76004pt, for example:
@@ -2706,19 +2718,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-10.76004pt}.
 
-[295]
+[297]
 
-LaTeX Warning: Reference `tbl:part_II_metrological-overlap_worked' on page 296
-undefined on input line 21827.
+LaTeX Warning: Reference `tbl:part_II_metrological-overlap_worked' on page 298
+undefined on input line 22068.
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt):
-(fancyhdr)                Make it at least 22.76004pt, for example:
-(fancyhdr)                \setlength{\headheight}{22.76004pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-10.76004pt}.
-
-[296]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                Make it at least 22.76004pt, for example:
@@ -2726,148 +2730,156 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-10.76004pt}.
 
-[297] [298] [299] [300] [301]
-Underfull \hbox (badness 10000) in paragraph at lines 22262--22269
+[298]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt):
+(fancyhdr)                Make it at least 22.76004pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.76004pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-10.76004pt}.
+
+[299] [300] [301] [302] [303]
+Underfull \hbox (badness 10000) in paragraph at lines 22503--22510
 []\TU/lmr/bx/n/10 Verify against the backbone. \TU/lmr/m/n/10 Check both hand r
 esults with the tested
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22262--22269
+Underfull \hbox (badness 10000) in paragraph at lines 22503--22510
 \TU/lmr/m/n/10 function: \TU/lmtt/m/n/10 net_zero_balance(inflows=[3, 5, 8, 13]
 , outflows=[16, 13]) $[]$ 0
  []
 
-[302] [303]
+[304] [305]
 Missing character: There is no φ (U+03C6) in font [lmmono10-italic]:!
 Missing character: There is no φ (U+03C6) in font [lmmono10-italic]:!
 Missing character: There is no φ (U+03C6) in font [lmmono10-italic]:!
 Missing character: There is no ≈ (U+2248) in font [lmmono10-italic]:!
-[304] [305] [306] [307]
+[306] [307] [308] [309]
 
-Package natbib Warning: Citation `mendez2026volumetricStorage' on page 308 unde
-fined on input line 22668.
-
-
-Package natbib Warning: Citation `mendez2026volumetricStorage' on page 308 unde
-fined on input line 22674.
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 310 unde
+fined on input line 22909.
 
 
-Underfull \hbox (badness 1838) in paragraph at lines 22724--22728
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 310 unde
+fined on input line 22915.
+
+
+Underfull \hbox (badness 1838) in paragraph at lines 22965--22969
 []\TU/lmr/bx/n/10 Verify against the model. \TU/lmr/m/n/10 Run the computationa
 l workflow below and compare each
  []
 
-[308] [309]
-Underfull \hbox (badness 1082) in paragraph at lines 22884--22897
+[310] [311]
+Underfull \hbox (badness 1082) in paragraph at lines 23125--23138
 []\TU/lmr/bx/n/10 Index the octave states. \TU/lmr/m/n/10 Using the exponent co
 nvention, confirm the ladder of eq. [][]71[][]
  []
 
 
-Underfull \hbox (badness 1776) in paragraph at lines 22884--22897
+Underfull \hbox (badness 1776) in paragraph at lines 23125--23138
 \TU/lmr/m/n/10 state 2 (cyclist) at $[][] [] [][][][][][][][]$ — the first thre
 e rungs of the pinned $[][]$ sequence
  []
 
-[310] [311] [312] [313] [314]
+[312] [313] [314] [315] [316]
 
-LaTeX Warning: Reference `tbl:part_III_reality-bridge_routing' on page 315 unde
-fined on input line 23198.
+LaTeX Warning: Reference `tbl:part_III_reality-bridge_routing' on page 317 unde
+fined on input line 23439.
 
-[315] [316] [317] [318]
+[317] [318] [319] [320]
 Missing character: There is no ≈ (U+2248) in font [lmmono10-italic]:!
-[319] [320] [321] [322] [323] [324]
+[321] [322] [323] [324] [325] [326]
 Missing character: There is no ≈ (U+2248) in font [lmmono10-italic]:!
-[325]
-ignored: Infinite glue shrinkage found in box being split [326]
+[327]
+ignored: Infinite glue shrinkage found in box being split [328]
 Missing character: There is no ≈ (U+2248) in font [lmmono10-italic]:!
 Missing character: There is no ≈ (U+2248) in font [lmmono10-italic]:!
-[327] [328] [329] [330] [331] [332] [333] [334] [335] [336] [337]
+[329] [330] [331] [332] [333] [334] [335] [336] [337] [338] [339]
 
-LaTeX Warning: Reference `tbl:part_I_fractal-constant_filings' on page 338 unde
-fined on input line 24770.
-
-
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 338 undefined
- on input line 24831.
-
-[338] [339] [340] [341] [342] [343] [344] [345]
-
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 346 undefined
- on input line 25214.
+LaTeX Warning: Reference `tbl:part_I_fractal-constant_filings' on page 340 unde
+fined on input line 25011.
 
 
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 346 undefined
- on input line 25222.
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 340 undefined
+ on input line 25072.
+
+[340] [341] [342] [343] [344] [345] [346] [347]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 348 undefined
+ on input line 25455.
 
 
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 346 undefined
- on input line 25228.
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 348 undefined
+ on input line 25463.
 
 
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 346 undefined
- on input line 25251.
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 348 undefined
+ on input line 25469.
 
 
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 346 undefined
- on input line 25269.
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 348 undefined
+ on input line 25492.
 
 
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 346 undefined
- on input line 25276.
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 348 undefined
+ on input line 25510.
 
 
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 346 undefined
- on input line 25287.
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 348 undefined
+ on input line 25517.
 
 
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 346 undefined
- on input line 25301.
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 348 undefined
+ on input line 25528.
 
-[346] [347] [348]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 348 undefined
+ on input line 25542.
+
+[348] [349] [350]
 Missing character: There is no ℏ (U+210F) in font [lmroman10-italic]:mapping=te
 x-text;!
 
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 349 undefined
- on input line 25430.
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 351 undefined
+ on input line 25671.
 
 
-Package natbib Warning: Citation `mendez2026volumetricStorage' on page 349 unde
-fined on input line 25430.
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 351 unde
+fined on input line 25671.
 
 
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 349 undefined
- on input line 25506.
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 351 undefined
+ on input line 25747.
 
-[349]
+[351]
 
-Package natbib Warning: Citation `mendez2026volumetricStorage' on page 350 unde
-fined on input line 25522.
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 352 unde
+fined on input line 25763.
 
-[350]
+[352]
 
-LaTeX Warning: Reference `tbl:part_II_viscosity-light_family' on page 351 undef
-ined on input line 25575.
+LaTeX Warning: Reference `tbl:part_II_viscosity-light_family' on page 353 undef
+ined on input line 25816.
 
 
-LaTeX Warning: Reference `tbl:part_II_viscosity-light_family' on page 351 undef
-ined on input line 25604.
+LaTeX Warning: Reference `tbl:part_II_viscosity-light_family' on page 353 undef
+ined on input line 25845.
 
-[351] [352]
-Underfull \hbox (badness 1092) in paragraph at lines 25711--25723
+[353] [354]
+Underfull \hbox (badness 1092) in paragraph at lines 25952--25964
 []\TU/lmr/m/n/10 The paper insists “eddy currents are the \TU/lmr/m/it/10 analo
 gy\TU/lmr/m/n/10 ” and disclaims “relativity retirement” and
  []
 
-[353] [354] [355] [356]
+[355] [356] [357] [358]
 
-LaTeX Warning: Reference `tbl:part_II_metrological-overlap_worked' on page 357
-undefined on input line 25905.
+LaTeX Warning: Reference `tbl:part_II_metrological-overlap_worked' on page 359
+undefined on input line 26146.
 
-[357] [358] [359] [360] [361] [362]
+[359] [360] [361] [362] [363] [364]
 
-Package natbib Warning: Multiple citation on page 363: same authors and year
+Package natbib Warning: Multiple citation on page 365: same authors and year
 (natbib)                without distinguishing extra letter,
 (natbib)                appears as question mark.
 
@@ -2878,7 +2890,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-10.76004pt}.
 
-[363]
+[365]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                Make it at least 22.76004pt, for example:
@@ -2886,1042 +2898,1042 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-10.76004pt}.
 
-[364] [365] [366] [367]
+[366] [367] [368] [369]
 
-Package natbib Warning: Citation `mendez2026volumetricStorage' on page 368 unde
-fined on input line 26532.
-
-
-Package natbib Warning: Citation `mendez2026volumetricStorage' on page 368 unde
-fined on input line 26537.
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 370 unde
+fined on input line 26773.
 
 
-Package natbib Warning: Citation `mendez2026volumetricStorage' on page 368 unde
-fined on input line 26545.
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 370 unde
+fined on input line 26778.
 
 
-Package natbib Warning: Citation `mendez2026volumetricStorage' on page 368 unde
-fined on input line 26596.
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 370 unde
+fined on input line 26786.
 
-[368] [369]
 
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 370 undefined
- on input line 26730.
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 370 unde
+fined on input line 26837.
 
-[370]
+[370] [371]
 
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 371 undefined
- on input line 26751.
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 372 undefined
+ on input line 26971.
 
-[371] [372] [373] [374] [375] [376] [377] [378] [379] [380] [381] [382]
-[383] [384] [385] [386] [387] [388]
-Overfull \hbox (174.95433pt too wide) in paragraph at lines 27881--27883
+[372]
+
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 373 undefined
+ on input line 26992.
+
+[373] [374] [375] [376] [377] [378] [379] [380] [381] [382] [383] [384]
+[385] [386] [387] [388] [389] [390]
+Overfull \hbox (174.95433pt too wide) in paragraph at lines 28122--28124
 []|$[][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]
  [][][][][][][][][][] [][][][][][][][][]$
  []
 
 
-Overfull \hbox (18.0387pt too wide) in paragraph at lines 27935--27937
+Overfull \hbox (18.0387pt too wide) in paragraph at lines 28176--28178
 [][][][][] [][][] [][][] [][][] []
  []
 
 
-Overfull \hbox (18.0387pt too wide) in paragraph at lines 27944--27946
+Overfull \hbox (18.0387pt too wide) in paragraph at lines 28185--28187
 [][][][][] [][][] [][][] [][][] []
  []
 
 
-Overfull \hbox (57.40028pt too wide) in paragraph at lines 27947--27949
+Overfull \hbox (57.40028pt too wide) in paragraph at lines 28188--28190
 \TU/lmtt/m/n/10 unique_address([2,3],[2,1])
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [389]
+ignored: Infinite glue shrinkage found in box being split [391]
 ignored: Infinite glue shrinkage f
-ound in box being split [390]
+ound in box being split [392]
 File: ../figures/gallery/gallery_octave_register.png Graphic file (type bmp)
 <../figures/gallery/gallery_octave_register.png>
- [391]
-ignored: Infinite glue shrinkage found in box being split [392] [393]
+ [393]
+ignored: Infinite glue shrinkage found in box being split [394] [395]
 File: ../figures/gallery/gallery_phi_ladder.png Graphic file (type bmp)
 <../figures/gallery/gallery_phi_ladder.png>
- [394]
+ [396]
 File: ../figures/gallery/gallery_prime_line.png Graphic file (type bmp)
 <../figures/gallery/gallery_prime_line.png>
 
 
-Package natbib Warning: Citation `mendez2026volumetricStorage' on page 395 unde
-fined on input line 28228.
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 397 unde
+fined on input line 28469.
 
-[395] [396] [397]
-Overfull \hbox (117.22653pt too wide) in paragraph at lines 28416--28416
+[397] [398] [399]
+Overfull \hbox (117.22653pt too wide) in paragraph at lines 28657--28657
 []|\TU/lmtt/m/n/10 [@eq:part_0_living-pem_phi_egs]|
  []
 
 
-Overfull \hbox (67.44661pt too wide) in paragraph at lines 28417--28417
+Overfull \hbox (67.44661pt too wide) in paragraph at lines 28658--28658
 []|\TU/lmtt/m/n/10 [@sec:part_0_living-pem]|
  []
 
 
-Overfull \hbox (117.22653pt too wide) in paragraph at lines 28421--28421
+Overfull \hbox (117.22653pt too wide) in paragraph at lines 28662--28662
 []|\TU/lmtt/m/n/10 [@eq:part_0_living-pem_catalog]|
  []
 
 
-Overfull \hbox (67.44661pt too wide) in paragraph at lines 28422--28422
+Overfull \hbox (67.44661pt too wide) in paragraph at lines 28663--28663
 []|\TU/lmtt/m/n/10 [@sec:part_0_living-pem]|
  []
 
 
-Overfull \hbox (117.22653pt too wide) in paragraph at lines 28426--28426
+Overfull \hbox (117.22653pt too wide) in paragraph at lines 28667--28667
 []|\TU/lmtt/m/n/10 [@eq:part_0_living-pem_balance]|
  []
 
 
-Overfull \hbox (67.44661pt too wide) in paragraph at lines 28427--28427
+Overfull \hbox (67.44661pt too wide) in paragraph at lines 28668--28668
 []|\TU/lmtt/m/n/10 [@sec:part_0_living-pem]|
  []
 
 
-Overfull \hbox (174.97653pt too wide) in paragraph at lines 28432--28432
+Overfull \hbox (174.97653pt too wide) in paragraph at lines 28673--28673
 []|\TU/lmtt/m/n/10 [@eq:part_0_master-synthesis_catalog_size]|
  []
 
 
-Overfull \hbox (98.94661pt too wide) in paragraph at lines 28433--28433
+Overfull \hbox (98.94661pt too wide) in paragraph at lines 28674--28674
 []|\TU/lmtt/m/n/10 [@sec:part_0_master-synthesis]|
  []
 
 
-Overfull \hbox (127.72653pt too wide) in paragraph at lines 28437--28437
+Overfull \hbox (127.72653pt too wide) in paragraph at lines 28678--28678
 []|\TU/lmtt/m/n/10 [@eq:part_0_master-synthesis_egs]|
  []
 
 
-Overfull \hbox (98.94661pt too wide) in paragraph at lines 28438--28438
+Overfull \hbox (98.94661pt too wide) in paragraph at lines 28679--28679
 []|\TU/lmtt/m/n/10 [@sec:part_0_master-synthesis]|
  []
 
 
-Overfull \hbox (15.59142pt too wide) in paragraph at lines 28439--28442
+Overfull \hbox (15.59142pt too wide) in paragraph at lines 28680--28683
 [][] [][][][][]$
  []
 
 
-Overfull \hbox (174.97653pt too wide) in paragraph at lines 28443--28443
+Overfull \hbox (174.97653pt too wide) in paragraph at lines 28684--28684
 []|\TU/lmtt/m/n/10 [@eq:part_0_master-synthesis_octave_index]|
  []
 
 
-Overfull \hbox (98.94661pt too wide) in paragraph at lines 28444--28444
+Overfull \hbox (98.94661pt too wide) in paragraph at lines 28685--28685
 []|\TU/lmtt/m/n/10 [@sec:part_0_master-synthesis]|
  []
 
 
-Overfull \hbox (122.47653pt too wide) in paragraph at lines 28449--28449
+Overfull \hbox (122.47653pt too wide) in paragraph at lines 28690--28690
 []|\TU/lmtt/m/n/10 [@eq:part_0_octave-map_exponent]|
  []
 
 
-Overfull \hbox (67.44661pt too wide) in paragraph at lines 28450--28450
+Overfull \hbox (67.44661pt too wide) in paragraph at lines 28691--28691
 []|\TU/lmtt/m/n/10 [@sec:part_0_octave-map]|
  []
 
 
-Overfull \hbox (127.72653pt too wide) in paragraph at lines 28454--28454
+Overfull \hbox (127.72653pt too wide) in paragraph at lines 28695--28695
 []|\TU/lmtt/m/n/10 [@eq:part_0_octave-map_subscript]|
  []
 
 
-Overfull \hbox (67.44661pt too wide) in paragraph at lines 28455--28455
+Overfull \hbox (67.44661pt too wide) in paragraph at lines 28696--28696
 []|\TU/lmtt/m/n/10 [@sec:part_0_octave-map]|
  []
 
 
-Overfull \hbox (117.22653pt too wide) in paragraph at lines 28460--28460
+Overfull \hbox (117.22653pt too wide) in paragraph at lines 28701--28701
 []|\TU/lmtt/m/n/10 [@eq:part_0_octave-map_catalog]|
  []
 
 
-Overfull \hbox (67.44661pt too wide) in paragraph at lines 28461--28461
+Overfull \hbox (67.44661pt too wide) in paragraph at lines 28702--28702
 []|\TU/lmtt/m/n/10 [@sec:part_0_octave-map]|
  []
 
 
-Overfull \hbox (127.72653pt too wide) in paragraph at lines 28466--28466
+Overfull \hbox (127.72653pt too wide) in paragraph at lines 28707--28707
 []|\TU/lmtt/m/n/10 [@eq:part_0_orientation_register]|
  []
 
 
-Overfull \hbox (72.69661pt too wide) in paragraph at lines 28467--28467
+Overfull \hbox (72.69661pt too wide) in paragraph at lines 28708--28708
 []|\TU/lmtt/m/n/10 [@sec:part_0_orientation]|
  []
 
 
-Overfull \hbox (117.22653pt too wide) in paragraph at lines 28470--28470
+Overfull \hbox (117.22653pt too wide) in paragraph at lines 28711--28711
 []|\TU/lmtt/m/n/10 [@eq:part_0_orientation_octave]|
  []
 
 
-Overfull \hbox (72.69661pt too wide) in paragraph at lines 28471--28471
+Overfull \hbox (72.69661pt too wide) in paragraph at lines 28712--28712
 []|\TU/lmtt/m/n/10 [@sec:part_0_orientation]|
  []
 
 
-Overfull \hbox (148.72653pt too wide) in paragraph at lines 28475--28475
+Overfull \hbox (148.72653pt too wide) in paragraph at lines 28716--28716
 []|\TU/lmtt/m/n/10 [@eq:part_0_tensor-decoupling_ladder]|
  []
 
 
-Overfull \hbox (104.19661pt too wide) in paragraph at lines 28476--28476
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 28717--28717
 []|\TU/lmtt/m/n/10 [@sec:part_0_tensor-decoupling]|
  []
 
 
-Overfull \hbox (143.47653pt too wide) in paragraph at lines 28480--28480
+Overfull \hbox (143.47653pt too wide) in paragraph at lines 28721--28721
 []|\TU/lmtt/m/n/10 [@eq:part_0_tensor-decoupling_block]|
  []
 
 
-Overfull \hbox (104.19661pt too wide) in paragraph at lines 28481--28481
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 28722--28722
 []|\TU/lmtt/m/n/10 [@sec:part_0_tensor-decoupling]|
  []
 
 
-Overfull \hbox (153.97653pt too wide) in paragraph at lines 28484--28484
+Overfull \hbox (153.97653pt too wide) in paragraph at lines 28725--28725
 []|\TU/lmtt/m/n/10 [@eq:part_0_tensor-decoupling_catalog]|
  []
 
 
-Overfull \hbox (104.19661pt too wide) in paragraph at lines 28485--28485
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 28726--28726
 []|\TU/lmtt/m/n/10 [@sec:part_0_tensor-decoupling]|
  []
 
 
-Overfull \hbox (143.47653pt too wide) in paragraph at lines 28489--28489
+Overfull \hbox (143.47653pt too wide) in paragraph at lines 28730--28730
 []|\TU/lmtt/m/n/10 [@eq:part_0_tensor-decoupling_model]|
  []
 
 
-Overfull \hbox (104.19661pt too wide) in paragraph at lines 28490--28490
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 28731--28731
 []|\TU/lmtt/m/n/10 [@sec:part_0_tensor-decoupling]|
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [398]
+ignored: Infinite glue shrinkage found in box being split [400]
 ignored: Infinite glue shrinkage f
-ound in box being split [399]
+ound in box being split [401]
 ignored: Infinite glue shrinkage found in box being split [
-400]
-Overfull \hbox (174.97653pt too wide) in paragraph at lines 28535--28535
+402]
+Overfull \hbox (174.97653pt too wide) in paragraph at lines 28776--28776
 []|\TU/lmtt/m/n/10 [@eq:part_I_fractal-constant_phi-identity]|
  []
 
 
-Overfull \hbox (98.94661pt too wide) in paragraph at lines 28536--28536
+Overfull \hbox (98.94661pt too wide) in paragraph at lines 28777--28777
 []|\TU/lmtt/m/n/10 [@sec:part_I_fractal-constant]|
  []
 
 
-Overfull \hbox (169.72653pt too wide) in paragraph at lines 28541--28541
+Overfull \hbox (169.72653pt too wide) in paragraph at lines 28782--28782
 []|\TU/lmtt/m/n/10 [@eq:part_I_fractal-constant_octave-term]|
  []
 
 
-Overfull \hbox (98.94661pt too wide) in paragraph at lines 28542--28542
+Overfull \hbox (98.94661pt too wide) in paragraph at lines 28783--28783
 []|\TU/lmtt/m/n/10 [@sec:part_I_fractal-constant]|
  []
 
 
-Overfull \hbox (4.9366pt too wide) in paragraph at lines 28543--28547
+Overfull \hbox (4.9366pt too wide) in paragraph at lines 28784--28788
 \TU/lmr/m/n/10 nent/subscript
  []
 
 
-Overfull \hbox (164.47653pt too wide) in paragraph at lines 28548--28548
+Overfull \hbox (164.47653pt too wide) in paragraph at lines 28789--28789
 []|\TU/lmtt/m/n/10 [@eq:part_I_fractal-constant_palindrome]|
  []
 
 
-Overfull \hbox (98.94661pt too wide) in paragraph at lines 28549--28549
+Overfull \hbox (98.94661pt too wide) in paragraph at lines 28790--28790
 []|\TU/lmtt/m/n/10 [@sec:part_I_fractal-constant]|
  []
 
 
-Overfull \hbox (164.47653pt too wide) in paragraph at lines 28553--28553
+Overfull \hbox (164.47653pt too wide) in paragraph at lines 28794--28794
 []|\TU/lmtt/m/n/10 [@eq:part_I_fractal-constant_phi-powers]|
  []
 
 
-Overfull \hbox (98.94661pt too wide) in paragraph at lines 28554--28554
+Overfull \hbox (98.94661pt too wide) in paragraph at lines 28795--28795
 []|\TU/lmtt/m/n/10 [@sec:part_I_fractal-constant]|
  []
 
 
-Overfull \hbox (132.97653pt too wide) in paragraph at lines 28558--28558
+Overfull \hbox (132.97653pt too wide) in paragraph at lines 28799--28799
 []|\TU/lmtt/m/n/10 [@eq:part_I_higgs-awareness_model]|
  []
 
 
-Overfull \hbox (93.69661pt too wide) in paragraph at lines 28559--28559
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28800--28800
 []|\TU/lmtt/m/n/10 [@sec:part_I_higgs-awareness]|
  []
 
 
-Overfull \hbox (169.72653pt too wide) in paragraph at lines 28564--28564
+Overfull \hbox (169.72653pt too wide) in paragraph at lines 28805--28805
 []|\TU/lmtt/m/n/10 [@eq:part_I_higgs-awareness_displacement]|
  []
 
 
-Overfull \hbox (93.69661pt too wide) in paragraph at lines 28565--28565
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28806--28806
 []|\TU/lmtt/m/n/10 [@sec:part_I_higgs-awareness]|
  []
 
 
-Overfull \hbox (143.47653pt too wide) in paragraph at lines 28570--28570
+Overfull \hbox (143.47653pt too wide) in paragraph at lines 28811--28811
 []|\TU/lmtt/m/n/10 [@eq:part_I_holographic-rhyme_field]|
  []
 
 
-Overfull \hbox (104.19661pt too wide) in paragraph at lines 28571--28571
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 28812--28812
 []|\TU/lmtt/m/n/10 [@sec:part_I_holographic-rhyme]|
  []
 
 
-Overfull \hbox (159.22653pt too wide) in paragraph at lines 28576--28576
+Overfull \hbox (159.22653pt too wide) in paragraph at lines 28817--28817
 []|\TU/lmtt/m/n/10 [@eq:part_I_holographic-rhyme_pairwise]|
  []
 
 
-Overfull \hbox (104.19661pt too wide) in paragraph at lines 28577--28577
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 28818--28818
 []|\TU/lmtt/m/n/10 [@sec:part_I_holographic-rhyme]|
  []
 
 
-Overfull \hbox (4.55342pt too wide) in paragraph at lines 28578--28581
+Overfull \hbox (4.55342pt too wide) in paragraph at lines 28819--28822
 [] [][][][][][][][] []
  []
 
 
-Overfull \hbox (169.72653pt too wide) in paragraph at lines 28582--28582
+Overfull \hbox (169.72653pt too wide) in paragraph at lines 28823--28823
 []|\TU/lmtt/m/n/10 [@eq:part_I_multidimensional-rhyme_field]|
  []
 
 
-Overfull \hbox (130.44661pt too wide) in paragraph at lines 28583--28583
+Overfull \hbox (130.44661pt too wide) in paragraph at lines 28824--28824
 []|\TU/lmtt/m/n/10 [@sec:part_I_multidimensional-rhyme]|
  []
 
 
-Overfull \hbox (164.47653pt too wide) in paragraph at lines 28588--28588
+Overfull \hbox (164.47653pt too wide) in paragraph at lines 28829--28829
 []|\TU/lmtt/m/n/10 [@eq:part_I_multidimensional-rhyme_xdyd]|
  []
 
 
-Overfull \hbox (130.44661pt too wide) in paragraph at lines 28589--28589
+Overfull \hbox (130.44661pt too wide) in paragraph at lines 28830--28830
 []|\TU/lmtt/m/n/10 [@sec:part_I_multidimensional-rhyme]|
  []
 
 
-Overfull \hbox (174.97653pt too wide) in paragraph at lines 28593--28593
+Overfull \hbox (174.97653pt too wide) in paragraph at lines 28834--28834
 []|\TU/lmtt/m/n/10 [@eq:part_I_multidimensional-rhyme_octave]|
  []
 
 
-Overfull \hbox (130.44661pt too wide) in paragraph at lines 28594--28594
+Overfull \hbox (130.44661pt too wide) in paragraph at lines 28835--28835
 []|\TU/lmtt/m/n/10 [@sec:part_I_multidimensional-rhyme]|
  []
 
 
-Overfull \hbox (117.22653pt too wide) in paragraph at lines 28598--28598
+Overfull \hbox (117.22653pt too wide) in paragraph at lines 28839--28839
 []|\TU/lmtt/m/n/10 [@eq:part_I_prime-parity_model]|
  []
 
 
-Overfull \hbox (77.94661pt too wide) in paragraph at lines 28599--28599
+Overfull \hbox (77.94661pt too wide) in paragraph at lines 28840--28840
 []|\TU/lmtt/m/n/10 [@sec:part_I_prime-parity]|
  []
 
 
-Overfull \hbox (138.22653pt too wide) in paragraph at lines 28604--28604
+Overfull \hbox (138.22653pt too wide) in paragraph at lines 28845--28845
 []|\TU/lmtt/m/n/10 [@eq:part_I_prime-parity_subscript]|
  []
 
 
-Overfull \hbox (77.94661pt too wide) in paragraph at lines 28605--28605
+Overfull \hbox (77.94661pt too wide) in paragraph at lines 28846--28846
 []|\TU/lmtt/m/n/10 [@sec:part_I_prime-parity]|
  []
 
 
-Overfull \hbox (122.47653pt too wide) in paragraph at lines 28608--28608
+Overfull \hbox (122.47653pt too wide) in paragraph at lines 28849--28849
 []|\TU/lmtt/m/n/10 [@eq:part_I_topology-void_pivot]|
  []
 
 
-Overfull \hbox (83.19661pt too wide) in paragraph at lines 28609--28609
+Overfull \hbox (83.19661pt too wide) in paragraph at lines 28850--28850
 []|\TU/lmtt/m/n/10 [@sec:part_I_topology-void]|
  []
 
 
-Overfull \hbox (122.47653pt too wide) in paragraph at lines 28614--28614
+Overfull \hbox (122.47653pt too wide) in paragraph at lines 28855--28855
 []|\TU/lmtt/m/n/10 [@eq:part_I_topology-void_model]|
  []
 
 
-Overfull \hbox (83.19661pt too wide) in paragraph at lines 28615--28615
+Overfull \hbox (83.19661pt too wide) in paragraph at lines 28856--28856
 []|\TU/lmtt/m/n/10 [@sec:part_I_topology-void]|
  []
 
 
-Overfull \hbox (117.22653pt too wide) in paragraph at lines 28618--28618
+Overfull \hbox (117.22653pt too wide) in paragraph at lines 28859--28859
 []|\TU/lmtt/m/n/10 [@eq:part_I_topology-void_well]|
  []
 
 
-Overfull \hbox (83.19661pt too wide) in paragraph at lines 28619--28619
+Overfull \hbox (83.19661pt too wide) in paragraph at lines 28860--28860
 []|\TU/lmtt/m/n/10 [@sec:part_I_topology-void]|
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [401]
+ignored: Infinite glue shrinkage found in box being split [403]
 ignored: Infinite glue shrinkage f
-ound in box being split [402]
+ound in box being split [404]
 ignored: Infinite glue shrinkage found in box being split [
-403]
-Overfull \hbox (148.72653pt too wide) in paragraph at lines 28666--28666
+405]
+Overfull \hbox (148.72653pt too wide) in paragraph at lines 28907--28907
 []|\TU/lmtt/m/n/10 [@eq:part_II_crystalline-field_facet]|
  []
 
 
-Overfull \hbox (109.44661pt too wide) in paragraph at lines 28667--28667
+Overfull \hbox (109.44661pt too wide) in paragraph at lines 28908--28908
 []|\TU/lmtt/m/n/10 [@sec:part_II_crystalline-field]|
  []
 
 
-Overfull \hbox (159.22653pt too wide) in paragraph at lines 28671--28671
+Overfull \hbox (159.22653pt too wide) in paragraph at lines 28912--28912
 []|\TU/lmtt/m/n/10 [@eq:part_II_crystalline-field_crystal]|
  []
 
 
-Overfull \hbox (109.44661pt too wide) in paragraph at lines 28672--28672
+Overfull \hbox (109.44661pt too wide) in paragraph at lines 28913--28913
 []|\TU/lmtt/m/n/10 [@sec:part_II_crystalline-field]|
  []
 
 
-Overfull \hbox (164.47653pt too wide) in paragraph at lines 28677--28677
+Overfull \hbox (164.47653pt too wide) in paragraph at lines 28918--28918
 []|\TU/lmtt/m/n/10 [@eq:part_II_crystalline-field_landauer]|
  []
 
 
-Overfull \hbox (109.44661pt too wide) in paragraph at lines 28678--28678
+Overfull \hbox (109.44661pt too wide) in paragraph at lines 28919--28919
 []|\TU/lmtt/m/n/10 [@sec:part_II_crystalline-field]|
  []
 
 
-Overfull \hbox (159.22653pt too wide) in paragraph at lines 28682--28682
+Overfull \hbox (159.22653pt too wide) in paragraph at lines 28923--28923
 []|\TU/lmtt/m/n/10 [@eq:part_II_eddy-current-mirror_model]|
  []
 
 
-Overfull \hbox (119.94661pt too wide) in paragraph at lines 28683--28683
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 28924--28924
 []|\TU/lmtt/m/n/10 [@sec:part_II_eddy-current-mirror]|
  []
 
 
-Overfull \hbox (174.97653pt too wide) in paragraph at lines 28687--28687
+Overfull \hbox (174.97653pt too wide) in paragraph at lines 28928--28928
 []|\TU/lmtt/m/n/10 [@eq:part_II_eddy-current-mirror_halflife]|
  []
 
 
-Overfull \hbox (119.94661pt too wide) in paragraph at lines 28688--28688
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 28929--28929
 []|\TU/lmtt/m/n/10 [@sec:part_II_eddy-current-mirror]|
  []
 
 
-Overfull \hbox (153.97653pt too wide) in paragraph at lines 28692--28692
+Overfull \hbox (153.97653pt too wide) in paragraph at lines 28933--28933
 []|\TU/lmtt/m/n/10 [@eq:part_II_eddy-current-mirror_drag]|
  []
 
 
-Overfull \hbox (119.94661pt too wide) in paragraph at lines 28693--28693
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 28934--28934
 []|\TU/lmtt/m/n/10 [@sec:part_II_eddy-current-mirror]|
  []
 
 
-Overfull \hbox (164.47653pt too wide) in paragraph at lines 28698--28698
+Overfull \hbox (164.47653pt too wide) in paragraph at lines 28939--28939
 []|\TU/lmtt/m/n/10 [@eq:part_II_metamorphic-octaves_filing]|
  []
 
 
-Overfull \hbox (119.94661pt too wide) in paragraph at lines 28699--28699
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 28940--28940
 []|\TU/lmtt/m/n/10 [@sec:part_II_metamorphic-octaves]|
  []
 
 
-Overfull \hbox (14.54662pt too wide) in paragraph at lines 28699--28702
+Overfull \hbox (14.54662pt too wide) in paragraph at lines 28940--28943
 \TU/lmr/m/n/10 magma/burnout,
  []
 
 
-Overfull \hbox (201.22653pt too wide) in paragraph at lines 28703--28703
+Overfull \hbox (201.22653pt too wide) in paragraph at lines 28944--28944
 []|\TU/lmtt/m/n/10 [@eq:part_II_metamorphic-octaves_densification]|
  []
 
 
-Overfull \hbox (119.94661pt too wide) in paragraph at lines 28704--28704
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 28945--28945
 []|\TU/lmtt/m/n/10 [@sec:part_II_metamorphic-octaves]|
  []
 
 
-Overfull \hbox (174.97653pt too wide) in paragraph at lines 28709--28709
+Overfull \hbox (174.97653pt too wide) in paragraph at lines 28950--28950
 []|\TU/lmtt/m/n/10 [@eq:part_II_metamorphic-octaves_marginal]|
  []
 
 
-Overfull \hbox (119.94661pt too wide) in paragraph at lines 28710--28710
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 28951--28951
 []|\TU/lmtt/m/n/10 [@sec:part_II_metamorphic-octaves]|
  []
 
 
-Overfull \hbox (164.47653pt too wide) in paragraph at lines 28715--28715
+Overfull \hbox (164.47653pt too wide) in paragraph at lines 28956--28956
 []|\TU/lmtt/m/n/10 [@eq:part_II_metrological-overlap_gears]|
  []
 
 
-Overfull \hbox (125.19661pt too wide) in paragraph at lines 28716--28716
+Overfull \hbox (125.19661pt too wide) in paragraph at lines 28957--28957
 []|\TU/lmtt/m/n/10 [@sec:part_II_metrological-overlap]|
  []
 
 
-Overfull \hbox (9.27785pt too wide) in paragraph at lines 28716--28719
+Overfull \hbox (9.27785pt too wide) in paragraph at lines 28957--28960
 [][][] [][] [][][] [][][] [][]$
  []
 
 
-Overfull \hbox (164.47653pt too wide) in paragraph at lines 28720--28720
+Overfull \hbox (164.47653pt too wide) in paragraph at lines 28961--28961
 []|\TU/lmtt/m/n/10 [@eq:part_II_metrological-overlap_model]|
  []
 
 
-Overfull \hbox (125.19661pt too wide) in paragraph at lines 28721--28721
+Overfull \hbox (125.19661pt too wide) in paragraph at lines 28962--28962
 []|\TU/lmtt/m/n/10 [@sec:part_II_metrological-overlap]|
  []
 
 
-Overfull \hbox (14.09021pt too wide) in paragraph at lines 28723--28725
+Overfull \hbox (14.09021pt too wide) in paragraph at lines 28964--28966
 [][][] [][][][][][] [][][][]$
  []
 
 
-Overfull \hbox (174.97653pt too wide) in paragraph at lines 28726--28726
+Overfull \hbox (174.97653pt too wide) in paragraph at lines 28967--28967
 []|\TU/lmtt/m/n/10 [@eq:part_II_metrological-overlap_octaves]|
  []
 
 
-Overfull \hbox (125.19661pt too wide) in paragraph at lines 28727--28727
+Overfull \hbox (125.19661pt too wide) in paragraph at lines 28968--28968
 []|\TU/lmtt/m/n/10 [@sec:part_II_metrological-overlap]|
  []
 
 
-Overfull \hbox (180.22653pt too wide) in paragraph at lines 28731--28731
+Overfull \hbox (180.22653pt too wide) in paragraph at lines 28972--28972
 []|\TU/lmtt/m/n/10 [@eq:part_II_metrological-overlap_mcatalog]|
  []
 
 
-Overfull \hbox (125.19661pt too wide) in paragraph at lines 28732--28732
+Overfull \hbox (125.19661pt too wide) in paragraph at lines 28973--28973
 []|\TU/lmtt/m/n/10 [@sec:part_II_metrological-overlap]|
  []
 
 
-Overfull \hbox (159.22653pt too wide) in paragraph at lines 28736--28736
+Overfull \hbox (159.22653pt too wide) in paragraph at lines 28977--28977
 []|\TU/lmtt/m/n/10 [@eq:part_II_planetary-core_phase_flip]|
  []
 
 
-Overfull \hbox (93.69661pt too wide) in paragraph at lines 28737--28737
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28978--28978
 []|\TU/lmtt/m/n/10 [@sec:part_II_planetary-core]|
  []
 
 
-Overfull \hbox (127.72653pt too wide) in paragraph at lines 28740--28740
+Overfull \hbox (127.72653pt too wide) in paragraph at lines 28981--28981
 []|\TU/lmtt/m/n/10 [@eq:part_II_planetary-core_band]|
  []
 
 
-Overfull \hbox (93.69661pt too wide) in paragraph at lines 28741--28741
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28982--28982
 []|\TU/lmtt/m/n/10 [@sec:part_II_planetary-core]|
  []
 
 
-Overfull \hbox (138.22653pt too wide) in paragraph at lines 28746--28746
+Overfull \hbox (138.22653pt too wide) in paragraph at lines 28987--28987
 []|\TU/lmtt/m/n/10 [@eq:part_II_proton-theater_filing]|
  []
 
 
-Overfull \hbox (93.69661pt too wide) in paragraph at lines 28747--28747
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28988--28988
 []|\TU/lmtt/m/n/10 [@sec:part_II_proton-theater]|
  []
 
 
-Overfull \hbox (148.72653pt too wide) in paragraph at lines 28751--28751
+Overfull \hbox (148.72653pt too wide) in paragraph at lines 28992--28992
 []|\TU/lmtt/m/n/10 [@eq:part_II_proton-theater_identity]|
  []
 
 
-Overfull \hbox (93.69661pt too wide) in paragraph at lines 28752--28752
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28993--28993
 []|\TU/lmtt/m/n/10 [@sec:part_II_proton-theater]|
  []
 
 
-Overfull \hbox (143.47653pt too wide) in paragraph at lines 28756--28756
+Overfull \hbox (143.47653pt too wide) in paragraph at lines 28997--28997
 []|\TU/lmtt/m/n/10 [@eq:part_II_proton-theater_octaves]|
  []
 
 
-Overfull \hbox (93.69661pt too wide) in paragraph at lines 28757--28757
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 28998--28998
 []|\TU/lmtt/m/n/10 [@sec:part_II_proton-theater]|
  []
 
 
-Overfull \hbox (143.47653pt too wide) in paragraph at lines 28761--28761
+Overfull \hbox (143.47653pt too wide) in paragraph at lines 29002--29002
 []|\TU/lmtt/m/n/10 [@eq:part_II_proton-theater_duality]|
  []
 
 
-Overfull \hbox (93.69661pt too wide) in paragraph at lines 28762--28762
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 29003--29003
 []|\TU/lmtt/m/n/10 [@sec:part_II_proton-theater]|
  []
 
 
-Overfull \hbox (138.22653pt too wide) in paragraph at lines 28766--28766
+Overfull \hbox (138.22653pt too wide) in paragraph at lines 29007--29007
 []|\TU/lmtt/m/n/10 [@eq:part_II_proton-theater_mirror]|
  []
 
 
-Overfull \hbox (93.69661pt too wide) in paragraph at lines 28767--28767
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 29008--29008
 []|\TU/lmtt/m/n/10 [@sec:part_II_proton-theater]|
  []
 
 
-Overfull \hbox (127.72653pt too wide) in paragraph at lines 28770--28771
+Overfull \hbox (127.72653pt too wide) in paragraph at lines 29011--29012
 []|\TU/lmtt/m/n/10 [@eq:part_II_proton-theater_step]|
  []
 
 
-Overfull \hbox (93.69661pt too wide) in paragraph at lines 28771--28771
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 29012--29012
 []|\TU/lmtt/m/n/10 [@sec:part_II_proton-theater]|
  []
 
 
-Overfull \hbox (169.72653pt too wide) in paragraph at lines 28775--28775
+Overfull \hbox (169.72653pt too wide) in paragraph at lines 29016--29016
 []|\TU/lmtt/m/n/10 [@eq:part_II_singularity-crystal_netzero]|
  []
 
 
-Overfull \hbox (119.94661pt too wide) in paragraph at lines 28776--28776
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 29017--29017
 []|\TU/lmtt/m/n/10 [@sec:part_II_singularity-crystal]|
  []
 
 
-Overfull \hbox (169.72653pt too wide) in paragraph at lines 28781--28781
+Overfull \hbox (169.72653pt too wide) in paragraph at lines 29022--29022
 []|\TU/lmtt/m/n/10 [@eq:part_II_singularity-crystal_crystal]|
  []
 
 
-Overfull \hbox (119.94661pt too wide) in paragraph at lines 28782--28782
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 29023--29023
 []|\TU/lmtt/m/n/10 [@sec:part_II_singularity-crystal]|
  []
 
 
-Overfull \hbox (164.47653pt too wide) in paragraph at lines 28786--28786
+Overfull \hbox (164.47653pt too wide) in paragraph at lines 29027--29027
 []|\TU/lmtt/m/n/10 [@eq:part_II_singularity-crystal_nodek0]|
  []
 
 
-Overfull \hbox (119.94661pt too wide) in paragraph at lines 28787--28787
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 29028--29028
 []|\TU/lmtt/m/n/10 [@sec:part_II_singularity-crystal]|
  []
 
 
-Overfull \hbox (180.22653pt too wide) in paragraph at lines 28792--28792
+Overfull \hbox (180.22653pt too wide) in paragraph at lines 29033--29033
 []|\TU/lmtt/m/n/10 [@eq:part_II_viscosity-light_viscous_floor]|
  []
 
 
-Overfull \hbox (98.94661pt too wide) in paragraph at lines 28793--28793
+Overfull \hbox (98.94661pt too wide) in paragraph at lines 29034--29034
 []|\TU/lmtt/m/n/10 [@sec:part_II_viscosity-light]|
  []
 
 
-Overfull \hbox (143.47653pt too wide) in paragraph at lines 28797--28797
+Overfull \hbox (143.47653pt too wide) in paragraph at lines 29038--29038
 []|\TU/lmtt/m/n/10 [@eq:part_II_viscosity-light_family]|
  []
 
 
-Overfull \hbox (98.94661pt too wide) in paragraph at lines 28798--28798
+Overfull \hbox (98.94661pt too wide) in paragraph at lines 29039--29039
 []|\TU/lmtt/m/n/10 [@sec:part_II_viscosity-light]|
  []
 
 
-Overfull \hbox (12.64745pt too wide) in paragraph at lines 28799--28802
+Overfull \hbox (12.64745pt too wide) in paragraph at lines 29040--29043
 [] [] [][][] [][] [][] [][] []$\TU/lmr/m/n/10 .|
  []
 
 
-Overfull \hbox (143.47653pt too wide) in paragraph at lines 28803--28803
+Overfull \hbox (143.47653pt too wide) in paragraph at lines 29044--29044
 []|\TU/lmtt/m/n/10 [@eq:part_II_viscosity-light_render]|
  []
 
 
-Overfull \hbox (98.94661pt too wide) in paragraph at lines 28804--28804
+Overfull \hbox (98.94661pt too wide) in paragraph at lines 29045--29045
 []|\TU/lmtt/m/n/10 [@sec:part_II_viscosity-light]|
  []
 
-[404]
-ignored: Infinite glue shrinkage found in box being split [405]
+[406]
+ignored: Infinite glue shrinkage found in box being split [407]
 ignored: Infinite glue shrink
-age found in box being split [406]
+age found in box being split [408]
 ignored: Infinite glue shrinkage found in box being sp
-lit [407]
-ignored: Infinite glue shrinkage found in box being split [408]
-Overfull \hbox (153.97653pt too wide) in paragraph at lines 28855--28855
+lit [409]
+ignored: Infinite glue shrinkage found in box being split [410]
+Overfull \hbox (153.97653pt too wide) in paragraph at lines 29096--29096
 []|\TU/lmtt/m/n/10 [@eq:part_III_cmos-protonic_shelf-map]|
  []
 
 
-Overfull \hbox (93.69661pt too wide) in paragraph at lines 28856--28856
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 29097--29097
 []|\TU/lmtt/m/n/10 [@sec:part_III_cmos-protonic]|
  []
 
 
-Overfull \hbox (138.22653pt too wide) in paragraph at lines 28860--28860
+Overfull \hbox (138.22653pt too wide) in paragraph at lines 29101--29101
 []|\TU/lmtt/m/n/10 [@eq:part_III_cmos-protonic_ladder]|
  []
 
 
-Overfull \hbox (93.69661pt too wide) in paragraph at lines 28861--28861
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 29102--29102
 []|\TU/lmtt/m/n/10 [@sec:part_III_cmos-protonic]|
  []
 
 
-Overfull \hbox (148.72653pt too wide) in paragraph at lines 28865--28865
+Overfull \hbox (148.72653pt too wide) in paragraph at lines 29106--29106
 []|\TU/lmtt/m/n/10 [@eq:part_III_cmos-protonic_capacity]|
  []
 
 
-Overfull \hbox (93.69661pt too wide) in paragraph at lines 28866--28866
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 29107--29107
 []|\TU/lmtt/m/n/10 [@sec:part_III_cmos-protonic]|
  []
 
 
-Overfull \hbox (127.72653pt too wide) in paragraph at lines 28870--28870
+Overfull \hbox (127.72653pt too wide) in paragraph at lines 29111--29111
 []|\TU/lmtt/m/n/10 [@eq:part_III_frontiers_net_zero]|
  []
 
 
-Overfull \hbox (72.69661pt too wide) in paragraph at lines 28871--28871
+Overfull \hbox (72.69661pt too wide) in paragraph at lines 29112--29112
 []|\TU/lmtt/m/n/10 [@sec:part_III_frontiers]|
  []
 
 
-Overfull \hbox (127.72653pt too wide) in paragraph at lines 28876--28876
+Overfull \hbox (127.72653pt too wide) in paragraph at lines 29117--29117
 []|\TU/lmtt/m/n/10 [@eq:part_III_frontiers_quadrant]|
  []
 
 
-Overfull \hbox (72.69661pt too wide) in paragraph at lines 28877--28877
+Overfull \hbox (72.69661pt too wide) in paragraph at lines 29118--29118
 []|\TU/lmtt/m/n/10 [@sec:part_III_frontiers]|
  []
 
 
-Overfull \hbox (174.97653pt too wide) in paragraph at lines 28880--28880
+Overfull \hbox (174.97653pt too wide) in paragraph at lines 29121--29121
 []|\TU/lmtt/m/n/10 [@eq:part_III_invisible-frontier_phiclimb]|
  []
 
 
-Overfull \hbox (119.94661pt too wide) in paragraph at lines 28881--28881
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 29122--29122
 []|\TU/lmtt/m/n/10 [@sec:part_III_invisible-frontier]|
  []
 
 
-Overfull \hbox (159.22653pt too wide) in paragraph at lines 28885--28885
+Overfull \hbox (159.22653pt too wide) in paragraph at lines 29126--29126
 []|\TU/lmtt/m/n/10 [@eq:part_III_invisible-frontier_model]|
  []
 
 
-Overfull \hbox (119.94661pt too wide) in paragraph at lines 28886--28886
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 29127--29127
 []|\TU/lmtt/m/n/10 [@sec:part_III_invisible-frontier]|
  []
 
 
-Overfull \hbox (211.72653pt too wide) in paragraph at lines 28891--28891
+Overfull \hbox (211.72653pt too wide) in paragraph at lines 29132--29132
 []|\TU/lmtt/m/n/10 [@eq:part_III_kinematic-recycling_velocity-scale]|
  []
 
 
-Overfull \hbox (125.19661pt too wide) in paragraph at lines 28892--28892
+Overfull \hbox (125.19661pt too wide) in paragraph at lines 29133--29133
 []|\TU/lmtt/m/n/10 [@sec:part_III_kinematic-recycling]|
  []
 
 
-Overfull \hbox (206.47653pt too wide) in paragraph at lines 28896--28896
+Overfull \hbox (206.47653pt too wide) in paragraph at lines 29137--29137
 []|\TU/lmtt/m/n/10 [@eq:part_III_kinematic-recycling_octave-ladder]|
  []
 
 
-Overfull \hbox (125.19661pt too wide) in paragraph at lines 28897--28897
+Overfull \hbox (125.19661pt too wide) in paragraph at lines 29138--29138
 []|\TU/lmtt/m/n/10 [@sec:part_III_kinematic-recycling]|
  []
 
 
-Overfull \hbox (195.97653pt too wide) in paragraph at lines 28901--28901
+Overfull \hbox (195.97653pt too wide) in paragraph at lines 29142--29142
 []|\TU/lmtt/m/n/10 [@eq:part_III_kinematic-recycling_round-robin]|
  []
 
 
-Overfull \hbox (125.19661pt too wide) in paragraph at lines 28902--28902
+Overfull \hbox (125.19661pt too wide) in paragraph at lines 29143--29143
 []|\TU/lmtt/m/n/10 [@sec:part_III_kinematic-recycling]|
  []
 
 
-Overfull \hbox (227.47653pt too wide) in paragraph at lines 28907--28907
+Overfull \hbox (227.47653pt too wide) in paragraph at lines 29148--29148
 []|\TU/lmtt/m/n/10 [@eq:part_III_kinematic-recycling_truckee-partition]|
  []
 
 
-Overfull \hbox (125.19661pt too wide) in paragraph at lines 28908--28908
+Overfull \hbox (125.19661pt too wide) in paragraph at lines 29149--29149
 []|\TU/lmtt/m/n/10 [@sec:part_III_kinematic-recycling]|
  []
 
 
-Overfull \hbox (132.97653pt too wide) in paragraph at lines 28913--28913
+Overfull \hbox (132.97653pt too wide) in paragraph at lines 29154--29154
 []|\TU/lmtt/m/n/10 [@eq:part_III_macro-protein_model]|
  []
 
 
-Overfull \hbox (93.69661pt too wide) in paragraph at lines 28914--28914
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 29155--29155
 []|\TU/lmtt/m/n/10 [@sec:part_III_macro-protein]|
  []
 
 
-Overfull \hbox (127.72653pt too wide) in paragraph at lines 28918--28918
+Overfull \hbox (127.72653pt too wide) in paragraph at lines 29159--29159
 []|\TU/lmtt/m/n/10 [@eq:part_III_macro-protein_band]|
  []
 
 
-Overfull \hbox (93.69661pt too wide) in paragraph at lines 28919--28919
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 29160--29160
 []|\TU/lmtt/m/n/10 [@sec:part_III_macro-protein]|
  []
 
 
-Overfull \hbox (143.47653pt too wide) in paragraph at lines 28924--28924
+Overfull \hbox (143.47653pt too wide) in paragraph at lines 29165--29165
 []|\TU/lmtt/m/n/10 [@eq:part_III_macro-protein_kleiber]|
  []
 
 
-Overfull \hbox (93.69661pt too wide) in paragraph at lines 28925--28925
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 29166--29166
 []|\TU/lmtt/m/n/10 [@sec:part_III_macro-protein]|
  []
 
 
-Overfull \hbox (138.22653pt too wide) in paragraph at lines 28929--28929
+Overfull \hbox (138.22653pt too wide) in paragraph at lines 29170--29170
 []|\TU/lmtt/m/n/10 [@eq:part_III_moving-up-stack_band]|
  []
 
 
-Overfull \hbox (104.19661pt too wide) in paragraph at lines 28930--28930
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 29171--29171
 []|\TU/lmtt/m/n/10 [@sec:part_III_moving-up-stack]|
  []
 
 
-Overfull \hbox (153.97653pt too wide) in paragraph at lines 28935--28935
+Overfull \hbox (153.97653pt too wide) in paragraph at lines 29176--29176
 []|\TU/lmtt/m/n/10 [@eq:part_III_moving-up-stack_cooling]|
  []
 
 
-Overfull \hbox (104.19661pt too wide) in paragraph at lines 28936--28936
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 29177--29177
 []|\TU/lmtt/m/n/10 [@sec:part_III_moving-up-stack]|
  []
 
 
-Overfull \hbox (32.07062pt too wide) in paragraph at lines 28937--28939
+Overfull \hbox (32.07062pt too wide) in paragraph at lines 29178--29180
 [][][][][] []
  []
 
 
-Overfull \hbox (153.97653pt too wide) in paragraph at lines 28940--28940
+Overfull \hbox (153.97653pt too wide) in paragraph at lines 29181--29181
 []|\TU/lmtt/m/n/10 [@eq:part_III_moving-up-stack_harmony]|
  []
 
 
-Overfull \hbox (104.19661pt too wide) in paragraph at lines 28941--28941
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 29182--29182
 []|\TU/lmtt/m/n/10 [@sec:part_III_moving-up-stack]|
  []
 
 
-Overfull \hbox (132.97653pt too wide) in paragraph at lines 28945--28945
+Overfull \hbox (132.97653pt too wide) in paragraph at lines 29186--29186
 []|\TU/lmtt/m/n/10 [@eq:part_III_pdvsa-gateway_model]|
  []
 
 
-Overfull \hbox (93.69661pt too wide) in paragraph at lines 28946--28946
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 29187--29187
 []|\TU/lmtt/m/n/10 [@sec:part_III_pdvsa-gateway]|
  []
 
 
-Overfull \hbox (138.22653pt too wide) in paragraph at lines 28950--28950
+Overfull \hbox (138.22653pt too wide) in paragraph at lines 29191--29191
 []|\TU/lmtt/m/n/10 [@eq:part_III_pdvsa-gateway_tokens]|
  []
 
 
-Overfull \hbox (93.69661pt too wide) in paragraph at lines 28951--28951
+Overfull \hbox (93.69661pt too wide) in paragraph at lines 29192--29192
 []|\TU/lmtt/m/n/10 [@sec:part_III_pdvsa-gateway]|
  []
 
 
-Overfull \hbox (6.0096pt too wide) in paragraph at lines 28953--28955
+Overfull \hbox (6.0096pt too wide) in paragraph at lines 29194--29196
 []|$[][][][][] []
  []
 
 
-Overfull \hbox (153.97653pt too wide) in paragraph at lines 28956--28956
+Overfull \hbox (153.97653pt too wide) in paragraph at lines 29197--29197
 []|\TU/lmtt/m/n/10 [@eq:part_III_protein-folding_address]|
  []
 
 
-Overfull \hbox (104.19661pt too wide) in paragraph at lines 28957--28957
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 29198--29198
 []|\TU/lmtt/m/n/10 [@sec:part_III_protein-folding]|
  []
 
 
-Overfull \hbox (159.22653pt too wide) in paragraph at lines 28962--28962
+Overfull \hbox (159.22653pt too wide) in paragraph at lines 29203--29203
 []|\TU/lmtt/m/n/10 [@eq:part_III_protein-folding_capacity]|
  []
 
 
-Overfull \hbox (104.19661pt too wide) in paragraph at lines 28963--28963
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 29204--29204
 []|\TU/lmtt/m/n/10 [@sec:part_III_protein-folding]|
  []
 
 
-Overfull \hbox (132.97653pt too wide) in paragraph at lines 28967--28967
+Overfull \hbox (132.97653pt too wide) in paragraph at lines 29208--29208
 []|\TU/lmtt/m/n/10 [@eq:part_III_protein-folding_phi]|
  []
 
 
-Overfull \hbox (104.19661pt too wide) in paragraph at lines 28968--28968
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 29209--29209
 []|\TU/lmtt/m/n/10 [@sec:part_III_protein-folding]|
  []
 
 
-Overfull \hbox (148.72653pt too wide) in paragraph at lines 28972--28972
+Overfull \hbox (148.72653pt too wide) in paragraph at lines 29213--29213
 []|\TU/lmtt/m/n/10 [@eq:part_III_protein-folding_octave]|
  []
 
 
-Overfull \hbox (104.19661pt too wide) in paragraph at lines 28973--28973
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 29214--29214
 []|\TU/lmtt/m/n/10 [@sec:part_III_protein-folding]|
  []
 
 
-Overfull \hbox (169.72653pt too wide) in paragraph at lines 28977--28977
+Overfull \hbox (169.72653pt too wide) in paragraph at lines 29218--29218
 []|\TU/lmtt/m/n/10 [@eq:part_III_protein-folding_octave_sub]|
  []
 
 
-Overfull \hbox (104.19661pt too wide) in paragraph at lines 28978--28978
+Overfull \hbox (104.19661pt too wide) in paragraph at lines 29219--29219
 []|\TU/lmtt/m/n/10 [@sec:part_III_protein-folding]|
  []
 
 
-Overfull \hbox (143.47653pt too wide) in paragraph at lines 28983--28983
+Overfull \hbox (143.47653pt too wide) in paragraph at lines 29224--29224
 []|\TU/lmtt/m/n/10 [@eq:part_III_reality-bridge_octave]|
  []
 
 
-Overfull \hbox (98.94661pt too wide) in paragraph at lines 28984--28984
+Overfull \hbox (98.94661pt too wide) in paragraph at lines 29225--29225
 []|\TU/lmtt/m/n/10 [@sec:part_III_reality-bridge]|
  []
 
 
-Overfull \hbox (153.97653pt too wide) in paragraph at lines 28989--28989
+Overfull \hbox (153.97653pt too wide) in paragraph at lines 29230--29230
 []|\TU/lmtt/m/n/10 [@eq:part_III_reality-bridge_throttle]|
  []
 
 
-Overfull \hbox (98.94661pt too wide) in paragraph at lines 28990--28990
+Overfull \hbox (98.94661pt too wide) in paragraph at lines 29231--29231
 []|\TU/lmtt/m/n/10 [@sec:part_III_reality-bridge]|
  []
 
 
-Overfull \hbox (169.72653pt too wide) in paragraph at lines 28994--28994
+Overfull \hbox (169.72653pt too wide) in paragraph at lines 29235--29235
 []|\TU/lmtt/m/n/10 [@eq:part_III_volumetric-storage_address]|
  []
 
 
-Overfull \hbox (119.94661pt too wide) in paragraph at lines 28995--28995
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 29236--29236
 []|\TU/lmtt/m/n/10 [@sec:part_III_volumetric-storage]|
  []
 
 
-Overfull \hbox (174.97653pt too wide) in paragraph at lines 29000--29000
+Overfull \hbox (174.97653pt too wide) in paragraph at lines 29241--29241
 []|\TU/lmtt/m/n/10 [@eq:part_III_volumetric-storage_capacity]|
  []
 
 
-Overfull \hbox (119.94661pt too wide) in paragraph at lines 29001--29001
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 29242--29242
 []|\TU/lmtt/m/n/10 [@sec:part_III_volumetric-storage]|
  []
 
 
-Overfull \hbox (17.03844pt too wide) in paragraph at lines 29002--29004
+Overfull \hbox (17.03844pt too wide) in paragraph at lines 29243--29245
 []|$[][][][][] [][] []
  []
 
 
-Overfull \hbox (174.97653pt too wide) in paragraph at lines 29005--29005
+Overfull \hbox (174.97653pt too wide) in paragraph at lines 29246--29246
 []|\TU/lmtt/m/n/10 [@eq:part_III_volumetric-storage_phiruler]|
  []
 
 
-Overfull \hbox (119.94661pt too wide) in paragraph at lines 29006--29006
+Overfull \hbox (119.94661pt too wide) in paragraph at lines 29247--29247
 []|\TU/lmtt/m/n/10 [@sec:part_III_volumetric-storage]|
  []
 
 
-Overfull \hbox (127.72653pt too wide) in paragraph at lines 29010--29010
+Overfull \hbox (127.72653pt too wide) in paragraph at lines 29251--29251
 []|\TU/lmtt/m/n/10 [@eq:part_III_y-chromosome_palin]|
  []
 
 
-Overfull \hbox (88.44661pt too wide) in paragraph at lines 29011--29011
+Overfull \hbox (88.44661pt too wide) in paragraph at lines 29252--29252
 []|\TU/lmtt/m/n/10 [@sec:part_III_y-chromosome]|
  []
 
 
-Overfull \hbox (132.97653pt too wide) in paragraph at lines 29014--29014
+Overfull \hbox (132.97653pt too wide) in paragraph at lines 29255--29255
 []|\TU/lmtt/m/n/10 [@eq:part_III_y-chromosome_anchor]|
  []
 
 
-Overfull \hbox (88.44661pt too wide) in paragraph at lines 29015--29015
+Overfull \hbox (88.44661pt too wide) in paragraph at lines 29256--29256
 []|\TU/lmtt/m/n/10 [@sec:part_III_y-chromosome]|
  []
 
-[409]
-ignored: Infinite glue shrinkage found in box being split [410]
+[411]
+ignored: Infinite glue shrinkage found in box being split [412]
 ignored: Infinite glue shrink
-age found in box being split [411]
+age found in box being split [413]
 ignored: Infinite glue shrinkage found in box being sp
-lit [412]
-ignored: Infinite glue shrinkage found in box being split [413] [414] [415]
+lit [414]
+ignored: Infinite glue shrinkage found in box being split [415] [416] [417]
 
-LaTeX Warning: Reference `tbl:gallery_alignment' on page 416 undefined on input
- line 29183.
+LaTeX Warning: Reference `tbl:gallery_alignment' on page 418 undefined on input
+ line 29424.
 
 
-ignored: Infinite glue shrinkage found in box being split [416]
+ignored: Infinite glue shrinkage found in box being split [418]
 File: ../figures/gallery/gallery_line.png Graphic file (type bmp)
 <../figures/gallery/gallery_line.png>
 File: ../figures/gallery/gallery_bar.png Graphic file (type bmp)
@@ -3930,7 +3942,7 @@ File: ../figures/gallery/gallery_pie.png Graphic file (type bmp)
 <../figures/gallery/gallery_pie.png>
 File: ../figures/gallery/gallery_multipanel.png Graphic file (type bmp)
 <../figures/gallery/gallery_multipanel.png>
- [417] [418] [419]
+ [419] [420] [421]
 File: ../figures/mermaid_inline/inline_mermaid_0032_6301dfc943d7.png Graphic fi
 le (type bmp)
 <../figures/mermaid_inline/inline_mermaid_0032_6301dfc943d7.png>
@@ -3947,19 +3959,19 @@ File: ../figures/mermaid_inline/inline_mermaid_0036_7df2b5706613.png Graphic fi
 le (type bmp)
 <../figures/mermaid_inline/inline_mermaid_0036_7df2b5706613.png>
 Package hyperref Info: bookmark level for unknown codelisting defaults to 0 on
-input line 29386.
+input line 29627.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[420] [421]
+[422] [423]
 
-LaTeX Warning: Reference `tbl:gallery_alignment' on page 422 undefined on input
- line 29416.
+LaTeX Warning: Reference `tbl:gallery_alignment' on page 424 undefined on input
+ line 29657.
 
 File: ../figures/gallery/gallery_heatmap.png Graphic file (type bmp)
 <../figures/gallery/gallery_heatmap.png>
-[422]
+[424]
 File: ../figures/gallery/gallery_errorbar.png Graphic file (type bmp)
 <../figures/gallery/gallery_errorbar.png>
 
@@ -3969,125 +3981,125 @@ ex-text;!
 Overfull \vbox (333.24376pt too high) has occurred while \output is active []
 
 
-[423] [424]
+[425] [426]
 
-Package natbib Warning: Citation `mendez2026volumetricStorage' on page 425 unde
-fined on input line 29571.
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 427 unde
+fined on input line 29812.
 
-[425] [426] [427]
+[427] [428] [429]
 
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 428 undefined
- on input line 29820.
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 430 undefined
+ on input line 30061.
 
-[428]
+[430]
 
-Package natbib Warning: Multiple citation on page 429: same authors and year
+Package natbib Warning: Multiple citation on page 431: same authors and year
 (natbib)                without distinguishing extra letter,
 (natbib)                appears as question mark.
 
 
-Package natbib Warning: Citation `mendez2026topologyVoid' on page 429 undefined
- on input line 29896.
+Package natbib Warning: Citation `mendez2026topologyVoid' on page 431 undefined
+ on input line 30137.
 
-[429]
+[431]
 
-Package natbib Warning: Citation `mendez2026volumetricStorage' on page 430 unde
-fined on input line 29921.
+Package natbib Warning: Citation `mendez2026volumetricStorage' on page 432 unde
+fined on input line 30162.
 
-[430]
-Overfull \hbox (4.8937pt too wide) in paragraph at lines 30009--30009
+[432]
+Overfull \hbox (4.8937pt too wide) in paragraph at lines 30250--30250
 []|[][]\TU/lmr/bx/n/10 Crystalline
  []
 
 
-Overfull \hbox (20.95363pt too wide) in paragraph at lines 30009--30009
+Overfull \hbox (20.95363pt too wide) in paragraph at lines 30250--30250
 []|\TU/lmtt/m/n/10 {#gl:crystalline-unified-field}|
  []
 
 
-Overfull \hbox (10.79372pt too wide) in paragraph at lines 30064--30064
+Overfull \hbox (10.79372pt too wide) in paragraph at lines 30305--30305
 []|[][]\TU/lmr/bx/n/10 Holographic
  []
 
 
-Overfull \hbox (4.98372pt too wide) in paragraph at lines 30079--30080
+Overfull \hbox (4.98372pt too wide) in paragraph at lines 30320--30321
 []|[][]\TU/lmr/bx/n/10 Irreducible
  []
 
 
-Overfull \hbox (10.45363pt too wide) in paragraph at lines 30080--30080
+Overfull \hbox (10.45363pt too wide) in paragraph at lines 30321--30321
 []|\TU/lmtt/m/n/10 {#gl:irreducible-minimum-set}|
  []
 
 
-Overfull \hbox (1.74371pt too wide) in paragraph at lines 30084--30085
+Overfull \hbox (1.74371pt too wide) in paragraph at lines 30325--30326
 []|[][]\TU/lmr/bx/n/10 Kinematic
  []
 
 
-Overfull \hbox (10.45363pt too wide) in paragraph at lines 30085--30085
+Overfull \hbox (10.45363pt too wide) in paragraph at lines 30326--30326
 []|\TU/lmtt/m/n/10 {#gl:kinematic-set-recycling}|
  []
 
 
-Overfull \hbox (12.86371pt too wide) in paragraph at lines 30116--30116
+Overfull \hbox (12.86371pt too wide) in paragraph at lines 30357--30357
 []|[][]\TU/lmr/bx/n/10 Metrological
  []
 
 
-Overfull \hbox (37.57372pt too wide) in paragraph at lines 30123--30123
+Overfull \hbox (37.57372pt too wide) in paragraph at lines 30364--30364
 []|[][]\TU/lmr/bx/n/10 Multidimensional
  []
 
 
-Overfull \hbox (5.20363pt too wide) in paragraph at lines 30124--30124
+Overfull \hbox (5.20363pt too wide) in paragraph at lines 30365--30365
 []|\TU/lmtt/m/n/10 {#gl:multidimensional-rhyme}|
  []
 
 
-Overfull \hbox (2.11371pt too wide) in paragraph at lines 30128--30128
+Overfull \hbox (2.11371pt too wide) in paragraph at lines 30369--30369
 []|[][]\TU/lmr/bx/n/10 Narrative-
  []
 
 
-Overfull \hbox (2.3137pt too wide) in paragraph at lines 30128--30128
+Overfull \hbox (2.3137pt too wide) in paragraph at lines 30369--30369
 \TU/lmr/bx/n/10 Empirical-
  []
 
 
-Overfull \hbox (9.47371pt too wide) in paragraph at lines 30128--30128
+Overfull \hbox (9.47371pt too wide) in paragraph at lines 30369--30369
 \TU/lmr/bx/n/10 Operational
  []
 
 
-Overfull \hbox (83.95363pt too wide) in paragraph at lines 30128--30128
+Overfull \hbox (83.95363pt too wide) in paragraph at lines 30369--30369
 []|\TU/lmtt/m/n/10 {#gl:narrative-empirical-operational-tiers}|
  []
 
 
-Overfull \hbox (10.34372pt too wide) in paragraph at lines 30182--30182
+Overfull \hbox (10.34372pt too wide) in paragraph at lines 30423--30423
 \TU/lmr/bx/n/10 Observation
  []
 
 
-Overfull \hbox (4.98372pt too wide) in paragraph at lines 30191--30191
+Overfull \hbox (4.98372pt too wide) in paragraph at lines 30432--30432
 []|[][]\TU/lmr/bx/n/10 Singularity
  []
 
 
-Overfull \hbox (15.93372pt too wide) in paragraph at lines 30211--30211
+Overfull \hbox (15.93372pt too wide) in paragraph at lines 30452--30452
 []|[][]\TU/lmr/bx/n/10 Transduction
  []
 
 
-Overfull \hbox (5.36371pt too wide) in paragraph at lines 30221--30221
+Overfull \hbox (5.36371pt too wide) in paragraph at lines 30462--30462
 []|[][]\TU/lmr/bx/n/10 Volumetric
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [431]
+ignored: Infinite glue shrinkage found in box being split [433]
 ignored: Infinite glue shrinkage f
-ound in box being split [432] (./_combined_manuscript.bbl [433] [434]
+ound in box being split [434] (./_combined_manuscript.bbl [435] [436]
 Runaway argument?
 Mendez(2026{\natexlab {{}})]{mendez2026topologyVoid} Prudencio Mendez\ETC.
 ! Paragraph ended before \@lbibitem was complete.
@@ -4146,7 +4158,7 @@ deleted material, e.g., by typing `I$}'.
 
 Package natbib Warning: There were undefined citations.
 
-[435] (./_combined_manuscript.aux)
+[437] (./_combined_manuscript.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -4157,12 +4169,12 @@ LaTeX Warning: There were undefined references.
 
  )
 Here is how much of TeX's memory you used:
- 33383 strings out of 468168
- 702192 string characters out of 5432815
- 1377235 words of memory out of 5000000
- 61638 multiletter control sequences out of 15000+600000
- 635519 words of font info for 126 fonts, out of 8000000 for 9000
+ 33387 strings out of 468168
+ 709015 string characters out of 5432815
+ 1389464 words of memory out of 5000000
+ 61640 multiletter control sequences out of 15000+600000
+ 635527 words of font info for 127 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,13n,114p,3339b,1273s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on _combined_manuscript.pdf (436 pages).
+Output written on _combined_manuscript.pdf (439 pages).

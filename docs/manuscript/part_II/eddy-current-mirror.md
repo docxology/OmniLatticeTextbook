@@ -1,8 +1,8 @@
 # The Eddy-Current Mirror: Transduction Drag {#sec:part_II_eddy-current-mirror}
 
-![The eddy brake: velocity $v(t) = v_0 e^{-kt}$ decaying exponentially from $v_0 = 1$ under drag coefficient $k = 1$, with an inset showing the drag force $F(t) = m k v(t)$ decaying on the same schedule. Produced from `textbook.models.transduction_brake`.](../../output/figures/part_II_eddy-current-mirror.png){#fig:part_II_eddy-current-mirror width=90%}
+![The transduction-line brake: velocity $v(t) = v_0 e^{-kt}$ decaying exponentially from $v_0 = 1$ under drag coefficient $k = 1$. Plotted from `textbook.models.transduction_brake`, with an inset showing the proportional drag force $F(t) = m k v(t)$ decaying on the same exponential schedule. The takeaway is the Lenz/eddy-current analogy: motion induces the very current that brakes it, so the faster the fall the harder the drag, and the floor is approached but never reached.](../../output/figures/part_II_eddy-current-mirror.png){#fig:part_II_eddy-current-mirror width=90%}
 
-<!-- alt: A single exponential decay curve falling from 1 toward zero, with a smaller inset panel plotting the proportional drag force, which starts high and decays on the same exponential schedule. -->
+<!-- alt: A single exponential decay curve falling from 1 toward a floor it never touches, with a smaller inset panel plotting the proportional drag force, which starts high and decays on the same exponential schedule. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -71,7 +71,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The Paper in the Corpus
+## The source: Eddy-Current Mirror, engine shelf #22
 
 The source for this chapter is the ship-blog paper *Eddy-Current Mirror*
 [@mendez2026eddyMirror], published September 2026 by Prudencio Mendez and
@@ -272,7 +272,7 @@ tested mirror of the same exponential law, so hand calculations, the reference
 engine, and the book's backbone must all agree to the digits shown in
 [@tbl:part_II_eddy-current-mirror_worked].
 
-## Scope and Honesty
+## What the transduction brake does not claim
 
 The paper's honesty-first block is explicit, and we restate it near-verbatim
 because it bounds everything above [@mendez2026eddyMirror]:
@@ -295,7 +295,7 @@ address for "where ranging ideation gets braked into addressable content," in
 the same spirit as the [**honesty-first**](#gl:honesty-first) protocol of
 [@mendez2026catalog].
 
-## Connections
+## Where the brake leads: viscosity, overlap, the Higgs gate
 
 The transduction drag of this chapter feeds three directions. *Sideways within
 Part II*, the same exponential braking reappears as the
@@ -372,7 +372,7 @@ eddy currents as analogy only, Fair Exchange clause in force.
    *routing* relation ("impedance match") without a quantitative model — and
    where in the corpus quantitative overlap *is* measured.
 5. Reproduce the paper's scope disclaimer from memory, then verify it against
-   the Scope and Honesty section. Which of the four disclaimed claims do you
+   the section on what the brake does not claim. Which of the four disclaimed claims do you
    find most tempting to over-read, and why does the Fair Exchange clause block
    it?
 

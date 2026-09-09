@@ -1,8 +1,11 @@
 # Multi-Dimensional Holographic Rhyme {#sec:part_I_multidimensional-rhyme}
 
-![xD±yD combined interference contours: the summed ($+$) and differenced ($-$) cross-scale encodings of the four-pillar holographic rhyme field over the $(x,y)$ plane, computed from `textbook.models.holographic_rhyme_field` and combined with `textbook.models.xd_yd_combine`.](../../output/figures/part_I_multidimensional-rhyme.png){#fig:part_I_multidimensional-rhyme width=90%}
+![The xD±yD combined interference contours: the summed ($+$) and differenced ($-$) cross-scale encodings of the four-pillar holographic rhyme field over the $(x,y)$ plane. The parent field comes from `textbook.models.holographic_rhyme_field` with $P = 4$ evenly spaced pillars, and the bidirectional combine is `textbook.models.xd_yd_combine(a, b, sign)`, which files $a + b$ and $a - b$ as first-class catalog entries. Constructive summation ridges and cancellation valleys are two readings of one field: the bidirectional filing keeps both directions.](../../output/figures/part_I_multidimensional-rhyme.png){#fig:part_I_multidimensional-rhyme width=90%}
 
-<!-- alt: Two contour plots of a four-direction interference pattern. The first shows constructive summation ridges; the second shows the differenced field, where matching crests cancel to nodal valleys. Both are drawn from the same tested model functions. -->
+<!-- alt: Two contour plots of a four-direction interference pattern. The first shows
+constructive summation ridges of the summed encoding; the second shows the differenced
+field, where matching crests cancel to nodal valleys. Both are drawn from the same
+tested model functions. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: [@sec:part_I_holographic-rhyme]
@@ -38,7 +41,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The paper in the corpus
+## Engine shelf #19 and the bidirectional encoding filing
 
 The source paper, filed by Prudencio Mendez and operated by the SynthOBS Autonomous Agent on the SS Vibelandia ship blog, opens with a single load-bearing sentence, quoted verbatim:
 
@@ -53,9 +56,9 @@ Shelf #19 is filed as an *extension*: the "What landed" list records "**Engine s
 - a standalone repository at `FractiAI/synthobs-multidimensional-holographic-rhyme` [@mendez2026mdRhyme];
 - a re-run entry point, `npm run research:synthobs-multidimensional-holographic-rhyme`, and a whitepaper surface linked from the ship blog post [@mendez2026mdRhyme].
 
-Two companion filings are named on the same board: **Prime volumetric storage** [@mendez2026volumetricStorage] and **Topology of the Void** [@mendez2026topologyVoid], the latter described as the "zero-balance node". We return to both in [Connections](#connections).
+Two companion filings are named on the same board: **Prime volumetric storage** [@mendez2026volumetricStorage] and **Topology of the Void** [@mendez2026topologyVoid], the latter described as the "zero-balance node". We return to both where this chapter hands its neighbours onward.
 
-## Core construct: the xD±yD summation engine
+## The xD±yD engine: parent field, combine, octave placement
 
 The digest is explicit that the paper gives **no equation**: "the model is stated in the lead paragraph and 'What landed.'" [@mendez2026mdRhyme]. We therefore formalise carefully, marking each equation as *our* formalisation of the corpus's prose model, and we name the tested `textbook.models` function that backs each piece. Nothing below should be read as physics; the docstrings themselves carry the caveat "structural model, not a physical claim."
 
@@ -121,7 +124,7 @@ graph TD
 
 Note that the loop closes on the parent shelf: the corpus files shelf #19 as an expansion *of* the four-pillar motion grammar, and the [**Fair Exchange**](#gl:fair-exchange) clause ties the whole filing back to honest disclosure [@mendez2026mdRhyme].
 
-## Worked example
+## Worked example: Fibonacci indices combined on the Φ ladder
 
 We now walk the engine end to end with pinned numbers, computing by hand and naming the tested function that confirms each result. The lab ([@sec:lab_part_I_multidimensional-rhyme]) repeats this on your machine.
 
@@ -163,7 +166,7 @@ holographic_rhyme_field(np.array([[0.5]]), np.array([[0.0]]),
 >
 > The corpus prints "Ωn = Φn·Ω0" ambiguously; the two readings in [@eq:part_I_multidimensional-rhyme_octave] differ by *orders of magnitude* at the same $n$ (11.090170 vs 1.6 at $n=5$). Whenever a corpus value depends on the convention, this book names the convention explicitly — the same discipline `octave_term` enforces in code.
 
-## Scope and honesty
+## What the shelf-19 honesty clause disclaims
 
 The paper's honesty clause, verbatim, bounds everything this chapter can claim [@mendez2026mdRhyme]:
 
@@ -177,7 +180,7 @@ Three explicit *nots* follow from it, and we restate them as the digest records 
 
 What the construct is *for*, in the corpus's own framing, is cataloging and contrast: the filing "positions itself as a catalog contrast to static boundary-only screens" [@mendez2026mdRhyme]. The contrast class — flat, boundary-only readings of holography — is what the bidirectional, cross-scale filing is filed *against*, within the [**catalog architecture**](#gl:catalog-architecture) of the ship blog. Throughout the corpus, engines on this shelf serve coordination, cataloging, and agent routing for the SynthOBS system; the "Fair Exchange clause applies" tag marks the filing as operating under the project's honesty-disclosure regime [@mendez2026mdRhyme]. The book's standing rule — the corpus speaks in narrative, empirical, and operational registers, each with its own evidential weight — applies here in full, and this chapter keeps every claim on the register the digest assigns it.
 
-## Connections
+## Where shelf #19 hands its neighbours onward
 
 Shelf #19 is a junction filing, and the corpus names its neighbours explicitly [@mendez2026mdRhyme]:
 

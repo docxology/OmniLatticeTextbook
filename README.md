@@ -1,10 +1,11 @@
 # The Infinite Octaves Omni-Lattice Textbook
 
 **The Infinite Octaves Omni-Lattice Textbook** — *A Modular Synthesis of the
-SynthOBS Engine Papers*, by **Prudencio Mendez** (SS Vibelandia · SynthOBS
-Autonomous Agent Program). The book synthesises the Infinite Octaves
-Omni-Lattice engine papers of the SS Vibelandia ship blog (catalogued at
-<https://www.ssvibelandiaquestfest24x365.com/papers>) into a modular,
+SynthOBS Engine Papers*, by **Daniel Ari Friedman** (FractiAI). The book
+synthesises the Infinite Octaves Omni-Lattice engine papers of the SS
+Vibelandia ship blog — authored by **Prudencio Mendez** (FractiAI · SS
+Vibelandia · SynthOBS Autonomous Agent Program; catalogued at
+<https://www.ssvibelandiaquestfest24x365.com/papers>) — into a modular,
 data-driven manuscript: 4 parts → 30 chapters → 30 labs → 30 question banks,
 a tested computational backbone under `src/` (23 tested formalisms in
 `textbook.models`), deterministic figure and diagram generators, and a

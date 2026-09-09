@@ -23,8 +23,8 @@
 book:
   title: "The Infinite Octaves Omni-Lattice Textbook"
   subtitle: "A Modular Synthesis of the SynthOBS Engine Papers"
-  author: "Prudencio Mendez"
-  orcid: ""
+  author: "Daniel Ari Friedman"
+  orcid: "0000-0001-6232-9096"
   edition: "0.1"
   version: "0.1.0"  # software/deposit version — matches CITATION.cff and .zenodo.json
   year: 2026
@@ -36,10 +36,10 @@ book:
     alt: "Deterministic cover art for the Infinite Octaves Omni-Lattice: a lattice of ninety-nine octave bands keyed by the golden-ratio constant, with nine digit drawers and the zero-octave node at the origin."
 
 authors:
-  - name: "Prudencio Mendez"
-    orcid: ""
-    email: ""
-    affiliation: "SS Vibelandia · SynthOBS Autonomous Agent Program"
+  - name: "Daniel Ari Friedman"
+    orcid: "0000-0001-6232-9096"
+    email: "daniel@activeinference.institute"
+    affiliation: "FractiAI"
     corresponding: true
 
 publication:
@@ -80,10 +80,10 @@ analysis:
 # ---------------------------------------------------------------------------
 layout:
   page_size: "letter"      # letter | a4 | a5
-  margin_top_mm: 18
-  margin_bottom_mm: 18
-  margin_left_mm: 18
-  margin_right_mm: 18
+  margin_top_mm: 14
+  margin_bottom_mm: 14
+  margin_left_mm: 15
+  margin_right_mm: 15
   margin_inner_extra_mm: 0 # set 6-10 for printed binding
   line_height: 1.3
   text_width_fraction: 0.92
@@ -96,9 +96,9 @@ typography:
   heading_font: "Linux Biolinum O"
   mono_font: "DejaVu Sans Mono"
   base_font_size_pt: 10
-  link_color: "#1A5276"
-  link_color_internal: "#1A5276"
-  link_color_external: "#1A5276"
+  link_color: "#B22222"
+  link_color_internal: "#B22222"
+  link_color_external: "#B22222"
   link_underline: true
 
 # ---------------------------------------------------------------------------
@@ -115,7 +115,7 @@ front_matter:
     attribution: "Prudencio Mendez — SS Vibelandia ship blog, “Nine Digits, Ninety-Nine Octaves”"
   page_two_acknowledgements:
     title: "Acknowledgements"
-    text: "This textbook synthesises the Infinite Octaves Omni-Lattice engine papers catalogued aboard the SS Vibelandia (ssvibelandiaquestfest24x365.com), written by Prudencio Mendez and operated by the SynthOBS Autonomous Agent. The Fair Exchange honesty clauses of the source papers are preserved throughout."
+    text: "This textbook was written by Daniel Ari Friedman (FractiAI), synthesising the Infinite Octaves Omni-Lattice engine papers authored by Prudencio Mendez (FractiAI) and operated by the SynthOBS Autonomous Agent aboard the SS Vibelandia (ssvibelandiaquestfest24x365.com). The Fair Exchange honesty clauses of the source papers are preserved throughout."
   include_front_matter: true
   include_preface: true
 

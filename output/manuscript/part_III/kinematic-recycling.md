@@ -1,8 +1,8 @@
 # Kinematic Set-Recycling: The Truckee Protocol {#sec:part_III_kinematic-recycling}
 
-![Round-robin set-recycling cycle over discrete time: one physical set of nine indexed items is partitioned deterministically across three experiential sets (stationary, pedestrian, cyclist) by `textbook.models.round_robin`, with item $i$ landing in set $i \bmod 3$.](../../output/figures/part_III_kinematic-recycling.png){#fig:part_III_kinematic-recycling width=90%}
+![Round-robin set-recycling cycle over discrete time: one physical set of nine indexed items is partitioned deterministically across three experiential sets (stationary, pedestrian, cyclist) by `textbook.models.round_robin`, with item $i$ landing in set $i \bmod 3$. The partition allocates nothing — it recycles index space, so every theater draws from the same nine items and the new-assets-purchased column of the ledger stays empty. The takeaway is the paper's headline filing: one set, many theaters, zero new assets.](../../output/figures/part_III_kinematic-recycling.png){#fig:part_III_kinematic-recycling width=90%}
 
-<!-- alt: A discrete-time cycle diagram in which nine numbered items flow round-robin into three columns labelled stationary, pedestrian, and cyclist, each column receiving items 0/3/6, 1/4/7, and 2/5/8 respectively, with a return arrow labelled zero new assets. -->
+<!-- alt: Discrete-time cycle diagram in which nine numbered items flow round-robin into three columns labelled stationary, pedestrian, and cyclist, each column receiving items 0/3/6, 1/4/7, and 2/5/8 respectively, with a return arrow labelled zero new assets. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: [@sec:part_II_singularity-crystal], [@sec:part_I_topology-void]
@@ -69,7 +69,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## Orientation
+## One Set, Many Theaters: The Recycling Idea
 
 This chapter formalises *Kinematic Set-Recycling* (ship blog, September 2026,
 engine shelf #21), the paper in which the corpus extends its [**octave**](#gl:octave)
@@ -101,7 +101,7 @@ states are indexed by powers of $\Phi$, the corpus's
 recycling rule** ([@eq:part_III_kinematic-recycling_round-robin]): the
 deterministic, asset-free partition that lets one set serve many states.
 
-## The Paper in the Corpus
+## Engine Shelf #21: Neighbours Below, Meta Above
 
 *Kinematic Set-Recycling* sits at **engine shelf #21** — filed *after* the
 [**Singularity Crystal**](#gl:singularity-crystal) paper (#20)
@@ -143,7 +143,7 @@ graph TD
 round-robin partition it computes: nine indexed items of one set, three
 experiential sets, item $i$ in set $i \bmod 3$.
 
-## Core Constructs
+## The Velocity Scale, the Octave Ladder, and the Round-Robin Rule
 
 ### The Fourier velocity scale
 
@@ -307,7 +307,7 @@ Three checks make the example load-bearing:
 > any reuse of the paper's imagery — the fixture is catalog bookkeeping, not a
 > solar-terrestrial mechanism.
 
-## Scope and Honesty
+## Four Honesty Clauses: Not QED, Not Compression, Not NOAA
 
 The paper's honesty-first block is short enough to restate nearly verbatim, and
 the contract of this book is to preserve it: *"this is catalog architecture —
@@ -332,7 +332,7 @@ and not NOAA causation by AR14524/AR14527. Fair Exchange clause applies"*
   reusing one asset across experiential states, consistent with the corpus's
   standing rule that the map is for coordination, not cosmic destiny.
 
-## Connections
+## Handoffs to the Stack, the Bridge, and the Singularity Ledger
 
 The Truckee protocol is a small shelf entry with wide fan-out. Downstream in
 this part, [@sec:part_III_moving-up-stack] consumes the zero-new-asset framing

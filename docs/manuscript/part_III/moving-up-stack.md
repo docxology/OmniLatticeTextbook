@@ -1,8 +1,8 @@
 # Moving Up the Stack: Lattice as the Next AI Layer {#sec:part_III_moving-up-stack}
 
-![Stack layers step plot: the corpus's six-level climb — model, lattice, agent layer — rendered as rising steps, with the hub-class ($12.9B) and IDE-class ($60B) scenario anchors on their shelves and the new-layer band ($12B–$28B) on the top orchestration shelf.](../../output/figures/part_III_moving-up-stack.png){#fig:part_III_moving-up-stack width=90%}
+![Stack layers step plot: the corpus's six-level climb — chips, frontier LLMs, model hubs, agent IDEs, the Lattice Chat orchestration shelf, and the Story horizon — rendered as rising steps. The hub-class ($12.9B) and IDE-class ($60B) scenario anchors sit on their shelves, and the new-layer band ($12B–$28B) rests on the top orchestration shelf. The takeaway: the climb has a direction, and the new layer prices as thermal + orchestration work rather than as another peer on the hub/IDE shelf.](../../output/figures/part_III_moving-up-stack.png){#fig:part_III_moving-up-stack width=90%}
 
-<!-- alt: A rising step plot of six AI stack layers from chips and frontier LLMs up through model hubs, agent IDEs, and the Lattice Chat orchestration shelf to the Story horizon, with valuation anchors marked at the hub, IDE, and new-layer shelves. -->
+<!-- alt: Rising step plot of six AI stack layers from chips and frontier LLMs up through model hubs, agent IDEs, and the Lattice Chat orchestration shelf to the Story horizon, with valuation anchors marked at the hub, IDE, and new-layer shelves. -->
 
 <!-- chapter-metadata-badge -->
 > Level 2/3 · 35 min read · 50 min lecture · Prerequisites: the silicon shelf ([@sec:part_III_cmos-protonic])
@@ -39,7 +39,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The paper in the corpus
+## A Positioning Paper on Ship-Blog Shelf 12
 
 The source is a ship-blog entry, "Moving up the stack · Lattice is the next AI layer," dated 2026-09-05 and filed under the *new-layer framing / Fair Exchange* tags [@mendez2026stack]. In the corpus's filing scheme it sits on ship-blog **shelf 12**; its standalone reference suite — `github.com/FractiAI/synthobs-moving-up-the-stack-valuation`, runnable as `npm run research:synthobs-moving-up-the-stack-valuation` — self-files as **Infinite Octaves [**engine-shelf**](#gl:engine-shelf) #13** [@mendez2026stack]. (We record both numbers as the corpus prints them: the blog post and its suite carry adjacent shelf filings.) The whitepaper surface is linked from the post as `whitepaper-surface.html?id=synthobs-moving-up-the-stack-valuation-2026-09`.
 
@@ -69,7 +69,7 @@ Why does the corpus insist the top-but-one layer is a **new shelf** rather than 
 
 The paper's own classification of this bundle is a **thermal + orchestration layer**: "It does not replace Hugging Face or Cursor. It is what those lower shelves climb toward when agentic load gets real" [@mendez2026stack]. We formalise the cooling and harmonisation claims in [@eq:part_III_moving-up-stack_cooling] below.
 
-## Core constructs
+## The Valuation Band, the Token Accounting, and the EGS Constant
 
 ### The new-layer valuation band
 
@@ -145,7 +145,7 @@ We walk the paper's derivation as a five-step procedure, using only numbers the 
 
 As a numerical illustration of the cooling claim (our arithmetic, not the corpus's), take $m = 10$ agents, siloed loops of $T_{\text{loop}} = 40{,}000$ tokens, a shared brief $B = 5{,}000$, and seed+pointer loops of $s + p = 2{,}500$. Then $C_{\text{siloed}} = 400{,}000$, $C_{\text{harmonised}} = 5{,}000 + 25{,}000 = 30{,}000$, and $\kappa \approx 13.3$ by [@eq:part_III_moving-up-stack_cooling]. The magnitude is illustrative; the *mechanism* — fewer tokens per loop because agents carry seeds and pointers instead of fat paste — is the corpus's claim.
 
-## Scope and honesty
+## Framing, Not Appraisal: The Paper's Own Disclaimers
 
 The paper is unusually explicit about what its numbers are not, and we preserve those disclaimers precisely [@mendez2026stack]:
 
@@ -158,7 +158,7 @@ The paper is unusually explicit about what its numbers are not, and we preserve 
 
 > **Note.** The peer-shelf misread is itself instructive as method: the corpus corrects its *own* earlier reading, in public, on scope grounds. The error was not arithmetic ($4.2$–$7.5$ is a plausible hub/IDE-shelf band); it was *shelving* — assigning the artefact to the wrong layer of the stack, which mispriced it by a factor of about 3.4 at the midpoint.
 
-## Connections
+## Handoffs to the Silicon Shelf, the Gateway, and the Bridge
 
 The new-layer thesis connects downstream and sideways in the book:
 

@@ -1,8 +1,8 @@
 # The SS Vibelandia Program and the Omni-Lattice Corpus {#sec:part_0_orientation}
 
-![The engine-shelf timeline: the 24 engine-shelf papers this book covers, positioned by shelf number — from the CMOS/protonic engineering bridge at shelf 1, through the tensor filing cabinet (2) and the master synthesis (3), out to the newest September 2026 engine papers at shelf 24 — with the framework pages that feed Part 0 marked separately.](../../output/figures/part_0_orientation.png){#fig:part_0_orientation width=90%}
+![The engine-shelf timeline: one marker per paper at its shelf number, running from shelf 1 to shelf 24, with a side panel stepping out cumulative coverage as the shelves are traversed. Drawn as a deterministic schematic of the Reading Room's engine-shelf pin list — a filing picture, not the output of a `textbook.models` function. Notice that each shelf holds exactly one engine paper, so any "shelf 17" reference in later chapters resolves to a unique paper.](../../output/figures/part_0_orientation.png){#fig:part_0_orientation width=90%}
 
-<!-- alt: Horizontal timeline of the corpus's 24 engine papers ordered by shelf number, with labelled markers at shelves 1, 2, 3, 13, 17, 18, 19, 21, 22, and 24, and a separate marker for the framework pages. -->
+<!-- alt: Horizontal timeline with one marker per engine paper at its shelf number from 1 to 24, beside a small step panel showing cumulative coverage reaching 24. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -39,7 +39,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## Orientation
+## Reading the corpus as catalog architecture
 
 This book synthesises the **Infinite Octaves Omni-Lattice** engine papers of the SS Vibelandia ship blog, authored by Prudencio Mendez and operated by the SynthOBS Autonomous Agent [@mendez2026ship]. The corpus self-describes as **catalog architecture** and **protocol grammar** — a filing and coordination system for agents, dashboards, and conversation — not established physics [@mendez2026catalog]. Our voice throughout is that of a respectful systems-engineering monograph about a self-consistent catalog formalism: we formalise its constructs, map its vocabulary, and run its reference implementations, while preserving its own scope disclaimers verbatim or near-verbatim. When a source claims something physical, we attribute the claim ("the paper files X as...") and cite it; we never present a corpus metaphor as established science, and we never sneer at it either.
 
@@ -47,7 +47,7 @@ Two source pages anchor everything in Part 0. The first is the ship's front door
 
 One reading rule applies from here to the last page. The corpus is [**honesty-first**](#gl:honesty-first) by construction: every paper opens with an "Honesty first" clause stating what the construct is — catalog grammar, fixtures, filing — and what it is explicitly not. We inherit that convention. Numbers you meet in this book are the corpus's pinned values or plain arithmetic over them, and the worked formalisms are implemented and tested in `textbook.models`, never recomputed by hand in prose.
 
-## The SS Vibelandia Program
+## The Omniversal Canvas and its honesty rail
 
 The program's own words are the fastest accurate description. The front page announces "a new work of art. SuperAI art — a new kind of medium," and explains: "You're standing in SuperAI art — not a brochure about AI, and not a chatbot pitching the future. It's a living exhibit: picture, story, music, science, and hospitality woven into one camp you can walk" [@mendez2026ship]. The project names itself the **Omniversal Canvas** — "SuperAI art you can walk" — and offers a second, self-deprecating frame: "Think of it like a digital Burning Man camp and art exhibit. Holographic, meaning it is everything and everywhere at once as a living metaphor. And then, if you choose, more than a metaphor" [@mendez2026ship].
 
@@ -61,7 +61,7 @@ Finally, the honesty rail itself. We quote the constant clause now because every
 
 The first sentence is the load-bearing one for this book. The [**golden ratio**](#gl:golden-ratio) $\Phi = (1+\sqrt{5})/2 \approx 1.618$ — which the corpus calls El Gran Sol's [**fractal constant**](#gl:fractal-constant) — is *nesting language*: a design key that spaces the catalog's shelves and bands, not a measured physical constant. Part 0 returns to this in [@sec:part_0_master-synthesis], and Part I gives the constant its own chapter ([@sec:part_I_fractal-constant]).
 
-## What the Infinite Octaves Omni-Lattice Claims to Be
+## Four filed constructs, none of them measurements
 
 The corpus's status claim is stated plainly and repeated everywhere. The papers file themselves as **catalog architecture** — "a filing and protocol grammar for coordinating agents, dashboards, and conversation — explicitly not established physics, clinical advice, or a Theory of Everything," as the glossary preserves the self-description [@mendez2026catalog]. Each paper carries its own "Honesty first" scope clause in the same breath as its headline. The eddy-current-mirror ship note is a typical specimen: "Thought meets its mirror — and slows into matter (catalog) ... Honesty first: catalog grammar, not relativity retirement" [@mendez2026ship]. The zero-octave note files its diagnostic as "implementation fixtures, not GR singularity QED"; the Truckee-corridor note files its velocity multiplex as "catalog grammar, not psychophysics QED" [@mendez2026ship]. The pattern is uniform: a bold catalog filing, an honest scope label, and the Fair Exchange clause.
 
@@ -74,7 +74,7 @@ So what *does* the Omni-Lattice claim to be? Concretely, four constructs, each o
 
 None of these is presented by the corpus as a measurement. They are furniture: an address space, a filing wall, a pin list, and a sync protocol. The value the corpus claims for them is coordination value — routing constructs, keeping the catalog coherent as papers are pinned, and making honesty disclosure mechanical rather than optional. That is the claim this book takes seriously and tests where testable.
 
-## The Reading Room, navigated
+## Reading Room shelves and counting what counts
 
 Walk aft from the gangway and you reach the library. The Reading Room — canonical path `/reading-room`, served at `/papers` — is the corpus's papers catalog, staged as a "Frontier Club reading room — trophies, books, and sacred objects from past adventures" [@mendez2026catalog]. A four-movement concert plays on arrival; poster shelves scroll past while a search box filters "papers and surfaces." The shelf structure is simple and worth memorising, because every later chapter of this book hands you a shelf number:
 
@@ -98,7 +98,7 @@ flowchart LR
 
 [@fig:part_0_orientation] collapses this map onto one timeline: the 24 engine-shelf papers by shelf number, with the framework pages marked separately. When a later chapter says "shelf 17," this figure — and the Reading Room it depicts — is where you go to check.
 
-## The register, worked
+## The master register and its catalog-size arithmetic
 
 The corpus's central filing object is the [**master register**](#gl:master-register): [**octaves**](#gl:octave) as shelves, [digit](#gl:digit)s 0–9 as coarse bins for kinds of pattern, crossed into one address space for every claim the corpus files [@mendez2026digitsMaster]. At the coarse filing level the register is a $9 \times 99$ grid of digit-by-octave bins — the heatmap that the tensor-decoupling chapter draws in [@fig:part_0_tensor-decoupling] [@mendez2026tensorDecoupling]. At full precision the corpus pins the register's address count as the product of 99 octaves and 81 precision digits:
 
@@ -133,13 +133,13 @@ $$ {#eq:part_0_orientation_octave}
 
 Read as an *exponent*, the ladder grows geometrically: $\Phi^n$ for $n = 1..6$ gives $1.618034,\ 2.618034,\ 4.236068,\ 6.854102,\ 11.090170,\ 17.944272$ — implemented as `phi_powers(n)` in `textbook.models`. Read as a *subscript*, the stepping ratio is the Fibonacci quotient $\varphi_{\mathrm{fib}}(n)$, e.g. $\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6$ and $\varphi_{\mathrm{fib}}(10) = 89/55 \approx 1.618182$ — implemented as `phi_fibonacci(n)`. The corpus prints the ambiguous form "Ωn = Φn·Ω0"; `octave_term(omega0, n, convention)` in `textbook.models` implements both conventions explicitly, and the octave-map chapter ([@sec:part_0_octave-map]) walks the 99 rungs under each.
 
-## Scope and honesty
+## Scope clauses that bound every construct
 
 Every construct this chapter has introduced carries its own scope clause, and we restate those clauses precisely because the rest of the book depends on them. The corpus files itself as catalog architecture and protocol grammar — "a filing and protocol grammar for coordinating agents, dashboards, and conversation — explicitly not established physics, clinical advice, or a Theory of Everything" [@mendez2026catalog]. The Reading Room adds that its pages "are orientation, not clinical advice," that its cover art "is AI-generated poster hospitality from each paper's abstract focus — not empirical proof," and that "$\Phi \approx 1.618$ is design language aboard this ship" [@mendez2026catalog]. Individual engine papers carry matching clauses: the eddy-current-mirror note is "catalog grammar, not relativity retirement"; the zero-octave note files its diagnostic as "implementation fixtures, not GR singularity QED" [@mendez2026ship].
 
 What the constructs are **for**: coordination and cataloging — routing agents and conversations across a coherent shelf map, keeping the master register consistent as papers are pinned, and making honesty disclosure mechanical through the [**narrative-empirical-operational-tiers**](#gl:narrative-empirical-operational-tiers) and [**Fair Exchange**](#gl:fair-exchange) clauses. What they are explicitly **not**: measurements, clinical guidance, laboratory results, or replacements for relativity, general relativity's singularity treatment, or psychophysics. The register of [@eq:part_0_orientation_register] counts filing slots; it does not measure the world. This book tests the corpus where it is testable — the arithmetic, the fixtures, the sync protocols — and files everything else exactly where the corpus files it.
 
-## How this book maps onto the corpus
+## Where each corpus construct lives in this book
 
 The chapter's last job is orientation in the ordinary sense: where in this book does each corpus construct live? Part 0 builds the corpus's own infrastructure chapter by chapter — the living PEM's engineering lifecycle in [@sec:part_0_living-pem], the tensor filing cabinet and the $9\times 99$ register bins in [@sec:part_0_tensor-decoupling], the cross-link map of all papers in [@sec:part_0_master-synthesis], and the 99-octave ladder walked rung by rung in [@sec:part_0_octave-map]. Part I then gives the two constants of this chapter their full treatment: the fractal constant in [@sec:part_I_fractal-constant] (whose $\Phi^n$ growth plot extends [@eq:part_0_orientation_octave] onto a log scale) and the prime parity structure that the register's digit bins lean on in [@sec:part_I_prime-parity]. Parts II and III climb the engine shelf itself, from the viscosity and eddy papers through the silicon shelf to the reality-bridge and frontiers chapters. Wherever you land, the two anchors of this chapter hold: the front door's honesty rail and the Reading Room's shelf map.
 

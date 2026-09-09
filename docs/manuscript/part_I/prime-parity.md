@@ -1,14 +1,16 @@
 # Prime-Parity: The Sole-Even Anchor {#sec:part_I_prime-parity}
 
-![The primes below 31 laid out on a number line, with the sole-even prime 2 singled
-out above the line as the binary dyad anchor and the odd primes grouped below it as
-irreducible minimum sets. Produced deterministically by the companion visualization
-agent from `textbook.models.prime_parity_partition`.](../../output/figures/part_I_prime-parity.png){#fig:part_I_prime-parity width=90%}
+![The primes below 32 on a number line: the sole-even prime 2 is singled out above the
+line as the binary dyad anchor, and the ten odd primes 3, 5, 7, 11, 13, 17, 19, 23, 29,
+31 are grouped below it as irreducible minimum sets. The partition is the deterministic
+output of `textbook.models.prime_parity_partition(32)`, whose `sole_even` class stays a
+singleton at every cutoff. The drawing makes the corpus's parity filing visible:
+one anchor card, one irreducible drawer.](../../output/figures/part_I_prime-parity.png){#fig:part_I_prime-parity width=90%}
 
-<!-- alt: A horizontal number line from 0 to 32 with tick marks at the primes. The
-single even prime 2 is highlighted above the line as the sole-even anchor, while the
-odd primes 3, 5, 7, 11, 13, 17, 19, 23, 29 and 31 sit below the line in one grouped
-class labelled "irreducible minimum sets". -->
+<!-- alt: Horizontal number line from 0 to 32 with tick marks at the primes. The single
+even prime 2 is highlighted above the line as the binary dyad anchor, while the odd
+primes 3, 5, 7, 11, 13, 17, 19, 23, 29 and 31 sit below the line in one grouped class
+labelled "irreducible minimum sets". -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -70,7 +72,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The paper in the corpus
+## The shelf-11 paper: catalog math and filing labels
 
 *Infinite Octave Prime-Parity* is a September 2026 executive paper on the SS
 Vibelandia ship blog, authored by Prudencio Mendez and operated by the SynthOBS
@@ -112,7 +114,7 @@ reproduced by the tested backbone functions
 `textbook.models.prime_parity_partition` and `textbook.models.octave_term`, so the
 prose and the fixtures cannot silently disagree.
 
-## The sole-even anchor
+## Sole-even 2 as the binary dyad anchor
 
 The first claim is elementary arithmetic: **2 is the only even prime**. The
 standard reason is one line — any even number greater than 2 is divisible by 2 and
@@ -135,7 +137,7 @@ paper ("sole-even parity of 2") restates a classical fact, and the *anchor*
 status is the paper's own structural assignment. That distinction — classical
 arithmetic versus catalog assignment — runs through everything that follows.
 
-## Odd primes as irreducible minimum sets
+## Odd primes as irreducible minimum addressing sets
 
 The second claim assigns the complementary drawer: **odd primes act as
 irreducible minimum sets** [@mendez2026primeParity]. The glossary gloss
@@ -173,7 +175,7 @@ The claim is that the odd primes' irreducibility makes them usable as minimal
 labeled containers, and that the parity split is the first cut that makes the
 binary side (the anchor) and the odd side (the sets) addressable separately.
 
-## The octave recursion formalism
+## Octave recursion: exponent and subscript conventions
 
 The recursion on which the filing runs is the paper's one printed formula, filed
 as a theorem sketch [@mendez2026primeParity]:
@@ -230,7 +232,7 @@ octave_term(omega0=1.0, n=5, convention="subscript")  # 1.6
 > in the corpus, do not silently normalise it to one reading; name the convention
 > you are using, exactly as `octave_term` requires you to.
 
-## Worked example: filing the primes and walking the ladder
+## Worked example: partition, ladder, and one joint address
 
 **Step 1 — partition.** The tested function
 `textbook.models.prime_parity_partition(limit)` returns the two filing classes for
@@ -277,7 +279,7 @@ from the anchor and one odd set, `unique_address([2, 3], [2, 1]) = 12`, shows th
 two drawers cooperating inside one injective encoding — the anchor supplies the
 binary base, the odd set supplies the first irreducible container.
 
-## Scope and honesty
+## The paper's boundary: catalog math, not physics
 
 The paper's own disclaimer, quoted nearly verbatim, is the boundary of this
 chapter:
@@ -302,7 +304,7 @@ the [**honesty-first**](#gl:honesty-first) disclosure convention of the corpus,
 and every downstream chapter that reuses the parity filing inherits the same
 boundary.
 
-## Connections
+## Where the parity filing feeds the rest of the book
 
 The parity filing feeds four load-bearing lines in the rest of the book:
 

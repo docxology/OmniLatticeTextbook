@@ -1,8 +1,8 @@
 # The Living PEM: Engineering the Lattice {#sec:part_0_living-pem}
 
-![The PEM engineering lifecycle rendered as a staged ladder plot: the six onboarding stages (Stage 0 edge seat through Stage 5 full fluency) climbing alongside the 26 ordered steps of the living engine shelf, with the auto-sync loop feeding back from each stage to the shelf module.](../../output/figures/part_0_living-pem.png){#fig:part_0_living-pem width=90%}
+![The PEM engineering lifecycle as a staged ladder: a step plot climbs one rung per lifecycle stage, each rung labelled by stage number, beside a bar panel sketching the per-stage review effort that grows linearly across the cycle. Drawn as a deterministic schematic of the manual's auto-update discipline — stage labels rather than a `textbook.models` computation, though the cycle's numeric anchors (`phi_powers(1)`, `catalog_size()`, `net_zero_balance`) all live in `textbook.models`. Notice that each rung is reviewed before the next opens: the ladder is the single-source-of-truth loop that keeps the manual living rather than frozen.](../../output/figures/part_0_living-pem.png){#fig:part_0_living-pem width=90%}
 
-<!-- alt: Staged ladder plot showing the Product Engineering Manual's onboarding stages 0 through 5 rising along the 26 ordered steps of the auto-regenerating engine shelf, with the sync loop closing back to the shelf source of truth. -->
+<!-- alt: A stepped ladder with one rung per PEM lifecycle stage and a small bar panel showing review effort rising stage by stage. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -39,19 +39,19 @@ By the end of this chapter you should be able to:
 
 ---
 
-## Orientation
+## The living manual and its single source of truth
 
 Every [**catalog-architecture**](#gl:catalog-architecture) needs a maintenance manual, and the Infinite Octaves corpus files its maintenance manual as a *living* document: the **Product Engineering Manual (PEM)** for *Infinite Octaves Omniversal Lattice Chat Agent V1.618 (Goldilocks Valet)*, Document ID `WP-LATTICE-CHAT-PEM-2026-09` [@mendez2026livingPem]. Where [@sec:part_0_orientation] introduces the corpus and [@sec:part_0_octave-map] formalises the 99-octave ladder, this chapter studies the operational spine — how papers are pinned, ordered, synced, and served to nested agents without hand-editing three tables in three places; [@fig:part_0_living-pem] stages that lifecycle as a ladder climbing the shelf.
 
 The PEM's audience is architectural review, technical support, creator/Player 1 operations, and nested-agent maintainers — in short, everyone who must keep the [**engine-shelf**](#gl:engine-shelf) honest as it grows. The manual carries an explicit honesty boundary as its first content table, and we will preserve that boundary verbatim in [@sec:living-pem-scope]. It also names its operator line: *SynthOBS Autonomous Agent · Syntheverse Sandbox · NSPFRNP-SNAP-PRA-2026-06* [@mendez2026livingPem].
 
-## The Paper in the Corpus
+## The PEM's route: a living manual, not a numbered paper
 
 The PEM is the engineering route of the ship blog — served at `https://www.ssvibelandiaquestfest24x365.com/lattice/engineering` as the whitepaper `lattice-chat-product-engineering-manual-2026-09` [@mendez2026livingPem]. Unlike the engine papers on the shelf it maintains, it is a *living manual* rather than a numbered registry paper (its digest records no shelf number); its role is coordination. It cross-links to the entire shelf: the [**cmos-protonic**](#gl:cmos-protonic) engineering bridge [@mendez2026cmosProtonic], [**tensor-decoupling**](#gl:tensor-decoupling) [@mendez2026tensorDecoupling], master synthesis and the digits master [@mendez2026masterSynthesis; @mendez2026digitsMaster], the metamorphic and planetary-core papers [@mendez2026metamorphic; @mendez2026planetaryCore], the prime-parity companion [@mendez2026primeParity], the stack valuation paper [@mendez2026stack], and the voyage editorials on the invisible frontier, the Y/digit-4 filing, and the human reality bridge [@mendez2026invisibleFrontier; @mendez2026yChromosome; @mendez2026realityBridge].
 
 Its reference implementation is the shelf module itself: `lib/infinite-octave-engine-shelf.mjs` (the ENGINE_SHELF source of truth), the sync module `lib/lattice-chat-pem.mjs`, the generator `npm run sync:lattice-pem` (script `scripts/sync-lattice-chat-pem.mjs`), and its test suite `tests/lib/lattice-chat-pem.test.mjs` [@mendez2026livingPem]. The external-AI first read is `AGENT_SYNC_99_OCTAVE_OMNI_LATTICE.md`, whose AUTO shelf table the same generator rewrites.
 
-## Core Constructs
+## Seven constructs from scale key to protocol spine
 
 ### Construct 1 — The $\Phi_{\mathrm{EGS}}$ scale key
 
@@ -167,7 +167,7 @@ Suppose a new engine paper has cleared its Honesty boundary and registry entry. 
 
 A support operator's troubleshooting table completes the picture: a "shallow" nest means the URL lost `?nest=octave99`; a stale engine list in AGENT_SYNC/PEM means the sync was not re-run after a shelf commit; a paper missing from the chat pin means it is in the registry but **not** in `ENGINE_SHELF` — "registry alone is not enough" [@mendez2026livingPem].
 
-## Scope and Honesty {#sec:living-pem-scope}
+## The five-row honesty boundary and its tiers {#sec:living-pem-scope}
 
 The PEM opens with a five-row honesty boundary table, and the book preserves it because it is the corpus's clearest statement of [**honesty-first**](#gl:honesty-first) scope discipline [@mendez2026livingPem]:
 
@@ -183,7 +183,7 @@ Three of these rows deserve emphasis. First, the tier discipline: fluency means 
 
 The design-language caveat closes the loop: "EGS ≈ 1.618 is design language / catalog key — not a substitute for evidence" [@mendez2026livingPem]. Nothing in this chapter should be read as physics; the constructs are coordination machinery for a catalog and its agents.
 
-## Connections
+## How the PEM hub wires Part 0 together
 
 This chapter is the operational hub of Part 0. Downstream:
 

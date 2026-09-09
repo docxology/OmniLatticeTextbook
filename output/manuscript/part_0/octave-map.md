@@ -1,8 +1,8 @@
 # Nine Digits, Ninety-Nine Octaves {#sec:part_0_octave-map}
 
-![The 99-octave ladder: octaves 01–99 drawn as nested bands whose boundaries follow the golden-ratio key (Φ-spaced), with the nine digit drawers shown as coarse labels along the side. Produced deterministically from `textbook.models.octave_term`.](../../output/figures/part_0_octave-map.png){#fig:part_0_octave-map width=90%}
+![The 99-octave ladder on a log scale: band boundaries from `octave_term(omega0=1, n, convention)` in `textbook.models`, plotted for both conventions — the exponent reading growing geometrically as Φ^n and the subscript reading saturating at the Fibonacci ratio near Φ — with a side panel overlaying the Fibonacci ratio converging to the pinned Φ ≈ 1.6180339887. Notice the widening gap between the two curves: same ambiguous corpus notation, but at the fifth rung the readings differ by nearly a factor of seven, so every computed band must declare its convention.](../../output/figures/part_0_octave-map.png){#fig:part_0_octave-map width=90%}
 
-<!-- alt: A vertical ladder of 99 narrow bands labelled 01 through 99, with band boundaries spaced by powers of the golden ratio Φ and nine coarser digit labels (0 through 9) grouped alongside the ladder. -->
+<!-- alt: A log-scale plot of 99 octave band boundaries under two conventions — one growing geometrically, one saturating near Φ — with a small overlay panel showing the Fibonacci ratio converging to Φ. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -37,13 +37,13 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The paper in the corpus
+## Shelf 4: the digits-master library map
 
 The source for this chapter is the ship-blog note "Nine digits, ninety-nine octaves — a map you can actually walk" (shelf number 4, section label "Digits master", 2026-08-09), whose whitepaper is filed as `synthobs-99-octave-digits-master-2026-08` [@mendez2026digitsMaster]. It is a short, deliberately plain-speak note: the [**catalog-architecture**](#gl:catalog-architecture) summary layer for a larger corpus. The note itself points deeper — "the Master Digits treatise is the big walkthrough of that map" — and the surrounding corpus develops the same grammar in companion papers: the catalog/protocol framing [@mendez2026catalog], the cross-linking Master Synthesis [@mendez2026masterSynthesis], the digit-by-octave filing of constructs [@mendez2026tensorDecoupling], and the corpus's downward extension of shelf vocabulary toward the [**zero-octave**](#gl:zero-octave) [@mendez2026zeroOctave].
 
 Where does this note sit on the [**engine-shelf**](#gl:engine-shelf)? It is foundational bookkeeping. The papers that follow — filed and cross-indexed in [@sec:part_0_orientation] — reuse its vocabulary constantly: every later "octave band" reference, every dashboard count of catalog addresses, and every tier-separation argument inherits the grammar fixed here. The note is written for two named systems, and the honesty-first line says so plainly: *"this is catalog / protocol grammar for SynthOBS and Lattice Chat"* [@mendez2026digitsMaster].
 
-## Core constructs
+## Digit drawers, octave shelves, and the golden-ratio key
 
 ### Digits as coarse bins, octaves as nested bands
 
@@ -109,7 +109,7 @@ The inputs to [@eq:part_0_octave-map_catalog] are collected in [@tbl:part_0_octa
 
 The paper attaches an immediate and unusual use-restriction to its own number: *"That number is for dashboards and agent routing, not for measuring magma"* [@mendez2026digitsMaster]. We read this as the corpus applying its [**honesty-first**](#gl:honesty-first) discipline to arithmetic itself: 8,019 is the address space of a coordination tool, computed by `catalog_size(octaves=99, precision_digits=81)`, and it is a category error to lift it out of that role and paste it onto a physical system. The adjective *holographic* here names a catalog metric; it is not the [**holographic-rhyme**](#gl:holographic-rhyme) four-pillar interference formalism of [@sec:part_I_holographic-rhyme], and the two should not be conflated.
 
-## Worked example: walking the ladder
+## Worked example: walking the ladder under both conventions
 
 **Step 1 — grow the ladder (exponent convention).** Normalise $\Omega_0 = 1$ and apply [@eq:part_0_octave-map_exponent] for the first six bands. Implemented as `octave_term(omega0=1, n, convention="exponent")` in `textbook.models`, the values are:
 
@@ -146,7 +146,7 @@ graph TD
   R --> T["Honesty-first separation:<br/>narrative / empirical / operational tiers"]
 ```
 
-## Scope and honesty
+## Coordination, not cosmic destiny: the map's filed scope
 
 The corpus polices its own claims, and this chapter preserves the policing verbatim in structure. The note's scope line reads: *"this is catalog / protocol grammar for SynthOBS and Lattice Chat. It does not claim the CMB or your bloodstream literally store an 8,019-bit master key"* (C-synthobs-99-octave-digits-master-1, C-synthobs-99-octave-digits-master-2) [@mendez2026digitsMaster]. Three boundaries follow from it:
 
@@ -156,7 +156,7 @@ The corpus polices its own claims, and this chapter preserves the policing verba
 
 We read the 8,019 restriction ("not for measuring magma") as the same discipline applied to the corpus's own arithmetic: numbers, like shelves, have filed purposes, and moving a number to an unfilmed purpose is the quantitative version of mixing tiers.
 
-## Connections
+## Who inherits the map's grammar
 
 The grammar fixed here is used by every later chapter in this part. The filing chapter develops the same digit × octave grid as a register of bins and locates individual corpus constructs on it — its digit-by-octave heatmap [@fig:part_0_tensor-decoupling] is, in effect, this chapter's ladder viewed from above [@mendez2026tensorDecoupling]. The synthesis chapter surveys how the corpus papers cross-link through precisely these addresses [@mendez2026masterSynthesis], and [@sec:part_0_master-synthesis] works that adjacency in detail. Downstream, Part I develops $\Phi$ itself as the corpus's [**fractal-constant**](#gl:fractal-constant) in [@sec:part_I_fractal-constant] and its Fibonacci-overlay companion, while Part II generalises the octave-band idea to densification curves in [@sec:part_II_metamorphic-octaves]. Companion papers extend the shelf vocabulary below octave 01 — the corpus files a separate treatment of the [**zero-octave**](#gl:zero-octave) [@mendez2026zeroOctave] — and the catalog/protocol framing is developed in [@mendez2026catalog].
 

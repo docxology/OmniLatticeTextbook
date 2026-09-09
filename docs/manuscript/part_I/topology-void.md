@@ -1,12 +1,16 @@
 # Topology of the Void: Zero as Equilibrium {#sec:part_I_topology-void}
 
-![The zero-as-equilibrium potential well: a symmetric quadratic well centred on
-zero, with restoring arrows on both slopes pointing back toward the null-space
-pivot at $x = 0$.](../../output/figures/part_I_topology-void.png){#fig:part_I_topology-void width=90%}
+![The zero-as-equilibrium potential well: a symmetric quadratic well
+$V(x) = \tfrac{1}{2}\kappa x^2$ centred on the null-space pivot at $x = 0$, with
+restoring arrows on both slopes that scale with displacement. The well is the book's
+illustrative rendering of the pivot filing — drawn deterministically from
+`textbook.models` to stay consistent with a corpus that lists no figures of its own.
+Displace the system from zero and the restoring force points home: that is the
+"dynamic" in dynamic equilibrium.](../../output/figures/part_I_topology-void.png){#fig:part_I_topology-void width=90%}
 
-<!-- alt: A symmetric bowl-shaped potential curve with its minimum at the centre,
-marked zero; arrows on either side point inward toward the centre, indicating a
-restoring pull back to the equilibrium point. -->
+<!-- alt: Symmetric bowl-shaped potential curve with its minimum at the centre,
+marked zero; arrows on either side point inward toward the centre and grow with
+displacement, indicating a restoring pull back to the equilibrium point. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 35 min read · 45 min lecture · Prerequisites: [@sec:part_I_fractal-constant]
@@ -81,7 +85,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The paper in the corpus {#sec:part_I_topology-void_paper-in-the-corpus}
+## Engine shelf #17 and its landed artefacts {#sec:part_I_topology-void_paper-in-the-corpus}
 
 *Topology of the Void · Zero as Equilibrium* is a ship-blog research note by
 Prudencio Mendez, operated by the SynthOBS Autonomous Agent, published
@@ -137,7 +141,7 @@ section shown. {#tbl:part_I_topology-void_claims}
 | C-topology-of-the-void-5 | The suite locked 9/9 under `research/synthobs-topology-of-the-void/`. | [@sec:part_I_topology-void_paper-in-the-corpus] |
 | C-topology-of-the-void-6 | Engine shelf #17 sits between Proton/Electron duality and Honesty meta. | [@sec:part_I_topology-void_paper-in-the-corpus] |
 
-## Zero as the null-space pivot {#sec:part_I_topology-void_null-space-pivot}
+## Zero files as the equilibrium pivot of 1 and 2 {#sec:part_I_topology-void_null-space-pivot}
 
 The chapter's central filing is stated in the note's lead paragraph and meta
 description, and we keep it verbatim [@mendez2026topologyVoid]:
@@ -183,7 +187,7 @@ graph TD
   F -->|"scope disclaimers govern every filing"| B
 ```
 
-## The zero-balance operator {#sec:part_I_topology-void_zero-balance-operator}
+## The zero-balance operator as odd-function phase cancellation {#sec:part_I_topology-void_zero-balance-operator}
 
 The note's first landed artefact is stated in nine words: "**Zero-balance
 operator** as odd-function phase cancellation (catalog)"
@@ -220,7 +224,7 @@ corpus files this as a catalog operator — a bookkeeping construct on its
 registered constructs — and that scoping is exactly what the Honesty clause
 protects [@mendez2026topologyVoid].
 
-## Null-space capacity and the noise-sink {#sec:part_I_topology-void_null-space-capacity}
+## Null-space capacity: the noise-sink fixture and its well {#sec:part_I_topology-void_null-space-capacity}
 
 The second landed artefact: "**Null-space capacity** fixture as native
 noise-sink metaphor" [@mendez2026topologyVoid]. Again the page gives no
@@ -276,7 +280,7 @@ restoring behaviour — displace the system from zero and the force $F(x)
 > agent's deterministic drawing from `textbook.models`, written to be
 > *consistent with* the corpus filing rather than quoted from it.
 
-## Worked example: balancing a signal around the pivot
+## Worked example: sinking the odd part around zero
 
 Walk the operator by hand; every number below is checkable in one line of
 arithmetic.
@@ -309,7 +313,7 @@ $F(2) = -2$; a smaller displacement $x = 0.5$ gives $V = 0.125$ and $F =
 [@fig:part_I_topology-void] scale with displacement, and the pivot at zero is
 the unique point of rest.
 
-## Scope and honesty {#sec:part_I_topology-void_scope-and-honesty}
+## The Honesty clause: four over-readings disclaimed {#sec:part_I_topology-void_scope-and-honesty}
 
 The note's Honesty clause is the boundary of this chapter, and we restate it
 verbatim [@mendez2026topologyVoid]:
@@ -339,7 +343,7 @@ is any physical claim: the odd-function cancellation of
 [@eq:part_I_topology-void_model] is honest arithmetic, and the corpus never
 promotes it past arithmetic into physics.
 
-## Connections
+## Where the pivot hands off across the book
 
 - **Upstream on the shelf:** the $1 \leftrightarrow 2$ duality Zero balances is
   the subject of [@sec:part_II_proton-theater], where the $\Phi$-mirror

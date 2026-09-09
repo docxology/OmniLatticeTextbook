@@ -1,8 +1,8 @@
 # Frontiers and the Research Program {#sec:part_III_frontiers}
 
-![Open-problems quadrant map for the closing chapter: the seven open problems of the Omni-Lattice research program plotted by expected value (vertical axis) against effort (horizontal axis), scored with the chapter's quadrant model; the high-value, low-effort do-first quadrant is shaded, with the octave-convention audit and the net-zero ledger automation leading the queue.](../../output/figures/part_III_frontiers.png){#fig:part_III_frontiers width=90%}
+![Open-problems quadrant map for the closing chapter: the seven open problems of the Omni-Lattice research program plotted by expected value $V$ (vertical axis) against effort $E$ (horizontal axis), scored with the chapter's quadrant model $Q = V^2/E$. The high-value, low-effort do-first quadrant is shaded, with the octave-convention audit and the net-zero ledger automation leading the queue. The takeaway: audits and automation run first, because they are cheap and everything downstream inherits their correctness.](../../output/figures/part_III_frontiers.png){#fig:part_III_frontiers width=90%}
 
-<!-- alt: Quadrant scatter of the seven open research problems by expected value and effort; the upper-left do-first quadrant is shaded and contains the octave-convention audit and the net-zero ledger automation. -->
+<!-- alt: Quadrant scatter of the seven open research problems by expected value and effort scored as Q = V^2/E; the upper-left do-first quadrant is shaded and contains the octave-convention audit and the net-zero ledger automation. -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -37,7 +37,7 @@ By the end of this chapter you should be able to:
 > Walk the corridor to `/papers` on the ship board and you find the Reading Room: two dozen whitepapers pinned shelf by shelf, each opening with the same "Honesty first" rail and closing on a [**Fair Exchange**](#gl:fair-exchange) clause [@mendez2026ship]. The shelves carry fixture locks and reference suites — `npm run research:synthobs-...` commands a visitor can actually run — yet the master-synthesis note reminds you that the whole cabinet is "catalog grammar for conversation," not a weather forecast and not a seismic warning [@mendez2026masterSynthesis]. This closing chapter does what a careful engineer does at the end of any catalog survey: it walks the shelf a second time and writes down which drawers are still empty — and, for each empty drawer, what would have to be true for the drawer to count as filled.
 ---
 
-## Orientation
+## Turning the Catalog on Itself: Three Frontier Sources
 
 Everything before this chapter built the catalog; this chapter interrogates it. Parts 0–II formalised the
 [**Omni-Lattice**](#gl:omni-lattice) — the [**octave**](#gl:octave) ladder, the digit drawers, the constant registers — and Part III ran its implementations. Now the corpus's own research program comes into view, drawn from three frontier sources: the master-synthesis filing cabinet [@mendez2026masterSynthesis], the invisible-frontier editorial [@mendez2026invisibleFrontier], and the moving-up-the-stack thesis [@mendez2026stack].
@@ -97,7 +97,7 @@ Every frontier paper closes on bookkeeping: the Fair Exchange clause promises pa
 
 The home news rail files the Zero-Octave gate as "$0/0 \to \Phi^0 = 1$ — crystal diagnostic" [@mendez2026ship], and the zero-octave paper develops it as an implementation fixture at [**node-k0**](#gl:node-k0), explicitly "not GR singularity QED" [@mendez2026zeroOctave]. What remains open is which algebraic reading is canonical — the cancel-as-limit reading, the cancel-as-convention reading, or the fixture reading the reference suite actually implements — and whether all papers agree on it. **What would count as evidence:** a fixture lock in the reference suite that reproduces $0/0 \to \Phi^0 = 1$ at node $k = 0$ under one stated reading, cited by every paper that invokes the diagnostic. Convergence on one reading closes the problem; persistent divergence is itself a finding the [**zero-octave**](#gl:zero-octave) chapter would need to annotate.
 
-## The Open-Problem Quadrant
+## Ranking the Program: The Value-by-Effort Quadrant
 
 A list of problems is not a program until it is ordered. Score each problem on expected value $V$ — what a resolution buys the catalog in consistency, tooling, or tested theses — and effort $E$ — the combined audit and implementation cost — each on a 1–5 scale, then rank by the quadrant score of [@eq:part_III_frontiers_quadrant]:
 

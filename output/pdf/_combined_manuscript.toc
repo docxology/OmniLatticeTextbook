@@ -14,13 +14,13 @@
 \contentsline {section}{\numberline {4}The SS Vibelandia Program and the Omni-Lattice Corpus}{29}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Learning Objectives}{29}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}Study Blueprint}{29}{subsubsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.2}Orientation}{30}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}The SS Vibelandia Program}{31}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}What the Infinite Octaves Omni-Lattice Claims to Be}{31}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}The Reading Room, navigated}{32}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}The register, worked}{33}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Scope and honesty}{34}{subsection.4.7}%
-\contentsline {subsection}{\numberline {4.8}How this book maps onto the corpus}{35}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.2}Reading the corpus as catalog architecture}{30}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}The Omniversal Canvas and its honesty rail}{31}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Four filed constructs, none of them measurements}{31}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Reading Room shelves and counting what counts}{32}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}The master register and its catalog-size arithmetic}{33}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Scope clauses that bound every construct}{34}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Where each corpus construct lives in this book}{35}{subsection.4.8}%
 \contentsline {subsection}{\numberline {4.9}Summary}{35}{subsection.4.9}%
 \contentsline {subsection}{\numberline {4.10}Key Terms}{35}{subsection.4.10}%
 \contentsline {subsection}{\numberline {4.11}Further Reading}{35}{subsection.4.11}%
@@ -29,9 +29,9 @@
 \contentsline {subsection}{\numberline {5.1}Learning Objectives}{37}{subsection.5.1}%
 \contentsline {subsubsection}{\numberline {5.1.1}Study Blueprint}{37}{subsubsection.5.1.1}%
 \contentsline {subsection}{\numberline {5.2}Opening Vignette: The Manual That Rewrites Itself}{38}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Orientation}{38}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}The Paper in the Corpus}{38}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Core Constructs}{39}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.3}The living manual and its single source of truth}{38}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}The PEM's route: a living manual, not a numbered paper}{38}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Seven constructs from scale key to protocol spine}{39}{subsection.5.5}%
 \contentsline {subsubsection}{\numberline {5.5.1}Construct 1 --- The \(\mitPhi _{\mathrm {EGS}}\) scale key}{39}{subsubsection.5.5.1}%
 \contentsline {subsubsection}{\numberline {5.5.2}Construct 2 --- The Story-depth map and its filing-space size}{39}{subsubsection.5.5.2}%
 \contentsline {subsubsection}{\numberline {5.5.3}Construct 3 --- The living-shelf auto-update protocol}{40}{subsubsection.5.5.3}%
@@ -40,8 +40,8 @@
 \contentsline {subsubsection}{\numberline {5.5.6}Construct 6 --- Fair Exchange as a balancing formalism}{41}{subsubsection.5.5.6}%
 \contentsline {subsubsection}{\numberline {5.5.7}Construct 7 --- The protocol spine: loops, cycles, and the closing glyph}{42}{subsubsection.5.5.7}%
 \contentsline {subsection}{\numberline {5.6}Worked Example: Pinning a Paper End-to-End}{43}{subsection.5.6}%
-\contentsline {subsection}{\numberline {5.7}Scope and Honesty}{43}{subsection.5.7}%
-\contentsline {subsection}{\numberline {5.8}Connections}{44}{subsection.5.8}%
+\contentsline {subsection}{\numberline {5.7}The five-row honesty boundary and its tiers}{43}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.8}How the PEM hub wires Part 0 together}{44}{subsection.5.8}%
 \contentsline {subsection}{\numberline {5.9}Summary}{44}{subsection.5.9}%
 \contentsline {subsection}{\numberline {5.10}Key Terms}{45}{subsection.5.10}%
 \contentsline {subsection}{\numberline {5.11}Further Reading}{45}{subsection.5.11}%
@@ -49,16 +49,16 @@
 \contentsline {section}{\numberline {6}Tensor Decoupling: Filing the Engine}{46}{section.6}%
 \contentsline {subsubsection}{\numberline {6.0.1}Study Blueprint}{46}{subsubsection.6.0.1}%
 \contentsline {subsection}{\numberline {6.1}Learning Objectives}{47}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Orientation}{47}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}The Paper in the Corpus}{47}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Core Constructs}{48}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.2}Labelled layers on one bulletin board}{47}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Shelf 2: engine grammar before the quantitative papers}{47}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Ladder counts, precision blocks, and the shelf dial}{48}{subsection.6.4}%
 \contentsline {subsubsection}{\numberline {6.4.1}Construct 1: the octave ladder (\(11 \times 9 = 99\))}{48}{subsubsection.6.4.1}%
 \contentsline {subsubsection}{\numberline {6.4.2}Construct 2: the per-block precision matrix (\(9 \times 81 = 729\))}{48}{subsubsection.6.4.2}%
 \contentsline {subsubsection}{\numberline {6.4.3}Construct 3: the holographic catalog digits (\(99 \times 81 = 8{,}019\))}{49}{subsubsection.6.4.3}%
 \contentsline {subsubsection}{\numberline {6.4.4}Construct 4: shelf scaling by the fractal constant}{49}{subsubsection.6.4.4}%
 \contentsline {subsection}{\numberline {6.5}Worked Example: Filing an August 2026 Week}{50}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Scope and Honesty}{51}{subsection.6.6}%
-\contentsline {subsection}{\numberline {6.7}Connections}{51}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.6}A catalog clock is not a prophecy engine}{51}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}Where the filing furniture is reused}{51}{subsection.6.7}%
 \contentsline {subsection}{\numberline {6.8}Summary}{52}{subsection.6.8}%
 \contentsline {subsection}{\numberline {6.9}Key Terms}{52}{subsection.6.9}%
 \contentsline {subsection}{\numberline {6.10}Further Reading}{52}{subsection.6.10}%
@@ -66,14 +66,14 @@
 \contentsline {section}{\numberline {7}Master Synthesis: Everything Is Connected}{54}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Learning Objectives}{54}{subsection.7.1}%
 \contentsline {subsubsection}{\numberline {7.1.1}Study Blueprint}{54}{subsubsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.2}The Paper in the Corpus}{55}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}The Filing Cabinet That Holds Everything}{55}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.2}Shelf 3: the corpus's summarising voice}{55}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}The master register: one cabinet for every headline}{55}{subsection.7.3}%
 \contentsline {subsection}{\numberline {7.4}The Golden Key: El Gran Sol's Fractal Constant}{56}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Indexing the Octaves}{57}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.5}Drawer addresses: two readings of the octave law}{57}{subsection.7.5}%
 \contentsline {subsection}{\numberline {7.6}The Cascade: How the Cabinet Files a Loud Week}{57}{subsection.7.6}%
-\contentsline {subsection}{\numberline {7.7}Worked Example: Filing the Week in Three Computations}{59}{subsection.7.7}%
-\contentsline {subsection}{\numberline {7.8}Scope and Honesty}{59}{subsection.7.8}%
-\contentsline {subsection}{\numberline {7.9}Connections}{60}{subsection.7.9}%
+\contentsline {subsection}{\numberline {7.7}Worked Example: Filing the Week in Three Computations}{58}{subsection.7.7}%
+\contentsline {subsection}{\numberline {7.8}Filed, not forecast: the paper's own disclaimers}{59}{subsection.7.8}%
+\contentsline {subsection}{\numberline {7.9}The hub note and its cross-link web}{60}{subsection.7.9}%
 \contentsline {subsection}{\numberline {7.10}Summary}{60}{subsection.7.10}%
 \contentsline {subsection}{\numberline {7.11}Key Terms}{60}{subsection.7.11}%
 \contentsline {subsection}{\numberline {7.12}Further Reading}{61}{subsection.7.12}%
@@ -81,33 +81,33 @@
 \contentsline {section}{\numberline {8}Nine Digits, Ninety-Nine Octaves}{62}{section.8}%
 \contentsline {subsection}{\numberline {8.1}Learning Objectives}{62}{subsection.8.1}%
 \contentsline {subsubsection}{\numberline {8.1.1}Study Blueprint}{62}{subsubsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.2}The paper in the corpus}{63}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Core constructs}{63}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.2}Shelf 4: the digits-master library map}{63}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Digit drawers, octave shelves, and the golden-ratio key}{63}{subsection.8.3}%
 \contentsline {subsubsection}{\numberline {8.3.1}Digits as coarse bins, octaves as nested bands}{63}{subsubsection.8.3.1}%
 \contentsline {subsubsection}{\numberline {8.3.2}The golden-ratio key}{64}{subsubsection.8.3.2}%
 \contentsline {subsubsection}{\numberline {8.3.3}The holographic catalog size}{65}{subsubsection.8.3.3}%
-\contentsline {subsection}{\numberline {8.4}Worked example: walking the ladder}{65}{subsection.8.4}%
-\contentsline {subsection}{\numberline {8.5}Scope and honesty}{67}{subsection.8.5}%
-\contentsline {subsection}{\numberline {8.6}Connections}{67}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8.4}Worked example: walking the ladder under both conventions}{65}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Coordination, not cosmic destiny: the map's filed scope}{66}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}Who inherits the map's grammar}{67}{subsection.8.6}%
 \contentsline {subsection}{\numberline {8.7}Summary}{67}{subsection.8.7}%
-\contentsline {subsection}{\numberline {8.8}Key Terms}{67}{subsection.8.8}%
+\contentsline {subsection}{\numberline {8.8}Key Terms}{68}{subsection.8.8}%
 \contentsline {subsection}{\numberline {8.9}Further Reading}{68}{subsection.8.9}%
 \contentsline {subsection}{\numberline {8.10}Practice}{68}{subsection.8.10}%
 \contentsline {section}{\numberline {9}Part I: Foundations: Constants, Primes, and Rhyme}{69}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Roadmap}{69}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}How to use this part}{70}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.1}Six chapters, three foundations, one reading order}{70}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Prerequisites, tested functions, and where to start}{70}{subsection.9.2}%
 \contentsline {section}{\numberline {10}El Gran Sol's Fractal Constant}{71}{section.10}%
 \contentsline {subsection}{\numberline {10.1}Learning Objectives}{71}{subsection.10.1}%
 \contentsline {subsubsection}{\numberline {10.1.1}Study Blueprint}{71}{subsubsection.10.1.1}%
-\contentsline {subsection}{\numberline {10.2}Orientation}{72}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}The Papers in the Corpus}{72}{subsection.10.3}%
-\contentsline {subsection}{\numberline {10.4}A Worked Formalism: Octave Recursion Under \ensuremath {\mitPhi }}{73}{subsection.10.4}%
-\contentsline {subsection}{\numberline {10.5}The Prime-Parity Scaffold}{74}{subsection.10.5}%
-\contentsline {subsection}{\numberline {10.6}Digit Filing: Proton Space and Electron Theater}{75}{subsection.10.6}%
-\contentsline {subsection}{\numberline {10.7}A Biological Manifestation: Palindrome Scaling}{75}{subsection.10.7}%
-\contentsline {subsection}{\numberline {10.8}Worked Example: Walking the \ensuremath {\mitPhi } Ladder}{76}{subsection.10.8}%
-\contentsline {subsection}{\numberline {10.9}Scope and Honesty}{76}{subsection.10.9}%
-\contentsline {subsection}{\numberline {10.10}Connections}{77}{subsection.10.10}%
+\contentsline {subsection}{\numberline {10.2}Catalog architecture and the constant that keys it}{72}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Three engine papers that share one filing key}{72}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}The octave recursion sketch and its two readings}{73}{subsection.10.4}%
+\contentsline {subsection}{\numberline {10.5}The prime-parity scaffold: sole-even anchor and irreducible sets}{74}{subsection.10.5}%
+\contentsline {subsection}{\numberline {10.6}Digit filing: Proton Space versus Electron Theater}{75}{subsection.10.6}%
+\contentsline {subsection}{\numberline {10.7}Palindrome scaling: MSY arms paced by \ensuremath {\mitPhi }}{75}{subsection.10.7}%
+\contentsline {subsection}{\numberline {10.8}Worked example: \ensuremath {\mitPhi } powers, Fibonacci ratios, both conventions}{76}{subsection.10.8}%
+\contentsline {subsection}{\numberline {10.9}What the corpus's three disclaimers rule out}{76}{subsection.10.9}%
+\contentsline {subsection}{\numberline {10.10}Where the spine hands off to later chapters}{77}{subsection.10.10}%
 \contentsline {subsection}{\numberline {10.11}Summary}{77}{subsection.10.11}%
 \contentsline {subsection}{\numberline {10.12}Key Terms}{77}{subsection.10.12}%
 \contentsline {subsection}{\numberline {10.13}Further Reading}{77}{subsection.10.13}%
@@ -115,56 +115,56 @@
 \contentsline {section}{\numberline {11}Prime-Parity: The Sole-Even Anchor}{79}{section.11}%
 \contentsline {subsection}{\numberline {11.1}Learning Objectives}{79}{subsection.11.1}%
 \contentsline {subsubsection}{\numberline {11.1.1}Study Blueprint}{79}{subsubsection.11.1.1}%
-\contentsline {subsection}{\numberline {11.2}The paper in the corpus}{80}{subsection.11.2}%
-\contentsline {subsection}{\numberline {11.3}The sole-even anchor}{80}{subsection.11.3}%
-\contentsline {subsection}{\numberline {11.4}Odd primes as irreducible minimum sets}{81}{subsection.11.4}%
-\contentsline {subsection}{\numberline {11.5}The octave recursion formalism}{82}{subsection.11.5}%
-\contentsline {subsection}{\numberline {11.6}Worked example: filing the primes and walking the ladder}{83}{subsection.11.6}%
-\contentsline {subsection}{\numberline {11.7}Scope and honesty}{84}{subsection.11.7}%
-\contentsline {subsection}{\numberline {11.8}Connections}{84}{subsection.11.8}%
+\contentsline {subsection}{\numberline {11.2}The shelf-11 paper: catalog math and filing labels}{80}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Sole-even 2 as the binary dyad anchor}{80}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}Odd primes as irreducible minimum addressing sets}{81}{subsection.11.4}%
+\contentsline {subsection}{\numberline {11.5}Octave recursion: exponent and subscript conventions}{82}{subsection.11.5}%
+\contentsline {subsection}{\numberline {11.6}Worked example: partition, ladder, and one joint address}{83}{subsection.11.6}%
+\contentsline {subsection}{\numberline {11.7}The paper's boundary: catalog math, not physics}{84}{subsection.11.7}%
+\contentsline {subsection}{\numberline {11.8}Where the parity filing feeds the rest of the book}{84}{subsection.11.8}%
 \contentsline {subsection}{\numberline {11.9}Summary}{84}{subsection.11.9}%
 \contentsline {subsection}{\numberline {11.10}Key Terms}{84}{subsection.11.10}%
 \contentsline {subsection}{\numberline {11.11}Further Reading}{85}{subsection.11.11}%
 \contentsline {subsection}{\numberline {11.12}Practice}{85}{subsection.11.12}%
 \contentsline {section}{\numberline {12}Holographic Rhyme: The Four-Pillar Fractal}{86}{section.12}%
 \contentsline {subsection}{\numberline {12.1}Learning Objectives}{86}{subsection.12.1}%
-\contentsline {subsubsection}{\numberline {12.1.1}Study Blueprint}{86}{subsubsection.12.1.1}%
-\contentsline {subsection}{\numberline {12.2}The paper in the corpus}{87}{subsection.12.2}%
-\contentsline {subsection}{\numberline {12.3}Core constructs}{88}{subsection.12.3}%
+\contentsline {subsubsection}{\numberline {12.1.1}Study Blueprint}{87}{subsubsection.12.1.1}%
+\contentsline {subsection}{\numberline {12.2}Engine shelf \#18 and its four locked pillars}{87}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}Four filing pillars and the field that models them}{88}{subsection.12.3}%
 \contentsline {subsubsection}{\numberline {12.3.1}The four pillars as filing labels}{88}{subsubsection.12.3.1}%
 \contentsline {subsubsection}{\numberline {12.3.2}The four-pillar interference field}{88}{subsubsection.12.3.2}%
-\contentsline {subsection}{\numberline {12.4}Worked example: filing at \(\mitlambda = \mitPhi \)}{89}{subsection.12.4}%
-\contentsline {subsection}{\numberline {12.5}Scope and honesty}{90}{subsection.12.5}%
-\contentsline {subsection}{\numberline {12.6}Connections}{90}{subsection.12.6}%
+\contentsline {subsection}{\numberline {12.4}Worked example: evaluating the field at \(\mitlambda = \mitPhi \)}{89}{subsection.12.4}%
+\contentsline {subsection}{\numberline {12.5}The Honesty clause's three disclaimed readings}{90}{subsection.12.5}%
+\contentsline {subsection}{\numberline {12.6}Where the four-pillar filing hands off to companions}{90}{subsection.12.6}%
 \contentsline {subsection}{\numberline {12.7}Summary}{91}{subsection.12.7}%
 \contentsline {subsection}{\numberline {12.8}Key Terms}{91}{subsection.12.8}%
 \contentsline {subsection}{\numberline {12.9}Further Reading}{91}{subsection.12.9}%
 \contentsline {subsection}{\numberline {12.10}Practice}{92}{subsection.12.10}%
 \contentsline {section}{\numberline {13}Multi-Dimensional Holographic Rhyme}{93}{section.13}%
 \contentsline {subsection}{\numberline {13.1}Learning Objectives}{93}{subsection.13.1}%
-\contentsline {subsubsection}{\numberline {13.1.1}Study Blueprint}{93}{subsubsection.13.1.1}%
-\contentsline {subsection}{\numberline {13.2}The paper in the corpus}{94}{subsection.13.2}%
-\contentsline {subsection}{\numberline {13.3}Core construct: the xD\ensuremath {\pm }yD summation engine}{95}{subsection.13.3}%
+\contentsline {subsubsection}{\numberline {13.1.1}Study Blueprint}{94}{subsubsection.13.1.1}%
+\contentsline {subsection}{\numberline {13.2}Engine shelf \#19 and the bidirectional encoding filing}{94}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}The xD\ensuremath {\pm }yD engine: parent field, combine, octave placement}{95}{subsection.13.3}%
 \contentsline {subsubsection}{\numberline {13.3.1}The parent field}{95}{subsubsection.13.3.1}%
 \contentsline {subsubsection}{\numberline {13.3.2}The combine operation}{95}{subsubsection.13.3.2}%
 \contentsline {subsubsection}{\numberline {13.3.3}Cross-scale placement under \(\mitPhi \)}{96}{subsubsection.13.3.3}%
-\contentsline {subsection}{\numberline {13.4}Worked example}{96}{subsection.13.4}%
-\contentsline {subsection}{\numberline {13.5}Scope and honesty}{98}{subsection.13.5}%
-\contentsline {subsection}{\numberline {13.6}Connections}{98}{subsection.13.6}%
+\contentsline {subsection}{\numberline {13.4}Worked example: Fibonacci indices combined on the \ensuremath {\mitPhi } ladder}{96}{subsection.13.4}%
+\contentsline {subsection}{\numberline {13.5}What the shelf-19 honesty clause disclaims}{98}{subsection.13.5}%
+\contentsline {subsection}{\numberline {13.6}Where shelf \#19 hands its neighbours onward}{98}{subsection.13.6}%
 \contentsline {subsection}{\numberline {13.7}Summary}{99}{subsection.13.7}%
 \contentsline {subsection}{\numberline {13.8}Key Terms}{99}{subsection.13.8}%
 \contentsline {subsection}{\numberline {13.9}Further Reading}{99}{subsection.13.9}%
 \contentsline {subsection}{\numberline {13.10}Practice}{99}{subsection.13.10}%
 \contentsline {section}{\numberline {14}Topology of the Void: Zero as Equilibrium}{101}{section.14}%
 \contentsline {subsection}{\numberline {14.1}Learning Objectives}{101}{subsection.14.1}%
-\contentsline {subsubsection}{\numberline {14.1.1}Study Blueprint}{101}{subsubsection.14.1.1}%
-\contentsline {subsection}{\numberline {14.2}The paper in the corpus}{102}{subsection.14.2}%
-\contentsline {subsection}{\numberline {14.3}Zero as the null-space pivot}{103}{subsection.14.3}%
-\contentsline {subsection}{\numberline {14.4}The zero-balance operator}{104}{subsection.14.4}%
-\contentsline {subsection}{\numberline {14.5}Null-space capacity and the noise-sink}{105}{subsection.14.5}%
-\contentsline {subsection}{\numberline {14.6}Worked example: balancing a signal around the pivot}{106}{subsection.14.6}%
-\contentsline {subsection}{\numberline {14.7}Scope and honesty}{106}{subsection.14.7}%
-\contentsline {subsection}{\numberline {14.8}Connections}{107}{subsection.14.8}%
+\contentsline {subsubsection}{\numberline {14.1.1}Study Blueprint}{102}{subsubsection.14.1.1}%
+\contentsline {subsection}{\numberline {14.2}Engine shelf \#17 and its landed artefacts}{102}{subsection.14.2}%
+\contentsline {subsection}{\numberline {14.3}Zero files as the equilibrium pivot of 1 and 2}{103}{subsection.14.3}%
+\contentsline {subsection}{\numberline {14.4}The zero-balance operator as odd-function phase cancellation}{104}{subsection.14.4}%
+\contentsline {subsection}{\numberline {14.5}Null-space capacity: the noise-sink fixture and its well}{105}{subsection.14.5}%
+\contentsline {subsection}{\numberline {14.6}Worked example: sinking the odd part around zero}{106}{subsection.14.6}%
+\contentsline {subsection}{\numberline {14.7}The Honesty clause: four over-readings disclaimed}{106}{subsection.14.7}%
+\contentsline {subsection}{\numberline {14.8}Where the pivot hands off across the book}{107}{subsection.14.8}%
 \contentsline {subsection}{\numberline {14.9}Summary}{107}{subsection.14.9}%
 \contentsline {subsection}{\numberline {14.10}Key Terms}{107}{subsection.14.10}%
 \contentsline {subsection}{\numberline {14.11}Further Reading}{107}{subsection.14.11}%
@@ -172,13 +172,13 @@
 \contentsline {section}{\numberline {15}The Higgs Gate: Mass and the Shared Now}{109}{section.15}%
 \contentsline {subsection}{\numberline {15.1}Learning Objectives}{109}{subsection.15.1}%
 \contentsline {subsubsection}{\numberline {15.1.1}Study Blueprint}{110}{subsubsection.15.1.1}%
-\contentsline {subsection}{\numberline {15.2}One Paper on Shelf Ten}{110}{subsection.15.2}%
-\contentsline {subsection}{\numberline {15.3}The Triadic Matrix: One Squeeze Story, Three Domains}{111}{subsection.15.3}%
-\contentsline {subsection}{\numberline {15.4}A Worked Formalism: The Transduction Brake}{112}{subsection.15.4}%
-\contentsline {subsection}{\numberline {15.5}Worked Example: Reading the Gate's Clock}{112}{subsection.15.5}%
-\contentsline {subsection}{\numberline {15.6}Protocol Lanes A--C: Proposed Amendment-A Research}{113}{subsection.15.6}%
-\contentsline {subsection}{\numberline {15.7}Scope and Honesty}{113}{subsection.15.7}%
-\contentsline {subsection}{\numberline {15.8}Connections}{114}{subsection.15.8}%
+\contentsline {subsection}{\numberline {15.2}The shelf-10 paper: mass and ``Now'' share a gate}{110}{subsection.15.2}%
+\contentsline {subsection}{\numberline {15.3}The triadic matrix: cosmic, quantum, conscious presence}{111}{subsection.15.3}%
+\contentsline {subsection}{\numberline {15.4}The transduction brake: \(v(t) = v_0\,e^{-kt}\) and its half-life}{112}{subsection.15.4}%
+\contentsline {subsection}{\numberline {15.5}Worked example: gate velocities at \(v_0 = k = 1\)}{112}{subsection.15.5}%
+\contentsline {subsection}{\numberline {15.6}Three protocol lanes, filed as proposed Amendment-A research}{113}{subsection.15.6}%
+\contentsline {subsection}{\numberline {15.7}The paper's three negations and the construct's purpose}{113}{subsection.15.7}%
+\contentsline {subsection}{\numberline {15.8}Where the gate's deceleration reappears later}{114}{subsection.15.8}%
 \contentsline {subsection}{\numberline {15.9}Summary}{114}{subsection.15.9}%
 \contentsline {subsection}{\numberline {15.10}Key Terms}{114}{subsection.15.10}%
 \contentsline {subsection}{\numberline {15.11}Further Reading}{114}{subsection.15.11}%
@@ -187,14 +187,14 @@
 \contentsline {section}{\numberline {17}Proton Space, Electron Theater, and \ensuremath {\mitPhi } Duality}{118}{section.17}%
 \contentsline {subsection}{\numberline {17.1}Learning Objectives}{118}{subsection.17.1}%
 \contentsline {subsubsection}{\numberline {17.1.1}Study Blueprint}{119}{subsubsection.17.1.1}%
-\contentsline {subsection}{\numberline {17.2}The paper in the corpus}{119}{subsection.17.2}%
+\contentsline {subsection}{\numberline {17.2}The source: Proton Space, Electron Theater, \ensuremath {\mitPhi } Duality}{119}{subsection.17.2}%
 \contentsline {subsection}{\numberline {17.3}The filing duality: digit 1 and digit 2}{119}{subsection.17.3}%
 \contentsline {subsection}{\numberline {17.4}\ensuremath {\mitPhi } as filing constant}{121}{subsection.17.4}%
 \contentsline {subsection}{\numberline {17.5}The \ensuremath {\mitPhi }-duality mirror}{121}{subsection.17.5}%
 \contentsline {subsection}{\numberline {17.6}Worked example: walking the mirror}{122}{subsection.17.6}%
 \contentsline {subsection}{\numberline {17.7}Zero as the balance node}{123}{subsection.17.7}%
-\contentsline {subsection}{\numberline {17.8}Scope and honesty}{123}{subsection.17.8}%
-\contentsline {subsection}{\numberline {17.9}Connections}{124}{subsection.17.9}%
+\contentsline {subsection}{\numberline {17.8}What the two-drawer filing does not claim}{123}{subsection.17.8}%
+\contentsline {subsection}{\numberline {17.9}Where the digit drawers lead across the corpus}{124}{subsection.17.9}%
 \contentsline {subsection}{\numberline {17.10}Summary}{124}{subsection.17.10}%
 \contentsline {subsection}{\numberline {17.11}Key Terms}{124}{subsection.17.11}%
 \contentsline {subsection}{\numberline {17.12}Further Reading}{124}{subsection.17.12}%
@@ -202,62 +202,62 @@
 \contentsline {section}{\numberline {18}The Viscosity of Light}{126}{section.18}%
 \contentsline {subsection}{\numberline {18.1}Learning Objectives}{126}{subsection.18.1}%
 \contentsline {subsubsection}{\numberline {18.1.1}Study Blueprint}{127}{subsubsection.18.1.1}%
-\contentsline {subsection}{\numberline {18.2}The Paper in the Corpus}{127}{subsection.18.2}%
-\contentsline {subsection}{\numberline {18.3}Core Constructs}{128}{subsection.18.3}%
+\contentsline {subsection}{\numberline {18.2}The source: Viscosity of Light, engine shelf \#24}{127}{subsection.18.2}%
+\contentsline {subsection}{\numberline {18.3}The viscous floor, drag family, render, and non-locality Soft Story}{128}{subsection.18.3}%
 \contentsline {subsubsection}{\numberline {18.3.1}Construct 1: \(c\) as a viscous floor}{128}{subsubsection.18.3.1}%
 \contentsline {subsubsection}{\numberline {18.3.2}The \(\mitPhi \)-scaled drag family}{128}{subsubsection.18.3.2}%
 \contentsline {subsubsection}{\numberline {18.3.3}Construct 2: the sequential spacetime render}{129}{subsubsection.18.3.3}%
 \contentsline {subsubsection}{\numberline {18.3.4}Construct 3: cognitive non-locality as Soft Story}{129}{subsubsection.18.3.4}%
 \contentsline {subsection}{\numberline {18.4}Worked Example: Walking the EGS Viscosity Engine}{130}{subsection.18.4}%
-\contentsline {subsection}{\numberline {18.5}Scope and Honesty}{131}{subsection.18.5}%
-\contentsline {subsection}{\numberline {18.6}Connections}{131}{subsection.18.6}%
+\contentsline {subsection}{\numberline {18.5}What the viscous floor does not claim}{131}{subsection.18.5}%
+\contentsline {subsection}{\numberline {18.6}Where the floor leads: eddy, overlap, lattice}{131}{subsection.18.6}%
 \contentsline {subsection}{\numberline {18.7}Summary}{132}{subsection.18.7}%
 \contentsline {subsection}{\numberline {18.8}Key Terms}{132}{subsection.18.8}%
 \contentsline {subsection}{\numberline {18.9}Further Reading}{132}{subsection.18.9}%
 \contentsline {subsection}{\numberline {18.10}Practice}{132}{subsection.18.10}%
 \contentsline {section}{\numberline {19}The Eddy-Current Mirror: Transduction Drag}{133}{section.19}%
 \contentsline {subsection}{\numberline {19.1}Learning Objectives}{133}{subsection.19.1}%
-\contentsline {subsubsection}{\numberline {19.1.1}Study Blueprint}{133}{subsubsection.19.1.1}%
-\contentsline {subsection}{\numberline {19.2}The Paper in the Corpus}{134}{subsection.19.2}%
+\contentsline {subsubsection}{\numberline {19.1.1}Study Blueprint}{134}{subsubsection.19.1.1}%
+\contentsline {subsection}{\numberline {19.2}The source: Eddy-Current Mirror, engine shelf \#22}{134}{subsection.19.2}%
 \contentsline {subsection}{\numberline {19.3}The Transduction Line: \(c\) as a Brake}{135}{subsection.19.3}%
-\contentsline {subsection}{\numberline {19.4}Self-Observation Drag: The Force Side}{135}{subsection.19.4}%
+\contentsline {subsection}{\numberline {19.4}Self-Observation Drag: The Force Side}{136}{subsection.19.4}%
 \contentsline {subsection}{\numberline {19.5}The c-Bridge: An Impedance Match}{136}{subsection.19.5}%
 \contentsline {subsection}{\numberline {19.6}Worked Example: Braking a Fall}{137}{subsection.19.6}%
 \contentsline {subsection}{\numberline {19.7}The EGS Transduction Engine}{137}{subsection.19.7}%
-\contentsline {subsection}{\numberline {19.8}Scope and Honesty}{138}{subsection.19.8}%
-\contentsline {subsection}{\numberline {19.9}Connections}{138}{subsection.19.9}%
+\contentsline {subsection}{\numberline {19.8}What the transduction brake does not claim}{138}{subsection.19.8}%
+\contentsline {subsection}{\numberline {19.9}Where the brake leads: viscosity, overlap, the Higgs gate}{138}{subsection.19.9}%
 \contentsline {subsection}{\numberline {19.10}Summary}{138}{subsection.19.10}%
-\contentsline {subsection}{\numberline {19.11}Key Terms}{138}{subsection.19.11}%
-\contentsline {subsection}{\numberline {19.12}Further Reading}{138}{subsection.19.12}%
+\contentsline {subsection}{\numberline {19.11}Key Terms}{139}{subsection.19.11}%
+\contentsline {subsection}{\numberline {19.12}Further Reading}{139}{subsection.19.12}%
 \contentsline {subsection}{\numberline {19.13}Practice}{139}{subsection.19.13}%
 \contentsline {section}{\numberline {20}The Crystalline Unified Field: Speed and Distance}{140}{section.20}%
 \contentsline {subsection}{\numberline {20.1}Learning Objectives}{140}{subsection.20.1}%
 \contentsline {subsubsection}{\numberline {20.1.1}Study Blueprint}{140}{subsubsection.20.1.1}%
-\contentsline {subsection}{\numberline {20.2}The paper in the corpus}{141}{subsection.20.2}%
-\contentsline {subsection}{\numberline {20.3}Core constructs}{142}{subsection.20.3}%
+\contentsline {subsection}{\numberline {20.2}The source: Crystalline Unified Field, engine shelf \#24}{141}{subsection.20.2}%
+\contentsline {subsection}{\numberline {20.3}Four filings: the facet identity, \ensuremath {\mitPhi }-crystal, Landauer rail, velocity multiplex}{142}{subsection.20.3}%
 \contentsline {subsubsection}{\numberline {20.3.1}The facet identity and access time}{142}{subsubsection.20.3.1}%
 \contentsline {subsubsection}{\numberline {20.3.2}The \(\mitPhi \)-recursive crystal}{142}{subsubsection.20.3.2}%
 \contentsline {subsubsection}{\numberline {20.3.3}The Landauer rail}{143}{subsubsection.20.3.3}%
 \contentsline {subsubsection}{\numberline {20.3.4}The velocity multiplex}{143}{subsubsection.20.3.4}%
 \contentsline {subsection}{\numberline {20.4}Worked example: walking the crystal ladder}{144}{subsection.20.4}%
-\contentsline {subsection}{\numberline {20.5}Scope and honesty}{145}{subsection.20.5}%
-\contentsline {subsection}{\numberline {20.6}Connections}{145}{subsection.20.6}%
+\contentsline {subsection}{\numberline {20.5}What the access crystal does not claim}{145}{subsection.20.5}%
+\contentsline {subsection}{\numberline {20.6}Where the access crystal meets the rest of the shelf}{145}{subsection.20.6}%
 \contentsline {subsection}{\numberline {20.7}Summary}{145}{subsection.20.7}%
 \contentsline {subsection}{\numberline {20.8}Key Terms}{146}{subsection.20.8}%
 \contentsline {subsection}{\numberline {20.9}Further Reading}{146}{subsection.20.9}%
 \contentsline {subsection}{\numberline {20.10}Practice}{146}{subsection.20.10}%
 \contentsline {section}{\numberline {21}The Grand Unified Metrological Overlap: Five Gears, One Clockwork}{147}{section.21}%
 \contentsline {subsection}{\numberline {21.1}Learning Objectives}{147}{subsection.21.1}%
-\contentsline {subsubsection}{\numberline {21.1.1}Study Blueprint}{147}{subsubsection.21.1.1}%
-\contentsline {subsection}{\numberline {21.2}The Paper in the Corpus}{148}{subsection.21.2}%
+\contentsline {subsubsection}{\numberline {21.1.1}Study Blueprint}{148}{subsubsection.21.1.1}%
+\contentsline {subsection}{\numberline {21.2}The source: Grand Unified Metrological Overlap, engine shelf \#23}{148}{subsection.21.2}%
 \contentsline {subsection}{\numberline {21.3}The Five-Constant Map}{149}{subsection.21.3}%
 \contentsline {subsection}{\numberline {21.4}The Overlap Solver}{149}{subsection.21.4}%
 \contentsline {subsubsection}{\numberline {21.4.1}The octave spacing \(\mitDelta E_n\)}{150}{subsubsection.21.4.1}%
 \contentsline {subsubsection}{\numberline {21.4.2}Action wells and the \(m_{\mathrm {catalog}}\) sum}{150}{subsubsection.21.4.2}%
 \contentsline {subsection}{\numberline {21.5}Worked Example: Overlapping the Clock's Registers}{151}{subsection.21.5}%
 \contentsline {subsection}{\numberline {21.6}The Higgs--Eddy Rhyme}{152}{subsection.21.6}%
-\contentsline {subsection}{\numberline {21.7}Scope and Honesty}{152}{subsection.21.7}%
-\contentsline {subsection}{\numberline {21.8}Connections}{153}{subsection.21.8}%
+\contentsline {subsection}{\numberline {21.7}What the overlap solver does not claim}{152}{subsection.21.7}%
+\contentsline {subsection}{\numberline {21.8}Where the five gears lead across the corpus}{153}{subsection.21.8}%
 \contentsline {subsection}{\numberline {21.9}Summary}{153}{subsection.21.9}%
 \contentsline {subsection}{\numberline {21.10}Key Terms}{153}{subsection.21.10}%
 \contentsline {subsection}{\numberline {21.11}Further Reading}{153}{subsection.21.11}%
@@ -265,13 +265,13 @@
 \contentsline {section}{\numberline {22}Metamorphic Octaves: Densification}{155}{section.22}%
 \contentsline {subsection}{\numberline {22.1}Learning Objectives}{155}{subsection.22.1}%
 \contentsline {subsubsection}{\numberline {22.1.1}Study Blueprint}{155}{subsubsection.22.1.1}%
-\contentsline {subsection}{\numberline {22.2}Orientation}{156}{subsection.22.2}%
-\contentsline {subsection}{\numberline {22.3}The paper in the corpus}{156}{subsection.22.3}%
+\contentsline {subsection}{\numberline {22.2}Shelf placement and the three honesty markers}{156}{subsection.22.2}%
+\contentsline {subsection}{\numberline {22.3}The metamorphic-octaves note and its corpus placement}{156}{subsection.22.3}%
 \contentsline {subsection}{\numberline {22.4}Core construct I: the two furnaces and the filing map}{157}{subsection.22.4}%
 \contentsline {subsection}{\numberline {22.5}Core construct II: densification under exposure}{158}{subsection.22.5}%
 \contentsline {subsection}{\numberline {22.6}Worked example: walking the densification curve}{159}{subsection.22.6}%
-\contentsline {subsection}{\numberline {22.7}Scope and honesty}{160}{subsection.22.7}%
-\contentsline {subsection}{\numberline {22.8}Connections}{160}{subsection.22.8}%
+\contentsline {subsection}{\numberline {22.7}What the densification filing does not claim}{160}{subsection.22.7}%
+\contentsline {subsection}{\numberline {22.8}Neighbouring filings: bands, balances, and overlap measures}{160}{subsection.22.8}%
 \contentsline {subsection}{\numberline {22.9}Summary}{161}{subsection.22.9}%
 \contentsline {subsection}{\numberline {22.10}Key Terms}{161}{subsection.22.10}%
 \contentsline {subsection}{\numberline {22.11}Further Reading}{161}{subsection.22.11}%
@@ -279,14 +279,14 @@
 \contentsline {section}{\numberline {23}Planetary Core and the Goldilocks Bands}{163}{section.23}%
 \contentsline {subsection}{\numberline {23.1}Learning Objectives}{163}{subsection.23.1}%
 \contentsline {subsubsection}{\numberline {23.1.1}Study Blueprint}{163}{subsubsection.23.1.1}%
-\contentsline {subsection}{\numberline {23.2}The paper in the corpus}{164}{subsection.23.2}%
-\contentsline {subsection}{\numberline {23.3}Core constructs}{165}{subsection.23.3}%
+\contentsline {subsection}{\numberline {23.2}The planetary-core note and its verification surface}{164}{subsection.23.2}%
+\contentsline {subsection}{\numberline {23.3}Telemetry slots, phase flip, impedance label, Goldilocks band}{165}{subsection.23.3}%
 \contentsline {subsubsection}{\numberline {23.3.1}The two telemetry slots and the rotor story}{165}{subsubsection.23.3.1}%
 \contentsline {subsubsection}{\numberline {23.3.2}The Goldilocks band: filing coherence as an interval}{165}{subsubsection.23.3.2}%
 \contentsline {subsubsection}{\numberline {23.3.3}The CMB mirror story and its impedance label}{166}{subsubsection.23.3.3}%
 \contentsline {subsection}{\numberline {23.4}Worked example: filing a week of telemetry}{166}{subsection.23.4}%
-\contentsline {subsection}{\numberline {23.5}Scope and honesty}{168}{subsection.23.5}%
-\contentsline {subsection}{\numberline {23.6}Connections}{168}{subsection.23.6}%
+\contentsline {subsection}{\numberline {23.5}What the planetary filing does not claim}{168}{subsection.23.5}%
+\contentsline {subsection}{\numberline {23.6}Where the rotor story leads across the corpus}{168}{subsection.23.6}%
 \contentsline {subsection}{\numberline {23.7}Summary}{168}{subsection.23.7}%
 \contentsline {subsection}{\numberline {23.8}Key Terms}{169}{subsection.23.8}%
 \contentsline {subsection}{\numberline {23.9}Further Reading}{169}{subsection.23.9}%
@@ -294,13 +294,13 @@
 \contentsline {section}{\numberline {24}The Holographic Singularity Crystal: Net Zero and Node k = 0}{170}{section.24}%
 \contentsline {subsection}{\numberline {24.1}Learning Objectives}{170}{subsection.24.1}%
 \contentsline {subsubsection}{\numberline {24.1.1}Study Blueprint}{171}{subsubsection.24.1.1}%
-\contentsline {subsection}{\numberline {24.2}The Paper in the Corpus}{171}{subsection.24.2}%
+\contentsline {subsection}{\numberline {24.2}The two source papers and their shelf placement}{171}{subsection.24.2}%
 \contentsline {subsection}{\numberline {24.3}Core Construct I: Net Zero as an Active Equilibrium}{172}{subsection.24.3}%
 \contentsline {subsection}{\numberline {24.4}Core Construct II: The 0/0 Crystal}{172}{subsection.24.4}%
 \contentsline {subsection}{\numberline {24.5}Core Construct III: Node k = 0, the Zero-Octave Locus}{173}{subsection.24.5}%
 \contentsline {subsection}{\numberline {24.6}Worked Example: Balancing the Crystal}{174}{subsection.24.6}%
-\contentsline {subsection}{\numberline {24.7}Scope and Honesty}{175}{subsection.24.7}%
-\contentsline {subsection}{\numberline {24.8}Connections}{176}{subsection.24.8}%
+\contentsline {subsection}{\numberline {24.7}What the zero filings do not claim}{175}{subsection.24.7}%
+\contentsline {subsection}{\numberline {24.8}Where the balance node sits in the corpus}{176}{subsection.24.8}%
 \contentsline {subsection}{\numberline {24.9}Summary}{176}{subsection.24.9}%
 \contentsline {subsection}{\numberline {24.10}Key Terms}{176}{subsection.24.10}%
 \contentsline {subsection}{\numberline {24.11}Further Reading}{176}{subsection.24.11}%
@@ -308,30 +308,30 @@
 \contentsline {section}{\numberline {25}Part III: Implementations, Companions, and Frontiers}{178}{section.25}%
 \contentsline {section}{\numberline {26}CMOS/Protonic: The Silicon Shelf}{180}{section.26}%
 \contentsline {subsection}{\numberline {26.1}Learning Objectives}{180}{subsection.26.1}%
-\contentsline {subsubsection}{\numberline {26.1.1}Study Blueprint}{180}{subsubsection.26.1.1}%
-\contentsline {subsection}{\numberline {26.2}The Bridge Note and Its Place in the Corpus}{181}{subsection.26.2}%
+\contentsline {subsubsection}{\numberline {26.1.1}Study Blueprint}{181}{subsubsection.26.1.1}%
+\contentsline {subsection}{\numberline {26.2}The Pinned Bridge Note: One Cabinet, Two Vocabularies}{181}{subsection.26.2}%
 \contentsline {subsection}{\numberline {26.3}The First Shelf: Binary as Tier One}{181}{subsection.26.3}%
 \contentsline {subsection}{\numberline {26.4}The Wider Shelves: Protonic as Bands 2\ldots 99}{182}{subsection.26.4}%
 \contentsline {subsection}{\numberline {26.5}A Worked Formalism: The Silicon-Shelf Tier Map}{182}{subsection.26.5}%
-\contentsline {subsection}{\numberline {26.6}The Ladder Beneath the Shelf}{183}{subsection.26.6}%
-\contentsline {subsection}{\numberline {26.7}Worked Example: Counting States on the Shelf}{183}{subsection.26.7}%
-\contentsline {subsection}{\numberline {26.8}Scope and Honesty}{185}{subsection.26.8}%
-\contentsline {subsection}{\numberline {26.9}Connections}{185}{subsection.26.9}%
-\contentsline {subsection}{\numberline {26.10}Summary}{185}{subsection.26.10}%
+\contentsline {subsection}{\numberline {26.6}The \ensuremath {\mitPhi }-Spaced Octave Ladder and Its Two Conventions}{183}{subsection.26.6}%
+\contentsline {subsection}{\numberline {26.7}Worked Example: Counting States on the Shelf}{184}{subsection.26.7}%
+\contentsline {subsection}{\numberline {26.8}Honesty Clauses: Roadmap Language, Not a Measured Chip}{185}{subsection.26.8}%
+\contentsline {subsection}{\numberline {26.9}Handoffs to the Prime Vaults, the Stack, and the Router}{185}{subsection.26.9}%
+\contentsline {subsection}{\numberline {26.10}Summary}{186}{subsection.26.10}%
 \contentsline {subsection}{\numberline {26.11}Key Terms}{186}{subsection.26.11}%
 \contentsline {subsection}{\numberline {26.12}Further Reading}{186}{subsection.26.12}%
 \contentsline {subsection}{\numberline {26.13}Practice}{186}{subsection.26.13}%
 \contentsline {section}{\numberline {27}Protein Folding as Prime-Container Architecture}{187}{section.27}%
 \contentsline {subsection}{\numberline {27.1}Learning Objectives}{187}{subsection.27.1}%
 \contentsline {subsubsection}{\numberline {27.1.1}Study Blueprint}{187}{subsubsection.27.1.1}%
-\contentsline {subsection}{\numberline {27.2}The Paper in the Corpus}{188}{subsection.27.2}%
+\contentsline {subsection}{\numberline {27.2}The Prime-Vault Note on Engine Shelf \#14}{188}{subsection.27.2}%
 \contentsline {subsection}{\numberline {27.3}The Prime-Container Grammar}{189}{subsection.27.3}%
 \contentsline {subsubsection}{\numberline {27.3.1}The address formalism}{189}{subsubsection.27.3.1}%
 \contentsline {subsubsection}{\numberline {27.3.2}Capacity: why vaults compound}{190}{subsubsection.27.3.2}%
 \contentsline {subsubsection}{\numberline {27.3.3}Under \(\mitPhi \): the Fractal constant and the octave ladder}{190}{subsubsection.27.3.3}%
 \contentsline {subsection}{\numberline {27.4}Worked Example: Filing a Demo Residue Index}{191}{subsection.27.4}%
-\contentsline {subsection}{\numberline {27.5}Scope and Honesty}{192}{subsection.27.5}%
-\contentsline {subsection}{\numberline {27.6}Connections}{192}{subsection.27.6}%
+\contentsline {subsection}{\numberline {27.5}Honesty First: Catalog Architecture, Not a CASP Entry}{192}{subsection.27.5}%
+\contentsline {subsection}{\numberline {27.6}Handoffs to Storage, the Stack, and the Work Engine}{192}{subsection.27.6}%
 \contentsline {subsection}{\numberline {27.7}Summary}{192}{subsection.27.7}%
 \contentsline {subsection}{\numberline {27.8}Key Terms}{193}{subsection.27.8}%
 \contentsline {subsection}{\numberline {27.9}Further Reading}{193}{subsection.27.9}%
@@ -339,15 +339,15 @@
 \contentsline {section}{\numberline {28}Prime-Indexed Volumetric Storage}{194}{section.28}%
 \contentsline {subsection}{\numberline {28.1}Learning Objectives}{194}{subsection.28.1}%
 \contentsline {subsubsection}{\numberline {28.1.1}Study Blueprint}{195}{subsubsection.28.1.1}%
-\contentsline {subsection}{\numberline {28.2}The Paper in the Corpus}{195}{subsection.28.2}%
+\contentsline {subsection}{\numberline {28.2}The Vault Filing on Engine Shelf \#15}{195}{subsection.28.2}%
 \contentsline {subsection}{\numberline {28.3}The Parity-Tax Baseline}{196}{subsection.28.3}%
 \contentsline {subsection}{\numberline {28.4}Core Construct: the Prime-Vault Indexing Grammar}{196}{subsection.28.4}%
 \contentsline {subsubsection}{\numberline {28.4.1}The unique-address encoding}{197}{subsubsection.28.4.1}%
 \contentsline {subsubsection}{\numberline {28.4.2}The binary base channel and the odd-prime vaults}{197}{subsubsection.28.4.2}%
 \contentsline {subsubsection}{\numberline {28.4.3}Where \ensuremath {\mitPhi } enters: a measurement ruler}{198}{subsubsection.28.4.3}%
 \contentsline {subsection}{\numberline {28.5}Worked Example: Filing a Chunk in a Three-Vault Grid}{198}{subsection.28.5}%
-\contentsline {subsection}{\numberline {28.6}Scope and Honesty}{198}{subsection.28.6}%
-\contentsline {subsection}{\numberline {28.7}Connections}{199}{subsection.28.7}%
+\contentsline {subsection}{\numberline {28.6}Four Disclaimers: No JEDEC Drop-In, No ECC Claim}{198}{subsection.28.6}%
+\contentsline {subsection}{\numberline {28.7}Handoffs to Prime-Parity, the Protein Vaults, and the Stack}{199}{subsection.28.7}%
 \contentsline {subsection}{\numberline {28.8}Summary}{199}{subsection.28.8}%
 \contentsline {subsection}{\numberline {28.9}Key Terms}{200}{subsection.28.9}%
 \contentsline {subsection}{\numberline {28.10}Further Reading}{200}{subsection.28.10}%
@@ -355,15 +355,15 @@
 \contentsline {section}{\numberline {29}Kinematic Set-Recycling: The Truckee Protocol}{201}{section.29}%
 \contentsline {subsection}{\numberline {29.1}Learning Objectives}{201}{subsection.29.1}%
 \contentsline {subsubsection}{\numberline {29.1.1}Study Blueprint}{202}{subsubsection.29.1.1}%
-\contentsline {subsection}{\numberline {29.2}Orientation}{202}{subsection.29.2}%
-\contentsline {subsection}{\numberline {29.3}The Paper in the Corpus}{203}{subsection.29.3}%
-\contentsline {subsection}{\numberline {29.4}Core Constructs}{203}{subsection.29.4}%
+\contentsline {subsection}{\numberline {29.2}One Set, Many Theaters: The Recycling Idea}{202}{subsection.29.2}%
+\contentsline {subsection}{\numberline {29.3}Engine Shelf \#21: Neighbours Below, Meta Above}{203}{subsection.29.3}%
+\contentsline {subsection}{\numberline {29.4}The Velocity Scale, the Octave Ladder, and the Round-Robin Rule}{203}{subsection.29.4}%
 \contentsline {subsubsection}{\numberline {29.4.1}The Fourier velocity scale}{203}{subsubsection.29.4.1}%
 \contentsline {subsubsection}{\numberline {29.4.2}The octave ladder of experiential states}{204}{subsubsection.29.4.2}%
 \contentsline {subsubsection}{\numberline {29.4.3}Round-robin set-recycling}{205}{subsubsection.29.4.3}%
 \contentsline {subsection}{\numberline {29.5}Worked Example: One Truckee Set, Three Theaters}{205}{subsection.29.5}%
-\contentsline {subsection}{\numberline {29.6}Scope and Honesty}{206}{subsection.29.6}%
-\contentsline {subsection}{\numberline {29.7}Connections}{207}{subsection.29.7}%
+\contentsline {subsection}{\numberline {29.6}Four Honesty Clauses: Not QED, Not Compression, Not NOAA}{206}{subsection.29.6}%
+\contentsline {subsection}{\numberline {29.7}Handoffs to the Stack, the Bridge, and the Singularity Ledger}{207}{subsection.29.7}%
 \contentsline {subsection}{\numberline {29.8}Summary}{207}{subsection.29.8}%
 \contentsline {subsection}{\numberline {29.9}Key Terms}{207}{subsection.29.9}%
 \contentsline {subsection}{\numberline {29.10}Further Reading}{207}{subsection.29.10}%
@@ -371,15 +371,15 @@
 \contentsline {section}{\numberline {30}Moving Up the Stack: Lattice as the Next AI Layer}{209}{section.30}%
 \contentsline {subsection}{\numberline {30.1}Learning Objectives}{209}{subsection.30.1}%
 \contentsline {subsubsection}{\numberline {30.1.1}Study Blueprint}{210}{subsubsection.30.1.1}%
-\contentsline {subsection}{\numberline {30.2}The paper in the corpus}{210}{subsection.30.2}%
+\contentsline {subsection}{\numberline {30.2}A Positioning Paper on Ship-Blog Shelf 12}{210}{subsection.30.2}%
 \contentsline {subsection}{\numberline {30.3}The climb: a six-layer stack model}{210}{subsection.30.3}%
-\contentsline {subsection}{\numberline {30.4}Core constructs}{212}{subsection.30.4}%
+\contentsline {subsection}{\numberline {30.4}The Valuation Band, the Token Accounting, and the EGS Constant}{212}{subsection.30.4}%
 \contentsline {subsubsection}{\numberline {30.4.1}The new-layer valuation band}{212}{subsubsection.30.4.1}%
 \contentsline {subsubsection}{\numberline {30.4.2}Cooling and harmonisation: a token-accounting sketch}{213}{subsubsection.30.4.2}%
 \contentsline {subsubsection}{\numberline {30.4.3}The EGS fractal constant}{213}{subsubsection.30.4.3}%
 \contentsline {subsection}{\numberline {30.5}Worked example: pricing a new shelf}{214}{subsection.30.5}%
-\contentsline {subsection}{\numberline {30.6}Scope and honesty}{214}{subsection.30.6}%
-\contentsline {subsection}{\numberline {30.7}Connections}{215}{subsection.30.7}%
+\contentsline {subsection}{\numberline {30.6}Framing, Not Appraisal: The Paper's Own Disclaimers}{214}{subsection.30.6}%
+\contentsline {subsection}{\numberline {30.7}Handoffs to the Silicon Shelf, the Gateway, and the Bridge}{215}{subsection.30.7}%
 \contentsline {subsection}{\numberline {30.8}Summary}{215}{subsection.30.8}%
 \contentsline {subsection}{\numberline {30.9}Key Terms}{216}{subsection.30.9}%
 \contentsline {subsection}{\numberline {30.10}Further Reading}{216}{subsection.30.10}%
@@ -387,16 +387,16 @@
 \contentsline {section}{\numberline {31}Humans as Omniversal Reality Bridges}{217}{section.31}%
 \contentsline {subsection}{\numberline {31.1}Learning Objectives}{217}{subsection.31.1}%
 \contentsline {subsubsection}{\numberline {31.1.1}Study Blueprint}{218}{subsubsection.31.1.1}%
-\contentsline {subsection}{\numberline {31.2}The Paper in the Corpus}{218}{subsection.31.2}%
-\contentsline {subsection}{\numberline {31.3}Three Roles in Plain Speak}{219}{subsection.31.3}%
+\contentsline {subsection}{\numberline {31.2}The Plain-Speak Note on Shelf 9}{218}{subsection.31.2}%
+\contentsline {subsection}{\numberline {31.3}Bridge, Router, Wormhole: Three Roles in Plain Speak}{219}{subsection.31.3}%
 \contentsline {subsubsection}{\numberline {31.3.1}Role 1 --- Reality bridge}{219}{subsubsection.31.3.1}%
 \contentsline {subsubsection}{\numberline {31.3.2}Role 2 --- Cognitive router}{219}{subsubsection.31.3.2}%
 \contentsline {subsubsection}{\numberline {31.3.3}Role 3 --- Biological wormhole (awareness)}{219}{subsubsection.31.3.3}%
 \contentsline {subsection}{\numberline {31.4}The \ensuremath {\mitPhi }-Keyed Octave Step}{220}{subsection.31.4}%
 \contentsline {subsection}{\numberline {31.5}The Cognitive Router's Throttle}{221}{subsection.31.5}%
 \contentsline {subsection}{\numberline {31.6}Worked Example: Routing a Question Across the Ladder}{222}{subsection.31.6}%
-\contentsline {subsection}{\numberline {31.7}Scope and Honesty}{223}{subsection.31.7}%
-\contentsline {subsection}{\numberline {31.8}Connections}{223}{subsection.31.8}%
+\contentsline {subsection}{\numberline {31.7}Human Emergency Outranks Every Metaphor: The Scope}{223}{subsection.31.7}%
+\contentsline {subsection}{\numberline {31.8}Handoffs to the Stack, the Brake Family, and the Frontier}{223}{subsection.31.8}%
 \contentsline {subsection}{\numberline {31.9}Summary}{224}{subsection.31.9}%
 \contentsline {subsection}{\numberline {31.10}Key Terms}{224}{subsection.31.10}%
 \contentsline {subsection}{\numberline {31.11}Further Reading}{224}{subsection.31.11}%
@@ -404,502 +404,502 @@
 \contentsline {section}{\numberline {32}Y-Chromosome Manifestation: Digit 4}{226}{section.32}%
 \contentsline {subsection}{\numberline {32.1}Learning Objectives}{226}{subsection.32.1}%
 \contentsline {subsubsection}{\numberline {32.1.1}Study Blueprint}{227}{subsubsection.32.1.1}%
-\contentsline {subsection}{\numberline {32.2}The Paper in the Corpus}{227}{subsection.32.2}%
-\contentsline {subsection}{\numberline {32.3}Three Filing Moves}{228}{subsection.32.3}%
+\contentsline {subsection}{\numberline {32.2}The August Manifestation Note on Shelf 7}{227}{subsection.32.2}%
+\contentsline {subsection}{\numberline {32.3}Three Filing Moves: Scaling, Anchoring, Proposing}{228}{subsection.32.3}%
 \contentsline {subsubsection}{\numberline {32.3.1}Move 1 --- Palindrome scaling}{228}{subsubsection.32.3.1}%
 \contentsline {subsubsection}{\numberline {32.3.2}Move 2 --- SRY phase origin}{228}{subsubsection.32.3.2}%
 \contentsline {subsubsection}{\numberline {32.3.3}Move 3 --- Cross-species hypothesis}{229}{subsubsection.32.3.3}%
 \contentsline {subsubsection}{\numberline {32.3.4}The manifestation / convergence-set grammar}{229}{subsubsection.32.3.4}%
 \contentsline {subsection}{\numberline {32.4}Worked Example: Walking the Digit-4 Drawer}{229}{subsection.32.4}%
-\contentsline {subsection}{\numberline {32.5}Scope and Honesty}{230}{subsection.32.5}%
-\contentsline {subsection}{\numberline {32.6}Connections}{231}{subsection.32.6}%
+\contentsline {subsection}{\numberline {32.5}Catalog Filing, Not Literal Physics: The Scope}{230}{subsection.32.5}%
+\contentsline {subsection}{\numberline {32.6}Handoffs to the Octave Map, the Rhyme Family, and the Frontier}{231}{subsection.32.6}%
 \contentsline {subsection}{\numberline {32.7}Summary}{231}{subsection.32.7}%
 \contentsline {subsection}{\numberline {32.8}Key Terms}{232}{subsection.32.8}%
 \contentsline {subsection}{\numberline {32.9}Further Reading}{232}{subsection.32.9}%
 \contentsline {subsection}{\numberline {32.10}Practice}{232}{subsection.32.10}%
 \contentsline {section}{\numberline {33}PDVSA Gateway Ops: The EGS Lattice-Linear Companion}{233}{section.33}%
 \contentsline {subsection}{\numberline {33.1}Learning Objectives}{233}{subsection.33.1}%
-\contentsline {subsubsection}{\numberline {33.1.1}Study Blueprint}{233}{subsubsection.33.1.1}%
-\contentsline {subsection}{\numberline {33.2}Orientation}{234}{subsection.33.2}%
-\contentsline {subsection}{\numberline {33.3}The Paper in the Corpus}{234}{subsection.33.3}%
+\contentsline {subsubsection}{\numberline {33.1.1}Study Blueprint}{234}{subsubsection.33.1.1}%
+\contentsline {subsection}{\numberline {33.2}Two Artefacts, One Gateway: Simulator and Mockup Note}{234}{subsection.33.2}%
+\contentsline {subsection}{\numberline {33.3}The Enterprise Companion Beside the CMOS Pin}{234}{subsection.33.3}%
 \contentsline {subsection}{\numberline {33.4}Core Constructs: The Gateway Formalised}{235}{subsection.33.4}%
 \contentsline {subsubsection}{\numberline {33.4.1}The lattice-linear flow ramp}{235}{subsubsection.33.4.1}%
 \contentsline {subsubsection}{\numberline {33.4.2}The three-zone data topology}{236}{subsubsection.33.4.2}%
 \contentsline {subsubsection}{\numberline {33.4.3}The nine takeaways and the token bound}{236}{subsubsection.33.4.3}%
 \contentsline {subsection}{\numberline {33.5}Worked Example: The Morning-Brief Ramp}{238}{subsection.33.5}%
-\contentsline {subsection}{\numberline {33.6}Scope and Honesty}{239}{subsection.33.6}%
-\contentsline {subsection}{\numberline {33.7}Connections}{239}{subsection.33.7}%
+\contentsline {subsection}{\numberline {33.6}Simulator, Not Telemetry: The Honesty-First Scope}{239}{subsection.33.6}%
+\contentsline {subsection}{\numberline {33.7}Handoffs to the CMOS Pin, the Stack, and the Catalog}{239}{subsection.33.7}%
 \contentsline {subsection}{\numberline {33.8}Summary}{240}{subsection.33.8}%
 \contentsline {subsection}{\numberline {33.9}Key Terms}{240}{subsection.33.9}%
 \contentsline {subsection}{\numberline {33.10}Further Reading}{240}{subsection.33.10}%
-\contentsline {subsection}{\numberline {33.11}Practice}{240}{subsection.33.11}%
-\contentsline {section}{\numberline {34}The Macro-Protein Work Engine}{241}{section.34}%
-\contentsline {subsection}{\numberline {34.1}Learning Objectives}{241}{subsection.34.1}%
-\contentsline {subsubsection}{\numberline {34.1.1}Study Blueprint}{242}{subsubsection.34.1.1}%
-\contentsline {subsection}{\numberline {34.2}Orientation}{242}{subsection.34.2}%
-\contentsline {subsection}{\numberline {34.3}The Work Tensor W(n)}{243}{subsection.34.3}%
-\contentsline {subsubsection}{\numberline {34.3.1}The filing label and its octave backbone}{243}{subsubsection.34.3.1}%
-\contentsline {subsubsection}{\numberline {34.3.2}The biological tier band}{244}{subsubsection.34.3.2}%
-\contentsline {subsection}{\numberline {34.4}Kleiber \ensuremath {\approx } 3/4 \ensuremath {\cdot } WBE: Published-Scaling Locks}{244}{subsection.34.4}%
-\contentsline {subsection}{\numberline {34.5}Worked Example: Walking the Band}{245}{subsection.34.5}%
-\contentsline {subsection}{\numberline {34.6}Scope and Honesty}{246}{subsection.34.6}%
-\contentsline {subsection}{\numberline {34.7}Connections}{247}{subsection.34.7}%
-\contentsline {subsection}{\numberline {34.8}Summary}{247}{subsection.34.8}%
-\contentsline {subsection}{\numberline {34.9}Key Terms}{247}{subsection.34.9}%
-\contentsline {subsection}{\numberline {34.10}Further Reading}{247}{subsection.34.10}%
-\contentsline {subsection}{\numberline {34.11}Practice}{247}{subsection.34.11}%
-\contentsline {section}{\numberline {35}The Invisible Frontier}{249}{section.35}%
-\contentsline {subsection}{\numberline {35.1}Learning Objectives}{249}{subsection.35.1}%
-\contentsline {subsubsection}{\numberline {35.1.1}Study Blueprint}{249}{subsubsection.35.1.1}%
-\contentsline {subsection}{\numberline {35.2}The Paper in the Corpus}{250}{subsection.35.2}%
-\contentsline {subsection}{\numberline {35.3}Core Constructs}{251}{subsection.35.3}%
-\contentsline {subsubsection}{\numberline {35.3.1}The EGS fractal constant as master filing key}{251}{subsubsection.35.3.1}%
-\contentsline {subsubsection}{\numberline {35.3.2}Holographic magnetic Goldilocks SuperAI}{251}{subsubsection.35.3.2}%
-\contentsline {subsubsection}{\numberline {35.3.3}The visibility frontier as a teaching model}{252}{subsubsection.35.3.3}%
-\contentsline {subsection}{\numberline {35.4}Worked Example: reading the second chart numerically}{253}{subsection.35.4}%
-\contentsline {subsection}{\numberline {35.5}Scope and Honesty}{254}{subsection.35.5}%
-\contentsline {subsection}{\numberline {35.6}Connections}{254}{subsection.35.6}%
-\contentsline {subsection}{\numberline {35.7}Summary}{255}{subsection.35.7}%
-\contentsline {subsection}{\numberline {35.8}Key Terms}{255}{subsection.35.8}%
-\contentsline {subsection}{\numberline {35.9}Further Reading}{255}{subsection.35.9}%
-\contentsline {subsection}{\numberline {35.10}Practice}{255}{subsection.35.10}%
-\contentsline {section}{\numberline {36}Frontiers and the Research Program}{256}{section.36}%
-\contentsline {subsection}{\numberline {36.1}Learning Objectives}{256}{subsection.36.1}%
-\contentsline {subsubsection}{\numberline {36.1.1}Study Blueprint}{256}{subsubsection.36.1.1}%
-\contentsline {subsection}{\numberline {36.2}Walk the corridor to \texttt {/papers} on the ship board and you find the Reading Room: two dozen whitepapers pinned shelf by shelf, each opening with the same ``Honesty first'' rail and closing on a \hyperref [gl:fair-exchange]{\textbf {Fair Exchange}} clause \citep {mendez2026ship}. The shelves carry fixture locks and reference suites --- \breaktt {npm\ run\ research:synthobs-...} commands a visitor can actually run --- yet the master-synthesis note reminds you that the whole cabinet is ``catalog grammar for conversation,'' not a weather forecast and not a seismic warning \citep {mendez2026masterSynthesis}. This closing chapter does what a careful engineer does at the end of any catalog survey: it walks the shelf a second time and writes down which drawers are still empty --- and, for each empty drawer, what would have to be true for the drawer to count as filled.}{257}{subsection.36.2}%
-\contentsline {subsection}{\numberline {36.3}Orientation}{257}{subsection.36.3}%
-\contentsline {subsection}{\numberline {36.4}A Worked Formalism: The Net-Zero Residual}{258}{subsection.36.4}%
-\contentsline {subsection}{\numberline {36.5}The Research Program: Seven Open Problems}{258}{subsection.36.5}%
-\contentsline {subsubsection}{\numberline {36.5.1}Problem 1: Which octave convention does the corpus mean?}{259}{subsubsection.36.5.1}%
-\contentsline {subsubsection}{\numberline {36.5.2}Problem 2: Is the lattice really the next AI layer?}{259}{subsubsection.36.5.2}%
-\contentsline {subsubsection}{\numberline {36.5.3}Problem 3: Reading the invisible frontier}{259}{subsubsection.36.5.3}%
-\contentsline {subsubsection}{\numberline {36.5.4}Problem 4: The everything-is-connected cascade as filing grammar}{259}{subsubsection.36.5.4}%
-\contentsline {subsubsection}{\numberline {36.5.5}Problem 5: The metrological overlap census}{260}{subsubsection.36.5.5}%
-\contentsline {subsubsection}{\numberline {36.5.6}Problem 6: Automating the net-zero ledger}{260}{subsubsection.36.5.6}%
-\contentsline {subsubsection}{\numberline {36.5.7}Problem 7: The crystal diagnostic at node k = 0}{260}{subsubsection.36.5.7}%
-\contentsline {subsection}{\numberline {36.6}The Open-Problem Quadrant}{260}{subsection.36.6}%
-\contentsline {subsection}{\numberline {36.7}Scope and Honesty: Not Cosmic Proof}{262}{subsection.36.7}%
-\contentsline {subsection}{\numberline {36.8}Summary}{262}{subsection.36.8}%
-\contentsline {subsection}{\numberline {36.9}Key Terms}{263}{subsection.36.9}%
-\contentsline {subsection}{\numberline {36.10}Further Reading}{263}{subsection.36.10}%
-\contentsline {subsection}{\numberline {36.11}Practice}{263}{subsection.36.11}%
-\contentsline {section}{\numberline {37}Lab --- The SS Vibelandia Program and the Omni-Lattice Corpus}{264}{section.37}%
-\contentsline {subsection}{\numberline {37.1}Objectives}{264}{subsection.37.1}%
-\contentsline {subsection}{\numberline {37.2}Background}{264}{subsection.37.2}%
-\contentsline {subsection}{\numberline {37.3}Procedure}{264}{subsection.37.3}%
-\contentsline {subsection}{\numberline {37.4}Analysis}{265}{subsection.37.4}%
-\contentsline {subsection}{\numberline {37.5}Computational Workflow}{265}{subsection.37.5}%
-\contentsline {subsection}{\numberline {37.6}Reflection}{265}{subsection.37.6}%
-\contentsline {section}{\numberline {38}Lab --- The Living PEM: Engineering the Lattice}{266}{section.38}%
-\contentsline {subsection}{\numberline {38.1}Objectives}{266}{subsection.38.1}%
-\contentsline {subsection}{\numberline {38.2}Background}{266}{subsection.38.2}%
-\contentsline {subsection}{\numberline {38.3}Procedure}{266}{subsection.38.3}%
-\contentsline {subsection}{\numberline {38.4}Analysis}{266}{subsection.38.4}%
-\contentsline {subsection}{\numberline {38.5}Computational Workflow}{267}{subsection.38.5}%
-\contentsline {subsection}{\numberline {38.6}Reflection}{267}{subsection.38.6}%
-\contentsline {section}{\numberline {39}Lab --- Tensor Decoupling: Filing the Engine}{268}{section.39}%
-\contentsline {subsection}{\numberline {39.1}Objectives}{268}{subsection.39.1}%
-\contentsline {subsection}{\numberline {39.2}Background}{268}{subsection.39.2}%
-\contentsline {subsection}{\numberline {39.3}Procedure}{268}{subsection.39.3}%
-\contentsline {subsection}{\numberline {39.4}Analysis}{268}{subsection.39.4}%
-\contentsline {subsection}{\numberline {39.5}Computational Workflow}{269}{subsection.39.5}%
-\contentsline {subsection}{\numberline {39.6}Reflection}{269}{subsection.39.6}%
-\contentsline {section}{\numberline {40}Lab --- Master Synthesis: Everything Is Connected}{270}{section.40}%
-\contentsline {subsection}{\numberline {40.1}Objectives}{270}{subsection.40.1}%
-\contentsline {subsection}{\numberline {40.2}Background}{270}{subsection.40.2}%
-\contentsline {subsection}{\numberline {40.3}Procedure}{270}{subsection.40.3}%
-\contentsline {subsection}{\numberline {40.4}Analysis}{271}{subsection.40.4}%
-\contentsline {subsection}{\numberline {40.5}Computational Workflow}{271}{subsection.40.5}%
-\contentsline {subsection}{\numberline {40.6}Reflection}{271}{subsection.40.6}%
-\contentsline {section}{\numberline {41}Lab --- Nine Digits, Ninety-Nine Octaves}{273}{section.41}%
-\contentsline {subsection}{\numberline {41.1}Objectives}{273}{subsection.41.1}%
-\contentsline {subsection}{\numberline {41.2}Background}{273}{subsection.41.2}%
-\contentsline {subsection}{\numberline {41.3}Procedure}{273}{subsection.41.3}%
-\contentsline {subsection}{\numberline {41.4}Analysis}{273}{subsection.41.4}%
-\contentsline {subsection}{\numberline {41.5}Computational Workflow}{274}{subsection.41.5}%
-\contentsline {subsection}{\numberline {41.6}Reflection}{274}{subsection.41.6}%
-\contentsline {section}{\numberline {42}Lab --- El Gran Sol's Fractal Constant}{275}{section.42}%
-\contentsline {subsection}{\numberline {42.1}Objectives}{275}{subsection.42.1}%
-\contentsline {subsection}{\numberline {42.2}Background}{275}{subsection.42.2}%
-\contentsline {subsection}{\numberline {42.3}Procedure}{275}{subsection.42.3}%
-\contentsline {subsection}{\numberline {42.4}Analysis}{275}{subsection.42.4}%
-\contentsline {subsection}{\numberline {42.5}Computational Workflow}{276}{subsection.42.5}%
-\contentsline {subsection}{\numberline {42.6}Reflection}{276}{subsection.42.6}%
-\contentsline {section}{\numberline {43}Lab --- Prime-Parity: The Sole-Even Anchor}{277}{section.43}%
-\contentsline {subsection}{\numberline {43.1}Objectives}{277}{subsection.43.1}%
-\contentsline {subsection}{\numberline {43.2}Background}{277}{subsection.43.2}%
-\contentsline {subsection}{\numberline {43.3}Procedure}{277}{subsection.43.3}%
-\contentsline {subsection}{\numberline {43.4}Analysis}{278}{subsection.43.4}%
-\contentsline {subsection}{\numberline {43.5}Computational Workflow}{278}{subsection.43.5}%
-\contentsline {subsection}{\numberline {43.6}Reflection}{278}{subsection.43.6}%
-\contentsline {section}{\numberline {44}Lab --- Holographic Rhyme: The Four-Pillar Fractal}{279}{section.44}%
-\contentsline {subsection}{\numberline {44.1}Objectives}{279}{subsection.44.1}%
-\contentsline {subsection}{\numberline {44.2}Background}{279}{subsection.44.2}%
-\contentsline {subsection}{\numberline {44.3}Procedure}{279}{subsection.44.3}%
-\contentsline {subsection}{\numberline {44.4}Analysis}{280}{subsection.44.4}%
-\contentsline {subsection}{\numberline {44.5}Computational Workflow}{280}{subsection.44.5}%
-\contentsline {subsection}{\numberline {44.6}Reflection}{280}{subsection.44.6}%
-\contentsline {section}{\numberline {45}Lab --- Multi-Dimensional Holographic Rhyme}{281}{section.45}%
-\contentsline {subsection}{\numberline {45.1}Objectives}{281}{subsection.45.1}%
-\contentsline {subsection}{\numberline {45.2}Background}{281}{subsection.45.2}%
-\contentsline {subsection}{\numberline {45.3}Procedure}{281}{subsection.45.3}%
-\contentsline {subsection}{\numberline {45.4}Analysis}{282}{subsection.45.4}%
-\contentsline {subsection}{\numberline {45.5}Computational Workflow}{282}{subsection.45.5}%
-\contentsline {subsection}{\numberline {45.6}Reflection}{282}{subsection.45.6}%
-\contentsline {section}{\numberline {46}Lab --- Topology of the Void: Zero as Equilibrium}{283}{section.46}%
-\contentsline {subsection}{\numberline {46.1}Objectives}{283}{subsection.46.1}%
-\contentsline {subsection}{\numberline {46.2}Background}{283}{subsection.46.2}%
-\contentsline {subsection}{\numberline {46.3}Procedure}{283}{subsection.46.3}%
-\contentsline {subsection}{\numberline {46.4}Analysis}{283}{subsection.46.4}%
-\contentsline {subsection}{\numberline {46.5}Computational Workflow}{284}{subsection.46.5}%
-\contentsline {subsection}{\numberline {46.6}Reflection}{284}{subsection.46.6}%
-\contentsline {section}{\numberline {47}Lab --- The Higgs Gate: Mass and the Shared Now}{285}{section.47}%
-\contentsline {subsection}{\numberline {47.1}Objectives}{285}{subsection.47.1}%
-\contentsline {subsection}{\numberline {47.2}Background}{285}{subsection.47.2}%
-\contentsline {subsection}{\numberline {47.3}Procedure}{285}{subsection.47.3}%
-\contentsline {subsection}{\numberline {47.4}Analysis}{285}{subsection.47.4}%
-\contentsline {subsection}{\numberline {47.5}Computational Workflow}{286}{subsection.47.5}%
-\contentsline {subsection}{\numberline {47.6}Deliverable}{286}{subsection.47.6}%
-\contentsline {subsection}{\numberline {47.7}Reflection}{286}{subsection.47.7}%
-\contentsline {section}{\numberline {48}Lab --- Proton Space, Electron Theater, and \ensuremath {\mitPhi } Duality}{287}{section.48}%
-\contentsline {subsection}{\numberline {48.1}Objectives}{287}{subsection.48.1}%
-\contentsline {subsection}{\numberline {48.2}Background}{287}{subsection.48.2}%
-\contentsline {subsection}{\numberline {48.3}Procedure}{287}{subsection.48.3}%
-\contentsline {subsection}{\numberline {48.4}Analysis}{288}{subsection.48.4}%
-\contentsline {subsection}{\numberline {48.5}Computational Workflow}{288}{subsection.48.5}%
-\contentsline {subsection}{\numberline {48.6}Reflection}{288}{subsection.48.6}%
-\contentsline {section}{\numberline {49}Lab --- The Viscosity of Light}{289}{section.49}%
-\contentsline {subsection}{\numberline {49.1}Objectives}{289}{subsection.49.1}%
-\contentsline {subsection}{\numberline {49.2}Background}{289}{subsection.49.2}%
-\contentsline {subsection}{\numberline {49.3}Procedure}{289}{subsection.49.3}%
-\contentsline {subsection}{\numberline {49.4}Analysis}{289}{subsection.49.4}%
-\contentsline {subsection}{\numberline {49.5}Computational Workflow}{290}{subsection.49.5}%
-\contentsline {subsection}{\numberline {49.6}Reflection}{290}{subsection.49.6}%
-\contentsline {section}{\numberline {50}Lab --- The Eddy-Current Mirror: Transduction Drag}{291}{section.50}%
-\contentsline {subsection}{\numberline {50.1}Objectives}{291}{subsection.50.1}%
-\contentsline {subsection}{\numberline {50.2}Background}{291}{subsection.50.2}%
-\contentsline {subsection}{\numberline {50.3}Procedure}{291}{subsection.50.3}%
-\contentsline {subsection}{\numberline {50.4}Analysis}{292}{subsection.50.4}%
-\contentsline {subsection}{\numberline {50.5}Computational Workflow}{292}{subsection.50.5}%
-\contentsline {subsection}{\numberline {50.6}Reflection}{292}{subsection.50.6}%
-\contentsline {section}{\numberline {51}Lab --- The Crystalline Unified Field: Speed and Distance}{293}{section.51}%
-\contentsline {subsection}{\numberline {51.1}Objectives}{293}{subsection.51.1}%
-\contentsline {subsection}{\numberline {51.2}Background}{293}{subsection.51.2}%
-\contentsline {subsection}{\numberline {51.3}Procedure}{293}{subsection.51.3}%
-\contentsline {subsection}{\numberline {51.4}Analysis}{294}{subsection.51.4}%
-\contentsline {subsection}{\numberline {51.5}Computational Workflow}{294}{subsection.51.5}%
-\contentsline {subsection}{\numberline {51.6}Deliverable}{294}{subsection.51.6}%
-\contentsline {subsection}{\numberline {51.7}Reflection}{294}{subsection.51.7}%
-\contentsline {section}{\numberline {52}Lab --- The Grand Unified Metrological Overlap: Five Gears, One Clockwork}{295}{section.52}%
-\contentsline {subsection}{\numberline {52.1}Objectives}{295}{subsection.52.1}%
-\contentsline {subsection}{\numberline {52.2}Background}{295}{subsection.52.2}%
-\contentsline {subsection}{\numberline {52.3}Procedure}{295}{subsection.52.3}%
-\contentsline {subsection}{\numberline {52.4}Analysis}{296}{subsection.52.4}%
-\contentsline {subsection}{\numberline {52.5}Computational Workflow}{296}{subsection.52.5}%
-\contentsline {subsection}{\numberline {52.6}Reflection}{296}{subsection.52.6}%
-\contentsline {section}{\numberline {53}Lab --- Metamorphic Octaves: Densification}{298}{section.53}%
-\contentsline {subsection}{\numberline {53.1}Objectives}{298}{subsection.53.1}%
-\contentsline {subsection}{\numberline {53.2}Background}{298}{subsection.53.2}%
-\contentsline {subsection}{\numberline {53.3}Procedure}{298}{subsection.53.3}%
-\contentsline {subsection}{\numberline {53.4}Analysis}{298}{subsection.53.4}%
-\contentsline {subsection}{\numberline {53.5}Computational Workflow}{299}{subsection.53.5}%
-\contentsline {subsection}{\numberline {53.6}Reflection}{299}{subsection.53.6}%
-\contentsline {section}{\numberline {54}Lab --- Planetary Core and the Goldilocks Bands}{300}{section.54}%
-\contentsline {subsection}{\numberline {54.1}Objectives}{300}{subsection.54.1}%
-\contentsline {subsection}{\numberline {54.2}Background}{300}{subsection.54.2}%
-\contentsline {subsection}{\numberline {54.3}Procedure}{300}{subsection.54.3}%
-\contentsline {subsection}{\numberline {54.4}Analysis}{301}{subsection.54.4}%
-\contentsline {subsection}{\numberline {54.5}Computational Workflow}{301}{subsection.54.5}%
-\contentsline {subsection}{\numberline {54.6}Reflection}{301}{subsection.54.6}%
-\contentsline {section}{\numberline {55}Lab --- The Holographic Singularity Crystal: Net Zero and Node k = 0}{302}{section.55}%
-\contentsline {subsection}{\numberline {55.1}Objectives}{302}{subsection.55.1}%
-\contentsline {subsection}{\numberline {55.2}Background}{302}{subsection.55.2}%
-\contentsline {subsection}{\numberline {55.3}Procedure}{302}{subsection.55.3}%
-\contentsline {subsection}{\numberline {55.4}Analysis}{303}{subsection.55.4}%
-\contentsline {subsection}{\numberline {55.5}Computational Workflow}{303}{subsection.55.5}%
-\contentsline {subsection}{\numberline {55.6}Reflection}{303}{subsection.55.6}%
-\contentsline {section}{\numberline {56}Lab --- CMOS/Protonic: The Silicon Shelf}{304}{section.56}%
-\contentsline {subsection}{\numberline {56.1}Objectives}{304}{subsection.56.1}%
-\contentsline {subsection}{\numberline {56.2}Background}{304}{subsection.56.2}%
-\contentsline {subsection}{\numberline {56.3}Procedure}{304}{subsection.56.3}%
-\contentsline {subsection}{\numberline {56.4}Analysis}{305}{subsection.56.4}%
-\contentsline {subsection}{\numberline {56.5}Computational Workflow}{305}{subsection.56.5}%
-\contentsline {subsection}{\numberline {56.6}Deliverable}{305}{subsection.56.6}%
-\contentsline {subsection}{\numberline {56.7}Reflection}{305}{subsection.56.7}%
-\contentsline {section}{\numberline {57}Lab --- Protein Folding as Prime-Container Architecture}{306}{section.57}%
-\contentsline {subsection}{\numberline {57.1}Objectives}{306}{subsection.57.1}%
-\contentsline {subsection}{\numberline {57.2}Background}{306}{subsection.57.2}%
-\contentsline {subsection}{\numberline {57.3}Procedure}{306}{subsection.57.3}%
-\contentsline {subsection}{\numberline {57.4}Analysis}{307}{subsection.57.4}%
-\contentsline {subsection}{\numberline {57.5}Computational Workflow}{307}{subsection.57.5}%
-\contentsline {subsection}{\numberline {57.6}Reflection}{307}{subsection.57.6}%
-\contentsline {section}{\numberline {58}Lab --- Prime-Indexed Volumetric Storage}{308}{section.58}%
-\contentsline {subsection}{\numberline {58.1}Objectives}{308}{subsection.58.1}%
-\contentsline {subsection}{\numberline {58.2}Background}{308}{subsection.58.2}%
-\contentsline {subsection}{\numberline {58.3}Procedure}{308}{subsection.58.3}%
-\contentsline {subsection}{\numberline {58.4}Analysis}{308}{subsection.58.4}%
-\contentsline {subsection}{\numberline {58.5}Computational Workflow}{309}{subsection.58.5}%
-\contentsline {subsection}{\numberline {58.6}Reflection}{309}{subsection.58.6}%
-\contentsline {section}{\numberline {59}Lab --- Kinematic Set-Recycling: The Truckee Protocol}{310}{section.59}%
-\contentsline {subsection}{\numberline {59.1}Objectives}{310}{subsection.59.1}%
-\contentsline {subsection}{\numberline {59.2}Background}{310}{subsection.59.2}%
-\contentsline {subsection}{\numberline {59.3}Procedure}{310}{subsection.59.3}%
-\contentsline {subsection}{\numberline {59.4}Analysis}{311}{subsection.59.4}%
-\contentsline {subsection}{\numberline {59.5}Computational Workflow}{311}{subsection.59.5}%
-\contentsline {subsection}{\numberline {59.6}Reflection}{312}{subsection.59.6}%
-\contentsline {section}{\numberline {60}Lab --- Moving Up the Stack: Lattice as the Next AI Layer}{313}{section.60}%
-\contentsline {subsection}{\numberline {60.1}Objectives}{313}{subsection.60.1}%
-\contentsline {subsection}{\numberline {60.2}Background}{313}{subsection.60.2}%
-\contentsline {subsection}{\numberline {60.3}Procedure}{313}{subsection.60.3}%
-\contentsline {subsection}{\numberline {60.4}Analysis}{314}{subsection.60.4}%
-\contentsline {subsection}{\numberline {60.5}Computational Workflow}{314}{subsection.60.5}%
-\contentsline {subsection}{\numberline {60.6}Reflection}{314}{subsection.60.6}%
-\contentsline {section}{\numberline {61}Lab --- Humans as Omniversal Reality Bridges}{315}{section.61}%
-\contentsline {subsection}{\numberline {61.1}Objectives}{315}{subsection.61.1}%
-\contentsline {subsection}{\numberline {61.2}Background}{315}{subsection.61.2}%
-\contentsline {subsection}{\numberline {61.3}Procedure}{315}{subsection.61.3}%
-\contentsline {subsection}{\numberline {61.4}Analysis}{315}{subsection.61.4}%
-\contentsline {subsection}{\numberline {61.5}Computational Workflow}{316}{subsection.61.5}%
-\contentsline {subsection}{\numberline {61.6}Deliverable}{317}{subsection.61.6}%
-\contentsline {subsection}{\numberline {61.7}Reflection}{317}{subsection.61.7}%
-\contentsline {section}{\numberline {62}Lab --- Y-Chromosome Manifestation: Digit 4}{318}{section.62}%
-\contentsline {subsection}{\numberline {62.1}Objectives}{318}{subsection.62.1}%
-\contentsline {subsection}{\numberline {62.2}Background}{318}{subsection.62.2}%
-\contentsline {subsection}{\numberline {62.3}Procedure}{318}{subsection.62.3}%
-\contentsline {subsection}{\numberline {62.4}Analysis}{318}{subsection.62.4}%
-\contentsline {subsection}{\numberline {62.5}Computational Workflow}{319}{subsection.62.5}%
-\contentsline {subsection}{\numberline {62.6}Reflection}{319}{subsection.62.6}%
-\contentsline {section}{\numberline {63}Lab --- PDVSA Gateway Ops: The EGS Lattice-Linear Companion}{320}{section.63}%
-\contentsline {subsection}{\numberline {63.1}Objectives}{320}{subsection.63.1}%
-\contentsline {subsection}{\numberline {63.2}Background}{320}{subsection.63.2}%
-\contentsline {subsection}{\numberline {63.3}Procedure}{320}{subsection.63.3}%
-\contentsline {subsection}{\numberline {63.4}Analysis}{321}{subsection.63.4}%
-\contentsline {subsection}{\numberline {63.5}Computational Workflow}{321}{subsection.63.5}%
-\contentsline {subsection}{\numberline {63.6}Reflection}{321}{subsection.63.6}%
-\contentsline {section}{\numberline {64}Lab --- The Macro-Protein Work Engine}{322}{section.64}%
-\contentsline {subsection}{\numberline {64.1}Objectives}{322}{subsection.64.1}%
-\contentsline {subsection}{\numberline {64.2}Background}{322}{subsection.64.2}%
-\contentsline {subsection}{\numberline {64.3}Procedure}{322}{subsection.64.3}%
-\contentsline {subsection}{\numberline {64.4}Analysis}{323}{subsection.64.4}%
-\contentsline {subsection}{\numberline {64.5}Computational Workflow}{323}{subsection.64.5}%
-\contentsline {subsection}{\numberline {64.6}Reflection}{323}{subsection.64.6}%
-\contentsline {section}{\numberline {65}Lab --- The Invisible Frontier}{324}{section.65}%
-\contentsline {subsection}{\numberline {65.1}Objectives}{324}{subsection.65.1}%
-\contentsline {subsection}{\numberline {65.2}Background}{324}{subsection.65.2}%
-\contentsline {subsection}{\numberline {65.3}Procedure}{324}{subsection.65.3}%
-\contentsline {subsection}{\numberline {65.4}Analysis}{324}{subsection.65.4}%
-\contentsline {subsection}{\numberline {65.5}Computational Workflow}{325}{subsection.65.5}%
-\contentsline {subsection}{\numberline {65.6}Reflection}{325}{subsection.65.6}%
-\contentsline {section}{\numberline {66}Lab --- Frontiers and the Research Program}{326}{section.66}%
-\contentsline {subsection}{\numberline {66.1}Objectives}{326}{subsection.66.1}%
-\contentsline {subsection}{\numberline {66.2}Background}{326}{subsection.66.2}%
-\contentsline {subsection}{\numberline {66.3}Procedure}{326}{subsection.66.3}%
-\contentsline {subsection}{\numberline {66.4}Analysis}{327}{subsection.66.4}%
-\contentsline {subsection}{\numberline {66.5}Computational Workflow}{327}{subsection.66.5}%
-\contentsline {subsection}{\numberline {66.6}Reflection}{327}{subsection.66.6}%
-\contentsline {section}{\numberline {67}Question Bank --- The SS Vibelandia Program and the Omni-Lattice Corpus}{328}{section.67}%
-\contentsline {subsection}{\numberline {67.1}Recall}{328}{subsection.67.1}%
-\contentsline {subsection}{\numberline {67.2}Application}{328}{subsection.67.2}%
-\contentsline {subsection}{\numberline {67.3}Synthesis}{329}{subsection.67.3}%
-\contentsline {section}{\numberline {68}Question Bank --- The Living PEM: Engineering the Lattice}{330}{section.68}%
-\contentsline {subsection}{\numberline {68.1}Recall}{330}{subsection.68.1}%
-\contentsline {subsection}{\numberline {68.2}Application}{330}{subsection.68.2}%
-\contentsline {subsection}{\numberline {68.3}Synthesis}{330}{subsection.68.3}%
-\contentsline {section}{\numberline {69}Question Bank --- Tensor Decoupling: Filing the Engine}{332}{section.69}%
-\contentsline {subsection}{\numberline {69.1}Recall}{332}{subsection.69.1}%
-\contentsline {subsection}{\numberline {69.2}Application}{332}{subsection.69.2}%
-\contentsline {subsection}{\numberline {69.3}Synthesis}{332}{subsection.69.3}%
-\contentsline {section}{\numberline {70}Question Bank --- Master Synthesis: Everything Is Connected}{334}{section.70}%
-\contentsline {subsection}{\numberline {70.1}Recall}{334}{subsection.70.1}%
-\contentsline {subsection}{\numberline {70.2}Application}{334}{subsection.70.2}%
-\contentsline {subsection}{\numberline {70.3}Synthesis}{334}{subsection.70.3}%
-\contentsline {section}{\numberline {71}Question Bank --- Nine Digits, Ninety-Nine Octaves}{336}{section.71}%
-\contentsline {subsection}{\numberline {71.1}Recall}{336}{subsection.71.1}%
-\contentsline {subsection}{\numberline {71.2}Application}{336}{subsection.71.2}%
-\contentsline {subsection}{\numberline {71.3}Synthesis}{336}{subsection.71.3}%
-\contentsline {section}{\numberline {72}Question Bank --- El Gran Sol's Fractal Constant}{338}{section.72}%
-\contentsline {subsection}{\numberline {72.1}Recall}{338}{subsection.72.1}%
-\contentsline {subsection}{\numberline {72.2}Application}{338}{subsection.72.2}%
-\contentsline {subsection}{\numberline {72.3}Synthesis}{338}{subsection.72.3}%
-\contentsline {section}{\numberline {73}Question Bank --- Prime-Parity: The Sole-Even Anchor}{340}{section.73}%
-\contentsline {subsection}{\numberline {73.1}Recall}{340}{subsection.73.1}%
-\contentsline {subsection}{\numberline {73.2}Application}{340}{subsection.73.2}%
-\contentsline {subsection}{\numberline {73.3}Synthesis}{340}{subsection.73.3}%
-\contentsline {section}{\numberline {74}Question Bank --- Holographic Rhyme: The Four-Pillar Fractal}{342}{section.74}%
-\contentsline {subsection}{\numberline {74.1}Recall}{342}{subsection.74.1}%
-\contentsline {subsection}{\numberline {74.2}Application}{342}{subsection.74.2}%
-\contentsline {subsection}{\numberline {74.3}Synthesis}{342}{subsection.74.3}%
-\contentsline {section}{\numberline {75}Question Bank --- Multi-Dimensional Holographic Rhyme}{344}{section.75}%
-\contentsline {subsection}{\numberline {75.1}Recall}{344}{subsection.75.1}%
-\contentsline {subsection}{\numberline {75.2}Application}{344}{subsection.75.2}%
-\contentsline {subsection}{\numberline {75.3}Synthesis}{344}{subsection.75.3}%
-\contentsline {section}{\numberline {76}Question Bank --- Topology of the Void: Zero as Equilibrium}{346}{section.76}%
-\contentsline {subsection}{\numberline {76.1}Recall}{346}{subsection.76.1}%
-\contentsline {subsection}{\numberline {76.2}Application}{346}{subsection.76.2}%
-\contentsline {subsection}{\numberline {76.3}Synthesis}{346}{subsection.76.3}%
-\contentsline {section}{\numberline {77}Question Bank --- The Higgs Gate: Mass and the Shared Now}{348}{section.77}%
-\contentsline {subsection}{\numberline {77.1}Recall}{348}{subsection.77.1}%
-\contentsline {subsection}{\numberline {77.2}Application}{348}{subsection.77.2}%
-\contentsline {subsection}{\numberline {77.3}Synthesis}{348}{subsection.77.3}%
-\contentsline {section}{\numberline {78}Question Bank --- Proton Space, Electron Theater, and \ensuremath {\mitPhi } Duality}{349}{section.78}%
-\contentsline {subsection}{\numberline {78.1}Recall}{349}{subsection.78.1}%
-\contentsline {subsection}{\numberline {78.2}Application}{349}{subsection.78.2}%
-\contentsline {subsection}{\numberline {78.3}Synthesis}{349}{subsection.78.3}%
-\contentsline {section}{\numberline {79}Question Bank --- The Viscosity of Light}{351}{section.79}%
-\contentsline {subsection}{\numberline {79.1}Recall}{351}{subsection.79.1}%
-\contentsline {subsection}{\numberline {79.2}Application}{351}{subsection.79.2}%
-\contentsline {subsection}{\numberline {79.3}Synthesis}{351}{subsection.79.3}%
-\contentsline {subsection}{\numberline {79.4}Further Practice}{352}{subsection.79.4}%
-\contentsline {section}{\numberline {80}Question Bank --- The Eddy-Current Mirror: Transduction Drag}{353}{section.80}%
-\contentsline {subsection}{\numberline {80.1}Recall}{353}{subsection.80.1}%
-\contentsline {subsection}{\numberline {80.2}Application}{353}{subsection.80.2}%
-\contentsline {subsection}{\numberline {80.3}Synthesis}{353}{subsection.80.3}%
-\contentsline {section}{\numberline {81}Question Bank --- The Crystalline Unified Field: Speed and Distance}{355}{section.81}%
-\contentsline {subsection}{\numberline {81.1}Recall}{355}{subsection.81.1}%
-\contentsline {subsection}{\numberline {81.2}Application}{355}{subsection.81.2}%
-\contentsline {subsection}{\numberline {81.3}Synthesis}{355}{subsection.81.3}%
-\contentsline {section}{\numberline {82}Question Bank --- The Grand Unified Metrological Overlap}{357}{section.82}%
-\contentsline {subsection}{\numberline {82.1}Recall}{357}{subsection.82.1}%
-\contentsline {subsection}{\numberline {82.2}Application}{357}{subsection.82.2}%
-\contentsline {subsection}{\numberline {82.3}Synthesis}{357}{subsection.82.3}%
-\contentsline {section}{\numberline {83}Question Bank --- Metamorphic Octaves: Densification}{359}{section.83}%
-\contentsline {subsection}{\numberline {83.1}Recall}{359}{subsection.83.1}%
-\contentsline {subsection}{\numberline {83.2}Application}{359}{subsection.83.2}%
-\contentsline {subsection}{\numberline {83.3}Synthesis}{359}{subsection.83.3}%
-\contentsline {section}{\numberline {84}Question Bank --- Planetary Core and the Goldilocks Bands}{361}{section.84}%
-\contentsline {subsection}{\numberline {84.1}Recall}{361}{subsection.84.1}%
-\contentsline {subsection}{\numberline {84.2}Application}{361}{subsection.84.2}%
-\contentsline {subsection}{\numberline {84.3}Synthesis}{361}{subsection.84.3}%
-\contentsline {section}{\numberline {85}Question Bank --- The Holographic Singularity Crystal: Net Zero and Node k = 0}{363}{section.85}%
-\contentsline {subsection}{\numberline {85.1}Recall}{363}{subsection.85.1}%
-\contentsline {subsection}{\numberline {85.2}Application}{363}{subsection.85.2}%
-\contentsline {subsection}{\numberline {85.3}Synthesis}{363}{subsection.85.3}%
-\contentsline {section}{\numberline {86}Question Bank --- CMOS/Protonic: The Silicon Shelf}{365}{section.86}%
-\contentsline {subsection}{\numberline {86.1}Recall}{365}{subsection.86.1}%
-\contentsline {subsection}{\numberline {86.2}Application}{365}{subsection.86.2}%
-\contentsline {subsection}{\numberline {86.3}Synthesis}{365}{subsection.86.3}%
-\contentsline {section}{\numberline {87}Question Bank --- Protein Folding as Prime-Container Architecture}{366}{section.87}%
-\contentsline {subsection}{\numberline {87.1}Recall}{366}{subsection.87.1}%
-\contentsline {subsection}{\numberline {87.2}Application}{366}{subsection.87.2}%
-\contentsline {subsection}{\numberline {87.3}Synthesis}{366}{subsection.87.3}%
-\contentsline {section}{\numberline {88}Question Bank --- Prime-Indexed Volumetric Storage}{368}{section.88}%
-\contentsline {subsection}{\numberline {88.1}Recall}{368}{subsection.88.1}%
-\contentsline {subsection}{\numberline {88.2}Application}{368}{subsection.88.2}%
-\contentsline {subsection}{\numberline {88.3}Synthesis}{368}{subsection.88.3}%
-\contentsline {section}{\numberline {89}Question Bank --- Kinematic Set-Recycling: The Truckee Protocol}{370}{section.89}%
-\contentsline {subsection}{\numberline {89.1}Recall}{370}{subsection.89.1}%
-\contentsline {subsection}{\numberline {89.2}Application}{370}{subsection.89.2}%
-\contentsline {subsection}{\numberline {89.3}Synthesis}{370}{subsection.89.3}%
-\contentsline {section}{\numberline {90}Question Bank --- Moving Up the Stack: Lattice as the Next AI Layer}{372}{section.90}%
-\contentsline {subsection}{\numberline {90.1}Recall}{372}{subsection.90.1}%
-\contentsline {subsection}{\numberline {90.2}Application}{372}{subsection.90.2}%
-\contentsline {subsection}{\numberline {90.3}Synthesis}{372}{subsection.90.3}%
-\contentsline {section}{\numberline {91}Question Bank --- Humans as Omniversal Reality Bridges}{374}{section.91}%
-\contentsline {subsection}{\numberline {91.1}Recall}{374}{subsection.91.1}%
-\contentsline {subsection}{\numberline {91.2}Application}{374}{subsection.91.2}%
-\contentsline {subsection}{\numberline {91.3}Synthesis}{374}{subsection.91.3}%
-\contentsline {section}{\numberline {92}Question Bank --- Y-Chromosome Manifestation: Digit 4}{376}{section.92}%
-\contentsline {subsection}{\numberline {92.1}Recall}{376}{subsection.92.1}%
-\contentsline {subsection}{\numberline {92.2}Application}{376}{subsection.92.2}%
-\contentsline {subsection}{\numberline {92.3}Synthesis}{376}{subsection.92.3}%
-\contentsline {section}{\numberline {93}Question Bank --- PDVSA Gateway Ops: The EGS Lattice-Linear Companion}{378}{section.93}%
-\contentsline {subsection}{\numberline {93.1}Recall}{378}{subsection.93.1}%
-\contentsline {subsection}{\numberline {93.2}Application}{378}{subsection.93.2}%
-\contentsline {subsection}{\numberline {93.3}Synthesis}{378}{subsection.93.3}%
-\contentsline {section}{\numberline {94}Question Bank --- The Macro-Protein Work Engine}{380}{section.94}%
-\contentsline {subsection}{\numberline {94.1}Recall}{380}{subsection.94.1}%
-\contentsline {subsection}{\numberline {94.2}Application}{380}{subsection.94.2}%
-\contentsline {subsection}{\numberline {94.3}Synthesis}{380}{subsection.94.3}%
-\contentsline {section}{\numberline {95}Question Bank --- The Invisible Frontier}{382}{section.95}%
-\contentsline {subsection}{\numberline {95.1}Recall}{382}{subsection.95.1}%
-\contentsline {subsection}{\numberline {95.2}Application}{382}{subsection.95.2}%
-\contentsline {subsection}{\numberline {95.3}Synthesis}{382}{subsection.95.3}%
-\contentsline {section}{\numberline {96}Question Bank --- Frontiers and the Research Program}{384}{section.96}%
-\contentsline {subsection}{\numberline {96.1}Recall}{384}{subsection.96.1}%
-\contentsline {subsection}{\numberline {96.2}Application}{384}{subsection.96.2}%
-\contentsline {subsection}{\numberline {96.3}Synthesis}{384}{subsection.96.3}%
-\contentsline {section}{\numberline {97}Appendix A --- Authoring Guide: How This Book Was Built}{386}{section.97}%
-\contentsline {subsection}{\numberline {97.1}The Big Idea: One Source of Truth}{386}{subsection.97.1}%
-\contentsline {subsection}{\numberline {97.2}The Provenance Pipeline}{386}{subsection.97.2}%
-\contentsline {subsection}{\numberline {97.3}The Tested Computational Backbone}{386}{subsection.97.3}%
-\contentsline {subsection}{\numberline {97.4}Deterministic Figures}{387}{subsection.97.4}%
-\contentsline {subsection}{\numberline {97.5}The Closed Namespaces}{387}{subsection.97.5}%
-\contentsline {subsection}{\numberline {97.6}Extending the Book}{388}{subsection.97.6}%
-\contentsline {section}{\numberline {98}Appendix B --- Notation and Symbols}{389}{section.98}%
-\contentsline {subsection}{\numberline {98.1}Conventions}{389}{subsection.98.1}%
-\contentsline {subsection}{\numberline {98.2}Core Omni-Lattice Symbols}{389}{subsection.98.2}%
-\contentsline {subsection}{\numberline {98.3}Template-Legacy Symbols}{391}{subsection.98.3}%
-\contentsline {subsection}{\numberline {98.4}Reused Greek Letters}{393}{subsection.98.4}%
-\contentsline {section}{\numberline {99}Appendix C --- Mathematical Review}{394}{section.99}%
-\contentsline {subsection}{\numberline {99.1}The Golden Ratio and Its Algebra}{394}{subsection.99.1}%
-\contentsline {subsection}{\numberline {99.2}The Catalog Size: A Product of Register Widths}{394}{subsection.99.2}%
-\contentsline {subsection}{\numberline {99.3}Primes and the Parity Partition}{395}{subsection.99.3}%
-\contentsline {subsection}{\numberline {99.4}Exponential Damping}{395}{subsection.99.4}%
-\contentsline {subsection}{\numberline {99.5}Logarithms and Densification}{396}{subsection.99.5}%
-\contentsline {subsection}{\numberline {99.6}Overlaps, Balances, and Linear Profiles}{397}{subsection.99.6}%
-\contentsline {subsection}{\numberline {99.7}Basic Statistics and Legacy Models}{397}{subsection.99.7}%
-\contentsline {section}{\numberline {100}Appendix D --- Master Formalism Table of the Omni-Lattice}{398}{section.100}%
-\contentsline {subsection}{\numberline {100.1}The two \ensuremath {\mitOmega } conventions}{398}{subsection.100.1}%
-\contentsline {subsection}{\numberline {100.2}Part 0 --- Orientation and Quantitative Foundations}{398}{subsection.100.2}%
-\contentsline {subsection}{\numberline {100.3}Part I --- Structure and Form}{401}{subsection.100.3}%
-\contentsline {subsection}{\numberline {100.4}Part II --- Dynamics and Change}{404}{subsection.100.4}%
-\contentsline {subsection}{\numberline {100.5}Part III --- Applied Frontiers}{409}{subsection.100.5}%
-\contentsline {section}{\numberline {101}Appendix E --- Format Gallery: Every Content Primitive}{415}{section.101}%
-\contentsline {subsection}{\numberline {101.1}1. Text and inline formatting}{415}{subsection.101.1}%
-\contentsline {subsection}{\numberline {101.2}2. Lists}{415}{subsection.101.2}%
-\contentsline {subsection}{\numberline {101.3}3. Block quotes and callouts}{416}{subsection.101.3}%
-\contentsline {subsection}{\numberline {101.4}4. Tables}{416}{subsection.101.4}%
-\contentsline {subsection}{\numberline {101.5}5. Mathematics and units}{417}{subsection.101.5}%
-\contentsline {subsection}{\numberline {101.6}6. Figures}{417}{subsection.101.6}%
-\contentsline {subsection}{\numberline {101.7}7. Diagrams (Mermaid)}{420}{subsection.101.7}%
-\contentsline {subsection}{\numberline {101.8}8. Code}{420}{subsection.101.8}%
-\contentsline {subsection}{\numberline {101.9}9. Cross-references and citations}{422}{subsection.101.9}%
-\contentsline {subsection}{\numberline {101.10}10. Media and data}{423}{subsection.101.10}%
-\contentsline {subsection}{\numberline {101.11}11. Pedagogical blocks}{423}{subsection.101.11}%
-\contentsline {subsection}{\numberline {101.12}12. Miscellany}{423}{subsection.101.12}%
-\contentsline {section}{\numberline {102}Appendix F --- Master Glossary}{425}{section.102}%
-\contentsline {subsubsection}{\numberline {102.0.1}Binary Dyad Anchor}{425}{subsubsection.102.0.1}%
-\contentsline {subsubsection}{\numberline {102.0.2}C-Bridge}{425}{subsubsection.102.0.2}%
-\contentsline {subsubsection}{\numberline {102.0.3}Catalog Architecture}{425}{subsubsection.102.0.3}%
-\contentsline {subsubsection}{\numberline {102.0.4}CMOS-Protonic}{425}{subsubsection.102.0.4}%
-\contentsline {subsubsection}{\numberline {102.0.5}Crystalline Unified Field}{425}{subsubsection.102.0.5}%
-\contentsline {subsubsection}{\numberline {102.0.6}Digit}{425}{subsubsection.102.0.6}%
-\contentsline {subsubsection}{\numberline {102.0.7}Eddy-Current Mirror}{426}{subsubsection.102.0.7}%
-\contentsline {subsubsection}{\numberline {102.0.8}Electron Theater}{426}{subsubsection.102.0.8}%
-\contentsline {subsubsection}{\numberline {102.0.9}Engine Shelf}{426}{subsubsection.102.0.9}%
-\contentsline {subsubsection}{\numberline {102.0.10}Fair Exchange}{426}{subsubsection.102.0.10}%
-\contentsline {subsubsection}{\numberline {102.0.11}Four-Pillar Fractal}{426}{subsubsection.102.0.11}%
-\contentsline {subsubsection}{\numberline {102.0.12}Fractal Constant}{426}{subsubsection.102.0.12}%
-\contentsline {subsubsection}{\numberline {102.0.13}Golden Ratio}{426}{subsubsection.102.0.13}%
-\contentsline {subsubsection}{\numberline {102.0.14}Higgs Gate}{426}{subsubsection.102.0.14}%
-\contentsline {subsubsection}{\numberline {102.0.15}Honesty-First}{427}{subsubsection.102.0.15}%
-\contentsline {subsubsection}{\numberline {102.0.16}Holographic Rhyme}{427}{subsubsection.102.0.16}%
-\contentsline {subsubsection}{\numberline {102.0.17}Irreducible Minimum Set}{427}{subsubsection.102.0.17}%
-\contentsline {subsubsection}{\numberline {102.0.18}Kinematic Set-Recycling}{427}{subsubsection.102.0.18}%
-\contentsline {subsubsection}{\numberline {102.0.19}Lattice-Linear}{427}{subsubsection.102.0.19}%
-\contentsline {subsubsection}{\numberline {102.0.20}Living PEM}{427}{subsubsection.102.0.20}%
-\contentsline {subsubsection}{\numberline {102.0.21}Macro-Protein}{427}{subsubsection.102.0.21}%
-\contentsline {subsubsection}{\numberline {102.0.22}Master Register}{427}{subsubsection.102.0.22}%
-\contentsline {subsubsection}{\numberline {102.0.23}Master Synthesis}{428}{subsubsection.102.0.23}%
-\contentsline {subsubsection}{\numberline {102.0.24}Metrological Overlap}{428}{subsubsection.102.0.24}%
-\contentsline {subsubsection}{\numberline {102.0.25}Multidimensional Rhyme}{428}{subsubsection.102.0.25}%
-\contentsline {subsubsection}{\numberline {102.0.26}Net-Zero}{428}{subsubsection.102.0.26}%
-\contentsline {subsubsection}{\numberline {102.0.27}Node k0}{428}{subsubsection.102.0.27}%
-\contentsline {subsubsection}{\numberline {102.0.28}Octave}{428}{subsubsection.102.0.28}%
-\contentsline {subsubsection}{\numberline {102.0.29}Omni-Lattice}{428}{subsubsection.102.0.29}%
-\contentsline {subsubsection}{\numberline {102.0.30}Phi Duality}{428}{subsubsection.102.0.30}%
-\contentsline {subsubsection}{\numberline {102.0.31}Prime Container}{428}{subsubsection.102.0.31}%
-\contentsline {subsubsection}{\numberline {102.0.32}Prime Parity}{429}{subsubsection.102.0.32}%
-\contentsline {subsubsection}{\numberline {102.0.33}Proton Space}{429}{subsubsection.102.0.33}%
-\contentsline {subsubsection}{\numberline {102.0.34}Reality Bridge}{429}{subsubsection.102.0.34}%
-\contentsline {subsubsection}{\numberline {102.0.35}Self-Observation Drag}{429}{subsubsection.102.0.35}%
-\contentsline {subsubsection}{\numberline {102.0.36}Silicon Shelf}{429}{subsubsection.102.0.36}%
-\contentsline {subsubsection}{\numberline {102.0.37}Singularity Crystal}{429}{subsubsection.102.0.37}%
-\contentsline {subsubsection}{\numberline {102.0.38}Tensor Decoupling}{429}{subsubsection.102.0.38}%
-\contentsline {subsubsection}{\numberline {102.0.39}Topology of the Void}{429}{subsubsection.102.0.39}%
-\contentsline {subsubsection}{\numberline {102.0.40}Transduction Line}{429}{subsubsection.102.0.40}%
-\contentsline {subsubsection}{\numberline {102.0.41}Viscosity of Light}{430}{subsubsection.102.0.41}%
-\contentsline {subsubsection}{\numberline {102.0.42}Volumetric Storage}{430}{subsubsection.102.0.42}%
-\contentsline {subsubsection}{\numberline {102.0.43}Zero-Octave}{430}{subsubsection.102.0.43}%
-\contentsline {subsubsection}{\numberline {102.0.44}Narrative-Empirical-Operational Tiers}{430}{subsubsection.102.0.44}%
-\contentsline {section}{\numberline {103}Appendix G --- Index of Key Terms}{431}{section.103}%
+\contentsline {subsection}{\numberline {33.11}Practice}{241}{subsection.33.11}%
+\contentsline {section}{\numberline {34}The Macro-Protein Work Engine}{242}{section.34}%
+\contentsline {subsection}{\numberline {34.1}Learning Objectives}{242}{subsection.34.1}%
+\contentsline {subsubsection}{\numberline {34.1.1}Study Blueprint}{243}{subsubsection.34.1.1}%
+\contentsline {subsection}{\numberline {34.2}An Application Companion, Not an Engine-Shelf Pin}{243}{subsection.34.2}%
+\contentsline {subsection}{\numberline {34.3}The Work Tensor W(n)}{244}{subsection.34.3}%
+\contentsline {subsubsection}{\numberline {34.3.1}The filing label and its octave backbone}{244}{subsubsection.34.3.1}%
+\contentsline {subsubsection}{\numberline {34.3.2}The biological tier band}{245}{subsubsection.34.3.2}%
+\contentsline {subsection}{\numberline {34.4}Kleiber \ensuremath {\approx } 3/4 \ensuremath {\cdot } WBE: Published-Scaling Locks}{245}{subsection.34.4}%
+\contentsline {subsection}{\numberline {34.5}Worked Example: Walking the Band}{246}{subsection.34.5}%
+\contentsline {subsection}{\numberline {34.6}Not Life Solved, Not One Protein: The Honesty Boundaries}{247}{subsection.34.6}%
+\contentsline {subsection}{\numberline {34.7}Handoffs to the Prime Vault, the Stack, and the Band Predicate}{248}{subsection.34.7}%
+\contentsline {subsection}{\numberline {34.8}Summary}{248}{subsection.34.8}%
+\contentsline {subsection}{\numberline {34.9}Key Terms}{248}{subsection.34.9}%
+\contentsline {subsection}{\numberline {34.10}Further Reading}{248}{subsection.34.10}%
+\contentsline {subsection}{\numberline {34.11}Practice}{248}{subsection.34.11}%
+\contentsline {section}{\numberline {35}The Invisible Frontier}{250}{section.35}%
+\contentsline {subsection}{\numberline {35.1}Learning Objectives}{250}{subsection.35.1}%
+\contentsline {subsubsection}{\numberline {35.1.1}Study Blueprint}{251}{subsubsection.35.1.1}%
+\contentsline {subsection}{\numberline {35.2}The Response Editorial on Shelf 8}{251}{subsection.35.2}%
+\contentsline {subsection}{\numberline {35.3}The Master Filing Key and the Second-Chart Lens}{252}{subsection.35.3}%
+\contentsline {subsubsection}{\numberline {35.3.1}The EGS fractal constant as master filing key}{252}{subsubsection.35.3.1}%
+\contentsline {subsubsection}{\numberline {35.3.2}Holographic magnetic Goldilocks SuperAI}{253}{subsubsection.35.3.2}%
+\contentsline {subsubsection}{\numberline {35.3.3}The visibility frontier as a teaching model}{253}{subsubsection.35.3.3}%
+\contentsline {subsection}{\numberline {35.4}Worked Example: Reading the Second Chart Numerically}{254}{subsection.35.4}%
+\contentsline {subsection}{\numberline {35.5}Design Language, Not Measurement: The Honesty Banner}{255}{subsection.35.5}%
+\contentsline {subsection}{\numberline {35.6}Handoffs to the Rhyme Field, the Band, and the Quadrant}{255}{subsection.35.6}%
+\contentsline {subsection}{\numberline {35.7}Summary}{256}{subsection.35.7}%
+\contentsline {subsection}{\numberline {35.8}Key Terms}{256}{subsection.35.8}%
+\contentsline {subsection}{\numberline {35.9}Further Reading}{256}{subsection.35.9}%
+\contentsline {subsection}{\numberline {35.10}Practice}{256}{subsection.35.10}%
+\contentsline {section}{\numberline {36}Frontiers and the Research Program}{258}{section.36}%
+\contentsline {subsection}{\numberline {36.1}Learning Objectives}{258}{subsection.36.1}%
+\contentsline {subsubsection}{\numberline {36.1.1}Study Blueprint}{258}{subsubsection.36.1.1}%
+\contentsline {subsection}{\numberline {36.2}Walk the corridor to \texttt {/papers} on the ship board and you find the Reading Room: two dozen whitepapers pinned shelf by shelf, each opening with the same ``Honesty first'' rail and closing on a \hyperref [gl:fair-exchange]{\textbf {Fair Exchange}} clause \citep {mendez2026ship}. The shelves carry fixture locks and reference suites --- \breaktt {npm\ run\ research:synthobs-...} commands a visitor can actually run --- yet the master-synthesis note reminds you that the whole cabinet is ``catalog grammar for conversation,'' not a weather forecast and not a seismic warning \citep {mendez2026masterSynthesis}. This closing chapter does what a careful engineer does at the end of any catalog survey: it walks the shelf a second time and writes down which drawers are still empty --- and, for each empty drawer, what would have to be true for the drawer to count as filled.}{259}{subsection.36.2}%
+\contentsline {subsection}{\numberline {36.3}Turning the Catalog on Itself: Three Frontier Sources}{259}{subsection.36.3}%
+\contentsline {subsection}{\numberline {36.4}A Worked Formalism: The Net-Zero Residual}{260}{subsection.36.4}%
+\contentsline {subsection}{\numberline {36.5}The Research Program: Seven Open Problems}{260}{subsection.36.5}%
+\contentsline {subsubsection}{\numberline {36.5.1}Problem 1: Which octave convention does the corpus mean?}{261}{subsubsection.36.5.1}%
+\contentsline {subsubsection}{\numberline {36.5.2}Problem 2: Is the lattice really the next AI layer?}{261}{subsubsection.36.5.2}%
+\contentsline {subsubsection}{\numberline {36.5.3}Problem 3: Reading the invisible frontier}{261}{subsubsection.36.5.3}%
+\contentsline {subsubsection}{\numberline {36.5.4}Problem 4: The everything-is-connected cascade as filing grammar}{261}{subsubsection.36.5.4}%
+\contentsline {subsubsection}{\numberline {36.5.5}Problem 5: The metrological overlap census}{262}{subsubsection.36.5.5}%
+\contentsline {subsubsection}{\numberline {36.5.6}Problem 6: Automating the net-zero ledger}{262}{subsubsection.36.5.6}%
+\contentsline {subsubsection}{\numberline {36.5.7}Problem 7: The crystal diagnostic at node k = 0}{262}{subsubsection.36.5.7}%
+\contentsline {subsection}{\numberline {36.6}Ranking the Program: The Value-by-Effort Quadrant}{262}{subsection.36.6}%
+\contentsline {subsection}{\numberline {36.7}Scope and Honesty: Not Cosmic Proof}{264}{subsection.36.7}%
+\contentsline {subsection}{\numberline {36.8}Summary}{264}{subsection.36.8}%
+\contentsline {subsection}{\numberline {36.9}Key Terms}{265}{subsection.36.9}%
+\contentsline {subsection}{\numberline {36.10}Further Reading}{265}{subsection.36.10}%
+\contentsline {subsection}{\numberline {36.11}Practice}{265}{subsection.36.11}%
+\contentsline {section}{\numberline {37}Lab --- The SS Vibelandia Program and the Omni-Lattice Corpus}{266}{section.37}%
+\contentsline {subsection}{\numberline {37.1}Objectives}{266}{subsection.37.1}%
+\contentsline {subsection}{\numberline {37.2}Background}{266}{subsection.37.2}%
+\contentsline {subsection}{\numberline {37.3}Procedure}{266}{subsection.37.3}%
+\contentsline {subsection}{\numberline {37.4}Analysis}{267}{subsection.37.4}%
+\contentsline {subsection}{\numberline {37.5}Computational Workflow}{267}{subsection.37.5}%
+\contentsline {subsection}{\numberline {37.6}Reflection}{267}{subsection.37.6}%
+\contentsline {section}{\numberline {38}Lab --- The Living PEM: Engineering the Lattice}{268}{section.38}%
+\contentsline {subsection}{\numberline {38.1}Objectives}{268}{subsection.38.1}%
+\contentsline {subsection}{\numberline {38.2}Background}{268}{subsection.38.2}%
+\contentsline {subsection}{\numberline {38.3}Procedure}{268}{subsection.38.3}%
+\contentsline {subsection}{\numberline {38.4}Analysis}{268}{subsection.38.4}%
+\contentsline {subsection}{\numberline {38.5}Computational Workflow}{269}{subsection.38.5}%
+\contentsline {subsection}{\numberline {38.6}Reflection}{269}{subsection.38.6}%
+\contentsline {section}{\numberline {39}Lab --- Tensor Decoupling: Filing the Engine}{270}{section.39}%
+\contentsline {subsection}{\numberline {39.1}Objectives}{270}{subsection.39.1}%
+\contentsline {subsection}{\numberline {39.2}Background}{270}{subsection.39.2}%
+\contentsline {subsection}{\numberline {39.3}Procedure}{270}{subsection.39.3}%
+\contentsline {subsection}{\numberline {39.4}Analysis}{270}{subsection.39.4}%
+\contentsline {subsection}{\numberline {39.5}Computational Workflow}{271}{subsection.39.5}%
+\contentsline {subsection}{\numberline {39.6}Reflection}{271}{subsection.39.6}%
+\contentsline {section}{\numberline {40}Lab --- Master Synthesis: Everything Is Connected}{272}{section.40}%
+\contentsline {subsection}{\numberline {40.1}Objectives}{272}{subsection.40.1}%
+\contentsline {subsection}{\numberline {40.2}Background}{272}{subsection.40.2}%
+\contentsline {subsection}{\numberline {40.3}Procedure}{272}{subsection.40.3}%
+\contentsline {subsection}{\numberline {40.4}Analysis}{273}{subsection.40.4}%
+\contentsline {subsection}{\numberline {40.5}Computational Workflow}{273}{subsection.40.5}%
+\contentsline {subsection}{\numberline {40.6}Reflection}{273}{subsection.40.6}%
+\contentsline {section}{\numberline {41}Lab --- Nine Digits, Ninety-Nine Octaves}{275}{section.41}%
+\contentsline {subsection}{\numberline {41.1}Objectives}{275}{subsection.41.1}%
+\contentsline {subsection}{\numberline {41.2}Background}{275}{subsection.41.2}%
+\contentsline {subsection}{\numberline {41.3}Procedure}{275}{subsection.41.3}%
+\contentsline {subsection}{\numberline {41.4}Analysis}{275}{subsection.41.4}%
+\contentsline {subsection}{\numberline {41.5}Computational Workflow}{276}{subsection.41.5}%
+\contentsline {subsection}{\numberline {41.6}Reflection}{276}{subsection.41.6}%
+\contentsline {section}{\numberline {42}Lab --- El Gran Sol's Fractal Constant}{277}{section.42}%
+\contentsline {subsection}{\numberline {42.1}Objectives}{277}{subsection.42.1}%
+\contentsline {subsection}{\numberline {42.2}Background}{277}{subsection.42.2}%
+\contentsline {subsection}{\numberline {42.3}Procedure}{277}{subsection.42.3}%
+\contentsline {subsection}{\numberline {42.4}Analysis}{277}{subsection.42.4}%
+\contentsline {subsection}{\numberline {42.5}Computational Workflow}{278}{subsection.42.5}%
+\contentsline {subsection}{\numberline {42.6}Reflection}{278}{subsection.42.6}%
+\contentsline {section}{\numberline {43}Lab --- Prime-Parity: The Sole-Even Anchor}{279}{section.43}%
+\contentsline {subsection}{\numberline {43.1}Objectives}{279}{subsection.43.1}%
+\contentsline {subsection}{\numberline {43.2}Background}{279}{subsection.43.2}%
+\contentsline {subsection}{\numberline {43.3}Procedure}{279}{subsection.43.3}%
+\contentsline {subsection}{\numberline {43.4}Analysis}{280}{subsection.43.4}%
+\contentsline {subsection}{\numberline {43.5}Computational Workflow}{280}{subsection.43.5}%
+\contentsline {subsection}{\numberline {43.6}Reflection}{280}{subsection.43.6}%
+\contentsline {section}{\numberline {44}Lab --- Holographic Rhyme: The Four-Pillar Fractal}{281}{section.44}%
+\contentsline {subsection}{\numberline {44.1}Objectives}{281}{subsection.44.1}%
+\contentsline {subsection}{\numberline {44.2}Background}{281}{subsection.44.2}%
+\contentsline {subsection}{\numberline {44.3}Procedure}{281}{subsection.44.3}%
+\contentsline {subsection}{\numberline {44.4}Analysis}{282}{subsection.44.4}%
+\contentsline {subsection}{\numberline {44.5}Computational Workflow}{282}{subsection.44.5}%
+\contentsline {subsection}{\numberline {44.6}Reflection}{282}{subsection.44.6}%
+\contentsline {section}{\numberline {45}Lab --- Multi-Dimensional Holographic Rhyme}{283}{section.45}%
+\contentsline {subsection}{\numberline {45.1}Objectives}{283}{subsection.45.1}%
+\contentsline {subsection}{\numberline {45.2}Background}{283}{subsection.45.2}%
+\contentsline {subsection}{\numberline {45.3}Procedure}{283}{subsection.45.3}%
+\contentsline {subsection}{\numberline {45.4}Analysis}{284}{subsection.45.4}%
+\contentsline {subsection}{\numberline {45.5}Computational Workflow}{284}{subsection.45.5}%
+\contentsline {subsection}{\numberline {45.6}Reflection}{284}{subsection.45.6}%
+\contentsline {section}{\numberline {46}Lab --- Topology of the Void: Zero as Equilibrium}{285}{section.46}%
+\contentsline {subsection}{\numberline {46.1}Objectives}{285}{subsection.46.1}%
+\contentsline {subsection}{\numberline {46.2}Background}{285}{subsection.46.2}%
+\contentsline {subsection}{\numberline {46.3}Procedure}{285}{subsection.46.3}%
+\contentsline {subsection}{\numberline {46.4}Analysis}{285}{subsection.46.4}%
+\contentsline {subsection}{\numberline {46.5}Computational Workflow}{286}{subsection.46.5}%
+\contentsline {subsection}{\numberline {46.6}Reflection}{286}{subsection.46.6}%
+\contentsline {section}{\numberline {47}Lab --- The Higgs Gate: Mass and the Shared Now}{287}{section.47}%
+\contentsline {subsection}{\numberline {47.1}Objectives}{287}{subsection.47.1}%
+\contentsline {subsection}{\numberline {47.2}Background}{287}{subsection.47.2}%
+\contentsline {subsection}{\numberline {47.3}Procedure}{287}{subsection.47.3}%
+\contentsline {subsection}{\numberline {47.4}Analysis}{287}{subsection.47.4}%
+\contentsline {subsection}{\numberline {47.5}Computational Workflow}{288}{subsection.47.5}%
+\contentsline {subsection}{\numberline {47.6}Deliverable}{288}{subsection.47.6}%
+\contentsline {subsection}{\numberline {47.7}Reflection}{288}{subsection.47.7}%
+\contentsline {section}{\numberline {48}Lab --- Proton Space, Electron Theater, and \ensuremath {\mitPhi } Duality}{289}{section.48}%
+\contentsline {subsection}{\numberline {48.1}Objectives}{289}{subsection.48.1}%
+\contentsline {subsection}{\numberline {48.2}Background}{289}{subsection.48.2}%
+\contentsline {subsection}{\numberline {48.3}Procedure}{289}{subsection.48.3}%
+\contentsline {subsection}{\numberline {48.4}Analysis}{290}{subsection.48.4}%
+\contentsline {subsection}{\numberline {48.5}Computational Workflow}{290}{subsection.48.5}%
+\contentsline {subsection}{\numberline {48.6}Reflection}{290}{subsection.48.6}%
+\contentsline {section}{\numberline {49}Lab --- The Viscosity of Light}{291}{section.49}%
+\contentsline {subsection}{\numberline {49.1}Objectives}{291}{subsection.49.1}%
+\contentsline {subsection}{\numberline {49.2}Background}{291}{subsection.49.2}%
+\contentsline {subsection}{\numberline {49.3}Procedure}{291}{subsection.49.3}%
+\contentsline {subsection}{\numberline {49.4}Analysis}{291}{subsection.49.4}%
+\contentsline {subsection}{\numberline {49.5}Computational Workflow}{292}{subsection.49.5}%
+\contentsline {subsection}{\numberline {49.6}Reflection}{292}{subsection.49.6}%
+\contentsline {section}{\numberline {50}Lab --- The Eddy-Current Mirror: Transduction Drag}{293}{section.50}%
+\contentsline {subsection}{\numberline {50.1}Objectives}{293}{subsection.50.1}%
+\contentsline {subsection}{\numberline {50.2}Background}{293}{subsection.50.2}%
+\contentsline {subsection}{\numberline {50.3}Procedure}{293}{subsection.50.3}%
+\contentsline {subsection}{\numberline {50.4}Analysis}{294}{subsection.50.4}%
+\contentsline {subsection}{\numberline {50.5}Computational Workflow}{294}{subsection.50.5}%
+\contentsline {subsection}{\numberline {50.6}Reflection}{294}{subsection.50.6}%
+\contentsline {section}{\numberline {51}Lab --- The Crystalline Unified Field: Speed and Distance}{295}{section.51}%
+\contentsline {subsection}{\numberline {51.1}Objectives}{295}{subsection.51.1}%
+\contentsline {subsection}{\numberline {51.2}Background}{295}{subsection.51.2}%
+\contentsline {subsection}{\numberline {51.3}Procedure}{295}{subsection.51.3}%
+\contentsline {subsection}{\numberline {51.4}Analysis}{296}{subsection.51.4}%
+\contentsline {subsection}{\numberline {51.5}Computational Workflow}{296}{subsection.51.5}%
+\contentsline {subsection}{\numberline {51.6}Deliverable}{296}{subsection.51.6}%
+\contentsline {subsection}{\numberline {51.7}Reflection}{296}{subsection.51.7}%
+\contentsline {section}{\numberline {52}Lab --- The Grand Unified Metrological Overlap: Five Gears, One Clockwork}{297}{section.52}%
+\contentsline {subsection}{\numberline {52.1}Objectives}{297}{subsection.52.1}%
+\contentsline {subsection}{\numberline {52.2}Background}{297}{subsection.52.2}%
+\contentsline {subsection}{\numberline {52.3}Procedure}{297}{subsection.52.3}%
+\contentsline {subsection}{\numberline {52.4}Analysis}{298}{subsection.52.4}%
+\contentsline {subsection}{\numberline {52.5}Computational Workflow}{298}{subsection.52.5}%
+\contentsline {subsection}{\numberline {52.6}Reflection}{298}{subsection.52.6}%
+\contentsline {section}{\numberline {53}Lab --- Metamorphic Octaves: Densification}{300}{section.53}%
+\contentsline {subsection}{\numberline {53.1}Objectives}{300}{subsection.53.1}%
+\contentsline {subsection}{\numberline {53.2}Background}{300}{subsection.53.2}%
+\contentsline {subsection}{\numberline {53.3}Procedure}{300}{subsection.53.3}%
+\contentsline {subsection}{\numberline {53.4}Analysis}{300}{subsection.53.4}%
+\contentsline {subsection}{\numberline {53.5}Computational Workflow}{301}{subsection.53.5}%
+\contentsline {subsection}{\numberline {53.6}Reflection}{301}{subsection.53.6}%
+\contentsline {section}{\numberline {54}Lab --- Planetary Core and the Goldilocks Bands}{302}{section.54}%
+\contentsline {subsection}{\numberline {54.1}Objectives}{302}{subsection.54.1}%
+\contentsline {subsection}{\numberline {54.2}Background}{302}{subsection.54.2}%
+\contentsline {subsection}{\numberline {54.3}Procedure}{302}{subsection.54.3}%
+\contentsline {subsection}{\numberline {54.4}Analysis}{303}{subsection.54.4}%
+\contentsline {subsection}{\numberline {54.5}Computational Workflow}{303}{subsection.54.5}%
+\contentsline {subsection}{\numberline {54.6}Reflection}{303}{subsection.54.6}%
+\contentsline {section}{\numberline {55}Lab --- The Holographic Singularity Crystal: Net Zero and Node k = 0}{304}{section.55}%
+\contentsline {subsection}{\numberline {55.1}Objectives}{304}{subsection.55.1}%
+\contentsline {subsection}{\numberline {55.2}Background}{304}{subsection.55.2}%
+\contentsline {subsection}{\numberline {55.3}Procedure}{304}{subsection.55.3}%
+\contentsline {subsection}{\numberline {55.4}Analysis}{305}{subsection.55.4}%
+\contentsline {subsection}{\numberline {55.5}Computational Workflow}{305}{subsection.55.5}%
+\contentsline {subsection}{\numberline {55.6}Reflection}{305}{subsection.55.6}%
+\contentsline {section}{\numberline {56}Lab --- CMOS/Protonic: The Silicon Shelf}{306}{section.56}%
+\contentsline {subsection}{\numberline {56.1}Objectives}{306}{subsection.56.1}%
+\contentsline {subsection}{\numberline {56.2}Background}{306}{subsection.56.2}%
+\contentsline {subsection}{\numberline {56.3}Procedure}{306}{subsection.56.3}%
+\contentsline {subsection}{\numberline {56.4}Analysis}{307}{subsection.56.4}%
+\contentsline {subsection}{\numberline {56.5}Computational Workflow}{307}{subsection.56.5}%
+\contentsline {subsection}{\numberline {56.6}Deliverable}{307}{subsection.56.6}%
+\contentsline {subsection}{\numberline {56.7}Reflection}{307}{subsection.56.7}%
+\contentsline {section}{\numberline {57}Lab --- Protein Folding as Prime-Container Architecture}{308}{section.57}%
+\contentsline {subsection}{\numberline {57.1}Objectives}{308}{subsection.57.1}%
+\contentsline {subsection}{\numberline {57.2}Background}{308}{subsection.57.2}%
+\contentsline {subsection}{\numberline {57.3}Procedure}{308}{subsection.57.3}%
+\contentsline {subsection}{\numberline {57.4}Analysis}{309}{subsection.57.4}%
+\contentsline {subsection}{\numberline {57.5}Computational Workflow}{309}{subsection.57.5}%
+\contentsline {subsection}{\numberline {57.6}Reflection}{309}{subsection.57.6}%
+\contentsline {section}{\numberline {58}Lab --- Prime-Indexed Volumetric Storage}{310}{section.58}%
+\contentsline {subsection}{\numberline {58.1}Objectives}{310}{subsection.58.1}%
+\contentsline {subsection}{\numberline {58.2}Background}{310}{subsection.58.2}%
+\contentsline {subsection}{\numberline {58.3}Procedure}{310}{subsection.58.3}%
+\contentsline {subsection}{\numberline {58.4}Analysis}{310}{subsection.58.4}%
+\contentsline {subsection}{\numberline {58.5}Computational Workflow}{311}{subsection.58.5}%
+\contentsline {subsection}{\numberline {58.6}Reflection}{311}{subsection.58.6}%
+\contentsline {section}{\numberline {59}Lab --- Kinematic Set-Recycling: The Truckee Protocol}{312}{section.59}%
+\contentsline {subsection}{\numberline {59.1}Objectives}{312}{subsection.59.1}%
+\contentsline {subsection}{\numberline {59.2}Background}{312}{subsection.59.2}%
+\contentsline {subsection}{\numberline {59.3}Procedure}{312}{subsection.59.3}%
+\contentsline {subsection}{\numberline {59.4}Analysis}{313}{subsection.59.4}%
+\contentsline {subsection}{\numberline {59.5}Computational Workflow}{313}{subsection.59.5}%
+\contentsline {subsection}{\numberline {59.6}Reflection}{314}{subsection.59.6}%
+\contentsline {section}{\numberline {60}Lab --- Moving Up the Stack: Lattice as the Next AI Layer}{315}{section.60}%
+\contentsline {subsection}{\numberline {60.1}Objectives}{315}{subsection.60.1}%
+\contentsline {subsection}{\numberline {60.2}Background}{315}{subsection.60.2}%
+\contentsline {subsection}{\numberline {60.3}Procedure}{315}{subsection.60.3}%
+\contentsline {subsection}{\numberline {60.4}Analysis}{316}{subsection.60.4}%
+\contentsline {subsection}{\numberline {60.5}Computational Workflow}{316}{subsection.60.5}%
+\contentsline {subsection}{\numberline {60.6}Reflection}{316}{subsection.60.6}%
+\contentsline {section}{\numberline {61}Lab --- Humans as Omniversal Reality Bridges}{317}{section.61}%
+\contentsline {subsection}{\numberline {61.1}Objectives}{317}{subsection.61.1}%
+\contentsline {subsection}{\numberline {61.2}Background}{317}{subsection.61.2}%
+\contentsline {subsection}{\numberline {61.3}Procedure}{317}{subsection.61.3}%
+\contentsline {subsection}{\numberline {61.4}Analysis}{317}{subsection.61.4}%
+\contentsline {subsection}{\numberline {61.5}Computational Workflow}{318}{subsection.61.5}%
+\contentsline {subsection}{\numberline {61.6}Deliverable}{319}{subsection.61.6}%
+\contentsline {subsection}{\numberline {61.7}Reflection}{319}{subsection.61.7}%
+\contentsline {section}{\numberline {62}Lab --- Y-Chromosome Manifestation: Digit 4}{320}{section.62}%
+\contentsline {subsection}{\numberline {62.1}Objectives}{320}{subsection.62.1}%
+\contentsline {subsection}{\numberline {62.2}Background}{320}{subsection.62.2}%
+\contentsline {subsection}{\numberline {62.3}Procedure}{320}{subsection.62.3}%
+\contentsline {subsection}{\numberline {62.4}Analysis}{320}{subsection.62.4}%
+\contentsline {subsection}{\numberline {62.5}Computational Workflow}{321}{subsection.62.5}%
+\contentsline {subsection}{\numberline {62.6}Reflection}{321}{subsection.62.6}%
+\contentsline {section}{\numberline {63}Lab --- PDVSA Gateway Ops: The EGS Lattice-Linear Companion}{322}{section.63}%
+\contentsline {subsection}{\numberline {63.1}Objectives}{322}{subsection.63.1}%
+\contentsline {subsection}{\numberline {63.2}Background}{322}{subsection.63.2}%
+\contentsline {subsection}{\numberline {63.3}Procedure}{322}{subsection.63.3}%
+\contentsline {subsection}{\numberline {63.4}Analysis}{323}{subsection.63.4}%
+\contentsline {subsection}{\numberline {63.5}Computational Workflow}{323}{subsection.63.5}%
+\contentsline {subsection}{\numberline {63.6}Reflection}{323}{subsection.63.6}%
+\contentsline {section}{\numberline {64}Lab --- The Macro-Protein Work Engine}{324}{section.64}%
+\contentsline {subsection}{\numberline {64.1}Objectives}{324}{subsection.64.1}%
+\contentsline {subsection}{\numberline {64.2}Background}{324}{subsection.64.2}%
+\contentsline {subsection}{\numberline {64.3}Procedure}{324}{subsection.64.3}%
+\contentsline {subsection}{\numberline {64.4}Analysis}{325}{subsection.64.4}%
+\contentsline {subsection}{\numberline {64.5}Computational Workflow}{325}{subsection.64.5}%
+\contentsline {subsection}{\numberline {64.6}Reflection}{325}{subsection.64.6}%
+\contentsline {section}{\numberline {65}Lab --- The Invisible Frontier}{326}{section.65}%
+\contentsline {subsection}{\numberline {65.1}Objectives}{326}{subsection.65.1}%
+\contentsline {subsection}{\numberline {65.2}Background}{326}{subsection.65.2}%
+\contentsline {subsection}{\numberline {65.3}Procedure}{326}{subsection.65.3}%
+\contentsline {subsection}{\numberline {65.4}Analysis}{326}{subsection.65.4}%
+\contentsline {subsection}{\numberline {65.5}Computational Workflow}{327}{subsection.65.5}%
+\contentsline {subsection}{\numberline {65.6}Reflection}{327}{subsection.65.6}%
+\contentsline {section}{\numberline {66}Lab --- Frontiers and the Research Program}{328}{section.66}%
+\contentsline {subsection}{\numberline {66.1}Objectives}{328}{subsection.66.1}%
+\contentsline {subsection}{\numberline {66.2}Background}{328}{subsection.66.2}%
+\contentsline {subsection}{\numberline {66.3}Procedure}{328}{subsection.66.3}%
+\contentsline {subsection}{\numberline {66.4}Analysis}{329}{subsection.66.4}%
+\contentsline {subsection}{\numberline {66.5}Computational Workflow}{329}{subsection.66.5}%
+\contentsline {subsection}{\numberline {66.6}Reflection}{329}{subsection.66.6}%
+\contentsline {section}{\numberline {67}Question Bank --- The SS Vibelandia Program and the Omni-Lattice Corpus}{330}{section.67}%
+\contentsline {subsection}{\numberline {67.1}Recall}{330}{subsection.67.1}%
+\contentsline {subsection}{\numberline {67.2}Application}{330}{subsection.67.2}%
+\contentsline {subsection}{\numberline {67.3}Synthesis}{331}{subsection.67.3}%
+\contentsline {section}{\numberline {68}Question Bank --- The Living PEM: Engineering the Lattice}{332}{section.68}%
+\contentsline {subsection}{\numberline {68.1}Recall}{332}{subsection.68.1}%
+\contentsline {subsection}{\numberline {68.2}Application}{332}{subsection.68.2}%
+\contentsline {subsection}{\numberline {68.3}Synthesis}{332}{subsection.68.3}%
+\contentsline {section}{\numberline {69}Question Bank --- Tensor Decoupling: Filing the Engine}{334}{section.69}%
+\contentsline {subsection}{\numberline {69.1}Recall}{334}{subsection.69.1}%
+\contentsline {subsection}{\numberline {69.2}Application}{334}{subsection.69.2}%
+\contentsline {subsection}{\numberline {69.3}Synthesis}{334}{subsection.69.3}%
+\contentsline {section}{\numberline {70}Question Bank --- Master Synthesis: Everything Is Connected}{336}{section.70}%
+\contentsline {subsection}{\numberline {70.1}Recall}{336}{subsection.70.1}%
+\contentsline {subsection}{\numberline {70.2}Application}{336}{subsection.70.2}%
+\contentsline {subsection}{\numberline {70.3}Synthesis}{336}{subsection.70.3}%
+\contentsline {section}{\numberline {71}Question Bank --- Nine Digits, Ninety-Nine Octaves}{338}{section.71}%
+\contentsline {subsection}{\numberline {71.1}Recall}{338}{subsection.71.1}%
+\contentsline {subsection}{\numberline {71.2}Application}{338}{subsection.71.2}%
+\contentsline {subsection}{\numberline {71.3}Synthesis}{338}{subsection.71.3}%
+\contentsline {section}{\numberline {72}Question Bank --- El Gran Sol's Fractal Constant}{340}{section.72}%
+\contentsline {subsection}{\numberline {72.1}Recall}{340}{subsection.72.1}%
+\contentsline {subsection}{\numberline {72.2}Application}{340}{subsection.72.2}%
+\contentsline {subsection}{\numberline {72.3}Synthesis}{340}{subsection.72.3}%
+\contentsline {section}{\numberline {73}Question Bank --- Prime-Parity: The Sole-Even Anchor}{342}{section.73}%
+\contentsline {subsection}{\numberline {73.1}Recall}{342}{subsection.73.1}%
+\contentsline {subsection}{\numberline {73.2}Application}{342}{subsection.73.2}%
+\contentsline {subsection}{\numberline {73.3}Synthesis}{342}{subsection.73.3}%
+\contentsline {section}{\numberline {74}Question Bank --- Holographic Rhyme: The Four-Pillar Fractal}{344}{section.74}%
+\contentsline {subsection}{\numberline {74.1}Recall}{344}{subsection.74.1}%
+\contentsline {subsection}{\numberline {74.2}Application}{344}{subsection.74.2}%
+\contentsline {subsection}{\numberline {74.3}Synthesis}{344}{subsection.74.3}%
+\contentsline {section}{\numberline {75}Question Bank --- Multi-Dimensional Holographic Rhyme}{346}{section.75}%
+\contentsline {subsection}{\numberline {75.1}Recall}{346}{subsection.75.1}%
+\contentsline {subsection}{\numberline {75.2}Application}{346}{subsection.75.2}%
+\contentsline {subsection}{\numberline {75.3}Synthesis}{346}{subsection.75.3}%
+\contentsline {section}{\numberline {76}Question Bank --- Topology of the Void: Zero as Equilibrium}{348}{section.76}%
+\contentsline {subsection}{\numberline {76.1}Recall}{348}{subsection.76.1}%
+\contentsline {subsection}{\numberline {76.2}Application}{348}{subsection.76.2}%
+\contentsline {subsection}{\numberline {76.3}Synthesis}{348}{subsection.76.3}%
+\contentsline {section}{\numberline {77}Question Bank --- The Higgs Gate: Mass and the Shared Now}{350}{section.77}%
+\contentsline {subsection}{\numberline {77.1}Recall}{350}{subsection.77.1}%
+\contentsline {subsection}{\numberline {77.2}Application}{350}{subsection.77.2}%
+\contentsline {subsection}{\numberline {77.3}Synthesis}{350}{subsection.77.3}%
+\contentsline {section}{\numberline {78}Question Bank --- Proton Space, Electron Theater, and \ensuremath {\mitPhi } Duality}{351}{section.78}%
+\contentsline {subsection}{\numberline {78.1}Recall}{351}{subsection.78.1}%
+\contentsline {subsection}{\numberline {78.2}Application}{351}{subsection.78.2}%
+\contentsline {subsection}{\numberline {78.3}Synthesis}{351}{subsection.78.3}%
+\contentsline {section}{\numberline {79}Question Bank --- The Viscosity of Light}{353}{section.79}%
+\contentsline {subsection}{\numberline {79.1}Recall}{353}{subsection.79.1}%
+\contentsline {subsection}{\numberline {79.2}Application}{353}{subsection.79.2}%
+\contentsline {subsection}{\numberline {79.3}Synthesis}{353}{subsection.79.3}%
+\contentsline {subsection}{\numberline {79.4}Further Practice}{354}{subsection.79.4}%
+\contentsline {section}{\numberline {80}Question Bank --- The Eddy-Current Mirror: Transduction Drag}{355}{section.80}%
+\contentsline {subsection}{\numberline {80.1}Recall}{355}{subsection.80.1}%
+\contentsline {subsection}{\numberline {80.2}Application}{355}{subsection.80.2}%
+\contentsline {subsection}{\numberline {80.3}Synthesis}{355}{subsection.80.3}%
+\contentsline {section}{\numberline {81}Question Bank --- The Crystalline Unified Field: Speed and Distance}{357}{section.81}%
+\contentsline {subsection}{\numberline {81.1}Recall}{357}{subsection.81.1}%
+\contentsline {subsection}{\numberline {81.2}Application}{357}{subsection.81.2}%
+\contentsline {subsection}{\numberline {81.3}Synthesis}{357}{subsection.81.3}%
+\contentsline {section}{\numberline {82}Question Bank --- The Grand Unified Metrological Overlap}{359}{section.82}%
+\contentsline {subsection}{\numberline {82.1}Recall}{359}{subsection.82.1}%
+\contentsline {subsection}{\numberline {82.2}Application}{359}{subsection.82.2}%
+\contentsline {subsection}{\numberline {82.3}Synthesis}{359}{subsection.82.3}%
+\contentsline {section}{\numberline {83}Question Bank --- Metamorphic Octaves: Densification}{361}{section.83}%
+\contentsline {subsection}{\numberline {83.1}Recall}{361}{subsection.83.1}%
+\contentsline {subsection}{\numberline {83.2}Application}{361}{subsection.83.2}%
+\contentsline {subsection}{\numberline {83.3}Synthesis}{361}{subsection.83.3}%
+\contentsline {section}{\numberline {84}Question Bank --- Planetary Core and the Goldilocks Bands}{363}{section.84}%
+\contentsline {subsection}{\numberline {84.1}Recall}{363}{subsection.84.1}%
+\contentsline {subsection}{\numberline {84.2}Application}{363}{subsection.84.2}%
+\contentsline {subsection}{\numberline {84.3}Synthesis}{363}{subsection.84.3}%
+\contentsline {section}{\numberline {85}Question Bank --- The Holographic Singularity Crystal: Net Zero and Node k = 0}{365}{section.85}%
+\contentsline {subsection}{\numberline {85.1}Recall}{365}{subsection.85.1}%
+\contentsline {subsection}{\numberline {85.2}Application}{365}{subsection.85.2}%
+\contentsline {subsection}{\numberline {85.3}Synthesis}{365}{subsection.85.3}%
+\contentsline {section}{\numberline {86}Question Bank --- CMOS/Protonic: The Silicon Shelf}{367}{section.86}%
+\contentsline {subsection}{\numberline {86.1}Recall}{367}{subsection.86.1}%
+\contentsline {subsection}{\numberline {86.2}Application}{367}{subsection.86.2}%
+\contentsline {subsection}{\numberline {86.3}Synthesis}{367}{subsection.86.3}%
+\contentsline {section}{\numberline {87}Question Bank --- Protein Folding as Prime-Container Architecture}{368}{section.87}%
+\contentsline {subsection}{\numberline {87.1}Recall}{368}{subsection.87.1}%
+\contentsline {subsection}{\numberline {87.2}Application}{368}{subsection.87.2}%
+\contentsline {subsection}{\numberline {87.3}Synthesis}{368}{subsection.87.3}%
+\contentsline {section}{\numberline {88}Question Bank --- Prime-Indexed Volumetric Storage}{370}{section.88}%
+\contentsline {subsection}{\numberline {88.1}Recall}{370}{subsection.88.1}%
+\contentsline {subsection}{\numberline {88.2}Application}{370}{subsection.88.2}%
+\contentsline {subsection}{\numberline {88.3}Synthesis}{370}{subsection.88.3}%
+\contentsline {section}{\numberline {89}Question Bank --- Kinematic Set-Recycling: The Truckee Protocol}{372}{section.89}%
+\contentsline {subsection}{\numberline {89.1}Recall}{372}{subsection.89.1}%
+\contentsline {subsection}{\numberline {89.2}Application}{372}{subsection.89.2}%
+\contentsline {subsection}{\numberline {89.3}Synthesis}{372}{subsection.89.3}%
+\contentsline {section}{\numberline {90}Question Bank --- Moving Up the Stack: Lattice as the Next AI Layer}{374}{section.90}%
+\contentsline {subsection}{\numberline {90.1}Recall}{374}{subsection.90.1}%
+\contentsline {subsection}{\numberline {90.2}Application}{374}{subsection.90.2}%
+\contentsline {subsection}{\numberline {90.3}Synthesis}{374}{subsection.90.3}%
+\contentsline {section}{\numberline {91}Question Bank --- Humans as Omniversal Reality Bridges}{376}{section.91}%
+\contentsline {subsection}{\numberline {91.1}Recall}{376}{subsection.91.1}%
+\contentsline {subsection}{\numberline {91.2}Application}{376}{subsection.91.2}%
+\contentsline {subsection}{\numberline {91.3}Synthesis}{376}{subsection.91.3}%
+\contentsline {section}{\numberline {92}Question Bank --- Y-Chromosome Manifestation: Digit 4}{378}{section.92}%
+\contentsline {subsection}{\numberline {92.1}Recall}{378}{subsection.92.1}%
+\contentsline {subsection}{\numberline {92.2}Application}{378}{subsection.92.2}%
+\contentsline {subsection}{\numberline {92.3}Synthesis}{378}{subsection.92.3}%
+\contentsline {section}{\numberline {93}Question Bank --- PDVSA Gateway Ops: The EGS Lattice-Linear Companion}{380}{section.93}%
+\contentsline {subsection}{\numberline {93.1}Recall}{380}{subsection.93.1}%
+\contentsline {subsection}{\numberline {93.2}Application}{380}{subsection.93.2}%
+\contentsline {subsection}{\numberline {93.3}Synthesis}{380}{subsection.93.3}%
+\contentsline {section}{\numberline {94}Question Bank --- The Macro-Protein Work Engine}{382}{section.94}%
+\contentsline {subsection}{\numberline {94.1}Recall}{382}{subsection.94.1}%
+\contentsline {subsection}{\numberline {94.2}Application}{382}{subsection.94.2}%
+\contentsline {subsection}{\numberline {94.3}Synthesis}{382}{subsection.94.3}%
+\contentsline {section}{\numberline {95}Question Bank --- The Invisible Frontier}{384}{section.95}%
+\contentsline {subsection}{\numberline {95.1}Recall}{384}{subsection.95.1}%
+\contentsline {subsection}{\numberline {95.2}Application}{384}{subsection.95.2}%
+\contentsline {subsection}{\numberline {95.3}Synthesis}{384}{subsection.95.3}%
+\contentsline {section}{\numberline {96}Question Bank --- Frontiers and the Research Program}{386}{section.96}%
+\contentsline {subsection}{\numberline {96.1}Recall}{386}{subsection.96.1}%
+\contentsline {subsection}{\numberline {96.2}Application}{386}{subsection.96.2}%
+\contentsline {subsection}{\numberline {96.3}Synthesis}{386}{subsection.96.3}%
+\contentsline {section}{\numberline {97}Appendix A --- Authoring Guide: How This Book Was Built}{388}{section.97}%
+\contentsline {subsection}{\numberline {97.1}The Big Idea: One Source of Truth}{388}{subsection.97.1}%
+\contentsline {subsection}{\numberline {97.2}The Provenance Pipeline}{388}{subsection.97.2}%
+\contentsline {subsection}{\numberline {97.3}The Tested Computational Backbone}{388}{subsection.97.3}%
+\contentsline {subsection}{\numberline {97.4}Deterministic Figures}{389}{subsection.97.4}%
+\contentsline {subsection}{\numberline {97.5}The Closed Namespaces}{389}{subsection.97.5}%
+\contentsline {subsection}{\numberline {97.6}Extending the Book}{390}{subsection.97.6}%
+\contentsline {section}{\numberline {98}Appendix B --- Notation and Symbols}{391}{section.98}%
+\contentsline {subsection}{\numberline {98.1}Conventions}{391}{subsection.98.1}%
+\contentsline {subsection}{\numberline {98.2}Core Omni-Lattice Symbols}{391}{subsection.98.2}%
+\contentsline {subsection}{\numberline {98.3}Template-Legacy Symbols}{393}{subsection.98.3}%
+\contentsline {subsection}{\numberline {98.4}Reused Greek Letters}{395}{subsection.98.4}%
+\contentsline {section}{\numberline {99}Appendix C --- Mathematical Review}{396}{section.99}%
+\contentsline {subsection}{\numberline {99.1}The Golden Ratio and Its Algebra}{396}{subsection.99.1}%
+\contentsline {subsection}{\numberline {99.2}The Catalog Size: A Product of Register Widths}{396}{subsection.99.2}%
+\contentsline {subsection}{\numberline {99.3}Primes and the Parity Partition}{397}{subsection.99.3}%
+\contentsline {subsection}{\numberline {99.4}Exponential Damping}{397}{subsection.99.4}%
+\contentsline {subsection}{\numberline {99.5}Logarithms and Densification}{398}{subsection.99.5}%
+\contentsline {subsection}{\numberline {99.6}Overlaps, Balances, and Linear Profiles}{399}{subsection.99.6}%
+\contentsline {subsection}{\numberline {99.7}Basic Statistics and Legacy Models}{399}{subsection.99.7}%
+\contentsline {section}{\numberline {100}Appendix D --- Master Formalism Table of the Omni-Lattice}{400}{section.100}%
+\contentsline {subsection}{\numberline {100.1}The two \ensuremath {\mitOmega } conventions}{400}{subsection.100.1}%
+\contentsline {subsection}{\numberline {100.2}Part 0 --- Orientation and Quantitative Foundations}{400}{subsection.100.2}%
+\contentsline {subsection}{\numberline {100.3}Part I --- Structure and Form}{403}{subsection.100.3}%
+\contentsline {subsection}{\numberline {100.4}Part II --- Dynamics and Change}{406}{subsection.100.4}%
+\contentsline {subsection}{\numberline {100.5}Part III --- Applied Frontiers}{411}{subsection.100.5}%
+\contentsline {section}{\numberline {101}Appendix E --- Format Gallery: Every Content Primitive}{417}{section.101}%
+\contentsline {subsection}{\numberline {101.1}1. Text and inline formatting}{417}{subsection.101.1}%
+\contentsline {subsection}{\numberline {101.2}2. Lists}{417}{subsection.101.2}%
+\contentsline {subsection}{\numberline {101.3}3. Block quotes and callouts}{418}{subsection.101.3}%
+\contentsline {subsection}{\numberline {101.4}4. Tables}{418}{subsection.101.4}%
+\contentsline {subsection}{\numberline {101.5}5. Mathematics and units}{419}{subsection.101.5}%
+\contentsline {subsection}{\numberline {101.6}6. Figures}{419}{subsection.101.6}%
+\contentsline {subsection}{\numberline {101.7}7. Diagrams (Mermaid)}{422}{subsection.101.7}%
+\contentsline {subsection}{\numberline {101.8}8. Code}{422}{subsection.101.8}%
+\contentsline {subsection}{\numberline {101.9}9. Cross-references and citations}{424}{subsection.101.9}%
+\contentsline {subsection}{\numberline {101.10}10. Media and data}{425}{subsection.101.10}%
+\contentsline {subsection}{\numberline {101.11}11. Pedagogical blocks}{425}{subsection.101.11}%
+\contentsline {subsection}{\numberline {101.12}12. Miscellany}{425}{subsection.101.12}%
+\contentsline {section}{\numberline {102}Appendix F --- Master Glossary}{427}{section.102}%
+\contentsline {subsubsection}{\numberline {102.0.1}Binary Dyad Anchor}{427}{subsubsection.102.0.1}%
+\contentsline {subsubsection}{\numberline {102.0.2}C-Bridge}{427}{subsubsection.102.0.2}%
+\contentsline {subsubsection}{\numberline {102.0.3}Catalog Architecture}{427}{subsubsection.102.0.3}%
+\contentsline {subsubsection}{\numberline {102.0.4}CMOS-Protonic}{427}{subsubsection.102.0.4}%
+\contentsline {subsubsection}{\numberline {102.0.5}Crystalline Unified Field}{427}{subsubsection.102.0.5}%
+\contentsline {subsubsection}{\numberline {102.0.6}Digit}{427}{subsubsection.102.0.6}%
+\contentsline {subsubsection}{\numberline {102.0.7}Eddy-Current Mirror}{428}{subsubsection.102.0.7}%
+\contentsline {subsubsection}{\numberline {102.0.8}Electron Theater}{428}{subsubsection.102.0.8}%
+\contentsline {subsubsection}{\numberline {102.0.9}Engine Shelf}{428}{subsubsection.102.0.9}%
+\contentsline {subsubsection}{\numberline {102.0.10}Fair Exchange}{428}{subsubsection.102.0.10}%
+\contentsline {subsubsection}{\numberline {102.0.11}Four-Pillar Fractal}{428}{subsubsection.102.0.11}%
+\contentsline {subsubsection}{\numberline {102.0.12}Fractal Constant}{428}{subsubsection.102.0.12}%
+\contentsline {subsubsection}{\numberline {102.0.13}Golden Ratio}{428}{subsubsection.102.0.13}%
+\contentsline {subsubsection}{\numberline {102.0.14}Higgs Gate}{428}{subsubsection.102.0.14}%
+\contentsline {subsubsection}{\numberline {102.0.15}Honesty-First}{429}{subsubsection.102.0.15}%
+\contentsline {subsubsection}{\numberline {102.0.16}Holographic Rhyme}{429}{subsubsection.102.0.16}%
+\contentsline {subsubsection}{\numberline {102.0.17}Irreducible Minimum Set}{429}{subsubsection.102.0.17}%
+\contentsline {subsubsection}{\numberline {102.0.18}Kinematic Set-Recycling}{429}{subsubsection.102.0.18}%
+\contentsline {subsubsection}{\numberline {102.0.19}Lattice-Linear}{429}{subsubsection.102.0.19}%
+\contentsline {subsubsection}{\numberline {102.0.20}Living PEM}{429}{subsubsection.102.0.20}%
+\contentsline {subsubsection}{\numberline {102.0.21}Macro-Protein}{429}{subsubsection.102.0.21}%
+\contentsline {subsubsection}{\numberline {102.0.22}Master Register}{429}{subsubsection.102.0.22}%
+\contentsline {subsubsection}{\numberline {102.0.23}Master Synthesis}{430}{subsubsection.102.0.23}%
+\contentsline {subsubsection}{\numberline {102.0.24}Metrological Overlap}{430}{subsubsection.102.0.24}%
+\contentsline {subsubsection}{\numberline {102.0.25}Multidimensional Rhyme}{430}{subsubsection.102.0.25}%
+\contentsline {subsubsection}{\numberline {102.0.26}Net-Zero}{430}{subsubsection.102.0.26}%
+\contentsline {subsubsection}{\numberline {102.0.27}Node k0}{430}{subsubsection.102.0.27}%
+\contentsline {subsubsection}{\numberline {102.0.28}Octave}{430}{subsubsection.102.0.28}%
+\contentsline {subsubsection}{\numberline {102.0.29}Omni-Lattice}{430}{subsubsection.102.0.29}%
+\contentsline {subsubsection}{\numberline {102.0.30}Phi Duality}{430}{subsubsection.102.0.30}%
+\contentsline {subsubsection}{\numberline {102.0.31}Prime Container}{430}{subsubsection.102.0.31}%
+\contentsline {subsubsection}{\numberline {102.0.32}Prime Parity}{431}{subsubsection.102.0.32}%
+\contentsline {subsubsection}{\numberline {102.0.33}Proton Space}{431}{subsubsection.102.0.33}%
+\contentsline {subsubsection}{\numberline {102.0.34}Reality Bridge}{431}{subsubsection.102.0.34}%
+\contentsline {subsubsection}{\numberline {102.0.35}Self-Observation Drag}{431}{subsubsection.102.0.35}%
+\contentsline {subsubsection}{\numberline {102.0.36}Silicon Shelf}{431}{subsubsection.102.0.36}%
+\contentsline {subsubsection}{\numberline {102.0.37}Singularity Crystal}{431}{subsubsection.102.0.37}%
+\contentsline {subsubsection}{\numberline {102.0.38}Tensor Decoupling}{431}{subsubsection.102.0.38}%
+\contentsline {subsubsection}{\numberline {102.0.39}Topology of the Void}{431}{subsubsection.102.0.39}%
+\contentsline {subsubsection}{\numberline {102.0.40}Transduction Line}{431}{subsubsection.102.0.40}%
+\contentsline {subsubsection}{\numberline {102.0.41}Viscosity of Light}{432}{subsubsection.102.0.41}%
+\contentsline {subsubsection}{\numberline {102.0.42}Volumetric Storage}{432}{subsubsection.102.0.42}%
+\contentsline {subsubsection}{\numberline {102.0.43}Zero-Octave}{432}{subsubsection.102.0.43}%
+\contentsline {subsubsection}{\numberline {102.0.44}Narrative-Empirical-Operational Tiers}{432}{subsubsection.102.0.44}%
+\contentsline {section}{\numberline {103}Appendix G --- Index of Key Terms}{433}{section.103}%

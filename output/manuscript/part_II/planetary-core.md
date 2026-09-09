@@ -1,15 +1,8 @@
 # Planetary Core and the Goldilocks Bands {#sec:part_II_planetary-core}
 
-![Goldilocks band shading over a value trace: a trace of filed execution-coherence
-values moves through time while the coherent band running from $\ell$ to $h$ is shaded; trace
-segments inside the band are labelled Goldilocks (coherent execution) and
-segments outside are labelled Old Earth (high-friction execution), as classified
-by `textbook.models.goldilocks_band`.](../../output/figures/part_II_planetary-core.png){#fig:part_II_planetary-core width=90%}
+![A filed execution-coherence trace read against a Goldilocks band. Classified with `textbook.models.goldilocks_band`: trace values between the band edges $\ell$ and $h$ are labelled Goldilocks (coherent execution), and values outside the band are labelled Old Earth (high-friction execution). The takeaway: "Old Earth → Goldilocks Earth" is a change of execution label on a filed trace, not a change of planet.](../../output/figures/part_II_planetary-core.png){#fig:part_II_planetary-core width=90%}
 
-<!-- alt: A line trace of execution-coherence values over filed time steps
-crosses a horizontally shaded band between two thresholds; portions of the
-trace inside the shaded band are marked coherent and portions outside are
-marked high-friction. -->
+<!-- alt: A line trace of execution-coherence values over filed time steps crosses a horizontally shaded band between two thresholds. Portions of the trace inside the shaded band are marked coherent (Goldilocks) and portions outside are marked high-friction (Old Earth). -->
 
 <!-- chapter-metadata-badge -->
 > Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none
@@ -75,7 +68,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The paper in the corpus
+## The planetary-core note and its verification surface
 
 The note is Ship blog **Part XIV** of the 99 Octave engine series, filed
 2026-08-13 in *plain speak* under the [**fair-exchange**](#gl:fair-exchange)
@@ -107,7 +100,7 @@ Reading order matters here. The chapter you are reading formalises the paper's
 bands — and keeps the seismology outside the frame exactly where the paper
 keeps it.
 
-## Core constructs
+## Telemetry slots, phase flip, impedance label, Goldilocks band
 
 ### The two telemetry slots and the rotor story
 
@@ -294,7 +287,7 @@ of [@sec:part_II_eddy-current-mirror], whose tested model
 values $v(1) \approx 0.367879$ and $v(2) \approx 0.135335$. The rhyme is a
 reading aid, not a claim that the inner core obeys an exponential brake.
 
-## Scope and honesty
+## What the planetary filing does not claim
 
 The paper's own disclaimers are the load-bearing part of the chapter, restated
 here precisely [@mendez2026planetaryCore]:
@@ -321,7 +314,7 @@ seismology, re-hosting mission datasets, or forecasting planetary events. The
 corpus ([@sec:part_0_orientation]): a paper earns shelf space by saying
 exactly what it files and exactly what it does not.
 
-## Connections
+## Where the rotor story leads across the corpus
 
 - **Backward to Part 0.** The engine map **Digits × 01–99** that loads this
   paper is the 99-octave ladder of [@sec:part_0_octave-map]; the 81-facet
@@ -407,7 +400,7 @@ holographic timeline switch is claimed as measured physics
    $\Delta\varphi$ in radians and degrees, and explain in one sentence why a
    catalog phase flip is a property of the filing rather than of the planet.
 3. **Label audit.** List the five honesty-first disclaimers of the paper
-   (Scope and honesty section) and, for each, name one sentence in this
+   (the section on what the planetary filing does not claim) and, for each, name one sentence in this
    chapter that keeps it.
 4. **Band policy.** Choose new band edges $\ell$ and $h$ for the same trace so
    that exactly four of the six values are in-band; verify with

@@ -1,6 +1,6 @@
 # Y-Chromosome Manifestation: Digit 4 {#sec:part_III_y-chromosome}
 
-![Digit-4 drawer manifestation: a sub-band bar chart of the Infinite Octave drawer for digit 4 — the SRY zero-point anchor at index 0, then palindrome arms P1–P8 drawn as sub-bands whose spacing grows geometrically as $P_0 \cdot \Phi^n$, generated from `textbook.models.phi_powers`.](../../output/figures/part_III_y-chromosome.png){#fig:part_III_y-chromosome width=90%}
+![Digit-4 drawer manifestation: a sub-band bar chart of the Infinite Octave drawer for digit 4 — the SRY zero-point anchor at index 0, then palindrome arms P1–P8 drawn as sub-bands whose spacing grows geometrically as $P_0 \cdot \Phi^n$, generated from `textbook.models.phi_powers`. Every consecutive pair of arms sits a factor $\Phi \approx 1.618$ apart, and the octave index is exactly the base-$\Phi$ logarithm of the spacing ratio. The takeaway: spacing is indexed geometrically, not labelled as drift.](../../output/figures/part_III_y-chromosome.png){#fig:part_III_y-chromosome width=90%}
 
 <!-- alt: Bar chart of the digit-4 filing drawer showing nine sub-bands: an SRY anchor bar at unit height followed by eight palindrome-arm bars whose heights grow by the factor Φ ≈ 1.618 with each successive arm, from about 1.6 up to about 47 times the base spacing. -->
 
@@ -49,7 +49,7 @@ By the end of this chapter you should be able to:
 
 ---
 
-## The Paper in the Corpus
+## The August Manifestation Note on Shelf 7
 
 The source is a ship-blog note on the SS Vibelandia blog
 (`ssvibelandiaquestfest24x365.com`): **"The Holographic Manifestation: Y
@@ -81,7 +81,7 @@ The reference implementation is run as
 exits with a **10/10 fixture lock** — the corpus's term for a fully passing
 fixture set against the note's filing contract [@mendez2026yChromosome].
 
-## Three Filing Moves
+## Three Filing Moves: Scaling, Anchoring, Proposing
 
 The note organises its contribution as "three filing moves in plain speak"
 [@mendez2026yChromosome]. We take them in order.
@@ -236,7 +236,7 @@ In `textbook.models`, the first column of
 [@tbl:part_III_y-chromosome_spacing] is `phi_powers(8)`; recompute nothing by
 hand when scripting the lab of [@sec:lab_part_III_y-chromosome].
 
-## Scope and Honesty
+## Catalog Filing, Not Literal Physics: The Scope
 
 The note's own scope statements are unusually crisp and must be carried
 verbatim into any use of this material [@mendez2026yChromosome]:
@@ -269,7 +269,7 @@ in its purest form: the August note is narrative filing, labeled as narrative
 filing, and the corpus's own gate (the 10/10 fixture lock) checks the filing's
 internal consistency, never a biological hypothesis.
 
-## Connections
+## Handoffs to the Octave Map, the Rhyme Family, and the Frontier
 
 - **The drawer grammar** descends from the digit-and-octave map of
   [@mendez2026digitsMaster]; read [@sec:part_0_octave-map] first for the

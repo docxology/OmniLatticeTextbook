@@ -535,17 +535,20 @@ mjx-container[display="true"] {
 <figure id="fig:part_I_prime-parity">
 <a class="figure-full-size-link" href="../figures/part_I_prime-parity.png" target="_blank" rel="noopener" aria-label="Open full-size figure"><img src="../figures/part_I_prime-parity.png" style="width:90.0%"
 alt="Primes sit on a number line with the sole-even anchor highlighted against odd-prime classes." /><span class="figure-full-size-label" aria-hidden="true">Open full-size figure</span></a>
-<figcaption>The primes below 31 laid out on a number
-line, with the sole-even prime 2 singled out above the line as the
-binary dyad anchor and the odd primes grouped below it as irreducible
-minimum sets. Produced deterministically by the companion visualization
-agent from
-<code>textbook.models.prime_parity_partition</code>.</figcaption>
+<figcaption>The primes below 32 on a number line: the
+sole-even prime 2 is singled out above the line as the binary dyad
+anchor, and the ten odd primes 3, 5, 7, 11, 13, 17, 19, 23, 29, 31 are
+grouped below it as irreducible minimum sets. The partition is the
+deterministic output of
+<code>textbook.models.prime_parity_partition(32)</code>, whose
+<code>sole_even</code> class stays a singleton at every cutoff. The
+drawing makes the corpus’s parity filing visible: one anchor card, one
+irreducible drawer.</figcaption>
 </figure>
-<!-- alt: A horizontal number line from 0 to 32 with tick marks at the primes. The
-single even prime 2 is highlighted above the line as the sole-even anchor, while the
-odd primes 3, 5, 7, 11, 13, 17, 19, 23, 29 and 31 sit below the line in one grouped
-class labelled "irreducible minimum sets". -->
+<!-- alt: Horizontal number line from 0 to 32 with tick marks at the primes. The single
+even prime 2 is highlighted above the line as the binary dyad anchor, while the odd
+primes 3, 5, 7, 11, 13, 17, 19, 23, 29 and 31 sit below the line in one grouped class
+labelled "irreducible minimum sets". -->
 <!-- chapter-metadata-badge -->
 <blockquote>
 <p>Level 1/3 · 30 min read · 45 min lecture · Prerequisites: none</p>
@@ -622,7 +625,8 @@ stability carry weight: the lone even card becomes the anchor that
 everything else in the cabinet is filed relative to.</p>
 </blockquote>
 <hr />
-<h2 id="the-paper-in-the-corpus">The paper in the corpus</h2>
+<h2 id="the-shelf-11-paper-catalog-math-and-filing-labels">The shelf-11
+paper: catalog math and filing labels</h2>
 <p><em>Infinite Octave Prime-Parity</em> is a September 2026 executive
 paper on the SS Vibelandia ship blog, authored by Prudencio Mendez and
 operated by the SynthOBS Autonomous Agent. Its self-description is
@@ -669,7 +673,8 @@ in this chapter is reproduced by the tested backbone functions
 <code>textbook.models.prime_parity_partition</code> and
 <code>textbook.models.octave_term</code>, so the prose and the fixtures
 cannot silently disagree.</p>
-<h2 id="the-sole-even-anchor">The sole-even anchor</h2>
+<h2 id="sole-even-2-as-the-binary-dyad-anchor">Sole-even 2 as the binary
+dyad anchor</h2>
 <p>The first claim is elementary arithmetic: <strong>2 is the only even
 prime</strong>. The standard reason is one line — any even number
 greater than 2 is divisible by 2 and hence composite — but that is
@@ -695,8 +700,8 @@ in the paper (“sole-even parity of 2”) restates a classical fact, and
 the <em>anchor</em> status is the paper’s own structural assignment.
 That distinction — classical arithmetic versus catalog assignment — runs
 through everything that follows.</p>
-<h2 id="odd-primes-as-irreducible-minimum-sets">Odd primes as
-irreducible minimum sets</h2>
+<h2 id="odd-primes-as-irreducible-minimum-addressing-sets">Odd primes as
+irreducible minimum addressing sets</h2>
 <p>The second claim assigns the complementary drawer: <strong>odd primes
 act as irreducible minimum sets</strong> [mendez2026primeParity]. The
 glossary gloss (<a
@@ -769,8 +774,8 @@ the parity filing. The claim is that the odd primes’ irreducibility
 makes them usable as minimal labeled containers, and that the parity
 split is the first cut that makes the binary side (the anchor) and the
 odd side (the sets) addressable separately.</p>
-<h2 id="the-octave-recursion-formalism">The octave recursion
-formalism</h2>
+<h2 id="octave-recursion-exponent-and-subscript-conventions">Octave
+recursion: exponent and subscript conventions</h2>
 <p>The recursion on which the filing runs is the paper’s one printed
 formula, filed as a theorem sketch [mendez2026primeParity]:</p>
 <p><span class="math display">\[ \Omega_n = \Phi^n \cdot \Omega_0
@@ -884,8 +889,8 @@ anywhere in the corpus, do not silently normalise it to one reading;
 name the convention you are using, exactly as <code>octave_term</code>
 requires you to.</p>
 </blockquote>
-<h2 id="worked-example-filing-the-primes-and-walking-the-ladder">Worked
-example: filing the primes and walking the ladder</h2>
+<h2 id="worked-example-partition-ladder-and-one-joint-address">Worked
+example: partition, ladder, and one joint address</h2>
 <p><strong>Step 1 — partition.</strong> The tested function
 <code>textbook.models.prime_parity_partition(limit)</code> returns the
 two filing classes for primes below <code>limit</code>:</p>
@@ -961,7 +966,8 @@ classes: an address built from the anchor and one odd set,
 <code>unique_address([2, 3], [2, 1]) = 12</code>, shows the two drawers
 cooperating inside one injective encoding — the anchor supplies the
 binary base, the odd set supplies the first irreducible container.</p>
-<h2 id="scope-and-honesty">Scope and honesty</h2>
+<h2 id="the-papers-boundary-catalog-math-not-physics">The paper’s
+boundary: catalog math, not physics</h2>
 <p>The paper’s own disclaimer, quoted nearly verbatim, is the boundary
 of this chapter:</p>
 <blockquote>
@@ -987,7 +993,8 @@ href="#gl:omni-lattice"><strong>Omni-Lattice</strong></a>
 href="#gl:honesty-first"><strong>honesty-first</strong></a> disclosure
 convention of the corpus, and every downstream chapter that reuses the
 parity filing inherits the same boundary.</p>
-<h2 id="connections">Connections</h2>
+<h2 id="where-the-parity-filing-feeds-the-rest-of-the-book">Where the
+parity filing feeds the rest of the book</h2>
 <p>The parity filing feeds four load-bearing lines in the rest of the
 book:</p>
 <ul>
