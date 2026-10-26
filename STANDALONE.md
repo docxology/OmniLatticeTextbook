@@ -13,7 +13,7 @@ Fork history (see `git log`):
    the template's engine (`src/textbook/`, `src/visualization/`, `src/mermaid/`),
    thin `scripts/`, no-mocks `tests/`, and structural contract were inherited
    unchanged in shape; the identity moved to The Infinite Octaves Omni-Lattice
-   Textbook (author Prudencio Mendez, corpus of the SS Vibelandia engine papers).
+   Textbook (author Daniel Ari Friedman, synthesising the corpus of Prudencio Mendez).
 2. **Authoring** — "Author the Infinite Octaves Omni-Lattice textbook: 30
    chapters, tested formalisms, deterministic figures": all 30 chapters, 30 labs,
    and 30 question banks were filled against the contract; the real bibliography
@@ -31,9 +31,10 @@ gate (`scripts/audit_textbook_quality.py --require-complete`) with zero stubs.
 
 - Book: **The Infinite Octaves Omni-Lattice Textbook** — *A Modular Synthesis of
   the SynthOBS Engine Papers*
-- Author: Prudencio Mendez (SS Vibelandia · SynthOBS Autonomous Agent Program)
+- Author: Daniel Ari Friedman (FractiAI) — synthesising the engine papers of
+  Prudencio Mendez (SS Vibelandia · SynthOBS Autonomous Agent Program)
 - Source repository: [docxology/OmniLatticeTextbook](https://github.com/docxology/OmniLatticeTextbook)
-- Config version: `0.1.0` (software/deposit version declared in
+- Config version: `0.1.2` (software/deposit version declared in
   `docs/manuscript/config.yaml`)
 - **DOI: none yet** — see below.
 

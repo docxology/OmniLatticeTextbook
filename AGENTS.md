@@ -92,7 +92,7 @@ editing anything. For the human-facing overview and quick-start commands, see
 8. **Mermaid rendering needs a Chrome binary.** `mmdc` (via the monorepo
    render stage) renders inline ```` ```mermaid ```` blocks and the
    spec-driven diagrams to PNG. The repo-local, git-ignored
-   [`.puppeteer.json`](.puppeteer.json) points Puppeteer at a
+   `.puppeteer.json` at the project root points Puppeteer at a
    machine-specific Chrome path:
    `{"executablePath": "/Applications/Google Chrome.app/.../Google Chrome",
    "args": ["--no-sandbox", "--disable-setuid-sandbox"]}`. Adjust it per

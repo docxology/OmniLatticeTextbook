@@ -1,6 +1,6 @@
-# `template_textbook/docs/` — Agent Guide
+# `OmniLatticeTextbook/docs/` — Agent Guide
 
-Documentation set for the **fillable book-length scaffold** exemplar. The book's
+Documentation set for **The Infinite Octaves Omni-Lattice Textbook**. The book's
 structure is data-driven from [`../docs/manuscript/config.yaml`](../docs/manuscript/config.yaml);
 a tested `src/textbook` engine scaffolds/validates/illustrates the manuscript;
 thin `scripts/` orchestrators wire it into the reproducible pipeline.
@@ -28,11 +28,11 @@ thin `scripts/` orchestrators wire it into the reproducible pipeline.
 
 ## Status
 
-This exemplar is a **tracked public canonical project** (see
-[`docs/_generated/active_projects.md`](../../../../docs/_generated/active_projects.md)).
-Published on Zenodo (concept DOI `10.5281/zenodo.20533125`).
+This repository is the canonical source of this fork
+([`docxology/OmniLatticeTextbook`](https://github.com/docxology/OmniLatticeTextbook)).
+**No DOI has been minted yet** — the citation sidecars carry intentionally blank
+DOI fields; see [`../STANDALONE.md`](../STANDALONE.md).
 
 ## See also
 
-- [`../AGENTS.md`](../AGENTS.md) — project map + promotion checklist
-- [`../../../../infrastructure`](../../../../infrastructure) — Layer-1 engine the scripts call
+- [`../AGENTS.md`](../AGENTS.md) — project map + editing checklist

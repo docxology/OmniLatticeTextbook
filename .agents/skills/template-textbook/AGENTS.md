@@ -1,6 +1,6 @@
 # template-textbook skill — AGENTS.md
 
-Project-scoped skill bundle for the `template_textbook` exemplar.
+Project-scoped skill bundle for **The Infinite Octaves Omni-Lattice Textbook**.
 
 | File | Purpose |
 | --- | --- |
@@ -12,8 +12,8 @@ Project-scoped skill bundle for the `template_textbook` exemplar.
 
 Agents that need to:
 
-- Drive the in-repo exemplar end-to-end.
-- Fork this exemplar as a starting scaffold.
+- Drive this repository end-to-end (audits, tests, figures, diagrams).
+- Extend the manuscript structure declared in `docs/manuscript/config.yaml`.
 - Verify layer boundaries and thin-orchestrator contracts.
 
 ## Cross-refs

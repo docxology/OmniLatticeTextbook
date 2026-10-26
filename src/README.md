@@ -10,13 +10,13 @@ logic.
 
 | Package / module | Responsibility |
 | --- | --- |
-| `textbook/constants.py` | The structural contract: `CITATION_KEYS` (10), `GLOSSARY_ANCHORS` (15), `REQUIRED_SECTION_HEADINGS`, `REQUIRED_TOKENS`, `STUB_MARKERS`. |
+| `textbook/constants.py` | The structural contract: `CITATION_KEYS` (31), `GLOSSARY_ANCHORS` (44), `REQUIRED_SECTION_HEADINGS`, `REQUIRED_TOKENS`, `STUB_MARKERS`. |
 | `textbook/config.py` | `load_config`, `iter_chapters`, `validate_config` — read `docs/manuscript/config.yaml`, the single source of truth. |
 | `textbook/toc.py` | Chapter numbering and part/chapter label generation. |
 | `textbook/content.py` | The meta-template engine: `scaffold_chapter`, `scaffold_lab`, `scaffold_question_bank`, `validate_chapter`, `count_stub_markers`, `count_words`. |
-| `textbook/models.py` | The worked formalisms: `logistic_growth`, `saturating_response`, `exponential_decay`, `half_life`, `linear_fit`, `descriptive_statistics`, `normalize_unit_interval`. |
+| `textbook/models.py` | The worked formalisms (23 tested functions): the generic backbone (`logistic_growth`, `saturating_response`, `exponential_decay`, `half_life`, `linear_fit`, `descriptive_statistics`, `normalize_unit_interval`) plus the Omni-Lattice corpus formalisms (`octave_term`, `catalog_size`, `prime_parity_partition`, `holographic_rhyme_field`, and the rest). |
 | `textbook/analysis.py` | Canonical worked-example parameters and deterministic summary generation; persisted inputs travel with outputs. |
-| `visualization/` | Deterministic matplotlib figure generators (4 worked + 12 per-chapter placeholders). See [`visualization/README.md`](visualization/README.md). |
+| `visualization/` | Deterministic matplotlib figure generators (the generic worked figures, the gallery, and the 30 canonical chapter figures). See [`visualization/README.md`](visualization/README.md). |
 | `mermaid/` | Mermaid diagram sources + PNG/`.mmd`-fallback renderer driven by `diagram_specs.yaml`. See [`mermaid/README.md`](mermaid/README.md). |
 | `textbook_paths.py` | Project-root and output-directory resolution. |
 | `textbook_io.py` | Atomic text writes (`write_text_atomic`) and small file helpers. |

@@ -225,9 +225,9 @@ mocks.
 The book renders to **PDF, HTML, EPUB, and DOCX** (`render.formats` in
 `config.yaml`). The 31 inline Mermaid diagrams in the chapters (plus the
 format-gallery appendix) embed as images when a Chrome binary is reachable
-by `mmdc` — on this machine a local, git-ignored
-[`.puppeteer.json`](.puppeteer.json) points Puppeteer at Chrome — and degrade
-gracefully to fenced code blocks otherwise. See
+by `mmdc` — on this machine a local, git-ignored `.puppeteer.json` at the
+project root points Puppeteer at Chrome — and degrade gracefully to fenced
+code blocks otherwise. See
 [`docs/visualization_guide.md`](docs/visualization_guide.md).
 
 ## License

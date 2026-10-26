@@ -33,7 +33,7 @@ A chapter file (`part_<label>/<stem>.md`) MUST contain, in roughly this order:
 - **One figure** with descriptive caption and an `<!-- alt: ... -->` comment.
   Use this form (replace `<part>_<stem>` with a real generated filename):
   ```text
-  ! [caption](../output/figures/<part>_<stem>.png){#fig:<part>_<stem> width=90%}
+  ! [caption](../../output/figures/<part>_<stem>.png){#fig:<part>_<stem> width=90%}
   ```
   (In manuscript prose, remove the intentional space between `!` and `[` to produce the live link.)
 - **A metadata badge:** the `<!-- chapter-metadata-badge -->` marker followed by a
@@ -66,24 +66,21 @@ rather than by hand.
 ## Citation Rules
 
 - Cite with `[@key]`; multiple citations with `[@a; @b]`.
-- Every `[@key]` MUST resolve in [`references.bib`](references.bib). The valid keys
-  are: `smith2020foundations`, `doe2019methods`, `lee2021systems`,
-  `garcia2022dynamics`, `patel2018models`, `nguyen2023synthesis`, `kim2020data`,
-  `brown2017principles`, `wilson2021analysis`, `taylor2019theory`.
+- Every `[@key]` MUST resolve in [`references.bib`](references.bib). The valid
+  keys are the 31 `mendez2026*` engine-corpus keys declared there and mirrored in
+  `src/textbook/constants.py:CITATION_KEYS`.
 - To cite a new source, add the entry to `references.bib` first.
 
 ## Glossary Rules
 
 - Link a glossary term with `[**term**](#gl:<anchor>)`.
-- Valid anchors: `system`, `model`, `parameter`, `variable`, `equilibrium`,
-  `feedback`, `gradient`, `threshold`, `network`, `dynamics`, `emergence`,
-  `regulation`, `boundary`, `state`, `observable`.
+- Valid anchors are the 44 `{#gl:...}` headings in [`glossary.md`](glossary.md).
 - These anchors must match `src/textbook/constants.py:GLOSSARY_ANCHORS`. To add a
   term, add it to [`glossary.md`](glossary.md) **and** to `constants.py`.
 
 ## Before You Commit
 
 ```bash
-uv run python scripts/audit_textbook_quality.py --project templates/template_textbook
-uv run --extra dev python -m pytest projects/templates/template_textbook/tests/ -v
+uv run python scripts/audit_textbook_quality.py --require-complete
+uv run --extra dev python -m pytest tests/ -v
 ```

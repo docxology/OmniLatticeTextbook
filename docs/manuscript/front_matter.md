@@ -121,7 +121,7 @@ syntax.
 
 ## Edition and Licence
 
-- **Edition:** 0.1 (software/deposit version 0.1.0, matching `CITATION.cff`).
+- **Edition:** 0.1 (software/deposit version 0.1.2, matching `CITATION.cff`).
 - **Text licence:** CC BY 4.0. Source corpus quotations are used under the
   same attribution spirit the corpus's own Fair Exchange clause establishes.
 - **Code licence:** Apache-2.0 (`src/textbook/`, figures, and pipeline).

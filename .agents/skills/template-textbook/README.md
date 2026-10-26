@@ -1,3 +1,3 @@
 # template-textbook skill
 
-> Agent skill for [`template_textbook`](../..). Load via an AGENTS.md-aware runtime.
+> Agent skill for [`OmniLatticeTextbook`](../..). Load via an AGENTS.md-aware runtime.

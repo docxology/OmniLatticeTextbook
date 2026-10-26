@@ -4,10 +4,11 @@ All notable changes to this project are documented here. The format is based on
 [Keep a Changelog](https://keepachangelog.com/) and this project adheres to
 [Semantic Versioning](https://semver.org/).
 
-## 0.1.0 — 2026-09-08
+## 0.1.2 — 2026-09-08
 
 First release of **The Infinite Octaves Omni-Lattice Textbook** — *A Modular
-Synthesis of the SynthOBS Engine Papers* by Prudencio Mendez: the template
+Synthesis of the SynthOBS Engine Papers* by Daniel Ari Friedman (FractiAI),
+synthesising the engine papers of Prudencio Mendez: the template
 scaffold forked from
 [docxology/template_textbook](https://github.com/docxology/template_textbook)
 and filled to a complete, gate-green textbook.

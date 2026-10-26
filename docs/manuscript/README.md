@@ -11,20 +11,22 @@ manuscript/
 ├── config.yaml          # THE single source of truth: parts, chapters, front
 │                        #   matter, appendices, labs, question banks, layout,
 │                        #   typography, numbering. Edit this to grow the book.
-├── front_matter.md      # Dedication, "About This Template", navigation guide
-├── preface.md           # Preface STUB (purpose, audience, how to use the book)
+├── front_matter.md      # Title, "About This Book", edition/licence, navigation
+├── preface.md           # Preface (purpose, audience, how to use the book)
 ├── preamble.md          # LaTeX preamble (packages, margins) — fenced ```latex
 ├── references.bib       # BibTeX database; every [@key] must resolve here
 ├── glossary.md          # Master glossary; anchors {#gl:...} for [**term**] links
-├── part_0/              # Orientation and Methods   (3 chapters)
-├── part_I/              # Fundamentals              (3 chapters)
-├── part_II/             # Core Systems              (3 chapters)
-├── part_III/            # Applications and Synthesis(3 chapters)
+├── part_0/              # Orientation and Methods        (5 chapters)
+├── part_I/              # Foundations: Constants, Primes, and Rhyme (6 chapters)
+├── part_II/             # Core Systems: The Physical Engine Shelf (8 chapters)
+├── part_III/            # Implementations, Companions, and Frontiers (11 chapters)
 ├── labs/                # One guided lab per chapter, grouped by part
 │   ├── part_0/  part_I/  part_II/  part_III/
 ├── questions/           # One question bank per chapter, grouped by part
 │   ├── part_0/  part_I/  part_II/  part_III/
-├── appendices/          # Authoring guide, notation, math review, index
+├── appendices/          # Appendices A–E and G: authoring guide, notation, math
+│                        #   review, formalism table, format gallery, index
+│                        #   (Appendix F, the master glossary, is glossary.md)
 └── assets/              # Cover image and other static assets
 ```
 
@@ -54,16 +56,17 @@ The PDF is built, not typeset by hand. From the repository root:
 
 ```bash
 # 1. Generate figures and diagrams (the analysis stage; deterministic)
-uv run python scripts/pipeline/stage_02_analysis.py --project templates/template_textbook
+uv run python scripts/pipeline/stage_02_analysis.py --project working/OmniLatticeTextbook
 
 # 2. Render the manuscript to PDF (Pandoc + pandoc-crossref, multiple passes)
-uv run python scripts/pipeline/stage_03_render.py --project templates/template_textbook
+uv run python scripts/pipeline/stage_03_render.py --project working/OmniLatticeTextbook
 ```
 
-Or run the full pipeline interactively with `./run.sh`. The renderer reads
+The renderer reads
 `config.yaml`, assembles the front matter, parts, chapters, appendices, labs, and
 question banks in declared order, resolves cross-references and citations, and
-writes the PDF to `output/templates/template_textbook/pdf/`.
+writes the rendered PDF, HTML, EPUB, and DOCX under the project's `output/`
+directory.
 
 > **Tip:** a single render pass leaves cross-references and citations showing as
 > `??`. The full pipeline runs the multiple LaTeX passes (plus BibTeX) needed to
@@ -73,13 +76,13 @@ writes the PDF to `output/templates/template_textbook/pdf/`.
 
 ```bash
 # Structural contract + stub accounting
-uv run python scripts/audit_textbook_quality.py --project templates/template_textbook
+uv run python scripts/audit_textbook_quality.py
 
 # Manuscript-integrity tests (headings, labels, citations, glossary anchors)
-uv run --extra dev python -m pytest projects/templates/template_textbook/tests/test_manuscript_integrity.py -v
+uv run --extra dev python -m pytest tests/test_manuscript_integrity.py -v
 
-# Markdown validation
-uv run python -m infrastructure.validation.cli markdown projects/templates/template_textbook/manuscript/
+# Full suite (engine, visuals, diagrams, structure)
+uv run --extra dev python -m pytest tests/ -v
 ```
 
 For the full editing contract see [`AGENTS.md`](AGENTS.md); for the authoring
