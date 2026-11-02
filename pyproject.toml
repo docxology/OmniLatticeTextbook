@@ -17,7 +17,7 @@ version = "0.1.2"
 license = {text = "CC-BY-4.0"}
 description = "The Infinite Octaves Omni-Lattice Textbook — modular synthesis of the SynthOBS engine papers."
 authors = [{name = "Daniel Ari Friedman", email = "daniel@activeinference.institute"}]
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
     "defusedxml>=0.7.1",
     "pyyaml>=6.0",
