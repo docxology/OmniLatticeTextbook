@@ -25,6 +25,8 @@ filled (zero stubs — verified by
 appendices plus the master glossary are in place, and the render pipeline
 produces PDF, HTML, DOCX, and EPUB from the same sources.
 
+![The Infinite Octaves Omni-Lattice Textbook Architecture Overview](docs/assets/architecture-overview.svg)
+
 ## The book at a glance
 
 | Part | Title | Chapters |

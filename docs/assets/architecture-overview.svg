@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 650" width="1120" height="650" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">The Infinite Octaves Omni-Lattice Textbook Architecture Overview</title>
+  <desc id="svg-desc">Single-source config.yaml driving 4 parts, 30 chapters, 30 labs, 30 question banks, 23 tested formalisms, and multi-format PDF/HTML/DOCX/EPUB rendering.</desc>
+  <defs>
+    <marker id="arrow-slate" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#475569"/></marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#2563eb"/></marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#0d9488"/></marker>
+    <marker id="arrow-indigo" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#4f46e5"/></marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#d97706"/></marker>
+    <marker id="arrow-emerald" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#059669"/></marker>
+    <marker id="arrow-rose" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#e11d48"/></marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#7c3aed"/></marker>
+  </defs>
+  <rect x="4" y="4" width="1112" height="642" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <rect x="4" y="4" width="1112" height="68" rx="16" fill="#0f172a"/>
+  <rect x="4" y="56" width="1112" height="16" fill="#0f172a"/>
+  <line x1="4" y1="72" x2="1116" y2="72" stroke="#38bdf8" stroke-width="2.5"/>
+  <rect x="880" y="21" width="218" height="30" rx="15" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+  <text x="989.0" y="40.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.5" font-weight="700" fill="#38bdf8" text-anchor="middle">4 Parts · 30 Ch · 23 Models</text>
+  <text x="26.0" y="32.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#f8fafc" text-anchor="start">The Infinite Octaves Omni-Lattice Textbook</text>
+  <text x="26.0" y="54.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#cbd5e1" text-anchor="start">Single-source manuscript engine synthesizing the 31 SynthOBS papers into 30 chapters, labs, question banks &amp; 23 formalisms</text>
+  <rect x="20" y="88" width="352" height="508" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+  <rect x="20" y="88" width="352" height="32" rx="12" fill="#2563eb" fill-opacity="0.10"/>
+  <line x1="20" y1="120" x2="372" y2="120" stroke="#2563eb" stroke-opacity="0.35" stroke-width="1"/>
+  <rect x="271" y="94" width="91" height="20" rx="6" fill="#2563eb" fill-opacity="0.16" stroke="#2563eb" stroke-width="0.8"/>
+  <text x="316.5" y="108.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="700" fill="#2563eb" text-anchor="middle">config.yaml</text>
+  <text x="34.0" y="109.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f172a" text-anchor="start">1. Single Source of Truth</text>
+  <rect x="36" y="132" width="320" height="96" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.3"/>
+  <text x="50.0" y="152.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#38bdf8" text-anchor="start">docs/manuscript/config.yaml</text>
+  <text x="50.0" y="170.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#e2e8f0" text-anchor="start">Declares parts, chapter order, unit intros,</text>
+  <text x="50.0" y="186.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#e2e8f0" text-anchor="start">labs, question banks, 6 appendices, cover,</text>
+  <text x="50.0" y="203.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#e2e8f0" text-anchor="start">31 BibTeX keys &amp; glossary anchors</text>
+  <path d="M 196.0 228.0 L 196.0 248.0" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrow-blue)"/>
+  <rect x="36" y="250" width="320" height="74" rx="8" fill="#f8fafc" stroke="#2563eb" stroke-width="1.3"/>
+  <rect x="36" y="250" width="5" height="74" rx="2.5" fill="#2563eb"/>
+  <text x="50.0" y="270.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">Part 0 — Orientation &amp; Methods (5 Ch.)</text>
+  <text x="50.0" y="288.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">octave-map · navigation · synthesis rules</text>
+  <text x="50.0" y="304.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Unit intro + 5 labs + 5 question banks</text>
+  <rect x="36" y="334" width="320" height="74" rx="8" fill="#f8fafc" stroke="#0284c7" stroke-width="1.3"/>
+  <rect x="36" y="334" width="5" height="74" rx="2.5" fill="#0284c7"/>
+  <text x="50.0" y="354.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">Part I — Foundations (6 Ch.)</text>
+  <text x="50.0" y="372.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Golden ratio Φ ≈ 1.618, primes &amp; rhyme</text>
+  <text x="50.0" y="388.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Unit intro + 6 labs + 6 question banks</text>
+  <rect x="36" y="418" width="320" height="74" rx="8" fill="#f8fafc" stroke="#0d9488" stroke-width="1.3"/>
+  <rect x="36" y="418" width="5" height="74" rx="2.5" fill="#0d9488"/>
+  <text x="50.0" y="438.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">Part II — Core Engine Shelf (8 Ch.)</text>
+  <text x="50.0" y="456.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Metrological overlap &amp; physical engines</text>
+  <text x="50.0" y="472.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Unit intro + 8 labs + 8 question banks</text>
+  <rect x="36" y="502" width="320" height="78" rx="8" fill="#f8fafc" stroke="#059669" stroke-width="1.3"/>
+  <rect x="36" y="502" width="5" height="78" rx="2.5" fill="#059669"/>
+  <text x="50.0" y="522.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">Part III — Companions &amp; Frontiers (11 Ch.)</text>
+  <text x="50.0" y="540.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Implementations, synthesis &amp; horizons</text>
+  <text x="50.0" y="556.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Unit intro + 11 labs + 11 question banks</text>
+  <rect x="396" y="88" width="348" height="508" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+  <rect x="396" y="88" width="348" height="32" rx="12" fill="#7c3aed" fill-opacity="0.10"/>
+  <line x1="396" y1="120" x2="744" y2="120" stroke="#7c3aed" stroke-opacity="0.35" stroke-width="1"/>
+  <rect x="678" y="94" width="56" height="20" rx="6" fill="#7c3aed" fill-opacity="0.16" stroke="#7c3aed" stroke-width="0.8"/>
+  <text x="706.0" y="108.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="700" fill="#7c3aed" text-anchor="middle">src/</text>
+  <text x="410.0" y="109.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f172a" text-anchor="start">2. Computational &amp; Visual Engine</text>
+  <rect x="412" y="132" width="316" height="134" rx="8" fill="#f8fafc" stroke="#7c3aed" stroke-width="1.3"/>
+  <rect x="412" y="132" width="5" height="134" rx="2.5" fill="#7c3aed"/>
+  <text x="426.0" y="152.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">23 Pure Formalisms (textbook/models.py)</text>
+  <text x="426.0" y="170.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Omni-Lattice: PHI, octave_term, catalog,</text>
+  <text x="426.0" y="186.5" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">prime_parity_partition, goldilocks_band,</text>
+  <text x="426.0" y="203.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">holographic_rhyme, net_zero_balance</text>
+  <text x="426.0" y="219.5" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Generic: logistic_growth, saturating_resp</text>
+  <rect x="412" y="280" width="316" height="94" rx="8" fill="#f8fafc" stroke="#4f46e5" stroke-width="1.3"/>
+  <rect x="412" y="280" width="5" height="94" rx="2.5" fill="#4f46e5"/>
+  <text x="426.0" y="300.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">Scaffold &amp; TOC Engine (src/textbook/)</text>
+  <text x="426.0" y="318.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">config · toc · content · analysis.py</text>
+  <text x="426.0" y="334.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Auto-numbers chapters, sections &amp; worked</text>
+  <text x="426.0" y="351.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">model summaries without manual drift</text>
+  <rect x="412" y="388" width="316" height="94" rx="8" fill="#f8fafc" stroke="#0284c7" stroke-width="1.3"/>
+  <rect x="412" y="388" width="5" height="94" rx="2.5" fill="#0284c7"/>
+  <text x="426.0" y="408.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">Deterministic Figures (src/visualization/)</text>
+  <text x="426.0" y="426.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">gallery_specs.yaml → plots + gallery.py</text>
+  <text x="426.0" y="442.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Byte-stable cover_art &amp; quantitative plots</text>
+  <text x="426.0" y="459.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">persisted into output/figures/</text>
+  <rect x="412" y="496" width="316" height="84" rx="8" fill="#f8fafc" stroke="#0d9488" stroke-width="1.3"/>
+  <rect x="412" y="496" width="5" height="84" rx="2.5" fill="#0d9488"/>
+  <text x="426.0" y="516.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">Validated Diagrams (src/mermaid/)</text>
+  <text x="426.0" y="534.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">diagram_specs.yaml → diagrams.py</text>
+  <text x="426.0" y="550.5" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">corpus_map · concept_map · process_flow</text>
+  <rect x="768" y="88" width="332" height="508" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+  <rect x="768" y="88" width="332" height="32" rx="12" fill="#059669" fill-opacity="0.10"/>
+  <line x1="768" y1="120" x2="1100" y2="120" stroke="#059669" stroke-opacity="0.35" stroke-width="1"/>
+  <rect x="958" y="94" width="132" height="20" rx="6" fill="#059669" fill-opacity="0.16" stroke="#059669" stroke-width="0.8"/>
+  <text x="1024.0" y="108.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="700" fill="#059669" text-anchor="middle">audit · contracts</text>
+  <text x="782.0" y="109.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f172a" text-anchor="start">3. Contracts &amp; Render</text>
+  <rect x="784" y="132" width="300" height="118" rx="8" fill="#f8fafc" stroke="#059669" stroke-width="1.3"/>
+  <rect x="784" y="132" width="5" height="118" rx="2.5" fill="#059669"/>
+  <text x="798.0" y="152.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">Source-Bound Contracts (contracts.py)</text>
+  <text x="798.0" y="170.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">compare_config_shapes: lockstep parity</text>
+  <text x="798.0" y="186.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">between config.yaml &amp; config.yaml.example</text>
+  <text x="798.0" y="203.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">validate_numeric_facts: binds needles</text>
+  <text x="798.0" y="219.5" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">numeric_facts.yaml &amp; claim_ledger.yaml</text>
+  <rect x="784" y="264" width="300" height="118" rx="8" fill="#f8fafc" stroke="#d97706" stroke-width="1.3"/>
+  <rect x="784" y="264" width="5" height="118" rx="2.5" fill="#d97706"/>
+  <text x="798.0" y="284.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">Zero-Stub Manuscript Audit (audit.py)</text>
+  <text x="798.0" y="302.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">audit_textbook_quality --require-complete</text>
+  <text x="798.0" y="318.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Verifies 0 stub markers, 0 orphan part_*.md,</text>
+  <text x="798.0" y="335.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">31/31 references.bib &amp; #gl:* anchors,</text>
+  <text x="798.0" y="351.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">and 1:1 lab/question parity per chapter</text>
+  <rect x="784" y="396" width="300" height="184" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.3"/>
+  <text x="798.0" y="416.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#34d399" text-anchor="start">Multi-Target Publication Outputs</text>
+  <text x="798.0" y="434.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#e2e8f0" text-anchor="start">z_generate_manuscript_variables.py</text>
+  <text x="798.0" y="450.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#e2e8f0" text-anchor="start">hydrates tokens from live model receipts:</text>
+  <text x="798.0" y="467.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#e2e8f0" text-anchor="start">  • PDF  (print-ready typeset edition)</text>
+  <text x="798.0" y="483.5" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#e2e8f0" text-anchor="start">  • HTML (cross-linked web textbook)</text>
+  <text x="798.0" y="500.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#e2e8f0" text-anchor="start">  • DOCX (editable manuscript bundle)</text>
+  <text x="798.0" y="516.5" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#e2e8f0" text-anchor="start">  • EPUB (reflowable e-reader edition)</text>
+  <path d="M 372.0 340.0 L 396.0 340.0" fill="none" stroke="#7c3aed" stroke-width="1.8" marker-end="url(#arrow-purple)"/>
+  <path d="M 744.0 340.0 L 768.0 340.0" fill="none" stroke="#059669" stroke-width="1.8" marker-end="url(#arrow-emerald)"/>
+  <rect x="16" y="612" width="1088" height="28" rx="8" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="28.0" y="630.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e293b" text-anchor="start">CI Gate: uv run --extra dev pytest -q (mock-free YAML/XML/contract/formalism verification)</text>
+  <text x="1092.0" y="630.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="end">Code: MIT · Text: CC BY 4.0</text>
+</svg>
