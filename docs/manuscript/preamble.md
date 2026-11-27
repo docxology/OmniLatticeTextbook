@@ -64,7 +64,6 @@ are not already setting them in config.yaml. -->
 \renewcommand{\headrulewidth}{0.4pt}
 
 % --- Line spacing (modest; keep in sync with config.yaml layout.line_height) ---
-\usepackage{setspace}
 \setstretch{1.15}
 
 % --- Avoid overfull lines from long URLs / inline code ---
