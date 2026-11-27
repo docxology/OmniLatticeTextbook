@@ -11,8 +11,11 @@ Libertine, Linux Biolinum and DejaVu Sans Mono and the TeX packages in the
 [preamble](manuscript/preamble.md), including `soul` for the shared renderer and the TeX distribution's `tufte.bst`
 bibliography style.
 Inline diagrams require Mermaid CLI 12.2.0 (`mmdc`) and a compatible Chrome
-or Chromium installation. Set `PUPPETEER_EXECUTABLE_PATH` to your browser
-executable if Mermaid cannot discover it. The pinned Mermaid profile expects
+or Chromium installation that can open Mermaid CLI's packaged local page.
+Set `PUPPETEER_EXECUTABLE_PATH` to your browser executable if Mermaid
+cannot discover it. On workers that require an approved sandboxed launch
+profile, place that profile in `.puppeteer.json` at the disposable project
+root or one of its ancestor directories. The pinned Mermaid profile expects
 `NODE_PATH` and `NODE_OPTIONS` to be unset.
 
 ## Render from a committed checkout

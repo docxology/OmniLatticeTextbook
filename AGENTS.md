@@ -79,15 +79,12 @@ editing anything. For the human-facing overview and quick-start commands, see
    `output/reports/evidence_registry.json` during validation; a stale or
    unresolvable evidence path fails the registry.
 
-7. **Render-time hydration.** Before the monorepo render stage consumes the
-   manuscript, `scripts/z_generate_manuscript_variables.py` copies
-   `docs/manuscript/` → `output/manuscript/` byte-for-byte (deterministic;
-   no template variables in this book). The pipeline prefers the injected
-   `output/manuscript/` tree, which keeps inline-Mermaid artifacts at
-   `output/figures/mermaid_inline/` exactly like first-class pipeline
-   projects. Editing `docs/manuscript/` and re-running hydration is the
-   render path — never edit `output/manuscript/` directly (it is
-   regenerated).
+7. **Render from committed manuscript source.** The pinned build reads
+   `docs/manuscript/` directly with `--skip-manuscript-hydration`. Its
+   disposable `docs/output` link routes inline Mermaid images to
+   `output/figures/mermaid_inline/`. Integrations that use a byte-for-byte
+   `output/manuscript/` copy can run `scripts/z_generate_manuscript_variables.py`.
+   Edit `docs/manuscript/` and regenerate the copy for those integrations.
 
 8. **The complete inline Mermaid build needs a browser.** Follow the
    [pinned render prerequisites](docs/rendering.md) for Mermaid CLI and
@@ -183,10 +180,11 @@ uv run python scripts/audit_textbook_quality.py --require-complete
 uv run python scripts/generate_figures.py
 uv run python scripts/generate_diagrams.py
 
-# Render + validate (from the docxology/template monorepo root, with this
-# repository at projects/working/OmniLatticeTextbook)
-uv run python scripts/pipeline/stage_03_render.py --project working/OmniLatticeTextbook
-uv run python scripts/pipeline/stage_04_validate.py --project working/OmniLatticeTextbook
+# Render and validate from the pinned Template checkout in docs/rendering.md.
+uv run --no-sync python scripts/pipeline/stage_03_render.py \
+  --skip-manuscript-hydration --project working/OmniLatticeTextbook
+uv run --no-sync python scripts/pipeline/stage_04_validate.py \
+  --project working/OmniLatticeTextbook
 ```
 
 For monorepo-wide pipeline semantics and the two-layer architecture, see the
