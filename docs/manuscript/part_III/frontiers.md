@@ -54,7 +54,7 @@ $$ R \;=\; \sum_{i=1}^{m} I_i \;-\; \sum_{j=1}^{n} O_j $$ {#eq:part_III_frontier
 
 It is implemented and tested as `textbook.models.net_zero_balance(inflows, outflows)`; never retype the arithmetic in prose or scripts — call the tested function. The parameters appear in [@tbl:part_III_frontiers_netzero].
 
-:: Parameters of the net-zero residual. {#tbl:part_III_frontiers_netzero}
+Table: Parameters of the net-zero residual. {#tbl:part_III_frontiers_netzero}
 
 | Symbol | Meaning | Units |
 | ------ | ------- | ----- |

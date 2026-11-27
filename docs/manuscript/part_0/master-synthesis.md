@@ -71,7 +71,7 @@ The constant is the [**golden ratio**](#gl:golden-ratio), whose standard mathema
 
 $$ \Phi \;=\; \lim_{n \to \infty} \varphi_{\mathrm{fib}}(n) \;=\; \frac{1 + \sqrt{5}}{2} \;\approx\; 1.6180339887, \qquad \varphi_{\mathrm{fib}}(n) = \frac{F_{n+1}}{F_n} $$ {#eq:part_0_master-synthesis_egs}
 
-:: Parameters of the EGS fractal constant. {#tbl:part_0_master-synthesis_egs}
+Table: Parameters of the EGS fractal constant. {#tbl:part_0_master-synthesis_egs}
 
 | Symbol | Meaning | Value |
 | ------ | ------- | ----- |

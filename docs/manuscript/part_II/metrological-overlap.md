@@ -263,7 +263,7 @@ R'_c| = 2$ and $\min(4,3) = 3$, so $o = 2/3 \approx 0.666667$. The pair is
 two-thirds of the way to full containment — the medium-shade cells of
 [@fig:part_II_metrological-overlap]. Collecting the matrix:
 
-:: Worked pairwise overlaps over the clock's registers. {#tbl:part_II_metrological-overlap_worked}
+Table: Worked pairwise overlaps over the clock's registers. {#tbl:part_II_metrological-overlap_worked}
 
 | Pair | Shared entries | $o(A,B)$ |
 | ---- | -------------- | -------- |

@@ -103,7 +103,7 @@ appears as a boxed admonition; otherwise it renders as a normal block.
 A simple table with column alignment and a cross-referencable caption
 ([@tbl:gallery_alignment]):
 
-:: Column alignment — left, centre, right. {#tbl:gallery_alignment}
+Table: Column alignment — left, centre, right. {#tbl:gallery_alignment}
 
 | Left      |  Centre  |    Right |
 | :-------- | :------: | -------: |
