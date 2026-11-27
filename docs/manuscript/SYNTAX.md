@@ -20,11 +20,11 @@ Refer to it in prose with `[@fig:part_0_orientation]`.
 
 ## Tables
 
-A captioned, labelled table uses a leading `: caption {#tbl:...}` line and
+A captioned, labelled table uses a leading `Table: caption {#tbl:...}` line and
 `booktabs`-friendly pipe syntax:
 
 ```markdown
-: Parameters of the worked model. {#tbl:part_0_orientation_parameters}
+Table: Parameters of the worked model. {#tbl:part_0_orientation_parameters}
 
 | Symbol | Meaning        | Units    |
 | ------ | -------------- | -------- |
@@ -58,8 +58,10 @@ graph TD
 ```
 ````
 
-The renderer turns these into PNGs (with a `.mmd` fallback). Diagram sources can
-also be declared in `src/mermaid/diagram_specs.yaml`.
+The [pinned reader build](../rendering.md) renders inline diagrams with Mermaid
+CLI and Chrome or Chromium. The separate generator for
+`src/mermaid/diagram_specs.yaml` can write a `.mmd` source when it cannot produce
+a PNG.
 
 ## Cross-References
 

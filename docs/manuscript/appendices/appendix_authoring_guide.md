@@ -111,24 +111,25 @@ Two vocabularies are contracts, not conventions:
    44 anchors defined in [`glossary.md`](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/manuscript/glossary.md)
    and tracked in `GLOSSARY_ANCHORS`.
 
-Integrity tests fail the build on an undefined citation, a missing anchor, a
-dropped required section, or any leftover scaffolding placeholder of the kind
-the scaffolder emits — so the contract is enforced, not aspirational.
+The integrity tests check citation keys, glossary anchors and required chapter
+sections. They require the designated worked exemplars to be filled. The audit
+reports per-file word and stub counts, and its `--require-complete` option
+fails on leftover stubs across the audited manuscript sections.
 
-
-From the repository root:
+From the textbook repository root:
 
 ```bash
-uv run python scripts/generate_figures.py      # deterministic figures
-uv run python scripts/generate_diagrams.py     # mermaid diagrams
-uv run python scripts/pipeline/stage_03_render.py   # PDF / HTML / EPUB / DOCX
+uv run python scripts/generate_figures.py
+uv run python scripts/generate_diagrams.py
 uv run --extra dev python -m pytest tests/test_manuscript_integrity.py
-uv run python scripts/audit_textbook_quality.py     # stub + word counts
+uv run python scripts/audit_textbook_quality.py --require-complete
 ```
 
-The audit reports per-file word and stub counts, and the render stage reads
-only `config.yaml` — there is no per-chapter build logic to re-plumb when the
-book grows.
+For PDF, HTML, EPUB and DOCX, follow the
+[pinned build guide](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/rendering.md).
+Run Stage 03 and Stage 04 from the Template checkout with
+`--project working/OmniLatticeTextbook`. The manuscript configuration determines
+the order of the rendered chapters and appendices.
 
 ## Extending the Book
 

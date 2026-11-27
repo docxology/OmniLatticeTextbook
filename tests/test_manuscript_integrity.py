@@ -245,3 +245,37 @@ def test_documentation_placeholders_do_not_trigger_image_missing_diagnostics() -
     )
     missing = [problem for problem in problems if problem.code == codes.MarkdownCode.IMG_MISSING]
     assert not missing, f"unexpected Markdown image diagnostics: {missing}"
+
+
+def test_labelled_pipe_tables_have_supported_captions():
+    """Reject the double-colon spelling that Pandoc renders as literal prose."""
+    # Blank out fenced examples without changing source line numbers.
+    fence_marker = re.compile(r"^ {0,3}(`{3,}|~{3,})(.*)$")
+    malformed = re.compile(
+        r"^ {0,3}::[ \t]+[^\n]+(?:\n[^\n]+)*?\{#tbl:[\w:-]+\}[ \t]*\n"
+        r"[ \t]*\n[ \t]*\|[^\n]+\n[ \t]*\|[ \t]*:?-{2,}",
+        re.MULTILINE,
+    )
+    issues = []
+    for path in sorted(MANUSCRIPT.rglob("*.md")):
+        if path.name in {"AGENTS.md", "README.md", "SYNTAX.md"} or "assets" in path.relative_to(MANUSCRIPT).parts:
+            continue
+        fence = ""
+        lines = []
+        for line in path.read_text(encoding="utf-8").splitlines():
+            marker = fence_marker.match(line)
+            if fence:
+                lines.append("")
+                if marker and marker[1].startswith(fence) and not marker[2].strip():
+                    fence = ""
+            elif marker:
+                lines.append("")
+                fence = marker[1]
+            else:
+                lines.append(line)
+        text = "\n".join(lines)
+        for match in malformed.finditer(text):
+            row = text.count("\n", 0, match.start()) + 1
+            issues.append(f"{path.relative_to(MANUSCRIPT)}:{row}")
+
+    assert not issues, "Use Table: for these labelled pipe-table captions:\n" + "\n".join(issues)
