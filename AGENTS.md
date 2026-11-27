@@ -4,7 +4,7 @@ Agent-facing reference for working inside **The Infinite Octaves Omni-Lattice
 Textbook**: a filled, contract-checked textbook fork. Read this before
 editing anything. For the human-facing overview and quick-start commands, see
 [`README.md`](README.md); for deposit/publication prep, see
-[`STANDALONE.md`](STANDALONE.md).
+[`STANDALONE.md`](docs/publication.md).
 
 ## Invariants (do not violate)
 

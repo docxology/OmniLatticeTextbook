@@ -5,15 +5,15 @@
 
 A brief refresher on the mathematics the Infinite Octaves Omni-Lattice
 formalisms rely on, with every worked number pinned to the tested functions in
-[`src/textbook/models.py`](../../../src/textbook/models.py). Nothing here is a
+[`src/textbook/models.py`](https://github.com/docxology/OmniLatticeTextbook/blob/main/src/textbook/models.py). Nothing here is a
 physics claim: these are the standard mathematics of the golden ratio, primes,
 exponential damping, and logarithms, which the corpus files as catalog
-grammar ([honesty-first](../glossary.md#gl:honesty-first))
+grammar ([honesty-first](#gl:honesty-first))
 [@mendez2026masterSynthesis].
 
 ## The Golden Ratio and Its Algebra
 
-The [golden ratio](../glossary.md#gl:golden-ratio) is the positive root of
+The [golden ratio](#gl:golden-ratio) is the positive root of
 $x^2 = x + 1$:
 
 $$ \Phi = \frac{1 + \sqrt{5}}{2} \approx 1.6180339887 $$ {#eq:appendix_math_review_phi}
@@ -36,7 +36,7 @@ Each ratio of consecutive Fibonacci numbers $\varphi_{\mathrm{fib}}(n) =
 F_{n+1}/F_n$ approaches $\Phi$ alternately from above and below
 (`phi_fibonacci`): $\varphi_{\mathrm{fib}}(5) = 8/5 = 1.6$ (below) and
 $\varphi_{\mathrm{fib}}(10) = 89/55 \approx 1.618182$ (above). This is why the
-[octave term](../glossary.md#gl:octave) $\Omega_n$ has *two* defensible
+[octave term](#gl:octave) $\Omega_n$ has *two* defensible
 readings — the exponent convention $\Omega_n = \Phi^n \Omega_0$ and the
 subscript convention $\Omega_n = \varphi_{\mathrm{fib}}(n)\,\Omega_0$ — since
 the corpus prints "Ωn = Φn · Ω0" ambiguously and both are implemented in
@@ -54,7 +54,7 @@ values, to six decimals.
 
 ## The Catalog Size: A Product of Register Widths
 
-The [master register](../glossary.md#gl:master-register) is nine digit drawers
+The [master register](#gl:master-register) is nine digit drawers
 crossed with ninety-nine octave bands at an 81-digit precision register
 [@mendez2026digitsMaster]. The size is a single multiplication
 (`catalog_size`):
@@ -70,10 +70,10 @@ for measuring magma" — a filing-capacity number, not a physical measurement
 A **prime** is an integer $> 1$ divisible only by $1$ and itself; the
 [sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
 generates them by crossing out multiples of each prime in turn. The corpus
-files primes by *parity* ([prime parity](../glossary.md#gl:prime-parity)):
+files primes by *parity* ([prime parity](#gl:prime-parity)):
 $2$ is the sole even prime — the [binary dyad
-anchor](../glossary.md#gl:binary-dyad-anchor) — and the odd primes act as
-[irreducible minimum sets](../glossary.md#gl:irreducible-minimum-set)
+anchor](#gl:binary-dyad-anchor) — and the odd primes act as
+[irreducible minimum sets](#gl:irreducible-minimum-set)
 [@mendez2026primeParity].
 
 The first ten odd primes (`prime_parity_partition` reports the partition):
@@ -160,8 +160,8 @@ The template backbone retains the general-purpose models: `linear_fit`
 $\mu$ and standard deviation $\sigma$), `saturating_response` (climb toward
 $V_{\max}$ with half-maximum at $K_m$), and `normalize_unit_interval`
 (rescaling to $[0,1]$). They appear in the [format
-gallery](appendix_format_gallery.md) examples and give the first descriptors
+gallery](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/manuscript/appendices/appendix_format_gallery.md) examples and give the first descriptors
 of any filing before richer structure is claimed.
 
-See also: [Appendix B — Notation](appendix_notation.md) and
-[Appendix A — How This Book Was Built](appendix_authoring_guide.md).
+See also: [Appendix B — Notation](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/manuscript/appendices/appendix_notation.md) and
+[Appendix A — How This Book Was Built](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/manuscript/appendices/appendix_authoring_guide.md).

@@ -71,8 +71,8 @@ agent coordination systems, the sociology of technical corpora, or the
 Omni-Lattice framework itself. No physics background is assumed — deliberately
 so, because the corpus makes no physics claims to check. Everything
 quantitative the book uses is reviewed, with worked numbers, in
-[Appendix C](appendices/appendix_math_review.md), and the notation is fixed in
-[Appendix B](appendices/appendix_notation.md).
+[Appendix C](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/manuscript/appendices/appendix_math_review.md), and the notation is fixed in
+[Appendix B](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/manuscript/appendices/appendix_notation.md).
 
 The book suits self-study, a one-semester special-topics course, or a
 reference shelf. Instructors can assign parts independently: Part 0 fixes
@@ -103,8 +103,8 @@ stay in lockstep with the manuscript as it grows.
 Every equation in this book is implemented as a tested function and every
 figure is generated deterministically from code. Nothing in the prose is
 computed by hand. If you build the book yourself you will get byte-identical
-figures and numbers — see [`README.md`](README.md) for the build commands and
-[Appendix A](appendices/appendix_authoring_guide.md) for how the pipeline,
+figures and numbers — see [`README.md`](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/manuscript/README.md) for the build commands and
+[Appendix A](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/manuscript/appendices/appendix_authoring_guide.md) for how the pipeline,
 the audit gates, and the contract tests fit together.
 
 ---

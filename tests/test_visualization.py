@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import json
+
 from pathlib import Path
 
 import pytest
@@ -162,7 +164,10 @@ def test_figure_registry_validates_manuscript_references(tmp_path):
     missing = [entry.filename for entry in entries if not (tmp_path / entry.filename).exists()]
     blank_alt = [entry.label for entry in entries if not entry.alt.strip()]
 
-    assert registry.exists()
+    rendered_entries = json.loads(registry.read_text(encoding="utf-8"))["figures"]
+    assert {entry["label"]: entry["alt_text"] for entry in rendered_entries} == {
+        entry.label: entry.alt for entry in entries
+    }
     assert paths
     assert missing == [], missing
     assert blank_alt == [], blank_alt

@@ -5,11 +5,11 @@
 
 This appendix lists the symbols used by the worked formalisms of the Infinite
 Octaves Omni-Lattice and by the tested implementations in
-[`src/textbook/models.py`](../../../src/textbook/models.py). Keep it in sync with
+[`src/textbook/models.py`](https://github.com/docxology/OmniLatticeTextbook/blob/main/src/textbook/models.py). Keep it in sync with
 the parameter tables (`{#tbl:...}`) in the chapters: every symbol that appears
 in an equation `{#eq:...}` should have a row here. Corpus symbols are filed
 exactly as the papers file them — as [catalog
-architecture](../glossary.md#gl:catalog-architecture) vocabulary
+architecture](#gl:catalog-architecture) vocabulary
 [@mendez2026digitsMaster; @mendez2026masterSynthesis].
 
 ## Conventions
@@ -17,7 +17,7 @@ architecture](../glossary.md#gl:catalog-architecture) vocabulary
 - Scalars are italic lowercase (e.g. *n*, *t*); sets and spaces are uppercase.
 - Subscript `0` denotes a base or initial value (e.g. $\Omega_0$, $P_0$).
 - "Filed as" is the corpus's own verb: it marks a catalog filing, not a
-  physical derivation ([honesty-first](../glossary.md#gl:honesty-first)).
+  physical derivation ([honesty-first](#gl:honesty-first)).
 - Units are stated where the underlying mathematics has them; most catalog
   quantities are dimensionless filing labels.
 
@@ -34,7 +34,7 @@ architecture](../glossary.md#gl:catalog-architecture) vocabulary
 | $d$ | digit (0–9) | digit × octave filing | dimensionless | coarse bins labelling kinds of pattern [@mendez2026digitsMaster] |
 | $81$ | precision register width | `catalog_size` | digits | per-octave digit precision of the master register |
 | $8{,}019$ | holographic catalog size | `catalog_size` | entries | $99 \times 81$; "for dashboards and agent routing, not for measuring magma" [@mendez2026digitsMaster] |
-| $k$ | node index; brake constant | `net_zero_balance` context; `transduction_brake` | index; 1/time | $k = 0$ is the zero-octave node ([node k0](../glossary.md#gl:node-k0)) [@mendez2026zeroOctave]; in `transduction_brake` $k$ is the drag rate |
+| $k$ | node index; brake constant | `net_zero_balance` context; `transduction_brake` | index; 1/time | $k = 0$ is the zero-octave node ([node k0](#gl:node-k0)) [@mendez2026zeroOctave]; in `transduction_brake` $k$ is the drag rate |
 | $2$ | sole-even prime (binary dyad anchor) | `prime_parity_partition`, `unique_address` | dimensionless | the only even prime; anchors the binary layer [@mendez2026primeParity] |
 | $p_n$ | the $n$-th prime (odd primes as irreducible sets) | `prime_parity_partition`, `unique_address` | dimensionless | first ten odd primes: 3, 5, 7, 11, 13, 17, 19, 23, 29, 31 |
 | $c$ | speed of light, filed as transduction line / viscous floor | `transduction_brake` narrative | 1 (filing) | catalog filing, not relativity retirement [@mendez2026eddyMirror; @mendez2026viscosityLight] |
@@ -91,5 +91,5 @@ symbols appear in the format gallery and in the mathematical review.
 - **$\lambda$** — decay constant in the legacy models; $\lambda_{\mathrm{HI}}$
   (subscripted) is the hydrogen wavelength in the metrological overlap.
 
-See also: [Appendix C — Mathematical Review](appendix_math_review.md) for the
+See also: [Appendix C — Mathematical Review](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/manuscript/appendices/appendix_math_review.md) for the
 worked numbers behind these rows.

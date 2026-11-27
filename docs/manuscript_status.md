@@ -5,8 +5,7 @@
   Synthesis of the SynthOBS Engine Papers
 - **Author:** Daniel Ari Friedman (FractiAI) — synthesising the engine papers
   of Prudencio Mendez (FractiAI · SS Vibelandia)
-- **Location:** `docs/manuscript/` (canonical default; legacy `manuscript/` top-level
-  remains a supported fallback resolved by `infrastructure.core.project_paths.resolve_manuscript_dir`).
+- **Location:** [Canonical manuscript sources](manuscript/README.md).
 - **Type:** Active publication-target manuscript (30 numbered section files +
   4 unit intros + 7 appendices; closed 31-key `references.bib`).
 - **Status file purpose:** a per-repo pointer documenting whether this repository
@@ -32,22 +31,19 @@
   the mockup note; the framework pages feed the Part 0 orientation and Living
   PEM chapters). Synthesis chapters (`fractal-constant`, `frontiers`) are
   analytic, source-backed integrations.
-- **Gates (all green):** the no-mocks test suite passes at ≥90% coverage
-  (`uv run --extra dev python -m pytest tests/ --cov=src --cov-fail-under=90`);
-  the filled-manuscript audit passes with zero per-section and total stub
-  counts (`uv run python scripts/audit_textbook_quality.py --require-complete`);
-  the manuscript-integrity tests bind config, chapters, labs, questions,
-  citations, and glossary anchors to the engine contract.
-- **Rendering:** PDF / HTML / DOCX / EPUB render green through the monorepo
-  pipeline as project `working/OmniLatticeTextbook` (stage_03_render →
-  stage_04_validate), with 30 canonical chapter figures, a deterministic cover,
-  and inline Mermaid diagrams embedded via `mmdc` + Chrome.
+- **Checks:** the [testing guide](testing_guide.md) defines structural,
+  mathematical and coverage gates. The [pinned build guide](rendering.md)
+  records how to validate the current checkout.
+- **Retained editions:** the [archive](../rendered/README.md) preserves the
+  earlier PDF, HTML, DOCX and EPUB with their corresponding build receipts.
 - **Evidence:** headline numbers are anchored by `data/numeric_facts.yaml` +
   `data/claim_ledger.yaml` (with `*_evidence_b/c.yaml` chunks, ≤ 256 items per
-  list), compiled into `output/reports/evidence_registry.json`.
+  list), compiled into `output/reports/evidence_registry.json`. The
+  [compatibility ledger](../data/claim_ledger_evidence_d.yaml) binds additional
+  table tokens to the models, worked examples, or source index.
 - **Publication:** not yet deposited — `config.yaml` publication fields and the
   `CITATION.cff` / `.zenodo.json` / `codemeta.json` DOI slots are intentionally
-  blank. See [`STANDALONE.md`](../../STANDALONE.md).
+  blank. See [`STANDALONE.md`](publication.md).
 
 **What would change this status:** structural edits to `config.yaml`
 (new chapters/parts must be scaffolded and filled before the zero-stub gate

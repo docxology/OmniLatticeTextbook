@@ -28,3 +28,7 @@ coverage_project.json
 
 # Local research scratch (never committed)
 research/
+
+# Disposable render tree and its project-local figure alias
+/output/
+/docs/output

@@ -118,23 +118,7 @@ that is not defined — see the [testing guide](testing_guide.md).
 
 ## Rendering
 
-Rendering is handled by the monorepo's generic `infrastructure/` rendering stage
-(pandoc + pandoc-crossref → PDF/HTML/EPUB/DOCX), driven by the same `config.yaml`
-for layout, typography, and front-matter ordering. From the
-[docxology/template](https://github.com/docxology/template) monorepo root, with
-this repository at `projects/working/OmniLatticeTextbook`:
-
-```bash
-uv run python scripts/pipeline/stage_03_render.py --project working/OmniLatticeTextbook
-uv run python scripts/pipeline/stage_04_validate.py --project working/OmniLatticeTextbook
-```
-
-Before rendering, `scripts/z_generate_manuscript_variables.py` hydrates the
-render-time tree (`docs/manuscript/` → `output/manuscript/`) so the stage
-consumes the injected manuscript like a first-class pipeline project.
-Figures must already exist under `output/figures/` (run `generate_figures.py`
-first) so the chapters'
-`![...](../../output/figures/<part_id>_<stem>.png)` paths resolve. The numbering
-settings live under `rendering:` in `config.yaml` (`number_chapters`,
-`number_figures`, `number_equations`, `number_tables`, `toc_depth`); the output
-formats under `render.formats` (PDF, HTML, EPUB, DOCX; slides off by default).
+Follow the [pinned render guide](rendering.md) for Template Stage 03 and 04.
+It stages the assets, routes inline diagrams and uses the canonical source
+directly. Numbering and output formats remain configured in
+[config.yaml](manuscript/config.yaml).

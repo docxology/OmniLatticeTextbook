@@ -45,7 +45,7 @@ Introduced in [@sec:part_0_orientation], [@sec:part_0_living-pem],
 | # | Formalism | Label | Chapter | Backing model function | Meaning |
 |---|-----------|-------|---------|------------------------|---------|
 | F-01 | EGS fractal constant | `[@eq:part_0_living-pem_phi_egs]` | `[@sec:part_0_living-pem]` | `phi_powers(1)` | The golden ratio $\Phi_{\mathrm{EGS}} \approx 1.618$ filed as the corpus's engineering-scale constant, "not a CODATA replacement". |
-| F-02 | Catalog register size | `[@eq:part_0_living-pem_catalog]` | `[@sec:part_0_living-pem]` | `catalog_size()` | Register capacity $|\mathcal{C}| = O \times D = 99 \times 81 = 8{,}019$ bins. |
+| F-02 | Catalog register size | `[@eq:part_0_living-pem_catalog]` | `[@sec:part_0_living-pem]` | `catalog_size()` | Register capacity $|\mathcal{C}| = O \times D = 99 \times 81 = 8019$ bins. |
 | F-03 | Reciprocal balance | `[@eq:part_0_living-pem_balance]` | `[@sec:part_0_living-pem]` | `net_zero_balance(inflows, outflows)` | Net balance $B = \sum I_i - \sum O_j$ with the Fair-Exchange settlement target $B = 0$. |
 | F-04 | Master register capacity | `[@eq:part_0_master-synthesis_catalog_size]` | `[@sec:part_0_master-synthesis]` | `catalog_size()` | The same $99 \times 81 = 8{,}019$ capacity restated as the synthesis paper's cell count $N_{\mathrm{cells}}$. |
 | F-05 | Φ as a Fibonacci limit | `[@eq:part_0_master-synthesis_egs]` | `[@sec:part_0_master-synthesis]` | `phi_fibonacci(n)` | $\Phi = \lim_{n\to\infty} F_{n+1}/F_n$ — the subscript convention's convergent, defined as a limit rather than asserted. |

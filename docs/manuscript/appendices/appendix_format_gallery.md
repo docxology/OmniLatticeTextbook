@@ -314,7 +314,7 @@ Audio and video embed in HTML targets (PDF shows the caption + link). Syntax:
 ```
 
 A downloadable data file lives at
-[`assets/data/sample_dataset.csv`](../../../docs/manuscript/assets/data/sample_dataset.csv); its
+[`assets/data/sample_dataset.csv`](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/manuscript/assets/data/sample_dataset.csv); its
 contents as a table:
 
 :: Sample dataset (mirrors `assets/data/sample_dataset.csv`). {#tbl:gallery_data}

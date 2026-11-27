@@ -1,3 +1,8 @@
+---
+biblio-style: tufte
+natbiboptions: [numbers]
+---
+
 # Front Matter
 
 **The Infinite Octaves Omni-Lattice Textbook** — *A Modular Synthesis of the
@@ -89,10 +94,10 @@ Each chapter ends with a **Practice** section pointing to its **lab** (a
 guided, hands-on exercise that runs the tested model functions) and its
 **question bank** (recall → application → synthesis). Work the lab after
 reading; use the question bank to confirm you can place claims in the correct
-tier. New terms are linked to the [Master Glossary](glossary.md) the first
+tier. New terms are linked to the [Master Glossary](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/manuscript/glossary.md) the first
 time they appear. The appendices supply the symbol table, the mathematical
 review, and a worked record of how the book itself was built
-([Appendix A](appendices/appendix_authoring_guide.md)).
+([Appendix A](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/manuscript/appendices/appendix_authoring_guide.md)).
 
 ---
 
@@ -108,8 +113,8 @@ cross-reference and citation.
 Every equation in the book is a tested Python function; every figure is
 generated deterministically from code. Nothing in the prose is computed by
 hand. Build the book yourself and you will get byte-identical figures and
-numbers — see [Appendix A](appendices/appendix_authoring_guide.md) for the
-full build and audit workflow, and [`SYNTAX.md`](SYNTAX.md) for the authoring
+numbers — see [Appendix A](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/manuscript/appendices/appendix_authoring_guide.md) for the
+full build and audit workflow, and [`SYNTAX.md`](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/manuscript/SYNTAX.md) for the authoring
 syntax.
 
 > **A note on scope.** The catalog size 8,019 (99 octaves × 81-digit

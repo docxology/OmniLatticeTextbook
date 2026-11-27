@@ -47,7 +47,7 @@ uv run python scripts/scaffold_chapter.py
 Rendering (PDF/HTML/EPUB/DOCX) is **not** part of this repository: it runs
 through the host `docxology/template` monorepo pipeline with this repository
 placed at `projects/working/OmniLatticeTextbook` — see
-[`STANDALONE.md`](../../../STANDALONE.md).
+[`STANDALONE.md`](../../../docs/publication.md).
 
 ## Pitfalls
 
@@ -74,5 +74,5 @@ placed at `projects/working/OmniLatticeTextbook` — see
 
 - Project contract: [`AGENTS.md`](../../../AGENTS.md)
 - README: [`README.md`](../../../README.md)
-- Provenance and deposit prep: [`STANDALONE.md`](../../../STANDALONE.md)
-- Forward backlog: [`TODO.md`](../../../TODO.md)
+- Provenance and deposit prep: [`STANDALONE.md`](../../../docs/publication.md)
+- Forward backlog: [`TODO.md`](../../../docs/maintenance.md)
