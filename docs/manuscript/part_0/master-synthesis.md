@@ -53,7 +53,7 @@ The cabinet has a definite size. The master synthesis inherits the register grid
 
 $$ N_{\mathrm{cells}} \;=\; O \times D \;=\; 99 \times 81 \;=\; 8{,}019 $$ {#eq:part_0_master-synthesis_catalog_size}
 
-:: Parameters of the master register capacity. {#tbl:part_0_master-synthesis_catalog_size}
+Table: Parameters of the master register capacity. {#tbl:part_0_master-synthesis_catalog_size}
 
 | Symbol | Meaning | Units | Value |
 | ------ | ------- | ----- | ----- |
@@ -88,7 +88,7 @@ If $\Phi$ is the blueprint, each of the 99 drawers needs an address on the scale
 
 $$ \Omega_n \;=\; \underbrace{\Phi^{\,n}\,\Omega_0}_{\text{exponent reading}} \qquad \text{or} \qquad \Omega_n \;=\; \underbrace{\varphi_{\mathrm{fib}}(n)\,\Omega_0}_{\text{subscript reading}} $$ {#eq:part_0_master-synthesis_octave_index}
 
-:: Parameters of the octave indexing law. {#tbl:part_0_master-synthesis_octave_index}
+Table: Parameters of the octave indexing law. {#tbl:part_0_master-synthesis_octave_index}
 
 | Symbol | Meaning | Units | Exponent reading | Subscript reading |
 | ------ | ------- | ----- | ---------------- | ----------------- |
@@ -103,7 +103,7 @@ Both readings are implemented as `octave_term(omega0, n, convention)` in `textbo
 
 The master synthesis's operational core is the **Cascade** — a five-step, top-to-bottom flow that shows *how the corpus intends* its cabinet to be used on a day when everything happens at once. Each tier files a different kind of content, and each carries its own honesty tag [@mendez2026masterSynthesis]:
 
-:: The five tiers of the Cascade, with their filing content and honesty status. {#tbl:part_0_master-synthesis_cascade}
+Table: The five tiers of the Cascade, with their filing content and honesty status. {#tbl:part_0_master-synthesis_cascade}
 
 | Tier | Octave band (as filed) | Content filed | Honesty status (per the paper) |
 | ---- | ---------------------- | ------------- | ------------------------------ |

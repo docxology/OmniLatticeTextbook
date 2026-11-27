@@ -165,7 +165,7 @@ octaves," the filing matures into the **schist label** — the mica-all-one-way
 result. The parameters of the map are collected in
 [@tbl:part_II_metamorphic-octaves_filing].
 
-:: Parameters of the filing map $L(h,p)$. {#tbl:part_II_metamorphic-octaves_filing}
+Table: Parameters of the filing map $L(h,p)$. {#tbl:part_II_metamorphic-octaves_filing}
 
 | Symbol | Meaning | Domain |
 | ------ | ------- | ------ |
@@ -203,7 +203,7 @@ hardening, and a logarithm never reaches an "unbreakable" asymptote of
 invulnerability. The parameters are given in
 [@tbl:part_II_metamorphic-octaves_densification].
 
-:: Parameters of the densification model. {#tbl:part_II_metamorphic-octaves_densification}
+Table: Parameters of the densification model. {#tbl:part_II_metamorphic-octaves_densification}
 
 | Symbol | Meaning | Units | Reference value |
 | ------ | ------- | ----- | --------------- |

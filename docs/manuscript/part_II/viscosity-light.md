@@ -136,7 +136,7 @@ the floor. It is implemented and tested as
 prose or scripts — call the tested function. The parameters are collected in
 [@tbl:part_II_viscosity-light_parameters].
 
-:: Parameters of the viscous-floor model. {#tbl:part_II_viscosity-light_parameters}
+Table: Parameters of the viscous-floor model. {#tbl:part_II_viscosity-light_parameters}
 
 | Symbol | Meaning | Units |
 | ------ | ------- | ----- |
@@ -170,9 +170,7 @@ exactly the four drag coefficients plotted in [@fig:part_II_viscosity-light].
 story times $t = 1, 2, 3$, computed from
 [@eq:part_II_viscosity-light_viscous_floor].
 
-:: The $\Phi$-scaled drag family of [@eq:part_II_viscosity-light_family] with
-$v_0 = 1$: remaining velocity $v(t)$ at three story times.
-{#tbl:part_II_viscosity-light_family}
+Table: The $\Phi$-scaled drag family of [@eq:part_II_viscosity-light_family] with $v_0 = 1$: remaining velocity $v(t)$ at three story times. {#tbl:part_II_viscosity-light_family}
 
 | $n$ | $k = \Phi^n$ | $v(1)$ | $v(2)$ | $v(3)$ |
 | --- | ------------ | ------ | ------ | ------ |

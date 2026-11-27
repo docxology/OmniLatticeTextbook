@@ -105,7 +105,7 @@ $$ Q \;=\; \frac{V^2}{E} $$ {#eq:part_III_frontiers_quadrant}
 
 The score deliberately over-weights value: a hard problem that settles a thesis outranks an easy one that decorates it. The parameters and quadrant thresholds appear in [@tbl:part_III_frontiers_quadrantparams].
 
-:: Parameters and thresholds of the quadrant score. {#tbl:part_III_frontiers_quadrantparams}
+Table: Parameters and thresholds of the quadrant score. {#tbl:part_III_frontiers_quadrantparams}
 
 | Symbol | Meaning | Scale |
 | ------ | ------- | ----- |
@@ -117,7 +117,7 @@ The score deliberately over-weights value: a hard problem that settles a thesis 
 
 Scoring the seven problems gives [@tbl:part_III_frontiers_quadrant], which the companion figure plots as the quadrant map of [@fig:part_III_frontiers].
 
-:: The seven open problems scored on the value × effort quadrant. {#tbl:part_III_frontiers_quadrant}
+Table: The seven open problems scored on the value × effort quadrant. {#tbl:part_III_frontiers_quadrant}
 
 | # | Problem | Primary source | $V$ | $E$ | $Q = V^2/E$ | Quadrant |
 | - | ------- | -------------- | --- | --- | ----------- | -------- |

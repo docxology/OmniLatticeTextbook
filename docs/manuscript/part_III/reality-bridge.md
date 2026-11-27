@@ -156,7 +156,7 @@ catalogue's own spaces — the gold museum frame is the bridge, ship reception
 is the router menu for decks, Grove, and Journeys, and the Creator Studio is
 where guests "route their own holographic materials" [@mendez2026realityBridge].
 
-:: The three human roles as the note files them. {#tbl:part_III_reality-bridge_roles}
+Table: The three human roles as the note files them. {#tbl:part_III_reality-bridge_roles}
 
 | Role | Corpus wording | Function filed |
 | ---- | -------------- | -------------- |
@@ -195,7 +195,7 @@ $$ O_{n+1} = O_n \times \Phi, \qquad \Phi = \frac{1+\sqrt{5}}{2} \approx 1.618 $
 The parameters of [@eq:part_III_reality-bridge_octave] are collected in
 [@tbl:part_III_reality-bridge_octave].
 
-:: Parameters of the octave-step filing grammar. {#tbl:part_III_reality-bridge_octave}
+Table: Parameters of the octave-step filing grammar. {#tbl:part_III_reality-bridge_octave}
 
 | Symbol | Meaning | Units |
 | ------ | ------- | ----- |
@@ -250,7 +250,7 @@ arithmetic with the tested `textbook.models.transduction_brake` so that the
 router role can be computed alongside the octave ladder. The parameters are in
 [@tbl:part_III_reality-bridge_throttle].
 
-:: Parameters of the router-throttle model (our formalisation). {#tbl:part_III_reality-bridge_throttle}
+Table: Parameters of the router-throttle model (our formalisation). {#tbl:part_III_reality-bridge_throttle}
 
 | Symbol | Meaning | Units |
 | ------ | ------- | ----- |
@@ -298,7 +298,7 @@ route:
    entries of the 99-octave filing surface remain one route away. The router
    filters forward; it does not cut the archive.
 
-:: Routing walk: octave depth vs. throttle (exponent convention, $A_0 = 1$, $k = 1$). {#tbl:part_III_reality-bridge_routing}
+Table: Routing walk: octave depth vs. throttle (exponent convention, $A_0 = 1$, $k = 1$). {#tbl:part_III_reality-bridge_routing}
 
 | $n = t$ | $\Omega_n = \Phi^{n}$ | $A(n) = e^{-n}$ | Routed share $1 - e^{-n}$ |
 | --: | -------------------: | --------------: | ------------------------: |
