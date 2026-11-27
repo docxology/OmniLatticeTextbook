@@ -58,9 +58,9 @@ and serve as finished-prose references:
 
 **Not yet deposited.** No DOI has been minted for this fork: the
 `publication:` section of `config.yaml` has empty `doi`/`version_doi` fields
-and no `published_artifacts`, and the citation sidecars at the project root
-([`CITATION.cff`](CITATION.cff), [`.zenodo.json`](.zenodo.json),
-[`codemeta.json`](codemeta.json)) carry intentionally blank DOI fields. They
+and no `published_artifacts`. [`CITATION.cff`](CITATION.cff) omits the optional
+DOI field, while [`.zenodo.json`](.zenodo.json) and [`codemeta.json`](codemeta.json)
+carry blank DOI fields. The citation sidecars
 are otherwise filled in (title, author, ORCID, license, repository
 `docxology/OmniLatticeTextbook`) so a first Zenodo/GitHub deposit can drop
 its identifiers straight into `config.yaml` — see [publication guide](docs/publication.md)
