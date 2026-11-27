@@ -89,16 +89,11 @@ editing anything. For the human-facing overview and quick-start commands, see
    render path — never edit `output/manuscript/` directly (it is
    regenerated).
 
-8. **Mermaid rendering needs a Chrome binary.** `mmdc` (via the monorepo
-   render stage) renders inline ```` ```mermaid ```` blocks and the
-   spec-driven diagrams to PNG. The repo-local, git-ignored
-   `.puppeteer.json` at the project root points Puppeteer at a
-   machine-specific Chrome path:
-   `{"executablePath": "/Applications/Google Chrome.app/.../Google Chrome",
-   "args": ["--no-sandbox", "--disable-setuid-sandbox"]}`. Adjust it per
-   machine, or set `PUPPETEER_EXECUTABLE_PATH`. Without a reachable browser,
-   diagrams degrade to fenced code blocks / `.mmd` sources — the build never
-   hard-fails.
+8. **The complete inline Mermaid build needs a browser.** Follow the
+   [pinned render prerequisites](docs/rendering.md) for Mermaid CLI and
+   Chrome or Chromium. The separate spec-driven diagram generator can retain
+   a `.mmd` source when it cannot render a PNG. A source-only artifact
+   does not satisfy the inline figure requirement for the full reader build.
 
 9. **No mocks.** Tests use real data and real computation — never
    `MagicMock`, `mocker.patch`, or any mocking framework. Use real temp
@@ -181,7 +176,7 @@ uv run --extra dev python -m pytest tests/test_manuscript_integrity.py
 # Full suite with the coverage gate
 uv run --extra dev python -m pytest tests/ --cov=src --cov-fail-under=90
 
-# Filled-manuscript gate (zero stubs; strict by default)
+# Filled-manuscript gate (zero stubs with --require-complete)
 uv run python scripts/audit_textbook_quality.py --require-complete
 
 # Deterministic figure + diagram regeneration

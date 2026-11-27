@@ -34,7 +34,7 @@ uv run --extra dev python -m pytest tests --cov=src --cov-report=term-missing
 
 # a single file or test
 uv run --extra dev python -m pytest tests/test_models.py -v
-uv run --extra dev python -m pytest tests/test_content.py::test_validate_chapter -v
+uv run --extra dev python -m pytest tests/test_content.py::test_scaffolded_chapter_passes_validation -v
 ```
 
 ## Integrity & audit gates
