@@ -1,6 +1,11 @@
 ---
 biblio-style: tufte
 natbiboptions: [numbers]
+header-includes:
+  - |
+    ```{=latex}
+    \usepackage{setspace}
+    ```
 ---
 
 # Front Matter
