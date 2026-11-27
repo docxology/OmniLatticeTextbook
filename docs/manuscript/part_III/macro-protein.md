@@ -153,7 +153,7 @@ composition of the two is *our* reading of the filing, offered because it
 makes the label computable without inventing corpus content. The parameters
 appear in [@tbl:part_III_macro-protein_parameters].
 
-:: Parameters of the work-tensor filing. {#tbl:part_III_macro-protein_parameters}
+Table: Parameters of the work-tensor filing. {#tbl:part_III_macro-protein_parameters}
 
 | Symbol | Meaning | Units |
 | ------ | ------- | ----- |

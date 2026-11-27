@@ -150,7 +150,7 @@ convention)`, whose ratio conventions come from `textbook.models.phi_fibonacci`
 ($\varphi_{\text{fib}}(5) = 8/5 = 1.6$; $\varphi_{\text{fib}}(10) = 89/55 \approx
 1.618182$). The parameters are collected in [@tbl:part_I_fractal-constant_octave-term].
 
-:: Parameters of the octave recursion sketch. {#tbl:part_I_fractal-constant_octave-term}
+Table: Parameters of the octave recursion sketch. {#tbl:part_I_fractal-constant_octave-term}
 
 | Symbol | Meaning | Units |
 | ------ | ------- | ----- |
@@ -222,7 +222,7 @@ between the two filings, developed in [@sec:part_I_topology-void] and
 use, as it does across the series. [@tbl:part_I_fractal-constant_filings] collects the
 digit-row mapping.
 
-:: The digit-filing duality and its neighbours, as filed by the corpus. {#tbl:part_I_fractal-constant_filings}
+Table: The digit-filing duality and its neighbours, as filed by the corpus. {#tbl:part_I_fractal-constant_filings}
 
 | Trigger | Filing category | Corpus anchor |
 | ------- | --------------- | ------------- |
@@ -251,7 +251,7 @@ the nest label under which Lattice Chat fields biological-switch questions
 [@mendez2026yChromosome]. The parameters of the scaling law are in
 [@tbl:part_I_fractal-constant_palindrome].
 
-:: Parameters of the palindrome-scaling filing. {#tbl:part_I_fractal-constant_palindrome}
+Table: Parameters of the palindrome-scaling filing. {#tbl:part_I_fractal-constant_palindrome}
 
 | Symbol | Meaning | Units |
 | ------ | ------- | ----- |

@@ -110,7 +110,7 @@ unit), $\Phi$ is a station (a fixed stop on a ladder), $c$ is a brake (the
 transduction line of [@sec:part_II_eddy-current-mirror]). The map is a set of
 addresses, and its constant-flavoured names are filing labels.
 
-:: The five-constant map of [@eq:part_II_metrological-overlap_gears]. {#tbl:part_II_metrological-overlap_gears}
+Table: The five-constant map of [@eq:part_II_metrological-overlap_gears]. {#tbl:part_II_metrological-overlap_gears}
 
 | Gear | Corpus gloss | Role in the filing |
 | ---- | ------------ | ------------------ |
@@ -149,7 +149,7 @@ register should not drown a small one. The function is implemented and tested as
 `textbook.models.metrological_overlap`; the parameters are collected in
 [@tbl:part_II_metrological-overlap_parameters].
 
-:: Parameters of the register overlap. {#tbl:part_II_metrological-overlap_parameters}
+Table: Parameters of the register overlap. {#tbl:part_II_metrological-overlap_parameters}
 
 | Symbol | Meaning | Units |
 | ------ | ------- | ----- |

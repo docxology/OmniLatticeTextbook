@@ -202,8 +202,7 @@ $\Phi_n$ as the $n$-th Fibonacci ratio $F(n+1)/F(n)$, which steps $\Phi_n
 \to \Phi$ from below. The parameters of both conventions are collected in
 [@tbl:part_I_prime-parity_parameters].
 
-:: Parameters of the octave recursion formalism (both printed conventions).
-{#tbl:part_I_prime-parity_parameters}
+Table: Parameters of the octave recursion formalism (both printed conventions). {#tbl:part_I_prime-parity_parameters}
 
 | Symbol | Meaning | Role | Pinned value |
 | ------ | ------- | ---- | ------------ |
