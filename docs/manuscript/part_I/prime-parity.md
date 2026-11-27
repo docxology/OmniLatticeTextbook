@@ -148,8 +148,7 @@ addressing.
 
 The first ten odd primes are collected in [@tbl:part_I_prime-parity_oddsets].
 
-:: The first ten odd primes, the irreducible minimum sets of the parity filing.
-[@mendez2026primeParity] {#tbl:part_I_prime-parity_oddsets}
+Table: The first ten odd primes, the irreducible minimum sets of the parity filing. [@mendez2026primeParity] {#tbl:part_I_prime-parity_oddsets}
 
 | Index $k$ | Odd prime $p_k$ | Index $k$ | Odd prime $p_k$ |
 | --- | --- | --- | --- |
