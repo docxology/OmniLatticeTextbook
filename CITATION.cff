@@ -1,12 +1,19 @@
 authors:
-  affiliation: FractiAI
-  family-names: Friedman
-  given-names: Daniel Ari
-  orcid: 0000-0001-6232-9096
+  - affiliation: FractiAI
+    family-names: Friedman
+    given-names: Daniel Ari
+    orcid: https://orcid.org/0000-0001-6232-9096
 cff-version: 1.2.0
 date-released: '2026-07-12'
-doi: ''
-keywords: []
+keywords:
+  - open textbook
+  - Infinite Octaves
+  - Omni-Lattice
+  - SynthOBS
+  - catalog architecture
+  - golden ratio
+  - prime parity
+  - holographic rhyme
 license: CC-BY-4.0
 message: If you use this software, please cite it using the metadata from this file.
 repository-code: https://github.com/docxology/OmniLatticeTextbook
