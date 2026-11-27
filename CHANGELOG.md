@@ -54,5 +54,5 @@ and filled to a complete, gate-green textbook.
 
 - **DOI / first deposit** — `config.yaml` publication fields and the
   `CITATION.cff` / `.zenodo.json` / `codemeta.json` DOI slots are
-  intentionally blank; see [`STANDALONE.md`](STANDALONE.md) and
-  [`TODO.md`](TODO.md).
+  intentionally blank; see [`STANDALONE.md`](docs/publication.md) and
+  [`TODO.md`](docs/maintenance.md).

@@ -50,27 +50,13 @@ You never hand-number anything. Figures, tables, equations, sections, labs, and
 question banks are referenced by **label** (e.g. `[@fig:part_0_orientation]`) and
 numbered at render time by `pandoc-crossref`. See [`SYNTAX.md`](SYNTAX.md).
 
-## Render Flow
+## Render the book
 
-The PDF is built, not typeset by hand. From the repository root:
-
-```bash
-# 1. Generate figures and diagrams (the analysis stage; deterministic)
-uv run python scripts/pipeline/stage_02_analysis.py --project working/OmniLatticeTextbook
-
-# 2. Render the manuscript to PDF (Pandoc + pandoc-crossref, multiple passes)
-uv run python scripts/pipeline/stage_03_render.py --project working/OmniLatticeTextbook
-```
-
-The renderer reads
-`config.yaml`, assembles the front matter, parts, chapters, appendices, labs, and
-question banks in declared order, resolves cross-references and citations, and
-writes the rendered PDF, HTML, EPUB, and DOCX under the project's `output/`
-directory.
-
-> **Tip:** a single render pass leaves cross-references and citations showing as
-> `??`. The full pipeline runs the multiple LaTeX passes (plus BibTeX) needed to
-> resolve them — prefer it for a final check.
+Follow the [pinned render guide](../rendering.md) to build the declared front
+matter, units, chapters, appendices, labs and question banks from a clean
+checkout. The [retained edition](../../rendered/README.md) records the
+earlier build. The [manuscript status](../manuscript_status.md) records
+content and evidence scope.
 
 ## Validating as You Write
 

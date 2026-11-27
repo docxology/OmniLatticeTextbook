@@ -31,7 +31,7 @@ thin `scripts/` orchestrators wire it into the reproducible pipeline.
 This repository is the canonical source of this fork
 ([`docxology/OmniLatticeTextbook`](https://github.com/docxology/OmniLatticeTextbook)).
 **No DOI has been minted yet** — the citation sidecars carry intentionally blank
-DOI fields; see [`../STANDALONE.md`](../STANDALONE.md).
+DOI fields; see [`../STANDALONE.md`](publication.md).
 
 ## See also
 

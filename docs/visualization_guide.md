@@ -26,7 +26,7 @@ helpers [`src/visualization/_scaffold.py`](../src/visualization/_scaffold.py)
 deterministic.
 
 The committed cover image
-[`manuscript/assets/cover/omnilattice_cover.png`](../docs/manuscript/assets/cover/omnilattice_cover.png)
+[`manuscript/assets/cover/omnilattice_cover.png`](manuscript/assets/cover/omnilattice_cover.png)
 is itself a deterministic, tested artifact: a lattice of ninety-nine octave
 bands keyed by the golden-ratio constant, with nine digit drawers and the
 zero-octave node at the origin. Regenerate it by calling `cover_art(output_dir)`
@@ -87,48 +87,17 @@ blocks required inside every chapter (31 of them across the 30 chapters —
 `living-pem.md` carries two — plus five in `appendix_format_gallery.md`) are
 rendered by the document renderer at build time, not by this generator.
 
-## Render-time hydration
+## Figures in the pinned render
 
-Before the monorepo render stage consumes the manuscript, run the hydration
-script:
+Use the [pinned build guide](rendering.md) to stage the registered figures and
+render the book directly from the canonical source. Mermaid CLI and a
+compatible browser are required for the inline diagrams in that build.
+The standalone diagram generator can write Mermaid source files when
+PNG rendering is unavailable.
 
-```bash
-uv run python scripts/z_generate_manuscript_variables.py
-```
-
-It copies `docs/manuscript/` → `output/manuscript/` byte-for-byte (deterministic;
-this book carries no `{{variable}}` placeholders; existing files are
-overwritten, extraneous files left so partial renders stay inspectable). The
-pipeline prefers the injected `output/manuscript/` tree — see
-`infrastructure.rendering._manuscript_source.resolve_manuscript_dir` — which
-keeps the inline-Mermaid artifact directory at
-`output/figures/mermaid_inline/`, exactly like first-class pipeline projects.
-Never edit `output/manuscript/` directly; it is regenerated.
-
-## Rendering Mermaid diagrams to images (PDF/HTML)
-
-Inline ```` ```mermaid ```` blocks are rendered to images at build time by the
-monorepo render pipeline using the Mermaid CLI (`mmdc`), which needs a
-Chrome/Chromium binary. Two ways to point it at one:
-
-1. Set `PUPPETEER_EXECUTABLE_PATH` (or `CHROME_EXECUTABLE_PATH`) to your browser
-   binary before rendering, or
-2. Drop a local `.puppeteer.json` at the project root — this repository ships
-   one (git-ignored, since it holds a machine-specific path):
-
-   ```json
-   {
-     "executablePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-     "args": ["--no-sandbox", "--disable-setuid-sandbox"]
-   }
-   ```
-
-   Adjust `executablePath` to this machine's Chrome/Chromium; the
-   `--no-sandbox` args matter in CI and root containers.
-
-Without a reachable browser, diagrams degrade gracefully to fenced code blocks in
-the output and `src/mermaid` writes `.mmd` source instead of PNG — the build
-never hard-fails. With it, the combined PDF embeds the rendered inline diagrams.
+The earlier integration's `scripts/z_generate_manuscript_variables.py`
+still copies the source byte-for-byte into an injected `output/manuscript/`
+tree. Keep it separate from the canonical editing tree and retained snapshot.
 
 ## Adding a real figure for a chapter
 

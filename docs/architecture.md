@@ -121,7 +121,7 @@ public output files above 50 MB stay out):
 
 ```
 output/
-  manuscript/     # hydrated copy of docs/manuscript/ (consumed by the render stage)
+  manuscript/     # optional legacy hydrated copy of docs/manuscript/
   figures/        # the 30 <part_id>_<stem>.png chapter figures, worked figures,
                   # gallery/, and mermaid_inline/ artifacts
   data/           # numerical artifacts emitted by analysis.py
@@ -130,7 +130,7 @@ output/
 ```
 
 Everything under `output/` is regenerable from `src/` + `config.yaml` +
-`docs/manuscript/`; tracked copies exist so the rendered book is inspectable
+`docs/manuscript/`; the retained build is inspectable in [the archive](../rendered/README.md)
 without running the pipeline.
 
 ## Evidence anchoring

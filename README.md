@@ -63,44 +63,19 @@ and no `published_artifacts`, and the citation sidecars at the project root
 [`codemeta.json`](codemeta.json)) carry intentionally blank DOI fields. They
 are otherwise filled in (title, author, ORCID, license, repository
 `docxology/OmniLatticeTextbook`) so a first Zenodo/GitHub deposit can drop
-its identifiers straight into `config.yaml` — see [`STANDALONE.md`](STANDALONE.md)
+its identifiers straight into `config.yaml` — see [publication guide](docs/publication.md)
 for the deposit checklist. Do not cite this project by DOI until one exists.
 
 ## Rendering
 
-The canonical renderer is the shared pipeline of the
-[docxology/template](https://github.com/docxology/template) monorepo. Place
-(or clone) this repository at `projects/working/OmniLatticeTextbook` in a
-monorepo checkout, then from the **monorepo root**:
+Start with the [documentation index](docs/README.md) or use the
+[pinned build recipe](docs/rendering.md) to produce the configured PDF,
+HTML, EPUB and DOCX from a clean checkout. The [retained edition](rendered/README.md)
+includes the earlier figures, hydrated manuscript, rendered files and
+validation reports. Fresh builds write to the ignored `output/` directory.
 
-```bash
-uv sync
-uv run python scripts/pipeline/stage_03_render.py --project working/OmniLatticeTextbook
-uv run python scripts/pipeline/stage_04_validate.py --project working/OmniLatticeTextbook
-```
-
-This renders **PDF, HTML, EPUB, and DOCX** (`render.formats` in
-`config.yaml`) and writes the validation report plus the evidence registry
-under the project's `output/`. Rendered artifacts are tracked under
-[`output/`](output/). Inline Mermaid diagrams embed as images when a Chrome
-binary is reachable by `mmdc` (see
-[`docs/visualization_guide.md`](docs/visualization_guide.md)).
-
-Standalone checks (run from **this** project root, no monorepo needed):
-
-```bash
-uv run --extra dev python -m pytest tests/ --cov=src --cov-fail-under=90
-uv run python scripts/scaffold_chapter.py
-uv run python scripts/generate_figures.py
-uv run python scripts/generate_diagrams.py
-uv run python scripts/audit_textbook_quality.py --require-complete
-```
-
-`audit_textbook_quality.py` without `--require-complete` reports the same
-structure while allowing stub markers; `--require-complete` is the
-filled-manuscript gate this book passes (zero stubs in every audited
-section). Exit code 0 alone is not proof: confirm the suite collected more
-than zero tests and that coverage met the floor.
+For local tests, figure generation and the complete-manuscript audit, see
+the [testing guide](docs/testing_guide.md) and [visualization guide](docs/visualization_guide.md).
 
 ## What this book is
 
@@ -147,7 +122,8 @@ OmniLatticeTextbook/
 ├── scripts/                   # thin orchestrators (figures, diagrams, analysis, scaffold, audit, hydration)
 ├── data/                      # versioned inputs: claim ledger + numeric facts (+ evidence chunks)
 ├── tests/                     # no-mocks suite incl. test_manuscript_integrity.py
-├── output/                    # tracked rendered artifacts (PDF/HTML/EPUB/DOCX, figures, reports)
+├── rendered/build-snapshot/   # retained book editions, figures and reports
+├── output/                    # ignored fresh build outputs
 └── pyproject.toml             # project config (90% coverage gate)
 ```
 
@@ -216,8 +192,8 @@ mocks.
 | --- | --- |
 | **This file (`README.md`)** | Overview, publication status, render commands, quick start, how to grow the book |
 | [`AGENTS.md`](AGENTS.md) | Agent-facing reference: invariants, evidence-registry contract, editing checklist, frozen vs. fillable files |
-| [`STANDALONE.md`](STANDALONE.md) | Provenance and publication-prep guide: what a first deposit does, validation commands |
-| [`TODO.md`](TODO.md) | Forward backlog (deposit, CI, lab test translation) |
+| [publication guide](docs/publication.md) | Provenance and publication-prep guide: what a first deposit does, validation commands |
+| [maintenance backlog](docs/maintenance.md) | Forward backlog (deposit, CI, lab test translation) |
 | [`docs/`](docs/README.md) | Deeper guides: architecture, manuscript/authoring/visualization/testing (`docs/README.md` is the index) |
 | [`docs/manuscript/config.yaml`](docs/manuscript/config.yaml) | The single source of truth for book structure |
 | Monorepo [`README.md`](https://github.com/docxology/template/blob/main/README.md) / [`AGENTS.md`](https://github.com/docxology/template/blob/main/AGENTS.md) | Pipeline semantics, CI parity, two-layer architecture |
@@ -241,7 +217,7 @@ Dual-licensed: **code** (`src/`, `scripts/`, `tests/`) under **Apache-2.0**
 
 ## Repository integrity
 
-- Forward backlog: [`TODO.md`](TODO.md).
+- Forward backlog: [maintenance backlog](docs/maintenance.md).
 - Structural example config: [`docs/manuscript/config.yaml.example`](docs/manuscript/config.yaml.example),
   kept in lockstep with the live config by
   `tests/test_contracts.py::test_live_and_example_config_shapes_are_lockstep`.

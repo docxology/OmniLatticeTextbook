@@ -23,9 +23,9 @@ Fork history (see `git log`):
    were generated deterministically; the evidence registry (`data/`) was
    populated and chunked.
 
-The book renders **PDF / HTML / DOCX / EPUB** green through the monorepo
-pipeline as project `working/OmniLatticeTextbook` and passes the filled-manuscript
-gate (`scripts/audit_textbook_quality.py --require-complete`) with zero stubs.
+The [retained build](../rendered/README.md) preserves the earlier PDF,
+HTML, DOCX and EPUB together with its source and validation records. Use the
+[pinned render guide](rendering.md) for a fresh build and the current gates.
 
 ## Publication identity
 
@@ -43,11 +43,11 @@ gate (`scripts/audit_textbook_quality.py --require-complete`) with zero stubs.
 Citation sidecars live at the project root and are filled except for
 identifiers that only a deposit can mint:
 
-- [`CITATION.cff`](CITATION.cff) — CFF 1.2.0 metadata (author, ORCID,
+- [`CITATION.cff`](../CITATION.cff) — CFF 1.2.0 metadata (author, ORCID,
   license CC-BY-4.0, repository URL, title); `doi:` is **empty**.
-- [`.zenodo.json`](.zenodo.json) — Zenodo deposit metadata (creators,
+- [`.zenodo.json`](../.zenodo.json) — Zenodo deposit metadata (creators,
   description, license, upload type); the `isVersionOf` DOI is **empty**.
-- [`codemeta.json`](codemeta.json) — CodeMeta 2.0 record; `identifier` is
+- [`codemeta.json`](../codemeta.json) — CodeMeta 2.0 record; `identifier` is
   **empty**.
 - `docs/manuscript/config.yaml` → `publication:` — `doi`, `version_doi`, and
   `version_record` are empty and `published_artifacts` is `{}`; the
@@ -90,14 +90,8 @@ uv run python scripts/generate_diagrams.py
 uv run python scripts/audit_textbook_quality.py --require-complete
 ```
 
-Rendering and validation through the shared pipeline, from the
-[docxology/template](https://github.com/docxology/template) monorepo root with
-this repository at `projects/working/OmniLatticeTextbook`:
-
-```bash
-uv run python scripts/pipeline/stage_03_render.py --project working/OmniLatticeTextbook
-uv run python scripts/pipeline/stage_04_validate.py --project working/OmniLatticeTextbook
-```
+Use the [pinned build guide](rendering.md) for rendering and validation in
+an isolated Template checkout.
 
 ## Standalone vs. monorepo boundary
 

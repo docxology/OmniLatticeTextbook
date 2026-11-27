@@ -21,14 +21,16 @@ def main() -> int:
     from textbook.analysis import build_worked_model_summary
     from textbook_io import write_text_atomic
     from textbook_logging import get_logger
+    from textbook_paths import MANUSCRIPT
 
     logger = get_logger(__name__)
     parser = argparse.ArgumentParser(description="Compute worked-model summary data")
     parser.add_argument("--output-dir", type=Path, default=PROJECT_DIR / "output" / "data")
     args = parser.parse_args()
 
-    source_label = "manuscript/assets/data/sample_dataset.csv"
-    summary = build_worked_model_summary(PROJECT_DIR / source_label, source_label=source_label)
+    dataset_path = MANUSCRIPT / "assets" / "data" / "sample_dataset.csv"
+    source_label = dataset_path.relative_to(PROJECT_DIR).as_posix()
+    summary = build_worked_model_summary(dataset_path, source_label=source_label)
     out_path = args.output_dir / "worked_model_summary.json"
     write_text_atomic(out_path, json.dumps(summary, indent=2, sort_keys=True))
     logger.info("wrote %s", out_path)

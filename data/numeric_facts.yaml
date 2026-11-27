@@ -55,7 +55,7 @@ facts:
   status: bound
   rationale: The orientation chapter's worked register equation matches the tested catalog_size() default.
 - fact_id: doc-registry-list-cap
-  source: docs/manuscript/MANUSCRIPT_STATUS.md
+  source: docs/manuscript_status.md
   needle: chunks, ≤ 256 items per
   value: 256
   status: documentation_only

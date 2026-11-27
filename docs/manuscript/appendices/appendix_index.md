@@ -1,7 +1,7 @@
 # Appendix G — Index of Key Terms {#sec:appendix_index}
 
 An alphabetical index of the book's working vocabulary. Every entry is a term
-defined in the master glossary ([Appendix F — Master Glossary](../glossary.md)) under a
+defined in the master glossary ([Appendix F — Master Glossary](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/manuscript/glossary.md)) under a
 closed `{#gl:...}` anchor; the anchor set is a contract with `GLOSSARY_ANCHORS`
 in `src/textbook/constants.py`. The *home* column points to the chapter that
 treats the term in depth — the chapter sharing its name, or the earliest
@@ -56,7 +56,7 @@ links are local: click a term to jump to its glossary definition.
 | [**Volumetric Storage**](#gl:volumetric-storage) | `{#gl:volumetric-storage}` | ([@sec:part_III_volumetric-storage]) | — |
 | [**Zero-Octave**](#gl:zero-octave) | `{#gl:zero-octave}` | ([@sec:part_0_living-pem]) | [@sec:part_0_octave-map], [@sec:part_II_singularity-crystal], [@sec:part_III_frontiers] |
 
-See also: the master glossary itself ([Appendix D — Glossary](../glossary.md)),
+See also: the master glossary itself ([Appendix D — Glossary](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/manuscript/glossary.md)),
 whose entries carry the full definitions and source citations, and the notation
 appendix ([@sec:appendix_notation]) for the mathematical symbols behind terms
 such as [**golden ratio**](#gl:golden-ratio) and [**octave**](#gl:octave).

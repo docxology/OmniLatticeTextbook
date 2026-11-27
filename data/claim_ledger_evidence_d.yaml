@@ -1,0 +1,20 @@
+# Additional strict table and example tokens in the pinned renderer.
+# Model claims refer to actual model inputs/outputs; index claims refer
+# to the declared source chapter inventory. No measurements are implied.
+claims:
+- {claim_id: register-octave-count, kind: number, value: 99, artifact_path: src/textbook/models.py}
+- {claim_id: register-precision-digit-count, kind: number, value: 81, artifact_path: src/textbook/models.py}
+- {claim_id: register-capacity, kind: number, value: 8019, artifact_path: src/textbook/models.py}
+- {claim_id: octave-bracket-count, kind: number, value: 11, artifact_path: docs/manuscript/part_0/tensor-decoupling.md}
+- {claim_id: fibonacci-ratio-five-numerator, kind: number, value: 8, artifact_path: src/textbook/models.py}
+- {claim_id: fibonacci-ratio-six-numerator, kind: number, value: 13, artifact_path: src/textbook/models.py}
+- {claim_id: fibonacci-ratio-ten-numerator, kind: number, value: 89, artifact_path: src/textbook/models.py}
+- {claim_id: fibonacci-ratio-ten-denominator, kind: number, value: 55, artifact_path: src/textbook/models.py}
+- {claim_id: worked-odd-prime-example-17, kind: number, value: 17, artifact_path: docs/manuscript/part_I/prime-parity.md}
+- {claim_id: worked-odd-prime-example-19, kind: number, value: 19, artifact_path: docs/manuscript/part_I/prime-parity.md}
+- {claim_id: catalog-architecture-index-remainder, kind: number, value: 26, artifact_path: docs/manuscript/appendices/appendix_index.md}
+- {claim_id: fair-exchange-index-remainder, kind: number, value: 24, artifact_path: docs/manuscript/appendices/appendix_index.md}
+- {claim_id: honesty-first-index-remainder, kind: number, value: 27, artifact_path: docs/manuscript/appendices/appendix_index.md}
+- {claim_id: worked-storage-count, kind: number, value: 12, artifact_path: docs/manuscript/labs/part_III/lab_volumetric-storage.md}
+- {claim_id: worked-storage-mean, kind: number, value: '16.0', artifact_path: docs/manuscript/labs/part_III/lab_volumetric-storage.md}
+- {claim_id: displayed-fibonacci-example-index, kind: number, value: 16, artifact_path: docs/manuscript/part_III/macro-protein.md}

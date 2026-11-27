@@ -13,7 +13,7 @@ the structure is declared, not hand-maintained.
 ## The Big Idea: One Source of Truth
 
 The book is **data-driven from
-[`config.yaml`](../../../docs/manuscript/config.yaml)**. The list of parts,
+[`config.yaml`](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/manuscript/config.yaml)**. The list of parts,
 chapters, labs, question banks, and reference appendices lives there and
 nowhere else. The Python engine in `src/textbook/` reads that file; the
 scaffolding scripts in `scripts/` materialise the matching markdown files.
@@ -55,7 +55,7 @@ not relativity retirement).
 ## The Tested Computational Backbone
 
 Every worked formalism in the book is a function in
-[`src/textbook/models.py`](../../../src/textbook/models.py), covered by the
+[`src/textbook/models.py`](https://github.com/docxology/OmniLatticeTextbook/blob/main/src/textbook/models.py), covered by the
 test suite under `tests/`. Chapter prose names the function that backs each
 equation — for example, the octave recursion of [@mendez2026primeParity] is
 backed by `octave_term` (which implements **both** printed readings of
@@ -67,7 +67,7 @@ backed by `octave_term` (which implements **both** printed readings of
 | --- | --- |
 | `phi_powers`, `phi_fibonacci` | golden-ratio powers and Fibonacci ratios |
 | `octave_term` | octave recursion $\Omega_n$ under both conventions |
-| `catalog_size` | $99 \times 81 = 8{,}019$ master register |
+| `catalog_size` | $99 \times 81 = 8019$ master register |
 | `prime_parity_partition` | sole-even 2 / odd irreducible sets |
 | `holographic_rhyme_field`, `xd_yd_combine` | four-pillar and xD±yD fields |
 | `transduction_brake` | eddy-brake damping $v_0 e^{-kt}$ |
@@ -104,11 +104,11 @@ describes exactly what the generator draws. Diagrams come from
 Two vocabularies are contracts, not conventions:
 
 1. **Citations** — `[@key]` keys must resolve in
-   [`references.bib`](../../../docs/manuscript/references.bib); the corpus's
+   [`references.bib`](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/manuscript/references.bib); the corpus's
    31 papers form the closed key set tracked in
    `src/textbook/constants.py:CITATION_KEYS`.
 2. **Glossary anchors** — `[**term**](#gl:<anchor>)` links must point at the
-   44 anchors defined in [`glossary.md`](../../../docs/manuscript/glossary.md)
+   44 anchors defined in [`glossary.md`](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/manuscript/glossary.md)
    and tracked in `GLOSSARY_ANCHORS`.
 
 Integrity tests fail the build on an undefined citation, a missing anchor, a
@@ -147,6 +147,6 @@ Because structure, numbering, references, and figure paths are all derived
 from the one config, a 1,000-page book obeys exactly the same rules as this
 one — contributors only ever add content, never re-number the book.
 
-See also: [Appendix B — Notation](appendix_notation.md),
-[Appendix C — Mathematical Review](appendix_math_review.md), and the
-developer-facing [`docs/authoring_guide.md`](../../../docs/authoring_guide.md).
+See also: [Appendix B — Notation](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/manuscript/appendices/appendix_notation.md),
+[Appendix C — Mathematical Review](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/manuscript/appendices/appendix_math_review.md), and the
+developer-facing [`docs/authoring_guide.md`](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/authoring_guide.md).

@@ -141,7 +141,10 @@ def write_figure_registry(manuscript_dir: Path, figures_dir: Path) -> Path:
     path = figures_dir / "figure_registry.json"
     payload = {
         "schema_version": "template-textbook-figure-registry-v1",
-        "figures": [asdict(entry) for entry in collect_figure_registry_entries(manuscript_dir, figures_dir)],
+        "figures": [
+            {**asdict(entry), "alt_text": entry.alt}
+            for entry in collect_figure_registry_entries(manuscript_dir, figures_dir)
+        ],
     }
     path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return path

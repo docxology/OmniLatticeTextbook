@@ -355,7 +355,7 @@ Fluency in the corpus means placing every claim in its correct tier
 
 ---
 
-Cross-reference: the [notation appendix](appendices/appendix_notation.md) gives
+Cross-reference: the [notation appendix](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/manuscript/appendices/appendix_notation.md) gives
 the symbol table ($\Phi$, $\Omega_n$, digit and octave indices, $k=0$), and the
-[mathematical review](appendices/appendix_math_review.md) works the numbers
+[mathematical review](https://github.com/docxology/OmniLatticeTextbook/blob/main/docs/manuscript/appendices/appendix_math_review.md) works the numbers
 behind the definitions above.
